@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-02-26T22:34:28+00:00</updated><id>https://www.wardle.org/</id><title type="html">Dr. Mark Wardle</title><subtitle>Consultant Neurologist, Clinical informatics, entrepreneur and software developer.
+</subtitle><entry><title type="html">Supporting clinical care</title><link href="https://www.wardle.org/clinical-informatics/2017/02/03/supporting-clinic.html" rel="alternate" type="text/html" title="Supporting clinical care" /><published>2017-02-03T10:16:10+00:00</published><updated>2017-02-03T10:16:10+00:00</updated><id>https://www.wardle.org/clinical-informatics/2017/02/03/supporting-clinic</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/02/03/supporting-clinic.html">&lt;p&gt;Clinical information systems should support patient care.&lt;/p&gt;
+
+&lt;p&gt;We generate our clinical correspondence from data. This is, unusually, the opposite of what almost everyone else does when they get data from correspondence.&lt;/p&gt;
+
+&lt;p&gt;I need to prepare a full video as a demonstration, but for now I will link to a series of tweets that demonstrate this functionality in the clinic.&lt;/p&gt;
+
+&lt;p&gt;First, we give the &lt;a href=&quot;https://twitter.com/mwardle/status/833062051283136518&quot;&gt;patient an iPad in clinic&lt;/a&gt;. The same infrastructure and platform will be used for patient-held devices, but for now, we use clinic-based applications. This uses Apple’s ResearchKit software. However, the clever thing here is the use of SNOMED CT. The application derives semantic understanding of the patient’s problems from the electronic health record and queues the correct questionnaires for that patient.&lt;/p&gt;
+
+&lt;p&gt;Additionally, if that patient has already indicated that they don’t wish to be involved in research, it won’t ask them again, but if not, they will be asked to consent for appropriate research projects.&lt;/p&gt;
+
+&lt;p&gt;We used to use paper questionnaires. These were duly completed and then filed, not to be used. In addition, paper questionnaires can’t adapt to what has been entered. Here, the iPad applicaton &lt;a href=&quot;https://twitter.com/mwardle/status/833063821828878336&quot;&gt;queues a different set of questions based on the responses so far&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Finally, while there is excitement about the use of patient’s own devices and patient reported outcomes, what is the point of those data if they cannot be used for clinical care? Here, the data entered by the patient is immediately presented to the clinician and is &lt;a href=&quot;https://twitter.com/mwardle/status/833064699977691137&quot;&gt;automatically incorporated into the clinic letter&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;You’ll notice in the last video, I also tweak the current medication list (mapped to the NHS dictionary of medicines and devices) and those changes appear in our correspondence automatically.&lt;/p&gt;</content><author><name></name></author><summary type="html">Clinical information systems should support patient care.</summary></entry><entry><title type="html">Multiple sclerosis</title><link href="https://www.wardle.org/multiple-sclerosis/2017/02/03/new-ms-portal.html" rel="alternate" type="text/html" title="Multiple sclerosis" /><published>2017-02-03T10:16:10+00:00</published><updated>2017-02-03T10:16:10+00:00</updated><id>https://www.wardle.org/multiple-sclerosis/2017/02/03/new-ms-portal</id><content type="html" xml:base="https://www.wardle.org/multiple-sclerosis/2017/02/03/new-ms-portal.html">&lt;p&gt;I’m delighted to announce the release of my new data-linkage pseudonymous patient portal &lt;a href=&quot;https://msdata.org.uk&quot;&gt;msdata.org.uk&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This brings the full power of my existing electronic patient record (EPR) - currently hosted and only accessible within NHS Wales - to the Internet.&lt;/p&gt;
+
+&lt;p&gt;Importantly, no patient identifiable information is stored, but instead, the system acts as a data-linkage platform, allowing information entered from patient-held devices and clinicians outside of Wales to be brought into the EPR.&lt;/p&gt;
+
+&lt;p&gt;Here, one can see how many relapses a patient has had due to multiple sclerosis:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/msdata-relapses.jpg&quot; alt=&quot;MS relapses&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Importantly, while we have over 20,000 patients registered with a variety of disorders, wouldn’t it be useful to show clinicians and the patient how they are progressing compared to patients with the same disorder.&lt;/p&gt;
+
+&lt;p&gt;Fortunately, while there are lots of SNOMED-CT concepts that mean the same as “multiple sclerosis”, it is possible to use the SNOMED-CT hierarchy to derive semantic understanding of the relationships between terms. In this way, we can easily find patients with say, a type of motor neurone disease, even if they have been recorded as having “progressive bulbar palsy”.&lt;/p&gt;
+
+&lt;p&gt;Here, we chart a single patient’s progress over the years compared to a whole population-based cohort of patients’ progress. The median progress of the whole cohort is shown with a dotted green line. Just like a growth chart for a baby, a patient crossing the centile charts is either doing better or worse than expected. The EDSS is a score of disability in multiple sclerosis.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/edss-graph.jpg&quot; alt=&quot;MS progress&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As an added bonus, we can chart the use of disease-modifying treatments as well.&lt;/p&gt;</content><author><name></name></author><summary type="html">I’m delighted to announce the release of my new data-linkage pseudonymous patient portal msdata.org.uk.</summary></entry><entry><title type="html">Domain-driven design in clinical informatics</title><link href="https://www.wardle.org/clinical-informatics/2017/02/03/domain-driven-design.html" rel="alternate" type="text/html" title="Domain-driven design in clinical informatics" /><published>2017-02-03T10:16:10+00:00</published><updated>2017-02-03T10:16:10+00:00</updated><id>https://www.wardle.org/clinical-informatics/2017/02/03/domain-driven-design</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/02/03/domain-driven-design.html">&lt;p&gt;I have written this document to explain my thoughts on the most appropriate way to design and clinical information systems that valuably support the process of healthcare.  As such, it includes a methodology for creating software for use by clinicians,  managers  and  administrators  to  support  both  the  day-to-day  care  of patients and the management of services for groups of patients.&lt;/p&gt;
+
+&lt;p&gt;I divide the “process of healthcare” into three core themes which are related and inter-dependent:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The ‘day-to-day’ care of a single patient; data relates to a single individual.&lt;/li&gt;
+  &lt;li&gt;The management, audit and governance of clinical services; data relates togrouped, aggregated patient data and is service-specific.&lt;/li&gt;
+  &lt;li&gt;Supporting clinical research;  data relating to a patient’s suitability for research projects as well as enrolment, consent and research-level data.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The complete document is available &lt;a href=&quot;https://www.dropbox.com/s/62sg71a19voxpts/cis_design.pdf?dl=0&quot;&gt;here&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">I have written this document to explain my thoughts on the most appropriate way to design and clinical information systems that valuably support the process of healthcare. As such, it includes a methodology for creating software for use by clinicians, managers and administrators to support both the day-to-day care of patients and the management of services for groups of patients.</summary></entry></feed>
