@@ -151,11 +151,13 @@ Dr Larry Weed, Internal Medicine Grand Rounds, 1971</p>
 
 <p>In regions where there is already large existing infrastructure, the platform could be installed as only an integration engine, bringing together information from existing services. As such, developers of user-facing applications and those who wish to support clinical care by using computer algorithms and artificial intelligence, can be used in any organisation in which the integration engine exists.  Much like an open-source version of Google’s <a href="https://enterprise.google.com/search/products/gsa.html">search appliances</a> for health, we would be able to liberate data from proprietary systems, creating an open health data repository.</p>
 
-<p>I am building a FHIR-based microservice around our hospital PAS presently; it provides a proprietary, non-standard SOAP API for client applications. I’m going to do the same for our regional enterprise master patient index; it simply needs to create a FHIR end-point and wrap a HL7 PDQ call. It is not difficult to do but there are many such systems around, all of which need integration.</p>
+<p>I am building a FHIR-based microservice around our hospital PAS presently. The PAS provides a proprietary, non-standard SOAP API for client applications. I’m going to do the same for our regional enterprise master patient index; it simply needs to create a FHIR end-point and wrap a HL7 PDQ call. It is not difficult to do but there are many such systems around, all of which need integration.</p>
 
 <h4 id="natural-language-processing">Natural language processing</h4>
 
-<p>In addition, there is an enormous amount of data held in clinical correspondence. We have need to make this information more accessible; there are already commercial solutions that use natural language processing to release structured data from narrative textual descriptions of clinical course and progress. Other divisions within Google have extensive experience of natural language processing, and these tools should be introduced and evaluated to make information accessible and useful.</p>
+<p>In addition, there is an enormous amount of data held in clinical correspondence. We have need to make this information more accessible; there are already commercial solutions that use natural language processing (NLP) to release structured data from narrative textual descriptions of clinical course and progress. Other divisions within Google have extensive experience of natural language processing, and these tools should be introduced and evaluated to make information accessible and useful. We need to start work on evaluating different technologies from different vendors, commercial and academic, in order to apply NLP in a healthcare arena.</p>
+
+<p>I have seen one commercial solution in action and it is squarely aimed at the identification of patient cohorts for specific research studies, and not for real-time use by clinicians in the day-to-day care of patients.</p>
 
 <h3 id="2-ensure-a-robust-framework-in-place-to-satisfy-public-perceptions">2. Ensure a robust framework in place to satisfy public perceptions</h3>
 
@@ -183,7 +185,7 @@ Dr Larry Weed, Internal Medicine Grand Rounds, 1971</p>
 
 <h4 id="a-worked-example">A worked example</h4>
 
-<p>A patient has a NHS number 111 111 1111. Their year of birth is 1975. A public and private key is generated for the patient at registration. This private key is used to encrypt information within the patient’s ledger but is itself encrypted using the patient’s password. If the patient changes their access password, then only the private key need be re-encrypted with the new password.</p>
+<p>A public and private key is generated for the patient at registration. This private key is used to encrypt information within the patient’s ledger but is itself encrypted using the patient’s password. If the patient changes their access password, then only the private key need be re-encrypted with the new password.</p>
 
 <p>The summary care record is generated from the general practitioner’s record - these data, including core diagnoses and medications are recorded against a unique identifier computed as a hash of the NHS number, the year of birth and a salt unique to the national summary care record service for that patient : a service-specific salt. Within a distributed ledger, the description of this service, the core data and a link to an end-point service providing more data is encrypted using the patient’s public key. As such, using one of potentially many third-party services, a patient could login to their account, access the information in their ledger and importantly, see who has accessed their record and choose those organisations or services who may see their record. An organisation holding the ledger cannot identify the patients within, or indeed, determine to which services or research projects any logs relate. Individual services who can generate a pseudonym using the appropriate recipe can consult the ledger, write to that ledger and determine patient consent.</p>
 
@@ -193,6 +195,9 @@ Dr Larry Weed, Internal Medicine Grand Rounds, 1971</p>
 
 <p>Junior doctors use their own devices for communication within their teams in order to manage their workload. Why is it so difficult to contemplate creating a medical application that can provide similar functionality, but ensure that patient-relating communication is recorded against the patient’s record? We need to encourage and foster innovation within NHS information technology.</p>
 
+<h2 id="final-thoughts">Final thoughts</h2>
+
+<p>Of course, this isn’t really a manifesto only aimed at Google, although I think their priorities converge with ours in the interoperability community and ultimately with those for whom this is most important: patients.</p>
 
   </div>
 
