@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Balancing information governance and innovation in the NHS</title>
+  <meta name="description" content="“Google’s Deepmind made inexcusable errors handling UK health data”, was reported on 16th March 2017 in an article published in the journal “Health and Techn...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://www.wardle.org/information-governance/2017/03/19/information-governance.html">
+  <link rel="alternate" type="application/rss+xml" title="Dr. Mark Wardle" href="/feed.xml">
+  
+  
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Dr. Mark Wardle</a>
+
+    <nav class="site-nav">
+      <span class="menu-icon">
+        <svg viewBox="0 0 18 15" width="18px" height="15px">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </span>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Balancing information governance and innovation in the NHS</h1>
+    <p class="post-meta"><time datetime="2017-03-19T21:28:45+00:00" itemprop="datePublished">Mar 19, 2017</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>“Google’s Deepmind made inexcusable errors handling UK health data”, was reported on 16th March 2017 in an article published in the journal “Health and Technology” by Julia Powles and Hal Hodson. The article is <a href="https://link.springer.com/article/10.1007%2Fs12553-017-0179-1?wt_mc=Affiliate.CommissionJunction.3.EPR1089.DeepLink&amp;utm_medium=affiliate&amp;utm_source=commission_junction&amp;utm_campaign=3_nsn6445_deeplink&amp;utm_content=deeplink">here</a>.</p>
+
+<p>I don’t agree with most of their conclusions and there are some factual errors. One example is that they suggest that because the application is used in the monitoring and treatment of acute kidney injury (AKI), that access to data on patients not identified as having AKI is inappropriate and should need explicit patient consent. The error here is obvious to a practising clinician: namely, one cannot monitor and identify AKI without monitoring the renal function of all patients. They suggest that patient data should be shared only for patients who have had a “gateway blood test that is prerequisite for AKI diagnosis”. Again, a renal function test (commonly called renal profile or urea and electrolytes), is one of the (if not the) most common blood test performed in hospitals and certainly none of my patients have escaped having this blood test! In addition, the absence of a previous test may itself be a signal potentially of use in future implementations of AKI alerts; an absence of data due to a process that deliberately withholds such data may result in systems to support clinical care that are less valuable than systems having access to a complete set of data.</p>
+
+<p>My blog isn’t the right place for a detailed review of this article, but one positive conclusion is that we need to have a conversation about health data and the potential benefits and pitfalls of sharing. I’ve referred to the <a href="/clinical-informatics/2017/03/09/google-information.html">care.data fiasco in a previous blog post</a> and, speaking in my role as a full-time clinician, we need to avoid any further controversy.</p>
+
+<h4 id="information-technology-in-healthcare">Information technology in healthcare</h4>
+
+<p>Are there any benefits to the more effective use of information technology in healthcare?</p>
+
+<p>In my opinion, very much so!</p>
+
+<p>Many of my patients will give an account of information not being available at the point-of-care, complicating their care and resulting in frequently needless duplication of care. From a personal point of view, I worry about starting drugs such as methotrexate, azathioprine and mycophenolate as these treatments need ongoing monitoring with checks of renal function, blood counts and liver function on a regular basis. You may be surprised to hear that there are no systems in place to ensure that this core work is performed. I don’t even get results sent to me, so I have to remember to login to my computer and check the results manually. Will I make a mistake? Definitely. Many specialties which use these drugs more frequently than my own (neurology) have a dedicated specialist nurse whose responsibilities include monitoring these bloods. But why have a human doing a job that a computer can do more reliably?</p>
+
+<h4 id="driving-off-road-vs-taking-the-train">Driving off-road vs. taking the train</h4>
+
+<p>My day job is looking after patients with neurological diseases such as epilepsy, multiple sclerosis, Parkinson’s disease and motor neurone disease.</p>
+
+<p>I have frequently compared the process of my work to “driving off-road” - travelling in uncharted territory - in order to <em>get routine things done</em>. Yet I find myself having to do this again and again when in fact, most of what I do should be a case of “taking the train” -  medical care on rails, automatic, on-time and efficient.</p>
+
+<p>My colleagues and I will always need to “go off-road”, but this should be the exception and not the rule; importantly, it frees us him to concentrate on those patients in which we truly do need to go into uncharted territory. We therefore need tools that bring together the right information at the right time, but make logical inferences from those data in order to improve patient care.</p>
+
+<h4 id="technology-and-medicine-on-rails">Technology and medicine-on-rails</h4>
+
+<p>In summary therefore, I want most of my work to happen “on rails” and, like many of my colleagues, have become frustrated with the agonisingly slow introduction of technology into healthcare. There are already many companies providing solutions in use in community and hospital services but I am worried. It is increasingly difficult for small and medium enterprises to enter the market and ongoing consolidation has resulted in  very large companies providing enterprise-wide organisational-bound applications such as Cerner’s Millenium and Epic. The <a href="https://www.gov.uk/government/publications/using-information-technology-to-improve-the-nhs">Wachter report</a> is an excellent blueprint for the future of IT within NHS England but like others, I have noted that the approach has a focus on secondary care services, will result in a small number of very large vendors monopolising the market and doesn’t really cover community and social care.</p>
+
+<p>In addition, a focus on large single-supplier products for each organisation results in a national architecture that will have a natural tendency to use a health information exchange as outlined in “Section 5.14 Are there exceptions to the use of a layered architecture?” of my <a href="https://www.dropbox.com/s/62sg71a19voxpts/cis_design.pdf?dl=0">Domain-driven design document for clinical information systems</a>. Instead, I want an influx of new vendors, able to access data in a safe and controlled manner, using an open healthcare platform, to add value and benefit to clinicians and, by extension, to patients themselves.</p>
+
+<p>The logical questions that arise from this are:</p>
+
+<ul>
+  <li>how do we permit the adoption of small, well-defined applications within the health enterprise in a safe manner?</li>
+  <li>how do we permit access to large-scale aggregated health data in a way that benefits both individual patients for their direct care, and groups of patients at a population-level?</li>
+</ul>
+
+<p>For example, if I wanted to introduce a small, well-defined application that would a) identify my patients on methotrexate, b) monitor their bloods for me, c) request their blood tests at the right time, if they haven’t already been done and d) alert me when they don’t have their bloods or they have a blood dyscrasia or some other change which merits my attention, then how could I do this within the current NHS infrastructure?</p>
+
+<p>For example, if a large commercial entity with expertise in artificial intelligence wanted to add value by monitoring a cohort of patients automatically to identify acute kidney injury, then how can this be done that satisfies both regulatory requirements and defends against public concern?</p>
+
+<h1 id="the-case-for-pseudonymisation">The case for pseudonymisation</h1>
+
+<p>Pseudonymisation is a process in which identifying data relating to an individual is replaced with an identifier. A commonly used method of pseudonymisation in healthcare is to create a pseudonym using a recipe based on fixed unchanging information about a patient such as a national identifier, a date of birth and country of birth. This uses an important property of a hash function to generate a fixed-length digest of a variably sized input; it is mathematically a one-way process. If you give me the input then I will always obtain the same digest <em>but</em>, given a digest, I cannot determine the input.</p>
+
+<p>Now that last statement is not quite true, but brute-force attacks on hash functions are outside of the scope of this blog post, and, as long as one uses an additional salt (a fixed input parameter used together with other input parameters), one can avoid pre-calculated lookup table attacks.</p>
+
+<p>For example, one might generate a string such as “WIBBLE-111111111-2000-01-01-BIRMINGHAM” (a salt, the NHS number, the date of birth, the city of birth), and then use a SHA-256 hash to generate a unique digest.</p>
+
+<p>Pseudonymisation is different to anonymisation in which all identifiable information is removed. With pseudonymisation, it is possible to subsequently re-identify an individual. If an “attacker” knows the recipe for building the pseudonym and the salt, then they too can generate the pseudonym independently and subsequently use that pseudonym to link to data about that individual.</p>
+
+<p>Of course, if an “attacker” knows the recipe and the salt (together acting as a shared secret) and the individual’s information already, then one might assume that they are permitted to look-up information relating to that individual.</p>
+
+<p>Importantly, a different pseudonym can be calculated depending on what we are trying to achieve and to which other data our data need to be linked.</p>
+
+<h4 id="healthcare-data-on-a-need-to-know-basis">Healthcare data on a need-to-know basis</h4>
+
+<p>This figure demonstrates how a trusted pseudonymisation service can act as an intermediary between an NHS organisation and trusted third parties.</p>
+
+<p><img src="/images/pseudonym-audit-log.png" alt="Distributed consent" class="img-responsive" /></p>
+
+<p>Here, the mobile devices are, without doubt, involved in direct clinical care. For that reason, they may directly interact with trusted organisational systems, supporting the management of patients. Importantly, they act as a proxy for a clinical user, supporting authentication and authorisation and then allowing that user to navigate health information as required.</p>
+
+<p>However, we would like to make use of health information to track patients with acute kidney injury. Instead of transferring patient identifiable information directly, we generate a project-specific pseudonym for this purpose only. With this identifier, a variety of information can be shared with the “open intermediary service”.</p>
+
+<p>Third-party analytics cannot re-identify patient data but can use health data to support clinical processes. Importantly, they can push information back to the trusted intermediary again linked to the individual using the provided pseudonym</p>
+
+<p>It is only within the NHS organisation that software can link the pseudonym-linked data with the identifiable information. The mobile application for example, can generate a pseudonym dynamically and request information from a third-party without giving away any information as to who or why the information is required. In addition, a third-party may generate an alert linked to a pseudonym and an NHS hosted service can re-identify the data.</p>
+
+<p>In addition, any third-party analytics must obtain healthcare data from the trusted open intermediary which contains only pseudonymised information. As part of a request for information, the intermediary may use a verifiable append-only audit log to record that the request has taken place. Once again, only software running within the NHS can identify to whom an audit log refers and thus, this information can be shared with both the patient and the host organisation. A third-party regulator can act to routinely verify that audit logs within the open intermediary service have not been subject to tampering.</p>
+
+<h4 id="scaling">Scaling</h4>
+
+<p>Using this system, it becomes possible for many different projects to use patient data without needing to handle patient identifiable information. Importantly, with a different pseudonym used for only a specific purpose, it is not possible for any individual project to link to data that has used a different pseudonym for a different purpose.</p>
+
+<p>If there were a centralised NHS-hosted service that recorded participation in projects, whether for direct clinical care or for research, then only that service could generate the required pseudonyms in order to re-identify or link data from disparate systems. In addition, patients themselves could control to which projects they are happy to share data.</p>
+
+<p>For my methotrexate monitoring application, we would need to identify all patients on methotrexate as well as look at their laboratory investigations. For this, we need medication histories as well as renal and liver function tests together with full blood count results. It is conceivable that this clinical application could easily be regarded as direct clinical care and so use a global pseudonym and share information with other applications. However, it would be possible to generate a project-specific pseudonym and use that together with the required clinical data for analysis by a third-party.</p>
+
+<p>Complex analytics may then occur inside or outside of the NHS services. Interestingly, if data are sourced from multiple organisations for the <em>same</em> project, they can be safely linked together without needing the third-party to perform re-identification. Each organisation would send clinical data bound to the same project-specific pseudonym. As such, the pseudonymisation service can scale to support multiple organisations and allow inferences to be made across data from those organisations.</p>
+
+<p>This schematic shows what might happen for an AKI alerting service.</p>
+
+<p><img src="/images/pseudonym-aki-alert.png" alt="AKI alerts" class="img-responsive" /></p>
+
+<p>Here laboratory data are taken from source systems, given a project-specific pseudonym and send for third-party analytics. The pseudonymisation service stores the patient information as well as all of the pseudonyms in use as well as patient explicit consent for inclusion (for research) and withdrawal of consent (for direct care). A log is created.</p>
+
+<p>If there is an AKI alert, a third-party sends back an alert to an NHS hosted service. This identifies the patient using the pseudonymisation service, allowing further logging of the results of processing. Now re-identified, the alerting service may link to the EMR and any mobile devices in order to notify the team.</p>
+
+<h4 id="centralised-vs-distributed-pseudonymisation">Centralised vs. distributed pseudonymisation</h4>
+
+<p>Readers may be familiar with the <a href="https://saildatabank.com">SAIL databank</a> hosted by Swansea University. It uses pseudonyms to perform data linkage from multiple sources. It is a centralised pseudonymisation system, performing analysis is much like working in a smoke cupboard as one needs to use a remote desktop to run R and one cannot take data out of the closed system. In addition, a lot of the datasets were rather old when I last used the service. It is working however, and has avoided many of the controversies commonly seen when aggregated medical data is used for non-direct care purposes. One takes a clinical set, splits it into two parts containing patient identity in one and non-identifying information in another. The two are linked with a unique identifier. A secure NHS service performs the pseudonymisation and the non-identifying information is placed in a data warehouse with the pseudonym. They use a global pseudonym which allows linkage to other source of clinical data.</p>
+
+<p>For example, we used SAIL to show that the <a href="http://jnnp.bmj.com/content/85/10/e4.187">main risk of a further attendance in the emergency unit for a patient with epilepsy was their social deprivation</a>.(Lynch E, Lacey A, Pickrell W, et al FACTORS ASSOCIATED WITH EMERGENCY ATTENDANCES FOR EPILEPSY J Neurol Neurosurg Psychiatry 2014;85:e4.) by linking emergency unit attendances with general practitioner records and socio-economic indices.</p>
+
+<p>The problem is that this is offline analysis suitable for retrospective analyses. This will not support real-time analytics or any of the innovative supporting technologies that healthcare today needs.</p>
+
+<p>It is here that I need help. Is it possible to create a distributed system to track patient consent for research, to provide distributed pseudonymisation and verifiable audit logs of access to data? Ideally, we would not have a centralised pseudonymisation service or a centralised audit log, but distributed systems that both maintain patient confidentiality and provide assurances as to the use of data ideally replicated among trusted organisations.</p>
+
+<p>My final questions are therefore:</p>
+
+<ul>
+  <li>Can <a href="/clinical-informatics/2017/03/09/google-information.html">Merkle trees</a> be used to implement a verifiable audit-log backed key-value store service within the NHS network to store consent and access logs?</li>
+  <li>Who will act as a guardian of this service and monitor the logs?</li>
+  <li>Could this act as a pseudonymiser service, logging the pseudonymisation and the upload of non-identifiable clinical data?</li>
+  <li>Similarly, when sending data back to the NHS, could this pseudonymiser service act to link data back into the patient’s record, logging such access?</li>
+  <li>Would such a service support the safe use and monitoring of third-party applications and data analytics?</li>
+</ul>
+
+<p>I would be grateful for your thoughts.</p>
+
+<p>Mark</p>
+
+  </div>
+
+  
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Dr. Mark Wardle</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Dr. Mark Wardle
+            
+            </li>
+            
+            <li><a href="mailto:mark@wardle.org">mark@wardle.org</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/wardle"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">wardle</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/mwardle"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">mwardle</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
