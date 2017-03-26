@@ -1,122 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-03-26T11:00:26+01:00</updated><id>https://www.wardle.org/</id><title type="html">Dr. Mark Wardle</title><subtitle>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
-</subtitle><entry><title type="html">The importance of scope and framing in clinical design</title><link href="https://www.wardle.org/clinical-design/2017/03/23/scope-framing-clinical-design.html" rel="alternate" type="text/html" title="The importance of scope and framing in clinical design" /><published>2017-03-23T16:22:22+00:00</published><updated>2017-03-23T16:22:22+00:00</updated><id>https://www.wardle.org/clinical-design/2017/03/23/scope-framing-clinical-design</id><content type="html" xml:base="https://www.wardle.org/clinical-design/2017/03/23/scope-framing-clinical-design.html">&lt;h4 id=&quot;scope&quot;&gt;Scope&lt;/h4&gt;
-&lt;p&gt;: defines the requirements and objectives and what will be delivered from a project.&lt;/p&gt;
-
-&lt;h4 id=&quot;framing&quot;&gt;Framing&lt;/h4&gt;
-&lt;p&gt;: a way of structuring or presenting a problem or issue&lt;/p&gt;
-
-&lt;h1 id=&quot;clinical-design&quot;&gt;Clinical design&lt;/h1&gt;
-
-&lt;p&gt;Scope and framing are critical in designing valuable health information technology.&lt;/p&gt;
-
-&lt;p&gt;If you ask for a system to request laboratory tests electronically then that’s what you’ll get.&lt;/p&gt;
-
-&lt;p&gt;If your initial framing of the problem is wrong, you won’t get a solution that solves the true user problem. The user problem is defined by the user, with support to understand and explore the problem in its entirety.&lt;/p&gt;
-
-&lt;p&gt;When one creates a model - whether the model represents a train, a new building or software - there is a balance between over-complexity and over-simplification. A I wrote in my &lt;a href=&quot;/clinical-informatics/2017/02/03/domain-driven-design.html&quot;&gt;‘Domain-driven design’ document&lt;/a&gt;:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;A model is an abstraction of the real-world distilling knowledge into core concepts and processes. A model is a careful balance between complexity and over- simplification with models that are too complex providing brittle abstractions which are poorly generalisable and models that are too simple not supporting all of the demands placed upon it in real-life clinical scenarios.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;See the &lt;a href=&quot;https://www.dropbox.com/s/62sg71a19voxpts/cis_design.pdf?dl=0&quot;&gt;full document&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h1 id=&quot;user-centred-design&quot;&gt;User-centred design&lt;/h1&gt;
-
-&lt;p&gt;Clinical information systems should solve real-life user problems. The user may be the patient, a health professional, a member of the laboratory staff or anyone else involved either directly or indirectly in patient care. Information systems are therefore inherently bound to process and workflow; to be more specific, the processes and workflows for that user or those groups of users.&lt;/p&gt;
-
-&lt;p&gt;Our aim, always, is to create solutions that valuably support the care of patients but while we must not lose sight of this overarching aim, an effective information technology strategy must be explicit in how it will effect change to reach those aims. It is my opinion that we spend too little time understanding and refining the problems we are trying to solve resulting in poorly framed problems with ill-defined scope.&lt;/p&gt;
-
-&lt;p&gt;As I wrote in my &lt;a href=&quot;/clinical-informatics/2017/03/15/once-for-wales.html&quot;&gt;“Once for Wales” speech&lt;/a&gt; in which I pitched for interoperability and data standards for NHS Wales:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;It is almost always the case that when building complex solutions to real-life problems, no-one person can conceive of all of the problems in one go. The natural solution to such complexity is to break-down a problem into manageable chunks. These chunks, much like “lego bricks”, can be joined together to form something greater than the sum of the parts. Importantly, it is more likely that we can vouch that a system is deterministic.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;We need to spend time working on the problems we are trying to solve and, break them apart into manageable chunks. Such a process requires skill and experience spanning knowledge of both the domain &lt;em&gt;and&lt;/em&gt; information technology together with a large amount of pragmatism to &lt;em&gt;get things done&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Importantly, core design principles such as using a &lt;a href=&quot;https://www.dropbox.com/s/62sg71a19voxpts/cis_design.pdf?dl=0&quot;&gt;domain-driven design to build a layered architecture&lt;/a&gt; &lt;em&gt;protect&lt;/em&gt; those involved and force an approach which, while not impervious to changes in workflow and process, can more easily adapt to those changes than a design built as a monolith.&lt;/p&gt;
-
-&lt;h1 id=&quot;test-requesting&quot;&gt;Test requesting&lt;/h1&gt;
-
-&lt;p&gt;We currently have a working test requesting module within NHS Wales’ &lt;em&gt;Welsh Clinical Portal&lt;/em&gt;  (WCP) software for requesting laboratory tests. Essentially, one navigates to a patient’s record and selects REQUEST-&amp;gt;Laboratory test.&lt;/p&gt;
-
-&lt;p&gt;On many levels, this is a workable solution to the problem as framed; “allow clinical staff to request laboratory investigations”. The design team, given that brief, designed a multi-page form that allowed that functionality. There are some minor glitches in the user interface, but behind-the-scenes, there is considerable work in dealing with different laboratories and actually performing the test request.&lt;/p&gt;
-
-&lt;p&gt;The team should have visited a variety of care settings in which tests are requested and arrived at the following conclusions and questions:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;In many settings, laboratory tests are requested at the same time as other tests, such as radiology tests. Should the solution work in a more generic way to suit this workflow? How can the life of a clinician sitting in an outpatient clinic be improved? How can we create solutions that work better than the paper systems?&lt;/li&gt;
-  &lt;li&gt;In many settings, a health professional is caring for a number of patients at the same time. How can we support the life of a junior doctor when trying to manage all of their inpatients?&lt;/li&gt;
-  &lt;li&gt;In many situations, a request for a test is prompted by seeing a result. Should we support requesting tests from the “results” page when we see something that needs acting upon?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I’d like to crowdsource the framing of our problem. Are we only requesting laboratory investigations here or will the same system work for radiology? Can we expand our scope by reframing our problem? What about the future?&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;What about routine monitoring according to protocol, for patients on certain drugs? My PatientCare EPR has this information, and given the right APIs, it could monitor those patients and request tests semi-autonomously. Would that functionality form part of the test requesting module within WCP or be separate?&lt;/li&gt;
-  &lt;li&gt;We want to implement care plans that can be activated either manually or automatically for groups of patients. For example, a liver or renal failure patient may have a standard regime of investigations performed at regular intervals for monitoring. How can we support this?&lt;/li&gt;
-  &lt;li&gt;What about other suggestions for clinical staff based on the information-at-hand, perhaps using machine-learning?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;And what about interaction with other systems?&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;How is this going to work when the health professional filling in the request is going to take the blood and send it to the laboratory themselves? How is this going to work when the blood sampling will be done by a phlebotomist?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Finally what is in scope here? Do we need to design all of this functionality right away or can it evolve iteratively? Are there natural ‘fault lines’ which guide us as to &lt;em&gt;how&lt;/em&gt; to break this up into manageable parts?&lt;/p&gt;
-
-&lt;h3 id=&quot;the-current-architecture-a-monolith&quot;&gt;The current architecture: a monolith&lt;/h3&gt;
-
-&lt;p&gt;The current solution tries to be everything to everyone. It supports requesting tests for an arbitrary date, or set of dates. It is accessible only within the WCP application itself; its user interface, its functionality and the services it uses to implement its functionality are not available outside of WCP.&lt;/p&gt;
-
-&lt;p&gt;Advocates of a monolithic approach say that standardisation of user interfaces makes it easier for users, reduces need for training and avoids duplication. I think this is wrong. I will vouch that you can operate an email client, whether it is web-based, runs on a mobile device or a desktop computer, from any vendor since email was invented because the nouns and verbs are the same. You might have a ‘draft email’ waiting to be ‘sent’, an ‘outbox’, an ‘inbox’, ‘folders’, ‘addresses’ in a ‘to’ field etc.&lt;/p&gt;
-
-&lt;p&gt;Standardisation should be at the level of the nouns we use and the verbs we use to operate on those nouns. Thus we develop or adopt standardised information models in which our data and the processes/workflow in which we work are modelled.&lt;/p&gt;
-
-&lt;p&gt;In addition, a monolithic or “product”-based approach makes it difficult to adapt to change. If we want to start work on extending the scope to include some of the functionality outlined above, we’ll need to make considerable changes to the WCP application. But we must be careful; every change that we make, every button we add, adds complexity to an already overwhelming user interface. To support every new feature, we are potentially extending our list of responsibilities and scope.&lt;/p&gt;
-
-&lt;p&gt;‘Scope creep’ is the term used to describe continuous expansion of a project’s scope, usually a result of a variety of factors including poor initial framing of the problem to be solved, poor initial scoping and lack of flexibility and versatility in any resulting solution.&lt;/p&gt;
-
-&lt;h3 id=&quot;adopting-a-service-orientated-architecture&quot;&gt;Adopting a service-orientated architecture&lt;/h3&gt;
-
-&lt;p&gt;What if we pick apart the problem we are trying to solve?&lt;/p&gt;
-
-&lt;p&gt;The diagram shows an abstract view of what we are trying to solve with test requesting:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/test-requesting.png&quot; alt=&quot;Test Requesting&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The test requesting service wraps an integration layer to provide generic test requesting. Whether a test is requested from a laboratory or another service, a separation between laboratory tests and other types of investigation tests is an artefact of implementation of health services; abstractly, a test request is a test request irrespective of which service will perform the test.&lt;/p&gt;
-
-&lt;p&gt;However, it is likely that different tests will require different information to be provided at the time of request. Rather than embedding this important business logic in an application, this architecture forces an approach which explicitly recognises this business requirement and models it appropriately. There is an explicit design to ensure dynamic runtime configuration can modify the behaviour of the ‘system’.&lt;/p&gt;
-
-&lt;p&gt;A formal contract between the responsibilities and scope of each component must be defined. While the scope of the overall solution may change to meet new requirements, a modular layered approach means that scope creep of individual components should be minimal.&lt;/p&gt;
-
-&lt;p&gt;Applications, such as the web-based front-end application server or applications running on mobile devices, do not directly use a requesting service but use a service provided at the application layer. This layer provides further abstractions and while it will pass on requests to the test request service, it will have responsibility to apply business rules and domain logic such as audit trails and permissions. Those rules may be recorded declaratively in a rules engine rather than hard-coded at the domain layer allowing considerable flexibility in the future to add or change business rules to suit business need.&lt;/p&gt;
-
-&lt;p&gt;The core requesting service does not need to have responsibility for domain logic, but has as its only responsibility to make the request against the end-point laboratory service(s).&lt;/p&gt;
-
-&lt;h3 id=&quot;designing-for-the-future&quot;&gt;Designing for the future&lt;/h3&gt;
-
-&lt;p&gt;With such an architecture, we have considerable flexibility to suit future requirements. If we wish to implement decision support, this could be performed at the domain logic layer and so decision support would be available to all client applications. At project initiation, we may have little or no decision support but our domain layer service must be designed with the hooks to enable this in the future. Over time, should more sophisticated decision support be available, client applications need not know - it is not their responsibility - because our systems are flexible enough to support this new functionality.&lt;/p&gt;
-
-&lt;h3 id=&quot;the-final-design&quot;&gt;The final design&lt;/h3&gt;
-
-&lt;p&gt;Our final design for redefining the user interface of test requesting within WCP becomes much simpler once there is an underlying robust architectural platform.&lt;/p&gt;
-
-&lt;p&gt;It is my opinion that no-one user interface will suit all use-cases. I am not concerned if there are multiple versions of the user interface as long as each version fits into the workflow and processes of a specific clinical domain. For instance, it is a long time since I was a junior doctor and I’d want to sit down with a team of them to make the most intuitive and best system to support their processes as possible. Our user interface and logic would be only a thin wrapper around our more complex architecture, but I’d envisage test requesting as part of a jobbing ward round, inpatient list and communication application. The nouns and verbs, the domain-model of the test requesting lifecycle would be standardised across the applications, not the user interface.&lt;/p&gt;
-
-&lt;p&gt;Similarly, what I need in a busy outpatient clinic is a somewhat different. Now it may make sense to share a lot of user interface code, or indeed, with today’s responsive technologies, use the same user interface on the same platform. However, this would be a decision made for pragmatic business purposes if the shared user facing components were appropriate in those different clinical contexts. Such a decision would not be made because we are slavishly following a directive to create systems that are &lt;a href=&quot;/clinical-informatics/2017/03/15/once-for-wales.html&quot;&gt;“Once-for-Wales”&lt;/a&gt; but different devices may need different user interface components to suit their form factor and critically, the workflow in which they are to be used.&lt;/p&gt;
-
-&lt;h3 id=&quot;conclusions&quot;&gt;Conclusions&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Frame the problem appropriately.&lt;/li&gt;
-  &lt;li&gt;Get early involvement of groups of disparate domain, information technology and usability experts.&lt;/li&gt;
-  &lt;li&gt;Extend the scope of the overall problem appropriately, designing in versatility to make solutions future-proof.&lt;/li&gt;
-  &lt;li&gt;Limit scope and responsibility of individual components: work to break-up a problem and solution into manageable parts and enforce limitations on responsibility and scope for those component parts.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">Scope : defines the requirements and objectives and what will be delivered from a project.</summary></entry><entry><title type="html">An update on Merkle trees</title><link href="https://www.wardle.org/merkle-trees/2017/03/20/merkle-trees.html" rel="alternate" type="text/html" title="An update on Merkle trees" /><published>2017-03-20T06:53:48+00:00</published><updated>2017-03-20T06:53:48+00:00</updated><id>https://www.wardle.org/merkle-trees/2017/03/20/merkle-trees</id><content type="html" xml:base="https://www.wardle.org/merkle-trees/2017/03/20/merkle-trees.html">&lt;p&gt;In a previous post, I referenced Merkle trees in relation to the creation of a &lt;a href=&quot;/clinical-informatics/2017/03/09/google-information.html&quot;&gt;verifiable audit log&lt;/a&gt;. I broke a cardinal rule by discussing something for which I (then) had little knowledge.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-03-26T11:01:43+01:00</updated><id>https://www.wardle.org/</id><title type="html">Dr. Mark Wardle</title><subtitle>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
+</subtitle><entry><title type="html">An update on Merkle trees</title><link href="https://www.wardle.org/merkle-trees/2017/03/20/merkle-trees.html" rel="alternate" type="text/html" title="An update on Merkle trees" /><published>2017-03-20T06:53:48+00:00</published><updated>2017-03-20T06:53:48+00:00</updated><id>https://www.wardle.org/merkle-trees/2017/03/20/merkle-trees</id><content type="html" xml:base="https://www.wardle.org/merkle-trees/2017/03/20/merkle-trees.html">&lt;p&gt;In a previous post, I referenced Merkle trees in relation to the creation of a &lt;a href=&quot;/clinical-informatics/2017/03/09/google-information.html&quot;&gt;verifiable audit log&lt;/a&gt;. I broke a cardinal rule by discussing something for which I (then) had little knowledge.&lt;/p&gt;
 
 &lt;p&gt;In my defence, the technology is rather clever so I don’t regret writing about it. However, I’ve had some help correcting my misunderstandings, so I thought it would be prudent to write down what I’ve learned. Any remaining errors are mine.&lt;/p&gt;
 
@@ -637,4 +520,14 @@ Dr Larry Weed, Internal Medicine Grand Rounds, 1971&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/edss-graph.jpg&quot; alt=&quot;MS progress&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;As an added bonus, we can chart the use of disease-modifying treatments as well.&lt;/p&gt;</content><author><name></name></author><summary type="html">I’m delighted to announce the release of my new data-linkage pseudonymous patient portal msdata.org.uk.</summary></entry></feed>
+&lt;p&gt;As an added bonus, we can chart the use of disease-modifying treatments as well.&lt;/p&gt;</content><author><name></name></author><summary type="html">I’m delighted to announce the release of my new data-linkage pseudonymous patient portal msdata.org.uk.</summary></entry><entry><title type="html">Domain-driven design in clinical informatics</title><link href="https://www.wardle.org/clinical-informatics/2017/02/03/domain-driven-design.html" rel="alternate" type="text/html" title="Domain-driven design in clinical informatics" /><published>2017-02-03T10:16:10+00:00</published><updated>2017-02-03T10:16:10+00:00</updated><id>https://www.wardle.org/clinical-informatics/2017/02/03/domain-driven-design</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/02/03/domain-driven-design.html">&lt;p&gt;I have written this document to explain my thoughts on the most appropriate way to design and clinical information systems that valuably support the process of healthcare.  As such, it includes a methodology for creating software for use by clinicians,  managers  and  administrators  to  support  both  the  day-to-day  care  of patients and the management of services for groups of patients.&lt;/p&gt;
+
+&lt;p&gt;I divide the “process of healthcare” into three core themes which are related and inter-dependent:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The ‘day-to-day’ care of a single patient; data relates to a single individual.&lt;/li&gt;
+  &lt;li&gt;The management, audit and governance of clinical services; data relates togrouped, aggregated patient data and is service-specific.&lt;/li&gt;
+  &lt;li&gt;Supporting clinical research;  data relating to a patient’s suitability for research projects as well as enrolment, consent and research-level data.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The complete document is available &lt;a href=&quot;https://www.dropbox.com/s/62sg71a19voxpts/cis_design.pdf?dl=0&quot;&gt;here&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">I have written this document to explain my thoughts on the most appropriate way to design and clinical information systems that valuably support the process of healthcare. As such, it includes a methodology for creating software for use by clinicians, managers and administrators to support both the day-to-day care of patients and the management of services for groups of patients.</summary></entry></feed>
