@@ -1,5 +1,29 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-03-26T21:17:52+01:00</updated><id>https://www.wardle.org/</id><title type="html">Dr. Mark Wardle</title><subtitle>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
-</subtitle><entry><title type="html">The importance of scope and framing in clinical design</title><link href="https://www.wardle.org/clinical-design/2017/03/23/scope-framing-clinical-design.html" rel="alternate" type="text/html" title="The importance of scope and framing in clinical design" /><published>2017-03-23T10:01:01+00:00</published><updated>2017-03-23T10:01:01+00:00</updated><id>https://www.wardle.org/clinical-design/2017/03/23/scope-framing-clinical-design</id><content type="html" xml:base="https://www.wardle.org/clinical-design/2017/03/23/scope-framing-clinical-design.html">&lt;h4 id=&quot;scope&quot;&gt;Scope&lt;/h4&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-03-26T23:33:08+01:00</updated><id>https://www.wardle.org/</id><title type="html">Dr. Mark Wardle</title><subtitle>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
+</subtitle><entry><title type="html">PatientCare videos</title><link href="https://www.wardle.org/patientcare/2017/03/26/patientcare-old-videos.html" rel="alternate" type="text/html" title="PatientCare videos" /><published>2017-03-26T22:20:10+01:00</published><updated>2017-03-26T22:20:10+01:00</updated><id>https://www.wardle.org/patientcare/2017/03/26/patientcare-old-videos</id><content type="html" xml:base="https://www.wardle.org/patientcare/2017/03/26/patientcare-old-videos.html">&lt;p&gt;PatientCare is an electronic patient record (EPR) system that supports the care of over 20,000 patients and records over 3000 clinical encounters every month.&lt;/p&gt;
+
+&lt;p&gt;I need to create some videos to demonstrate the range of functionality, but for now, I’ve included some old videos:&lt;/p&gt;
+
+&lt;h4 id=&quot;the-motor-neurone-disease-module&quot;&gt;The motor neurone disease module&lt;/h4&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/DGvCzfhOoN0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;h4 id=&quot;clinic-based-ipad-application---healthcontact&quot;&gt;Clinic-based iPad application - HealthContact&lt;/h4&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/GTo0fGHgoIA&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;We’ve trialled this in the outpatient clinic successfully. See &lt;a href=&quot;/about#iPadParkinson&quot;&gt;our published abstract&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;medication-entry&quot;&gt;Medication entry&lt;/h4&gt;
+
+&lt;p&gt;These videos show the real-time mapping of user entered text to SNOMED-CT codes from the DM&amp;amp;D (dictionary of medicines and devices). You’ll notice the parsing of doses and the calculation of unchanged, started and stopped drugs. This makes it very quick in the outpatient clinic.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/3tRyjJk-71M&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/F2LSHpdCPvo&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;h4 id=&quot;iphone-application-for-communication&quot;&gt;iPhone application for communication&lt;/h4&gt;
+
+&lt;p&gt;This was a simple iOS application that used the PatientCare EPR to handle user communication linked to the patient record. Unfortunately, I did not successfully convince my organisation to allow use of the wifi network, so I never deployed this.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/1Lej6CMZZkY&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name></name></author><summary type="html">PatientCare is an electronic patient record (EPR) system that supports the care of over 20,000 patients and records over 3000 clinical encounters every month.</summary></entry><entry><title type="html">The importance of scope and framing in clinical design</title><link href="https://www.wardle.org/clinical-design/2017/03/23/scope-framing-clinical-design.html" rel="alternate" type="text/html" title="The importance of scope and framing in clinical design" /><published>2017-03-23T10:01:01+00:00</published><updated>2017-03-23T10:01:01+00:00</updated><id>https://www.wardle.org/clinical-design/2017/03/23/scope-framing-clinical-design</id><content type="html" xml:base="https://www.wardle.org/clinical-design/2017/03/23/scope-framing-clinical-design.html">&lt;h4 id=&quot;scope&quot;&gt;Scope&lt;/h4&gt;
 &lt;p&gt;: defines the requirements and objectives and what will be delivered from a project.&lt;/p&gt;
 
 &lt;h4 id=&quot;framing&quot;&gt;Framing&lt;/h4&gt;
@@ -619,22 +643,4 @@ Dr Larry Weed, Internal Medicine Grand Rounds, 1971&lt;/p&gt;
 
 &lt;p&gt;Finally, while there is excitement about the use of patient’s own devices and patient reported outcomes, what is the point of those data if they cannot be used for clinical care? Here, the data entered by the patient is immediately presented to the clinician and is &lt;a href=&quot;https://twitter.com/mwardle/status/833064699977691137&quot;&gt;automatically incorporated into the clinic letter&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;You’ll notice in the last video, I also tweak the current medication list (mapped to the NHS dictionary of medicines and devices) and those changes appear in our correspondence automatically.&lt;/p&gt;</content><author><name></name></author><summary type="html">Clinical information systems should support patient care.</summary></entry><entry><title type="html">Multiple sclerosis</title><link href="https://www.wardle.org/multiple-sclerosis/2017/02/12/new-ms-portal.html" rel="alternate" type="text/html" title="Multiple sclerosis" /><published>2017-02-12T10:16:10+00:00</published><updated>2017-02-12T10:16:10+00:00</updated><id>https://www.wardle.org/multiple-sclerosis/2017/02/12/new-ms-portal</id><content type="html" xml:base="https://www.wardle.org/multiple-sclerosis/2017/02/12/new-ms-portal.html">&lt;p&gt;I’m delighted to announce the release of my new data-linkage pseudonymous patient portal &lt;a href=&quot;https://msdata.org.uk&quot;&gt;msdata.org.uk&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;This brings the full power of my existing electronic patient record (EPR) - currently hosted and only accessible within NHS Wales - to the Internet.&lt;/p&gt;
-
-&lt;p&gt;Importantly, no patient identifiable information is stored, but instead, the system acts as a data-linkage platform, allowing information entered from patient-held devices and clinicians outside of Wales to be brought into the EPR.&lt;/p&gt;
-
-&lt;p&gt;Here, one can see how many relapses a patient has had due to multiple sclerosis:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/msdata-relapses.jpg&quot; alt=&quot;MS relapses&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Importantly, while we have over 20,000 patients registered with a variety of disorders, wouldn’t it be useful to show clinicians and the patient how they are progressing compared to patients with the same disorder.&lt;/p&gt;
-
-&lt;p&gt;Fortunately, while there are lots of SNOMED-CT concepts that mean the same as “multiple sclerosis”, it is possible to use the SNOMED-CT hierarchy to derive semantic understanding of the relationships between terms. In this way, we can easily find patients with say, a type of motor neurone disease, even if they have been recorded as having “progressive bulbar palsy”.&lt;/p&gt;
-
-&lt;p&gt;Here, we chart a single patient’s progress over the years compared to a whole population-based cohort of patients’ progress. The median progress of the whole cohort is shown with a dotted green line. Just like a growth chart for a baby, a patient crossing the centile charts is either doing better or worse than expected. The EDSS is a score of disability in multiple sclerosis.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/edss-graph.jpg&quot; alt=&quot;MS progress&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;As an added bonus, we can chart the use of disease-modifying treatments as well.&lt;/p&gt;</content><author><name></name></author><summary type="html">I’m delighted to announce the release of my new data-linkage pseudonymous patient portal msdata.org.uk.</summary></entry></feed>
+&lt;p&gt;You’ll notice in the last video, I also tweak the current medication list (mapped to the NHS dictionary of medicines and devices) and those changes appear in our correspondence automatically.&lt;/p&gt;</content><author><name></name></author><summary type="html">Clinical information systems should support patient care.</summary></entry></feed>
