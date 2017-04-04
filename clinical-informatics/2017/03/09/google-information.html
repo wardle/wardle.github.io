@@ -183,6 +183,10 @@ Dr Larry Weed, Internal Medicine Grand Rounds, 1971</p>
 
 <p>I would therefore suggest that we as an interoperability community work towards developing an open-source distributed consent and log framework which is held securely by multiple trusted health organisations. By distributing and synchronising such data among multiple trusted parties, one can offer guarantees that no single organisation can make a change without it being identified by all other organisations, or indeed by the patient or their proxy. A holder of the ledger, and there could be many, cannot themselves re-identify the patients within as a result of the use of multiple service-specific pseudonymous identifiers.</p>
 
+<blockquote>
+  <p>Update 21st March 2017: Additional information relating to Merkle trees in this blog post is available on a <a href="/merkle-trees/2017/03/20/merkle-trees.html">more recent post</a>.</p>
+</blockquote>
+
 <h4 id="a-worked-example">A worked example</h4>
 
 <p>A public and private key is generated for the patient at registration. This private key is used to encrypt information within the patient’s ledger but is itself encrypted using the patient’s password. If the patient changes their access password, then only the private key need be re-encrypted with the new password.</p>
