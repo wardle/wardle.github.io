@@ -1,5 +1,184 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-04-04T13:47:23+01:00</updated><id>https://www.wardle.org/</id><title type="html">Dr. Mark Wardle</title><subtitle>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
-</subtitle><entry><title type="html">Test requesting</title><link href="https://www.wardle.org/clinical-informatics/2017/04/04/test-requesting.html" rel="alternate" type="text/html" title="Test requesting" /><published>2017-04-04T12:27:23+01:00</published><updated>2017-04-04T12:27:23+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/04/04/test-requesting</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/04/04/test-requesting.html">&lt;p&gt;I discussed the importance of scope and framing in a &lt;a href=&quot;/clinical-design/2017/03/23/scope-framing-clinical-design.html&quot;&gt;recent blog post&lt;/a&gt; concluding that the framing and scope of the overall problem domain must be broad enough to model reality but that solutions must be broken-up into components each of limited scope.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-04-05T14:45:33+01:00</updated><id>https://www.wardle.org/</id><title type="html">Dr. Mark Wardle</title><subtitle>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
+</subtitle><entry><title type="html">Pseudonymous consent</title><link href="https://www.wardle.org/information-governance/2017/04/05/pseudonymous-consent-poc.html" rel="alternate" type="text/html" title="Pseudonymous consent" /><published>2017-04-05T14:45:28+01:00</published><updated>2017-04-05T14:45:28+01:00</updated><id>https://www.wardle.org/information-governance/2017/04/05/pseudonymous-consent-poc</id><content type="html" xml:base="https://www.wardle.org/information-governance/2017/04/05/pseudonymous-consent-poc.html">&lt;p&gt;In earlier posts relating to &lt;a href=&quot;/clinical-informatics/2017/03/09/google-information.html&quot;&gt;“What I would do if I were Google”&lt;/a&gt; and &lt;a href=&quot;/information-governance/2017/03/19/information-governance.html&quot;&gt;“Balancing information governance and innovation in the NHS”&lt;/a&gt;, I discussed the importance of balance between information governance and open innovation within healthcare informatics focusing on the difficulty in handling sensitive medical data.&lt;/p&gt;
+
+&lt;p&gt;Writing a blog forces one to reflect; for instance, what is it that you are trying to do? I’ve concluded that my primary objective within healthcare informatics is to:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;make healthcare information available at the point-of-care in order to support clinical care&lt;sup&gt;&lt;a href=&quot;#care-of-patients&quot;&gt;a&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To achieve that, I want:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;better use of real-time analytics to aggregate data among patient cohorts and support clinical decision making&lt;/li&gt;
+  &lt;li&gt;a mixed-economy of healthcare applications that can interoperate and leverage core infrastructure and services with a reduced focus on monolithic enterprise-wide systems&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And to achieve those, I want:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;greater use of structured clinical information captured and used at the point-of-care including use of robust information models, open standards and terminology such as HL7 FHIR, openEHR and SNOMED CT.&lt;/li&gt;
+  &lt;li&gt;an open-source infrastructure to permit interoperability between vendors.&lt;/li&gt;
+  &lt;li&gt;a robust information governance framework&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;supporting-information-governance&quot;&gt;Supporting information governance&lt;/h2&gt;
+
+&lt;p&gt;One can support &lt;a href=&quot;https://en.wikipedia.org/wiki/Information_governance&quot;&gt;information governance&lt;/a&gt; by adopting appropriate &lt;a href=&quot;http://www.wales.nhs.uk/nwis/page/52618&quot;&gt;policies and procedures&lt;/a&gt;, by creating formal &lt;a href=&quot;https://www.igt.hscic.gov.uk/Caldicott2Legislation.aspx?tk=428276172817610&amp;amp;lnv=18&amp;amp;cb=8cf4d31b-5ea7-4f07-b8b5-34f9ee732d4a&quot;&gt;legislation&lt;/a&gt;, &lt;a href=&quot;https://www.igt.hscic.gov.uk&quot;&gt;toolkits&lt;/a&gt; and by instituting technical solutions such as authentication, authorisation, secure audit logs and encryption.&lt;/p&gt;
+
+&lt;p&gt;Essentially we need to strike a balance between making clinical information available and ensuring that this sensitive information is not seen by the wrong people in a complex, heterogeneous and distributed environment in which there are multiple actors such as clinical staff, patients, managers, organisations and commissioners.&lt;/p&gt;
+
+&lt;p&gt;I think that there are three broad concepts we need to cover:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Pseudonymisation and data linkage.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Secure and verifiable audit trails&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Put patients at the heart of what we do and give them control.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I have previously discussed the use of pseudonymisation as a technique to permit safe data linkage within and between disparate datasets. In addition, I covered the use of a project- or service- specific pseudonym that could uniquely identify a patient for that particular research project or clinical service. Importantly, pseudonymisation uses a one-way mathematical function so that, given a pseudonym alone, we cannot re-identify a patient. However, we can re-link these data if we have the shared secrets that were used to generate the pseudonym.&lt;/p&gt;
+
+&lt;p&gt;I gave an overview of &lt;a href=&quot;/merkle-trees/2017/03/20/merkle-trees.html&quot;&gt;Merkle trees&lt;/a&gt; in a previous blog post. Essentially, although I have built in audit trail functionality into my own EPR, there is nothing stopping me accessing patient records inappropriately and removing those log entries directly from the database as I have administrator access. Do you trust me? Perhaps. But do you trust a commercial entity? Perhaps not. A verifiable audit log potentially solves this issue, by ensuring that no-one can tamper with the log.&lt;/p&gt;
+
+&lt;p&gt;Putting patients in control of where and how their information is used means that there are &lt;em&gt;no surprises&lt;/em&gt; because patients have explicitly agreed.&lt;/p&gt;
+
+&lt;h3 id=&quot;key-security-concerns&quot;&gt;Key security concerns&lt;/h3&gt;
+
+&lt;p&gt;Is it possible to create an architecture which is secure-by-design?&lt;/p&gt;
+
+&lt;p&gt;The use of pseudonyms generated on a per-use or per-service basis, possibly on the fly, potentially allows an interesting security feature in that inappropriate dataset access cannot occur simply because the data cannot be linked to the patient, rather than relying on systems themselves try to manage which data sources are permitted or not. Access to data is therefore the result of data linkage.&lt;/p&gt;
+
+&lt;p&gt;As a result, it becomes possible to allow untrusted third parties access to an infrastructure but their access to disparate distributed data sources is impossible as a result of a lack of linkage. In addition, by virtue of requesting access, the third party &lt;em&gt;must&lt;/em&gt; make a data access request and therefore have their access logged appropriately.&lt;/p&gt;
+
+&lt;p&gt;One fundamental security concern is that a centralised registry of permissions, opt-ins and opt-outs in itself gives away important potentially patient identifiable information. For instance, membership of a cohort of patients in a genito-urinary clinic &lt;em&gt;in itself&lt;/em&gt; gives information to potential third parties. Therefore, it is important that such information is inaccessible by design.&lt;/p&gt;
+
+&lt;p&gt;Sensitive information will be both stored and subsequently transmitted; both require protecting. The most difficult is protecting stored data and I have tried to create a proof-of-concept that could cope with whole system compromise. Assuming an attacker has full access to a dump of the database, it should be possible to take reasonable precautions to prevent re-identification. However, this requirement means that simple join-tables in a relationship database between a patient and their consent/permissions cannot be used.&lt;/p&gt;
+
+&lt;h3 id=&quot;proof-of-concept&quot;&gt;Proof-of-concept&lt;/h3&gt;
+
+&lt;p&gt;There is nothing like trying to create a small working solution as a proof-of-concept.&lt;/p&gt;
+
+&lt;p&gt;The source code is available here: &lt;a href=&quot;https://www.github.com/wardle/openconsent&quot;&gt;https://www.github.com/wardle/openconsent&lt;/a&gt;.  Conceptually, the data model is as follows:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/openconsent/openconsent-model.png&quot; alt=&quot;Openconsent Model&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Here the Patient entity records the name of the patient and uses an email address for login. When a user creates an account, the password is used to create a salted digest for future password-checks and used to create a different digest used to encrypt an encryption key. This key is used to encrypt other information including the name of the patient and the episode identifiers held in the registrations table.&lt;/li&gt;
+  &lt;li&gt;The registration table simply stores encrypted pseudonymous identifiers. There is a one-to-many relationship from patient to registrations.&lt;/li&gt;
+  &lt;li&gt;A project represents a clinical service or research project. Future versions will include additional information such as a URL to an organisation or service homepage as well as service authentication credentials.&lt;/li&gt;
+  &lt;li&gt;An episode stores a project-specific pseudonymous identifier and will store the patient’s explicit choices regarding the use of their data in that context. It will be here that a verifiable audit log is required to track changes in choice so that we can vouch that nothing has tampered with the transactions that have occurred at the episode level.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;This data model is working and is unit tested. An example of creating a patient and understand that they are part of a specific project is shown &lt;a href=&quot;https://github.com/wardle/openconsent/blob/master/src/test/java/com/eldrix/openconsent/model/TestPatients.java&quot;&gt;here, if you can understand java code&lt;/a&gt;. Essentially a patient is registered to a project and I show that we can find that registration subsequently.&lt;/p&gt;
+
+&lt;p&gt;The encryption key is generated randomly. It is encrypted using a key derived from a digest of the patient’s password. The encryption key can only be decrypted with access to the patient’s password but this is never stored. The digest used to validate a patient’s password is stored but is calculated differently to the digest used as the key for the encryption key. The encryption key is used for encryption and decryption of sensitive information relating to that patient. By decrypting the registration information, the application can get a list of episode identifiers for that patient.&lt;/p&gt;
+
+&lt;p&gt;I do need to add an encrypted global pseudonym that is not exposed to research projects and clinical services to allow data linkage once a patient’s account has been validated. More details of this are given below.&lt;/p&gt;
+
+&lt;p&gt;The next steps will be to expose this functionality as a REST service. My plan for the eventual architecture is shown here with the unimplemented pieces in grey and the already implemented model in blue.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/openconsent/openconsent-plan.png&quot; alt=&quot;Openconsent Plan&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The following sections describe how the system works to track consent in a safe way.&lt;/p&gt;
+
+&lt;h4 id=&quot;a-research-project&quot;&gt;A research project&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;A research project is registered with a project-specific consent form.&lt;sup&gt;&lt;a href=&quot;#consent-form&quot;&gt;b&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+  &lt;li&gt;A research project creates an episode using the patient’s details and so needs to know their details to pass in to generate a pseudonym.&lt;/li&gt;
+  &lt;li&gt;If that project subsequently wants to know whether a patient they are seeing has consented, they can pass the patient’s identifier (e.g. NHS number) and date of birth and get any active episodes.&lt;/li&gt;
+  &lt;li&gt;However, because openconsent understands that such a service is opt-in, it will only issue authorisation tokens if the episode has been validated by the patient explicitly.&lt;/li&gt;
+  &lt;li&gt;If a patient has consented, then the project can submit the pseudonym to receive an &lt;a href=&quot;https://oauth.net/2/&quot;&gt;OAUTH2 token&lt;/a&gt;. OAUTH2 is a distributed authorisation framework which allows application to obtain limited access to a data repository. A verifiable audit log records the transaction using the pseudonym.&lt;/li&gt;
+  &lt;li&gt;Should a patient’s consent be withdrawn, or not exist in the first place, then no data is returned. No further work is possible.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Validation of permission by the patient could occur in a variety of ways:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;when a member of the research team meets the patient and shows them a QR code that is readable by a mobile device application.&lt;/li&gt;
+  &lt;li&gt;a QR code that links to a web application portal for the patient&lt;/li&gt;
+  &lt;li&gt;manually typing in the project-specific pseudonym&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Once linked, a patient account stores the registration information in an encrypted format and can then find the episode information and alter their permissions within the episode.&lt;/p&gt;
+
+&lt;p&gt;The data store would provide data linked only via the pseudonym preventing simple re-identification of patients.&lt;/p&gt;
+
+&lt;h4 id=&quot;a-clinical-service&quot;&gt;A clinical service&lt;/h4&gt;
+
+&lt;p&gt;A registered clinical service would expect to always have authorisation to patient data, but audit trails of information requested would still be recorded as above. Clinical users would authenticate with their clinical applications and those applications would themselves authenticate and become authorised to access clinical data, obtaining an OAUTH2 token to access the appropriate data.&lt;/p&gt;
+
+&lt;p&gt;A clinical service would therefore create an episode using the patient’s information and no explicit consent is required for openconsent to issue authorisation tokens. However, there is a problem here. How can a patient remove their consent for this specific use of their data? There is no way an episode can identify the patient or indeed a registration entity corresponding to that episode as a result of the one-way link between a registration and an episode.&lt;/p&gt;
+
+&lt;p&gt;I think that there are two options:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Iterate through all registered projects and calculate on-the-fly a pseudonym for each and look for matches within the episodes. This would work only if we store the information required to generate the pseudonym in the Patient entity. This is possible but may struggle to scale if there are many projects.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Add a global but private pseudonym that, once recorded acts to validate that the patient account is owned by the person we think. However, this private global pseudonym cannot be shared with individual services and is built from a recipe of immutable information about the patient using a different salt. Once the information used to built the pseudonym are validated, the global pseudonym can be recorded encrypted in the patient’s own account. This can then be used to link project-specific pseudonyms to a single record.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I consider option (2) to be preferable but will work to prove that in the proof-of-concept project.&lt;/p&gt;
+
+&lt;p&gt;For option (2), the global pseudonym will also need to be stored, privately for an episode. Thus, for a validated patient account, the service can then find all episodes relating to them even though there is no corresponding registration. If a patient is not happy with the use of their data for that purpose, they can mark it as such. In the model, a registration is built to link the patient with the episode, and their new preferences are recorded in that episode with the change recorded in the verifiable log. From that point, service access will not be permitted.&lt;/p&gt;
+
+&lt;p&gt;For opt-out services, most episodes will not be linked to from a registration entity except if a patient has explicitly opted-out. If the patient has done so, then the episode will have had the permissions changed.&lt;/p&gt;
+
+&lt;h4 id=&quot;the-patient&quot;&gt;The patient&lt;/h4&gt;
+
+&lt;p&gt;A patient should be able to login via their portal. From there, they can see their registered projects and services by decrypting a list of project-specific pseudonyms. In these, they can opt-in of research and opt-out for non-research clinical uses on a case-by-case basis.&lt;/p&gt;
+
+&lt;p&gt;For research, a patient may engage with the research team or a project-specific application or generic sign-up application and link their account to the project. Essentially, in the data model, I create a registration entity that maps to the episode entity for that project and patient. A patient may then easily remove their consent at some point in the future, with any changes made to the episode and the transaction logged with the verifiable log.&lt;/p&gt;
+
+&lt;p&gt;For clinical services, a patient would need to register to opt-out as discussed above.&lt;/p&gt;
+
+&lt;h4 id=&quot;problems-and-requirements&quot;&gt;Problems and requirements&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The software is a simple proof-of-concept at the moment and is incomplete. I need to:
+    &lt;ul&gt;
+      &lt;li&gt;integrate an OAUTH2 server. Can &lt;a href=&quot;https://oltu.apache.org&quot;&gt;Apache Oltu&lt;/a&gt; do this?&lt;/li&gt;
+      &lt;li&gt;add REST endpoints. This is quite easy using LinkRest and standard JAX-RS.&lt;/li&gt;
+      &lt;li&gt;link to a verifiable log. Needs evaluation. Plan for simple log that can replaced with proper verifiable version in future. I’d plan for the verifiable log to be on a remote service. Could I use &lt;a href=&quot;https://github.com/google/trillian&quot;&gt;Trillian&lt;/a&gt;?&lt;/li&gt;
+      &lt;li&gt;build user interface components to expose the tools to the patient (although this would be a long-term aim).&lt;/li&gt;
+      &lt;li&gt;build data repository wrappers to check for OAUTH2 tokens for permission to access.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Further questions:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Is AES encryption good enough for encrypting the data fields within the patient record and the associated registrations? At the moment, this uses 128-bit keys, but it would be straightforward to increase the key length in production.&lt;/li&gt;
+  &lt;li&gt;Can this be a distributed system? Probably. The software supporting the Patient - Registration can run on a separate service than the Episode - Project components, and there could be multiple latter services, essentially creating a registry of data registries?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Essentially, the design principles here are:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;decoupling applications from data stores&lt;/li&gt;
+  &lt;li&gt;put patients in charge of opt-in and opt-out for access to their data for different purposes&lt;/li&gt;
+  &lt;li&gt;create a secure architecture using encryption and pseudonymous linkage, so we can offer guarantees about data governance while permitting large-scale access by third parties.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This is a project in development so thoughts and suggestions are most welcome!&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h2&gt;
+
+&lt;p&gt;&lt;a name=&quot;care-of-patients&quot;&gt;a&lt;/a&gt;: I originally wrote “to support the care of patients”, but that implies that it is care that is &lt;em&gt;done to&lt;/em&gt; patients rather than a partnership; the words we use to frame a problem potentially limit our ability to solve the real issue.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;consent-form&quot;&gt;b&lt;/a&gt;: In the PatientCare EPR, I have an electronic consent system with specific items of consent mapped in an information model exposed via a REST service. An iPad application can use this to build a ResearchKit based consent form automatically and dynamically. The following video demonstrates this functionality in which I edit a consent form electronically and the change is seen in the ResearchKit based application, here running on an iPad.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/59tGM85zzlY&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name></name></author><summary type="html">In earlier posts relating to “What I would do if I were Google” and “Balancing information governance and innovation in the NHS”, I discussed the importance of balance between information governance and open innovation within healthcare informatics focusing on the difficulty in handling sensitive medical data.</summary></entry><entry><title type="html">Test requesting</title><link href="https://www.wardle.org/clinical-informatics/2017/04/04/test-requesting.html" rel="alternate" type="text/html" title="Test requesting" /><published>2017-04-04T12:27:23+01:00</published><updated>2017-04-04T12:27:23+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/04/04/test-requesting</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/04/04/test-requesting.html">&lt;p&gt;I discussed the importance of scope and framing in a &lt;a href=&quot;/clinical-design/2017/03/23/scope-framing-clinical-design.html&quot;&gt;recent blog post&lt;/a&gt; concluding that the framing and scope of the overall problem domain must be broad enough to model reality but that solutions must be broken-up into components each of limited scope.&lt;/p&gt;
 
 &lt;p&gt;This is a natural conclusion from a domain-driven design approach in which the design of clinical systems begins with a deep understanding of the domain. An issue for clinicians and those who develop information systems is that there are domain concepts which are implicit and assumed; assumptions and heuristics and understanding built up over many years of working in clinical practice.&lt;/p&gt;
 
@@ -9,9 +188,7 @@
 
 &lt;h4 id=&quot;the-current-system&quot;&gt;The current system&lt;/h4&gt;
 
-&lt;p&gt;In Wales, we have a “Welsh Clinical Portal” application which is meant to turn into a complete solution for almost all healthcare staff under the banner of “Once for Wales”. However, it is already acknowledged that the system is not suitable for primary care or the emergency unit of organisations across Wales, or indeed, operating theatres or the community. NB: I did not design the system shown in this video.&lt;/p&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/nSrC5rrmbr4&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;In Wales, we have a “Welsh Clinical Portal” application which is meant to turn into a complete solution for almost all healthcare staff under the banner of “Once for Wales”. However, it is already acknowledged that the system is not suitable for primary care or the emergency unit of organisations across Wales, or indeed, operating theatres or the community.&lt;/p&gt;
 
 &lt;p&gt;I feel very strongly that user-facing applications should be process and workflow-driven, improving care and supporting care in specific clinical situations. However, to prevent duplication of effort, such applications such be &lt;em&gt;stupid&lt;/em&gt;. They should possess little or no logic but use functionality provided by a national platform to make sense of what they are trying to achieve. Our user-facing applications become simply thin wrappers around a service-orientated architecture as part of that platform. A user-interface may be &lt;em&gt;smart&lt;/em&gt; but only in it adapts in a smart way to what the user is doing.&lt;/p&gt;
 
@@ -707,6 +884,10 @@ Dr Larry Weed, Internal Medicine Grand Rounds, 1971&lt;/p&gt;
 
 &lt;p&gt;I would therefore suggest that we as an interoperability community work towards developing an open-source distributed consent and log framework which is held securely by multiple trusted health organisations. By distributing and synchronising such data among multiple trusted parties, one can offer guarantees that no single organisation can make a change without it being identified by all other organisations, or indeed by the patient or their proxy. A holder of the ledger, and there could be many, cannot themselves re-identify the patients within as a result of the use of multiple service-specific pseudonymous identifiers.&lt;/p&gt;
 
+&lt;blockquote&gt;
+  &lt;p&gt;Update 21st March 2017: Additional information relating to Merkle trees in this blog post is available on a &lt;a href=&quot;/merkle-trees/2017/03/20/merkle-trees.html&quot;&gt;more recent post&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
 &lt;h4 id=&quot;a-worked-example&quot;&gt;A worked example&lt;/h4&gt;
 
 &lt;p&gt;A public and private key is generated for the patient at registration. This private key is used to encrypt information within the patient’s ledger but is itself encrypted using the patient’s password. If the patient changes their access password, then only the private key need be re-encrypted with the new password.&lt;/p&gt;
@@ -766,14 +947,4 @@ Dr Larry Weed, Internal Medicine Grand Rounds, 1971&lt;/p&gt;
 
 &lt;p&gt;In addition, because the software recognises that some drugs are unchanged, some have been stopped and some have been started, we can now automatically generate summary reports of encounters. This results in a huge reduction in administrative support requirements as rather than dictating medication changes, the computer does it automatically and in a well-presented summary.&lt;/p&gt;
 
-&lt;p&gt;Mark&lt;/p&gt;</content><author><name></name></author><summary type="html">Handling medications in clinical medicine is difficult. One of the easy wins for information technology in medicine is electronic prescribing. Our colleagues in general practice have had such systems for many years but those of us working in hospitals have lagged behind.</summary></entry><entry><title type="html">SNOMED CT terminology server</title><link href="https://www.wardle.org/clinical-informatics/2017/03/08/rsterminology.html" rel="alternate" type="text/html" title="SNOMED CT terminology server" /><published>2017-03-08T21:39:10+00:00</published><updated>2017-03-08T21:39:10+00:00</updated><id>https://www.wardle.org/clinical-informatics/2017/03/08/rsterminology</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/03/08/rsterminology.html">&lt;p&gt;SNOMED CT is a modern, comprehensive medical terminology. For a detailed understanding of SNOMED CT, please see Chapter 4 in my &lt;a href=&quot;/clinical-informatics/2017/02/03/domain-driven-design.html&quot;&gt;clinical design document&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;A key issue with SNOMED CT is an effective implementation. A good implementation, in my opinion, results in a system in which users do not actually know that they are using a terminology system at all. It should be intuitive and most importantly, usable from a clinical point-of-view.&lt;/p&gt;
-
-&lt;p&gt;I have been using SNOMED CT since 2009. I think my electronic health record system (PatientCare) was the first deployed system in the UK to use SNOMED CT. SNOMED CT is the lingua franca within the system, internally the application and its business logic layers make ubiquitous use of SNOMED CT to make inferences about the care of a patient and to update the user interface to enable or disable functionality depending on the data entered so far.&lt;/p&gt;
-
-&lt;p&gt;In my opinion, while one can bolt-on SNOMED CT as a terminology as an after-thought, it is preferable to design systems from the ground up to use and understand SNOMED CT.&lt;/p&gt;
-
-&lt;p&gt;However, this doesn’t mean every system needs to re-implement SNOMED CT from the ground up. Indeed, I’d suggest using my new &lt;a href=&quot;https://github.com/wardle/rsterminology&quot;&gt;SNOMED CT terminology microservice&lt;/a&gt;. This provides very fast browse and search function as well as subsumption so that one can ask whether, given a diagnosis of progressive bulbar palsy, does a patient have a type of motor neurone disease, and get “yes” as the answer.&lt;/p&gt;
-
-&lt;p&gt;It also provides an electronic prescribing function for real-time natural language parsing of prescriptions. There is more work to do, and I continue to work on new developments including round-tripping from VTMs to VMPs and AMPs with automatic dose calculations and support for automatic natural language post-coordination. Post-coordination is, in my opinion, in scope of the information model in which SNOMED CT terms are used, but automatic NLP-based post-coordination will make entry more intuitive for the user.&lt;/p&gt;</content><author><name></name></author><summary type="html">SNOMED CT is a modern, comprehensive medical terminology. For a detailed understanding of SNOMED CT, please see Chapter 4 in my clinical design document.</summary></entry></feed>
+&lt;p&gt;Mark&lt;/p&gt;</content><author><name></name></author><summary type="html">Handling medications in clinical medicine is difficult. One of the easy wins for information technology in medicine is electronic prescribing. Our colleagues in general practice have had such systems for many years but those of us working in hospitals have lagged behind.</summary></entry></feed>

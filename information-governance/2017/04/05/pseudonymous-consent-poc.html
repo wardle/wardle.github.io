@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Pseudonymous consent</title>
+  <meta name="description" content="In earlier posts relating to “What I would do if I were Google” and “Balancing information governance and innovation in the NHS”, I discussed the importance ...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://www.wardle.org/information-governance/2017/04/05/pseudonymous-consent-poc.html">
+  <link rel="alternate" type="application/rss+xml" title="Dr. Mark Wardle" href="/feed.xml">
+  
+  
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Dr. Mark Wardle</a>
+
+    <nav class="site-nav">
+      <span class="menu-icon">
+        <svg viewBox="0 0 18 15" width="18px" height="15px">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </span>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Pseudonymous consent</h1>
+    <p class="post-meta"><time datetime="2017-04-05T14:45:28+01:00" itemprop="datePublished">Apr 5, 2017</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>In earlier posts relating to <a href="/clinical-informatics/2017/03/09/google-information.html">“What I would do if I were Google”</a> and <a href="/information-governance/2017/03/19/information-governance.html">“Balancing information governance and innovation in the NHS”</a>, I discussed the importance of balance between information governance and open innovation within healthcare informatics focusing on the difficulty in handling sensitive medical data.</p>
+
+<p>Writing a blog forces one to reflect; for instance, what is it that you are trying to do? I’ve concluded that my primary objective within healthcare informatics is to:</p>
+
+<ul>
+  <li>make healthcare information available at the point-of-care in order to support clinical care<sup><a href="#care-of-patients">a</a></sup></li>
+</ul>
+
+<p>To achieve that, I want:</p>
+
+<ul>
+  <li>better use of real-time analytics to aggregate data among patient cohorts and support clinical decision making</li>
+  <li>a mixed-economy of healthcare applications that can interoperate and leverage core infrastructure and services with a reduced focus on monolithic enterprise-wide systems</li>
+</ul>
+
+<p>And to achieve those, I want:</p>
+
+<ul>
+  <li>greater use of structured clinical information captured and used at the point-of-care including use of robust information models, open standards and terminology such as HL7 FHIR, openEHR and SNOMED CT.</li>
+  <li>an open-source infrastructure to permit interoperability between vendors.</li>
+  <li>a robust information governance framework</li>
+</ul>
+
+<h2 id="supporting-information-governance">Supporting information governance</h2>
+
+<p>One can support <a href="https://en.wikipedia.org/wiki/Information_governance">information governance</a> by adopting appropriate <a href="http://www.wales.nhs.uk/nwis/page/52618">policies and procedures</a>, by creating formal <a href="https://www.igt.hscic.gov.uk/Caldicott2Legislation.aspx?tk=428276172817610&amp;lnv=18&amp;cb=8cf4d31b-5ea7-4f07-b8b5-34f9ee732d4a">legislation</a>, <a href="https://www.igt.hscic.gov.uk">toolkits</a> and by instituting technical solutions such as authentication, authorisation, secure audit logs and encryption.</p>
+
+<p>Essentially we need to strike a balance between making clinical information available and ensuring that this sensitive information is not seen by the wrong people in a complex, heterogeneous and distributed environment in which there are multiple actors such as clinical staff, patients, managers, organisations and commissioners.</p>
+
+<p>I think that there are three broad concepts we need to cover:</p>
+
+<ol>
+  <li>
+    <p>Pseudonymisation and data linkage.</p>
+  </li>
+  <li>
+    <p>Secure and verifiable audit trails</p>
+  </li>
+  <li>
+    <p>Put patients at the heart of what we do and give them control.</p>
+  </li>
+</ol>
+
+<p>I have previously discussed the use of pseudonymisation as a technique to permit safe data linkage within and between disparate datasets. In addition, I covered the use of a project- or service- specific pseudonym that could uniquely identify a patient for that particular research project or clinical service. Importantly, pseudonymisation uses a one-way mathematical function so that, given a pseudonym alone, we cannot re-identify a patient. However, we can re-link these data if we have the shared secrets that were used to generate the pseudonym.</p>
+
+<p>I gave an overview of <a href="/merkle-trees/2017/03/20/merkle-trees.html">Merkle trees</a> in a previous blog post. Essentially, although I have built in audit trail functionality into my own EPR, there is nothing stopping me accessing patient records inappropriately and removing those log entries directly from the database as I have administrator access. Do you trust me? Perhaps. But do you trust a commercial entity? Perhaps not. A verifiable audit log potentially solves this issue, by ensuring that no-one can tamper with the log.</p>
+
+<p>Putting patients in control of where and how their information is used means that there are <em>no surprises</em> because patients have explicitly agreed.</p>
+
+<h3 id="key-security-concerns">Key security concerns</h3>
+
+<p>Is it possible to create an architecture which is secure-by-design?</p>
+
+<p>The use of pseudonyms generated on a per-use or per-service basis, possibly on the fly, potentially allows an interesting security feature in that inappropriate dataset access cannot occur simply because the data cannot be linked to the patient, rather than relying on systems themselves try to manage which data sources are permitted or not. Access to data is therefore the result of data linkage.</p>
+
+<p>As a result, it becomes possible to allow untrusted third parties access to an infrastructure but their access to disparate distributed data sources is impossible as a result of a lack of linkage. In addition, by virtue of requesting access, the third party <em>must</em> make a data access request and therefore have their access logged appropriately.</p>
+
+<p>One fundamental security concern is that a centralised registry of permissions, opt-ins and opt-outs in itself gives away important potentially patient identifiable information. For instance, membership of a cohort of patients in a genito-urinary clinic <em>in itself</em> gives information to potential third parties. Therefore, it is important that such information is inaccessible by design.</p>
+
+<p>Sensitive information will be both stored and subsequently transmitted; both require protecting. The most difficult is protecting stored data and I have tried to create a proof-of-concept that could cope with whole system compromise. Assuming an attacker has full access to a dump of the database, it should be possible to take reasonable precautions to prevent re-identification. However, this requirement means that simple join-tables in a relationship database between a patient and their consent/permissions cannot be used.</p>
+
+<h3 id="proof-of-concept">Proof-of-concept</h3>
+
+<p>There is nothing like trying to create a small working solution as a proof-of-concept.</p>
+
+<p>The source code is available here: <a href="https://www.github.com/wardle/openconsent">https://www.github.com/wardle/openconsent</a>.  Conceptually, the data model is as follows:</p>
+
+<p><img src="/images/openconsent/openconsent-model.png" alt="Openconsent Model" /></p>
+
+<ol>
+  <li>Here the Patient entity records the name of the patient and uses an email address for login. When a user creates an account, the password is used to create a salted digest for future password-checks and used to create a different digest used to encrypt an encryption key. This key is used to encrypt other information including the name of the patient and the episode identifiers held in the registrations table.</li>
+  <li>The registration table simply stores encrypted pseudonymous identifiers. There is a one-to-many relationship from patient to registrations.</li>
+  <li>A project represents a clinical service or research project. Future versions will include additional information such as a URL to an organisation or service homepage as well as service authentication credentials.</li>
+  <li>An episode stores a project-specific pseudonymous identifier and will store the patient’s explicit choices regarding the use of their data in that context. It will be here that a verifiable audit log is required to track changes in choice so that we can vouch that nothing has tampered with the transactions that have occurred at the episode level.</li>
+</ol>
+
+<p>This data model is working and is unit tested. An example of creating a patient and understand that they are part of a specific project is shown <a href="https://github.com/wardle/openconsent/blob/master/src/test/java/com/eldrix/openconsent/model/TestPatients.java">here, if you can understand java code</a>. Essentially a patient is registered to a project and I show that we can find that registration subsequently.</p>
+
+<p>The encryption key is generated randomly. It is encrypted using a key derived from a digest of the patient’s password. The encryption key can only be decrypted with access to the patient’s password but this is never stored. The digest used to validate a patient’s password is stored but is calculated differently to the digest used as the key for the encryption key. The encryption key is used for encryption and decryption of sensitive information relating to that patient. By decrypting the registration information, the application can get a list of episode identifiers for that patient.</p>
+
+<p>I do need to add an encrypted global pseudonym that is not exposed to research projects and clinical services to allow data linkage once a patient’s account has been validated. More details of this are given below.</p>
+
+<p>The next steps will be to expose this functionality as a REST service. My plan for the eventual architecture is shown here with the unimplemented pieces in grey and the already implemented model in blue.</p>
+
+<p><img src="/images/openconsent/openconsent-plan.png" alt="Openconsent Plan" /></p>
+
+<p>The following sections describe how the system works to track consent in a safe way.</p>
+
+<h4 id="a-research-project">A research project</h4>
+
+<ol>
+  <li>A research project is registered with a project-specific consent form.<sup><a href="#consent-form">b</a></sup></li>
+  <li>A research project creates an episode using the patient’s details and so needs to know their details to pass in to generate a pseudonym.</li>
+  <li>If that project subsequently wants to know whether a patient they are seeing has consented, they can pass the patient’s identifier (e.g. NHS number) and date of birth and get any active episodes.</li>
+  <li>However, because openconsent understands that such a service is opt-in, it will only issue authorisation tokens if the episode has been validated by the patient explicitly.</li>
+  <li>If a patient has consented, then the project can submit the pseudonym to receive an <a href="https://oauth.net/2/">OAUTH2 token</a>. OAUTH2 is a distributed authorisation framework which allows application to obtain limited access to a data repository. A verifiable audit log records the transaction using the pseudonym.</li>
+  <li>Should a patient’s consent be withdrawn, or not exist in the first place, then no data is returned. No further work is possible.</li>
+</ol>
+
+<p>Validation of permission by the patient could occur in a variety of ways:</p>
+<ul>
+  <li>when a member of the research team meets the patient and shows them a QR code that is readable by a mobile device application.</li>
+  <li>a QR code that links to a web application portal for the patient</li>
+  <li>manually typing in the project-specific pseudonym</li>
+</ul>
+
+<p>Once linked, a patient account stores the registration information in an encrypted format and can then find the episode information and alter their permissions within the episode.</p>
+
+<p>The data store would provide data linked only via the pseudonym preventing simple re-identification of patients.</p>
+
+<h4 id="a-clinical-service">A clinical service</h4>
+
+<p>A registered clinical service would expect to always have authorisation to patient data, but audit trails of information requested would still be recorded as above. Clinical users would authenticate with their clinical applications and those applications would themselves authenticate and become authorised to access clinical data, obtaining an OAUTH2 token to access the appropriate data.</p>
+
+<p>A clinical service would therefore create an episode using the patient’s information and no explicit consent is required for openconsent to issue authorisation tokens. However, there is a problem here. How can a patient remove their consent for this specific use of their data? There is no way an episode can identify the patient or indeed a registration entity corresponding to that episode as a result of the one-way link between a registration and an episode.</p>
+
+<p>I think that there are two options:</p>
+
+<ol>
+  <li>
+    <p>Iterate through all registered projects and calculate on-the-fly a pseudonym for each and look for matches within the episodes. This would work only if we store the information required to generate the pseudonym in the Patient entity. This is possible but may struggle to scale if there are many projects.</p>
+  </li>
+  <li>
+    <p>Add a global but private pseudonym that, once recorded acts to validate that the patient account is owned by the person we think. However, this private global pseudonym cannot be shared with individual services and is built from a recipe of immutable information about the patient using a different salt. Once the information used to built the pseudonym are validated, the global pseudonym can be recorded encrypted in the patient’s own account. This can then be used to link project-specific pseudonyms to a single record.</p>
+  </li>
+</ol>
+
+<p>I consider option (2) to be preferable but will work to prove that in the proof-of-concept project.</p>
+
+<p>For option (2), the global pseudonym will also need to be stored, privately for an episode. Thus, for a validated patient account, the service can then find all episodes relating to them even though there is no corresponding registration. If a patient is not happy with the use of their data for that purpose, they can mark it as such. In the model, a registration is built to link the patient with the episode, and their new preferences are recorded in that episode with the change recorded in the verifiable log. From that point, service access will not be permitted.</p>
+
+<p>For opt-out services, most episodes will not be linked to from a registration entity except if a patient has explicitly opted-out. If the patient has done so, then the episode will have had the permissions changed.</p>
+
+<h4 id="the-patient">The patient</h4>
+
+<p>A patient should be able to login via their portal. From there, they can see their registered projects and services by decrypting a list of project-specific pseudonyms. In these, they can opt-in of research and opt-out for non-research clinical uses on a case-by-case basis.</p>
+
+<p>For research, a patient may engage with the research team or a project-specific application or generic sign-up application and link their account to the project. Essentially, in the data model, I create a registration entity that maps to the episode entity for that project and patient. A patient may then easily remove their consent at some point in the future, with any changes made to the episode and the transaction logged with the verifiable log.</p>
+
+<p>For clinical services, a patient would need to register to opt-out as discussed above.</p>
+
+<h4 id="problems-and-requirements">Problems and requirements</h4>
+
+<ul>
+  <li>The software is a simple proof-of-concept at the moment and is incomplete. I need to:
+    <ul>
+      <li>integrate an OAUTH2 server. Can <a href="https://oltu.apache.org">Apache Oltu</a> do this?</li>
+      <li>add REST endpoints. This is quite easy using LinkRest and standard JAX-RS.</li>
+      <li>link to a verifiable log. Needs evaluation. Plan for simple log that can replaced with proper verifiable version in future. I’d plan for the verifiable log to be on a remote service. Could I use <a href="https://github.com/google/trillian">Trillian</a>?</li>
+      <li>build user interface components to expose the tools to the patient (although this would be a long-term aim).</li>
+      <li>build data repository wrappers to check for OAUTH2 tokens for permission to access.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Further questions:</p>
+
+<ul>
+  <li>Is AES encryption good enough for encrypting the data fields within the patient record and the associated registrations? At the moment, this uses 128-bit keys, but it would be straightforward to increase the key length in production.</li>
+  <li>Can this be a distributed system? Probably. The software supporting the Patient - Registration can run on a separate service than the Episode - Project components, and there could be multiple latter services, essentially creating a registry of data registries?</li>
+</ul>
+
+<p>Essentially, the design principles here are:</p>
+<ul>
+  <li>decoupling applications from data stores</li>
+  <li>put patients in charge of opt-in and opt-out for access to their data for different purposes</li>
+  <li>create a secure architecture using encryption and pseudonymous linkage, so we can offer guarantees about data governance while permitting large-scale access by third parties.</li>
+</ul>
+
+<p>This is a project in development so thoughts and suggestions are most welcome!</p>
+
+<p><em>Mark</em></p>
+
+<h2 id="footnotes">Footnotes</h2>
+
+<p><a name="care-of-patients">a</a>: I originally wrote “to support the care of patients”, but that implies that it is care that is <em>done to</em> patients rather than a partnership; the words we use to frame a problem potentially limit our ability to solve the real issue.</p>
+
+<p><a name="consent-form">b</a>: In the PatientCare EPR, I have an electronic consent system with specific items of consent mapped in an information model exposed via a REST service. An iPad application can use this to build a ResearchKit based consent form automatically and dynamically. The following video demonstrates this functionality in which I edit a consent form electronically and the change is seen in the ResearchKit based application, here running on an iPad.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/59tGM85zzlY" frameborder="0" allowfullscreen=""></iframe>
+
+  </div>
+
+  
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Dr. Mark Wardle</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Dr. Mark Wardle
+            
+            </li>
+            
+            <li><a href="mailto:mark@wardle.org">mark@wardle.org</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/wardle"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">wardle</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/mwardle"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">mwardle</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
