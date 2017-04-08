@@ -1,5 +1,49 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-04-05T14:59:19+01:00</updated><id>https://www.wardle.org/</id><title type="html">Dr. Mark Wardle</title><subtitle>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
-</subtitle><entry><title type="html">Pseudonymous consent</title><link href="https://www.wardle.org/information-governance/2017/04/05/pseudonymous-consent-poc.html" rel="alternate" type="text/html" title="Pseudonymous consent" /><published>2017-04-05T14:45:28+01:00</published><updated>2017-04-05T14:45:28+01:00</updated><id>https://www.wardle.org/information-governance/2017/04/05/pseudonymous-consent-poc</id><content type="html" xml:base="https://www.wardle.org/information-governance/2017/04/05/pseudonymous-consent-poc.html">&lt;p&gt;In earlier posts relating to &lt;a href=&quot;/clinical-informatics/2017/03/09/google-information.html&quot;&gt;“What I would do if I were Google”&lt;/a&gt; and &lt;a href=&quot;/information-governance/2017/03/19/information-governance.html&quot;&gt;“Balancing information governance and innovation in the NHS”&lt;/a&gt;, I discussed the importance of balance between information governance and open innovation within healthcare informatics focusing on the difficulty in handling sensitive medical data.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-04-08T11:34:25+01:00</updated><id>https://www.wardle.org/</id><title type="html">Dr. Mark Wardle</title><subtitle>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
+</subtitle><entry><title type="html">Pseudonymous consent- updated</title><link href="https://www.wardle.org/information-governance/2017/04/08/pseudonymous-consent.html" rel="alternate" type="text/html" title="Pseudonymous consent- updated" /><published>2017-04-08T09:22:28+01:00</published><updated>2017-04-08T09:22:28+01:00</updated><id>https://www.wardle.org/information-governance/2017/04/08/pseudonymous-consent</id><content type="html" xml:base="https://www.wardle.org/information-governance/2017/04/08/pseudonymous-consent.html">&lt;p&gt;I have updated my proof-of-concept project on pseudonymous consent. To understand the background to this blog post, please see my &lt;a href=&quot;/information-governance/2017/04/05/pseudonymous-consent-poc.html&quot;&gt;earlier post&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The design goals were&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Put patients in control of their information&lt;/li&gt;
+  &lt;li&gt;Support explicit opt-in for research and opt-out for clinical services.&lt;/li&gt;
+  &lt;li&gt;Avoid leaking confidential information while information is in transit or in storage.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The key to linking information in a safe way is the use of pseudonymous identifiers.&lt;/p&gt;
+
+&lt;p&gt;The following schematic shows the updated model:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/openconsent/openconsent-model-updated.png&quot; alt=&quot;Openconsent Model Updated&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A patient can create an account at any time using their email. Potentially, this account could be validated by some external agency such as the Government Gateway or new Gov.uk VERIFY services.&lt;/p&gt;
+
+&lt;h4 id=&quot;opt-in-projects&quot;&gt;Opt-in projects&lt;/h4&gt;
+&lt;p&gt;To join a research project, we create an explicit “Registration” for that patient. A research project creates an “Episode” and, given it is an explicit opt-in type of project, data access would only be permitted if explicit consent exists. This is straightforward but the design ensures that the system cannot re-identify the patient. A project needs to obtain patient identifiable information via a different route.&lt;/p&gt;
+
+&lt;h4 id=&quot;opt-out-projects&quot;&gt;Opt-out projects&lt;/h4&gt;
+&lt;p&gt;But what if I want to write a new “intelligent agent” that will monitor patients, look for patients on methotrexate and then check that they have had their required blood monitoring and that the blood results are within the ranges we expect? Methotrexate can cause blood dyscrasias and so needs regular blood monitoring. I want the care I provide to patients to &lt;a href=&quot;/information-governance/2017/03/19/information-governance.html&quot;&gt;run on rails&lt;/a&gt; so how can I introduce an application that accesses patients’ records in a safe way that is defensible in regard to information governance and the media? I really don’t wish to be on the front page of the newspapers!&lt;/p&gt;
+
+&lt;p&gt;The steps are as so:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;To access patient data, the project (in this case my methotrexate monitoring application), registers an episode using the known patient identifiers. It is acting on behalf of an NHS organisation.&lt;/li&gt;
+  &lt;li&gt;The “system” permits access to health data as this is an opt-out project, but data access is logged in a verifiable log.&lt;/li&gt;
+  &lt;li&gt;A patient wishes to opt-out. They already have a validated account. It has been endorsed and linked to the authority that oversees the project.&lt;/li&gt;
+  &lt;li&gt;The patient (and only the patient) can then look up all episodes relating to him or herself and explicitly opt-out by recording that information against the episode. This change would be logged in a verifiable log as previously discussed.&lt;/li&gt;
+  &lt;li&gt;For the project, data access is no longer permitted.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The critical features are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;the avoidance of information leakage; making inferences about the patient simply as a result of the opt-in and opt-out of projects.&lt;/li&gt;
+  &lt;li&gt;providing some degree of proof of trustworthiness in that the above logic could be distributed across multiple systems and we can vouch that patient information cannot be shared inappropriately and without being logged.&lt;/li&gt;
+  &lt;li&gt;ensuring that even insiders cannot find out more information about a patient than they should. A project cannot find out what else the patient has consented for and likewise, an attacker of the patient accounts cannot find out to which projects the patient has opted-in or out of.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There is more work to do to make it a usable system, but the &lt;a href=&quot;https://github.com/wardle/openconsent/blob/master/src/test/java/com/eldrix/openconsent/model/TestPatients.java&quot;&gt;test harness&lt;/a&gt; demonstrates how it would work in practice.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">I have updated my proof-of-concept project on pseudonymous consent. To understand the background to this blog post, please see my earlier post.</summary></entry><entry><title type="html">Pseudonymous consent</title><link href="https://www.wardle.org/information-governance/2017/04/05/pseudonymous-consent-poc.html" rel="alternate" type="text/html" title="Pseudonymous consent" /><published>2017-04-05T14:45:28+01:00</published><updated>2017-04-05T14:45:28+01:00</updated><id>https://www.wardle.org/information-governance/2017/04/05/pseudonymous-consent-poc</id><content type="html" xml:base="https://www.wardle.org/information-governance/2017/04/05/pseudonymous-consent-poc.html">&lt;p&gt;In earlier posts relating to &lt;a href=&quot;/clinical-informatics/2017/03/09/google-information.html&quot;&gt;“What I would do if I were Google”&lt;/a&gt; and &lt;a href=&quot;/information-governance/2017/03/19/information-governance.html&quot;&gt;“Balancing information governance and innovation in the NHS”&lt;/a&gt;, I discussed the importance of balance between information governance and open innovation within healthcare informatics focusing on the difficulty in handling sensitive medical data.&lt;/p&gt;
 
 &lt;p&gt;Writing a blog forces one to reflect; for instance, what is it that you are trying to do? I’ve concluded that my primary objective within healthcare informatics is to:&lt;/p&gt;
 
@@ -437,7 +481,7 @@
 
 &lt;p&gt;The test requesting service wraps an integration layer to provide generic test requesting. Whether a test is requested from a laboratory or another service, a separation between laboratory tests and other types of investigation tests is an artefact of implementation of health services; abstractly, a test request is a test request irrespective of which service will perform the test.&lt;/p&gt;
 
-&lt;p&gt;However, it is likely that different tests will require different information to be provided at the time of request. Rather than embedding this important business logic in an application, this architecture forces an approach which explicitly recognises this business requirement and models it appropriately. There is an explicit design to ensure dynamic runtime configuration can modify the behaviour of the ‘system’.&lt;/p&gt;
+&lt;p&gt;However, it is likely that different tests will require different information to be provided at the time of request. Rather than embedding this important business logic in an application, this architecture forces an approach which explicitly recognises this business requirement and models it appropriately. There is an explicit design to ensure dynamic runtime configuration can modify the behaviour of the ‘system’.a&lt;/p&gt;
 
 &lt;p&gt;A formal contract between the responsibilities and scope of each component must be defined. While the scope of the overall solution may change to meet new requirements, a modular layered approach means that scope creep of individual components should be minimal.&lt;/p&gt;
 
@@ -902,49 +946,4 @@ Dr Larry Weed, Internal Medicine Grand Rounds, 1971&lt;/p&gt;
 
 &lt;h2 id=&quot;final-thoughts&quot;&gt;Final thoughts&lt;/h2&gt;
 
-&lt;p&gt;Of course, this isn’t really a manifesto only aimed at Google, although I think their priorities converge with ours in the interoperability community and ultimately with those for whom this is most important: patients. However, while there is considerable momentum behind open standards and interoperability, we need considerable backing from a range of disrupting influences to transform the healthcare information technology landscape. We also need to lower the barrier for entry for new startups and allow innovation to flourish, while maintaining information governance.&lt;/p&gt;</content><author><name></name></author><summary type="html">Google was created in 1998 with a mission statement:</summary></entry><entry><title type="html">Thinking about medications</title><link href="https://www.wardle.org/clinical-informatics/2017/03/08/thinking-about-medications.html" rel="alternate" type="text/html" title="Thinking about medications" /><published>2017-03-08T22:11:00+00:00</published><updated>2017-03-08T22:11:00+00:00</updated><id>https://www.wardle.org/clinical-informatics/2017/03/08/thinking-about-medications</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/03/08/thinking-about-medications.html">&lt;p&gt;Handling medications in clinical medicine is difficult. One of the easy wins for information technology in medicine is electronic prescribing. Our colleagues in general practice have had such systems for many years but those of us working in hospitals have lagged behind.&lt;/p&gt;
-
-&lt;p&gt;In hospital, many of us prescribe on paper prescriptions – sometimes I use a proper prescription when I am starting a drug that is hospital-only – on most occasions, hospital doctors now write a GP communication note or simply add the recommendation to a clinical letter.&lt;/p&gt;
-
-&lt;p&gt;There is tremendous value in electronic prescribing. It is one of the quick-wins for information technology in healthcare. There are many advantages.&lt;/p&gt;
-
-&lt;h2 id=&quot;advantages-of-keeping-track-of-medications-electronically&quot;&gt;Advantages of keeping track of medications electronically&lt;/h2&gt;
-&lt;p&gt;For me, keeping track of patients is critical. If you are non-medical, you might think that once you are under ongoing follow-up with a hospital doctor, there is some automatic system to let us know that you missed your last appointment or that your appointment was cancelled. In fact, you’d assume we also had a system to track your diagnoses so that we could potentially find all of our patients with, say, Parkinson’s disease. Sadly, this isn’t common; the way many clinicians handle this is to keep a spreadsheet with names and diagnoses or use something like the &lt;a href=&quot;http://www.theabn.org/what-we-do/bnsu.html&quot;&gt;British Neurological Surveillance Unit (BNSU)&lt;/a&gt; to report rare cases seen.&lt;/p&gt;
-
-&lt;p&gt;I have a number of patients with a range of disorders on high-dose corticosteroids. Similarly, I have patients on other immunotherapy drugs (e.g. methotrexate) for whom I need to know that their blood monitoring is performed appropriately and that their blood indices are stable. For me, knowing a) who those patients are and b) when I last saw them, are critical for patient-safety. Too often, we avoid disaster simply through good fortune rather than any systematic approach to patient safety.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-patientcare-web-application&quot;&gt;The PatientCare web application&lt;/h2&gt;
-&lt;p&gt;Here in Cardiff, we now use a patient electronic health record system to track all such diagnostic, treatment, interventional and outcome data. I have been developing it since 2009 and we now have over 15,000 patients recorded. It is accessed across Wales, mainly for neurological diseases, but we also track a number of rare diseases. Many of these rare disorders are rare individually, but collectively, they are common! There is a sophisticated access-control mechanism into which groups of patients and groups of clinical staff are linked by virtue of clinical services or research projects, so that access is limited to the group of patients to which you are responsible.&lt;/p&gt;
-
-&lt;p&gt;Topics to be covered in future blog posts are information governance and a detailed guide on how to implement SNOMED-CT. Both difficult but both solved!&lt;/p&gt;
-
-&lt;h2 id=&quot;electronic-prescribing-and-the-nhs&quot;&gt;Electronic prescribing and the NHS&lt;/h2&gt;
-&lt;p&gt;To start thinking about electronic prescribing and recording of current and past medication, I suggest you first have a look at the &lt;a href=&quot;http://www.nhsbsa.nhs.uk/1121.aspx&quot;&gt;NHS DM&amp;amp;D (dictionary of medicines and devices)&lt;/a&gt; and a good look at the implementation guidance. There are a number of complexities. In hospital, we are encouraged to prescribe using generic drug names rather than branded drug names. This means that “prescribing” is a distinct process to dispensing. In hospital, the dispensing is performing by a nurse on the ward and a pharmacist for outpatients. Dispensing turns the generic prescription into an appropriate formulation. There are a number of issues to consider during dispensing including differences between formulations (actual medicinal products – AMPs) and issues of cost. Most hospital doctors are not used to selecting appropriate formulations and instead prescribe by generic drug name and dose. A general practitioner prescribes using products. For more information on this,&lt;/p&gt;
-
-&lt;p&gt;For example, a hospital doctor may prescribe “ramipril 7.5mg od”. This means the patient should receive 7.5mg of this drug once per day.&lt;/p&gt;
-
-&lt;p&gt;A general practitioner would prescribe “ramipril 5mg 1 tablet od” and “ramipril 2.5mg 1 tablet od”.&lt;/p&gt;
-
-&lt;p&gt;There are additional complexities. For instance, some hospital clinicians wish to prescribe by product because of differences between formulations. For example, many of us who work with patients with epilepsy prescribe “epilim chrono”. While the active ingredient is sodium valproate, different products may vary in terms of bioavailability / absorption and so we would not want our patient’s medications to be swapped around – imagine a situation in which a generic formulation is substituted in a patient who is seizure free and the substitution results in a seizure when the patient is driving!&lt;/p&gt;
-
-&lt;p&gt;Another issue is that medication data is already held in general practitioner systems and so it should be possible to import that list of current and past medications into hospital systems automatically. Having different implementations / models of electronic prescribing in primary and secondary care complicates such automatic import and export of medications.&lt;/p&gt;
-
-&lt;p&gt;The NHS DM&amp;amp;D implementation guidance suggests a 3-step prescribing process for each drug. Step 1 is specifying the drug and the route (e.g. oral, inhaled, intravenous). Step 2 involves reviewing the rules for that specific drug and step 3 involves identifying appropriate sub-types of that medication for safe prescribing.&lt;/p&gt;
-
-&lt;p&gt;As you might imagine, this is quite an involved and potentially time-consuming process. However, prescribing is potentially dangerous and should be performed with caution and careful consideration. However, different degrees of rigour are required depending on whether the electronic record is acting as a prescription or simply an electronic record of what the patient is taking or an advice letter.&lt;/p&gt;
-
-&lt;p&gt;For example, in outpatient clinic, most clinicians will want to quickly record the current and past medications so that we can easily answer questions like “Which anticonvulsant therapies have we already tried in this patient?”. As such, the strict rigour of an electronic prescribing system can be relaxed depending on use-case.&lt;/p&gt;
-
-&lt;h2 id=&quot;my-implementation&quot;&gt;My implementation&lt;/h2&gt;
-&lt;p&gt;I’ve implemented a system to rapidly enter an existing list of medications and make changes to that medication list. See &lt;a href=&quot;https://youtu.be/3tRyjJk-71M&quot;&gt;PatientCare medication entry&lt;/a&gt; and &lt;a href=&quot;https://youtu.be/F2LSHpdCPvo&quot;&gt;Advanced medication entry&lt;/a&gt; for two video demonstrations. Here we enter a list of medications which are automatically mapped into SNOMED-CT DM&amp;amp;D drugs. There is a semantic understanding for drugs so that programmatically, we can tell whether a patient is on a thiazide diuretic or anticonvulsant – ie. this is not simply a free-text list! In addition, there is dose equivalence so that the system recognises that 1000mg is the same as 1g etc. Once the list is edited, the software calculates the changes – drugs changed, started, stopped etc. and then applies those changes to the longitudinal record of medication so that there is a complete list of all current and past medications that have been used.&lt;/p&gt;
-
-&lt;p&gt;There is a balance of speed and efficiency for expert users and hand-holding for beginners. As such, there is an older pick-list based system which allows users to add drugs manually using drop-downs controls. However, expert users should be allowed to follow a more efficient process.&lt;/p&gt;
-
-&lt;p&gt;This balance requires careful planning to ensure process safety and yet remain quick and usable in a busy outpatient clinic or in the assessment unit.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-result&quot;&gt;The result&lt;/h2&gt;
-&lt;p&gt;Not only do I now record diagnostic information for my patients (SNOMED-CT coding) but it is now feasible to record all current and past treatments. Such information is very helpful for a range of conditions including Parkinson’s disease and epilepsy.&lt;/p&gt;
-
-&lt;p&gt;In addition, because the software recognises that some drugs are unchanged, some have been stopped and some have been started, we can now automatically generate summary reports of encounters. This results in a huge reduction in administrative support requirements as rather than dictating medication changes, the computer does it automatically and in a well-presented summary.&lt;/p&gt;
-
-&lt;p&gt;Mark&lt;/p&gt;</content><author><name></name></author><summary type="html">Handling medications in clinical medicine is difficult. One of the easy wins for information technology in medicine is electronic prescribing. Our colleagues in general practice have had such systems for many years but those of us working in hospitals have lagged behind.</summary></entry></feed>
+&lt;p&gt;Of course, this isn’t really a manifesto only aimed at Google, although I think their priorities converge with ours in the interoperability community and ultimately with those for whom this is most important: patients. However, while there is considerable momentum behind open standards and interoperability, we need considerable backing from a range of disrupting influences to transform the healthcare information technology landscape. We also need to lower the barrier for entry for new startups and allow innovation to flourish, while maintaining information governance.&lt;/p&gt;</content><author><name></name></author><summary type="html">Google was created in 1998 with a mission statement:</summary></entry></feed>
