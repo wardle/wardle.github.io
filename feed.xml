@@ -1,5 +1,80 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-04-24T07:56:10+01:00</updated><id>https://www.wardle.org/</id><title type="html">Dr. Mark Wardle</title><subtitle>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
-</subtitle><entry><title type="html">Secure messaging… with patients in control of their data</title><link href="https://www.wardle.org/information-governance/2017/04/23/secure-messaging.html" rel="alternate" type="text/html" title="Secure messaging... with patients in control of their data" /><published>2017-04-23T09:20:28+01:00</published><updated>2017-04-23T09:20:28+01:00</updated><id>https://www.wardle.org/information-governance/2017/04/23/secure-messaging</id><content type="html" xml:base="https://www.wardle.org/information-governance/2017/04/23/secure-messaging.html">&lt;p&gt;Don’t we all want clinical information systems that support both clinicians and patients with clinical care?&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-04-28T22:10:08+01:00</updated><id>https://www.wardle.org/</id><title type="html">Dr. Mark Wardle</title><subtitle>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
+</subtitle><entry><title type="html">The importance of cohorts… and SNOMED-CT</title><link href="https://www.wardle.org/clinical-informatics/2017/04/28/importance-of-cohorts.html" rel="alternate" type="text/html" title="The importance of cohorts... and SNOMED-CT" /><published>2017-04-28T14:42:42+01:00</published><updated>2017-04-28T14:42:42+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/04/28/importance-of-cohorts</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/04/28/importance-of-cohorts.html">&lt;blockquote&gt;
+  &lt;p&gt;A cohort is a group of patients who share a defining characteristic.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In clinical research, researchers recruit a group of patients with a specific disease or a specific problem or who have received a specific intervention and then might monitor their progress in an observational study or monitor the effect on an intervention in an interventional study.&lt;/p&gt;
+
+&lt;p&gt;In such studies, there is a systematic and dedicated collection of research data, usually to a high-standard using a pre-prepared schedule to avoid bias and to ensure that the appropriate data are acquired.&lt;/p&gt;
+
+&lt;p&gt;One would think that it would be the same in routine healthcare but it is not. Most information is recorded as unstructured free-text and data collected are primarily used for administrative and managerial purposes. As I wrote in my &lt;a href=&quot;/clinical-informatics/2017/02/03/domain-driven-design.html&quot;&gt;domain-driven clinical design document&lt;/a&gt;, “As a result, we commonly know how many patients are seen in clinic, but have very little information as to why they are being seen or how they fare after  treatment.   Important  questions  such  as  ‘how  many  patients  with  Parkin-son’s disease do we care for?’, ‘what are the outcomes for patients after having a mastectomy?’ or ‘why are we seeing these patients in outpatient clinic?’ cannot be answered.”&lt;/p&gt;
+
+&lt;p&gt;In fact, it is not just understand and assessing our services and outcomes that require this information, but new technologies such as real-time analytics, algorithmic support and artificial intelligence needs prospectively-captured data recorded at the point–of-care.&lt;/p&gt;
+
+&lt;p&gt;Some might point to “Hospital Episode Statistics” (HES) data as a way of understanding our patients but these data are woefully incomplete and inaccurate, do not usually include outpatient episodes of care with diagnostic entities recorded using a classification system (ICD-10) rather than a clinical terminology.&lt;/p&gt;
+
+&lt;p&gt;The logical answer is to encourage the routine and systematic collection of structured data by clinicians for clinicians.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/Cppjedy-hMo&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;h1 id=&quot;snomed-ct&quot;&gt;SNOMED-CT&lt;/h1&gt;
+
+&lt;p&gt;SNOMED-CT is a large, modern and comprehensive terminology. In the above video, you can see me entering clinical diagnostic terms quickly and having them mapped to SNOMED-CT concepts in real-time. These concepts exist within a large and complex hierarchy of relationships which give algorithmic understanding. I use this in an electronic patient record system to identify patients with motor neurone disease; it will identify patients coded with a diagnosis of “progressive bulbar palsy” but the SNOMED-CT hierarchy can be navigated to work out algorithmically that this is a type of motor neurone disease.&lt;/p&gt;
+
+&lt;p&gt;I have explained more about SNOMED-CT in Section 4.1 of my &lt;a href=&quot;https://www.dropbox.com/s/62sg71a19voxpts/cis_design.pdf?dl=0&quot;&gt;domain-driven clinical design document&lt;/a&gt; and I have a paper in print in the &lt;a href=&quot;http://futurehospital.rcpjournal.org/content/current&quot;&gt;Future Hospital Journal&lt;/a&gt; which should be published in the next issue.&lt;/p&gt;
+
+&lt;p&gt;SNOMED-CT isn’t limited to diagnostic concepts but includes terms for all range of concepts such as countries of birth, ethnic origins, procedures, medications, devices and even occupations. In addition, there are cross-maps which facilitate the mapping of a concept to and from other classification and terminology systems such as ICD-10 and OPCS.&lt;/p&gt;
+
+&lt;p&gt;Here is an example of entering SNOMED-CT terms for medications:&lt;/p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/6mvUThwm0j8&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;h3 id=&quot;the-importance-of-implementation&quot;&gt;The importance of implementation&lt;/h3&gt;
+
+&lt;p&gt;I have not been able to identify a working SNOMED-CT implementation in the UK before 2009, which means that, as far as I know, I actually had the first working system in clinical practice in the UK deployed in October 2009.&lt;/p&gt;
+
+&lt;p&gt;I think there are five main issues when it comes to implementing SNOMED-CT:&lt;/p&gt;
+
+&lt;h4 id=&quot;1-you-need-to-make-it-fast&quot;&gt;1. You need to make it fast.&lt;/h4&gt;
+
+&lt;p&gt;If you have a look at the &lt;a href=&quot;http://browser.ihtsdotools.org/&quot;&gt;SNOMED International provided browser&lt;/a&gt;, you can navigate the SNOMED-CT hierarchy and get a feel for how it is structured. However, you will notice that search is very slow. While its size makes it comprehensive, it is technically challenging to implement in an effective way. It is possible to do so however as you can see from the screen recordings above.&lt;/p&gt;
+
+&lt;h4 id=&quot;2-terminology-shouldnt-be-a-bolt-in-but-the-lingua-franca-in-your-data-models-and-your-software&quot;&gt;2. Terminology shouldn’t be a bolt-in, but the lingua franca in your data models and your software.&lt;/h4&gt;
+
+&lt;p&gt;SNOMED-CT data entry does not need to only occur by allowing your users to search for a specific term. In my homegrown EPR, choosing locations on the face when recording botulinum toxin injections enters SNOMED-CT terms behind the scenes at the data level.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/patientcare-botox.jpg&quot; alt=&quot;Patientcare Botox&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;3-its-not-just-about-data-entry&quot;&gt;3. It’s not just about data entry.&lt;/h4&gt;
+
+&lt;p&gt;If your terminology system is a bolt-on, then it is difficult to do anything clever with the data in real-time in order to support clinical care. If however you use SNOMED-CT to enable real-time analytics, then you can switch functionality on and off depending on clinical context. Here we analyse the patient record to generate a motor neurone disease summary and look for records of gastrostomy insertion simply by querying the patient’s data leveraging the semantic understanding that SNOMED-CT provides. &lt;img src=&quot;/images/mnd-dashboard.png&quot; alt=&quot;Mnd Dashboard&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;4-dont-start-thinking-about-subsets&quot;&gt;4. Don’t start thinking about subsets&lt;/h4&gt;
+
+&lt;p&gt;There have been many working groups set up by different specialties to try to organise and curate subsets, limited lists of concepts from within SNOMED-CT and I strongly believe that this work is a waste of time.&lt;/p&gt;
+
+&lt;p&gt;Instead, those people should be focused on improving SNOMED-CT as a whole, reviewing and deprecating concepts and ensuring that the concepts that are found in modern clinical practice are represented adequately.&lt;/p&gt;
+
+&lt;p&gt;I believe that subsets have arisen due to fundamental shortcomings in the implementation of SNOMED-CT and I haven’t found a need that subsumption can’t solve by itself. Subsumption refers to the hierarchy of SNOMED-CT concepts that arises from IS-A relationships in that, “progressive bulbar palsy” IS-A type “motor neurone disease” or “bronchopneumonia” IS-A type of “respiratory disease”.&lt;/p&gt;
+
+&lt;p&gt;Subsumption means that a decent implementation (and mine is one of them - see it at &lt;a href=&quot;https://github.com/mwardle/rsterminology&quot;&gt;https://github.com/mwardle/rsterminology&lt;/a&gt;) can use those relationships to limit the choice of users so that they don’t choose “Occupation of physiotherapist” when making a “Referral to physiotherapist” because one is an occupation and one is a type of procedure.&lt;/p&gt;
+
+&lt;h4 id=&quot;5-it-allows-you-to-study-cohorts&quot;&gt;5. It allows you to study cohorts…&lt;/h4&gt;
+
+&lt;p&gt;And finally, the title of the article.&lt;/p&gt;
+
+&lt;p&gt;Once you implement SNOMED-CT, you can start to do clever things like, show me how the patient in front of me is doing compared to all of my patients with this disease. You can see this for multiple sclerosis here, but it is possible to do for other disorders as well.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/msdata-relapses.jpg&quot; alt=&quot;Msdata Relapses&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In fact, we can now do the same but sub-stratify to show how you compare to patients with a disease onset at a similar time of life or of the same gender.&lt;/p&gt;
+
+&lt;p&gt;Defining cohorts means defining the characteristics of our patients, and SNOMED-CT is the solution. We can then stratify our patient groups according to those characteristics, whether it be their medical diagnoses, the procedures to which they have been through, their treatments current and past or any other characteristic.&lt;/p&gt;
+
+&lt;p&gt;How can we make sense of patient reported outcome measures without understanding and stratifying our patients?&lt;/p&gt;
+
+&lt;p&gt;Importantly, it doesn’t matter if someone has coded a diagnosis as a highly specific diagnosis as one can map this to a more generic high-level diagnosis and then use that perform aggregated analysis.&lt;/p&gt;
+
+&lt;p&gt;Finally, how can we implement algorithmic analysis and artificial intelligence without an understand of these characteristics? Assessment of, for example, deteriorating renal function is critical on knowledge of recent diagnoses and medications given, and structured data is vital in supporting the research required in applying artificial intelligence in healthcare. The routine and systematic collection of SNOMED-CT forms a critical part of the foundation of any programme to implement such systems.&lt;/p&gt;</content><author><name></name></author><summary type="html">A cohort is a group of patients who share a defining characteristic.</summary></entry><entry><title type="html">Secure messaging… with patients in control of their data</title><link href="https://www.wardle.org/information-governance/2017/04/23/secure-messaging.html" rel="alternate" type="text/html" title="Secure messaging... with patients in control of their data" /><published>2017-04-23T09:20:28+01:00</published><updated>2017-04-23T09:20:28+01:00</updated><id>https://www.wardle.org/information-governance/2017/04/23/secure-messaging</id><content type="html" xml:base="https://www.wardle.org/information-governance/2017/04/23/secure-messaging.html">&lt;p&gt;Don’t we all want clinical information systems that support both clinicians and patients with clinical care?&lt;/p&gt;
 
 &lt;p&gt;However, storing and using information relating to patients, whether for direct clinical care, audit and service evaluations or the secondary use of data is potentially fraught with difficulty. There are many examples such as the furore surrounding the &lt;a href=&quot;https://www.england.nhs.uk/ourwork/tsd/care-data/&quot;&gt;care.data&lt;/a&gt; NHS England project or the &lt;a href=&quot;https://www.digitalhealth.net/2017/03/ttp-gps-should-continue-patient-data-sharing/&quot;&gt;TPP SystmOne debacle&lt;/a&gt;.&lt;/p&gt;
 
@@ -658,8 +733,8 @@
 &lt;p&gt;For example, if a large commercial entity with expertise in artificial intelligence wanted to add value by monitoring a cohort of patients automatically to identify acute kidney injury, then how can this be done that satisfies both regulatory requirements and defends against public concern?&lt;/p&gt;
 
 &lt;h1 id=&quot;the-case-for-pseudonymisation&quot;&gt;The case for pseudonymisation&lt;/h1&gt;
-&lt;p&gt;&lt;a name=&quot;pseudonymisation&quot;&gt;&lt;/a&gt;
-Pseudonymisation is a process in which identifying data relating to an individual is replaced with an identifier. A commonly used method of pseudonymisation in healthcare is to create a pseudonym using a recipe based on fixed unchanging information about a patient such as a national identifier, a date of birth and country of birth. This uses an important property of a hash function to generate a fixed-length digest of a variably sized input; it is mathematically a one-way process. If you give me the input then I will always obtain the same digest &lt;em&gt;but&lt;/em&gt;, given a digest, I cannot determine the input.&lt;/p&gt;
+
+&lt;p&gt;Pseudonymisation is a process in which identifying data relating to an individual is replaced with an identifier. A commonly used method of pseudonymisation in healthcare is to create a pseudonym using a recipe based on fixed unchanging information about a patient such as a national identifier, a date of birth and country of birth. This uses an important property of a hash function to generate a fixed-length digest of a variably sized input; it is mathematically a one-way process. If you give me the input then I will always obtain the same digest &lt;em&gt;but&lt;/em&gt;, given a digest, I cannot determine the input.&lt;/p&gt;
 
 &lt;p&gt;Now that last statement is not quite true, but brute-force attacks on hash functions are outside of the scope of this blog post, and, as long as one uses an additional salt (a fixed input parameter used together with other input parameters), one can avoid pre-calculated lookup table attacks.&lt;/p&gt;
 
@@ -815,70 +890,4 @@ Pseudonymisation is a process in which identifying data relating to an individua
   &lt;li&gt;
     &lt;p&gt;All service interfaces, without exception, must be designed from the ground up to be externalizable. That is to say, the team must plan and design to be able to expose the interface to developers in the outside world. No exceptions.&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">The following blog post is from a debate that we will have at the Welsh Clinical Informatics Council tomorrow, 16th March 2017, in relation to the current healthcare IT strategy in Wales, which has at its core, the mantra ‘Once for Wales’. This has been variously interpreted, and historically has been used to focus on a single product, such as a single patient administration system for each of the health boards in Wales. I should like to re-define this to focus on the formation of a “platform” in Wales, built on open standards and interoperability. It is essentially a summary of my larger domain-driven design clinical information system document.</summary></entry><entry><title type="html">Communication is key</title><link href="https://www.wardle.org/clinical-informatics/2017/03/13/communication-is-key.html" rel="alternate" type="text/html" title="Communication is key" /><published>2017-03-13T13:50:00+00:00</published><updated>2017-03-13T13:50:00+00:00</updated><id>https://www.wardle.org/clinical-informatics/2017/03/13/communication-is-key</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/03/13/communication-is-key.html">&lt;p&gt;At least I’m consistent. I wrote this in a &lt;a href=&quot;http://www.bmj.com/rapid-response/2011/10/29/communication-key&quot;&gt;rapid response in the BMJ 14 years ago&lt;/a&gt;:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Dear Sir,&lt;/p&gt;
-
-  &lt;p&gt;It is important to note that of the ten points raised, seven directly
-relate to the communication of data between professionals and
-organisations. This is no surprise; when a casenote is reviewed it is
-entirely composed of communications. It is here that information
-technology has its greatest benefit.&lt;/p&gt;
-
-  &lt;p&gt;The NHS needs to create open, extensible standards for the
-communications that make up a patients notes. Creating huge centralised
-systems that meet today’s needs temporarily and adopt a “one size fits
-all” will lead to NHS IT yet again
-mimicking past IT disasters, such as the scrapped benefit cards payment
-system, the new air traffic control centre at Swanwick and the national
-insurance recording system.&lt;/p&gt;
-
-  &lt;p&gt;Once national standards in messaging, authentication and
-authorisation are created, individual system suppliers can connect their
-disparate software, new and legacy data to create a seamles integrated
-electronic patient record, that can slowly evolve, develop and keep pace
-with developments - both in IT and medicine. It is important not to forget
-the legacy data that is out there - in pathology, and even in radiology.
-Bespoke radiology imaging software should be able to publish patient’s
-data in a standard fashion allowing it to be integrated at the desktop.&lt;/p&gt;
-
-  &lt;p&gt;Local systems can be designed with local users in mind, all operating
-on the same secure network. When a local rapid access endoscopy unit wants
-to start prospectively auditing requests, customising their own request
-“messages” should be straightforward and seamless to those that use them.&lt;/p&gt;
-
-  &lt;p&gt;In creating a working, living, evolving distributed electronic
-patient record, it does not matter that data is stored by a number of
-different organisations, and it does not matter when in fifteen years time
-the NHS organisational landscape changes. Centralising data away from the
-people who create it would be a mistake. A distributed flexible system is
-easy to centralise in the future when needs change. The converse is not
-true.&lt;/p&gt;
-
-  &lt;p&gt;The recent Welsh publication “Informing healthcare” [1] talks about
-created a Wales-wide electronic patient record. It goes on to ask whether
-Welsh systems should be aligned to information standards in their English
-counterparts. I find it difficult to believe that such a question even
-needs to be asked, and it is this lack of far-sightedness that means the
-millions of pounds will yet again be squandered on IT systems that its
-users can’t use.&lt;/p&gt;
-
-  &lt;p&gt;[1] “Informing Healthcare”. http://www.wales.nhs.uk/ihc&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The fact that most medical records are a type of communication is important. It is easy to assume that medical records are simply a record of medical practice, a longitudinal narrative of what happened to a patient. They are not. Medical records are a key enabler of healthcare. They are a piece of the workflow, a way of formulating and synthesising evidence and of marshalling opinion.&lt;/p&gt;
-
-&lt;p&gt;When medical records are on paper, they are familiar and useful but have their own share of problems as well, as I discuss in Section 2.1 of my &lt;a href=&quot;/clinical-informatics/2017/02/03/domain-driven-design.html&quot;&gt;clinical design document&lt;/a&gt;. Their sheer weight gives me information about the burden of pathology or at least, medical care in or for an individual patient.&lt;/p&gt;
-
-&lt;p&gt;Digitising the medical record is much more than simply copying the workflows and processes around paper records. When I added secure messaging to the PatientCare platform back in 2009, the teams looking after patients with a range of long-term health conditions embraced the ability to send messages linked securely to an electronic patient record with enthusiasm. They now record over 1000 messages every month; the graph below shows the adoption rate between 2010 and 2015.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/patientcare-messages.png&quot; alt=&quot;Secure messages sent per month&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;However, users soon asked for “carbon copy” functionality, asking to send a single message to multiple colleagues. I have still not heard a compelling justification to add this and have not done so. Users use messaging not just as a means of communication, but just as on paper, as a means of managing their work, the tasks to which they must attend. Conceptually therefore, a message written on a post-it note and put on my desk acts not only as a means of communicating something, but is usually asking me to &lt;em&gt;do something&lt;/em&gt;. In digitising this process, it is not appropriate to simply create a new form of electronic mail, but understand how paper is not just a form of communication.&lt;/p&gt;
-
-&lt;p&gt;The commonest reason cited by users wanting a “carbon copy” function was to “let someone know” something. I would ask why this were needed, unless that person had to act on that information. If that indeed were necessary, then the user should forward the original message with an annotation. Otherwise, the message is clearly visible for all time within our electronic record and so would be visible to the person who “needed to know but not do anything about it”, when they did need to see it.&lt;/p&gt;
-
-&lt;p&gt;Was I therefore wrong in 2003 when I said that “communication is the key”. I don’t think so: I was trying to push for interoperability and data standards, but medical records are much more than clinical correspondence and so digitisation must model not only the communication but the processes and workflow in which that communication sits.&lt;/p&gt;
-
-&lt;p&gt;My final thought: medical records are all about people: the patient obviously, but also the team of health professionals who work to look after and support that patient. Digitisation of medical records that neglects either communication or the people involved will, in my opinion, be doomed to failure.&lt;/p&gt;</content><author><name></name></author><summary type="html">At least I’m consistent. I wrote this in a rapid response in the BMJ 14 years ago:</summary></entry></feed>
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">The following blog post is from a debate that we will have at the Welsh Clinical Informatics Council tomorrow, 16th March 2017, in relation to the current healthcare IT strategy in Wales, which has at its core, the mantra ‘Once for Wales’. This has been variously interpreted, and historically has been used to focus on a single product, such as a single patient administration system for each of the health boards in Wales. I should like to re-define this to focus on the formation of a “platform” in Wales, built on open standards and interoperability. It is essentially a summary of my larger domain-driven design clinical information system document.</summary></entry></feed>
