@@ -1,5 +1,53 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-04-29T07:18:36+01:00</updated><id>https://www.wardle.org/</id><title type="html">Dr. Mark Wardle</title><subtitle>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
-</subtitle><entry><title type="html">The importance of cohorts… and SNOMED-CT</title><link href="https://www.wardle.org/clinical-informatics/2017/04/28/importance-of-cohorts.html" rel="alternate" type="text/html" title="The importance of cohorts... and SNOMED-CT" /><published>2017-04-28T14:42:42+01:00</published><updated>2017-04-28T14:42:42+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/04/28/importance-of-cohorts</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/04/28/importance-of-cohorts.html">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-04-29T20:20:52+01:00</updated><id>https://www.wardle.org/</id><title type="html">Dr. Mark Wardle</title><subtitle>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
+</subtitle><entry><title type="html">An open source SNOMED-CT implementation</title><link href="https://www.wardle.org/clinical-informatics/2017/04/29/rsterminology-part2.html" rel="alternate" type="text/html" title="An open source SNOMED-CT implementation" /><published>2017-04-29T20:10:02+01:00</published><updated>2017-04-29T20:10:02+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/04/29/rsterminology-part2</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/04/29/rsterminology-part2.html">&lt;p&gt;I have released an open-source SNOMED-CT terminology server called rsterminology. The source code is available from &lt;a href=&quot;https://github.com/wardle/rsterminology&quot;&gt;https://github.com/wardle/rsterminology&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;It is software that is designed to be used by other software, rather than by end-users. I have shown videos of how I use this in an electronic patient record system in &lt;a href=&quot;/clinical-informatics/2017/04/28/importance-of-cohorts.html&quot;&gt;previous posts&lt;/a&gt;. It runs as a java microservice and is currently deployed within NHS Wales.&lt;/p&gt;
+
+&lt;p&gt;I have installed a working version of this software on a very small virtual machine for demonstration purposes. It is not intended for production use please! I will monitor usage and add throttling or shut down the service if this is misused.&lt;/p&gt;
+
+&lt;p&gt;Here are some simple examples of how it can be used:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Fetch information about a single concept with a known identifier:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://msdata.org.uk:8080/snomedct/concepts/24700007&quot;&gt;http://msdata.org.uk:8080/snomedct/concepts/24700007&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://apigee.com/console/others?req=%7B%22resource%22%3A%22msdata.org.uk%3A8080%2Fsnomedct%2Fconcepts%2F24700007%22%2C%22params%22%3A%7B%22query%22%3A%7B%7D%2C%22template%22%3A%7B%7D%2C%22headers%22%3A%7B%7D%2C%22body%22%3A%7B%22attachmentFormat%22%3A%22mime%22%2C%22attachmentContentDisposition%22%3A%22form-data%22%7D%7D%2C%22verb%22%3A%22get%22%7D&quot;&gt;via Apigee console&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;This shows information about multiple sclerosis&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Get the synonyms for a given concept
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://msdata.org.uk:8080/snomedct/concepts/24700007/descriptions&quot;&gt;http://msdata.org.uk:8080/snomedct/concepts/24700007/descriptions&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://apigee.com/console/others?req=%7B%22resource%22%3A%22msdata.org.uk%3A8080%2Fsnomedct%2Fconcepts%2F24700007%2Fdescriptions%22%2C%22params%22%3A%7B%22query%22%3A%7B%7D%2C%22template%22%3A%7B%7D%2C%22headers%22%3A%7B%7D%2C%22body%22%3A%7B%22attachmentFormat%22%3A%22mime%22%2C%22attachmentContentDisposition%22%3A%22form-data%22%7D%7D%2C%22verb%22%3A%22get%22%7D&quot;&gt;via Apigee console&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Understand what a concept means, semantically, by virtue of subsumption (the IS-A relationships)
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://msdata.org.uk:8080/snomedct/concepts/24700007/recursiveParents&quot;&gt;http://msdata.org.uk:8080/snomedct/concepts/24700007/recursiveParents&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://apigee.com/console/others?req=%7B%22resource%22%3A%22msdata.org.uk%3A8080%2Fsnomedct%2Fconcepts%2F24700007%2FrecursiveParents%22%2C%22params%22%3A%7B%22query%22%3A%7B%7D%2C%22template%22%3A%7B%7D%2C%22headers%22%3A%7B%7D%2C%22body%22%3A%7B%22attachmentFormat%22%3A%22mime%22%2C%22attachmentContentDisposition%22%3A%22form-data%22%7D%7D%2C%22verb%22%3A%22get%22%7D&quot;&gt;via Apigee console&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;In this example you see that multiple sclerosis is a disease of the nervous system for example.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Perhaps the most powerful feature is free-text searching. You would not usually search the whole of SNOMED-CT but instead limit to particular sub-trees such as diagnoses, procedures, ethnic origins etc.
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://msdata.org.uk:8080/snomedct/search?s=msa&amp;amp;root=64572001&quot;&gt;http://msdata.org.uk:8080/snomedct/search?s=msa&amp;amp;root=64572001&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://apigee.com/console/others?req=%7B%22resource%22%3A%22msdata.org.uk%3A8080%2Fsnomedct%2Fsearch%3Fs%3Dmsa%26root%3D64572001%22%2C%22params%22%3A%7B%22query%22%3A%7B%22parameters_name_0%22%3A%22s%22%2C%22parameters_value_0%22%3A%22msa%22%2C%22parameters_name_1%22%3A%22root%22%2C%22parameters_value_1%22%3A%2264572001%22%7D%2C%22template%22%3A%7B%7D%2C%22headers%22%3A%7B%22headers_name_0%22%3A%22s%22%2C%22headers_value_0%22%3A%22mult%20scler%22%7D%2C%22body%22%3A%7B%22attachmentFormat%22%3A%22mime%22%2C%22attachmentContentDisposition%22%3A%22form-data%22%7D%7D%2C%22verb%22%3A%22get%22%7D&quot;&gt;via Apigee console&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Here we search for “MSA” but only in the “diagnoses” hierarchy - which has the concept identifier &lt;a href=&quot;http://msdata.org.uk:8080/snomedct/concepts/64572001&quot;&gt;64572001&lt;/a&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Let’s now let our users choose a country of birth. The root representing these concepts is &lt;a href=&quot;http://msdata.org.uk:8080/snomedct/concepts/370159000&quot;&gt;370159000&lt;/a&gt;.
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://msdata.org.uk:8080/snomedct/search?root=370159000&amp;amp;s=eng&quot;&gt;http://msdata.org.uk:8080/snomedct/search?root=370159000&amp;amp;s=eng&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://apigee.com/console/others?req=%7B%22resource%22%3A%22http%3A%2F%2Fmsdata.org.uk%3A8080%2Fsnomedct%2Fsearch%3Froot%3D370159000%26s%3Deng%22%2C%22params%22%3A%7B%22query%22%3A%7B%22parameters_name_0%22%3A%22root%22%2C%22parameters_value_0%22%3A%22370159000%22%2C%22parameters_name_1%22%3A%22s%22%2C%22parameters_value_1%22%3A%22eng%22%7D%2C%22template%22%3A%7B%7D%2C%22headers%22%3A%7B%22headers_name_0%22%3A%22s%22%2C%22headers_value_0%22%3A%22mult%20scler%22%7D%2C%22body%22%3A%7B%22attachmentFormat%22%3A%22mime%22%2C%22attachmentContentDisposition%22%3A%22form-data%22%7D%7D%2C%22verb%22%3A%22get%22%7D&quot;&gt;via Apigee console&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Finally, let’s parse a medication such as amlodipine 5mg od, which means amlodipine should be taken 5mg per day once daily:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://msdata.org.uk:8080/snomedct/dmd/parse?s=amlodipine 5mg od&quot;&gt;http://msdata.org.uk:8080/snomedct/dmd/parse?s=amlodipine 5mg od&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://apigee.com/console/others?req=%7B%22resource%22%3A%22msdata.org.uk%3A8080%2Fsnomedct%2Fdmd%2Fparse%3Fs%3Damlodipine%205mg%20od%22%2C%22params%22%3A%7B%22query%22%3A%7B%22parameters_name_0%22%3A%22s%22%2C%22parameters_value_0%22%3A%22amlodipine%205mg%20od%22%7D%2C%22template%22%3A%7B%7D%2C%22headers%22%3A%7B%22headers_name_0%22%3A%22s%22%2C%22headers_value_0%22%3A%22mult%20scler%22%7D%2C%22body%22%3A%7B%22attachmentFormat%22%3A%22mime%22%2C%22attachmentContentDisposition%22%3A%22form-data%22%7D%7D%2C%22verb%22%3A%22get%22%7D&quot;&gt;via Apigee console&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">I have released an open-source SNOMED-CT terminology server called rsterminology. The source code is available from https://github.com/wardle/rsterminology.</summary></entry><entry><title type="html">The importance of cohorts… and SNOMED-CT</title><link href="https://www.wardle.org/clinical-informatics/2017/04/28/importance-of-cohorts.html" rel="alternate" type="text/html" title="The importance of cohorts... and SNOMED-CT" /><published>2017-04-28T14:42:42+01:00</published><updated>2017-04-28T14:42:42+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/04/28/importance-of-cohorts</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/04/28/importance-of-cohorts.html">&lt;blockquote&gt;
   &lt;p&gt;A cohort is a group of patients who share a defining characteristic.&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -802,92 +850,4 @@
 
 &lt;p&gt;I would be grateful for your thoughts.&lt;/p&gt;
 
-&lt;p&gt;Mark&lt;/p&gt;</content><author><name></name></author><summary type="html">“Google’s Deepmind made inexcusable errors handling UK health data”, was reported on 16th March 2017 in an article published in the journal “Health and Technology” by Julia Powles and Hal Hodson. The article is here.</summary></entry><entry><title type="html">What does ‘Once for Wales’ mean to me?</title><link href="https://www.wardle.org/clinical-informatics/2017/03/15/once-for-wales.html" rel="alternate" type="text/html" title="What does 'Once for Wales' mean to me?" /><published>2017-03-15T21:56:20+00:00</published><updated>2017-03-15T21:56:20+00:00</updated><id>https://www.wardle.org/clinical-informatics/2017/03/15/once-for-wales</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/03/15/once-for-wales.html">&lt;p&gt;The following blog post is from a debate that we will have at the Welsh Clinical Informatics Council tomorrow, 16th March 2017, in relation to the current healthcare IT strategy in Wales, which has at its core, the mantra ‘Once for Wales’. This has been variously interpreted, and historically has been used to focus on a single product, such as a single patient administration system for each of the health boards in Wales. I should like to re-define this to focus on the formation of a “platform” in Wales, built on open standards and interoperability. It is essentially a summary of my larger &lt;a href=&quot;https://www.dropbox.com/s/62sg71a19voxpts/cis_design.pdf?dl=0&quot;&gt;domain-driven design clinical information system document&lt;/a&gt;.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;once-for-wales&quot;&gt;Once for Wales&lt;/h1&gt;
-
-&lt;p&gt;So what does “Once for Wales” mean to me?&lt;/p&gt;
-
-&lt;p&gt;To answer that question, we have to decide what we’re trying to do and what are our priorities.&lt;/p&gt;
-
-&lt;p&gt;To that, I would answer: to valuably support the care of patients within NHS Wales.&lt;/p&gt;
-
-&lt;p&gt;The most important priority is the patient. It is not technology, it is not politics. We need to focus on the patient, and to support health professionals and those working in the NHS in looking after the patient.&lt;/p&gt;
-
-&lt;p&gt;How then do we support health professionals and managers in their quest to effectively look after the patients under their care?&lt;/p&gt;
-
-&lt;h1 id=&quot;1-plan-for-innovation&quot;&gt;1. Plan for innovation&lt;/h1&gt;
-
-&lt;p&gt;I think the most important fact to recognise is that I don’t have all of the answers. I know some of them, but many remain unsolved. Before explaining what I do know, I’d rather talk about what I don’t know, and the importance of this. We need to build an infrastructure that explicitly recognises that we don’t have all of the answers, and therefore must support innovation. Such innovation may simply be incremental improvement of existing technology, but also must cope with and embrace the introduction of transformative and disruptive technologies.&lt;/p&gt;
-
-&lt;p&gt;The logical conclusion from this is that we need to build solutions within NHS Wales that allow innovation to flourish, but in an environment that is safe and meets the range of regulations in which we all must work.&lt;/p&gt;
-
-&lt;h1 id=&quot;2-build-a-service-orientated-architecture&quot;&gt;2. Build a service-orientated architecture&lt;/h1&gt;
-
-&lt;p&gt;Many people are currently interpreting “Once for Wales” as only about national systems, one portal, one emergency unit system, one patient administration system. Indeed, currently when I ask colleagues about what NWIS is doing, they know only about the “Welsh Clinical Portal” product, and little else, and I am afraid, even with all of the improvements, it is usually accompanied by a sigh and a roll of the eyes, as their experience of this product has been difficult.&lt;/p&gt;
-
-&lt;p&gt;NWIS has done a fantastic job on the most difficult of tasks, implementing many interoperable core services than underpin much of what exists within Welsh Clinical Portal. Some of the most difficult work has been not technical, but instead has been about managing change across multiple organisations, such as the harmonisation of laboratory systems across Wales. However, because that work and those services are not currently exposed, except to Welsh Clinical Portal, few know about these successes. In my opinion, NWIS has not done enough to broadcast those successes. The Welsh Results Reports Service, integrating results from laboratories and radiology across Wales is a terrific accomplishment and the teams should be congratulated.&lt;/p&gt;
-
-&lt;p&gt;My second conclusion is that, much like Amazon, NWIS should have a strong focus on a service-orientated architecture, and critically, those services must be made available to all within NHS Wales as well as permitted third-parties.&lt;sup&gt;&lt;a href=&quot;#amazon&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-
-&lt;p&gt;From an engineering perspective, this makes a lot of sense. It is almost always the case that when building complex solutions to real-life problems, no-one person can conceive of all of the problems in one go. The natural solution to such complexity is to break-down a problem into manageable chunks. These chunks, much like “lego bricks”, can be joined together to form something greater than the sum of the parts. Importantly, it is more likely that we can vouch that a system is deterministic. This means that the behaviour of a system is predictable. We’ve seen the consequences of non-deterministic systems when we heard about laboratory results being misreported to general practitioners. Healthcare information technology should be deterministic.&lt;/p&gt;
-
-&lt;p&gt;It is really difficult to know a system is doing what it should be doing when it is really complicated, so breaking systems into smaller components that do one or two things really well makes a lot of sense. It also means we can take those components and test them systematically so that we can prove that they are doing what we think they should be doing.&lt;/p&gt;
-
-&lt;p&gt;Importantly, it is at this service-layer that a mantra of “Once for Wales” really makes sense. It doesn’t make sense to manage user authentication and authorisation in multiple services. We want single-sign-on for users, and this process should be orchestrated by a national service that handles this for multiple applications. It may be that this service federates for a range of systems across health and social care, but nationally, it makes sense to be “Once for Wales”.&lt;/p&gt;
-
-&lt;h1 id=&quot;3-an-extensible-platform-for-nhs-wales&quot;&gt;3. An extensible platform for NHS Wales&lt;/h1&gt;
-
-&lt;p&gt;It is therefore not difficult to imagine the core services that are truly “Once for Wales”. User authentication, laboratory and radiology results, a document repository, a reference data service, a clinical data repository. In fact, all but the last of these services exist and when combined together, form a platform on which clinical applications can sit.&lt;/p&gt;
-
-&lt;p&gt;It is important to note that services can “wrap” or federate other services to provide additional functionality. A service to provide laboratory results can connect to multiple laboratory systems and provide a unified view. Such integration does not require all laboratories to use the same product, but only expose their data in a standardised way with harmonisation of meaning, so that a full blood count in one system is equivalent to a full blood count in another system. There is a growing momentum towards a standards-based approach internationally.&lt;/p&gt;
-
-&lt;p&gt;Similarly, the fact that the same patient administrative system is in use in multiple organisations does not magically mean that we can track the care of a patient on a single pathway that spans those organisations. The logical conclusion is that it is much more important to think about high-level clinical requirements than focus on products, and that services can be combined together to form an extensible platform.&lt;/p&gt;
-
-&lt;h1 id=&quot;4-focus-on-standards-and-contracts&quot;&gt;4. Focus on standards and contracts&lt;/h1&gt;
-
-&lt;p&gt;I’ve previously quipped that I don’t care what system is used in the emergency department. That isn’t quite true, but I’m not an expert on the workflows and processes that occur in an emergency unit. What I am interested in is knowing how many of my patients attend the emergency unit, how patients at the front-door flow through my hospital and which of them I need to see when I am on-call. I might want to set-up some automatic notification when one of my patients with motor neurone disease turns up in the department.&lt;/p&gt;
-
-&lt;p&gt;As a relative outsider, it is logical for me to think about emergency unit systems as a black-box. I don’t need to see how it is implemented, what magic goes on under the lid, but I do need a report telling me what has happened to the patient. For me therefore, a “Once for Wales” approach means focusing on a “Once for Wales” contract  - a contract in which we give the high-level functional requirements and expect organisations and third-parties to meet those contracts.  Those contracts are a combination of clinical requirements (for instance, notifications) and technical - so that we know it will interoperate.&lt;/p&gt;
-
-&lt;p&gt;Similarly, the same could be said for specialty-specific systems like nephrology or ophthalmology.&lt;/p&gt;
-
-&lt;p&gt;Now it may make sense financially to procure a single EU product for use across Wales, it may not. As a member of council, I’m not sure I should have any say at all. To me, the EU system needs to interoperate with the workflow and processes within that organisation, and that is pretty much none of my business. All I want is for it to meet the requirements firstly of the EU staff, secondly, the organisation and its management, and thirdly, everyone else who looks after that patient.&lt;/p&gt;
-
-&lt;p&gt;A focus on a single product stops us thinking about what really matters across NHS Wales. We should be discussing what is in that contract for any EU system and how it interoperates with our national platform. It is the contract that is “Once for Wales”, what data standards must be used and not the details of the implementation. It avoids a procurement like WCCIS, in which we still don’t have a handle on how this project will interoperate with the rest of our architecture.&lt;/p&gt;
-
-&lt;p&gt;Such an approach then permits local innovation and for local organisations to work at their own pace and priorities. Our health boards are under a statutory obligation to provide healthcare for their populations. We must avoid a “my way or the highway” approach, but allow local developments in order to solve local problems that can work in harmony with the national platform. Importantly, we must then create an environment where we can pick up those local innovations and easily apply them in different organisations preventing wasteful duplication of effort, or the creation of functional silos which cannot interoperate with any other system.&lt;/p&gt;
-
-&lt;h1 id=&quot;conclusions&quot;&gt;Conclusions&lt;/h1&gt;
-
-&lt;p&gt;I therefore commend to council that we re-imagine “Once for Wales” to focus on a “platform” for Wales, a set of contracts, data standards and integration services. Welsh Clinical Portal should be but one window into our national platform. We need a national architecture board in which we define those core national services, define those data standards and evaluate products to ensure that are truly interoperable with our platform. The final piece of “Once for Wales” should be a plan to develop a workforce of informatics staff, clinical and technical, who can make healthcare IT in Wales the best in the world.&lt;/p&gt;
-
-&lt;p&gt;Thank you,&lt;/p&gt;
-
-&lt;p&gt;Mark Wardle&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h1&gt;
-
-&lt;p&gt;&lt;a name=&quot;amazon&quot;&gt;1&lt;/a&gt;: Jeff Bezos did the same for Amazon in 2002, with the &lt;a href=&quot;http://apievangelist.com/2012/01/12/the-secret-to-amazons-success-internal-apis/&quot;&gt;following commandments&lt;/a&gt;:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;All teams will henceforth expose their data and functionality through service interfaces.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Teams must communicate with each other through these interfaces.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;There will be no other form of inter-process communication allowed: no direct linking, no direct reads of another team’s data store, no shared-memory model, no back-doors whatsoever. The only communication allowed is via service interface calls over the network.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;It doesn’t matter what technology they use.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;All service interfaces, without exception, must be designed from the ground up to be externalizable. That is to say, the team must plan and design to be able to expose the interface to developers in the outside world. No exceptions.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">The following blog post is from a debate that we will have at the Welsh Clinical Informatics Council tomorrow, 16th March 2017, in relation to the current healthcare IT strategy in Wales, which has at its core, the mantra ‘Once for Wales’. This has been variously interpreted, and historically has been used to focus on a single product, such as a single patient administration system for each of the health boards in Wales. I should like to re-define this to focus on the formation of a “platform” in Wales, built on open standards and interoperability. It is essentially a summary of my larger domain-driven design clinical information system document.</summary></entry></feed>
+&lt;p&gt;Mark&lt;/p&gt;</content><author><name></name></author><summary type="html">“Google’s Deepmind made inexcusable errors handling UK health data”, was reported on 16th March 2017 in an article published in the journal “Health and Technology” by Julia Powles and Hal Hodson. The article is here.</summary></entry></feed>
