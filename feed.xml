@@ -1,9 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-04-29T20:20:52+01:00</updated><id>https://www.wardle.org/</id><title type="html">Dr. Mark Wardle</title><subtitle>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-04-29T21:50:24+01:00</updated><id>https://www.wardle.org/</id><title type="html">Dr. Mark Wardle</title><subtitle>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
 </subtitle><entry><title type="html">An open source SNOMED-CT implementation</title><link href="https://www.wardle.org/clinical-informatics/2017/04/29/rsterminology-part2.html" rel="alternate" type="text/html" title="An open source SNOMED-CT implementation" /><published>2017-04-29T20:10:02+01:00</published><updated>2017-04-29T20:10:02+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/04/29/rsterminology-part2</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/04/29/rsterminology-part2.html">&lt;p&gt;I have released an open-source SNOMED-CT terminology server called rsterminology. The source code is available from &lt;a href=&quot;https://github.com/wardle/rsterminology&quot;&gt;https://github.com/wardle/rsterminology&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;It is software that is designed to be used by other software, rather than by end-users. I have shown videos of how I use this in an electronic patient record system in &lt;a href=&quot;/clinical-informatics/2017/04/28/importance-of-cohorts.html&quot;&gt;previous posts&lt;/a&gt;. It runs as a java microservice and is currently deployed within NHS Wales.&lt;/p&gt;
 
 &lt;p&gt;I have installed a working version of this software on a very small virtual machine for demonstration purposes. It is not intended for production use please! I will monitor usage and add throttling or shut down the service if this is misused.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;For clinical users, I have just created (29th April) a quick SNOMED-CT search facility on a web page so that you can enter terms like “MS” or “DM” or “IHD” or “amlodipine” and see how autocomplete can work. The application is available &lt;a href=&quot;https://msdata.org.uk/apps/WebObjects/SnomedBrowser.woa/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;Here are some simple examples of how it can be used:&lt;/p&gt;
 
