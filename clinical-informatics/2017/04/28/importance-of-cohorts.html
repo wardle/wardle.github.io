@@ -96,7 +96,7 @@
 
 <p>One would think that it would be the same in routine healthcare but it is not. Most information is recorded as unstructured free-text and data collected are primarily used for administrative and managerial purposes. As I wrote in my <a href="/clinical-informatics/2017/02/03/domain-driven-design.html">domain-driven clinical design document</a>, “As a result, we commonly know how many patients are seen in clinic, but have very little information as to why they are being seen or how they fare after  treatment.   Important  questions  such  as  ‘how  many  patients  with  Parkin-son’s disease do we care for?’, ‘what are the outcomes for patients after having a mastectomy?’ or ‘why are we seeing these patients in outpatient clinic?’ cannot be answered.”</p>
 
-<p>In fact, it is not just understand and assessing our services and outcomes that require this information, but new technologies such as real-time analytics, algorithmic support and artificial intelligence needs prospectively-captured data recorded at the point–of-care.</p>
+<p>In fact, it is not just understanding and assessing our services and outcomes that require this information, but new technologies such as real-time analytics, algorithmic support and artificial intelligence needs prospectively-captured data recorded at the point–of-care.</p>
 
 <p>Some might point to “Hospital Episode Statistics” (HES) data as a way of understanding our patients but these data are woefully incomplete and inaccurate, do not usually include outpatient episodes of care with diagnostic entities recorded using a classification system (ICD-10) rather than a clinical terminology.</p>
 
@@ -151,7 +151,7 @@
 
 <p>Once you implement SNOMED-CT, you can start to do clever things like, show me how the patient in front of me is doing compared to all of my patients with this disease. You can see this for multiple sclerosis here, but it is possible to do for other disorders as well.</p>
 
-<p><img src="/images/msdata-relapses.jpg" alt="Msdata Relapses" /></p>
+<p><img src="/images/edss-graph.jpg" alt="Edss Graph" /></p>
 
 <p>In fact, we can now do the same but sub-stratify to show how you compare to patients with a disease onset at a similar time of life or of the same gender.</p>
 
@@ -159,7 +159,7 @@
 
 <p>How can we make sense of patient reported outcome measures without understanding and stratifying our patients?</p>
 
-<p>Importantly, it doesn’t matter if someone has coded a diagnosis as a highly specific diagnosis as one can map this to a more generic high-level diagnosis and then use that perform aggregated analysis.</p>
+<p>Importantly, it doesn’t matter if someone has coded a diagnosis as a highly specific diagnosis as one can map this to a more generic high-level diagnosis and then use that perform aggregated analysis. So for example, if a clinician enters a very specific sub-type of “bronchiolitis”, then it doesn’t matter as we can subsequently aggregate using a higher-level concept and still identify the patient.</p>
 
 <p>Finally, how can we implement algorithmic analysis and artificial intelligence without an understand of these characteristics? Assessment of, for example, deteriorating renal function is critical on knowledge of recent diagnoses and medications given, and structured data is vital in supporting the research required in applying artificial intelligence in healthcare. The routine and systematic collection of SNOMED-CT forms a critical part of the foundation of any programme to implement such systems.</p>
 

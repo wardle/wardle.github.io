@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-04-28T22:13:16+01:00</updated><id>https://www.wardle.org/</id><title type="html">Dr. Mark Wardle</title><subtitle>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-04-29T07:10:29+01:00</updated><id>https://www.wardle.org/</id><title type="html">Dr. Mark Wardle</title><subtitle>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
 </subtitle><entry><title type="html">The importance of cohorts… and SNOMED-CT</title><link href="https://www.wardle.org/clinical-informatics/2017/04/28/importance-of-cohorts.html" rel="alternate" type="text/html" title="The importance of cohorts... and SNOMED-CT" /><published>2017-04-28T14:42:42+01:00</published><updated>2017-04-28T14:42:42+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/04/28/importance-of-cohorts</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/04/28/importance-of-cohorts.html">&lt;blockquote&gt;
   &lt;p&gt;A cohort is a group of patients who share a defining characteristic.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -9,7 +9,7 @@
 
 &lt;p&gt;One would think that it would be the same in routine healthcare but it is not. Most information is recorded as unstructured free-text and data collected are primarily used for administrative and managerial purposes. As I wrote in my &lt;a href=&quot;/clinical-informatics/2017/02/03/domain-driven-design.html&quot;&gt;domain-driven clinical design document&lt;/a&gt;, “As a result, we commonly know how many patients are seen in clinic, but have very little information as to why they are being seen or how they fare after  treatment.   Important  questions  such  as  ‘how  many  patients  with  Parkin-son’s disease do we care for?’, ‘what are the outcomes for patients after having a mastectomy?’ or ‘why are we seeing these patients in outpatient clinic?’ cannot be answered.”&lt;/p&gt;
 
-&lt;p&gt;In fact, it is not just understand and assessing our services and outcomes that require this information, but new technologies such as real-time analytics, algorithmic support and artificial intelligence needs prospectively-captured data recorded at the point–of-care.&lt;/p&gt;
+&lt;p&gt;In fact, it is not just understanding and assessing our services and outcomes that require this information, but new technologies such as real-time analytics, algorithmic support and artificial intelligence needs prospectively-captured data recorded at the point–of-care.&lt;/p&gt;
 
 &lt;p&gt;Some might point to “Hospital Episode Statistics” (HES) data as a way of understanding our patients but these data are woefully incomplete and inaccurate, do not usually include outpatient episodes of care with diagnostic entities recorded using a classification system (ICD-10) rather than a clinical terminology.&lt;/p&gt;
 
@@ -64,7 +64,7 @@
 
 &lt;p&gt;Once you implement SNOMED-CT, you can start to do clever things like, show me how the patient in front of me is doing compared to all of my patients with this disease. You can see this for multiple sclerosis here, but it is possible to do for other disorders as well.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/msdata-relapses.jpg&quot; alt=&quot;Msdata Relapses&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/edss-graph.jpg&quot; alt=&quot;Edss Graph&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;In fact, we can now do the same but sub-stratify to show how you compare to patients with a disease onset at a similar time of life or of the same gender.&lt;/p&gt;
 
@@ -72,7 +72,7 @@
 
 &lt;p&gt;How can we make sense of patient reported outcome measures without understanding and stratifying our patients?&lt;/p&gt;
 
-&lt;p&gt;Importantly, it doesn’t matter if someone has coded a diagnosis as a highly specific diagnosis as one can map this to a more generic high-level diagnosis and then use that perform aggregated analysis.&lt;/p&gt;
+&lt;p&gt;Importantly, it doesn’t matter if someone has coded a diagnosis as a highly specific diagnosis as one can map this to a more generic high-level diagnosis and then use that perform aggregated analysis. So for example, if a clinician enters a very specific sub-type of “bronchiolitis”, then it doesn’t matter as we can subsequently aggregate using a higher-level concept and still identify the patient.&lt;/p&gt;
 
 &lt;p&gt;Finally, how can we implement algorithmic analysis and artificial intelligence without an understand of these characteristics? Assessment of, for example, deteriorating renal function is critical on knowledge of recent diagnoses and medications given, and structured data is vital in supporting the research required in applying artificial intelligence in healthcare. The routine and systematic collection of SNOMED-CT forms a critical part of the foundation of any programme to implement such systems.&lt;/p&gt;</content><author><name></name></author><summary type="html">A cohort is a group of patients who share a defining characteristic.</summary></entry><entry><title type="html">Secure messaging… with patients in control of their data</title><link href="https://www.wardle.org/information-governance/2017/04/23/secure-messaging.html" rel="alternate" type="text/html" title="Secure messaging... with patients in control of their data" /><published>2017-04-23T09:20:28+01:00</published><updated>2017-04-23T09:20:28+01:00</updated><id>https://www.wardle.org/information-governance/2017/04/23/secure-messaging</id><content type="html" xml:base="https://www.wardle.org/information-governance/2017/04/23/secure-messaging.html">&lt;p&gt;Don’t we all want clinical information systems that support both clinicians and patients with clinical care?&lt;/p&gt;
 
