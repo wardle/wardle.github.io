@@ -1,5 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-04-29T21:50:24+01:00</updated><id>https://www.wardle.org/</id><title type="html">Dr. Mark Wardle</title><subtitle>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
-</subtitle><entry><title type="html">An open source SNOMED-CT implementation</title><link href="https://www.wardle.org/clinical-informatics/2017/04/29/rsterminology-part2.html" rel="alternate" type="text/html" title="An open source SNOMED-CT implementation" /><published>2017-04-29T20:10:02+01:00</published><updated>2017-04-29T20:10:02+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/04/29/rsterminology-part2</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/04/29/rsterminology-part2.html">&lt;p&gt;I have released an open-source SNOMED-CT terminology server called rsterminology. The source code is available from &lt;a href=&quot;https://github.com/wardle/rsterminology&quot;&gt;https://github.com/wardle/rsterminology&lt;/a&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-05-01T08:59:25+01:00</updated><id>https://www.wardle.org/</id><title type="html">Dr. Mark Wardle</title><subtitle>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
+</subtitle><entry><title type="html">NHS hack days</title><link href="https://www.wardle.org/clinical-informatics/2017/05/01/nhs-hack-days.html" rel="alternate" type="text/html" title="NHS hack days" /><published>2017-05-01T08:57:36+01:00</published><updated>2017-05-01T08:57:36+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/05/01/nhs-hack-days</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/05/01/nhs-hack-days.html">&lt;p&gt;NHS hack days are weekends in which clinicians and software developers come together to try to develop information technology solutions for healthcare.&lt;/p&gt;
+
+&lt;p&gt;There is a really good piece about them in the &lt;a href=&quot;http://www.bcs.org/content/conWebDoc/57646?utm_campaign=8245638_Health%20and%20care%20newsletter&amp;amp;utm_medium=email&amp;amp;utm_source=BCS%2C%20The%20Chartered%20Institute%20for%20IT&quot;&gt;BCS magazine by Dr Marcus Baw&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I think they are a great idea and have attended two in Cardiff, most recently as one of the judges.&lt;/p&gt;
+
+&lt;p&gt;However, I perceive the benefits to be principally about networking and fun, rather than successfully creating early working versions of products that are then rolled out into the NHS. How many great ideas have been rolled out?&lt;/p&gt;
+
+&lt;p&gt;One of the problems is that projects essentially &lt;a href=&quot;http://nhshackday.com/resources/judging/&quot;&gt;start from nothing&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;an-open-platform&quot;&gt;An open platform&lt;/h4&gt;
+
+&lt;p&gt;What would happen if, instead of starting with nothing, we provided teams with an open application programming interface (API) containing data, services and logic on which their solutions can run?&lt;/p&gt;
+
+&lt;p&gt;This is the year in which this can truly become a reality, with standards such as FHIR and openEHR becoming adopted, we as a community need to start work on building “mocked services”.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/hackday/hackday-schematic.png&quot; alt=&quot;Hackday Schematic&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Most of these services should be provided via FHIR endpoints and provide mock data. When it comes to running in a live environment, as long as there is a FHIR service that provides those same endpoints, an application will need less work in order to make it a production-ready application.&lt;/p&gt;
+
+&lt;h4 id=&quot;what-needs-to-be-done&quot;&gt;What needs to be done?&lt;/h4&gt;
+
+&lt;p&gt;The diagram above is deliberately simple. There are lots of complexities and lots of work to do, but it is achievable.&lt;/p&gt;
+
+&lt;p&gt;The very nice feature of FHIR is that services can provide one or many different resources. One might write a single service that only provides patient demographic service. As such, one can implement functionality piecemeal and incrementally.&lt;/p&gt;
+
+&lt;p&gt;I think we need to prioritise a list of resources and services in order:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Patient demographic service (PDS). We could start with fake data and then switch to using &lt;a href=&quot;https://github.com/nhs-ciao/ciao-pds-fhir&quot;&gt;https://github.com/nhs-ciao/ciao-pds-fhir&lt;/a&gt; for production - the Ciao PDS is a FHIR facade around the real NHS Spine PDS - or a local organisational patient administration system.&lt;/li&gt;
+  &lt;li&gt;Terminology services, including SNOMED-CT. I have already built an open-source SNOMED-CT REST service, but it isn’t currently FHIR compatible. However, the last time I looked the FHIR terminology standard didn’t support free-text search. I’d like to add support for other terminologies, such as LOINC, and provide FHIR-compatible end-points.&lt;/li&gt;
+  &lt;li&gt;Laboratory information management system. See &lt;a href=&quot;https://www.hl7.org/fhir/diagnosticreport.html&quot;&gt;FHIR diagnostic report resource&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;A UK NHS reference data service. This should be straightforward so that we take the &lt;a href=&quot;https://isd.digital.nhs.uk/trud3/user/guest/group/0/home&quot;&gt;NHS ODS data from TRUD&lt;/a&gt; and provide as FHIR end-points (e.g. see &lt;a href=&quot;https://www.hl7.org/fhir/organization.html&quot;&gt;organisations&lt;/a&gt;). In Wales, mapping practitioners is much easier as there is a central active directory, but I gather this might not be the case in England.&lt;/li&gt;
+  &lt;li&gt;Document storage and retrieval. While the &lt;a href=&quot;https://www.hl7.org/fhir/documents.html&quot;&gt;FHIR standard&lt;/a&gt; explains how to aggregate resources into a document, initially I’d suggest focusing on a simple &lt;a href=&quot;https://www.hl7.org/fhir/documentreference.html&quot;&gt;document reference store&lt;/a&gt; to serve documents created by legacy systems.&lt;/li&gt;
+  &lt;li&gt;Patient eFlow / e-observations service. See &lt;a href=&quot;https://www.hl7.org/fhir/observation.html&quot;&gt;observation FHIR resource&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;With these few core components and lots of fake data, NHS hack days could start adding value quickly making it much more likely that any solutions can evolve to become truly useful within the NHS.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">NHS hack days are weekends in which clinicians and software developers come together to try to develop information technology solutions for healthcare.</summary></entry><entry><title type="html">An open source SNOMED-CT implementation</title><link href="https://www.wardle.org/clinical-informatics/2017/04/29/rsterminology-part2.html" rel="alternate" type="text/html" title="An open source SNOMED-CT implementation" /><published>2017-04-29T20:10:02+01:00</published><updated>2017-04-29T20:10:02+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/04/29/rsterminology-part2</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/04/29/rsterminology-part2.html">&lt;p&gt;I have released an open-source SNOMED-CT terminology server called rsterminology. The source code is available from &lt;a href=&quot;https://github.com/wardle/rsterminology&quot;&gt;https://github.com/wardle/rsterminology&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;It is software that is designed to be used by other software, rather than by end-users. I have shown videos of how I use this in an electronic patient record system in &lt;a href=&quot;/clinical-informatics/2017/04/28/importance-of-cohorts.html&quot;&gt;previous posts&lt;/a&gt;. It runs as a java microservice and is currently deployed within NHS Wales.&lt;/p&gt;
 
@@ -745,113 +784,4 @@
 
 &lt;p&gt;But how does one prevent a ‘nefarious’ organisation making use of data inappropriately simply by not logging the data access in the first place? Such an issue emphasises the importance of non-technical factors in obtaining and maintaining trust in relation to sensitive information. Is it sufficient to perform code review and audit in order to create trust? Perhaps.&lt;/p&gt;
 
-&lt;p&gt;I am interested in promoting technical mechanisms which can guarantee that data access is logged appropriately and I suspect that a combination of technical and non-technical measures will be required. I have discussed these measures in a &lt;a href=&quot;/information-governance/2017/03/19/information-governance.html&quot;&gt;previous blog post on information governance and innovation&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">In a previous post, I referenced Merkle trees in relation to the creation of a verifiable audit log. I broke a cardinal rule by discussing something for which I (then) had little knowledge.</summary></entry><entry><title type="html">Balancing information governance and innovation in the NHS</title><link href="https://www.wardle.org/information-governance/2017/03/19/information-governance.html" rel="alternate" type="text/html" title="Balancing information governance and innovation in the NHS" /><published>2017-03-19T21:28:45+00:00</published><updated>2017-03-19T21:28:45+00:00</updated><id>https://www.wardle.org/information-governance/2017/03/19/information-governance</id><content type="html" xml:base="https://www.wardle.org/information-governance/2017/03/19/information-governance.html">&lt;p&gt;“Google’s Deepmind made inexcusable errors handling UK health data”, was reported on 16th March 2017 in an article published in the journal “Health and Technology” by Julia Powles and Hal Hodson. The article is &lt;a href=&quot;https://link.springer.com/article/10.1007%2Fs12553-017-0179-1?wt_mc=Affiliate.CommissionJunction.3.EPR1089.DeepLink&amp;amp;utm_medium=affiliate&amp;amp;utm_source=commission_junction&amp;amp;utm_campaign=3_nsn6445_deeplink&amp;amp;utm_content=deeplink&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;I don’t agree with most of their conclusions and there are some factual errors. One example is that they suggest that because the application is used in the monitoring and treatment of acute kidney injury (AKI), that access to data on patients not identified as having AKI is inappropriate and should need explicit patient consent. The error here is obvious to a practising clinician: namely, one cannot monitor and identify AKI without monitoring the renal function of all patients. They suggest that patient data should be shared only for patients who have had a “gateway blood test that is prerequisite for AKI diagnosis”. Again, a renal function test (commonly called renal profile or urea and electrolytes), is one of the (if not the) most common blood test performed in hospitals and certainly none of my patients have escaped having this blood test! In addition, the absence of a previous test may itself be a signal potentially of use in future implementations of AKI alerts; an absence of data due to a process that deliberately withholds such data may result in systems to support clinical care that are less valuable than systems having access to a complete set of data.&lt;/p&gt;
-
-&lt;p&gt;My blog isn’t the right place for a detailed review of this article, but one positive conclusion is that we need to have a conversation about health data and the potential benefits and pitfalls of sharing. I’ve referred to the &lt;a href=&quot;/clinical-informatics/2017/03/09/google-information.html&quot;&gt;care.data fiasco in a previous blog post&lt;/a&gt; and, speaking in my role as a full-time clinician, we need to avoid any further controversy.&lt;/p&gt;
-
-&lt;h4 id=&quot;information-technology-in-healthcare&quot;&gt;Information technology in healthcare&lt;/h4&gt;
-
-&lt;p&gt;Are there any benefits to the more effective use of information technology in healthcare?&lt;/p&gt;
-
-&lt;p&gt;In my opinion, very much so!&lt;/p&gt;
-
-&lt;p&gt;Many of my patients will give an account of information not being available at the point-of-care, complicating their care and resulting in frequently needless duplication of care. From a personal point of view, I worry about starting drugs such as methotrexate, azathioprine and mycophenolate as these treatments need ongoing monitoring with checks of renal function, blood counts and liver function on a regular basis. You may be surprised to hear that there are no systems in place to ensure that this core work is performed. I don’t even get results sent to me, so I have to remember to login to my computer and check the results manually. Will I make a mistake? Definitely. Many specialties which use these drugs more frequently than my own (neurology) have a dedicated specialist nurse whose responsibilities include monitoring these bloods. But why have a human doing a job that a computer can do more reliably?&lt;/p&gt;
-
-&lt;h4 id=&quot;driving-off-road-vs-taking-the-train&quot;&gt;Driving off-road vs. taking the train&lt;/h4&gt;
-
-&lt;p&gt;My day job is looking after patients with neurological diseases such as epilepsy, multiple sclerosis, Parkinson’s disease and motor neurone disease.&lt;/p&gt;
-
-&lt;p&gt;I have frequently compared the process of my work to “driving off-road” - travelling in uncharted territory - in order to &lt;em&gt;get routine things done&lt;/em&gt;. Yet I find myself having to do this again and again when in fact, most of what I do should be a case of “taking the train” -  medical care on rails, automatic, on-time and efficient.&lt;/p&gt;
-
-&lt;p&gt;My colleagues and I will always need to “go off-road”, but this should be the exception and not the rule; importantly, it frees us him to concentrate on those patients in which we truly do need to go into uncharted territory. We therefore need tools that bring together the right information at the right time, but make logical inferences from those data in order to improve patient care.&lt;/p&gt;
-
-&lt;h4 id=&quot;technology-and-medicine-on-rails&quot;&gt;Technology and medicine-on-rails&lt;/h4&gt;
-
-&lt;p&gt;In summary therefore, I want most of my work to happen “on rails” and, like many of my colleagues, have become frustrated with the agonisingly slow introduction of technology into healthcare. There are already many companies providing solutions in use in community and hospital services but I am worried. It is increasingly difficult for small and medium enterprises to enter the market and ongoing consolidation has resulted in  very large companies providing enterprise-wide organisational-bound applications such as Cerner’s Millenium and Epic. The &lt;a href=&quot;https://www.gov.uk/government/publications/using-information-technology-to-improve-the-nhs&quot;&gt;Wachter report&lt;/a&gt; is an excellent blueprint for the future of IT within NHS England but like others, I have noted that the approach has a focus on secondary care services, will result in a small number of very large vendors monopolising the market and doesn’t really cover community and social care.&lt;/p&gt;
-
-&lt;p&gt;In addition, a focus on large single-supplier products for each organisation results in a national architecture that will have a natural tendency to use a health information exchange as outlined in “Section 5.14 Are there exceptions to the use of a layered architecture?” of my &lt;a href=&quot;https://www.dropbox.com/s/62sg71a19voxpts/cis_design.pdf?dl=0&quot;&gt;Domain-driven design document for clinical information systems&lt;/a&gt;. Instead, I want an influx of new vendors, able to access data in a safe and controlled manner, using an open healthcare platform, to add value and benefit to clinicians and, by extension, to patients themselves.&lt;/p&gt;
-
-&lt;p&gt;The logical questions that arise from this are:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;how do we permit the adoption of small, well-defined applications within the health enterprise in a safe manner?&lt;/li&gt;
-  &lt;li&gt;how do we permit access to large-scale aggregated health data in a way that benefits both individual patients for their direct care, and groups of patients at a population-level?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;For example, if I wanted to introduce a small, well-defined application that would a) identify my patients on methotrexate, b) monitor their bloods for me, c) request their blood tests at the right time, if they haven’t already been done and d) alert me when they don’t have their bloods or they have a blood dyscrasia or some other change which merits my attention, then how could I do this within the current NHS infrastructure?&lt;/p&gt;
-
-&lt;p&gt;For example, if a large commercial entity with expertise in artificial intelligence wanted to add value by monitoring a cohort of patients automatically to identify acute kidney injury, then how can this be done that satisfies both regulatory requirements and defends against public concern?&lt;/p&gt;
-
-&lt;h1 id=&quot;the-case-for-pseudonymisation&quot;&gt;The case for pseudonymisation&lt;/h1&gt;
-
-&lt;p&gt;Pseudonymisation is a process in which identifying data relating to an individual is replaced with an identifier. A commonly used method of pseudonymisation in healthcare is to create a pseudonym using a recipe based on fixed unchanging information about a patient such as a national identifier, a date of birth and country of birth. This uses an important property of a hash function to generate a fixed-length digest of a variably sized input; it is mathematically a one-way process. If you give me the input then I will always obtain the same digest &lt;em&gt;but&lt;/em&gt;, given a digest, I cannot determine the input.&lt;/p&gt;
-
-&lt;p&gt;Now that last statement is not quite true, but brute-force attacks on hash functions are outside of the scope of this blog post, and, as long as one uses an additional salt (a fixed input parameter used together with other input parameters), one can avoid pre-calculated lookup table attacks.&lt;/p&gt;
-
-&lt;p&gt;For example, one might generate a string such as “WIBBLE-111111111-2000-01-01-BIRMINGHAM” (a salt, the NHS number, the date of birth, the city of birth), and then use a SHA-256 hash to generate a unique digest.&lt;/p&gt;
-
-&lt;p&gt;Pseudonymisation is different to anonymisation in which all identifiable information is removed. With pseudonymisation, it is possible to subsequently re-identify an individual. If an “attacker” knows the recipe for building the pseudonym and the salt, then they too can generate the pseudonym independently and subsequently use that pseudonym to link to data about that individual.&lt;/p&gt;
-
-&lt;p&gt;Of course, if an “attacker” knows the recipe and the salt (together acting as a shared secret) and the individual’s information already, then one might assume that they are permitted to look-up information relating to that individual.&lt;/p&gt;
-
-&lt;p&gt;Importantly, a different pseudonym can be calculated depending on what we are trying to achieve and to which other data our data need to be linked.&lt;/p&gt;
-
-&lt;h4 id=&quot;healthcare-data-on-a-need-to-know-basis&quot;&gt;Healthcare data on a need-to-know basis&lt;/h4&gt;
-
-&lt;p&gt;This figure demonstrates how a trusted pseudonymisation service can act as an intermediary between an NHS organisation and trusted third parties.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/pseudonym-audit-log.png&quot; alt=&quot;Distributed consent&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Here, the mobile devices are, without doubt, involved in direct clinical care. For that reason, they may directly interact with trusted organisational systems, supporting the management of patients. Importantly, they act as a proxy for a clinical user, supporting authentication and authorisation and then allowing that user to navigate health information as required.&lt;/p&gt;
-
-&lt;p&gt;However, we would like to make use of health information to track patients with acute kidney injury. Instead of transferring patient identifiable information directly, we generate a project-specific pseudonym for this purpose only. With this identifier, a variety of information can be shared with the “open intermediary service”.&lt;/p&gt;
-
-&lt;p&gt;Third-party analytics cannot re-identify patient data but can use health data to support clinical processes. Importantly, they can push information back to the trusted intermediary again linked to the individual using the provided pseudonym&lt;/p&gt;
-
-&lt;p&gt;It is only within the NHS organisation that software can link the pseudonym-linked data with the identifiable information. The mobile application for example, can generate a pseudonym dynamically and request information from a third-party without giving away any information as to who or why the information is required. In addition, a third-party may generate an alert linked to a pseudonym and an NHS hosted service can re-identify the data.&lt;/p&gt;
-
-&lt;p&gt;In addition, any third-party analytics must obtain healthcare data from the trusted open intermediary which contains only pseudonymised information. As part of a request for information, the intermediary may use a verifiable append-only audit log to record that the request has taken place. Once again, only software running within the NHS can identify to whom an audit log refers and thus, this information can be shared with both the patient and the host organisation. A third-party regulator can act to routinely verify that audit logs within the open intermediary service have not been subject to tampering.&lt;/p&gt;
-
-&lt;h4 id=&quot;scaling&quot;&gt;Scaling&lt;/h4&gt;
-
-&lt;p&gt;Using this system, it becomes possible for many different projects to use patient data without needing to handle patient identifiable information. Importantly, with a different pseudonym used for only a specific purpose, it is not possible for any individual project to link to data that has used a different pseudonym for a different purpose.&lt;/p&gt;
-
-&lt;p&gt;If there were a centralised NHS-hosted service that recorded participation in projects, whether for direct clinical care or for research, then only that service could generate the required pseudonyms in order to re-identify or link data from disparate systems. In addition, patients themselves could control to which projects they are happy to share data.&lt;/p&gt;
-
-&lt;p&gt;For my methotrexate monitoring application, we would need to identify all patients on methotrexate as well as look at their laboratory investigations. For this, we need medication histories as well as renal and liver function tests together with full blood count results. It is conceivable that this clinical application could easily be regarded as direct clinical care and so use a global pseudonym and share information with other applications. However, it would be possible to generate a project-specific pseudonym and use that together with the required clinical data for analysis by a third-party.&lt;/p&gt;
-
-&lt;p&gt;Complex analytics may then occur inside or outside of the NHS services. Interestingly, if data are sourced from multiple organisations for the &lt;em&gt;same&lt;/em&gt; project, they can be safely linked together without needing the third-party to perform re-identification. Each organisation would send clinical data bound to the same project-specific pseudonym. As such, the pseudonymisation service can scale to support multiple organisations and allow inferences to be made across data from those organisations.&lt;/p&gt;
-
-&lt;p&gt;This schematic shows what might happen for an AKI alerting service.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/pseudonym-aki-alert.png&quot; alt=&quot;AKI alerts&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Here laboratory data are taken from source systems, given a project-specific pseudonym and send for third-party analytics. The pseudonymisation service stores the patient information as well as all of the pseudonyms in use as well as patient explicit consent for inclusion (for research) and withdrawal of consent (for direct care). A log is created.&lt;/p&gt;
-
-&lt;p&gt;If there is an AKI alert, a third-party sends back an alert to an NHS hosted service. This identifies the patient using the pseudonymisation service, allowing further logging of the results of processing. Now re-identified, the alerting service may link to the EMR and any mobile devices in order to notify the team.&lt;/p&gt;
-
-&lt;h4 id=&quot;centralised-vs-distributed-pseudonymisation&quot;&gt;Centralised vs. distributed pseudonymisation&lt;/h4&gt;
-
-&lt;p&gt;Readers may be familiar with the &lt;a href=&quot;https://saildatabank.com&quot;&gt;SAIL databank&lt;/a&gt; hosted by Swansea University. It uses pseudonyms to perform data linkage from multiple sources. It is a centralised pseudonymisation system, performing analysis is much like working in a smoke cupboard as one needs to use a remote desktop to run R and one cannot take data out of the closed system. In addition, a lot of the datasets were rather old when I last used the service. It is working however, and has avoided many of the controversies commonly seen when aggregated medical data is used for non-direct care purposes. One takes a clinical set, splits it into two parts containing patient identity in one and non-identifying information in another. The two are linked with a unique identifier. A secure NHS service performs the pseudonymisation and the non-identifying information is placed in a data warehouse with the pseudonym. They use a global pseudonym which allows linkage to other source of clinical data.&lt;/p&gt;
-
-&lt;p&gt;For example, we used SAIL to show that the &lt;a href=&quot;http://jnnp.bmj.com/content/85/10/e4.187&quot;&gt;main risk of a further attendance in the emergency unit for a patient with epilepsy was their social deprivation&lt;/a&gt;.(Lynch E, Lacey A, Pickrell W, et al FACTORS ASSOCIATED WITH EMERGENCY ATTENDANCES FOR EPILEPSY J Neurol Neurosurg Psychiatry 2014;85:e4.) by linking emergency unit attendances with general practitioner records and socio-economic indices.&lt;/p&gt;
-
-&lt;p&gt;The problem is that this is offline analysis suitable for retrospective analyses. This will not support real-time analytics or any of the innovative supporting technologies that healthcare today needs.&lt;/p&gt;
-
-&lt;p&gt;It is here that I need help. Is it possible to create a distributed system to track patient consent for research, to provide distributed pseudonymisation and verifiable audit logs of access to data? Ideally, we would not have a centralised pseudonymisation service or a centralised audit log, but distributed systems that both maintain patient confidentiality and provide assurances as to the use of data ideally replicated among trusted organisations.&lt;/p&gt;
-
-&lt;p&gt;My final questions are therefore:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Can &lt;a href=&quot;/clinical-informatics/2017/03/09/google-information.html&quot;&gt;Merkle trees&lt;/a&gt; be used to implement a verifiable audit-log backed key-value store service within the NHS network to store consent and access logs?&lt;/li&gt;
-  &lt;li&gt;Who will act as a guardian of this service and monitor the logs?&lt;/li&gt;
-  &lt;li&gt;Could this act as a pseudonymiser service, logging the pseudonymisation and the upload of non-identifiable clinical data?&lt;/li&gt;
-  &lt;li&gt;Similarly, when sending data back to the NHS, could this pseudonymiser service act to link data back into the patient’s record, logging such access?&lt;/li&gt;
-  &lt;li&gt;Would such a service support the safe use and monitoring of third-party applications and data analytics?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I would be grateful for your thoughts.&lt;/p&gt;
-
-&lt;p&gt;Mark&lt;/p&gt;</content><author><name></name></author><summary type="html">“Google’s Deepmind made inexcusable errors handling UK health data”, was reported on 16th March 2017 in an article published in the journal “Health and Technology” by Julia Powles and Hal Hodson. The article is here.</summary></entry></feed>
+&lt;p&gt;I am interested in promoting technical mechanisms which can guarantee that data access is logged appropriately and I suspect that a combination of technical and non-technical measures will be required. I have discussed these measures in a &lt;a href=&quot;/information-governance/2017/03/19/information-governance.html&quot;&gt;previous blog post on information governance and innovation&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">In a previous post, I referenced Merkle trees in relation to the creation of a verifiable audit log. I broke a cardinal rule by discussing something for which I (then) had little knowledge.</summary></entry></feed>
