@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Clinical information system design: 3. Data standards and terminology</title>
+  <meta name="description" content="A terminology is a body of terms used within a particular subject of study or profession. A classification is a systematic organisation of things into classe...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://www.wardle.org/cis-design/2017/05/02/data-standards.html">
+  <link rel="alternate" type="application/rss+xml" title="Dr. Mark Wardle" href="/feed.xml">
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-97389603-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="/">Dr. Mark Wardle</a>
+  
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          
+            
+            
+            <a class="page-link" href="/about/">About</a>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Clinical information system design: 3. Data standards and terminology</h1>
+    <p class="post-meta">
+      <time datetime="2017-05-02T15:20:00+01:00" itemprop="datePublished">
+        
+        May 2, 2017
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>A terminology is a body of terms used within a particular subject of study or profession. A classification is a systematic organisation of things into classes. A classification system such as ICD-10 cannot be used as a terminology and many terminologies cannot be easily used as a classification system. This is an important distinction and relates to the how those data are primarily used.</p>
+
+<h1 id="snomed-ct">SNOMED CT</h1>
+
+<p>SNOMED CT is a very large and comprehensive terminology.  Importantly terms can be linked by multiple relationships to other terms. 
+This makes it possible for software to determine that “multiple sclerosis” is a disease defined by “demyelination” of the “central nervous system”. 
+When implemented properly, SNOMED CT enables software to make intelligent decisions about what to show, what data to request and what forms to present, based on the diagnoses entered. For example, the database would know that a patient had epilepsy if they were given a diagnosis of juvenile myoclonic epilepsy or frontal lobe epilepsy or any of the hundreds of other terms that are equivalent to a diagnosis of epilepsy.<br />
+Thus a command to `send an alert when a patient, belonging to a particular consultant, with motor neurone disease loses 5% of their body mass compared to their baseline at diagnosis’, can be implemented easily. SNOMED CT allows the underlying logic to simply ask whether the patient has a type of “motor neurone disease” and this would automatically include all patients with related diagnoses such as “primary lateral sclerosis” and “pseudobulbar palsy”.</p>
+
+<p>SNOMED CT is not confined to diagnostic and procedural information.  There are hierarchies covering a wide range of medical terminology including anatomical structures, pathology, occupations and ethnic origins. With local extensions such as the NHS’ DM\&amp;D (dictionary of medicines and devices) these codes can be used in any field that needs structured coded information.</p>
+
+<p>Another advantage is support for synonyms. A distinct clinical concept can and usually has multiple synonyms - for example “Granulomatosis with polyangiitis” was previously known as “Wegener granulomatosis”. With synonym support, a user entering an outdated or synonymous term would find the synonym and see it mapped into the new modern preferred description of the term.</p>
+
+<p>Within SNOMED CT, clinical terms are “concepts”, “synonyms” are “descriptions” and the relationships between concepts are recorded as “relationships”. While seemingly simple, as relationships themselves are defined by concepts (such as `IS-A’ as in “‘Motor neurone disease—IS-A—Disorder of nervous system”) it means that the relationship tree is infinitely extendable over time.</p>
+
+<p>SNOMED CT is owned by Snomed International - and is an international terminology, with the UK version managed by the UK Terminology Centre (UKTC) of the Health and Social Care Information Centre (HSCIC) - now called NHS Digital.  There are online <a href="http://systems.hscic.gov.uk/data/uktc/training">training resources</a> as well as a simple online <a href="http://browser.ihtsdotools.org">SNOMED CT browser</a>.</p>
+
+<p>I have developed an open-source terminology server that provides fast free-text search and navigation around the SNOMED CT hierarchy as well as providing semantic understanding for any concept, allowing client software to answer questions like “does this patient have a type of granulomatous disease?”, “was this patient born in Europe?” or even “is this drug a type of beta-blocker?” . It would answer yes to the first question simply by understanding the diseases that the patient has been listed as having, answering “yes” if a patient had sarcoidosis and “no” if they had multiple sclerosis. Similarly, it would respond with “yes” if a patient was recorded as being born in France but “no” if they were born in Afghanistan.  SNOMED CT provides the logical relationships in order to drive such computerised decision-making.</p>
+
+<h1 id="information-models">Information models</h1>
+
+<p>Each SNOMED CT concept, description and relationship has a unique and persistent identifier that can be stored in a data store. 
+Most clinical applications persist information in a relational database and so a simple implementation may simply store the identifier as a foreign key to the row that represents that entity. However, whilst these terms have meaning when used in isolation (e.g. storing the identifier representing”myocardial infarction”), it is only when these terms are combined together in a logical way as part of a larger data model, that true meaning can be understood. It is analogous to definitions for individual words in a dictionary but true expression results only when these words are combined into sentences and paragraphs. As such, most concepts are only useful when considered within the information model in which it is recorded.</p>
+
+<p>The information model used in which SNOMED CT concepts are stored is therefore critical to derive understanding from what can be inferred from the recording of a concept. This is particularly important for a terminology such as SNOMED CT in which terms may be recorded together to form a compositional (post-coordinated) term such as “Family history of…” (281666001) and “Obesity” (414916001) or out of convenience represented as a single SNOMED CT term “Family history: Obesity” (160311006).</p>
+
+<p>If SNOMED CT had not only defined a terminology but also a wider information model then such compound pre-coordinated terms would be unnecessary and the recording of “obesity” within a model defining a family history would be sufficient. However, while compound pre-coordinated terms risk an explosion of terms to cater for multiple combinations, they do make it easier for end-users to find concepts that represent what they are trying to record and support workflows in which clinical terms are recorded in a relatively unstructured information model, such as that used in primary care historically using Read codes. Of course, SNOMED CT was developed as an amalgamation of SNOMED from the College of American Pathologists and Read (Clinical Terms Version 3) codes with the latter recorded prospectively and longitudinally in UK primary care systems in a relatively unstructured format. There are advantages in SNOMED CT being independent from the surrounding data model within which it is transmitted or stored particularly as SNOMED CT terms generally reflect core concepts relating to health, disease and the processes of care. As a result a range of models can be used with SNOMED CT and similarly, different terminologies can be bound to a model such as LOINC\footnote{LOINC is an alternative terminology focused on tests, measurements and observations — see <a href="https://loinc.org">LOINC</a>.</p>
+
+<p>I generally recommend a highly structured approach to the storage of SNOMED CT codes in which the information model in which they are stored ensures no uncertainty in interpretation and that to simplify subsequent analysis and retrieval, compound pre-coordinated terms are decomposed into their components are stored appropriately. As such, users may enter information via a highly structured workflow in which the context is evident as part of the user interface such as recording family history or allergies or a less structured workflow in which terms can be entered and decomposed and entered into a more structured information model. Alternatively, an implementation may instead store the codes as entered and deal with ensuring that a diagnostic term recorded in a family history model is equivalent to the compound term.</p>
+
+<p>To provide evidence to support a highly structured approach, I suggest considering how one might use SNOMED CT to record examination findings. While there is a code for “supranuclear gaze palsy” (420675003) there is no compound code to record that there is an absence of this examination finding. While one could request an addition to SNOMED CT, it is much more appropriate to consider examination findings in two categories, those found and those not found. The recording of a lack of clinical sign is important in clinical practice as well as for medico-legal reasons. As such, the information model in which this clinical finding is recorded is critical in providing understanding. SNOMED CT does allow post-coordinated terms in which multiple terms are combined together to give meaning. One possible way of representing the `lack of’ a clinical finding is to post-coordinate with a negation concept to form a compositional term but I advocate using a robust information model as a simpler method of expressing clinical knowledge particularly when one considers \emph{how} users are expected to record such findings.</p>
+
+<p>Example information models which can record SNOMED CT terms in context are HL7 and openEHR. OpenEHR uses the term <code class="highlighter-rouge">archetype' as a synonym for </code>information model’. The use of validated and published data structures support subsequent interoperability between disparate systems which can process that model. However, the use of a specific information model does not necessarily force the use of that model as a format in which to store data, but may be used only as a representation of data to be used for interoperability with other systems. Indeed, a focus on a model of any form improves the potential for interoperability because that model is likely to be an abstraction of real-life concepts and thus it becomes possible to map from one information model to another.</p>
+
+<p>However, even if two information models represent the same real-life concept and they look superficially similar, the process of mapping can introduce ambiguity and potentially even errors, particularly if a data element is present in one model but not in another. In addition, different terminologies may be used with an information model in a process called `terminology binding’ and so simply mandating a particular kind of information model does not guarantee interoperability.</p>
+
+<h1 id="hl7">HL7</h1>
+<p>Health Level Seven (HL7) is an international standards development organisation that publishes standards for healthcare interoperability. For more information, see the <a href="http://www.hl7.org.uk">HL7 website</a>.</p>
+
+<p>HL7 publish a range of interoperability standards including HL7 V2, HL7 V3 and CDA, and the HL7 FHIR.</p>
+
+<h2 id="hl7-v2">HL7 V2</h2>
+<p>HL7 V2 refers to HL7’s currently most used health standard from HL7 first released in 1989 and deployed internationally. See more information <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=185">here</a> and <a href="http://www.hl7.org/about/FAQs/index.cfm?ref=nav">here</a>.</p>
+
+<p>It is fundamentally a messaging standard and early versions focused on <code class="highlighter-rouge">ADT' messages, messaging relating to the admission, discharge and transfer of patients. Such messages are sent as </code>triggers’ and therefore adopt a `push’ model of health interoperability. HL7 has grown organically and iteratively over many years with an increasing number of message types including those to record clinical observations and laboratory results for example. The latest version is HL7 v2.6 which was approved as an ANSI standard in 2007.</p>
+
+<h2 id="hl7-v3-and-the-rim">HL7 V3 and the RIM</h2>
+<p>HL7 V3 was developed from 1992 to define a Reference Information Model (RIM) describing healthcare-related messages and trigger events relating to those messages. 
+The RIM defines an object-orientated model in which types are sub-specialisms of a more generic type. For example, in the same way as bicycles and cars are <em>types</em> of vehicles, a <code class="highlighter-rouge">Person' is a type of a </code>Living Subject’ but veterinary patients such as dogs and cats are represented as a `Non-person living subject’. As in object-orientated programming languages, specialist models inherit attributes and behaviours from their more generic parent types.</p>
+
+<p>The three core classes in HL7 RIM are <code class="highlighter-rouge">Act', </code>Entity’ and `Role’:</p>
+
+<ul>
+  <li>An act is a record of something that has or will happen. This will usually include what has been done, to whom, by whom, when, where and how and possibly documenting why.</li>
+  <li>An entity is a living or non-living thing such as a person, animal or organisation.</li>
+  <li>A role represents a skill or competency of an Entity, such as patient, employee, place or organisation.</li>
+</ul>
+
+<p>The HL7 V3 standard is large and complex and many healthcare organisations with an existing infrastructure built using HL7 V2 have been reluctant to adopt the newer standard so HL7 RIM is not used as much as HL7 V2 internationally.</p>
+
+<h2 id="hl7-v3-cda">HL7 V3 CDA</h2>
+<p>The HL7 V3 Clinical Document Architecture (CDA) defines a document-based information model in which components of the HL7 V3 RIM is used as a header together with a document body consisting of a mixture of unstructured and structured data. As I discussed in Section~\ref{model.process}, a document-based architecture is an appropriate abstraction of real-life processes and explicitly ensures that clinical information is recorded together with its context; such a document can stand in isolation and be understood by the reader. When contextual clues are removed, interpretation of structured and unstructured information is potentially hazardous. A document can be immutable once created and document lifecycle and process management including creation, editing and repudiation can be modelled in a straightforward manner.</p>
+
+<p>There are three CDA levels:</p>
+<ul>
+  <li>CDA level one: has a header and human-readable body usually in an unstructured format such as free text or file types such as images or documents (e.g. Adobe PDF).</li>
+  <li>CDA level two: extends level one by including more structured data within the body of the document.</li>
+  <li>CDA level three: allows highly-structured data to be encoded at a high level of granularity.</li>
+</ul>
+
+<p>With the document paradigm limiting mismatch between model and real-life (Section~\ref{avoiding.mismatches}), adoption of the CDA standard has been widespread internationally. It is the most adopted <a href="http://www.hl7.org/FHIR/comparison-cda.html">HL7 V3 standard</a>.
+In addition, the different CDA levels permit flexibility in the recording of unstructured and structured data, easing adoption of the standard. Such an approach permits implementers to use level one of the HL7 CDA to store relatively unstructured documents initially but evolve over time to permit newer applications to store more structured information and yet remain interoperable.</p>
+
+<h2 id="fhir">FHIR</h2>
+
+<p>FHIR, <a href="https://www.hl7.org/fhir/summary.html">Fast Health Interoperability Resources</a>, is a new framework created by HL7 which uses modern web services over HTTP to create, edit and share modular resources. Importantly, the HL7 FHIR standards are free to use without restriction and focus on data standards and the implementation of those standards within clinical systems.</p>
+
+<p>The use of FHIR does not mandate that existing and new clinical systems use FHIR standards to define their internal architecture or internal <em>storage</em> formats, but the use of FHIR can provide an open and standard interface to permit interoperability between different systems created by different vendors. As such, an application or service can provide access to data in an open and extensible format by providing a FHIR server and consume different data as a FHIR client.</p>
+
+<p>There are a range of FHIR <a href="http://www.hl7.org/FHIR/implementation.html">frameworks</a> including:</p>
+<ul>
+  <li>Search: within a resource, such as searching for a patient.</li>
+  <li>Operations: on a resource such as fetching an encounter record or processing a message. These are in addition to the standard CREATE, READ, UPDATE and DELETE REST-based interactions.</li>
+  <li>Documents: representing a composition of other resources with a fixed presentation linked to context.</li>
+  <li>Messages: to allow messages to be sent in response to a specific event.</li>
+  <li>Services: to provide a representation of a service-orientated architecture within healthcare. See the <a href="http://www.hl7.org/FHIR/services.html">FHIR service documentation</a> for more information.</li>
+</ul>
+
+<p>There is backwards-compatibility so that FHIR documents can contain HL7 V3 CDA documents. FHIR potentially improves the integration and interoperability between disparate systems. The standard uses open web standards over the HTTP protocol and so development can be straightforward. However, FHIR is still under active development at the time of writing and the current release is designated as a “draft standard for trial use”. As such, future versions of FHIR may result in non-compatible future changes.</p>
+
+<h1 id="openehr">openEHR</h1>
+
+<p>openEHR is an open standard for the recording of health-related data maintained by the <a href="http://openehr.org">OpenEHR foundation</a>. It defines a multi-level information model in which the core model (the <code class="highlighter-rouge">reference model') does *not* include clinical information but focuses on core generic abstractions and process. \emph{Archetypes} represent the clinical information model, with models created, edited and curated as part of a </code>clinical knowledge manager’ (CKM). This multi-level modelling approach means that health professionals can undertake clinical modelling independent of the underlying implementation. In addition, small and re-usable domain models can be aggregated into a <code class="highlighter-rouge">template'. For example, if a domain model contains </code>blood pressure’ and <code class="highlighter-rouge">heart rate' then this model can be incorporated within a larger </code>template’ representing an emergency unit admission. An overview is available <a href="http://www.openehr.org/releases/AM/latest/docs/Overview/Overview.html">here</a></p>
+
+<p>In addition, there is a new openEHR REST-based application programming interface (API) which proposes to define standards to which an openEHR implementation should adhere. However, the development of these standards is still in development and has not yet been finalised.</p>
+
+<h1 id="loinc">LOINC</h1>
+<p>LOINC is a freely available international standard for tests, measurements and observations. The official website is <a href="https://loinc.org">https://loinc.org</a>.<br />
+Although limited in scope, it has been adopted by HL7 as the standard code system for laboratory results. In addition, there is a project to map LOINC codes to SNOMED-CT and vice versa.</p>
+
+  </div>
+
+  
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Dr. Mark Wardle</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Dr. Mark Wardle
+            
+            </li>
+            
+            <li><a href="mailto:mark@wardle.org">mark@wardle.org</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/wardle"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">wardle</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/mwardle"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">mwardle</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

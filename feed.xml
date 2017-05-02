@@ -1,5 +1,202 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-05-01T08:59:25+01:00</updated><id>https://www.wardle.org/</id><title type="html">Dr. Mark Wardle</title><subtitle>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
-</subtitle><entry><title type="html">NHS hack days</title><link href="https://www.wardle.org/clinical-informatics/2017/05/01/nhs-hack-days.html" rel="alternate" type="text/html" title="NHS hack days" /><published>2017-05-01T08:57:36+01:00</published><updated>2017-05-01T08:57:36+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/05/01/nhs-hack-days</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/05/01/nhs-hack-days.html">&lt;p&gt;NHS hack days are weekends in which clinicians and software developers come together to try to develop information technology solutions for healthcare.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-05-02T21:49:54+01:00</updated><id>https://www.wardle.org/</id><title type="html">Dr. Mark Wardle</title><subtitle>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
+</subtitle><entry><title type="html">Clinical information system design: 3. Data standards and terminology</title><link href="https://www.wardle.org/cis-design/2017/05/02/data-standards.html" rel="alternate" type="text/html" title="Clinical information system design: 3. Data standards and terminology" /><published>2017-05-02T15:20:00+01:00</published><updated>2017-05-02T15:20:00+01:00</updated><id>https://www.wardle.org/cis-design/2017/05/02/data-standards</id><content type="html" xml:base="https://www.wardle.org/cis-design/2017/05/02/data-standards.html">&lt;p&gt;A terminology is a body of terms used within a particular subject of study or profession. A classification is a systematic organisation of things into classes. A classification system such as ICD-10 cannot be used as a terminology and many terminologies cannot be easily used as a classification system. This is an important distinction and relates to the how those data are primarily used.&lt;/p&gt;
+
+&lt;h1 id=&quot;snomed-ct&quot;&gt;SNOMED CT&lt;/h1&gt;
+
+&lt;p&gt;SNOMED CT is a very large and comprehensive terminology.  Importantly terms can be linked by multiple relationships to other terms. 
+This makes it possible for software to determine that “multiple sclerosis” is a disease defined by “demyelination” of the “central nervous system”. 
+When implemented properly, SNOMED CT enables software to make intelligent decisions about what to show, what data to request and what forms to present, based on the diagnoses entered. For example, the database would know that a patient had epilepsy if they were given a diagnosis of juvenile myoclonic epilepsy or frontal lobe epilepsy or any of the hundreds of other terms that are equivalent to a diagnosis of epilepsy.&lt;br /&gt;
+Thus a command to `send an alert when a patient, belonging to a particular consultant, with motor neurone disease loses 5% of their body mass compared to their baseline at diagnosis’, can be implemented easily. SNOMED CT allows the underlying logic to simply ask whether the patient has a type of “motor neurone disease” and this would automatically include all patients with related diagnoses such as “primary lateral sclerosis” and “pseudobulbar palsy”.&lt;/p&gt;
+
+&lt;p&gt;SNOMED CT is not confined to diagnostic and procedural information.  There are hierarchies covering a wide range of medical terminology including anatomical structures, pathology, occupations and ethnic origins. With local extensions such as the NHS’ DM\&amp;amp;D (dictionary of medicines and devices) these codes can be used in any field that needs structured coded information.&lt;/p&gt;
+
+&lt;p&gt;Another advantage is support for synonyms. A distinct clinical concept can and usually has multiple synonyms - for example “Granulomatosis with polyangiitis” was previously known as “Wegener granulomatosis”. With synonym support, a user entering an outdated or synonymous term would find the synonym and see it mapped into the new modern preferred description of the term.&lt;/p&gt;
+
+&lt;p&gt;Within SNOMED CT, clinical terms are “concepts”, “synonyms” are “descriptions” and the relationships between concepts are recorded as “relationships”. While seemingly simple, as relationships themselves are defined by concepts (such as `IS-A’ as in “‘Motor neurone disease—IS-A—Disorder of nervous system”) it means that the relationship tree is infinitely extendable over time.&lt;/p&gt;
+
+&lt;p&gt;SNOMED CT is owned by Snomed International - and is an international terminology, with the UK version managed by the UK Terminology Centre (UKTC) of the Health and Social Care Information Centre (HSCIC) - now called NHS Digital.  There are online &lt;a href=&quot;http://systems.hscic.gov.uk/data/uktc/training&quot;&gt;training resources&lt;/a&gt; as well as a simple online &lt;a href=&quot;http://browser.ihtsdotools.org&quot;&gt;SNOMED CT browser&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I have developed an open-source terminology server that provides fast free-text search and navigation around the SNOMED CT hierarchy as well as providing semantic understanding for any concept, allowing client software to answer questions like “does this patient have a type of granulomatous disease?”, “was this patient born in Europe?” or even “is this drug a type of beta-blocker?” . It would answer yes to the first question simply by understanding the diseases that the patient has been listed as having, answering “yes” if a patient had sarcoidosis and “no” if they had multiple sclerosis. Similarly, it would respond with “yes” if a patient was recorded as being born in France but “no” if they were born in Afghanistan.  SNOMED CT provides the logical relationships in order to drive such computerised decision-making.&lt;/p&gt;
+
+&lt;h1 id=&quot;information-models&quot;&gt;Information models&lt;/h1&gt;
+
+&lt;p&gt;Each SNOMED CT concept, description and relationship has a unique and persistent identifier that can be stored in a data store. 
+Most clinical applications persist information in a relational database and so a simple implementation may simply store the identifier as a foreign key to the row that represents that entity. However, whilst these terms have meaning when used in isolation (e.g. storing the identifier representing”myocardial infarction”), it is only when these terms are combined together in a logical way as part of a larger data model, that true meaning can be understood. It is analogous to definitions for individual words in a dictionary but true expression results only when these words are combined into sentences and paragraphs. As such, most concepts are only useful when considered within the information model in which it is recorded.&lt;/p&gt;
+
+&lt;p&gt;The information model used in which SNOMED CT concepts are stored is therefore critical to derive understanding from what can be inferred from the recording of a concept. This is particularly important for a terminology such as SNOMED CT in which terms may be recorded together to form a compositional (post-coordinated) term such as “Family history of…” (281666001) and “Obesity” (414916001) or out of convenience represented as a single SNOMED CT term “Family history: Obesity” (160311006).&lt;/p&gt;
+
+&lt;p&gt;If SNOMED CT had not only defined a terminology but also a wider information model then such compound pre-coordinated terms would be unnecessary and the recording of “obesity” within a model defining a family history would be sufficient. However, while compound pre-coordinated terms risk an explosion of terms to cater for multiple combinations, they do make it easier for end-users to find concepts that represent what they are trying to record and support workflows in which clinical terms are recorded in a relatively unstructured information model, such as that used in primary care historically using Read codes. Of course, SNOMED CT was developed as an amalgamation of SNOMED from the College of American Pathologists and Read (Clinical Terms Version 3) codes with the latter recorded prospectively and longitudinally in UK primary care systems in a relatively unstructured format. There are advantages in SNOMED CT being independent from the surrounding data model within which it is transmitted or stored particularly as SNOMED CT terms generally reflect core concepts relating to health, disease and the processes of care. As a result a range of models can be used with SNOMED CT and similarly, different terminologies can be bound to a model such as LOINC\footnote{LOINC is an alternative terminology focused on tests, measurements and observations — see &lt;a href=&quot;https://loinc.org&quot;&gt;LOINC&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I generally recommend a highly structured approach to the storage of SNOMED CT codes in which the information model in which they are stored ensures no uncertainty in interpretation and that to simplify subsequent analysis and retrieval, compound pre-coordinated terms are decomposed into their components are stored appropriately. As such, users may enter information via a highly structured workflow in which the context is evident as part of the user interface such as recording family history or allergies or a less structured workflow in which terms can be entered and decomposed and entered into a more structured information model. Alternatively, an implementation may instead store the codes as entered and deal with ensuring that a diagnostic term recorded in a family history model is equivalent to the compound term.&lt;/p&gt;
+
+&lt;p&gt;To provide evidence to support a highly structured approach, I suggest considering how one might use SNOMED CT to record examination findings. While there is a code for “supranuclear gaze palsy” (420675003) there is no compound code to record that there is an absence of this examination finding. While one could request an addition to SNOMED CT, it is much more appropriate to consider examination findings in two categories, those found and those not found. The recording of a lack of clinical sign is important in clinical practice as well as for medico-legal reasons. As such, the information model in which this clinical finding is recorded is critical in providing understanding. SNOMED CT does allow post-coordinated terms in which multiple terms are combined together to give meaning. One possible way of representing the `lack of’ a clinical finding is to post-coordinate with a negation concept to form a compositional term but I advocate using a robust information model as a simpler method of expressing clinical knowledge particularly when one considers \emph{how} users are expected to record such findings.&lt;/p&gt;
+
+&lt;p&gt;Example information models which can record SNOMED CT terms in context are HL7 and openEHR. OpenEHR uses the term &lt;code class=&quot;highlighter-rouge&quot;&gt;archetype' as a synonym for &lt;/code&gt;information model’. The use of validated and published data structures support subsequent interoperability between disparate systems which can process that model. However, the use of a specific information model does not necessarily force the use of that model as a format in which to store data, but may be used only as a representation of data to be used for interoperability with other systems. Indeed, a focus on a model of any form improves the potential for interoperability because that model is likely to be an abstraction of real-life concepts and thus it becomes possible to map from one information model to another.&lt;/p&gt;
+
+&lt;p&gt;However, even if two information models represent the same real-life concept and they look superficially similar, the process of mapping can introduce ambiguity and potentially even errors, particularly if a data element is present in one model but not in another. In addition, different terminologies may be used with an information model in a process called `terminology binding’ and so simply mandating a particular kind of information model does not guarantee interoperability.&lt;/p&gt;
+
+&lt;h1 id=&quot;hl7&quot;&gt;HL7&lt;/h1&gt;
+&lt;p&gt;Health Level Seven (HL7) is an international standards development organisation that publishes standards for healthcare interoperability. For more information, see the &lt;a href=&quot;http://www.hl7.org.uk&quot;&gt;HL7 website&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;HL7 publish a range of interoperability standards including HL7 V2, HL7 V3 and CDA, and the HL7 FHIR.&lt;/p&gt;
+
+&lt;h2 id=&quot;hl7-v2&quot;&gt;HL7 V2&lt;/h2&gt;
+&lt;p&gt;HL7 V2 refers to HL7’s currently most used health standard from HL7 first released in 1989 and deployed internationally. See more information &lt;a href=&quot;http://www.hl7.org/implement/standards/product_brief.cfm?product_id=185&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;http://www.hl7.org/about/FAQs/index.cfm?ref=nav&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;It is fundamentally a messaging standard and early versions focused on &lt;code class=&quot;highlighter-rouge&quot;&gt;ADT' messages, messaging relating to the admission, discharge and transfer of patients. Such messages are sent as &lt;/code&gt;triggers’ and therefore adopt a `push’ model of health interoperability. HL7 has grown organically and iteratively over many years with an increasing number of message types including those to record clinical observations and laboratory results for example. The latest version is HL7 v2.6 which was approved as an ANSI standard in 2007.&lt;/p&gt;
+
+&lt;h2 id=&quot;hl7-v3-and-the-rim&quot;&gt;HL7 V3 and the RIM&lt;/h2&gt;
+&lt;p&gt;HL7 V3 was developed from 1992 to define a Reference Information Model (RIM) describing healthcare-related messages and trigger events relating to those messages. 
+The RIM defines an object-orientated model in which types are sub-specialisms of a more generic type. For example, in the same way as bicycles and cars are &lt;em&gt;types&lt;/em&gt; of vehicles, a &lt;code class=&quot;highlighter-rouge&quot;&gt;Person' is a type of a &lt;/code&gt;Living Subject’ but veterinary patients such as dogs and cats are represented as a `Non-person living subject’. As in object-orientated programming languages, specialist models inherit attributes and behaviours from their more generic parent types.&lt;/p&gt;
+
+&lt;p&gt;The three core classes in HL7 RIM are &lt;code class=&quot;highlighter-rouge&quot;&gt;Act', &lt;/code&gt;Entity’ and `Role’:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;An act is a record of something that has or will happen. This will usually include what has been done, to whom, by whom, when, where and how and possibly documenting why.&lt;/li&gt;
+  &lt;li&gt;An entity is a living or non-living thing such as a person, animal or organisation.&lt;/li&gt;
+  &lt;li&gt;A role represents a skill or competency of an Entity, such as patient, employee, place or organisation.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The HL7 V3 standard is large and complex and many healthcare organisations with an existing infrastructure built using HL7 V2 have been reluctant to adopt the newer standard so HL7 RIM is not used as much as HL7 V2 internationally.&lt;/p&gt;
+
+&lt;h2 id=&quot;hl7-v3-cda&quot;&gt;HL7 V3 CDA&lt;/h2&gt;
+&lt;p&gt;The HL7 V3 Clinical Document Architecture (CDA) defines a document-based information model in which components of the HL7 V3 RIM is used as a header together with a document body consisting of a mixture of unstructured and structured data. As I discussed in Section~\ref{model.process}, a document-based architecture is an appropriate abstraction of real-life processes and explicitly ensures that clinical information is recorded together with its context; such a document can stand in isolation and be understood by the reader. When contextual clues are removed, interpretation of structured and unstructured information is potentially hazardous. A document can be immutable once created and document lifecycle and process management including creation, editing and repudiation can be modelled in a straightforward manner.&lt;/p&gt;
+
+&lt;p&gt;There are three CDA levels:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;CDA level one: has a header and human-readable body usually in an unstructured format such as free text or file types such as images or documents (e.g. Adobe PDF).&lt;/li&gt;
+  &lt;li&gt;CDA level two: extends level one by including more structured data within the body of the document.&lt;/li&gt;
+  &lt;li&gt;CDA level three: allows highly-structured data to be encoded at a high level of granularity.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;With the document paradigm limiting mismatch between model and real-life (Section~\ref{avoiding.mismatches}), adoption of the CDA standard has been widespread internationally. It is the most adopted &lt;a href=&quot;http://www.hl7.org/FHIR/comparison-cda.html&quot;&gt;HL7 V3 standard&lt;/a&gt;.
+In addition, the different CDA levels permit flexibility in the recording of unstructured and structured data, easing adoption of the standard. Such an approach permits implementers to use level one of the HL7 CDA to store relatively unstructured documents initially but evolve over time to permit newer applications to store more structured information and yet remain interoperable.&lt;/p&gt;
+
+&lt;h2 id=&quot;fhir&quot;&gt;FHIR&lt;/h2&gt;
+
+&lt;p&gt;FHIR, &lt;a href=&quot;https://www.hl7.org/fhir/summary.html&quot;&gt;Fast Health Interoperability Resources&lt;/a&gt;, is a new framework created by HL7 which uses modern web services over HTTP to create, edit and share modular resources. Importantly, the HL7 FHIR standards are free to use without restriction and focus on data standards and the implementation of those standards within clinical systems.&lt;/p&gt;
+
+&lt;p&gt;The use of FHIR does not mandate that existing and new clinical systems use FHIR standards to define their internal architecture or internal &lt;em&gt;storage&lt;/em&gt; formats, but the use of FHIR can provide an open and standard interface to permit interoperability between different systems created by different vendors. As such, an application or service can provide access to data in an open and extensible format by providing a FHIR server and consume different data as a FHIR client.&lt;/p&gt;
+
+&lt;p&gt;There are a range of FHIR &lt;a href=&quot;http://www.hl7.org/FHIR/implementation.html&quot;&gt;frameworks&lt;/a&gt; including:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Search: within a resource, such as searching for a patient.&lt;/li&gt;
+  &lt;li&gt;Operations: on a resource such as fetching an encounter record or processing a message. These are in addition to the standard CREATE, READ, UPDATE and DELETE REST-based interactions.&lt;/li&gt;
+  &lt;li&gt;Documents: representing a composition of other resources with a fixed presentation linked to context.&lt;/li&gt;
+  &lt;li&gt;Messages: to allow messages to be sent in response to a specific event.&lt;/li&gt;
+  &lt;li&gt;Services: to provide a representation of a service-orientated architecture within healthcare. See the &lt;a href=&quot;http://www.hl7.org/FHIR/services.html&quot;&gt;FHIR service documentation&lt;/a&gt; for more information.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There is backwards-compatibility so that FHIR documents can contain HL7 V3 CDA documents. FHIR potentially improves the integration and interoperability between disparate systems. The standard uses open web standards over the HTTP protocol and so development can be straightforward. However, FHIR is still under active development at the time of writing and the current release is designated as a “draft standard for trial use”. As such, future versions of FHIR may result in non-compatible future changes.&lt;/p&gt;
+
+&lt;h1 id=&quot;openehr&quot;&gt;openEHR&lt;/h1&gt;
+
+&lt;p&gt;openEHR is an open standard for the recording of health-related data maintained by the &lt;a href=&quot;http://openehr.org&quot;&gt;OpenEHR foundation&lt;/a&gt;. It defines a multi-level information model in which the core model (the &lt;code class=&quot;highlighter-rouge&quot;&gt;reference model') does *not* include clinical information but focuses on core generic abstractions and process. \emph{Archetypes} represent the clinical information model, with models created, edited and curated as part of a &lt;/code&gt;clinical knowledge manager’ (CKM). This multi-level modelling approach means that health professionals can undertake clinical modelling independent of the underlying implementation. In addition, small and re-usable domain models can be aggregated into a &lt;code class=&quot;highlighter-rouge&quot;&gt;template'. For example, if a domain model contains &lt;/code&gt;blood pressure’ and &lt;code class=&quot;highlighter-rouge&quot;&gt;heart rate' then this model can be incorporated within a larger &lt;/code&gt;template’ representing an emergency unit admission. An overview is available &lt;a href=&quot;http://www.openehr.org/releases/AM/latest/docs/Overview/Overview.html&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;In addition, there is a new openEHR REST-based application programming interface (API) which proposes to define standards to which an openEHR implementation should adhere. However, the development of these standards is still in development and has not yet been finalised.&lt;/p&gt;
+
+&lt;h1 id=&quot;loinc&quot;&gt;LOINC&lt;/h1&gt;
+&lt;p&gt;LOINC is a freely available international standard for tests, measurements and observations. The official website is &lt;a href=&quot;https://loinc.org&quot;&gt;https://loinc.org&lt;/a&gt;.&lt;br /&gt;
+Although limited in scope, it has been adopted by HL7 as the standard code system for laboratory results. In addition, there is a project to map LOINC codes to SNOMED-CT and vice versa.&lt;/p&gt;</content><author><name></name></author><summary type="html">A terminology is a body of terms used within a particular subject of study or profession. A classification is a systematic organisation of things into classes. A classification system such as ICD-10 cannot be used as a terminology and many terminologies cannot be easily used as a classification system. This is an important distinction and relates to the how those data are primarily used.</summary></entry><entry><title type="html">Clinical information system design: 2. Clinical modelling</title><link href="https://www.wardle.org/cis-design/2017/05/02/clinical-modelling.html" rel="alternate" type="text/html" title="Clinical information system design: 2. Clinical modelling" /><published>2017-05-02T12:06:00+01:00</published><updated>2017-05-02T12:06:00+01:00</updated><id>https://www.wardle.org/cis-design/2017/05/02/clinical-modelling</id><content type="html" xml:base="https://www.wardle.org/cis-design/2017/05/02/clinical-modelling.html">&lt;blockquote&gt;
+  &lt;p&gt;This is part 2 of a number of blog posts relating to domain-driven design in clinical informatics.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;A model is an abstraction of the real-world distilling knowledge into core concepts and processes. A model is a careful balance between complexity and over-simplification with models that are too complex providing brittle abstractions which are poorly generalisable and models that are too simple not supporting all of the demands placed upon it in real-life clinical scenarios.&lt;/p&gt;
+
+&lt;p&gt;Modelling is an art but the approach can be made more systematic if modellers work iteratively within a supporting organisational environment with clinical and technical staff working together in  logical teams. Importantly, the scope of their model should be limited; large enough to solve the domain problems but small enough to result in a practical implementation. As such, it is important to have an appropriate separation of concerns in which teams can work independently of other teams as much as possible and that interfaces between that team and others are formalised on a contractual basis.&lt;/p&gt;
+
+&lt;h1 id=&quot;high-level-functional-requirements&quot;&gt;High-level functional requirements}&lt;/h1&gt;
+
+&lt;p&gt;Clinical modelling is dependent on knowledge of the domain and the functional requirements to which the model will serve. It is useful to abstract these requirements to make them as generally-applicable as possible and not to generate needlessly specific requirements with limited applicability. However, the process of generated functional requirements and a subsequent data and process modelling is not a one-way process but must be an iterative two-way development in which there is feedback and discussion among all stakeholders and between all steps of requirements-gathering, modelling and implementation.&lt;/p&gt;
+
+&lt;h1 id=&quot;the-process-of-developing-a-clinical-model&quot;&gt;The process of developing a clinical model&lt;/h1&gt;
+&lt;p&gt;I suggest dividing clinical modelling into three related steps:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Modelling data within a medical record&lt;/li&gt;
+  &lt;li&gt;Modelling processes and workflow relating to a medical record&lt;/li&gt;
+  &lt;li&gt;Implementation of a clinical model into a workable and practical solution.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;These three steps should be considered separately but are dependent on one another and inherently depend on the functional requirements. In designing clinical information systems, a data model may change infrequently or a design may even be correct in perpetuity; a systolic blood pressure recorded using a cuff on the right arm of an individual will always be a systolic blood pressure recorded using a cuff on the right arm of an individual. However, a model of the processes of care will likely change more frequently as a result of changes in working practices and service design, and an implementation may change even more frequently as a result of new technologies and devices.&lt;/p&gt;
+
+&lt;p&gt;As each step is dependent on each other, modelling must be an iterative work with feedback loops between all steps rather than performed in sequence by different members of the team. An implementation cannot be designed without consideration of the data structures and processes that leverage the data within those structures and a model cannot be designed unless it is practical and efficient to perform an implementation. It also follows that clinical modelling must be performed by a team of individuals with a range of skills including those with important domain knowledge such as health professionals as well as those responsible for the design and implementation of the resulting software such as technical architects and software developers.&lt;/p&gt;
+
+&lt;p&gt;Traditional waterfall-based design methods emphasise a sequential process involving business analysis and scoping, design, implementation, verification and then subsequent maintenance. Indeed, such methods are commonly used within NHS Wales with a focus on producing a product to solve a particular problem which then becomes “complete” and enters “maintenance”. I strongly believe that this approach is wrong and instead development should by underpinned by a robust model developed iteratively considering both workflow and implementation together with an understanding that any solutions will never be complete.&lt;/p&gt;
+
+&lt;h2 id=&quot;modelling-the-medical-record&quot;&gt;Modelling the medical record&lt;/h2&gt;
+
+&lt;p&gt;The breadth of knowledge within the medical record is potentially daunting with multiple types of data recorded in many different contexts and for many different purposes. Such data will need to be shown to users in order for them to make sense of a patient’s condition or clinical course, but also used to monitor a clinical service by providing real-time data on patient flow and progression along one of many clinical pathways.&lt;/p&gt;
+
+&lt;p&gt;I advocate a clinical record in which much information is stored in a highly structured format. Some free-text is necessary but where possible, clinical information should be recorded using a standardised terminology such as SNOMED CT held within larger data structures representing the clinical model.&lt;/p&gt;
+
+&lt;p&gt;Advances in technology such as new interventions, evolving diagnoses, new diagnostic tests and changing processes result in an ever-expanding knowledge base to which software systems must evolve and adapt. As such, no software system designed to model the medical record will ever be complete and as such, designing for incremental change in the medium and long-term is a pre-requisite. If real-world knowledge is ever-changing, then models too must constantly be refined and evolved. As such, the design and subsequent constant refinement and evolution of any model underpinning a complex clinical information system must be supported by an appropriate organisational structure which facilitates an iterative development approach. Such iterative development requires domain experts such as clinicians work closely in teams with developers to constantly refine their own understanding, focus the analysis of requirements and distil what they know to the core essentials that must underpin the design of any subsequent information system.&lt;/p&gt;
+
+&lt;h3 id=&quot;electronic-medical-records-and-the-importance-of-context-and-provenance&quot;&gt;Electronic medical records and the importance of context and provenance.&lt;/h3&gt;
+&lt;p&gt;An advantage of electronic records is that such records can be made universally available wherever they are needed such as when a patient presents to an emergency health facility or a new outpatient clinic or when the patient contacts a team via email or telephone. A disadvantage of electronic records is the need for real-time curation of patient records so that users are not overwhelmed by excessive information that is not relevant in their specific clinical context. It is therefore vital that any model supports not only the recording of information but the context and provenance in which those data were recorded and that views of aggregated information for a single patient take into account such contextual cues to ensure users see the information that is required and optionally filters information.&lt;/p&gt;
+
+&lt;p&gt;Such issues also arise in paper records, particularly when a single patient has multiple volumes of notes. However, as paper records serve a single organisation end-users may find important information related to their own service  based on filing standards, paper colour, logos, page layout and the names of colleagues and can flick through the physical record more easily than a poorly curated and unstructured digital counterpart. However, paper records fail for patients looked after by multiple organisations, in which clinical correspondence from an outpatient clinic in one facility will usually not be available in another unless manual action by end-users is taken.&lt;/p&gt;
+
+&lt;h2 id=&quot;modelling-the-processes-involving-medical-records&quot;&gt;Modelling the processes involving medical records.&lt;/h2&gt;
+
+&lt;p&gt;Medical records are more than a simply narrative of what has happened to a patient listed in sequential order. A number of important processes and workflows exist that relate to the sending and receiving of paper-based forms that must be considered in any abstraction of medical enterprise. Paper records such as printed correspondence, request forms, results of investigations are sent to a responsible individual in order for them to be read and acted upon. On some occasions, such documentation is annotated, forming a narrative of the actions undertaken by the end-user or forwarded to another, forming a chain of correspondence. Electronic systems are potentially safer offering guarantees of sending and receiving such requests, providing full audit trail functionality and non-repudiation of comments and action. However, any process relating to a medical record must be modelled with as much care as the modelling of data structures.&lt;/p&gt;
+
+&lt;p&gt;Most data standards relating to healthcare, such as HL7, openEHR, and FHIR, model the data relating to healthcare and not the processes and workflow that reflect the care of patients itself. While modelling data is an important pre-requisite in the conception and design of clinical information systems, modelling the processes and workflow that relate to that model is firstly an important test that data modelling is fit-for-purpose and secondly, critical itself in ensuring a resulting clinical information system will be a workable and valuable asset in providing healthcare services.&lt;/p&gt;
+
+&lt;p&gt;Process and workflow will change frequently as clinical services evolve and develop and any model must take such changes into account so that any subsequent implementation can flexibly handle different workflows. Abstracting workflow is the most appropriate method to future-proof any clinical system and modellers must then consider how to model the configuration of more abstract workflows into a concrete implementation at runtime.&lt;/p&gt;
+
+&lt;p&gt;In most clinical services, data and processes currently revolve around the completion and processing of clinical documents which are subsequently filed as part of a longitudinal prospective and immutable medical record. As such, a transactional document model is usually an appropriate reasonable and accurate abstraction of current processes of care.&lt;/p&gt;
+
+&lt;h2 id=&quot;modelling-and-implementation&quot;&gt;Modelling and implementation&lt;/h2&gt;
+
+&lt;p&gt;Tying a clinical model to its implementation is critical. A model cannot be designed without consideration of its implementation as it is possible to develop models of data and processes that would be impractical, cumbersome or inefficient to implement by developers. As such, close working between domain experts and software engineers is necessary to iteratively explore and improve a model to ensure it meets the demands of the domain and of practical software engineering considerations.&lt;/p&gt;
+
+&lt;h3 id=&quot;avoiding-mismatches-between-a-model-and-real-life&quot;&gt;Avoiding mismatches between a model and real-life.&lt;/h3&gt;
+
+&lt;p&gt;A mismatch between the model and real-life processes may cause confusion for users while models that are based on the fundamentals of a particular domain result in clinical systems that are intuitive to use with readily predictable functionality. A model should therefore abstract real-life processes and structures when possible so that end-users can easily understand what is happening within the software they are using and should not be surprised by unintended consequences. However, modelling real-life processes should not be an exact replica of an existing paper-based process but a careful abstraction designed to capture the essence of the process and to be more widely generalisable.&lt;/p&gt;
+
+&lt;p&gt;While organisations, directorates, specialties, teams and even individual clinicians will have their own ways of working with disease and specialty specific data requirements, there is a danger in thinking that data modelling is simply getting a single group of domain experts in a room with a white-board. Instead, such work  is simply the start of a process in which these requirements are analysed and distilled and subsequently made as generic and widely applicable as possible and yet not made so generic that a subsequently developed model no longer meets the needs of the original functional requirements.&lt;/p&gt;</content><author><name></name></author><summary type="html">This is part 2 of a number of blog posts relating to domain-driven design in clinical informatics.</summary></entry><entry><title type="html">Clinical information system design: 1. The medical record</title><link href="https://www.wardle.org/cis-design/2017/05/01/medical-record.html" rel="alternate" type="text/html" title="Clinical information system design: 1. The medical record" /><published>2017-05-01T15:06:00+01:00</published><updated>2017-05-01T15:06:00+01:00</updated><id>https://www.wardle.org/cis-design/2017/05/01/medical-record</id><content type="html" xml:base="https://www.wardle.org/cis-design/2017/05/01/medical-record.html">&lt;blockquote&gt;
+  &lt;p&gt;“You’re a victim of it or a triumph because of it. The human mind simply cannot carry all the information without error so the record becomes part of your practice.”&lt;/p&gt;
+
+  &lt;p&gt;Dr Larry Weed, Internal Medicine Grand Rounds, 1971&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The medical record encompasses and complex, disparate and evolving collection of information relating to the day-to-day care of an individual patient. Aggregated, such data provide valuable information about cohorts of patients managed by a clinical service supporting clinical governance and the management of the that service.&lt;/p&gt;
+
+&lt;h1 id=&quot;paper-medical-records&quot;&gt;Paper medical records&lt;/h1&gt;
+
+&lt;p&gt;Paper medical records are expensive, poorly accessible and do not support team working effectively. They are frequently poorly structured and while they contain large amounts of data, it is difficult to use those data to support clinical care. Paper records must be tracked and within a large organisation and such records need to be made available to clinical and administrative staff in order to appropriately manage the patient. This is particularly difficult when a single patient may be under the care of multiple services which is particularly common for patients with chronic long-term health conditions.&lt;/p&gt;
+
+&lt;h1 id=&quot;clinical-governance&quot;&gt;Clinical governance&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;``If you can’t audit a thing for quality, it means you do not have the means to produce quality’’.&lt;/p&gt;
+
+  &lt;p&gt;Dr Larry Weed, Internal Medicine Grand Rounds, 1971&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Clinical governance is a framework in which we are accountable for continuously improving the quality of our services safeguarding high standards of care by creating an environment in which excellence in clinical care can flourish.&lt;/p&gt;
+
+&lt;p&gt;An important part of clinical governance is in the use of data to understand both process and outcomes. A typical clinical department will know how many patients are waiting for an outpatient appointment but will not be able to understand why they are waiting or understand a patient’s eventual outcome because usually only administrative data are collected systematically.&lt;/p&gt;
+
+&lt;p&gt;Many clinical teams will undertake service improvement projects or clinical audits, in which a clinician identifies a problem, undertakes to measure that problem by clinical audit, analyses the results and makes an intervention in order to solve that problem. For example, a typical clinical audit might be in the assessment of risk of deep vein thrombosis in inpatients in which a doctor will systematically analyse the paper notes of a group of inpatients, record and present the results and enact a change to improve those results with a plan to re-audit after that intervention. Such a methodology has been formalised by the &lt;a href=&quot;https://www.isixsigma.com/dictionary/dmaic/&quot;&gt;Six Sigma quality initiative&lt;/a&gt; in which five steps form a virtuous cycle of continuous improvement:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/cis_design/dmaic.png&quot; alt=&quot;Dmaic&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Such continuous improvement is possible with paper records, but it cannot be performed systematically and routinely, requires a large amount of manual intervention and the cycle of improvement is slow; the analysis of results and a plan of action to effect improvement may take months with no guarantees that any systematic assessment of those interventions will be performed.&lt;/p&gt;
+
+&lt;p&gt;It therefore follows that the routine and systematic collection of process and clinical outcome data offers the potential to radically improve the efficiency of the continuous improvement lifecycle as long as sufficient consideration is given to the use of such data, the context of those data and an understanding of the processes in which those data are involved.&lt;/p&gt;
+
+&lt;h1 id=&quot;electronic-medical-records&quot;&gt;Electronic medical records&lt;/h1&gt;
+
+&lt;p&gt;Electronic medical records and workflow should model and abstract real-life processes but digitisation of paper processes should not be a slavish exact copy of existing processes, particularly when technology offers opportunities to improve the process of healthcare.&lt;/p&gt;
+
+&lt;p&gt;Indeed, we are facing an explosion of clinical data created by health professionals, administrators and patients themselves and clinical information systems must consider how they will integrate and make such data useful in clinical practice. For example, this figure:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/cis_design/data_pipelines.png&quot; alt=&quot;Data Pipelines&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;shows how all of these sources of data are mutually dependent on one another. For example, what is the point in recording patient reported outcome measures if that data cannot be safely linked to a particular intervention or procedure and the co-morbidities and baseline assessments for that patient?&lt;/p&gt;
+
+&lt;p&gt;The logical conclusion is that we will always have a multiplicity of systems and that in order to create robust clinical systems that outlive our current level of technological advancements, we have a responsibility to insist on open well-documented data standards, to integrate a well-developed clinical terminology, and foster collaboration, iterative development and embrace interoperability.&lt;/p&gt;</content><author><name></name></author><summary type="html">“You’re a victim of it or a triumph because of it. The human mind simply cannot carry all the information without error so the record becomes part of your practice.” Dr Larry Weed, Internal Medicine Grand Rounds, 1971</summary></entry><entry><title type="html">NHS hack days</title><link href="https://www.wardle.org/clinical-informatics/2017/05/01/nhs-hack-days.html" rel="alternate" type="text/html" title="NHS hack days" /><published>2017-05-01T08:57:36+01:00</published><updated>2017-05-01T08:57:36+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/05/01/nhs-hack-days</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/05/01/nhs-hack-days.html">&lt;p&gt;NHS hack days are weekends in which clinicians and software developers come together to try to develop information technology solutions for healthcare.&lt;/p&gt;
 
 &lt;p&gt;There is a really good piece about them in the &lt;a href=&quot;http://www.bcs.org/content/conWebDoc/57646?utm_campaign=8245638_Health%20and%20care%20newsletter&amp;amp;utm_medium=email&amp;amp;utm_source=BCS%2C%20The%20Chartered%20Institute%20for%20IT&quot;&gt;BCS magazine by Dr Marcus Baw&lt;/a&gt;.&lt;/p&gt;
 
@@ -605,183 +802,4 @@
 
 &lt;p&gt;In conclusion, I have widened the scope of the overall solution to include all investigations and not only laboratory tests, but modularised the architecture and narrowed the scope of these individual components.&lt;/p&gt;
 
-&lt;p&gt;Mark&lt;/p&gt;</content><author><name></name></author><summary type="html">I discussed the importance of scope and framing in a recent blog post concluding that the framing and scope of the overall problem domain must be broad enough to model reality but that solutions must be broken-up into components each of limited scope.</summary></entry><entry><title type="html">PatientCare videos</title><link href="https://www.wardle.org/patientcare/2017/03/26/patientcare-old-videos.html" rel="alternate" type="text/html" title="PatientCare videos" /><published>2017-03-26T22:20:10+01:00</published><updated>2017-03-26T22:20:10+01:00</updated><id>https://www.wardle.org/patientcare/2017/03/26/patientcare-old-videos</id><content type="html" xml:base="https://www.wardle.org/patientcare/2017/03/26/patientcare-old-videos.html">&lt;p&gt;PatientCare is an electronic patient record (EPR) system that supports the care of over 20,000 patients and records over 3000 clinical encounters every month.&lt;/p&gt;
-
-&lt;p&gt;I need to create some videos to demonstrate the range of functionality, but for now, I’ve included some old videos:&lt;/p&gt;
-
-&lt;h4 id=&quot;the-motor-neurone-disease-module&quot;&gt;The motor neurone disease module&lt;/h4&gt;
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/DGvCzfhOoN0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;h4 id=&quot;clinic-based-ipad-application---healthcontact&quot;&gt;Clinic-based iPad application - HealthContact&lt;/h4&gt;
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/GTo0fGHgoIA&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;We’ve trialled this in the outpatient clinic successfully. See &lt;a href=&quot;/about#iPadParkinson&quot;&gt;our published abstract&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h4 id=&quot;medication-entry&quot;&gt;Medication entry&lt;/h4&gt;
-
-&lt;p&gt;These videos show the real-time mapping of user entered text to SNOMED-CT codes from the DM&amp;amp;D (dictionary of medicines and devices). You’ll notice the parsing of doses and the calculation of unchanged, started and stopped drugs. This makes it very quick in the outpatient clinic.&lt;/p&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/3tRyjJk-71M&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/F2LSHpdCPvo&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;h4 id=&quot;iphone-application-for-communication&quot;&gt;iPhone application for communication&lt;/h4&gt;
-
-&lt;p&gt;This was a simple iOS application that used the PatientCare EPR to handle user communication linked to the patient record. Unfortunately, I did not successfully convince my organisation to allow use of the wifi network, so I never deployed this.&lt;/p&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/1Lej6CMZZkY&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name></name></author><summary type="html">PatientCare is an electronic patient record (EPR) system that supports the care of over 20,000 patients and records over 3000 clinical encounters every month.</summary></entry><entry><title type="html">The importance of scope and framing in clinical design</title><link href="https://www.wardle.org/clinical-design/2017/03/23/scope-framing-clinical-design.html" rel="alternate" type="text/html" title="The importance of scope and framing in clinical design" /><published>2017-03-23T10:01:01+00:00</published><updated>2017-03-23T10:01:01+00:00</updated><id>https://www.wardle.org/clinical-design/2017/03/23/scope-framing-clinical-design</id><content type="html" xml:base="https://www.wardle.org/clinical-design/2017/03/23/scope-framing-clinical-design.html">&lt;h4 id=&quot;scope&quot;&gt;Scope&lt;/h4&gt;
-&lt;p&gt;: defines the requirements and objectives and what will be delivered from a project.&lt;/p&gt;
-
-&lt;h4 id=&quot;framing&quot;&gt;Framing&lt;/h4&gt;
-&lt;p&gt;: a way of structuring or presenting a problem or issue&lt;/p&gt;
-
-&lt;h1 id=&quot;clinical-design&quot;&gt;Clinical design&lt;/h1&gt;
-
-&lt;p&gt;Scope and framing are critical in designing valuable health information technology.&lt;/p&gt;
-
-&lt;p&gt;If you ask for a system to request laboratory tests electronically then that’s what you’ll get.&lt;/p&gt;
-
-&lt;p&gt;If your initial framing of the problem is wrong, you won’t get a solution that solves the true user problem. The user problem is defined by the user, with support to understand and explore the problem in its entirety.&lt;/p&gt;
-
-&lt;p&gt;When one creates a model - whether the model represents a train, a new building or software - there is a balance between over-complexity and over-simplification. As I wrote in my &lt;a href=&quot;/clinical-informatics/2017/02/03/domain-driven-design.html&quot;&gt;‘Domain-driven design’ document&lt;/a&gt;:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;A model is an abstraction of the real-world distilling knowledge into core concepts and processes. A model is a careful balance between complexity and over- simplification with models that are too complex providing brittle abstractions which are poorly generalisable and models that are too simple not supporting all of the demands placed upon it in real-life clinical scenarios.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;See the &lt;a href=&quot;https://www.dropbox.com/s/62sg71a19voxpts/cis_design.pdf?dl=0&quot;&gt;full document&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h1 id=&quot;user-centred-design&quot;&gt;User-centred design&lt;/h1&gt;
-
-&lt;p&gt;Clinical information systems should solve real-life user problems. The user may be the patient, a health professional, a member of the laboratory staff or anyone else involved either directly or indirectly in patient care. Information systems are therefore inherently bound to process and workflow; to be more specific, the processes and workflows for that user or those groups of users.&lt;/p&gt;
-
-&lt;p&gt;Our aim, always, is to create solutions that valuably support the care of patients but while we must not lose sight of this overarching aim, an effective information technology strategy must be explicit in how it will effect change to reach those aims. It is my opinion that we spend too little time understanding and refining the problems we are trying to solve resulting in poorly framed problems with ill-defined scope.&lt;/p&gt;
-
-&lt;p&gt;As I wrote in my &lt;a href=&quot;/clinical-informatics/2017/03/15/once-for-wales.html&quot;&gt;“Once for Wales” speech&lt;/a&gt; in which I pitched for interoperability and data standards for NHS Wales:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;It is almost always the case that when building complex solutions to real-life problems, no-one person can conceive of all of the problems in one go. The natural solution to such complexity is to break-down a problem into manageable chunks. These chunks, much like “lego bricks”, can be joined together to form something greater than the sum of the parts. Importantly, it is more likely that we can vouch that a system is deterministic.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;We need to spend time working on the problems we are trying to solve and, break them apart into manageable chunks. Such a process requires skill and experience spanning knowledge of both the domain &lt;em&gt;and&lt;/em&gt; information technology together with a large amount of pragmatism to &lt;em&gt;get things done&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Importantly, core design principles such as using a &lt;a href=&quot;https://www.dropbox.com/s/62sg71a19voxpts/cis_design.pdf?dl=0&quot;&gt;domain-driven design to build a layered architecture&lt;/a&gt; &lt;em&gt;protect&lt;/em&gt; those involved and force an approach which, while not impervious to changes in workflow and process, can more easily adapt to those changes than a design built as a monolith.&lt;/p&gt;
-
-&lt;h1 id=&quot;test-requesting&quot;&gt;Test requesting&lt;/h1&gt;
-
-&lt;p&gt;We currently have a working test requesting module within NHS Wales’ &lt;em&gt;Welsh Clinical Portal&lt;/em&gt;  (WCP) software for requesting laboratory tests. Essentially, one navigates to a patient’s record and selects REQUEST-&amp;gt;Laboratory test.&lt;/p&gt;
-
-&lt;p&gt;On many levels, this is a workable solution to the problem as framed; “allow clinical staff to request laboratory investigations”. The design team, given that brief, designed a multi-page form that allowed that functionality. There are some minor glitches in the user interface, but behind-the-scenes, there is considerable work in dealing with different laboratories and actually performing the test request.&lt;/p&gt;
-
-&lt;p&gt;The team should have visited a variety of care settings in which tests are requested and arrived at the following conclusions and questions:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;In many settings, laboratory tests are requested at the same time as other tests, such as radiology tests. Should the solution work in a more generic way to suit this workflow? How can the life of a clinician sitting in an outpatient clinic be improved? How can we create solutions that work better than the paper systems?&lt;/li&gt;
-  &lt;li&gt;In many settings, a health professional is caring for a number of patients at the same time. How can we support the life of a junior doctor when trying to manage all of their inpatients?&lt;/li&gt;
-  &lt;li&gt;In many situations, a request for a test is prompted by seeing a result. Should we support requesting tests from the “results” page when we see something that needs acting upon?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I’d like to crowdsource the framing of our problem. Are we only requesting laboratory investigations here or will the same system work for radiology? Can we expand our scope by reframing our problem? What about the future?&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;What about routine monitoring according to protocol, for patients on certain drugs? My PatientCare EPR has this information, and given the right APIs, it could monitor those patients and request tests semi-autonomously. Would that functionality form part of the test requesting module within WCP or be separate?&lt;/li&gt;
-  &lt;li&gt;We want to implement care plans that can be activated either manually or automatically for groups of patients. For example, a liver or renal failure patient may have a standard regime of investigations performed at regular intervals for monitoring. How can we support this?&lt;/li&gt;
-  &lt;li&gt;What about other suggestions for clinical staff based on the information-at-hand, perhaps using machine-learning?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;And what about interaction with other systems?&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;How is this going to work when the health professional filling in the request is going to take the blood and send it to the laboratory themselves? How is this going to work when the blood sampling will be done by a phlebotomist?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Finally what is in scope here? Do we need to design all of this functionality right away or can it evolve iteratively? Are there natural ‘fault lines’ which guide us as to &lt;em&gt;how&lt;/em&gt; to break this up into manageable parts?&lt;/p&gt;
-
-&lt;h3 id=&quot;the-current-architecture-a-monolith&quot;&gt;The current architecture: a monolith&lt;/h3&gt;
-
-&lt;p&gt;The current solution tries to be everything to everyone. It supports requesting tests for an arbitrary date, or set of dates. It is accessible only within the WCP application itself; its user interface, its functionality and the services it uses to implement its functionality are not available outside of WCP.&lt;/p&gt;
-
-&lt;p&gt;Advocates of a monolithic approach say that standardisation of user interfaces makes it easier for users, reduces need for training and avoids duplication. I think this is wrong. I will vouch that you can operate an email client, whether it is web-based, runs on a mobile device or a desktop computer, from any vendor since email was invented because the nouns and verbs are the same. You might have a ‘draft email’ waiting to be ‘sent’, an ‘outbox’, an ‘inbox’, ‘folders’, ‘addresses’ in a ‘to’ field etc.&lt;/p&gt;
-
-&lt;p&gt;Standardisation should be at the level of the nouns we use and the verbs we use to operate on those nouns. Thus we develop or adopt standardised information models in which our data and the processes/workflow in which we work are modelled.&lt;/p&gt;
-
-&lt;p&gt;In addition, a monolithic or “product”-based approach makes it difficult to adapt to change. If we want to start work on extending the scope to include some of the functionality outlined above, we’ll need to make considerable changes to the WCP application. But we must be careful; every change that we make, every button we add, adds complexity to an already overwhelming user interface. To support every new feature, we are potentially extending our list of responsibilities and scope.&lt;/p&gt;
-
-&lt;p&gt;‘Scope creep’ is the term used to describe continuous expansion of a project’s scope, usually a result of a variety of factors including poor initial framing of the problem to be solved, poor initial scoping and lack of flexibility and versatility in any resulting solution.&lt;/p&gt;
-
-&lt;h3 id=&quot;adopting-a-service-orientated-architecture&quot;&gt;Adopting a service-orientated architecture&lt;/h3&gt;
-
-&lt;p&gt;What if we pick apart the problem we are trying to solve?&lt;/p&gt;
-
-&lt;p&gt;The diagram shows an abstract view of what we are trying to solve with test requesting:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/test-requesting.png&quot; alt=&quot;Test Requesting&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The test requesting service wraps an integration layer to provide generic test requesting. Whether a test is requested from a laboratory or another service, a separation between laboratory tests and other types of investigation tests is an artefact of implementation of health services; abstractly, a test request is a test request irrespective of which service will perform the test.&lt;/p&gt;
-
-&lt;p&gt;However, it is likely that different tests will require different information to be provided at the time of request. Rather than embedding this important business logic in an application, this architecture forces an approach which explicitly recognises this business requirement and models it appropriately. There is an explicit design to ensure dynamic runtime configuration can modify the behaviour of the ‘system’.&lt;/p&gt;
-
-&lt;p&gt;A formal contract between the responsibilities and scope of each component must be defined. While the scope of the overall solution may change to meet new requirements, a modular layered approach means that scope creep of individual components should be minimal.&lt;/p&gt;
-
-&lt;p&gt;Applications, such as the web-based front-end application server or applications running on mobile devices, do not directly use a requesting service but use a service provided at the application layer. This layer provides further abstractions and while it will pass on requests to the test request service, it will have responsibility to apply business rules and domain logic such as audit trails and permissions. Those rules may be recorded declaratively in a rules engine rather than hard-coded at the domain layer allowing considerable flexibility in the future to add or change business rules to suit business need.&lt;/p&gt;
-
-&lt;p&gt;The core requesting service does not need to have responsibility for domain logic, but has as its only responsibility to make the request against the end-point laboratory service(s).&lt;/p&gt;
-
-&lt;h3 id=&quot;designing-for-the-future&quot;&gt;Designing for the future&lt;/h3&gt;
-
-&lt;p&gt;With such an architecture, we have considerable flexibility to suit future requirements. If we wish to implement decision support, this could be performed at the domain logic layer and so decision support would be available to all client applications. At project initiation, we may have little or no decision support but our domain layer service must be designed with the hooks to enable this in the future. Over time, should more sophisticated decision support be available, client applications need not know - it is not their responsibility - because our systems are flexible enough to support this new functionality.&lt;/p&gt;
-
-&lt;h3 id=&quot;the-final-design&quot;&gt;The final design&lt;/h3&gt;
-
-&lt;p&gt;Our final design for redefining the user interface of test requesting within WCP becomes much simpler once there is an underlying robust architectural platform.&lt;/p&gt;
-
-&lt;p&gt;It is my opinion that no single user interface will suit all use-cases. I am not concerned if there are multiple versions of the user interface as long as each version fits into the workflow and processes of a specific clinical domain. For instance, it is a long time since I was a junior doctor and I’d want to sit down with a team of them to make the most intuitive and best system to support their processes as possible. Our user interface and logic would be only a thin wrapper around our more complex architecture, but I’d envisage test requesting as part of a jobbing ward round, inpatient list and communication application. The nouns and verbs, the domain-model of the test requesting lifecycle would be standardised across the applications, not the user interface.&lt;/p&gt;
-
-&lt;p&gt;Similarly, what I need in a busy outpatient clinic is a somewhat different. Now it may make sense to share a lot of user interface code, or indeed, with today’s responsive technologies, use the same user interface on the same platform. However, this would be a decision made for pragmatic business purposes if the shared user facing components were appropriate in those different clinical contexts. Such a decision would not be made because we are slavishly following a directive to create systems that are &lt;a href=&quot;/clinical-informatics/2017/03/15/once-for-wales.html&quot;&gt;“Once-for-Wales”&lt;/a&gt; but different devices may need different user interface components to suit their form factor and critically, the workflow in which they are to be used.&lt;/p&gt;
-
-&lt;h3 id=&quot;conclusions&quot;&gt;Conclusions&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Frame the problem appropriately.&lt;/li&gt;
-  &lt;li&gt;Get early involvement of groups of disparate domain, information technology and usability experts.&lt;/li&gt;
-  &lt;li&gt;Extend the scope of the overall problem appropriately, designing in versatility to make solutions future-proof.&lt;/li&gt;
-  &lt;li&gt;Limit scope and responsibility of individual components: work to break-up a problem and solution into manageable parts and enforce limitations on responsibility and scope for those component parts.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">Scope : defines the requirements and objectives and what will be delivered from a project.</summary></entry><entry><title type="html">An update on Merkle trees</title><link href="https://www.wardle.org/merkle-trees/2017/03/20/merkle-trees.html" rel="alternate" type="text/html" title="An update on Merkle trees" /><published>2017-03-20T06:53:48+00:00</published><updated>2017-03-20T06:53:48+00:00</updated><id>https://www.wardle.org/merkle-trees/2017/03/20/merkle-trees</id><content type="html" xml:base="https://www.wardle.org/merkle-trees/2017/03/20/merkle-trees.html">&lt;p&gt;In a previous post, I referenced Merkle trees in relation to the creation of a &lt;a href=&quot;/clinical-informatics/2017/03/09/google-information.html&quot;&gt;verifiable audit log&lt;/a&gt;. I broke a cardinal rule by discussing something for which I (then) had little knowledge.&lt;/p&gt;
-
-&lt;p&gt;In my defence, the technology is rather clever so I don’t regret writing about it. However, I’ve had some help correcting my misunderstandings, so I thought it would be prudent to write down what I’ve learned. Any remaining errors are mine.&lt;/p&gt;
-
-&lt;p&gt;An introductory article on this technology can be found on the &lt;a href=&quot;https://gdstechnology.blog.gov.uk/2015/10/13/guaranteeing-the-integrity-of-a-register/&quot;&gt;Government digital service’s site&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h4 id=&quot;merkle-trees-are-more-interesting-than-i-thought&quot;&gt;Merkle trees are more interesting than I thought&lt;/h4&gt;
-
-&lt;p&gt;I originally wrote:&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;It uses a nested tree design called Merkle trees but this is simply an optimisation to limit the computational requirements whenever data is added.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;It turns out that the use of Merkle trees is more than simply an optimisation of a hash list, although that is a very important benefit. The tree structure allows rapid proof that an entry is in a log by simply checking a branch of nodes (log(n)), rather than all nodes, and so the whole data structure can be verified without transferring the whole contents. This isn’t just an optimisation but permits validation of databases of potentially unbounded size.&lt;/p&gt;
-
-&lt;p&gt;Similarly, this same can be said for replicating data in a distributed system. For example, if we are replicating data then we can start with the root of the tree (a list of one hash value) and compare the hashes. If there are no differences, the replication can stop, but otherwise, the process repeats with the child nodes in a recursive manner.&lt;/p&gt;
-
-&lt;p&gt;In addition, a Merkle tree can be used as a key-value store. A ‘map’ in programmer’s terms is a data structure in which a value can be stored associated with a key; such a structure is called an associative array. Usually, to avoid having to iterate through all entries in order to find the one that matches the key, a hash function is used to assign a key into (hopefully) a unique bucket. This ‘hashmap’ makes it much quicker to find the value for a particular key.&lt;/p&gt;
-
-&lt;p&gt;When creating an append-only log, a Merkle tree is “dense”; there are no gaps and the tree is populated conceptually from left-to-right at successive indices and each hash is a hash of the child nodes.&lt;/p&gt;
-
-&lt;p&gt;In “map” mode, instead of adding entries left-to-right, entries are added using the hash as the index. Thus, the tree is populated piecemeal. Now if you’ve been reading carefully, you might then assume that a Merkle tree in map mode would be impossible to implement, as there would be 2^256 buckets and an enormous tree of hashes to calculate and validate. However, almost all entries are empty. This is why this type of Merkle tree is termed a “sparse Merkle tree”, and we can derive identical hashes for most branches within the tree. Thus, a practical implementation becomes feasible. In the same way as a verifiable log, a map may be synchronised by recursively comparing hashes from the top down, stopping prematurely at a level if the hashes match.&lt;/p&gt;
-
-&lt;p&gt;It is possible to combine the benefits of a key-value store and log when one uses a verifiable log to store the transactions which occur on the key-value store, in a so-called “verifiable log-backed map”. A primer on these verifiable data structures is available as &lt;a href=&quot;https://github.com/google/trillian/blob/master/docs/VerifiableDataStructures.pdf&quot;&gt;part of Google’s own implementation, Trillian&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h4 id=&quot;deepmind-healths-verifiable-audit-log&quot;&gt;Deepmind Health’s verifiable audit log&lt;/h4&gt;
-
-&lt;p&gt;I also wrote:&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Presently, I understand that this is designed to be a centralised record. Such centralisation means that potentially, whoever controls the ledger can change the ledger, simply by re-computing the hashes of the data to reflect the change. Computationally, this may be inefficient, but the verifiable log only becomes verifiable when the ledger is held by a trusted party. For the Deepmind collaboration, I would imagine the NHS organisation holds the ledger while Google writes to it.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;This isn’t quite true either.&lt;/p&gt;
-
-&lt;p&gt;Importantly, the log itself can potentially be held by a third-party entity such as Deepmind but in order to be verifiable, the NHS organisation needs to monitor and periodically verify that no-one has tampered with the log. This means that there needs to be a trusted infrastructure which partner organisations may use; after all, a log helps our cause only if someone is actually checking it!&lt;/p&gt;
-
-&lt;p&gt;But how does one prevent a ‘nefarious’ organisation making use of data inappropriately simply by not logging the data access in the first place? Such an issue emphasises the importance of non-technical factors in obtaining and maintaining trust in relation to sensitive information. Is it sufficient to perform code review and audit in order to create trust? Perhaps.&lt;/p&gt;
-
-&lt;p&gt;I am interested in promoting technical mechanisms which can guarantee that data access is logged appropriately and I suspect that a combination of technical and non-technical measures will be required. I have discussed these measures in a &lt;a href=&quot;/information-governance/2017/03/19/information-governance.html&quot;&gt;previous blog post on information governance and innovation&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">In a previous post, I referenced Merkle trees in relation to the creation of a verifiable audit log. I broke a cardinal rule by discussing something for which I (then) had little knowledge.</summary></entry></feed>
+&lt;p&gt;Mark&lt;/p&gt;</content><author><name></name></author><summary type="html">I discussed the importance of scope and framing in a recent blog post concluding that the framing and scope of the overall problem domain must be broad enough to model reality but that solutions must be broken-up into components each of limited scope.</summary></entry></feed>
