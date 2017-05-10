@@ -1,5 +1,142 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-05-03T17:05:04+01:00</updated><id>https://www.wardle.org/</id><title type="html">Dr. Mark Wardle</title><subtitle>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
-</subtitle><entry><title type="html">Clinical information system design: 3. Data standards and terminology</title><link href="https://www.wardle.org/cis-design/2017/05/02/data-standards.html" rel="alternate" type="text/html" title="Clinical information system design: 3. Data standards and terminology" /><published>2017-05-02T15:20:00+01:00</published><updated>2017-05-02T15:20:00+01:00</updated><id>https://www.wardle.org/cis-design/2017/05/02/data-standards</id><content type="html" xml:base="https://www.wardle.org/cis-design/2017/05/02/data-standards.html">&lt;p&gt;A terminology is a body of terms used within a particular subject of study or profession. A classification is a systematic organisation of things into classes. A classification system such as ICD-10 cannot be used as a terminology and many terminologies cannot be easily used as a classification system. This is an important distinction and relates to the how those data are primarily used.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-05-10T11:58:29+01:00</updated><id>https://www.wardle.org/</id><title type="html">Dr. Mark Wardle</title><subtitle>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
+</subtitle><entry><title type="html">Safely deploying machine learning in healthcare</title><link href="https://www.wardle.org/clinical-informatics/2017/05/10/machine-learning.html" rel="alternate" type="text/html" title="Safely deploying machine learning in healthcare" /><published>2017-05-10T11:55:00+01:00</published><updated>2017-05-10T11:55:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/05/10/machine-learning</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/05/10/machine-learning.html">&lt;p&gt;In a previous blog post, I have discussed the value of information technology in supporting clinical care, unashamedly stealing and modifying Google’s original mantra:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;/clinical-informatics/2017/03/09/google-information.html&quot;&gt;to organise healthcare and patient information and make it universally accessible and useful&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;and argued that we should be making healthcare safer by &lt;a href=&quot;/information-governance/2017/03/19/information-governance.html&quot;&gt;running it on rails&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Now I also regularly argue that we should be routinely recording structured information about our patients including information relating to problems, diagnoses and outcomes. Such data then allows us to make appropriate inferences about our patients such as, how is this patient doing compared to other patients with this condition? In many clinical situations, identifying the patient not behaving as expected is important.&lt;/p&gt;
+
+&lt;p&gt;While machine learning (ML) holds the promise for creating tools that can make such inferences independently or semi-independently, I would argue that information technology can also valuably support care by organising and presenting information about patients to patients and clinicians and providing intuitive adaptive tools that allow the systematic recording of clinical information.&lt;/p&gt;
+
+&lt;p&gt;Such goals may sound mundane compared to the future possibilities of machine learning in healthcare, but to clinicians and patients who have spent many years being “information-poor”, the power of having all relevant information available on hand as well as adaptive tools to record that information quickly and efficiently should not be under-estimated.&lt;/p&gt;
+
+&lt;p&gt;The conclusion is, therefore, that we need clinical information systems that enable health professionals and patients to make inferences and support clinical decision making.&lt;/p&gt;
+
+&lt;h1 id=&quot;machine-learning-for-clinical-decision-making&quot;&gt;Machine learning for clinical decision making&lt;/h1&gt;
+
+&lt;p&gt;The problem with inferences made independently by ML is that we may not be able to, figuratively speaking, open the box and see the logical, sequential arguments and premises used to reach a conclusion. Much as in legal argument or any other form of logical reasoning, carefully crafted reasoning and argument are built upon a framework of assumptions and known evidence. In such reasoning, one can craft inferences upon inferences and justify the final conclusions by examination of each step.&lt;/p&gt;
+
+&lt;p&gt;Human decision making is fallible and frequently non-deterministic with &lt;a href=&quot;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3057365/&quot;&gt;human error often the source of important errors in healthcare&lt;/a&gt;. Indeed, systems designed to reduce the frequency and impact of human error such as checklists, redundancy, guidelines and protocols are attempts to make human decision making more deterministic and less at risk of bias. Many systems work by breaking down a larger decision or process of care into smaller discrete steps.&lt;/p&gt;
+
+&lt;p&gt;If I see a patient and start them on a new treatment, such as pyridostigmine, you can ask me to justify why I recommended starting this treatment for that patient in clinic and I will be able to give you a logical reasoned argument built upon evidence and inference that will include the presence or absence of particular characteristics. In this case, the characteristics may include knowledge of the diagnosis of myasthenia gravis and the rationale for that diagnosis such as the positive finding of acetylcholine receptor antibodies in the patient’s serum. I may explain the balance between symptomatic treatment such as pyridostigmine and treatments of greater efficacy but risk of adverse effects in arriving at that decision.&lt;/p&gt;
+
+&lt;p&gt;Essentially, I can attempt to demonstrate the correctness of my final decision by a chain of reasoning. Similarly, someone else might be able to conclude I made the wrong decision by examining that chain of reasoning.&lt;/p&gt;
+
+&lt;p&gt;So the logical questions are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;what are the regulatory requirements within which we must work in order to make effective use of ML in healthcare?&lt;/li&gt;
+  &lt;li&gt;do we need to understand how machines arrive at their conclusions, so we can justify using those conclusions in clinical practice?&lt;/li&gt;
+  &lt;li&gt;won’t designing  information systems that arrive at their conclusions without justification risk replicating the fallibility of human decision making?&lt;/li&gt;
+  &lt;li&gt;must we be able to &lt;em&gt;see inside the box&lt;/em&gt;?&lt;/li&gt;
+  &lt;li&gt;can augmented ML decision support processes be decomposed into discrete steps with the results of one semi-deterministic “black-box” feeding the action of another? Does such decomposition result in creating a partial ‘window’ to allow us to understand the chain of reasoning created by ML devices?&lt;/li&gt;
+  &lt;li&gt;and finally, how can we introduce machine learning in a safe and incremental manner in healthcare?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;medical-devices&quot;&gt;“Medical devices”&lt;/h1&gt;
+
+&lt;p&gt;The Medicines &amp;amp; Healthcare Regulatory Agency (MHRA) provides &lt;a href=&quot;https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/610189/Software_flow_chart_Ed_1-03.pdf&quot;&gt;helpful advice on the certification of software used in healthcare&lt;/a&gt;. That interactive PDF will take you step-by-step through a decision aid in order to determine whether your software meets the definition of a “medical advice”, and needs certification and accreditation with a declaration of conformity (“CE” marking).&lt;/p&gt;
+
+&lt;p&gt;The guidance is logically organised and intuitive except that the section on “medical purpose” needs to be read carefully. Many things that you might think have a “medical purpose” are not included in their definition. This is important as if your software has a “medical purpose”, then essentially it needs assessment and certification as a medical device.&lt;/p&gt;
+
+&lt;p&gt;For example, software which independently makes a diagnosis based on imaging data would satisfy the test for “medical purpose” and therefore be labelled a medical device. However, software which displays data and makes general recommendations is not a medical device. Software or devices which monitor sport or fitness are not medical devices, but would be considered as such if they were intended for use to monitor physiological parameters that will affect the treatment of a patient.&lt;/p&gt;
+
+&lt;p&gt;If software claims to do any of the following, then it does have a “medical purpose”:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;make recommendations to seek further advice based on user entered data.&lt;/li&gt;
+  &lt;li&gt;indicate the risk that a specific patient has of developing a disease based on entered data for that patient.&lt;/li&gt;
+  &lt;li&gt;allow remote access to information on physical monitors and applies user-defined filtering rules to any alarms generated by the original device.&lt;/li&gt;
+  &lt;li&gt;monitor a patient and collects information entered by the user, measured automatically by the app or collected by a point of care device may qualify as a medical device if the output is intended to affect the treatment of an individual.&lt;/li&gt;
+  &lt;li&gt;automate the treatment pathway for an individual patient.&lt;/li&gt;
+  &lt;li&gt;provide clinical decisions&lt;/li&gt;
+  &lt;li&gt;intended for therapeutic drug monitoring&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;However, if software has only one of these purposes, then it is not considered as having a “medical purpose”:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Patient medical education&lt;/li&gt;
+  &lt;li&gt;Monitors fitness/health/wellbeing&lt;/li&gt;
+  &lt;li&gt;Professional medical education&lt;/li&gt;
+  &lt;li&gt;Stores or transmits medical data without change&lt;/li&gt;
+  &lt;li&gt;Software that is used to book an appointment, request a prescription or have a virtual consultation is also unlikely to be considered a medical device if it only has an administrative function.&lt;/li&gt;
+  &lt;li&gt;Software that provides reference information to help a Healthcare Professional to use their knowledge to make a clinical decision.&lt;/li&gt;
+  &lt;li&gt;Data or databases for storing data&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;implications-for-information-technology&quot;&gt;Implications for information technology&lt;/h1&gt;
+
+&lt;p&gt;The process of confirmation of conformity with the requirements of a “medical device” is confirmation that it passes &lt;a href=&quot;http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CONSLEG:1993L0042:20071011:EN:PDF&quot;&gt;clinical evaluation&lt;/a&gt;. This process is designed to verify that a device performs as it is intended to do so, requiring research to demonstrate efficacy and adverse effect risk, much like the evaluation of a pharmaceutical product. There is a lot of information from MHRA on the &lt;a href=&quot;https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/508494/Guidance_for_mfrs_on_clinical_trials__GN1__-_16_Mar_2016.pdf&quot;&gt;clinical evaluation of medical devices&lt;/a&gt; available online. In addition, any device needs ongoing surveillance of its functionality in order to confirm that it continues to function as it was intended and has had no untoward effects not found during clinical evaluation.&lt;/p&gt;
+
+&lt;p&gt;Most information technology systems are made up of multiple interoperating modules and it is unlikely that all such modules would meet the criteria to become medical devices. As a result, it is possible for the accreditation to be needed for a single module.&lt;/p&gt;
+
+&lt;p&gt;The natural conclusion is to plan for two parallel streams of work in relation to machine learning.&lt;/p&gt;
+
+&lt;p&gt;The first stream is to support the ascertainment, aggregation and presentation of data relating to patients in order to support clinical care. Such data might range from the results from laboratory tests to links to guidelines that might apply in that general clinical context. This stream of work will not meet the criteria for a “medical device” and yet ML offers opportunities to improve how information is recorded, retrieved and shown. Importantly, I’d argue that the graphical display of data is under-used in healthcare and yet is a powerful way of summarising information without inadvertently creating a device that needs accreditation as a medical device.&lt;/p&gt;
+
+&lt;p&gt;The second stream is the development of software that can independently make inferences and judgements and present those results in order to influence or change patient management. Such software would be categorised as a “medical device”, and as a result, this stream of work must be undertaken much as the development of a new pharmacological product, via a phased and iterative structured research programme. The four phases for pharmaceutical products are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Phase I studies the safety of the product, with testing on small numbers of healthy volunteers.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Phase II studies the efficacy of the product usually by randomising individuals to either placebo or the pharmaceutical product and assessing the difference. In clinical situations in which there is an established treatment, the control arm of the study would typically involve the “current standard of care or treatment” rather than placebo.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Phase III is essentially a large scale version of Phase II but patients are almost always randomised. Phase III results can be used to seek MHRA approval for the use of that product.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Phase IV is the post-marketing surveillance, monitoring the real-world use of the product.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;clinical-research-for-medical-devices&quot;&gt;Clinical research for medical devices&lt;/h3&gt;
+
+&lt;p&gt;However, this scheme is modified for medical devices which need to prove safety and performance (as claimed) rather than efficacy. This distinction is made in the &lt;a href=&quot;http://www.hra.nhs.uk/documents/2013/09/approval-of-medical-devices-research-version-2-april-2008.pdf&quot;&gt;UK’s National Patient Safety Agency (NPSA) National Research Ethics Service (NRES) guidance&lt;/a&gt; from 2008. Assessment of safety requires studies to determine whether there are any “undesirable side effects under normal conditions of use and to allow an informed clinical opinion to assess whether these are acceptable when weighed against the benefits in relation to the intended performance of the device.” Assessment of performance requires studies “to verify that under normal conditions of use the performance characteristics of the device are those intended by the manufacturer.”&lt;/p&gt;
+
+&lt;p&gt;Just because a study is required to demonstrate safety and performance, the nature of ML devices is that such studies may not necessarily have to be performed prospectively. Indeed, a simple ML device that is claimed to, for example, recognise a deteriorating renal function, may simply require a study of performance against retrospective clinical data in order to verify that it is performing as required; this is an &lt;em&gt;in-silico trial&lt;/em&gt;. It is important to note that such a process would need to be repeated if the device or its logic changed but this would be straightforward if the device to be tested simply needs to process the validation dataset and have its results checked. Indeed, this is the very essence of test-driven development in which a set of tests are written to validate that a piece of software is correct. The logical conclusions that follow from a need to perform both ML training and then subsequent validation is the provision of large-scale real clinical datasets.&lt;/p&gt;
+
+&lt;p&gt;However, is it possible to reduce the assessment of a medical device to a process of validation of the outputs given the specified inputs?&lt;/p&gt;
+
+&lt;p&gt;In many cases it is, particularly where the scope of the problem to be solved is limited or, a more complex problem has been decomposed manually in a series of steps and each of those steps can be tested independently. It really doesn’t matter if the process performed in each step is opaque as long as we can validate the output given a range in inputs. To answer one of our questions: we don’t have to “see inside the box”. I’d regard these as &lt;em&gt;bounded problems&lt;/em&gt; in which human supervision has carefully curated the data used as input. In essence, the ML is a supervised process and is functioning much as one would apply regression to a set of data in order to determine the covariates that significantly effect the outcome.&lt;/p&gt;
+
+&lt;p&gt;However, what if the inputs and outputs are much more complex and less bounded? In complex medical environments, there may be data relating to a range of parameters such as co-morbidities, patient location, previous admissions, laboratory test results etc. Any or all of these data may be potentially used as input for deep-learning training and may produce random and sometimes bizarre outputs unexpectedly in a minority of situations. The ‘black-box’ inferences resulting from a hypothesis-free unbounded, unsupervised training paradigm using large amounts of clinical data cannot be explained or validated easily. In these circumstances, a model may use unexpected pieces of data made available as part of training in order to derive the outputs. This is particularly important for data that is not a predictive factor for an outcome, but a result of that outcome.&lt;/p&gt;
+
+&lt;p&gt;For example, this might result in inappropriate inferences being made, such as flagging up a patient on the intensive care unit (ICU) as needing intervention more than a patient on the ward. The training data would show that the patient on the ICU to be at greater risk of death, but of course, the presence of the patient on ICU is a result of clinicians identifying that patient and bringing them to the ICU. Such logic may result in paradoxical inferences that ignore a deteriorating patient on a surgical ward.&lt;/p&gt;
+
+&lt;p&gt;Do we have a framework that can certify such logic as being fit-for-purpose? Much like a pharmaceutical product, our more complex ML may have unintended consequences that are not easily demonstrable. In essence, the introduction of ML into a clinical environment becomes an intervention in a similar way to a pharmaceutical product. So, does that mean we must run randomised controlled trials of ML solutions?&lt;/p&gt;
+
+&lt;h3 id=&quot;healthcare-technology-deployment&quot;&gt;Healthcare technology deployment&lt;/h3&gt;
+
+&lt;p&gt;There are important differences between the deployment of technology within healthcare compared to the use of a pharmacological product. For example, a placebo may easily be substituted in place of an actual drug as a part of a randomised trial. If I start using a new treatment for hypertension, it is simply another prescription among many, rather than a change in working practice. However, if I deploy a new electronic patient record system, how can we determine it is effective and safe?&lt;/p&gt;
+
+&lt;p&gt;Similarly, we have little data on the effect of machine learning on the behaviour and actions of clinical users. In particular, do we know what happens when users &lt;em&gt;assume&lt;/em&gt; technology will ensure that they are not making a mistake? Bob Wachter  2015 book, “The Digital Doctor”, explains in details the catalogue of errors that resulted in a patient being given a 39-fold overdose; in many of those errors, the fundamental issue was of inappropriate confidence and trust in the computer.&lt;/p&gt;
+
+&lt;p&gt;However, we do not routinely run clinical trials when deploying new software systems within healthcare. When we introduce a systems for electronic prescribing, patients are not randomised into two groups. There is not a group of patients whose prescriptions are written electronically while another continues to have their medications prescribed on paper. Instead, a system might be deployed incrementally and rolled out piecemeal across an organisation, or the system is procured because there are safety data relating to the product or the type of product from a different organisation. If we know errors in prescription are common when using paper and they were reduced when an electronic system was deployed in another organisation, is this sufficient evidence of its performance?&lt;/p&gt;
+
+&lt;p&gt;Would it be possible to run clinical trials of technology with the same rigour as those used for pharmaceutical products, not simply assessing performance against those claimed but looking for genuine efficacy? Certainly there would be considerable practical difficulties not least in trying to randomise patients to the intervention - in this case a new ML system - and placebo. Most organisations recognise that it is not possible to run randomised controlled trials of changes in their services, structure or indeed, information technology. Instead, they &lt;em&gt;should&lt;/em&gt; adopt a &lt;a href=&quot;/cis-design/2017/05/01/medical-record.html&quot;&gt;continuous improvement methodology&lt;/a&gt; in which they continuously measure, analyse and monitor their services and subsequently effect improvements and repeat.&lt;/p&gt;
+
+&lt;h1 id=&quot;conclusions-for-ml&quot;&gt;Conclusions for ML&lt;/h1&gt;
+
+&lt;p&gt;In conclusion, health professionals and patients are ‘information-poor’ and information technology must be used to improve access to information. However, there are risks in such an approach as important data may be lost within a large amount of irrelevant information and there will be an increasing need to curate, summarise and infer from these data in order to support clinical decision making.&lt;/p&gt;
+
+&lt;p&gt;As such, my first suggestion is that we should be exploring the use of technology and ML to record and display the right information at the right time. It is possible for me to contrive what information I’d like to see when I see a patient with multiple sclerosis, but how can we do this at scale? Can we train deep learning systems with what information to show by giving those systems data on what information a clinician clicks on and reads and subsequently use those insights and heuristics to learn in real-time? Such a learning system should improve over time in response to the navigation choices made by clinicians in different contexts. As a result, instead of showing me a chronological list of investigations, I might be shown the most recent platelet count (dropped to 70 from a previous normal value) along with graph.&lt;/p&gt;
+
+&lt;p&gt;Such a solution will be made much more powerful by ensuring that the ML systems have access to a wide-range of structured clinical information, such as diagnoses and procedures. My second suggestion is therefore to work on the development of a range of clinically useful tools to facilitate the routine, systematic and real-time collection of structured data.&lt;/p&gt;
+
+&lt;p&gt;Thirdly, in order to look back at ML ‘decisions’, we must be able to see a snapshot of the data used by ML at the time of the decision. This means that it must be possible to either store or recreate what the algorithm saw at the time of making any inferences as well as a record of those inferences and the action taken.&lt;/p&gt;
+
+&lt;p&gt;Fourthly, the introduction of ML within healthcare should aim to surpass the formal regulatory requirements. Any software deployment should adopt a continuous improvement methodology in which there is an attempt to measure its performance and safety in a real-life clinical environment. All ML systems should have training and subsequent validation using independent data via &lt;em&gt;in silico&lt;/em&gt; clinical trials and overseen by appropriate governance arrangements.&lt;/p&gt;
+
+&lt;p&gt;In particular, any ML system that meets the requirements of a medical device requires additional safeguards and I would argue that current requirement to simply demonstrate its performance compared to what is claimed is insufficient.  Instead, I suggest that phase III clinical trials of medical devices containing artificial intelligence (AI) must be performed in a way that permits us as a health community to understand the value and the risk from the introduction of artificial intelligence over and above the other technology required.&lt;/p&gt;
+
+&lt;p&gt;A controlled trial of ML might be possible within a single organisation but I would envisage a trial across multiple organisations would be needed in order to compare the efficacy and safety between those using AI and those who are not. For such a study, we would try to isolate the use of machine learning as the only difference between the control and intervention arm. As a result, deployment would need to be across both organisations with the only difference being the use of ML itself.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">In a previous blog post, I have discussed the value of information technology in supporting clinical care, unashamedly stealing and modifying Google’s original mantra: to organise healthcare and patient information and make it universally accessible and useful</summary></entry><entry><title type="html">Clinical information system design: 3. Data standards and terminology</title><link href="https://www.wardle.org/cis-design/2017/05/02/data-standards.html" rel="alternate" type="text/html" title="Clinical information system design: 3. Data standards and terminology" /><published>2017-05-02T15:20:00+01:00</published><updated>2017-05-02T15:20:00+01:00</updated><id>https://www.wardle.org/cis-design/2017/05/02/data-standards</id><content type="html" xml:base="https://www.wardle.org/cis-design/2017/05/02/data-standards.html">&lt;p&gt;A terminology is a body of terms used within a particular subject of study or profession. A classification is a systematic organisation of things into classes. A classification system such as ICD-10 cannot be used as a terminology and many terminologies cannot be easily used as a classification system. This is an important distinction and relates to the how those data are primarily used.&lt;/p&gt;
 
 &lt;h1 id=&quot;snomed-ct&quot;&gt;SNOMED CT&lt;/h1&gt;
 
@@ -653,149 +790,4 @@ Although limited in scope, it has been adopted by HL7 as the standard code syste
 
 &lt;p&gt;&lt;a name=&quot;consent-form&quot;&gt;b&lt;/a&gt;: In the PatientCare EPR, I have an electronic consent system with specific items of consent mapped in an information model exposed via a REST service. An iPad application can use this to build a ResearchKit based consent form automatically and dynamically. The following video demonstrates this functionality in which I edit a consent form electronically and the change is seen in the ResearchKit based application, here running on an iPad.&lt;/p&gt;
 
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/59tGM85zzlY&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name></name></author><summary type="html">Update: 8th April 2017. I have refined the data model in a subsequent post.</summary></entry><entry><title type="html">Test requesting</title><link href="https://www.wardle.org/clinical-informatics/2017/04/04/test-requesting.html" rel="alternate" type="text/html" title="Test requesting" /><published>2017-04-04T12:27:23+01:00</published><updated>2017-04-04T12:27:23+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/04/04/test-requesting</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/04/04/test-requesting.html">&lt;p&gt;I discussed the importance of scope and framing in a &lt;a href=&quot;/clinical-design/2017/03/23/scope-framing-clinical-design.html&quot;&gt;recent blog post&lt;/a&gt; concluding that the framing and scope of the overall problem domain must be broad enough to model reality but that solutions must be broken-up into components each of limited scope.&lt;/p&gt;
-
-&lt;p&gt;This is a natural conclusion from a domain-driven design approach in which the design of clinical systems begins with a deep understanding of the domain. An issue for clinicians and those who develop information systems is that there are domain concepts which are implicit and assumed; assumptions and heuristics and understanding built up over many years of working in clinical practice.&lt;/p&gt;
-
-&lt;p&gt;An example are the processes and workflow in clinical practice. A development team can work on a system to allow users to request tests but until the scope of the problem is sufficiently broadened to include a model of clinical workflow, a solution risks causing a mismatch between reality and software. I touch on mismatches in my &lt;a href=&quot;https://www.dropbox.com/s/62sg71a19voxpts/cis_design.pdf?dl=0&quot;&gt;domain-driven clinical information system paper&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Experience and a sense of aesthetics are important. A clumsy model results in a clumsy user interface and user dissatisfaction, despite a long list of requirements which the design team have succeeding in delivering.&lt;/p&gt;
-
-&lt;h4 id=&quot;the-current-system&quot;&gt;The current system&lt;/h4&gt;
-
-&lt;p&gt;In Wales, we have a “Welsh Clinical Portal” application which is meant to turn into a complete solution for almost all healthcare staff under the banner of “Once for Wales”. However, it is already acknowledged that the system is not suitable for primary care or the emergency unit of organisations across Wales, or indeed, operating theatres or the community.&lt;/p&gt;
-
-&lt;p&gt;I feel very strongly that user-facing applications should be process and workflow-driven, improving care and supporting care in specific clinical situations. However, to prevent duplication of effort, such applications such be &lt;em&gt;stupid&lt;/em&gt;. They should possess little or no logic but use functionality provided by a national platform to make sense of what they are trying to achieve. Our user-facing applications become simply thin wrappers around a service-orientated architecture as part of that platform. A user-interface may be &lt;em&gt;smart&lt;/em&gt; but only in it adapts in a smart way to what the user is doing.&lt;/p&gt;
-
-&lt;p&gt;As I outlined previously:&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;The current solution tries to be everything to everyone. It supports requesting tests for an arbitrary date, or set of dates. It is accessible only within the WCP application itself; its user interface, its functionality and the services it uses to implement its functionality are not available outside of WCP.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The main issues as I see it are:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;The current system supports only laboratory tests and different screens are planned to support requesting other tests such as radiology.&lt;/li&gt;
-  &lt;li&gt;The core functionality should be available to other software via an application programming interface (API) which enforces business rules supporting the domain logic on which test requesting must depend.&lt;/li&gt;
-  &lt;li&gt;A single user-interface may not be appropriate in all workflows.&lt;/li&gt;
-  &lt;li&gt;A core default user interface should also be available to other software so that it may be embedded in different systems to suit different workflows.&lt;/li&gt;
-  &lt;li&gt;There are problems with the existing user interface.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Should I focus on redesigning the user interface, or challenge the current architecture?&lt;/p&gt;
-
-&lt;p&gt;I’ll go with the latter, although we can make the user interface much smarter as well.&lt;/p&gt;
-
-&lt;h2 id=&quot;applying-domain-driven-design-in-test-requesting&quot;&gt;Applying domain-driven design in test requesting&lt;/h2&gt;
-
-&lt;p&gt;I’m going to use a redesign of the test requesting workflow as an example of applying domain-driven design.&lt;/p&gt;
-
-&lt;h3 id=&quot;explicit-rules-vs-implicit-assumptions&quot;&gt;Explicit rules vs. implicit assumptions&lt;/h3&gt;
-
-&lt;p&gt;Business rules and assumptions are frequently overlooked when clinicians and designers meet. They contain implicit knowledge that is routine, mundane, automatic and most importantly, assumed. It is important to fully explore a problem domain and challenge implicit assumption in both workflow and process.&lt;/p&gt;
-
-&lt;p&gt;In addition, these assumptions will vary; not just between different professions within healthcare but even within the same specialism. Indeed, I must admit to creating contradictory and inconsistent perspectives in my own clinical practice when creating my own EPR and realising my mistake only at the time of implementation.&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;RULE ONE:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Examine and judge all assumptions; make the rules that drive your system(s) explicit.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;declarative-vs-imperative-systems&quot;&gt;Declarative vs. imperative systems&lt;/h3&gt;
-
-&lt;p&gt;Declarative environments allows the rules and logic of a system to be expressed without describing the procedure that must be followed in order to apply that logic. This is very different to a procedural (or “imperative”) approach in which rules and logic are present by virtue of how they have been interpreted and turned into a sequence of commands by a programmer. In declarative programming, the logic and rules are explicit; in procedural programming, they are implicit.&lt;/p&gt;
-
-&lt;p&gt;Non-programmers might assume that declarative programming must be the most common method to build software in the modern age, given that the rules and logic are expressed logically and explicitly. In fact, this is not the case, and the most commonly used programming languages today are procedural programming languages. There are a variety of reasons for this which are outside of the scope of this article.&lt;/p&gt;
-
-&lt;p&gt;Complex business environments - and I very much include healthcare information technology - are frequently made up of many different systems all with different responsibilities and scope. Business rules can be distributed across systems making it difficult to understand how or why something unexpected has happened when a set of unusual circumstances come together and result in a critical incident. We want healthcare software to be deterministic; we want to prove that a system does what we say it does. It makes sense therefore to build in business rules management into the design of any clinical information system so that our software can leverage those business rules and adapt when those rules change in the future.&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;RULE TWO:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Favour explicit rules written declaratively in the language of the business.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;architectural-design--aesthetics&quot;&gt;Architectural design / aesthetics&lt;/h3&gt;
-
-&lt;p&gt;In Section 5 of &lt;a href=&quot;https://www.dropbox.com/s/62sg71a19voxpts/cis_design.pdf?dl=0&quot;&gt;Domain-driven design for clinical systems&lt;/a&gt;, I introduce a number of fundamental architectural decisions such as layering, the use of a service-orientated approach and model-view-controller designs. I will not repeat those here.&lt;/p&gt;
-
-&lt;p&gt;I introduced this diagram in my blog post about &lt;a href=&quot;/clinical-design/2017/03/23/scope-framing-clinical-design.html&quot;&gt;scope and framing of clinical problems&lt;/a&gt;:
-&lt;img src=&quot;/images/test-requesting.png&quot; alt=&quot;Test Requesting&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Importantly, this schematic emphasises the importance of breaking-up our test requesting solution into components representing those that face the user (our user interface) and those that face our other services (our business interfaces). Interfaces to the user fundamentally depend on the workflow that our clinical information system is meant to support. In addition, computing hardware changes frequently with new handheld devices and new ways of working, so it is important to ensure separation between user-facing applications and underlying business logic.&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;RULE THREE:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Always design to support multiple user interfaces on multiple devices.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;This rule forces several important architectural decisions, particularly if one abides by the next rule as well:&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;RULE FOUR:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Don’t repeat yourself&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Critically, it means that all business logic must exist at the service-layer of your architecture and then your user-facing applications are &lt;em&gt;stupid&lt;/em&gt; in that they delegate all control logic to other services, but &lt;em&gt;smart&lt;/em&gt; in the way that they fit in and support clinical workflow.&lt;/p&gt;
-
-&lt;h3 id=&quot;test-requesting&quot;&gt;Test requesting&lt;/h3&gt;
-
-&lt;p&gt;So for test requesting, our user interface via a web browser might look like this:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/test-request/landing-page.png&quot; alt=&quot;Landing Page&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Generic test requesting, not just for laboratory tests. Do you expect me to use a different screen to request different types of tests such as radiology? We extend the frame of our overall problem.&lt;/li&gt;
-  &lt;li&gt;No modal dialogs but a smart user interface that reacts to our keypresses and mouse clicks, adapting itself appropriately. Why make the user click a button to send the request and then show them a modal alert? Instead, make the button inactive and tell them what needs to be done to make it active.&lt;/li&gt;
-  &lt;li&gt;If additional information is required, then adaptive forms appear to request that information:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/test-request/adding-free-text.png&quot; alt=&quot;Adding Free Text&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Here the user can see what needs to be done to complete the form: enter information about thyroid function and then enter their password:&lt;/p&gt;
-
-&lt;p&gt;To make a test a favourite, we allow users to toggle the heart icon. To choose from our favourites, we do this:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/test-request/adding-favourites.png&quot; alt=&quot;Adding Favourites&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;And finally, when the request is ready to be sent:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/test-request/ready-for-request.png&quot; alt=&quot;Ready For Request&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The information about thyroid status and whether the patient takes thyroxine should really be completed automatically from what we already know about the patient. For now however, WCP doesn’t have this information readily available. In our design however, we must consider how information could be auto-completed.&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;RULE FIVE:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Plan for the future.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;what-do-we-need&quot;&gt;What do we need?&lt;/h3&gt;
-
-&lt;p&gt;Architecturally, we need:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;A service to provide fast full-text searching for tests.&lt;/li&gt;
-  &lt;li&gt;A test handbook service - a declarative repository of investigations and the rules that manage those investigations. This test handbook must also add support for explicitly declaring additional information required at the point-of-request as well as hooks to allow external services to help manage the requesting workflow for that test. This test handbook service conceptually is a business rules engine, declaring exactly what is permitted and when.&lt;/li&gt;
-  &lt;li&gt;As a result, a request-workflow service must be designed to handle all tests in a generic way but, for certain investigations, a more custom service URL can be specified in which more complex logic can be performed in an imperative manner.&lt;/li&gt;
-  &lt;li&gt;Each request-workflow service must consider how access to structured electronic health record information might support their use. For example, logic supporting thyroid function may auto-complete the “taking thyroxine” pop-up by simply looking at a FHIR representation of the current medication list at the time of the test.&lt;/li&gt;
-  &lt;li&gt;Services to provide support for the lists of locations and clinicians bound to the specific workflow and currently logged-in user.&lt;/li&gt;
-  &lt;li&gt;A service to register and list favourite investigations for individual clinicians and groups of clinicians.&lt;/li&gt;
-  &lt;li&gt;Underlying services to actually action the test request.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Almost all of this functionality is already available, but is available only to the existing application.&lt;/p&gt;
-
-&lt;h3 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h3&gt;
-
-&lt;p&gt;In conclusion, I have widened the scope of the overall solution to include all investigations and not only laboratory tests, but modularised the architecture and narrowed the scope of these individual components.&lt;/p&gt;
-
-&lt;p&gt;Mark&lt;/p&gt;</content><author><name></name></author><summary type="html">I discussed the importance of scope and framing in a recent blog post concluding that the framing and scope of the overall problem domain must be broad enough to model reality but that solutions must be broken-up into components each of limited scope.</summary></entry></feed>
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/59tGM85zzlY&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name></name></author><summary type="html">Update: 8th April 2017. I have refined the data model in a subsequent post.</summary></entry></feed>

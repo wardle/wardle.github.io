@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Safely deploying machine learning in healthcare</title>
+  <meta name="description" content="In a previous blog post, I have discussed the value of information technology in supporting clinical care, unashamedly stealing and modifying Google’s origin...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://www.wardle.org/clinical-informatics/2017/05/10/machine-learning.html">
+  <link rel="alternate" type="application/rss+xml" title="Dr. Mark Wardle" href="/feed.xml">
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-97389603-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="/">Dr. Mark Wardle</a>
+  
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          
+            
+            
+            <a class="page-link" href="/about/">About</a>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Safely deploying machine learning in healthcare</h1>
+    <p class="post-meta">
+      <time datetime="2017-05-10T11:55:00+01:00" itemprop="datePublished">
+        
+        May 10, 2017
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>In a previous blog post, I have discussed the value of information technology in supporting clinical care, unashamedly stealing and modifying Google’s original mantra:</p>
+<blockquote>
+  <p><a href="/clinical-informatics/2017/03/09/google-information.html">to organise healthcare and patient information and make it universally accessible and useful</a></p>
+</blockquote>
+
+<p>and argued that we should be making healthcare safer by <a href="/information-governance/2017/03/19/information-governance.html">running it on rails</a>.</p>
+
+<p>Now I also regularly argue that we should be routinely recording structured information about our patients including information relating to problems, diagnoses and outcomes. Such data then allows us to make appropriate inferences about our patients such as, how is this patient doing compared to other patients with this condition? In many clinical situations, identifying the patient not behaving as expected is important.</p>
+
+<p>While machine learning (ML) holds the promise for creating tools that can make such inferences independently or semi-independently, I would argue that information technology can also valuably support care by organising and presenting information about patients to patients and clinicians and providing intuitive adaptive tools that allow the systematic recording of clinical information.</p>
+
+<p>Such goals may sound mundane compared to the future possibilities of machine learning in healthcare, but to clinicians and patients who have spent many years being “information-poor”, the power of having all relevant information available on hand as well as adaptive tools to record that information quickly and efficiently should not be under-estimated.</p>
+
+<p>The conclusion is, therefore, that we need clinical information systems that enable health professionals and patients to make inferences and support clinical decision making.</p>
+
+<h1 id="machine-learning-for-clinical-decision-making">Machine learning for clinical decision making</h1>
+
+<p>The problem with inferences made independently by ML is that we may not be able to, figuratively speaking, open the box and see the logical, sequential arguments and premises used to reach a conclusion. Much as in legal argument or any other form of logical reasoning, carefully crafted reasoning and argument are built upon a framework of assumptions and known evidence. In such reasoning, one can craft inferences upon inferences and justify the final conclusions by examination of each step.</p>
+
+<p>Human decision making is fallible and frequently non-deterministic with <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3057365/">human error often the source of important errors in healthcare</a>. Indeed, systems designed to reduce the frequency and impact of human error such as checklists, redundancy, guidelines and protocols are attempts to make human decision making more deterministic and less at risk of bias. Many systems work by breaking down a larger decision or process of care into smaller discrete steps.</p>
+
+<p>If I see a patient and start them on a new treatment, such as pyridostigmine, you can ask me to justify why I recommended starting this treatment for that patient in clinic and I will be able to give you a logical reasoned argument built upon evidence and inference that will include the presence or absence of particular characteristics. In this case, the characteristics may include knowledge of the diagnosis of myasthenia gravis and the rationale for that diagnosis such as the positive finding of acetylcholine receptor antibodies in the patient’s serum. I may explain the balance between symptomatic treatment such as pyridostigmine and treatments of greater efficacy but risk of adverse effects in arriving at that decision.</p>
+
+<p>Essentially, I can attempt to demonstrate the correctness of my final decision by a chain of reasoning. Similarly, someone else might be able to conclude I made the wrong decision by examining that chain of reasoning.</p>
+
+<p>So the logical questions are:</p>
+
+<ul>
+  <li>what are the regulatory requirements within which we must work in order to make effective use of ML in healthcare?</li>
+  <li>do we need to understand how machines arrive at their conclusions, so we can justify using those conclusions in clinical practice?</li>
+  <li>won’t designing  information systems that arrive at their conclusions without justification risk replicating the fallibility of human decision making?</li>
+  <li>must we be able to <em>see inside the box</em>?</li>
+  <li>can augmented ML decision support processes be decomposed into discrete steps with the results of one semi-deterministic “black-box” feeding the action of another? Does such decomposition result in creating a partial ‘window’ to allow us to understand the chain of reasoning created by ML devices?</li>
+  <li>and finally, how can we introduce machine learning in a safe and incremental manner in healthcare?</li>
+</ul>
+
+<h1 id="medical-devices">“Medical devices”</h1>
+
+<p>The Medicines &amp; Healthcare Regulatory Agency (MHRA) provides <a href="https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/610189/Software_flow_chart_Ed_1-03.pdf">helpful advice on the certification of software used in healthcare</a>. That interactive PDF will take you step-by-step through a decision aid in order to determine whether your software meets the definition of a “medical advice”, and needs certification and accreditation with a declaration of conformity (“CE” marking).</p>
+
+<p>The guidance is logically organised and intuitive except that the section on “medical purpose” needs to be read carefully. Many things that you might think have a “medical purpose” are not included in their definition. This is important as if your software has a “medical purpose”, then essentially it needs assessment and certification as a medical device.</p>
+
+<p>For example, software which independently makes a diagnosis based on imaging data would satisfy the test for “medical purpose” and therefore be labelled a medical device. However, software which displays data and makes general recommendations is not a medical device. Software or devices which monitor sport or fitness are not medical devices, but would be considered as such if they were intended for use to monitor physiological parameters that will affect the treatment of a patient.</p>
+
+<p>If software claims to do any of the following, then it does have a “medical purpose”:</p>
+
+<ul>
+  <li>make recommendations to seek further advice based on user entered data.</li>
+  <li>indicate the risk that a specific patient has of developing a disease based on entered data for that patient.</li>
+  <li>allow remote access to information on physical monitors and applies user-defined filtering rules to any alarms generated by the original device.</li>
+  <li>monitor a patient and collects information entered by the user, measured automatically by the app or collected by a point of care device may qualify as a medical device if the output is intended to affect the treatment of an individual.</li>
+  <li>automate the treatment pathway for an individual patient.</li>
+  <li>provide clinical decisions</li>
+  <li>intended for therapeutic drug monitoring</li>
+</ul>
+
+<p>However, if software has only one of these purposes, then it is not considered as having a “medical purpose”:</p>
+
+<ul>
+  <li>Patient medical education</li>
+  <li>Monitors fitness/health/wellbeing</li>
+  <li>Professional medical education</li>
+  <li>Stores or transmits medical data without change</li>
+  <li>Software that is used to book an appointment, request a prescription or have a virtual consultation is also unlikely to be considered a medical device if it only has an administrative function.</li>
+  <li>Software that provides reference information to help a Healthcare Professional to use their knowledge to make a clinical decision.</li>
+  <li>Data or databases for storing data</li>
+</ul>
+
+<h1 id="implications-for-information-technology">Implications for information technology</h1>
+
+<p>The process of confirmation of conformity with the requirements of a “medical device” is confirmation that it passes <a href="http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CONSLEG:1993L0042:20071011:EN:PDF">clinical evaluation</a>. This process is designed to verify that a device performs as it is intended to do so, requiring research to demonstrate efficacy and adverse effect risk, much like the evaluation of a pharmaceutical product. There is a lot of information from MHRA on the <a href="https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/508494/Guidance_for_mfrs_on_clinical_trials__GN1__-_16_Mar_2016.pdf">clinical evaluation of medical devices</a> available online. In addition, any device needs ongoing surveillance of its functionality in order to confirm that it continues to function as it was intended and has had no untoward effects not found during clinical evaluation.</p>
+
+<p>Most information technology systems are made up of multiple interoperating modules and it is unlikely that all such modules would meet the criteria to become medical devices. As a result, it is possible for the accreditation to be needed for a single module.</p>
+
+<p>The natural conclusion is to plan for two parallel streams of work in relation to machine learning.</p>
+
+<p>The first stream is to support the ascertainment, aggregation and presentation of data relating to patients in order to support clinical care. Such data might range from the results from laboratory tests to links to guidelines that might apply in that general clinical context. This stream of work will not meet the criteria for a “medical device” and yet ML offers opportunities to improve how information is recorded, retrieved and shown. Importantly, I’d argue that the graphical display of data is under-used in healthcare and yet is a powerful way of summarising information without inadvertently creating a device that needs accreditation as a medical device.</p>
+
+<p>The second stream is the development of software that can independently make inferences and judgements and present those results in order to influence or change patient management. Such software would be categorised as a “medical device”, and as a result, this stream of work must be undertaken much as the development of a new pharmacological product, via a phased and iterative structured research programme. The four phases for pharmaceutical products are:</p>
+
+<ul>
+  <li>
+    <p>Phase I studies the safety of the product, with testing on small numbers of healthy volunteers.</p>
+  </li>
+  <li>
+    <p>Phase II studies the efficacy of the product usually by randomising individuals to either placebo or the pharmaceutical product and assessing the difference. In clinical situations in which there is an established treatment, the control arm of the study would typically involve the “current standard of care or treatment” rather than placebo.</p>
+  </li>
+  <li>
+    <p>Phase III is essentially a large scale version of Phase II but patients are almost always randomised. Phase III results can be used to seek MHRA approval for the use of that product.</p>
+  </li>
+  <li>
+    <p>Phase IV is the post-marketing surveillance, monitoring the real-world use of the product.</p>
+  </li>
+</ul>
+
+<h3 id="clinical-research-for-medical-devices">Clinical research for medical devices</h3>
+
+<p>However, this scheme is modified for medical devices which need to prove safety and performance (as claimed) rather than efficacy. This distinction is made in the <a href="http://www.hra.nhs.uk/documents/2013/09/approval-of-medical-devices-research-version-2-april-2008.pdf">UK’s National Patient Safety Agency (NPSA) National Research Ethics Service (NRES) guidance</a> from 2008. Assessment of safety requires studies to determine whether there are any “undesirable side effects under normal conditions of use and to allow an informed clinical opinion to assess whether these are acceptable when weighed against the benefits in relation to the intended performance of the device.” Assessment of performance requires studies “to verify that under normal conditions of use the performance characteristics of the device are those intended by the manufacturer.”</p>
+
+<p>Just because a study is required to demonstrate safety and performance, the nature of ML devices is that such studies may not necessarily have to be performed prospectively. Indeed, a simple ML device that is claimed to, for example, recognise a deteriorating renal function, may simply require a study of performance against retrospective clinical data in order to verify that it is performing as required; this is an <em>in-silico trial</em>. It is important to note that such a process would need to be repeated if the device or its logic changed but this would be straightforward if the device to be tested simply needs to process the validation dataset and have its results checked. Indeed, this is the very essence of test-driven development in which a set of tests are written to validate that a piece of software is correct. The logical conclusions that follow from a need to perform both ML training and then subsequent validation is the provision of large-scale real clinical datasets.</p>
+
+<p>However, is it possible to reduce the assessment of a medical device to a process of validation of the outputs given the specified inputs?</p>
+
+<p>In many cases it is, particularly where the scope of the problem to be solved is limited or, a more complex problem has been decomposed manually in a series of steps and each of those steps can be tested independently. It really doesn’t matter if the process performed in each step is opaque as long as we can validate the output given a range in inputs. To answer one of our questions: we don’t have to “see inside the box”. I’d regard these as <em>bounded problems</em> in which human supervision has carefully curated the data used as input. In essence, the ML is a supervised process and is functioning much as one would apply regression to a set of data in order to determine the covariates that significantly effect the outcome.</p>
+
+<p>However, what if the inputs and outputs are much more complex and less bounded? In complex medical environments, there may be data relating to a range of parameters such as co-morbidities, patient location, previous admissions, laboratory test results etc. Any or all of these data may be potentially used as input for deep-learning training and may produce random and sometimes bizarre outputs unexpectedly in a minority of situations. The ‘black-box’ inferences resulting from a hypothesis-free unbounded, unsupervised training paradigm using large amounts of clinical data cannot be explained or validated easily. In these circumstances, a model may use unexpected pieces of data made available as part of training in order to derive the outputs. This is particularly important for data that is not a predictive factor for an outcome, but a result of that outcome.</p>
+
+<p>For example, this might result in inappropriate inferences being made, such as flagging up a patient on the intensive care unit (ICU) as needing intervention more than a patient on the ward. The training data would show that the patient on the ICU to be at greater risk of death, but of course, the presence of the patient on ICU is a result of clinicians identifying that patient and bringing them to the ICU. Such logic may result in paradoxical inferences that ignore a deteriorating patient on a surgical ward.</p>
+
+<p>Do we have a framework that can certify such logic as being fit-for-purpose? Much like a pharmaceutical product, our more complex ML may have unintended consequences that are not easily demonstrable. In essence, the introduction of ML into a clinical environment becomes an intervention in a similar way to a pharmaceutical product. So, does that mean we must run randomised controlled trials of ML solutions?</p>
+
+<h3 id="healthcare-technology-deployment">Healthcare technology deployment</h3>
+
+<p>There are important differences between the deployment of technology within healthcare compared to the use of a pharmacological product. For example, a placebo may easily be substituted in place of an actual drug as a part of a randomised trial. If I start using a new treatment for hypertension, it is simply another prescription among many, rather than a change in working practice. However, if I deploy a new electronic patient record system, how can we determine it is effective and safe?</p>
+
+<p>Similarly, we have little data on the effect of machine learning on the behaviour and actions of clinical users. In particular, do we know what happens when users <em>assume</em> technology will ensure that they are not making a mistake? Bob Wachter  2015 book, “The Digital Doctor”, explains in details the catalogue of errors that resulted in a patient being given a 39-fold overdose; in many of those errors, the fundamental issue was of inappropriate confidence and trust in the computer.</p>
+
+<p>However, we do not routinely run clinical trials when deploying new software systems within healthcare. When we introduce a systems for electronic prescribing, patients are not randomised into two groups. There is not a group of patients whose prescriptions are written electronically while another continues to have their medications prescribed on paper. Instead, a system might be deployed incrementally and rolled out piecemeal across an organisation, or the system is procured because there are safety data relating to the product or the type of product from a different organisation. If we know errors in prescription are common when using paper and they were reduced when an electronic system was deployed in another organisation, is this sufficient evidence of its performance?</p>
+
+<p>Would it be possible to run clinical trials of technology with the same rigour as those used for pharmaceutical products, not simply assessing performance against those claimed but looking for genuine efficacy? Certainly there would be considerable practical difficulties not least in trying to randomise patients to the intervention - in this case a new ML system - and placebo. Most organisations recognise that it is not possible to run randomised controlled trials of changes in their services, structure or indeed, information technology. Instead, they <em>should</em> adopt a <a href="/cis-design/2017/05/01/medical-record.html">continuous improvement methodology</a> in which they continuously measure, analyse and monitor their services and subsequently effect improvements and repeat.</p>
+
+<h1 id="conclusions-for-ml">Conclusions for ML</h1>
+
+<p>In conclusion, health professionals and patients are ‘information-poor’ and information technology must be used to improve access to information. However, there are risks in such an approach as important data may be lost within a large amount of irrelevant information and there will be an increasing need to curate, summarise and infer from these data in order to support clinical decision making.</p>
+
+<p>As such, my first suggestion is that we should be exploring the use of technology and ML to record and display the right information at the right time. It is possible for me to contrive what information I’d like to see when I see a patient with multiple sclerosis, but how can we do this at scale? Can we train deep learning systems with what information to show by giving those systems data on what information a clinician clicks on and reads and subsequently use those insights and heuristics to learn in real-time? Such a learning system should improve over time in response to the navigation choices made by clinicians in different contexts. As a result, instead of showing me a chronological list of investigations, I might be shown the most recent platelet count (dropped to 70 from a previous normal value) along with graph.</p>
+
+<p>Such a solution will be made much more powerful by ensuring that the ML systems have access to a wide-range of structured clinical information, such as diagnoses and procedures. My second suggestion is therefore to work on the development of a range of clinically useful tools to facilitate the routine, systematic and real-time collection of structured data.</p>
+
+<p>Thirdly, in order to look back at ML ‘decisions’, we must be able to see a snapshot of the data used by ML at the time of the decision. This means that it must be possible to either store or recreate what the algorithm saw at the time of making any inferences as well as a record of those inferences and the action taken.</p>
+
+<p>Fourthly, the introduction of ML within healthcare should aim to surpass the formal regulatory requirements. Any software deployment should adopt a continuous improvement methodology in which there is an attempt to measure its performance and safety in a real-life clinical environment. All ML systems should have training and subsequent validation using independent data via <em>in silico</em> clinical trials and overseen by appropriate governance arrangements.</p>
+
+<p>In particular, any ML system that meets the requirements of a medical device requires additional safeguards and I would argue that current requirement to simply demonstrate its performance compared to what is claimed is insufficient.  Instead, I suggest that phase III clinical trials of medical devices containing artificial intelligence (AI) must be performed in a way that permits us as a health community to understand the value and the risk from the introduction of artificial intelligence over and above the other technology required.</p>
+
+<p>A controlled trial of ML might be possible within a single organisation but I would envisage a trial across multiple organisations would be needed in order to compare the efficacy and safety between those using AI and those who are not. For such a study, we would try to isolate the use of machine learning as the only difference between the control and intervention arm. As a result, deployment would need to be across both organisations with the only difference being the use of ML itself.</p>
+
+<p><em>Mark</em></p>
+
+  </div>
+
+  
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Dr. Mark Wardle</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Dr. Mark Wardle
+            
+            </li>
+            
+            <li><a href="mailto:mark@wardle.org">mark@wardle.org</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/wardle"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">wardle</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/mwardle"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">mwardle</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
