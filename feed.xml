@@ -1,5 +1,71 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-05-11T07:03:37+01:00</updated><id>https://www.wardle.org/</id><title type="html">Dr. Mark Wardle</title><subtitle>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
-</subtitle><entry><title type="html">Safely deploying machine learning in healthcare</title><link href="https://www.wardle.org/clinical-informatics/2017/05/10/machine-learning.html" rel="alternate" type="text/html" title="Safely deploying machine learning in healthcare" /><published>2017-05-10T11:55:00+01:00</published><updated>2017-05-10T11:55:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/05/10/machine-learning</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/05/10/machine-learning.html">&lt;p&gt;In a previous blog post, I have discussed the value of information technology in supporting clinical care, unashamedly stealing and modifying Google’s original mantra:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-05-15T23:42:34+01:00</updated><id>https://www.wardle.org/</id><title type="html">Dr. Mark Wardle</title><subtitle>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
+</subtitle><entry><title type="html">Google DeepMind Caldicott letter</title><link href="https://www.wardle.org/clinical-informatics/2017/05/10/caldicott.html" rel="alternate" type="text/html" title="Google DeepMind Caldicott letter" /><published>2017-05-10T11:55:00+01:00</published><updated>2017-05-10T11:55:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/05/10/caldicott</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/05/10/caldicott.html">&lt;blockquote&gt;
+  &lt;p&gt;Google Deepmind may have received the personally identifying medical records of million NHS patients on a legally inappropriate basis&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://twitter.com/skynewstonight/status/864183833960235014&quot;&gt;Sky News, 15th May 2017&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Taking into account what you have now clarified, it is my view and that of my panel that the purpose for the transfer of 1.6 million identifiable patient records to Google DeepMind was for the testing of the Streams application, and not for the provision of direct care to patients. Given that Streams was going through testing and therefore could not be relied upon for patient care, any role the application might have played in supporting the provision of direct care would have been limited and secondary to the purpose of the data transfer. My considered opinion therefore remains that it would not have been within the reasonable expectation of patients that their records would have been shared for this purpose.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://twitter.com/lexanderjmartin/status/864183460478541825&quot;&gt;Dame Fiona Caldicott, National Data Guardian, February 2017&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;trust-and-openness&quot;&gt;Trust and openness&lt;/h1&gt;
+
+&lt;p&gt;Fundamentally, this is about trust and openness. It is what is reasonable and expected.&lt;/p&gt;
+
+&lt;p&gt;However, while that’s quite easy to say, who decides what is reasonable and expected? Do you know how your medical information are stored and to whom they are shared? For example, would you expect an IT supplier to potentially have access to your information?&lt;/p&gt;
+
+&lt;p&gt;Here is an extract from a contract between a UK health organisation and an IT system supplier (and it is not the Google DeepMind contract):&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;Personal data and medical records.&lt;/em&gt; The Supplier shall at all times comply with the Data Protection Legislate. In particular the Supplier acknowledges that in the course of providing the Works and/or Services it may access Personal Data. As needed the Supplier undertakes: a) to maintain technical and organisational security measures sufficient to comply at least with the obligations imposed on the Trust by the Seventh Data Protection Principle; b) only to process Personal Data for and on behalf of the Trust, in accordance with the instructions of the Trust and for the purpose of performance of the; c) to allow the Trust to audit the Supplier’s compliance with the requirements of this Clause on reasonable notice and/or to provide the Trust with evidence of its compliance with the obligations set out in this Clause.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Indeed, the Royal Free have published a useful video on how patient information may be used within an organisation and with suppliers who are acting &lt;em&gt;for and on behalf&lt;/em&gt; of them:&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/VgpzDYStjm0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;It is therefore clear that a large health organisation will use patient information for direct clinical care but will share those data when appropriate when other organisations or suppliers are acting “for and on behalf” of them to support the care of patients.&lt;/p&gt;
+
+&lt;p&gt;I’m surprised by the level of criticism on Twitter this evening and impressed by the balanced view given by the Sky News item. Dame Caldicott has written to the Information Commissioner’s Office (ICO) to raise her concerns. There will be an investigation from the ICO who will make a decision regarding whether data sharing was appropriate or not.&lt;/p&gt;
+
+&lt;h1 id=&quot;what-is-testing&quot;&gt;What is “testing”?&lt;/h1&gt;
+
+&lt;p&gt;The issue at hand appears to be the use of patient data to test a software application. Dame Caldicott opines that as data were transferred for testing, then such transfer was unreasonable.&lt;/p&gt;
+
+&lt;p&gt;To make a judgement on this matter, one needs to understand the law relating to confidential information, the information governance principles and software development. 
+The &lt;a href=&quot;https://www.gov.uk/data-protection/the-data-protection-act&quot;&gt;Data Protection Act&lt;/a&gt; requires that data be used fairly and lawfully in a way that is adequate, relevant and not excessive. 
+The &lt;a href=&quot;http://webarchive.nationalarchives.gov.uk/20130107105354/http://www.dh.gov.uk/en/Publicationsandstatistics/Publications/PublicationsPolicyAndGuidance/DH_4068403&quot;&gt;first Caldicott Committee report&lt;/a&gt; was released in 1997 and stipulated six key principles for information governance. The &lt;a href=&quot;https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/192572/2900774_InfoGovernance_accv2.pdf&quot;&gt;second report&lt;/a&gt; refined these core principles and emphasised the difference between implicit consent for direct patient care and explicit consent for research. The &lt;a href=&quot;https://www.gov.uk/government/publications/review-of-data-security-consent-and-opt-outs&quot;&gt;third report&lt;/a&gt;, commissioned after the care.data debacle, was published last year and we await an official Government response.&lt;/p&gt;
+
+&lt;h3 id=&quot;is-the-streams-application-for-direct-care&quot;&gt;Is the Streams application for direct care?&lt;/h3&gt;
+
+&lt;p&gt;Therefore, the first question to ask is whether the Streams application is for the direct care of patients?&lt;/p&gt;
+
+&lt;p&gt;The Streams application runs on mobile devices and receives notifications about patients who have developed an acute kidney injury. Such an application needs a considerable underlying infrastructure in order to make it work. Much like an online shopping application on your phone, the actual work occurs in a server in a data centre. When a clinician gets an alert, they can view the patient’s record, including information about admissions, discharges, diagnoses and previous blood results in order to prioritise the care of that patient. It is not simply a notification but a window into the patient record. It is my opinion that this application satisfies the requirements of direct care for patients. Watch the Sky News report and how the consultant nurse describes its use. I am not aware of any serious argument to suggest that it is not for direct care.&lt;/p&gt;
+
+&lt;h3 id=&quot;were-not-buying-a-new-car&quot;&gt;We’re not buying a new car&lt;/h3&gt;
+
+&lt;p&gt;The next consideration is how one builds software that works safely and consistently. In general, the best way of prove that software works correctly is to test it. There are multiple levels of testing in which larger and larger components of a total solution are tested iteratively. If you want to read more, I cover testing in my &lt;a href=&quot;https://www.dropbox.com/s/62sg71a19voxpts/cis_design.pdf?dl=0&quot;&gt;Domain-driven design for clinical information systems document&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Unit testing checks that a single unit of functionality works as expected, testing the module in isolation to check that the outputs are what one would expect given the specified inputs. It is possible to run these tests every time code is changed and such tests are possible using dummy fake data designed to test how a module performs given both usual and unusual data inputs.&lt;/p&gt;
+
+&lt;p&gt;Integration and system testing test the combination of modules together as well as their interactions with other components within a wider ecosystem. For a simple application with few interactions, integration tests can be straightforward but such testing can be complex and involved when there are multiple different interactions, particularly when those interactions are with other systems that have been created by other vendors.&lt;/p&gt;
+
+&lt;p&gt;It is possible to run such tests in a specific environment for tests in which there are fake ‘mock’ services. For example, one might have a fake patient administration system or a fake laboratory information system running with dummy information in order to test interactions between those systems. However, at some point during application development, the application must be deployed.&lt;/p&gt;
+
+&lt;p&gt;Software applications are not like buying a car. When I go and buy a car, I know that it will work on the road and it will fit onto my drive and I’ll  take care that it’s got the right number of seats for my family. The car design has been tested and quality tests would have been performed before it was ready for purchase. I can buy it and drive it home.&lt;/p&gt;
+
+&lt;p&gt;Instead, software development is much more like teaching your child to ride a bicycle. We can use dummy data like we use stabilisers, but at some point we have to take off those stabilisers! Similarly, at some point, we need to expose our new application to real data.&lt;/p&gt;
+
+&lt;p&gt;Now if you are anything like me when teaching a child to ride a bicycle, you took off the stabilisers and then ran very quickly alongside the child as they wobbled precariously from side-to-side! In the same way, any responsible organisation writing software applications cannot and should not hand over their application without further monitoring and testing to ensure that what you think will work does not work in a live environment. Once in the live environment, it would be unreasonable for a software company to &lt;em&gt;not&lt;/em&gt; perform additional testing to be sure that their software works as expected. Similarly, we run next to our child and check that they are safe and don’t forget to keep on pedalling!&lt;/p&gt;
+
+&lt;h1 id=&quot;conclusions&quot;&gt;Conclusions&lt;/h1&gt;
+
+&lt;p&gt;It is important to have robust scrutiny in relation to the use of patient-identifiable information by third-parties. However, I am surprised that Dame Caldicott has suggested that it might be inappropriate to test software systems designed for direct care with real patient information. I would argue that such testing is necessary in the final stages of development to ensure that new technology is safely deployed in live clinical environments.&lt;/p&gt;</content><author><name></name></author><summary type="html">Google Deepmind may have received the personally identifying medical records of million NHS patients on a legally inappropriate basis</summary></entry><entry><title type="html">Safely deploying machine learning in healthcare</title><link href="https://www.wardle.org/clinical-informatics/2017/05/10/machine-learning.html" rel="alternate" type="text/html" title="Safely deploying machine learning in healthcare" /><published>2017-05-10T11:55:00+01:00</published><updated>2017-05-10T11:55:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/05/10/machine-learning</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/05/10/machine-learning.html">&lt;p&gt;In a previous blog post, I have discussed the value of information technology in supporting clinical care, unashamedly stealing and modifying Google’s original mantra:&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;“to organise the world’s information and make it universally accessible and useful”.&lt;/p&gt;
@@ -44,7 +110,7 @@
 
 &lt;h1 id=&quot;medical-devices&quot;&gt;“Medical devices”&lt;/h1&gt;
 
-&lt;p&gt;The Medicines &amp;amp; Healthcare Regulatory Agency (MHRA) provides &lt;a href=&quot;https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/610189/Software_flow_chart_Ed_1-03.pdf&quot;&gt;helpful advice on the certification of software used in healthcare&lt;/a&gt;. That interactive PDF will take you step-by-step through a decision aid in order to determine whether your software meets the definition of a “medical advice”, and needs certification and accreditation with a declaration of conformity (“CE” marking).&lt;/p&gt;
+&lt;p&gt;The Medicines &amp;amp; Healthcare Regulatory Agency (MHRA) provides &lt;a href=&quot;https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/610189/Software_flow_chart_Ed_1-03.pdf&quot;&gt;helpful advice on the certification of software used in healthcare&lt;/a&gt;. That interactive PDF will take you step-by-step through a decision aid in order to determine whether your software meets the definition of a “medical device”, and needs certification and accreditation with a declaration of conformity (“CE” marking).&lt;/p&gt;
 
 &lt;p&gt;The guidance is logically organised and intuitive except that the section on “medical purpose” needs to be read carefully. Many things that you might think have a “medical purpose” are not included in their definition. This is important as if your software has a “medical purpose”, then essentially it needs assessment and certification as a medical device.&lt;/p&gt;
 
@@ -612,189 +678,4 @@ Although limited in scope, it has been adopted by HL7 as the standard code syste
 
 &lt;p&gt;There is more work to do to make it a usable system, but the &lt;a href=&quot;https://github.com/wardle/openconsent/blob/master/src/test/java/com/eldrix/openconsent/model/TestPatients.java&quot;&gt;test harness&lt;/a&gt; demonstrates how it would work in practice.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">I have updated my proof-of-concept project on pseudonymous consent (see github). To understand the background to this blog post, please see my earlier post.</summary></entry><entry><title type="html">Pseudonymous consent</title><link href="https://www.wardle.org/information-governance/2017/04/05/pseudonymous-consent-poc.html" rel="alternate" type="text/html" title="Pseudonymous consent" /><published>2017-04-05T14:45:28+01:00</published><updated>2017-04-05T14:45:28+01:00</updated><id>https://www.wardle.org/information-governance/2017/04/05/pseudonymous-consent-poc</id><content type="html" xml:base="https://www.wardle.org/information-governance/2017/04/05/pseudonymous-consent-poc.html">&lt;blockquote&gt;
-  &lt;p&gt;Update: 8th April 2017. I have refined the data model in a &lt;a href=&quot;/information-governance/2017/04/08/pseudonymous-consent.html&quot;&gt;subsequent post&lt;/a&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;In earlier posts relating to &lt;a href=&quot;/clinical-informatics/2017/03/09/google-information.html&quot;&gt;“What I would do if I were Google”&lt;/a&gt; and &lt;a href=&quot;/information-governance/2017/03/19/information-governance.html&quot;&gt;“Balancing information governance and innovation in the NHS”&lt;/a&gt;, I discussed the importance of balance between information governance and open innovation within healthcare informatics focusing on the difficulty in handling sensitive medical data.&lt;/p&gt;
-
-&lt;p&gt;Writing a blog forces one to reflect; for instance, what is it that you are trying to do? I’ve concluded that my primary objective within healthcare informatics is to:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;make healthcare information available at the point-of-care in order to support clinical care&lt;sup&gt;&lt;a href=&quot;#care-of-patients&quot;&gt;a&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;To achieve that, I want:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;better use of real-time analytics to aggregate data among patient cohorts and support clinical decision making&lt;/li&gt;
-  &lt;li&gt;a mixed-economy of healthcare applications that can interoperate and leverage core infrastructure and services with a reduced focus on monolithic enterprise-wide systems&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;And to achieve those, I want:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;greater use of structured clinical information captured and used at the point-of-care including use of robust information models, open standards and terminology such as HL7 FHIR, openEHR and SNOMED CT.&lt;/li&gt;
-  &lt;li&gt;an open-source infrastructure to permit interoperability between vendors.&lt;/li&gt;
-  &lt;li&gt;a robust information governance framework&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;supporting-information-governance&quot;&gt;Supporting information governance&lt;/h2&gt;
-
-&lt;p&gt;One can support &lt;a href=&quot;https://en.wikipedia.org/wiki/Information_governance&quot;&gt;information governance&lt;/a&gt; by adopting appropriate &lt;a href=&quot;http://www.wales.nhs.uk/nwis/page/52618&quot;&gt;policies and procedures&lt;/a&gt;, by creating formal &lt;a href=&quot;https://www.igt.hscic.gov.uk/Caldicott2Legislation.aspx?tk=428276172817610&amp;amp;lnv=18&amp;amp;cb=8cf4d31b-5ea7-4f07-b8b5-34f9ee732d4a&quot;&gt;legislation&lt;/a&gt;, &lt;a href=&quot;https://www.igt.hscic.gov.uk&quot;&gt;toolkits&lt;/a&gt; and by instituting technical solutions such as authentication, authorisation, secure audit logs and encryption.&lt;/p&gt;
-
-&lt;p&gt;Essentially we need to strike a balance between making clinical information available and ensuring that this sensitive information is not seen by the wrong people in a complex, heterogeneous and distributed environment in which there are multiple actors such as clinical staff, patients, managers, organisations and commissioners.&lt;/p&gt;
-
-&lt;p&gt;I think that there are three broad concepts we need to cover:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Pseudonymisation and data linkage.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Secure and verifiable audit trails&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Put patients at the heart of what we do and give them control.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;I have previously discussed the use of pseudonymisation as a technique to permit safe data linkage within and between disparate datasets. In addition, I covered the use of a project- or service- specific pseudonym that could uniquely identify a patient for that particular research project or clinical service. Importantly, pseudonymisation uses a one-way mathematical function so that, given a pseudonym alone, we cannot re-identify a patient. However, we can re-link these data if we have the shared secrets that were used to generate the pseudonym.&lt;/p&gt;
-
-&lt;p&gt;I gave an overview of &lt;a href=&quot;/merkle-trees/2017/03/20/merkle-trees.html&quot;&gt;Merkle trees&lt;/a&gt; in a previous blog post. Essentially, although I have built in audit trail functionality into my own EPR, there is nothing stopping me accessing patient records inappropriately and removing those log entries directly from the database as I have administrator access. Do you trust me? Perhaps. But do you trust a commercial entity? Perhaps not. A verifiable audit log potentially solves this issue, by ensuring that no-one can tamper with the log.&lt;/p&gt;
-
-&lt;p&gt;Putting patients in control of where and how their information is used means that there are &lt;em&gt;no surprises&lt;/em&gt; because patients have explicitly agreed.&lt;/p&gt;
-
-&lt;h3 id=&quot;key-security-concerns&quot;&gt;Key security concerns&lt;/h3&gt;
-
-&lt;p&gt;Is it possible to create an architecture which is secure-by-design?&lt;/p&gt;
-
-&lt;p&gt;The use of pseudonyms generated on a per-use or per-service basis, possibly on the fly, potentially allows an interesting security feature in that inappropriate dataset access cannot occur simply because the data cannot be linked to the patient, rather than relying on systems themselves try to manage which data sources are permitted or not. Access to data is therefore the result of data linkage.&lt;/p&gt;
-
-&lt;p&gt;As a result, it becomes possible to allow untrusted third parties access to an infrastructure but their access to disparate distributed data sources is impossible as a result of a lack of linkage. In addition, by virtue of requesting access, the third party &lt;em&gt;must&lt;/em&gt; make a data access request and therefore have their access logged appropriately.&lt;/p&gt;
-
-&lt;p&gt;One fundamental security concern is that a centralised registry of permissions, opt-ins and opt-outs in itself gives away important potentially patient identifiable information. For instance, membership of a cohort of patients in a genito-urinary clinic &lt;em&gt;in itself&lt;/em&gt; gives information to potential third parties. Therefore, it is important that such information is inaccessible by design.&lt;/p&gt;
-
-&lt;p&gt;Sensitive information will be both stored and subsequently transmitted; both require protecting. The most difficult is protecting stored data and I have tried to create a proof-of-concept that could cope with whole system compromise. Assuming an attacker has full access to a dump of the database, it should be possible to take reasonable precautions to prevent re-identification. However, this requirement means that simple join-tables in a relationship database between a patient and their consent/permissions cannot be used.&lt;/p&gt;
-
-&lt;h3 id=&quot;proof-of-concept&quot;&gt;Proof-of-concept&lt;/h3&gt;
-
-&lt;p&gt;There is nothing like trying to create a small working solution as a proof-of-concept.&lt;/p&gt;
-
-&lt;p&gt;The source code is available here: &lt;a href=&quot;https://www.github.com/wardle/openconsent&quot;&gt;https://www.github.com/wardle/openconsent&lt;/a&gt;.  Conceptually, the data model is as follows:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/openconsent/openconsent-model.png&quot; alt=&quot;Openconsent Model&quot; /&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Here the Patient entity records the name of the patient and uses an email address for login. When a user creates an account, the password is used to create a salted digest for future password-checks and used to create a different digest used to encrypt an encryption key. This key is used to encrypt other information including the name of the patient and the episode identifiers held in the registrations table.&lt;/li&gt;
-  &lt;li&gt;The registration table simply stores encrypted pseudonymous identifiers. There is a one-to-many relationship from patient to registrations.&lt;/li&gt;
-  &lt;li&gt;A project represents a clinical service or research project. Future versions will include additional information such as a URL to an organisation or service homepage as well as service authentication credentials.&lt;/li&gt;
-  &lt;li&gt;An episode stores a project-specific pseudonymous identifier and will store the patient’s explicit choices regarding the use of their data in that context. It will be here that a verifiable audit log is required to track changes in choice so that we can vouch that nothing has tampered with the transactions that have occurred at the episode level.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;This data model is working and is unit tested. An example of creating a patient and understand that they are part of a specific project is shown &lt;a href=&quot;https://github.com/wardle/openconsent/blob/master/src/test/java/com/eldrix/openconsent/model/TestPatients.java&quot;&gt;here, if you can understand java code&lt;/a&gt;. Essentially a patient is registered to a project and I show that we can find that registration subsequently.&lt;/p&gt;
-
-&lt;p&gt;The encryption key is generated randomly. It is encrypted using a key derived from a digest of the patient’s password. The encryption key can only be decrypted with access to the patient’s password but this is never stored. The digest used to validate a patient’s password is stored but is calculated differently to the digest used as the key for the encryption key. The encryption key is used for encryption and decryption of sensitive information relating to that patient. By decrypting the registration information, the application can get a list of episode identifiers for that patient.&lt;/p&gt;
-
-&lt;p&gt;I do need to add an encrypted global pseudonym that is not exposed to research projects and clinical services to allow data linkage once a patient’s account has been validated. More details of this are given below.&lt;/p&gt;
-
-&lt;p&gt;The next steps will be to expose this functionality as a REST service. My plan for the eventual architecture is shown here with the unimplemented pieces in grey and the already implemented model in blue.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/openconsent/openconsent-plan.png&quot; alt=&quot;Openconsent Plan&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The following sections describe how the system works to track consent in a safe way.&lt;/p&gt;
-
-&lt;h4 id=&quot;a-research-project&quot;&gt;A research project&lt;/h4&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;A research project is registered with a project-specific consent form.&lt;sup&gt;&lt;a href=&quot;#consent-form&quot;&gt;b&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
-  &lt;li&gt;A research project creates an episode using the patient’s details and so needs to know their details to pass in to generate a pseudonym.&lt;/li&gt;
-  &lt;li&gt;If that project subsequently wants to know whether a patient they are seeing has consented, they can pass the patient’s identifier (e.g. NHS number) and date of birth and get any active episodes.&lt;/li&gt;
-  &lt;li&gt;However, because openconsent understands that such a service is opt-in, it will only issue authorisation tokens if the episode has been validated by the patient explicitly.&lt;/li&gt;
-  &lt;li&gt;If a patient has consented, then the project can submit the pseudonym to receive an &lt;a href=&quot;https://oauth.net/2/&quot;&gt;OAUTH2 token&lt;/a&gt;. OAUTH2 is a distributed authorisation framework which allows application to obtain limited access to a data repository. A verifiable audit log records the transaction using the pseudonym.&lt;/li&gt;
-  &lt;li&gt;Should a patient’s consent be withdrawn, or not exist in the first place, then no data is returned. No further work is possible.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Validation of permission by the patient could occur in a variety of ways:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;when a member of the research team meets the patient and shows them a QR code that is readable by a mobile device application.&lt;/li&gt;
-  &lt;li&gt;a QR code that links to a web application portal for the patient&lt;/li&gt;
-  &lt;li&gt;manually typing in the project-specific pseudonym&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Once linked, a patient account stores the registration information in an encrypted format and can then find the episode information and alter their permissions within the episode.&lt;/p&gt;
-
-&lt;p&gt;The data store would provide data linked only via the pseudonym preventing simple re-identification of patients.&lt;/p&gt;
-
-&lt;h4 id=&quot;a-clinical-service&quot;&gt;A clinical service&lt;/h4&gt;
-
-&lt;p&gt;A registered clinical service would expect to always have authorisation to patient data, but audit trails of information requested would still be recorded as above. Clinical users would authenticate with their clinical applications and those applications would themselves authenticate and become authorised to access clinical data, obtaining an OAUTH2 token to access the appropriate data.&lt;/p&gt;
-
-&lt;p&gt;A clinical service would therefore create an episode using the patient’s information and no explicit consent is required for openconsent to issue authorisation tokens. However, there is a problem here. How can a patient remove their consent for this specific use of their data? There is no way an episode can identify the patient or indeed a registration entity corresponding to that episode as a result of the one-way link between a registration and an episode.&lt;/p&gt;
-
-&lt;p&gt;I think that there are two options:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Iterate through all registered projects and calculate on-the-fly a pseudonym for each and look for matches within the episodes. This would work only if we store the information required to generate the pseudonym in the Patient entity. This is possible but may struggle to scale if there are many projects.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Add a global but private pseudonym that, once recorded acts to validate that the patient account is owned by the person we think. However, this private global pseudonym cannot be shared with individual services and is built from a recipe of immutable information about the patient using a different salt. Once the information used to built the pseudonym are validated, the global pseudonym can be recorded encrypted in the patient’s own account. This can then be used to link project-specific pseudonyms to a single record.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;I consider option (2) to be preferable but will work to prove that in the proof-of-concept project.&lt;/p&gt;
-
-&lt;p&gt;For option (2), the global pseudonym will also need to be stored, privately for an episode. Thus, for a validated patient account, the service can then find all episodes relating to them even though there is no corresponding registration. If a patient is not happy with the use of their data for that purpose, they can mark it as such. In the model, a registration is built to link the patient with the episode, and their new preferences are recorded in that episode with the change recorded in the verifiable log. From that point, service access will not be permitted.&lt;/p&gt;
-
-&lt;p&gt;For opt-out services, most episodes will not be linked to from a registration entity except if a patient has explicitly opted-out. If the patient has done so, then the episode will have had the permissions changed.&lt;/p&gt;
-
-&lt;h4 id=&quot;the-patient&quot;&gt;The patient&lt;/h4&gt;
-
-&lt;p&gt;A patient should be able to login via their portal. From there, they can see their registered projects and services by decrypting a list of project-specific pseudonyms. In these, they can opt-in of research and opt-out for non-research clinical uses on a case-by-case basis.&lt;/p&gt;
-
-&lt;p&gt;For research, a patient may engage with the research team or a project-specific application or generic sign-up application and link their account to the project. Essentially, in the data model, I create a registration entity that maps to the episode entity for that project and patient. A patient may then easily remove their consent at some point in the future, with any changes made to the episode and the transaction logged with the verifiable log.&lt;/p&gt;
-
-&lt;p&gt;For clinical services, a patient would need to register to opt-out as discussed above.&lt;/p&gt;
-
-&lt;h4 id=&quot;problems-and-requirements&quot;&gt;Problems and requirements&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;The software is a simple proof-of-concept at the moment and is incomplete. I need to:
-    &lt;ul&gt;
-      &lt;li&gt;integrate an OAUTH2 server. Can &lt;a href=&quot;https://oltu.apache.org&quot;&gt;Apache Oltu&lt;/a&gt; do this?&lt;/li&gt;
-      &lt;li&gt;add REST endpoints. This is quite easy using LinkRest and standard JAX-RS.&lt;/li&gt;
-      &lt;li&gt;link to a verifiable log. Needs evaluation. Plan for simple log that can replaced with proper verifiable version in future. I’d plan for the verifiable log to be on a remote service. Could I use &lt;a href=&quot;https://github.com/google/trillian&quot;&gt;Trillian&lt;/a&gt;?&lt;/li&gt;
-      &lt;li&gt;build user interface components to expose the tools to the patient (although this would be a long-term aim).&lt;/li&gt;
-      &lt;li&gt;build data repository wrappers to check for OAUTH2 tokens for permission to access.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Further questions:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Is AES encryption good enough for encrypting the data fields within the patient record and the associated registrations? At the moment, this uses 128-bit keys, but it would be straightforward to increase the key length in production.&lt;/li&gt;
-  &lt;li&gt;Can this be a distributed system? Probably. The software supporting the Patient - Registration can run on a separate service than the Episode - Project components, and there could be multiple latter services, essentially creating a registry of data registries?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Essentially, the design principles here are:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;decoupling applications from data stores&lt;/li&gt;
-  &lt;li&gt;put patients in charge of opt-in and opt-out for access to their data for different purposes&lt;/li&gt;
-  &lt;li&gt;create a secure architecture using encryption and pseudonymous linkage, so we can offer guarantees about data governance while permitting large-scale access by third parties.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This is a project in development so thoughts and suggestions are most welcome!&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h2&gt;
-
-&lt;p&gt;&lt;a name=&quot;care-of-patients&quot;&gt;a&lt;/a&gt;: I originally wrote “to support the care of patients”, but that implies that it is care that is &lt;em&gt;done to&lt;/em&gt; patients rather than a partnership; the words we use to frame a problem potentially limit our ability to solve the real issue.&lt;/p&gt;
-
-&lt;p&gt;&lt;a name=&quot;consent-form&quot;&gt;b&lt;/a&gt;: In the PatientCare EPR, I have an electronic consent system with specific items of consent mapped in an information model exposed via a REST service. An iPad application can use this to build a ResearchKit based consent form automatically and dynamically. The following video demonstrates this functionality in which I edit a consent form electronically and the change is seen in the ResearchKit based application, here running on an iPad.&lt;/p&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/59tGM85zzlY&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name></name></author><summary type="html">Update: 8th April 2017. I have refined the data model in a subsequent post.</summary></entry></feed>
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">I have updated my proof-of-concept project on pseudonymous consent (see github). To understand the background to this blog post, please see my earlier post.</summary></entry></feed>
