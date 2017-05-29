@@ -1,5 +1,201 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-05-20T21:57:02+01:00</updated><id>https://www.wardle.org/</id><title type="html">Dr. Mark Wardle</title><subtitle>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
-</subtitle><entry><title type="html">Using SNOMED CT to understand</title><link href="https://www.wardle.org/clinical-informatics/2017/05/20/using-snomed-ct.html" rel="alternate" type="text/html" title="Using SNOMED CT to understand" /><published>2017-05-20T10:15:00+01:00</published><updated>2017-05-20T10:15:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/05/20/using-snomed-ct</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/05/20/using-snomed-ct.html">&lt;p&gt;I think that many clinicians have made some fundamental incorrect conclusions about the use of SNOMED CT in clinical practice. In particular, as SNOMED CT is touted as a replacement for Read codes, widely used in general practice in the UK, it is easy to conclude that SNOMED CT adds complexity and redundant codes without adding any other value.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-05-29T19:58:36+01:00</updated><id>https://www.wardle.org/</id><title type="html">Dr. Mark Wardle</title><subtitle>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
+</subtitle><entry><title type="html">PatientCare EPR: design principles</title><link href="https://www.wardle.org/clinical-informatics/2017/05/27/patientcare-epr.html" rel="alternate" type="text/html" title="PatientCare EPR: design principles" /><published>2017-05-27T22:02:00+01:00</published><updated>2017-05-27T22:02:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/05/27/patientcare-epr</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/05/27/patientcare-epr.html">&lt;p&gt;The PatientCare electronic patient record system is a web-based application accessible across NHS Wales that records diagnostic, treatment and interventional treatment. It is underpinned by SNOMED-CT, a modern sophisticated and comprehensive terminology system that acts as the ‘lingua franca’ to provide algorithmic understanding and dynamic functionality. While the main functionality is available via a web-based portal, users can also interact with the software using bespoke iPhone and iPad applications.&lt;/p&gt;
+
+&lt;p&gt;It has resulted in clinical information becoming available immediately at the point-of-care. The neuro-inflammatory team used to use paper notes with filing cabinets full of brown folders; now they are paper-free. It records not only a prospective longitudinal narrative, acting as a customer-relationship-manager, but records both clinician-derived and patient reported outcome measures. In addition, while fundamentally it is a system to support the direct care of patients, it additionally supports the dynamic real-time aggregation of data for service management.&lt;/p&gt;
+
+&lt;p&gt;Finally, it supports the registration and management of clinical research projects, managing consent and access privileges using a finely-grained security model. This allows the recording of deep clinical phenotypes combined with a record of biological samples such as plasma, serum, DNA and cerebrospinal fluid. As such, we not only know that the serum was taken from a patient with, for example, epilepsy, but we also know how that biological sample was taken on the same day as a generalised tonic-clonic seizure.&lt;/p&gt;
+
+&lt;p&gt;I have been building this system since 2009. This blog post is an overview of the functionality available and the underlying design principles.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;1-start-with-a-problem&quot;&gt;1. Start with a problem&lt;/h1&gt;
+
+&lt;p&gt;When designing clinical information systems, the priority must be to solve a problem. It is therefore vital to understand and frame the problems, work on making those problems as generic as possible without losing functionality, and plan for a phased iterative development in which early designs are built with future needs in mind.&lt;/p&gt;
+
+&lt;p&gt;One important problem we face in hospital medicine is an understanding of our patients and their outcomes. You might be surprised to know that my own organisation knows how many patients attend outpatient clinics, but they have little idea why they were seen, what had been done or how they have fared. Indeed, there are now ongoing projects to record patient outcome measures from patients when their appointment letters are sent to them, but how can anyone interpret those data without an understanding of the problems those patients face?&lt;/p&gt;
+
+&lt;p&gt;Example problems might include:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;How many patients with [Parkinson’s disease] in Wales?&lt;/li&gt;
+  &lt;li&gt;How many patients with [epilepsy] refractory to two drugs?&lt;/li&gt;
+  &lt;li&gt;Who might be eligible for this new [treatment / research project / intervention]?&lt;/li&gt;
+  &lt;li&gt;Who of my patients is taking [methotrexate] and need monitoring?&lt;/li&gt;
+  &lt;li&gt;Tell me when any of my patients with [epilepsy] attends A&amp;amp;E.&lt;/li&gt;
+  &lt;li&gt;Tell me when my patient loses 5% of their body weight compared to weight at diagnosis.&lt;/li&gt;
+  &lt;li&gt;How do patients fare after having a [ventriculo-peritoneal shunt] procedure?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This information is actually available, but it will generally be recorded in individual patient notes. The only way of knowing how many patients we see with Parkinson’s disease for example would be to task someone to go through the paper records or outpatient letters and manually count them up. Therefore, while this information is available, it isn’t accessible at the point of care or in any format that permits dynamic, real-time monitoring and understand of our clinical services.&lt;/p&gt;
+
+&lt;p&gt;The PatientCare EPR supports solving all of these problems, but does so by creating a generic solution applicable to a wide-range of clinical problems.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h1 id=&quot;2-move-to-a-model&quot;&gt;2. Move to a model&lt;/h1&gt;
+
+&lt;p&gt;Once you know the problems that need to be solved, it is tempting to start thinking about how your clinical information system is going to look and behave. However,  you should instead consider your high-level functional requirements and the model of the world that will support those requirements. I write about clinical modelling in my &lt;a href=&quot;/clinical-informatics/2017/02/03/domain-driven-design.html&quot;&gt;Domain-driven clinical design document&lt;/a&gt; but essentially a model is an abstraction of reality. Clinical modelling requires both time and collaboration, between experts in the problem domain and experts with the required technical skills.&lt;/p&gt;
+
+&lt;p&gt;I suggest dividing clinical modelling into three related steps:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Modelling data within a medical record&lt;/li&gt;
+  &lt;li&gt;Modelling processes and workflow relating to a medical record&lt;/li&gt;
+  &lt;li&gt;Implementation of a clinical model into a workable and practical solution.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;These three steps should be considered separately but are dependent on one another and inherently depend on the functional requirements. In designing clinical information systems, a data model may change infrequently or a design may even be correct in perpetuity; a systolic blood pressure recorded using a cuff on the right arm of an individual will always be a systolic blood pressure recorded using a cuff on the right arm of an individual. However, a model of the processes of care will likely change more frequently as a result of changes in working practices and service design, and an implementation may change even more frequently as a result of new technologies and devices.
+As each step is dependent on each other, modelling must be an iterative work with feedback loops between all steps rather than performed in sequence by different members of the team. An implementation cannot be designed without consideration of the data structures and processes that leverage the data within those structures and a model cannot be designed unless it is practical and efficient to perform an implementation. It also follows that clinical modelling must be performed by a team of individuals with a range of skills including those with important domain knowledge such as health professionals as well as those responsible for the design and implementation of the resulting software such as technical architects and software developers.&lt;/p&gt;
+
+&lt;p&gt;However, as part of this iteration, I don’t suggest trying to do detailed planning. Historically, the health service has developed software by providing detailed requirements and planning systems in detail with the stages of development build using a Gantt chart. Advocates of such an approach suggest that this lowers risk and maps the process of development from initiation to final deployment. The use of a Gantt chart typically creates a project plan that looks like a waterfall, and so this is typically termed the &lt;a href=&quot;https://en.wikipedia.org/wiki/Waterfall_model&quot;&gt;“waterfall model”&lt;/a&gt;. Instead, I would advocate a more agile and iterative approach in which the three related steps of clinical modelling listed above are used as part of a series experiments in order to test those models and our assumptions and ensure that what will be created will actually be valuable.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h1 id=&quot;3-example-requirements&quot;&gt;3 Example requirements&lt;/h1&gt;
+
+&lt;p&gt;It might be useful to consider some examples of functional requirements and the data required to solve those problems.&lt;/p&gt;
+
+&lt;h4 id=&quot;support-the-derivation-of-incidence-and-prevalence-of-a-range-of-rare-diseases&quot;&gt;Support the derivation of incidence and prevalence of a range of rare diseases&lt;/h4&gt;
+
+&lt;p&gt;Given this task, we might consider first how to calculate incidence and prevalence and decide that we need:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;a list of patients, including dates of birth and death&lt;/li&gt;
+  &lt;li&gt;their current and previous addresses and the dates on which they moved.&lt;/li&gt;
+  &lt;li&gt;a method to map addresses to wider geographic areas, such as health authority boundaries&lt;/li&gt;
+  &lt;li&gt;a record of diagnoses and the dates of both diagnosis and onset.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;With these data, it is conceivable that we can generate incidence and prevalence data for any disease at any time point.&lt;/p&gt;
+
+&lt;p&gt;The PatientCare EPR has underpinned our local multiple sclerosis epidemiology projects for many years. At the touch of a button, I can generate incident and prevalence data. Here is an example:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/patientcare-epidem-data.png&quot; alt=&quot;Patientcare Epidem Data&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;send-an-alert-when-one-of-my-patients-with-mnd-loses-5-of-their-body-weight&quot;&gt;Send an alert when one of my patients with MND loses 5% of their body weight&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;a list of patients&lt;/li&gt;
+  &lt;li&gt;a record of diagnoses and the dates of both diagnosis and onset.&lt;/li&gt;
+  &lt;li&gt;a way of identifying motor neurone disease whether the patient is recorded as having “MND” or a subtype such as “progressive bulbar palsy”.&lt;/li&gt;
+  &lt;li&gt;a longitudinal record of body weight&lt;/li&gt;
+  &lt;li&gt;a method to track clinical users and handle notifications&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The PatientCare EPR does this dynamically and presents the information in a dashboard, but also sends me an alert when it recognises a patient has lost weight:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/mnd-dashboard.png&quot; alt=&quot;Mnd Dashboard&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;show-me-how-this-patient-with-multiple-sclerosis-is-doing-compared-to-their-peers&quot;&gt;Show me how this patient with multiple sclerosis is doing compared to their peers&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;a list of patients&lt;/li&gt;
+  &lt;li&gt;a record of diagnosis and the dates of both diagnosis and onset.&lt;/li&gt;
+  &lt;li&gt;a longitudinal record of disease outcome, perhaps generic, perhaps disease-specific, perhaps both.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In this image, progression of disability for the whole cohort is shown (dotted lines indicated median and centiles) with an individual’s progress overlaid. In addition, my colleagues can dynamically change the inclusion and exclusion criteria that defines the cohort. For example, a man presenting with multiple sclerosis at the age of 35 can be shown against other men presenting between age 30 and 40 to easily see how the individual is doing compared to their peers.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/edss-graph.jpg&quot; alt=&quot;Edss Graph&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;record-patient-encounters-such-as-telephone-calls-and-allow-team-working&quot;&gt;Record patient encounters such as telephone calls and allow team-working&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;a list of patients&lt;/li&gt;
+  &lt;li&gt;a list of teams&lt;/li&gt;
+  &lt;li&gt;a list of users&lt;/li&gt;
+  &lt;li&gt;linkage between patients, teams and users in order to support team working and understand who is involved in the care of whom&lt;/li&gt;
+  &lt;li&gt;security access control to use that linkage to decide on patient record access&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The PatientCare EPR now records thousands of messages every month. Users can choose to receive emails when a message is sent, with the software sending messages with patient identifiable information if they have an NHS email account but only a notification if they have registered with a non-NHS account such as their university email.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/patientcare-messages.png&quot; alt=&quot;Patientcare Messages&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h1 id=&quot;4-solving-our-problems&quot;&gt;4. Solving our problems&lt;/h1&gt;
+
+&lt;p&gt;It is clear that many of these functional requirements are generic and widely-applicable, irrespective of disease, treatment or intervention. Indeed, why limit comparing a single patient with their peers based only on diagnosis? Instead, consider how one might design systems that allow such comparisons based on other characteristics, such as a particular type of procedure, an admission under a particular specialty or an outpatient appointment.&lt;/p&gt;
+
+&lt;p&gt;A focus on the user interface means that when one broadens the scope of a problem, it is possible to create complexity and confusion. However, broadening the scope of a problem at a domain-model level often simplifies our work, by providing insight into how one requirement is in fact closely related to another. Defining the appropriate scope of a problem is therefore critical to create usable, workable and valuable clinical information systems.&lt;/p&gt;
+
+&lt;p&gt;Essentially we need to build an information model representing the data and the relationships between those items of data. Such modelling requires an understanding of the “nouns” in healthcare as well as the processes (the “verbs”) that represent actions on those nouns.&lt;/p&gt;
+
+&lt;p&gt;However, no solution exists in isolation. Instead, any clinical information system must interoperate with other systems within a wider health enterprise, either within a single organisation or, increasingly, across organisations. There is now increasing momentum towards open architectures in which healthcare data can be represented in a standardised fashion and I have written about openEHR, HL7 FHIR and SNOMED-CT in my &lt;a href=&quot;/cis-design/2017/05/02/data-standards.html&quot;&gt;data standards blog post&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;snomed-ct&quot;&gt;SNOMED-CT&lt;/h4&gt;
+
+&lt;p&gt;I have previously also discussed SNOMED-CT in detail (in discussing the &lt;a href=&quot;/clinical-informatics/2017/04/28/importance-of-cohorts.html&quot;&gt;importance of cohorts&lt;/a&gt;, in releasing an &lt;a href=&quot;/clinical-informatics/2017/04/29/rsterminology-part2.html&quot;&gt;open-source SNOMED-CT terminology server&lt;/a&gt; and in &lt;a href=&quot;/clinical-informatics/2017/05/20/using-snomed-ct.html&quot;&gt;using SNOMED CT to understand meaning&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;Essentially, SNOMED-CT provides two key features that underpin solving many of our clinical problems.&lt;/p&gt;
+
+&lt;p&gt;Firstly, it provides a terminology, a list of terms representing clinical and non-clinical concepts. Therefore, rather than users typing “MI” or “myocardial infarction” or misspelling “mlutiople sclerosis”, it allows the mapping of user entered information into concept identifiers.&lt;/p&gt;
+
+&lt;p&gt;Secondly, it provides an understanding to the computer what those concepts actually mean. This allows computer code to understand that “multiple sclerosis” is a type of “demyelinating disease” for example. The relationships within SNOMED-CT essentially provide a database of clinical semantic knowledge.&lt;/p&gt;
+
+&lt;p&gt;These two features mean that SNOMED-CT is a powerful tool in creating modern clinical systems that can not only provide powerful functionality to allow users to record problems, diagnoses and other information but also exchange that information with other systems within the enterprise.&lt;/p&gt;
+
+&lt;p&gt;So how do I use SNOMED-CT within PatientCare?&lt;/p&gt;
+
+&lt;p&gt;Here is a screenshot recording SNOMED-CT in the clinic. For each click, the terms “Injection of botulinum toxin” and the brand (e.g. “dysport”) are recorded within an information model that also records who injected, when and how much.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/patientcare-botox.jpg&quot; alt=&quot;Patientcare Botox&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Importantly, users do not know they are entering SNOMED CT codes when they use these electronic forms.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/Cppjedy-hMo&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;If you would like to see a demonstration of entering clinical information in this way, try my &lt;a href=&quot;https://msdata.org.uk/apps/WebObjects/SnomedBrowser.woa/&quot;&gt;online demo application&lt;/a&gt;. It is very simple, but it shows you how entered free text can be mapped quickly and efficiently.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h1 id=&quot;5-design-for-the-future&quot;&gt;5. Design for the future&lt;/h1&gt;
+
+&lt;p&gt;When I sat down to design the architecture that underpins the PatientCare EPR, I planned for a future in which I would combine multiple disparate sources of information to build a complete picture of a single patient and groups of patients.&lt;/p&gt;
+
+&lt;p&gt;I viewed the overall flow of data like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/cis_design/data_pipelines.png&quot; alt=&quot;Data Pipelines&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As I write, I now have completed almost all of the modules required in this schematic. I don’t yet have any apps on any app store for patients to use directly, but am piloting clinic-based applications to record patient-reported outcome measures and consent to research.&lt;/p&gt;
+
+&lt;p&gt;As a result, we are now able to see a combined view of data from multiple sources:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/seizure-frequency.png&quot; alt=&quot;Seizure Frequency&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here we see a patient’s seizures together with their drug regime over time. This is not computerised decision-making, but the computer making the &lt;em&gt;right information available at the right time&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/pd-data.png&quot; alt=&quot;Pd Data&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here we see the structured data recorded for a patient with Parkinson’s disease. Instead of trying to capture data from free-text, we record structured data in an efficient way and then generate our summary correspondence from that:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/pd-data-letter.png&quot; alt=&quot;Pd Data Letter&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I have added a complete REST API to allow other applications to liberate the data held within the PatientCare EPR to authorised users or their agents, but there are very few other systems that have adopted either a standardised information model or terminology. The clinical documents that are created are not simply binary blobs of data with unstructured information, but carefully modelled documents with links to the users, the locations, the type of encounter, the diagnoses, medications and procedures, coded and structured. Unfortunately, there are few other systems that can leverage that information yet.&lt;/p&gt;
+
+&lt;p&gt;In this video, I build an electronic consent form within the web-based EPR. An iPad application connects to the EPR using a REST API, downloads the consent form and information about a research project and, while recording patient outcomes directly from the patient, also asks them whether they want to sign-up. Their consent and their outcome measures are then immediately sent back into the EPR and are incorporated into the generated clinical correspondence.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/59tGM85zzlY&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;The last video demonstrates the working of the EPR in the motor neurone disease clinic.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/DGvCzfhOoN0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;h1 id=&quot;statistics&quot;&gt;Statistics&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Over 60,000 lines of code&lt;/li&gt;
+  &lt;li&gt;9 years of “spare time” development (evenings and weekends)&lt;/li&gt;
+  &lt;li&gt;3000 clinical encounters recorded by hundreds of users for direct patient care and clinical research&lt;/li&gt;
+  &lt;li&gt;Over 20,000 patients and their outcomes&lt;/li&gt;
+  &lt;li&gt;Running on a Linux server sitting in an NHS Wales data centre.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;my-future-plans&quot;&gt;My future plans&lt;/h1&gt;
+
+&lt;p&gt;I have worked single-handedly on this software for many years but now find myself turning away people who want to use the system as I do not have time to add new functionality and offer support outside of Wales. I have dabbled with outsourcing and subcontracting development work but I would really love to work with others on solving problems in healthcare using information technology.&lt;/p&gt;
+
+&lt;p&gt;Therefore, if you are interested in business development or a partnership or are an IT developer who doesn’t simply want to work on a contract basis, but is interested in what I’m trying to do, I’d be interested in hearing from you. I have some recurring income from the software (from the NHS) which can pay for part-time salaries in the short-term but I think the goal would be to work on seeking investment and then really trying to grow the business. Perhaps it is better as a social enterprise, a charity or a for-profit company. I’m open to ideas. Let me know!&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">The PatientCare electronic patient record system is a web-based application accessible across NHS Wales that records diagnostic, treatment and interventional treatment. It is underpinned by SNOMED-CT, a modern sophisticated and comprehensive terminology system that acts as the ‘lingua franca’ to provide algorithmic understanding and dynamic functionality. While the main functionality is available via a web-based portal, users can also interact with the software using bespoke iPhone and iPad applications.</summary></entry><entry><title type="html">Using SNOMED CT to understand</title><link href="https://www.wardle.org/clinical-informatics/2017/05/20/using-snomed-ct.html" rel="alternate" type="text/html" title="Using SNOMED CT to understand" /><published>2017-05-20T10:15:00+01:00</published><updated>2017-05-20T10:15:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/05/20/using-snomed-ct</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/05/20/using-snomed-ct.html">&lt;p&gt;I think that many clinicians have made some fundamental incorrect conclusions about the use of SNOMED CT in clinical practice. In particular, as SNOMED CT is touted as a replacement for Read codes, widely used in general practice in the UK, it is easy to conclude that SNOMED CT adds complexity and redundant codes without adding any other value.&lt;/p&gt;
 
 &lt;p&gt;I have written a short introduction on SNOMED CT in my &lt;a href=&quot;/cis-design/2017/05/02/data-standards.html&quot;&gt;data standards blog post&lt;/a&gt;.&lt;/p&gt;
 
@@ -1147,70 +1343,4 @@ Although limited in scope, it has been adopted by HL7 as the standard code syste
 
 &lt;p&gt;Importantly, it doesn’t matter if someone has coded a diagnosis as a highly specific diagnosis as one can map this to a more generic high-level diagnosis and then use that perform aggregated analysis. So for example, if a clinician enters a very specific sub-type of “bronchiolitis”, then it doesn’t matter as we can subsequently aggregate using a higher-level concept and still identify the patient.&lt;/p&gt;
 
-&lt;p&gt;Finally, how can we implement algorithmic analysis and artificial intelligence without an understand of these characteristics? Assessment of, for example, deteriorating renal function is critical on knowledge of recent diagnoses and medications given, and structured data is vital in supporting the research required in applying artificial intelligence in healthcare. The routine and systematic collection of SNOMED-CT forms a critical part of the foundation of any programme to implement such systems.&lt;/p&gt;</content><author><name></name></author><summary type="html">A cohort is a group of patients who share a defining characteristic.</summary></entry><entry><title type="html">Secure messaging… with patients in control of their data</title><link href="https://www.wardle.org/information-governance/2017/04/23/secure-messaging.html" rel="alternate" type="text/html" title="Secure messaging... with patients in control of their data" /><published>2017-04-23T09:20:28+01:00</published><updated>2017-04-23T09:20:28+01:00</updated><id>https://www.wardle.org/information-governance/2017/04/23/secure-messaging</id><content type="html" xml:base="https://www.wardle.org/information-governance/2017/04/23/secure-messaging.html">&lt;p&gt;Don’t we all want clinical information systems that support both clinicians and patients with clinical care?&lt;/p&gt;
-
-&lt;p&gt;However, storing and using information relating to patients, whether for direct clinical care, audit and service evaluations or the secondary use of data is potentially fraught with difficulty. There are many examples such as the furore surrounding the &lt;a href=&quot;https://www.england.nhs.uk/ourwork/tsd/care-data/&quot;&gt;care.data&lt;/a&gt; NHS England project or the &lt;a href=&quot;https://www.digitalhealth.net/2017/03/ttp-gps-should-continue-patient-data-sharing/&quot;&gt;TPP SystmOne debacle&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;As I have &lt;a href=&quot;/clinical-informatics/2017/03/09/google-information.html&quot;&gt;mentioned before&lt;/a&gt;, “a single misstep in either the use of data, the perceived use of data or lack of clarity surrounding either has the potential to close down any programme, however innovative.”&lt;/p&gt;
-
-&lt;h4 id=&quot;how-then-can-we-build-systems-that-are-open-and-transparent-and-yet-secure-by-design&quot;&gt;How then can we build systems that are open and transparent and yet secure-by-design?&lt;/h4&gt;
-
-&lt;p&gt;For many, these goals are mutually exclusive. There are many proprietary, closed systems adopting &lt;em&gt;security-by-obscurity&lt;/em&gt; with data locked away  inaccessible to third parties and low levels of interoperability. Opening up access to such systems is, by definition, something that reduces security and potentially allows important personal patient-identifiable information to be accessed inappropriately.&lt;/p&gt;
-
-&lt;h4 id=&quot;how-do-you-give-secure-and-safe-control-of-data-to-patients&quot;&gt;How do you give secure and safe control of data to patients?&lt;/h4&gt;
-
-&lt;p&gt;I would argue that more harm comes to patients for lack of sharing of information than excessive sharing. So many of my patients are surprised that I have not and cannot see the results of investigations and clinical opinions from other centres. Others are surprised to know that that most of us have no automatic systems to let us know about results, relying instead on crude manual systems and the receipt of a report in order to act. Such processes are prone to error; what happens if I do not receive a written report for a scan?&lt;/p&gt;
-
-&lt;p&gt;As I have written before, we need systems that allow medicine to &lt;a href=&quot;/information-governance/2017/03/19/information-governance.html&quot;&gt;run on rails&lt;/a&gt;. Therefore, we need to open-up data access but in a verifiably safe, transparent and secure way.&lt;/p&gt;
-
-&lt;p&gt;The solution is to put the patient at the centre of what we do and to give them control over the use of their data.&lt;/p&gt;
-
-&lt;p&gt;The challenge then becomes how to allow patients to either opt-in or opt-out of the use of their data for different purposes in an open way as well as view for themselves how their data is used. We need systems that record patient consent and log access to data.&lt;/p&gt;
-
-&lt;h4 id=&quot;the-danger-of-information-leakage&quot;&gt;The danger of information leakage&lt;/h4&gt;
-
-&lt;p&gt;It is quite straightforward to create electronic systems that record a patient’s preferences and choices in a database.&lt;/p&gt;
-
-&lt;p&gt;For example, Mr Smith might record his interest in research generally and specifically sign up for projects relating to diabetes mellitus and HIV. However, such a naive implementation would result in &lt;em&gt;information leakage&lt;/em&gt; from this metadata. We might encrypt the database, secure the server and yet still be at risk of disclosing private medical information inadvertently as a result of how different pieces of data are linked.&lt;/p&gt;
-
-&lt;h4 id=&quot;secure-messaging&quot;&gt;Secure messaging&lt;/h4&gt;
-
-&lt;p&gt;Similar issues arise in secure patient messaging. My patients and their advocates want to be able to contact their healthcare teams electronically. The success of my existing &lt;a href=&quot;/clinical-informatics/2017/03/13/communication-is-key.html&quot;&gt;EPR messaging solution&lt;/a&gt; is evidence that my other clinical colleagues want ways of communicating among themselves but ensure that such messages become part of the wider health record.&lt;/p&gt;
-
-&lt;p&gt;We receive emails frequently from patients and relatives, and yet these communications are not stored as part of the health record, are not easily shared with other members of the healthcare team and are inherently insecure. Providing systems to allow secure messaging between patients and their clinical services should be an easy-win for making our services more responsive to patients.&lt;/p&gt;
-
-&lt;p&gt;However, I have previously put off adding patient access and secure messaging to my &lt;a href=&quot;https://msdata.org.uk&quot;&gt;internet hosted EPR portal&lt;/a&gt; as I simply do not want to risk the inadvertent leak of patient information, either through accidental or malicious means. It is not difficult to envisage a system much like we have for online banking in which messages are sent and received through their dedicated website or application but what if it got hacked?&lt;/p&gt;
-
-&lt;p&gt;We can solve some of these issues with encryption but messaging and other forms of communication are also subject to &lt;em&gt;information leakage&lt;/em&gt; as a result of the metadata relating to those communications. The security services don’t necessarily need to know what messages contain to make important inferences about the relationships between people; they know the sender and the recipient.&lt;/p&gt;
-
-&lt;p&gt;For example if a patient emails hiv-helpdesk@nhs.net then information leakage is taking place.&lt;/p&gt;
-
-&lt;h4 id=&quot;openconsent&quot;&gt;openconsent&lt;/h4&gt;
-
-&lt;p&gt;I’ve been working on a small proof-of-concept application that demonstrates a way of connecting patients and services without leaking information about those relationships. It is called &lt;a href=&quot;https://github.com/wardle/openconsent&quot;&gt;openconsent&lt;/a&gt; and the source code is available on &lt;a href=&quot;https://github.com/wardle/openconsent&quot;&gt;github&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The following schematic shows the model:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/openconsent/openconsent-plan-updated.png&quot; alt=&quot;Openconsent Model Updated&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;This looks complicated, but it really isn’t. The blue boxes show completed functionality within the proof-of-concept project with greyed out boxes showing work that is yet to be done.&lt;/p&gt;
-
-&lt;p&gt;More technical information can be found in my previous two blog posts &lt;a href=&quot;/information-governance/2017/04/05/pseudonymous-consent-poc.html&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;/information-governance/2017/04/08/pseudonymous-consent.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The answer comes down to using &lt;a href=&quot;/information-governance/2017/03/19/information-governance.html&quot;&gt;pseudonymous identifiers&lt;/a&gt; to create one-way links between different types of data. This results in a system the prevents data linkage unless you already know the patient details and have permission to access data. The technical underpinnings are described in my other posts so I won’t duplicate that discussion here.&lt;/p&gt;
-
-&lt;p&gt;The same technology can be used to implement secure messaging. Messages sent between different people and organisations suffer from the same &lt;em&gt;information leakage&lt;/em&gt; problem as a result of the metadata required to send that message, even if the content of the message is encrypted.&lt;/p&gt;
-
-&lt;p&gt;I am now working on adding secure message functionality using public-key cryptography to encrypt the content of messages and one-way pseudonymous identifiers to encrypt the metadata relating to those messages in a similar way to the obfuscation of opt-in and opt-out preferences within the consent model.&lt;/p&gt;
-
-&lt;p&gt;For technical readers, a review of &lt;a href=&quot;https://github.com/wardle/openconsent/blob/master/src/test/java/com/eldrix/openconsent/model/TestConsent.java&quot;&gt;some of the unit tests&lt;/a&gt; will demonstrate the use of the framework.&lt;/p&gt;
-
-&lt;p&gt;The immediate next steps for development are:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;add secure messaging&lt;/li&gt;
-  &lt;li&gt;complete the REST API (although much is already complete)&lt;/li&gt;
-  &lt;li&gt;add OAUTH2 server&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Don’t we all want clinical information systems that support both clinicians and patients with clinical care?</summary></entry></feed>
+&lt;p&gt;Finally, how can we implement algorithmic analysis and artificial intelligence without an understand of these characteristics? Assessment of, for example, deteriorating renal function is critical on knowledge of recent diagnoses and medications given, and structured data is vital in supporting the research required in applying artificial intelligence in healthcare. The routine and systematic collection of SNOMED-CT forms a critical part of the foundation of any programme to implement such systems.&lt;/p&gt;</content><author><name></name></author><summary type="html">A cohort is a group of patients who share a defining characteristic.</summary></entry></feed>
