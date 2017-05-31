@@ -1,5 +1,71 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-05-30T07:26:02+01:00</updated><id>https://www.wardle.org/</id><title type="html">Dr. Mark Wardle</title><subtitle>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
-</subtitle><entry><title type="html">PatientCare EPR: design principles</title><link href="https://www.wardle.org/clinical-informatics/2017/05/27/patientcare-epr.html" rel="alternate" type="text/html" title="PatientCare EPR: design principles" /><published>2017-05-27T22:02:00+01:00</published><updated>2017-05-27T22:02:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/05/27/patientcare-epr</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/05/27/patientcare-epr.html">&lt;p&gt;The PatientCare electronic patient record system is a web-based application accessible across NHS Wales that records diagnostic, treatment and interventional treatment. It is underpinned by SNOMED-CT, a modern sophisticated and comprehensive terminology system that acts as the ‘lingua franca’ to provide algorithmic understanding and dynamic functionality. While the main functionality is available via a web-based portal, users can also interact with the software using bespoke iPhone and iPad applications.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-05-31T15:59:01+01:00</updated><id>https://www.wardle.org/</id><title type="html">Dr. Mark Wardle</title><subtitle>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
+</subtitle><entry><title type="html">PatientCare EPR: care plans</title><link href="https://www.wardle.org/clinical-informatics/2017/05/30/patientcare-care-plans.html" rel="alternate" type="text/html" title="PatientCare EPR: care plans" /><published>2017-05-30T22:56:00+01:00</published><updated>2017-05-30T22:56:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/05/30/patientcare-care-plans</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/05/30/patientcare-care-plans.html">&lt;p&gt;In a &lt;a href=&quot;/clinical-informatics/2017/05/27/patientcare-epr.html&quot;&gt;recent blog post&lt;/a&gt;, I gave a whirlwind tour of some of the functionality within the PatientCare EPR. There is a lot I haven’t really mentioned and so, I thought I’d add some details over a few other blog posts.&lt;/p&gt;
+
+&lt;p&gt;A care plan is a document that sets out a patient’s future care and support. Patients should be fully involved in the preparation of such a care plan and ideally this plan should contain:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;what are the intended &lt;em&gt;outcomes&lt;/em&gt; for a patient, including wishes and preferences.&lt;/li&gt;
+  &lt;li&gt;an assessment of the &lt;em&gt;needs&lt;/em&gt; of a patient in order to achieve those outcomes&lt;/li&gt;
+  &lt;li&gt;how those needs are to be &lt;em&gt;met by the agencies&lt;/em&gt; involved in supporting that patient&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;As such, a care plan should be individualised and specific for a single patient and will need to include plans for the care in a range of care domains, such as medical, nursing and social.&lt;/p&gt;
+
+&lt;p&gt;However, there are types of care plans aimed at different scenarios, such as an emergency care plan to document a plan of care should there be an emergency deterioration in a patient’s health. Such a plan would focus on ensuring that emergency unit staff know what to do and this kind of plan can be particularly helpful for patients with long-term health conditions.&lt;/p&gt;
+
+&lt;h1 id=&quot;care-plans-within-the-patientcare-epr&quot;&gt;Care plans within the PatientCare EPR.&lt;/h1&gt;
+
+&lt;p&gt;I have built an emergency care plan registry within the PatientCare EPR.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/care-plans/schematic-care-plan.png&quot; alt=&quot;Schematic Care Plan&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The idea being that we could configure our emergency unit system to check for the presence of an emergency care plan via a REST API and ensure that caregivers have access to that plan in safely and securely.&lt;/p&gt;
+
+&lt;h4 id=&quot;building-individualised-plans&quot;&gt;Building individualised plans&lt;/h4&gt;
+
+&lt;p&gt;Modelling care plans requires an understanding of the processes and workflow that create and maintain those plans. As such, it is not sufficient to simply model the data relating to a care plan.&lt;/p&gt;
+
+&lt;p&gt;For instance, care plans are typically collaborative documents in which multiple authors work to create a unified document. In addition, the users involved need to know the care plans for which they are responsible. Most importantly, how many of us have seen guidelines, protocols and care plans with an expiry date many months or years in the past? As such, it is vital that there are processes in place to identify out-of-date care plans and ensure that they are kept up to date.&lt;/p&gt;
+
+&lt;p&gt;Historically, healthcare professionals have relied on patients turning up in clinic in order to drive their healthcare. This is an outdated and inefficient way of running a health service. If we truly want a responsive service, we need to ensure that information technology is used to its fullest in order to enable care.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/care-plans/first-draft.png&quot; alt=&quot;First Draft&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In this first screenshot, we generate a care plan. It is automatically populated by the contents of the emergency care guidance from any clinical services for which the patient is registered. I can add a number of users so for example, if I have a paediatric patient with epilepsy and nutritional problems, one section may the responsibility of a paediatric neurologist and the other a gastroenterologist.&lt;/p&gt;
+
+&lt;p&gt;Each user can edit or add new sections and order those sections:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/care-plans/seizures.png&quot; alt=&quot;Seizures&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;which then populate the care plan document:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/care-plans/second-draft.png&quot; alt=&quot;Second Draft&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Users can choose the review date and the expiry date and users receive notifications when a care plan needs to be reviewed or signed.&lt;/p&gt;
+
+&lt;p&gt;Once a user signs off the document, the content is locked until either all users have signed it off, or someone unlocks the document. Only after all users sign off the document is it finally &lt;a href=&quot;/images/care-plans/care-plan.pdf&quot;&gt;published to the repository&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/care-plans/final-output.png&quot; alt=&quot;Final Output&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;but-how-can-we-do-this-for-thousands-of-patients&quot;&gt;But how can we do this for thousands of patients?&lt;/h4&gt;
+
+&lt;p&gt;Care plans are particularly useful for those patients with complex needs and multiple co-morbidities. For such patients, it is easy to see how investing time and resource in preparing and maintaining emergency care plans can improve patient care in the event of an emergency. But how can we do this for all of the patients under our care?&lt;/p&gt;
+
+&lt;p&gt;Within the PatientCare EPR, all patients are registered to clinical services and projects by virtue of an episode of care. This episode may be lifelong for a long-term health condition, or short for an acute clinical service. As health professionals are registered with different roles to different services, this permits a finely grained security model in which only those staff involved in the direct care of that patient has access to the record.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/care-plans/patient-project-membership.png&quot; alt=&quot;Patient Project Membership&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Furthermore, this model provides a way of building dynamic care plans for all of the patients under our care. As such, the PatientCare EPR can automatically generate a default care plan individualised to that patient by virtue of that patient’s membership of different clinical teams.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/care-plans/editing-service-care-plan.png&quot; alt=&quot;Editing Service Care Plan&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here I edit the configuration for a local Parkinson’s disease service. This will be used to automatically generate a care plan for the patients registered to that service.&lt;/p&gt;
+
+&lt;p&gt;I have built a REST-based API that looks for manually-created emergency care plan but, if that doesn’t exist and the clinical services are configured to have “automatic care plan generation” turned on, the system will dynamically generate a document for the use of emergency services.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/care-plans/pd-drug-timings.png&quot; alt=&quot;Pd Drug Timings&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In this example, I have linked to the &lt;a href=&quot;https://www.parkinsons.org.uk/sites/default/files/publications/download/english/pk0135_emergencymanagement.pdf&quot;&gt;Parkinson’s UK emergency care guidelines&lt;/a&gt; and emphasised that patients with Parkinson’s disease need their medications administered on time.&lt;/p&gt;</content><author><name></name></author><summary type="html">In a recent blog post, I gave a whirlwind tour of some of the functionality within the PatientCare EPR. There is a lot I haven’t really mentioned and so, I thought I’d add some details over a few other blog posts.</summary></entry><entry><title type="html">PatientCare EPR: design principles</title><link href="https://www.wardle.org/clinical-informatics/2017/05/27/patientcare-epr.html" rel="alternate" type="text/html" title="PatientCare EPR: design principles" /><published>2017-05-27T22:02:00+01:00</published><updated>2017-05-27T22:02:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/05/27/patientcare-epr</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/05/27/patientcare-epr.html">&lt;p&gt;The PatientCare electronic patient record system is a web-based application accessible across NHS Wales that records diagnostic, treatment and interventional treatment. It is underpinned by SNOMED-CT, a modern sophisticated and comprehensive terminology system that acts as the ‘lingua franca’ to provide algorithmic understanding and dynamic functionality. While the main functionality is available via a web-based portal, users can also interact with the software using bespoke iPhone and iPad applications.&lt;/p&gt;
 
 &lt;p&gt;It has resulted in clinical information becoming available immediately at the point-of-care. The neuro-inflammatory team used to use paper notes with filing cabinets full of brown folders; now they are paper-free. It records not only a prospective longitudinal narrative, acting as a customer-relationship-manager, but records both clinician-derived and patient reported outcome measures. In addition, while fundamentally it is a system to support the direct care of patients, it additionally supports the dynamic real-time aggregation of data for service management.&lt;/p&gt;
 
@@ -1268,79 +1334,4 @@ Although limited in scope, it has been adopted by HL7 as the standard code syste
       &lt;li&gt;&lt;a href=&quot;https://apigee.com/console/others?req=%7B%22resource%22%3A%22msdata.org.uk%3A8080%2Fsnomedct%2Fdmd%2Fparse%3Fs%3Damlodipine%205mg%20od%22%2C%22params%22%3A%7B%22query%22%3A%7B%22parameters_name_0%22%3A%22s%22%2C%22parameters_value_0%22%3A%22amlodipine%205mg%20od%22%7D%2C%22template%22%3A%7B%7D%2C%22headers%22%3A%7B%22headers_name_0%22%3A%22s%22%2C%22headers_value_0%22%3A%22mult%20scler%22%7D%2C%22body%22%3A%7B%22attachmentFormat%22%3A%22mime%22%2C%22attachmentContentDisposition%22%3A%22form-data%22%7D%7D%2C%22verb%22%3A%22get%22%7D&quot;&gt;via Apigee console&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">I have released an open-source SNOMED-CT terminology server called rsterminology. The source code is available from https://github.com/wardle/rsterminology.</summary></entry><entry><title type="html">The importance of cohorts… and SNOMED-CT</title><link href="https://www.wardle.org/clinical-informatics/2017/04/28/importance-of-cohorts.html" rel="alternate" type="text/html" title="The importance of cohorts... and SNOMED-CT" /><published>2017-04-28T14:42:42+01:00</published><updated>2017-04-28T14:42:42+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/04/28/importance-of-cohorts</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/04/28/importance-of-cohorts.html">&lt;blockquote&gt;
-  &lt;p&gt;A cohort is a group of patients who share a defining characteristic.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;In clinical research, researchers recruit a group of patients with a specific disease or a specific problem or who have received a specific intervention and then might monitor their progress in an observational study or monitor the effect on an intervention in an interventional study.&lt;/p&gt;
-
-&lt;p&gt;In such studies, there is a systematic and dedicated collection of research data, usually to a high-standard using a pre-prepared schedule to avoid bias and to ensure that the appropriate data are acquired.&lt;/p&gt;
-
-&lt;p&gt;One would think that it would be the same in routine healthcare but it is not. Most information is recorded as unstructured free-text and data collected are primarily used for administrative and managerial purposes. As I wrote in my &lt;a href=&quot;/clinical-informatics/2017/02/03/domain-driven-design.html&quot;&gt;domain-driven clinical design document&lt;/a&gt;, “As a result, we commonly know how many patients are seen in clinic, but have very little information as to why they are being seen or how they fare after  treatment.   Important  questions  such  as  ‘how  many  patients  with  Parkin-son’s disease do we care for?’, ‘what are the outcomes for patients after having a mastectomy?’ or ‘why are we seeing these patients in outpatient clinic?’ cannot be answered.”&lt;/p&gt;
-
-&lt;p&gt;In fact, it is not just understanding and assessing our services and outcomes that require this information, but new technologies such as real-time analytics, algorithmic support and artificial intelligence needs prospectively-captured data recorded at the point–of-care.&lt;/p&gt;
-
-&lt;p&gt;Some might point to “Hospital Episode Statistics” (HES) data as a way of understanding our patients but these data are woefully incomplete and inaccurate, do not usually include outpatient episodes of care with diagnostic entities recorded using a classification system (ICD-10) rather than a clinical terminology.&lt;/p&gt;
-
-&lt;p&gt;The logical answer is to encourage the routine and systematic collection of structured data by clinicians for clinicians.&lt;/p&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/Cppjedy-hMo&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;h1 id=&quot;snomed-ct&quot;&gt;SNOMED-CT&lt;/h1&gt;
-
-&lt;p&gt;SNOMED-CT is a large, modern and comprehensive terminology. In the above video, you can see me entering clinical diagnostic terms quickly and having them mapped to SNOMED-CT concepts in real-time. These concepts exist within a large and complex hierarchy of relationships which give algorithmic understanding. I use this in an electronic patient record system to identify patients with motor neurone disease; it will identify patients coded with a diagnosis of “progressive bulbar palsy” but the SNOMED-CT hierarchy can be navigated to work out algorithmically that this is a type of motor neurone disease.&lt;/p&gt;
-
-&lt;p&gt;I have explained more about SNOMED-CT in Section 4.1 of my &lt;a href=&quot;https://www.dropbox.com/s/62sg71a19voxpts/cis_design.pdf?dl=0&quot;&gt;domain-driven clinical design document&lt;/a&gt; and I have a paper in print in the &lt;a href=&quot;http://futurehospital.rcpjournal.org/content/current&quot;&gt;Future Hospital Journal&lt;/a&gt; which should be published in the next issue.&lt;/p&gt;
-
-&lt;p&gt;SNOMED-CT isn’t limited to diagnostic concepts but includes terms for all range of concepts such as countries of birth, ethnic origins, procedures, medications, devices and even occupations. In addition, there are cross-maps which facilitate the mapping of a concept to and from other classification and terminology systems such as ICD-10 and OPCS.&lt;/p&gt;
-
-&lt;p&gt;Here is an example of entering SNOMED-CT terms for medications:&lt;/p&gt;
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/6mvUThwm0j8&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;h3 id=&quot;the-importance-of-implementation&quot;&gt;The importance of implementation&lt;/h3&gt;
-
-&lt;p&gt;I have not been able to identify a working SNOMED-CT implementation in the UK before 2009, which means that, as far as I know, I actually had the first working system in clinical practice in the UK deployed in October 2009.&lt;/p&gt;
-
-&lt;p&gt;I think there are five main issues when it comes to implementing SNOMED-CT:&lt;/p&gt;
-
-&lt;h4 id=&quot;1-you-need-to-make-it-fast&quot;&gt;1. You need to make it fast.&lt;/h4&gt;
-
-&lt;p&gt;If you have a look at the &lt;a href=&quot;http://browser.ihtsdotools.org/&quot;&gt;SNOMED International provided browser&lt;/a&gt;, you can navigate the SNOMED-CT hierarchy and get a feel for how it is structured. However, you will notice that search is very slow. While its size makes it comprehensive, it is technically challenging to implement in an effective way. It is possible to do so however as you can see from the screen recordings above.&lt;/p&gt;
-
-&lt;h4 id=&quot;2-terminology-shouldnt-be-a-bolt-in-but-the-lingua-franca-in-your-data-models-and-your-software&quot;&gt;2. Terminology shouldn’t be a bolt-in, but the lingua franca in your data models and your software.&lt;/h4&gt;
-
-&lt;p&gt;SNOMED-CT data entry does not need to only occur by allowing your users to search for a specific term. In my homegrown EPR, choosing locations on the face when recording botulinum toxin injections enters SNOMED-CT terms behind the scenes at the data level.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/patientcare-botox.jpg&quot; alt=&quot;Patientcare Botox&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;3-its-not-just-about-data-entry&quot;&gt;3. It’s not just about data entry.&lt;/h4&gt;
-
-&lt;p&gt;If your terminology system is a bolt-on, then it is difficult to do anything clever with the data in real-time in order to support clinical care. If however you use SNOMED-CT to enable real-time analytics, then you can switch functionality on and off depending on clinical context. Here we analyse the patient record to generate a motor neurone disease summary and look for records of gastrostomy insertion simply by querying the patient’s data leveraging the semantic understanding that SNOMED-CT provides. &lt;img src=&quot;/images/mnd-dashboard.png&quot; alt=&quot;Mnd Dashboard&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;4-dont-start-thinking-about-subsets&quot;&gt;4. Don’t start thinking about subsets&lt;/h4&gt;
-
-&lt;p&gt;There have been many working groups set up by different specialties to try to organise and curate subsets, limited lists of concepts from within SNOMED-CT and I strongly believe that this work is a waste of time.&lt;/p&gt;
-
-&lt;p&gt;Instead, those people should be focused on improving SNOMED-CT as a whole, reviewing and deprecating concepts and ensuring that the concepts that are found in modern clinical practice are represented adequately.&lt;/p&gt;
-
-&lt;p&gt;I believe that subsets have arisen due to fundamental shortcomings in the implementation of SNOMED-CT and I haven’t found a need that subsumption can’t solve by itself. Subsumption refers to the hierarchy of SNOMED-CT concepts that arises from IS-A relationships in that, “progressive bulbar palsy” IS-A type “motor neurone disease” or “bronchopneumonia” IS-A type of “respiratory disease”.&lt;/p&gt;
-
-&lt;p&gt;Subsumption means that a decent implementation (and mine is one of them - see it at &lt;a href=&quot;https://github.com/mwardle/rsterminology&quot;&gt;https://github.com/wardle/rsterminology&lt;/a&gt;) can use those relationships to limit the choice of users so that they don’t choose “Occupation of physiotherapist” when making a “Referral to physiotherapist” because one is an occupation and one is a type of procedure.&lt;/p&gt;
-
-&lt;h4 id=&quot;5-it-allows-you-to-study-cohorts&quot;&gt;5. It allows you to study cohorts…&lt;/h4&gt;
-
-&lt;p&gt;And finally, the title of the article.&lt;/p&gt;
-
-&lt;p&gt;Once you implement SNOMED-CT, you can start to do clever things like, show me how the patient in front of me is doing compared to all of my patients with this disease. You can see this for multiple sclerosis here, but it is possible to do for other disorders as well.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/edss-graph.jpg&quot; alt=&quot;Edss Graph&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;In fact, we can now do the same but sub-stratify to show how you compare to patients with a disease onset at a similar time of life or of the same gender.&lt;/p&gt;
-
-&lt;p&gt;Defining cohorts means defining the characteristics of our patients, and SNOMED-CT is the solution. We can then stratify our patient groups according to those characteristics, whether it be their medical diagnoses, the procedures to which they have been through, their treatments current and past or any other characteristic.&lt;/p&gt;
-
-&lt;p&gt;How can we make sense of patient reported outcome measures without understanding and stratifying our patients?&lt;/p&gt;
-
-&lt;p&gt;Importantly, it doesn’t matter if someone has coded a diagnosis as a highly specific diagnosis as one can map this to a more generic high-level diagnosis and then use that perform aggregated analysis. So for example, if a clinician enters a very specific sub-type of “bronchiolitis”, then it doesn’t matter as we can subsequently aggregate using a higher-level concept and still identify the patient.&lt;/p&gt;
-
-&lt;p&gt;Finally, how can we implement algorithmic analysis and artificial intelligence without an understand of these characteristics? Assessment of, for example, deteriorating renal function is critical on knowledge of recent diagnoses and medications given, and structured data is vital in supporting the research required in applying artificial intelligence in healthcare. The routine and systematic collection of SNOMED-CT forms a critical part of the foundation of any programme to implement such systems.&lt;/p&gt;</content><author><name></name></author><summary type="html">A cohort is a group of patients who share a defining characteristic.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">I have released an open-source SNOMED-CT terminology server called rsterminology. The source code is available from https://github.com/wardle/rsterminology.</summary></entry></feed>
