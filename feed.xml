@@ -1,5 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-05-31T16:20:39+01:00</updated><id>https://www.wardle.org/</id><title type="html">Dr. Mark Wardle</title><subtitle>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
-</subtitle><entry><title type="html">PatientCare EPR: care plans</title><link href="https://www.wardle.org/clinical-informatics/2017/05/30/patientcare-care-plans.html" rel="alternate" type="text/html" title="PatientCare EPR: care plans" /><published>2017-05-30T22:56:00+01:00</published><updated>2017-05-30T22:56:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/05/30/patientcare-care-plans</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/05/30/patientcare-care-plans.html">&lt;p&gt;In a &lt;a href=&quot;/clinical-informatics/2017/05/27/patientcare-epr.html&quot;&gt;recent blog post&lt;/a&gt;, I gave a whirlwind tour of some of the functionality within the PatientCare EPR. There is a lot I haven’t really mentioned and so, I thought I’d add some details over a few other blog posts.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-06-02T17:43:19+01:00</updated><id>https://www.wardle.org/</id><title type="html">Dr. Mark Wardle</title><subtitle>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
+</subtitle><entry><title type="html">Implementation of SNOMED-CT in a clinical information system</title><link href="https://www.wardle.org/clinical-informatics/2017/06/02/future-hospital-snomed-ct.html" rel="alternate" type="text/html" title="Implementation of SNOMED-CT in a clinical information system" /><published>2017-06-02T16:08:00+01:00</published><updated>2017-06-02T16:08:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/06/02/future-hospital-snomed-ct</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/06/02/future-hospital-snomed-ct.html">&lt;p&gt;My article on the &lt;a href=&quot;http://m.futurehospital.rcpjournal.org/content/4/2/126.full.pdf&quot;&gt;implementation of SNOMED-CT as the ‘lingua franca’ within a clinical information system&lt;/a&gt; has been published in the Future Hospital Journal.&lt;/p&gt;
+
+&lt;p&gt;The article is available &lt;a href=&quot;http://m.futurehospital.rcpjournal.org/content/4/2/126&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">My article on the implementation of SNOMED-CT as the ‘lingua franca’ within a clinical information system has been published in the Future Hospital Journal.</summary></entry><entry><title type="html">PatientCare EPR: care plans</title><link href="https://www.wardle.org/clinical-informatics/2017/05/30/patientcare-care-plans.html" rel="alternate" type="text/html" title="PatientCare EPR: care plans" /><published>2017-05-30T22:56:00+01:00</published><updated>2017-05-30T22:56:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/05/30/patientcare-care-plans</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/05/30/patientcare-care-plans.html">&lt;p&gt;In a &lt;a href=&quot;/clinical-informatics/2017/05/27/patientcare-epr.html&quot;&gt;recent blog post&lt;/a&gt;, I gave a whirlwind tour of some of the functionality within the PatientCare EPR. There is a lot I haven’t really mentioned and so, I thought I’d add some details over a few other blog posts.&lt;/p&gt;
 
 &lt;p&gt;A care plan is a document that sets out a patient’s future care and support. Patients should be fully involved in the preparation of such a care plan and ideally this plan should contain:&lt;/p&gt;
 
@@ -1282,56 +1284,4 @@ Although limited in scope, it has been adopted by HL7 as the standard code syste
 
 &lt;p&gt;With these few core components and lots of fake data, NHS hack days could start adding value quickly making it much more likely that any solutions can evolve to become truly useful within the NHS.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">NHS hack days are weekends in which clinicians and software developers come together to try to develop information technology solutions for healthcare.</summary></entry><entry><title type="html">An open source SNOMED-CT implementation</title><link href="https://www.wardle.org/clinical-informatics/2017/04/29/rsterminology-part2.html" rel="alternate" type="text/html" title="An open source SNOMED-CT implementation" /><published>2017-04-29T20:10:02+01:00</published><updated>2017-04-29T20:10:02+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/04/29/rsterminology-part2</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/04/29/rsterminology-part2.html">&lt;p&gt;I have released an open-source SNOMED-CT terminology server called rsterminology. The source code is available from &lt;a href=&quot;https://github.com/wardle/rsterminology&quot;&gt;https://github.com/wardle/rsterminology&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;It is software that is designed to be used by other software, rather than by end-users. I have shown videos of how I use this in an electronic patient record system in &lt;a href=&quot;/clinical-informatics/2017/04/28/importance-of-cohorts.html&quot;&gt;previous posts&lt;/a&gt;. It runs as a java microservice and is currently deployed within NHS Wales.&lt;/p&gt;
-
-&lt;p&gt;I have installed a working version of this software on a very small virtual machine for demonstration purposes. It is not intended for production use please! I will monitor usage and add throttling or shut down the service if this is misused.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;For clinical users, I have just created (29th April) a quick SNOMED-CT search facility on a web page so that you can enter terms like “MS” or “DM” or “IHD” or “amlodipine” and see how autocomplete can work. The application is available &lt;a href=&quot;https://msdata.org.uk/apps/WebObjects/SnomedBrowser.woa/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Here are some simple examples of how it can be used:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Fetch information about a single concept with a known identifier:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;http://msdata.org.uk:8080/snomedct/concepts/24700007&quot;&gt;http://msdata.org.uk:8080/snomedct/concepts/24700007&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://apigee.com/console/others?req=%7B%22resource%22%3A%22msdata.org.uk%3A8080%2Fsnomedct%2Fconcepts%2F24700007%22%2C%22params%22%3A%7B%22query%22%3A%7B%7D%2C%22template%22%3A%7B%7D%2C%22headers%22%3A%7B%7D%2C%22body%22%3A%7B%22attachmentFormat%22%3A%22mime%22%2C%22attachmentContentDisposition%22%3A%22form-data%22%7D%7D%2C%22verb%22%3A%22get%22%7D&quot;&gt;via Apigee console&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;This shows information about multiple sclerosis&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Get the synonyms for a given concept
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;http://msdata.org.uk:8080/snomedct/concepts/24700007/descriptions&quot;&gt;http://msdata.org.uk:8080/snomedct/concepts/24700007/descriptions&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://apigee.com/console/others?req=%7B%22resource%22%3A%22msdata.org.uk%3A8080%2Fsnomedct%2Fconcepts%2F24700007%2Fdescriptions%22%2C%22params%22%3A%7B%22query%22%3A%7B%7D%2C%22template%22%3A%7B%7D%2C%22headers%22%3A%7B%7D%2C%22body%22%3A%7B%22attachmentFormat%22%3A%22mime%22%2C%22attachmentContentDisposition%22%3A%22form-data%22%7D%7D%2C%22verb%22%3A%22get%22%7D&quot;&gt;via Apigee console&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Understand what a concept means, semantically, by virtue of subsumption (the IS-A relationships)
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;http://msdata.org.uk:8080/snomedct/concepts/24700007/recursiveParents&quot;&gt;http://msdata.org.uk:8080/snomedct/concepts/24700007/recursiveParents&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://apigee.com/console/others?req=%7B%22resource%22%3A%22msdata.org.uk%3A8080%2Fsnomedct%2Fconcepts%2F24700007%2FrecursiveParents%22%2C%22params%22%3A%7B%22query%22%3A%7B%7D%2C%22template%22%3A%7B%7D%2C%22headers%22%3A%7B%7D%2C%22body%22%3A%7B%22attachmentFormat%22%3A%22mime%22%2C%22attachmentContentDisposition%22%3A%22form-data%22%7D%7D%2C%22verb%22%3A%22get%22%7D&quot;&gt;via Apigee console&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;In this example you see that multiple sclerosis is a disease of the nervous system for example.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Perhaps the most powerful feature is free-text searching. You would not usually search the whole of SNOMED-CT but instead limit to particular sub-trees such as diagnoses, procedures, ethnic origins etc.
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;http://msdata.org.uk:8080/snomedct/search?s=msa&amp;amp;root=64572001&quot;&gt;http://msdata.org.uk:8080/snomedct/search?s=msa&amp;amp;root=64572001&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://apigee.com/console/others?req=%7B%22resource%22%3A%22msdata.org.uk%3A8080%2Fsnomedct%2Fsearch%3Fs%3Dmsa%26root%3D64572001%22%2C%22params%22%3A%7B%22query%22%3A%7B%22parameters_name_0%22%3A%22s%22%2C%22parameters_value_0%22%3A%22msa%22%2C%22parameters_name_1%22%3A%22root%22%2C%22parameters_value_1%22%3A%2264572001%22%7D%2C%22template%22%3A%7B%7D%2C%22headers%22%3A%7B%22headers_name_0%22%3A%22s%22%2C%22headers_value_0%22%3A%22mult%20scler%22%7D%2C%22body%22%3A%7B%22attachmentFormat%22%3A%22mime%22%2C%22attachmentContentDisposition%22%3A%22form-data%22%7D%7D%2C%22verb%22%3A%22get%22%7D&quot;&gt;via Apigee console&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;Here we search for “MSA” but only in the “diagnoses” hierarchy - which has the concept identifier &lt;a href=&quot;http://msdata.org.uk:8080/snomedct/concepts/64572001&quot;&gt;64572001&lt;/a&gt;.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Let’s now let our users choose a country of birth. The root representing these concepts is &lt;a href=&quot;http://msdata.org.uk:8080/snomedct/concepts/370159000&quot;&gt;370159000&lt;/a&gt;.
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;http://msdata.org.uk:8080/snomedct/search?root=370159000&amp;amp;s=eng&quot;&gt;http://msdata.org.uk:8080/snomedct/search?root=370159000&amp;amp;s=eng&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://apigee.com/console/others?req=%7B%22resource%22%3A%22http%3A%2F%2Fmsdata.org.uk%3A8080%2Fsnomedct%2Fsearch%3Froot%3D370159000%26s%3Deng%22%2C%22params%22%3A%7B%22query%22%3A%7B%22parameters_name_0%22%3A%22root%22%2C%22parameters_value_0%22%3A%22370159000%22%2C%22parameters_name_1%22%3A%22s%22%2C%22parameters_value_1%22%3A%22eng%22%7D%2C%22template%22%3A%7B%7D%2C%22headers%22%3A%7B%22headers_name_0%22%3A%22s%22%2C%22headers_value_0%22%3A%22mult%20scler%22%7D%2C%22body%22%3A%7B%22attachmentFormat%22%3A%22mime%22%2C%22attachmentContentDisposition%22%3A%22form-data%22%7D%7D%2C%22verb%22%3A%22get%22%7D&quot;&gt;via Apigee console&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Finally, let’s parse a medication such as amlodipine 5mg od, which means amlodipine should be taken 5mg per day once daily:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;http://msdata.org.uk:8080/snomedct/dmd/parse?s=amlodipine 5mg od&quot;&gt;http://msdata.org.uk:8080/snomedct/dmd/parse?s=amlodipine 5mg od&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://apigee.com/console/others?req=%7B%22resource%22%3A%22msdata.org.uk%3A8080%2Fsnomedct%2Fdmd%2Fparse%3Fs%3Damlodipine%205mg%20od%22%2C%22params%22%3A%7B%22query%22%3A%7B%22parameters_name_0%22%3A%22s%22%2C%22parameters_value_0%22%3A%22amlodipine%205mg%20od%22%7D%2C%22template%22%3A%7B%7D%2C%22headers%22%3A%7B%22headers_name_0%22%3A%22s%22%2C%22headers_value_0%22%3A%22mult%20scler%22%7D%2C%22body%22%3A%7B%22attachmentFormat%22%3A%22mime%22%2C%22attachmentContentDisposition%22%3A%22form-data%22%7D%7D%2C%22verb%22%3A%22get%22%7D&quot;&gt;via Apigee console&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">I have released an open-source SNOMED-CT terminology server called rsterminology. The source code is available from https://github.com/wardle/rsterminology.</summary></entry></feed>
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">NHS hack days are weekends in which clinicians and software developers come together to try to develop information technology solutions for healthcare.</summary></entry></feed>
