@@ -1,5 +1,230 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-06-02T17:43:19+01:00</updated><id>https://www.wardle.org/</id><title type="html">Dr. Mark Wardle</title><subtitle>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
-</subtitle><entry><title type="html">Implementation of SNOMED-CT in a clinical information system</title><link href="https://www.wardle.org/clinical-informatics/2017/06/02/future-hospital-snomed-ct.html" rel="alternate" type="text/html" title="Implementation of SNOMED-CT in a clinical information system" /><published>2017-06-02T16:08:00+01:00</published><updated>2017-06-02T16:08:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/06/02/future-hospital-snomed-ct</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/06/02/future-hospital-snomed-ct.html">&lt;p&gt;My article on the &lt;a href=&quot;http://m.futurehospital.rcpjournal.org/content/4/2/126.full.pdf&quot;&gt;implementation of SNOMED-CT as the ‘lingua franca’ within a clinical information system&lt;/a&gt; has been published in the Future Hospital Journal.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-06-04T09:21:35+01:00</updated><id>https://www.wardle.org/</id><title type="html">Dr. Mark Wardle</title><subtitle>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
+</subtitle><entry><title type="html">Designing the future 3/3: the patient</title><link href="https://www.wardle.org/clinical-informatics/2017/06/03/designing-future-3.html" rel="alternate" type="text/html" title="Designing the future 3/3: the patient" /><published>2017-06-03T16:10:00+01:00</published><updated>2017-06-03T16:10:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/06/03/designing-future-3</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/06/03/designing-future-3.html">&lt;p&gt;This is part three of a 3-part series on designing future clinical information systems. Part 1 covers the &lt;a href=&quot;/clinical-informatics/2017/06/03/designing-future-1.html&quot;&gt;importance of data models&lt;/a&gt;. Part 2 covers &lt;a href=&quot;/clinical-informatics/2017/06/03/designing-future-2.html&quot;&gt;clinical modelling in relation to process and workflow&lt;/a&gt;. This part covers patient portals and the internet-of-things.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;So we need to take several steps back from sitting in our clinics and understand what we do and where we are likely to be going in healthcare. Can we model this in an abstract and future-proof way? Can we do what we did when we &lt;a href=&quot;/clinical-informatics/2017/06/03/designing-future-2.html&quot;&gt;model a blood pressure&lt;/a&gt;, but for something more complex?&lt;/p&gt;
+
+&lt;p&gt;It is useful to imagine a patient with several long-term health conditions. These are problems that a patient will have for the rest of their life and most such conditions need ongoing monitoring. This monitoring will be usually managed by a primary care physician or a specialist and their respective teams. As such, several different professionals will be involved, including a range of administrative staff, nurses, physiotherapists, occupational therapists, third-sector providers, social services and doctors. These professionals may all work in the same organisation, but it is much more likely that they will work across organisational boundaries and yet need to collaborate and share information in supporting their patient together.&lt;/p&gt;
+
+&lt;p&gt;Importantly, a patient is not and cannot be a passive recipient of healthcare. Instead, patients should be active members and leaders of the team, setting achievable goals and defining priorities of care. As such, patients need to be able to interact and collaborate with their teams and not only see the information relating to their care but contribute to it as well. Why do we either not measure outcomes or use surrogate proxy markers of outcomes when a patient can tell us, either directly or indirectly by virtue of their activity data, their prospectively recorded log of seizures or their home monitoring equipment?&lt;/p&gt;
+
+&lt;p&gt;So the model of care in which a patient comes for a 6-monthly outpatient clinic is outdated, inefficient and does not respect the patient - placing them in a subservient, passive role in order to receive healthcare. They arrive, sit in a waiting room, have their pulse and blood pressure measured and are weighed and then, as any who has experienced an outpatient clinic will testify, feel their autonomy fade away. We give them an appointment for six months which doesn’t fit with their schedule and will probably be cancelled. Our administrative systems track patients waiting for a new patient appointment, but patients wait for months for another follow-up slot. Information technology alone is not going to solve this, but can we step back and re-imagine our care processes and &lt;em&gt;use&lt;/em&gt; information technology to enable that change?&lt;/p&gt;
+
+&lt;p&gt;Here is an example overview of how longitudinal prospectively collected information about a patient can be combined from disparate sources:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/cis_design/data_pipelines.png&quot; alt=&quot;Data Pipelines&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;How can we make sense of step-count data without an understanding that the patient had a hip replacement in May 2017? Likewise, how can we looks at biomarkers on a serum sample taken in April 2017 without understanding the patient had a seizure the day before? We need to integrate, summarise and make available information from multiple disparate sources to the patient and those that support that patient.&lt;/p&gt;
+
+&lt;p&gt;If a patient has a clinic appointment in three weeks time, it is possible to have a medical records department that fetches a set of paper notes from the archive and ensures (mostly) that I have them on my desk in clinic at the right time. This model does not scale to support a patient calling us to discuss their care or to support multiple teams looking after patients across multiple disciplines and organisations - who has got the notes? As such, we can use information technology to support a change in the way that we work.&lt;/p&gt;
+
+&lt;h1 id=&quot;monolithic-architectures&quot;&gt;Monolithic architectures&lt;/h1&gt;
+
+&lt;p&gt;In the early days of the Internet, we had Compuserve and later AOL. As I recall, every computer magazine had a floppy disk or later a CD-ROM with their software on it. Both were proprietary, locked-down portals accessible using a dial-up modem that offered everything from email to bulletin boards to news. As the internet took over, built on open-standards and interoperability, these systems faded into irrelevance and obsolescence. Both tried to react to the more open ‘World Wide Web’ by allowing some degree of information exchange such as permitting emails to be sent and received from the internet, but such limited interoperability was insufficient to prevent the irresistible march of progress.&lt;/p&gt;
+
+&lt;p&gt;Healthcare information technology is at a similar level of development to those systems from the 1980s and early 1990s with monolithic systems and single portals pitched as the solution to all healthcare problems. Large-scale enterprise applications (such as Epic and Cerner’s Millenium) are now installed in many hospitals and these have started offering limited interoperability in order to make their data available to other systems.&lt;/p&gt;
+
+&lt;p&gt;Similarly, those systems can offer a patient portal in which patients themselves can login and interact with that organisation and its teams. In addition, there are now increasing numbers of more consumer-focused patient portals acting as “personal health records” (PHRs) such as &lt;a href=&quot;https://www.patientsknowbest.com&quot;&gt;Patients Know Best&lt;/a&gt;, Microsoft’s &lt;a href=&quot;https://www.healthvault.com/en-gb/&quot;&gt;HealthVault&lt;/a&gt; and Google’s (now closed) &lt;a href=&quot;https://en.wikipedia.org/wiki/Google_Health&quot;&gt;Health&lt;/a&gt; PHR. An overview of the &lt;a href=&quot;https://www.rcplondon.ac.uk/file/3738/download?token=lPb9TkQE&quot;&gt;use of PHRs was written by the Royal College of Physicians’ Health Informatics Unit in 2016&lt;/a&gt; with a focus on PHRs provided by healthcare organisations themselves. In all cases, these products create portals to which patients may interact, and their use is principally communication between the patient and their healthcare team.&lt;/p&gt;
+
+&lt;p&gt;The advantage of a monolithic system is that the patient portal can encrypt all communications between itself and the patient or their device(s) and appropriately manage the secure transmission of clinical information to and from other clinical systems within a wider healthcare enterprise.&lt;/p&gt;
+
+&lt;p&gt;The disadvantage of a monolithic system is similar to the problems experienced by users of closed systems like Compuserve and AOL; they are locked into using that system and potentially innovative smaller enterprises become excluded from the market. If a particular provider does not support data from a particular device, such as a new product to detect seizures occurring in a patient as they sleep, then that patient cannot share that data with their healthcare team. Finally, which system should be used? Should the patient choose? Should the organisation choose? And what about patients who are looked after by multiple organisations?&lt;/p&gt;
+
+&lt;h1 id=&quot;can-we-do-better&quot;&gt;Can we do better?&lt;/h1&gt;
+
+&lt;p&gt;The problem with healthcare data is that it is private and sensitive. So how can we make healthcare data more open and more accessible and yet keep that data safe and confidential? How can we connect the patient and their devices and everyone else involved, whatever their organisation? And if we want to make healthcare data more available, won’t we exacerbate our existing explosion of data and will need tools to make sense of that information. I don’t want to have to read through all of the day-to-day nursing notes recorded when a patient was an inpatient to find that critical piece of information.&lt;/p&gt;
+
+&lt;p&gt;We need systems that can make health information more widely available within our NHS network between NHS organisations, but that is insufficient. We also need to extend our reach to the patient, to other care providers such as social services and the third-sector.&lt;/p&gt;
+
+&lt;p&gt;So, what do we need?&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;A secure but open distributed infrastructure:
+    &lt;ul&gt;
+      &lt;li&gt;Solve the seemingly mutually exclusive goals of security and availability. I think the answer will have to come in a future blog post, but we need to consider how to make a secure, distributed, decentralised infrastructure on which open standards permit semantic interoperability between disparate systems. We think that there are some clever ways that this might be achieved.&lt;/li&gt;
+      &lt;li&gt;Can such a system adopt both a messaging function, in which electronic communication can be sent securely from one end-point to another, but also a publish-subscribe (multicast) model in which different services contribute and receive information about their patients?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Support data standards and semantic interoperability with clinical modelling for data and process:
+    &lt;ul&gt;
+      &lt;li&gt;Build tools to capture structured data at the point-of-care, and make entering structured data easier to do than entering unstructured free text.&lt;/li&gt;
+      &lt;li&gt;Build tools to turn unstructured data into structured information by advances in natural language processing.&lt;/li&gt;
+      &lt;li&gt;Build tools to support making sense of large amounts of unstructured and structured information in a variety of different clinical, professional and personal contexts.&lt;/li&gt;
+      &lt;li&gt;Understand what we mean by a clinical service and a team, not defined by an organisation but how they &lt;em&gt;work together&lt;/em&gt; for a patient.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Essentially, we need an “information superhighway” for healthcare, in which we can exchange communications securely and yet privately between multiple end-points&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;One of the problems with the secure exchange of information is that, while we can encrypt the contents of my message, the metadata (data about data) leaks confidential information:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/communication/msg-leaking-metadata.jpg&quot; alt=&quot;Msg Leaking Metadata&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In this rather contrived example, you can see that I sent some information to the genito-urinary clinic and then received some information back. You can guess that a result was included as the laboratory has also been involved. You don’t need to see the contents to make some inferences about what is happening.&lt;/p&gt;
+
+&lt;p&gt;Leaking information via your metadata is even more problematic for electronic communications. If my patient sends and receives electronic communication to a HIV helpline address, that information tells me something important and leaks private information.&lt;/p&gt;
+
+&lt;p&gt;Any distributed system connecting patients and their devices to our healthcare enterprises needs to solve this privacy concern.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h4 id=&quot;further-reading&quot;&gt;Further reading&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/05/27/patientcare-epr.html&quot;&gt;Overview of my PatientCare EPR&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;{$ link _posts/2017-02-03-domain-drive-design.markdown %}&quot;&gt;Domain-driven design&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">This is part three of a 3-part series on designing future clinical information systems. Part 1 covers the importance of data models. Part 2 covers clinical modelling in relation to process and workflow. This part covers patient portals and the internet-of-things.</summary></entry><entry><title type="html">Designing the future 2/3: modelling process</title><link href="https://www.wardle.org/clinical-informatics/2017/06/03/designing-future-2.html" rel="alternate" type="text/html" title="Designing the future 2/3: modelling process" /><published>2017-06-03T16:09:00+01:00</published><updated>2017-06-03T16:09:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/06/03/designing-future-2</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/06/03/designing-future-2.html">&lt;p&gt;This is part two of a 3-part series on designing future clinical information systems. Part 1 covers the &lt;a href=&quot;/clinical-informatics/2017/06/03/designing-future-1.html&quot;&gt;importance of data models&lt;/a&gt;. This part covers clinical modelling in relation to process and workflow. Part 3 covers &lt;a href=&quot;/clinical-informatics/2017/06/03/designing-future-3.html&quot;&gt;patient portals and the internet-of-things&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/post-it-note.jpg&quot; alt=&quot;Post It Note&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In this blog post, I want to talk about how we model clinical information systems and how communication between patients, professionals and services underpins all that we do in healthcare.&lt;/p&gt;
+
+&lt;p&gt;Essentially, my arguments are:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;It is easy to see information technology (IT) as a product to be deployed: “drop it in and all will be well”. This isn’t true. Instead, IT should be used to support existing workflow and planned changes in that workflow to improve patient care. You need to therefore understand workflow.&lt;/li&gt;
+  &lt;li&gt;This boils down to understanding how we work in teams and how those relationships between people need to be modelled within any computer system designed to support healthcare.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Healthcare is all about communication: between patient and the team and between team members and the services that we use. The communication may be a patient phoning us, but it is much more that that. For example, the communication from the laboratory to us on the ward relating to the results of a blood investigation such as a renal function test or a full blood count, the discussion I have with a colleague about the most appropriate next step or my request for that MRI scan of the brain sent from my clinic this morning.&lt;/p&gt;
+
+&lt;p&gt;However, it is easy to forget and instead see technology as an answer itself. As such, we end up with a read-only portal to which I login to see a list of patients on the ward, a list of pending outpatient referrals and a chronological list of investigations for that patient. Such software has been created in response to a requirement such as “allow the professionals to see all of the results”, which seems like an entirely reasonable statement of the requirements.&lt;/p&gt;
+
+&lt;p&gt;But has that requirement been correctly scoped?&lt;/p&gt;
+
+&lt;h1 id=&quot;poor-scoping-and-the-mismatched-model&quot;&gt;Poor scoping and the mismatched model&lt;/h1&gt;
+
+&lt;p&gt;We need to step back and consider all of the information flows that exist, and particularly note the difference between “push” and “pull” communications. A “push” communication is a message that you receive as an active process : a letter is posted through your letterbox, a result is placed on your desk, the laboratory phones you because the haemoglobin is very low. A “pull” communication is something you fetch yourself : you go and read the noticeboard, you look through a list of results on the computer, you look through the notes to find a filed letter.&lt;/p&gt;
+
+&lt;p&gt;Historically, information technology in healthcare has adopted a “pull” model for end-users because there was no practical way of offering “push” notifications. This is an interesting paradox because at a technological level, most health enterprises have used “push” messaging (HL7) to integrate different systems within their architecture. There are many reasons why end-users have missed out:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;How could a system stand any chance of sending a blood result to the right person when, as designed, no computer could work out to whom to send the result? The request was made on paper, with an illegible name for the consultant, and no way of knowing which professionals worked in which team.&lt;/li&gt;
+  &lt;li&gt;How do push notifications work when ward computers are used by multiple users, many of whom move around every few months? Users did not carry personal devices.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And yet so many processes are predicated upon a “push” model, in which the receipt of a communication (a request or a result of a test), is an integral part of the workflow of a service. The team need to know the result of the blood test in order to send the patient home; a delay in getting that blood test results in a &lt;a href=&quot;http://qir.bmj.com/content/5/1/u209098.w3772.full&quot;&gt;late discharge and a consequent effect on hospital bed efficiencies&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Nevertheless, I still get a lot of “push” notifications: my office is cluttered with paper records, post-it notes and a paper inbox. Similarly, I have NHS email with an electronic inbox that fills up with alarming rapidity with stuff for me to do but none of those emails end up linked into the patient record and are not visible to anyone else in the team.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/pile-of-notes.jpg&quot; alt=&quot;Pile Of Notes&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Just as email is not designed as a system to manage workflow, these different systems are not joined up and do not support me in my care for patients. Most of us set-up workaround systems that mean that when we sign off typed letters, we get the notes and can check the results.&lt;/p&gt;
+
+&lt;p&gt;The systems I have to use don’t support the clinical processes I need in order to provide safe, good care. I have solutions that have been poorly scoped, poorly thought through and a mismatch between reality and the implicit or explicit model underlying those solutions.&lt;/p&gt;
+
+&lt;p&gt;We need help!&lt;/p&gt;
+
+&lt;h1 id=&quot;modelling-process&quot;&gt;Modelling process&lt;/h1&gt;
+
+&lt;p&gt;As the examples above demonstrate, I now receive a variety of healthcare information via paper, traditional email, and existing organisation-provided and national all-Wales portals. I also receive messages within my own homegrown electronic patient record system.&lt;/p&gt;
+
+&lt;p&gt;Paper post-it notes and my in-tray on my shelf do not support modern ways of working and timely collaboration of patient care, but at least there is no mismatch in the process. I request something, the result is posted back, an administrator bundles the result with the notes and I can deal with it. It is a workflow that is generally safe, if not rather old-fashioned.&lt;/p&gt;
+
+&lt;p&gt;My health board turned off paper reports for laboratory investigations. I currently receive no notifications about results, whether normal or abnormal. It is left to chance, unless I make a habit of always checking results whenever I sign off letters. This is a process model mismatch. I have to login and manually check results for patients under my care and there is currently no way of knowing that someone has dealt with a result. Now we’re starting to fix this as part of the Welsh Clinical Portal project within NHS Wales but there is more work to do.&lt;/p&gt;
+
+&lt;p&gt;In the PatientCare EPR, I built a model for rapid team-based, patient-linked electronic communication. While not perfect, it builds in a task-manager so that users can track what they have and have not dealt with. At the time of writing, users have sent 57,412 messages between each other with 45,743 explicitly linked to a patient record. Users now send over 1,000 messages per month to one another.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/patientcare-messages.png&quot; alt=&quot;Patientcare Messages&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As the graph shows, the vast majority of messages are sent by administrators and by specialist nurses.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;There are many different ways of supporting team communication and it is important for users to be able to send messages from lots of different contexts.&lt;/p&gt;
+
+&lt;p&gt;The first context is the software’s encounter wizard, which can be used to record clinic encounters, ward reviews or telephone calls (or any other user-defined service-specific type of encounter):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/communication/msg-encounter-wizard.png&quot; alt=&quot;Msg Encounter Wizard&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here you see an administrator recording encounters against two patients. Those encounters will be recorded in the longitudinal record for that patient automatically. For each encounter, a user has the option of sending a message to a colleague. As such, in one click, the user records both an encounter with the patient and informs someone else of the need to do something. Once created, at any time a user can see a list of encounter. Users are able to filter the list depending on a range of different characteristics.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/communication/msg-encounter-list.png&quot; alt=&quot;Msg Encounter List&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Of course, we can also see a pure list of the messages for that patient, irrespective of whether an encounter exists.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/communication/msg-message-view.png&quot; alt=&quot;Msg Message View&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And we can create a message directly from the patient’s record:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/communication/msg-simple.png&quot; alt=&quot;Msg Simple&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Users can choose whether to receive an email notification about secure messages received. If all our users had their own personal handheld devices, a push notification would work similarly. In addition, within the PatientCare EPR, they have a simple inbox functionality to see their unread messages:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/communication/msg-inbox.png&quot; alt=&quot;Msg Inbox&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And to facilitate task management, messages can be flagged as complete:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/communication/msg-completed.png&quot; alt=&quot;Msg Completed&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The most important feature is that the contents of the communications are available to all members of the team looking after that patient, because it is recorded within the patient record.&lt;/p&gt;
+
+&lt;h1 id=&quot;a-model-for-the-future&quot;&gt;A model for the future&lt;/h1&gt;
+
+&lt;p&gt;Importantly, patients and users are explicitly linked to one another via the concept of “episodes of care” and “user registration”. As such, the system supports a finely-grained security model in which we can vouch that a particular health professional has a direct-care relationship with a specific patient.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/care-plans/patient-project-membership.png&quot; alt=&quot;Patient Project Membership&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;For our services for long-term health conditions, the episode is lifelong as you would expect. For more acute services, such as our liaison neurology service, the system closes episodes after a custom defined period (e.g. 3 months). At any point, users with the correct permissions can themselves can register patients to a service.&lt;/p&gt;
+
+&lt;p&gt;As a result of this information and process model, the software is a fine abstraction of the real-world, making it more likely that it can be repurposed for future needs. This approach creates systems that have longevity.&lt;/p&gt;
+
+&lt;p&gt;Given this modelling of real-life processes and communication, it is easy to see how dealing with communications from patients could work. Rather than communications being sent to an individual health professional, who conceivably may be on leave or unable to respond, building a process and information model that mimics real-life offers the potential to build true team/patient communication. Likewise, the same model works for data from the patient’s own devices, whether they be home-monitors or wearables.&lt;/p&gt;
+
+&lt;p&gt;Part 3 of this series covers &lt;a href=&quot;/clinical-informatics/2017/06/03/designing-future-3.html&quot;&gt;patient portals and the internet-of-things&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">This is part two of a 3-part series on designing future clinical information systems. Part 1 covers the importance of data models. This part covers clinical modelling in relation to process and workflow. Part 3 covers patient portals and the internet-of-things.</summary></entry><entry><title type="html">Designing the future 1/3: modelling data</title><link href="https://www.wardle.org/clinical-informatics/2017/06/03/designing-future-1.html" rel="alternate" type="text/html" title="Designing the future 1/3: modelling data" /><published>2017-06-03T16:08:00+01:00</published><updated>2017-06-03T16:08:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/06/03/designing-future-1</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/06/03/designing-future-1.html">&lt;p&gt;This is part one of a 3-part series on designing future clinical information systems. This post covers the importance of data models. Part 2 covers &lt;a href=&quot;/clinical-informatics/2017/06/03/designing-future-2.html&quot;&gt;clinical modelling in relation to process and workflow&lt;/a&gt;. Part 3 covers &lt;a href=&quot;(/clinical-informatics/2017/06/03/designing-future-3.html)&quot;&gt;patient portals and the internet-of-things&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;There are two fundamental principles that we must consider when designing clinical information systems for the future:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;We can’t build perfect systems straightaway; if we wait until everything is perfect, we’ll never get anything done.&lt;/li&gt;
+  &lt;li&gt;We shouldn’t give up on creating perfect systems. We’ll never achieve perfection of course, because they will always be something even &lt;em&gt;better&lt;/em&gt; to implement, so we need a roadmap for stuff we need to solve now, solve tomorrow and solve in the future.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The conclusion is, therefore, we must get technology in the hands of users, but plan to iterate and try to design systems that are future-proof.&lt;/p&gt;
+
+&lt;p&gt;As such, information technology (IT) is not something that one can buy, deploy and then sit back and bask in the glory of improved efficiency and streamlined processes. Instead, we need to consider how our clinical processes work now, how they might, could or should work in the future and build systems that support those processes. At the very least, our designs should not unnecessarily limit our ability to adapt to new ways of working.&lt;/p&gt;
+
+&lt;p&gt;None of us have all of the answers at this point in time, so what can we do to create future-proof systems that solve problems now that don’t unnecessarily limit our future scope and prevent future innovation?&lt;/p&gt;
+
+&lt;p&gt;The answer is to develop clinical models of data and the processes and workflows relating to those data.&lt;/p&gt;
+
+&lt;p&gt;We start with our data.&lt;/p&gt;
+
+&lt;h1 id=&quot;clinical-modelling&quot;&gt;Clinical modelling&lt;/h1&gt;
+
+&lt;p&gt;Perhaps I can draw a parallel between software engineering and a famous Danish interlocking brick toy company?&lt;/p&gt;
+
+&lt;p&gt;If that toy company creates a model with blocks that are specific to that model, only usable in the construction of that car or boat or train, then it might be possible to try to re-purpose those blocks to build an aeroplane, but it is much less likely. Conversely, creating a wide-range of general purpose blocks means that those blocks can be re-used in hundreds of different applications right now and in the future.&lt;/p&gt;
+
+&lt;p&gt;As I opined in my &lt;a href=&quot;/clinical-informatics/2017/02/03/domain-driven-design.html&quot;&gt;Domain-driven clinical design document&lt;/a&gt;, the same is true in software. The best way of creating systems that solve problems right now and support our future iterative development efforts is to start with open and standard data structures with a core focus on interoperability. I cannot overstate the importance of supporting interoperability, even in the unlikely event that you think you don’t need to interoperate with any other system right now. Baking in interoperability forces you and your team to make the right decisions when it comes to designing an architecture to support your software. I have heard people argue that interoperability is something “nice to have” but we’ve “got to get something done” as if designing systems properly will somehow slow or impede development.&lt;/p&gt;
+
+&lt;p&gt;Now, the designers of the interlocking brick systems have a problem. They can’t know what bricks to make until they start thinking about the toys they want to be able to build with those bricks, but they can’t design the toys until they know which bricks they have available. So they need to ensure their teams work iteratively, bringing people together with different skills, using some common basic bricks and adding more specialised bricks for certain use-cases. Likewise, in software, modelling data and process requires an understanding of both and how they might be used now and changed in the future.&lt;/p&gt;
+
+&lt;p&gt;However, we can make it easier for ourselves. We can begin with modelling the easy things: won’t a blood pressure recorded in millimetres of mercury will always be a blood pressure recorded in millimetres of mercury? Well yes, but don’t we also need to codify who took it, when they took it, how they took it, and what the patient was doing at the time? How can we create a representation in a computer that is re-usable and understandable by multiple systems? So now we need something to represent “120/70 mmHg taken in the right arm by Dr Wardle in the sitting position at rest using a manual sphygmomanometer”. But what about a blood pressure taken using a transducer from an arterial line in the intensive care unit?&lt;/p&gt;
+
+&lt;p&gt;So suddenly we need to start thinking not just about representing a numeric value in specified units but all of the additional metadata. We are building an information model to represent a real-life concept.&lt;/p&gt;
+
+&lt;p&gt;Fortunately, someone has done most of the work for us already. Read Dr Heather Leslie’s (@omowizard) blog post about blood pressure to see how openEHR provides a rich model of the concept of blood pressure. Similarly, the HL7 FHIR observation resource provides a simpler but similar representation with metadata represented either as a choice of options in openEHR or using a standardised terminology such as SNOMED-CT for FHIR.&lt;/p&gt;
+
+&lt;p&gt;Indeed, there are already a large number of archetypes defined within openEHR representing a wide-range of clinical concepts. Similarly, HL7 FHIR already supports exposing a great variety of (similar) clinical concepts as part of an API.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;openEHR clinical knowledge manager: &lt;a href=&quot;http://www.openehr.org/ckm/&quot;&gt;http://www.openehr.org/ckm/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;HL7 FHIR 3.0.1 resources: &lt;a href=&quot;https://www.hl7.org/fhir/resourcelist.html&quot;&gt;https://www.hl7.org/fhir/resourcelist.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;next-steps&quot;&gt;Next steps&lt;/h1&gt;
+
+&lt;p&gt;The future of healthcare systems is based on open-standards and semantic interoperability in which multiple systems can share information about patients. We can use vendor-neutral archives for data persistence of openEHR archetypes or expose proprietary legacy information to other systems using a standardised HL7 FHIR API. Whatever the case, starting with our data allows us to solve our immediate problems and permits ongoing iterative development to use that information in new and innovative ways in order to support the care of patients.&lt;/p&gt;
+
+&lt;p&gt;Part 2 of this series covers &lt;a href=&quot;/clinical-informatics/2017/06/03/designing-future-2.html&quot;&gt;clinical modelling in relation to process and workflow&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">This is part one of a 3-part series on designing future clinical information systems. This post covers the importance of data models. Part 2 covers clinical modelling in relation to process and workflow. Part 3 covers patient portals and the internet-of-things.</summary></entry><entry><title type="html">Implementation of SNOMED-CT in a clinical information system</title><link href="https://www.wardle.org/clinical-informatics/2017/06/02/future-hospital-snomed-ct.html" rel="alternate" type="text/html" title="Implementation of SNOMED-CT in a clinical information system" /><published>2017-06-02T16:08:00+01:00</published><updated>2017-06-02T16:08:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/06/02/future-hospital-snomed-ct</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/06/02/future-hospital-snomed-ct.html">&lt;p&gt;My article on the &lt;a href=&quot;http://m.futurehospital.rcpjournal.org/content/4/2/126.full.pdf&quot;&gt;implementation of SNOMED-CT as the ‘lingua franca’ within a clinical information system&lt;/a&gt; has been published in the Future Hospital Journal.&lt;/p&gt;
 
 &lt;p&gt;The article is available &lt;a href=&quot;http://m.futurehospital.rcpjournal.org/content/4/2/126&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">My article on the implementation of SNOMED-CT as the ‘lingua franca’ within a clinical information system has been published in the Future Hospital Journal.</summary></entry><entry><title type="html">PatientCare EPR: care plans</title><link href="https://www.wardle.org/clinical-informatics/2017/05/30/patientcare-care-plans.html" rel="alternate" type="text/html" title="PatientCare EPR: care plans" /><published>2017-05-30T22:56:00+01:00</published><updated>2017-05-30T22:56:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/05/30/patientcare-care-plans</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/05/30/patientcare-care-plans.html">&lt;p&gt;In a &lt;a href=&quot;/clinical-informatics/2017/05/27/patientcare-epr.html&quot;&gt;recent blog post&lt;/a&gt;, I gave a whirlwind tour of some of the functionality within the PatientCare EPR. There is a lot I haven’t really mentioned and so, I thought I’d add some details over a few other blog posts.&lt;/p&gt;
 
@@ -1150,138 +1375,4 @@ In addition, the different CDA levels permit flexibility in the recording of uns
 
 &lt;h1 id=&quot;loinc&quot;&gt;LOINC&lt;/h1&gt;
 &lt;p&gt;LOINC is a freely available international standard for tests, measurements and observations. The official website is &lt;a href=&quot;https://loinc.org&quot;&gt;https://loinc.org&lt;/a&gt;.&lt;br /&gt;
-Although limited in scope, it has been adopted by HL7 as the standard code system for laboratory results. In addition, there is a project to map LOINC codes to SNOMED-CT and vice versa.&lt;/p&gt;</content><author><name></name></author><summary type="html">A terminology is a body of terms used within a particular subject of study or profession. A classification is a systematic organisation of things into classes. A classification system such as ICD-10 cannot be used as a terminology and many terminologies cannot be easily used as a classification system. This is an important distinction and relates to the how those data are primarily used.</summary></entry><entry><title type="html">Clinical information system design: 2. Clinical modelling</title><link href="https://www.wardle.org/cis-design/2017/05/02/clinical-modelling.html" rel="alternate" type="text/html" title="Clinical information system design: 2. Clinical modelling" /><published>2017-05-02T12:06:00+01:00</published><updated>2017-05-02T12:06:00+01:00</updated><id>https://www.wardle.org/cis-design/2017/05/02/clinical-modelling</id><content type="html" xml:base="https://www.wardle.org/cis-design/2017/05/02/clinical-modelling.html">&lt;p&gt;A model is an abstraction of the real-world distilling knowledge into core concepts and processes. A model is a careful balance between complexity and over-simplification with models that are too complex providing brittle abstractions which are poorly generalisable and models that are too simple not supporting all of the demands placed upon it in real-life clinical scenarios.&lt;/p&gt;
-
-&lt;p&gt;Modelling is an art but the approach can be made more systematic if modellers work iteratively within a supporting organisational environment with clinical and technical staff working together in  logical teams. Importantly, the scope of their model should be limited; large enough to solve the domain problems but small enough to result in a practical implementation. As such, it is important to have an appropriate separation of concerns in which teams can work independently of other teams as much as possible and that interfaces between that team and others are formalised on a contractual basis.&lt;/p&gt;
-
-&lt;h1 id=&quot;high-level-functional-requirements&quot;&gt;High-level functional requirements&lt;/h1&gt;
-
-&lt;p&gt;Clinical modelling is dependent on knowledge of the domain and the functional requirements to which the model will serve. It is useful to abstract these requirements to make them as generally-applicable as possible and not to generate needlessly specific requirements with limited applicability. However, the process of generated functional requirements and a subsequent data and process modelling is not a one-way process but must be an iterative two-way development in which there is feedback and discussion among all stakeholders and between all steps of requirements-gathering, modelling and implementation.&lt;/p&gt;
-
-&lt;h1 id=&quot;the-process-of-developing-a-clinical-model&quot;&gt;The process of developing a clinical model&lt;/h1&gt;
-&lt;p&gt;I suggest dividing clinical modelling into three related steps:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Modelling data within a medical record&lt;/li&gt;
-  &lt;li&gt;Modelling processes and workflow relating to a medical record&lt;/li&gt;
-  &lt;li&gt;Implementation of a clinical model into a workable and practical solution.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;These three steps should be considered separately but are dependent on one another and inherently depend on the functional requirements. In designing clinical information systems, a data model may change infrequently or a design may even be correct in perpetuity; a systolic blood pressure recorded using a cuff on the right arm of an individual will always be a systolic blood pressure recorded using a cuff on the right arm of an individual. However, a model of the processes of care will likely change more frequently as a result of changes in working practices and service design, and an implementation may change even more frequently as a result of new technologies and devices.&lt;/p&gt;
-
-&lt;p&gt;As each step is dependent on each other, modelling must be an iterative work with feedback loops between all steps rather than performed in sequence by different members of the team. An implementation cannot be designed without consideration of the data structures and processes that leverage the data within those structures and a model cannot be designed unless it is practical and efficient to perform an implementation. It also follows that clinical modelling must be performed by a team of individuals with a range of skills including those with important domain knowledge such as health professionals as well as those responsible for the design and implementation of the resulting software such as technical architects and software developers.&lt;/p&gt;
-
-&lt;p&gt;Traditional waterfall-based design methods emphasise a sequential process involving business analysis and scoping, design, implementation, verification and then subsequent maintenance. Indeed, such methods are commonly used within NHS Wales with a focus on producing a product to solve a particular problem which then becomes “complete” and enters “maintenance”. I strongly believe that this approach is wrong and instead development should by underpinned by a robust model developed iteratively considering both workflow and implementation together with an understanding that any solutions will never be complete.&lt;/p&gt;
-
-&lt;h2 id=&quot;modelling-the-medical-record&quot;&gt;Modelling the medical record&lt;/h2&gt;
-
-&lt;p&gt;The breadth of knowledge within the medical record is potentially daunting with multiple types of data recorded in many different contexts and for many different purposes. Such data will need to be shown to users in order for them to make sense of a patient’s condition or clinical course, but also used to monitor a clinical service by providing real-time data on patient flow and progression along one of many clinical pathways.&lt;/p&gt;
-
-&lt;p&gt;I advocate a clinical record in which much information is stored in a highly structured format. Some free-text is necessary but where possible, clinical information should be recorded using a standardised terminology such as SNOMED CT held within larger data structures representing the clinical model.&lt;/p&gt;
-
-&lt;p&gt;Advances in technology such as new interventions, evolving diagnoses, new diagnostic tests and changing processes result in an ever-expanding knowledge base to which software systems must evolve and adapt. As such, no software system designed to model the medical record will ever be complete and as such, designing for incremental change in the medium and long-term is a pre-requisite. If real-world knowledge is ever-changing, then models too must constantly be refined and evolved. As such, the design and subsequent constant refinement and evolution of any model underpinning a complex clinical information system must be supported by an appropriate organisational structure which facilitates an iterative development approach. Such iterative development requires domain experts such as clinicians work closely in teams with developers to constantly refine their own understanding, focus the analysis of requirements and distil what they know to the core essentials that must underpin the design of any subsequent information system.&lt;/p&gt;
-
-&lt;h3 id=&quot;electronic-medical-records-and-the-importance-of-context-and-provenance&quot;&gt;Electronic medical records and the importance of context and provenance.&lt;/h3&gt;
-&lt;p&gt;An advantage of electronic records is that such records can be made universally available wherever they are needed such as when a patient presents to an emergency health facility or a new outpatient clinic or when the patient contacts a team via email or telephone. A disadvantage of electronic records is the need for real-time curation of patient records so that users are not overwhelmed by excessive information that is not relevant in their specific clinical context. It is therefore vital that any model supports not only the recording of information but the context and provenance in which those data were recorded and that views of aggregated information for a single patient take into account such contextual cues to ensure users see the information that is required and optionally filters information.&lt;/p&gt;
-
-&lt;p&gt;Such issues also arise in paper records, particularly when a single patient has multiple volumes of notes. However, as paper records serve a single organisation end-users may find important information related to their own service  based on filing standards, paper colour, logos, page layout and the names of colleagues and can flick through the physical record more easily than a poorly curated and unstructured digital counterpart. However, paper records fail for patients looked after by multiple organisations, in which clinical correspondence from an outpatient clinic in one facility will usually not be available in another unless manual action by end-users is taken.&lt;/p&gt;
-
-&lt;h2 id=&quot;modelling-the-processes-involving-medical-records&quot;&gt;Modelling the processes involving medical records.&lt;/h2&gt;
-
-&lt;p&gt;Medical records are more than a simply narrative of what has happened to a patient listed in sequential order. A number of important processes and workflows exist that relate to the sending and receiving of paper-based forms that must be considered in any abstraction of medical enterprise. Paper records such as printed correspondence, request forms, results of investigations are sent to a responsible individual in order for them to be read and acted upon. On some occasions, such documentation is annotated, forming a narrative of the actions undertaken by the end-user or forwarded to another, forming a chain of correspondence. Electronic systems are potentially safer offering guarantees of sending and receiving such requests, providing full audit trail functionality and non-repudiation of comments and action. However, any process relating to a medical record must be modelled with as much care as the modelling of data structures.&lt;/p&gt;
-
-&lt;p&gt;Most data standards relating to healthcare, such as HL7, openEHR, and FHIR, model the data relating to healthcare and not the processes and workflow that reflect the care of patients itself. While modelling data is an important pre-requisite in the conception and design of clinical information systems, modelling the processes and workflow that relate to that model is firstly an important test that data modelling is fit-for-purpose and secondly, critical itself in ensuring a resulting clinical information system will be a workable and valuable asset in providing healthcare services.&lt;/p&gt;
-
-&lt;p&gt;Process and workflow will change frequently as clinical services evolve and develop and any model must take such changes into account so that any subsequent implementation can flexibly handle different workflows. Abstracting workflow is the most appropriate method to future-proof any clinical system and modellers must then consider how to model the configuration of more abstract workflows into a concrete implementation at runtime.&lt;/p&gt;
-
-&lt;p&gt;In most clinical services, data and processes currently revolve around the completion and processing of clinical documents which are subsequently filed as part of a longitudinal prospective and immutable medical record. As such, a transactional document model is usually an appropriate reasonable and accurate abstraction of current processes of care.&lt;/p&gt;
-
-&lt;h2 id=&quot;modelling-and-implementation&quot;&gt;Modelling and implementation&lt;/h2&gt;
-
-&lt;p&gt;Tying a clinical model to its implementation is critical. A model cannot be designed without consideration of its implementation as it is possible to develop models of data and processes that would be impractical, cumbersome or inefficient to implement by developers. As such, close working between domain experts and software engineers is necessary to iteratively explore and improve a model to ensure it meets the demands of the domain and of practical software engineering considerations.&lt;/p&gt;
-
-&lt;h3 id=&quot;avoiding-mismatches-between-a-model-and-real-life&quot;&gt;Avoiding mismatches between a model and real-life.&lt;/h3&gt;
-
-&lt;p&gt;A mismatch between the model and real-life processes may cause confusion for users while models that are based on the fundamentals of a particular domain result in clinical systems that are intuitive to use with readily predictable functionality. A model should therefore abstract real-life processes and structures when possible so that end-users can easily understand what is happening within the software they are using and should not be surprised by unintended consequences. However, modelling real-life processes should not be an exact replica of an existing paper-based process but a careful abstraction designed to capture the essence of the process and to be more widely generalisable.&lt;/p&gt;
-
-&lt;p&gt;While organisations, directorates, specialties, teams and even individual clinicians will have their own ways of working with disease and specialty specific data requirements, there is a danger in thinking that data modelling is simply getting a single group of domain experts in a room with a white-board. Instead, such work  is simply the start of a process in which these requirements are analysed and distilled and subsequently made as generic and widely applicable as possible and yet not made so generic that a subsequently developed model no longer meets the needs of the original functional requirements.&lt;/p&gt;</content><author><name></name></author><summary type="html">A model is an abstraction of the real-world distilling knowledge into core concepts and processes. A model is a careful balance between complexity and over-simplification with models that are too complex providing brittle abstractions which are poorly generalisable and models that are too simple not supporting all of the demands placed upon it in real-life clinical scenarios.</summary></entry><entry><title type="html">Clinical information system design: 1. The medical record</title><link href="https://www.wardle.org/cis-design/2017/05/01/medical-record.html" rel="alternate" type="text/html" title="Clinical information system design: 1. The medical record" /><published>2017-05-01T15:06:00+01:00</published><updated>2017-05-01T15:06:00+01:00</updated><id>https://www.wardle.org/cis-design/2017/05/01/medical-record</id><content type="html" xml:base="https://www.wardle.org/cis-design/2017/05/01/medical-record.html">&lt;blockquote&gt;
-  &lt;p&gt;“You’re a victim of it or a triumph because of it. The human mind simply cannot carry all the information without error so the record becomes part of your practice.”&lt;/p&gt;
-
-  &lt;p&gt;Dr Larry Weed, Internal Medicine Grand Rounds, 1971&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The medical record encompasses and complex, disparate and evolving collection of information relating to the day-to-day care of an individual patient. Aggregated, such data provide valuable information about cohorts of patients managed by a clinical service supporting clinical governance and the management of the that service.&lt;/p&gt;
-
-&lt;h1 id=&quot;paper-medical-records&quot;&gt;Paper medical records&lt;/h1&gt;
-
-&lt;p&gt;Paper medical records are expensive, poorly accessible and do not support team working effectively. They are frequently poorly structured and while they contain large amounts of data, it is difficult to use those data to support clinical care. Paper records must be tracked and within a large organisation and such records need to be made available to clinical and administrative staff in order to appropriately manage the patient. This is particularly difficult when a single patient may be under the care of multiple services which is particularly common for patients with chronic long-term health conditions.&lt;/p&gt;
-
-&lt;h1 id=&quot;clinical-governance&quot;&gt;Clinical governance&lt;/h1&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;``If you can’t audit a thing for quality, it means you do not have the means to produce quality’’.&lt;/p&gt;
-
-  &lt;p&gt;Dr Larry Weed, Internal Medicine Grand Rounds, 1971&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Clinical governance is a framework in which we are accountable for continuously improving the quality of our services safeguarding high standards of care by creating an environment in which excellence in clinical care can flourish.&lt;/p&gt;
-
-&lt;p&gt;An important part of clinical governance is in the use of data to understand both process and outcomes. A typical clinical department will know how many patients are waiting for an outpatient appointment but will not be able to understand why they are waiting or understand a patient’s eventual outcome because usually only administrative data are collected systematically.&lt;/p&gt;
-
-&lt;p&gt;Many clinical teams will undertake service improvement projects or clinical audits, in which a clinician identifies a problem, undertakes to measure that problem by clinical audit, analyses the results and makes an intervention in order to solve that problem. For example, a typical clinical audit might be in the assessment of risk of deep vein thrombosis in inpatients in which a doctor will systematically analyse the paper notes of a group of inpatients, record and present the results and enact a change to improve those results with a plan to re-audit after that intervention. Such a methodology has been formalised by the &lt;a href=&quot;https://www.isixsigma.com/dictionary/dmaic/&quot;&gt;Six Sigma quality initiative&lt;/a&gt; in which five steps form a virtuous cycle of continuous improvement:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/cis_design/dmaic.png&quot; alt=&quot;Dmaic&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Such continuous improvement is possible with paper records, but it cannot be performed systematically and routinely, requires a large amount of manual intervention and the cycle of improvement is slow; the analysis of results and a plan of action to effect improvement may take months with no guarantees that any systematic assessment of those interventions will be performed.&lt;/p&gt;
-
-&lt;p&gt;It therefore follows that the routine and systematic collection of process and clinical outcome data offers the potential to radically improve the efficiency of the continuous improvement lifecycle as long as sufficient consideration is given to the use of such data, the context of those data and an understanding of the processes in which those data are involved.&lt;/p&gt;
-
-&lt;h1 id=&quot;electronic-medical-records&quot;&gt;Electronic medical records&lt;/h1&gt;
-
-&lt;p&gt;Electronic medical records and workflow should model and abstract real-life processes but digitisation of paper processes should not be a slavish exact copy of existing processes, particularly when technology offers opportunities to improve the process of healthcare.&lt;/p&gt;
-
-&lt;p&gt;Indeed, we are facing an explosion of clinical data created by health professionals, administrators and patients themselves and clinical information systems must consider how they will integrate and make such data useful in clinical practice. For example, this figure:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/cis_design/data_pipelines.png&quot; alt=&quot;Data Pipelines&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;shows how all of these sources of data are mutually dependent on one another. For example, what is the point in recording patient reported outcome measures if that data cannot be safely linked to a particular intervention or procedure and the co-morbidities and baseline assessments for that patient?&lt;/p&gt;
-
-&lt;p&gt;The logical conclusion is that we will always have a multiplicity of systems and that in order to create robust clinical systems that outlive our current level of technological advancements, we have a responsibility to insist on open well-documented data standards, to integrate a well-developed clinical terminology, and foster collaboration, iterative development and embrace interoperability.&lt;/p&gt;</content><author><name></name></author><summary type="html">“You’re a victim of it or a triumph because of it. The human mind simply cannot carry all the information without error so the record becomes part of your practice.” Dr Larry Weed, Internal Medicine Grand Rounds, 1971</summary></entry><entry><title type="html">NHS hack days</title><link href="https://www.wardle.org/clinical-informatics/2017/05/01/nhs-hack-days.html" rel="alternate" type="text/html" title="NHS hack days" /><published>2017-05-01T08:57:36+01:00</published><updated>2017-05-01T08:57:36+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/05/01/nhs-hack-days</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/05/01/nhs-hack-days.html">&lt;p&gt;NHS hack days are weekends in which clinicians and software developers come together to try to develop information technology solutions for healthcare.&lt;/p&gt;
-
-&lt;p&gt;There is a really good piece about them in the &lt;a href=&quot;http://www.bcs.org/content/conWebDoc/57646?utm_campaign=8245638_Health%20and%20care%20newsletter&amp;amp;utm_medium=email&amp;amp;utm_source=BCS%2C%20The%20Chartered%20Institute%20for%20IT&quot;&gt;BCS magazine by Dr Marcus Baw&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;I think they are a great idea and have attended two in Cardiff, most recently as one of the judges.&lt;/p&gt;
-
-&lt;p&gt;However, I perceive the benefits to be principally about networking and fun, rather than successfully creating early working versions of products that are then rolled out into the NHS. How many great ideas have been rolled out?&lt;/p&gt;
-
-&lt;p&gt;One of the problems is that projects essentially &lt;a href=&quot;http://nhshackday.com/resources/judging/&quot;&gt;start from nothing&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h4 id=&quot;an-open-platform&quot;&gt;An open platform&lt;/h4&gt;
-
-&lt;p&gt;What would happen if, instead of starting with nothing, we provided teams with an open application programming interface (API) containing data, services and logic on which their solutions can run?&lt;/p&gt;
-
-&lt;p&gt;This is the year in which this can truly become a reality, with standards such as FHIR and openEHR becoming adopted, we as a community need to start work on building “mocked services”.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/hackday/hackday-schematic.png&quot; alt=&quot;Hackday Schematic&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Most of these services should be provided via FHIR endpoints and provide mock data. When it comes to running in a live environment, as long as there is a FHIR service that provides those same endpoints, an application will need less work in order to make it a production-ready application.&lt;/p&gt;
-
-&lt;h4 id=&quot;what-needs-to-be-done&quot;&gt;What needs to be done?&lt;/h4&gt;
-
-&lt;p&gt;The diagram above is deliberately simple. There are lots of complexities and lots of work to do, but it is achievable.&lt;/p&gt;
-
-&lt;p&gt;The very nice feature of FHIR is that services can provide one or many different resources. One might write a single service that only provides patient demographic service. As such, one can implement functionality piecemeal and incrementally.&lt;/p&gt;
-
-&lt;p&gt;I think we need to prioritise a list of resources and services in order:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Patient demographic service (PDS). We could start with fake data and then switch to using &lt;a href=&quot;https://github.com/nhs-ciao/ciao-pds-fhir&quot;&gt;https://github.com/nhs-ciao/ciao-pds-fhir&lt;/a&gt; for production - the Ciao PDS is a FHIR facade around the real NHS Spine PDS - or a local organisational patient administration system.&lt;/li&gt;
-  &lt;li&gt;Terminology services, including SNOMED-CT. I have already built an open-source SNOMED-CT REST service, but it isn’t currently FHIR compatible. However, the last time I looked the FHIR terminology standard didn’t support free-text search. I’d like to add support for other terminologies, such as LOINC, and provide FHIR-compatible end-points.&lt;/li&gt;
-  &lt;li&gt;Laboratory information management system. See &lt;a href=&quot;https://www.hl7.org/fhir/diagnosticreport.html&quot;&gt;FHIR diagnostic report resource&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;A UK NHS reference data service. This should be straightforward so that we take the &lt;a href=&quot;https://isd.digital.nhs.uk/trud3/user/guest/group/0/home&quot;&gt;NHS ODS data from TRUD&lt;/a&gt; and provide as FHIR end-points (e.g. see &lt;a href=&quot;https://www.hl7.org/fhir/organization.html&quot;&gt;organisations&lt;/a&gt;). In Wales, mapping practitioners is much easier as there is a central active directory, but I gather this might not be the case in England.&lt;/li&gt;
-  &lt;li&gt;Document storage and retrieval. While the &lt;a href=&quot;https://www.hl7.org/fhir/documents.html&quot;&gt;FHIR standard&lt;/a&gt; explains how to aggregate resources into a document, initially I’d suggest focusing on a simple &lt;a href=&quot;https://www.hl7.org/fhir/documentreference.html&quot;&gt;document reference store&lt;/a&gt; to serve documents created by legacy systems.&lt;/li&gt;
-  &lt;li&gt;Patient eFlow / e-observations service. See &lt;a href=&quot;https://www.hl7.org/fhir/observation.html&quot;&gt;observation FHIR resource&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;With these few core components and lots of fake data, NHS hack days could start adding value quickly making it much more likely that any solutions can evolve to become truly useful within the NHS.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">NHS hack days are weekends in which clinicians and software developers come together to try to develop information technology solutions for healthcare.</summary></entry></feed>
+Although limited in scope, it has been adopted by HL7 as the standard code system for laboratory results. In addition, there is a project to map LOINC codes to SNOMED-CT and vice versa.&lt;/p&gt;</content><author><name></name></author><summary type="html">A terminology is a body of terms used within a particular subject of study or profession. A classification is a systematic organisation of things into classes. A classification system such as ICD-10 cannot be used as a terminology and many terminologies cannot be easily used as a classification system. This is an important distinction and relates to the how those data are primarily used.</summary></entry></feed>
