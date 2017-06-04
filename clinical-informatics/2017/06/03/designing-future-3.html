@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Designing the future 3/3: the patient</title>
+  <meta name="description" content="This is part three of a 3-part series on designing future clinical information systems. Part 1 covers the importance of data models. Part 2 covers clinical m...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://www.wardle.org/clinical-informatics/2017/06/03/designing-future-3.html">
+  <link rel="alternate" type="application/rss+xml" title="Dr. Mark Wardle" href="/feed.xml">
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-97389603-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="/">Dr. Mark Wardle</a>
+  
+  
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+           <a class="page-link" href="/">All posts</a>
+          
+            
+            
+            <a class="page-link" href="/about/">About</a>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Designing the future 3/3: the patient</h1>
+    <p class="post-meta">
+      <time datetime="2017-06-03T16:10:00+01:00" itemprop="datePublished">
+        
+        3 June 2017
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>This is part three of a 3-part series on designing future clinical information systems. Part 1 covers the <a href="/clinical-informatics/2017/06/03/designing-future-1.html">importance of data models</a>. Part 2 covers <a href="/clinical-informatics/2017/06/03/designing-future-2.html">clinical modelling in relation to process and workflow</a>. This part covers patient portals and the internet-of-things.</p>
+
+<hr />
+
+<p>So we need to take several steps back from sitting in our clinics and understand what we do and where we are likely to be going in healthcare. Can we model this in an abstract and future-proof way? Can we do what we did when we <a href="/clinical-informatics/2017/06/03/designing-future-2.html">model a blood pressure</a>, but for something more complex?</p>
+
+<p>It is useful to imagine a patient with several long-term health conditions. These are problems that a patient will have for the rest of their life and most such conditions need ongoing monitoring. This monitoring will be usually managed by a primary care physician or a specialist and their respective teams. As such, several different professionals will be involved, including a range of administrative staff, nurses, physiotherapists, occupational therapists, third-sector providers, social services and doctors. These professionals may all work in the same organisation, but it is much more likely that they will work across organisational boundaries and yet need to collaborate and share information in supporting their patient together.</p>
+
+<p>Importantly, a patient is not and cannot be a passive recipient of healthcare. Instead, patients should be active members and leaders of the team, setting achievable goals and defining priorities of care. As such, patients need to be able to interact and collaborate with their teams and not only see the information relating to their care but contribute to it as well. Why do we either not measure outcomes or use surrogate proxy markers of outcomes when a patient can tell us, either directly or indirectly by virtue of their activity data, their prospectively recorded log of seizures or their home monitoring equipment?</p>
+
+<p>So the model of care in which a patient comes for a 6-monthly outpatient clinic is outdated, inefficient and does not respect the patient - placing them in a subservient, passive role in order to receive healthcare. They arrive, sit in a waiting room, have their pulse and blood pressure measured and are weighed and then, as any who has experienced an outpatient clinic will testify, feel their autonomy fade away. We give them an appointment for six months which doesn’t fit with their schedule and will probably be cancelled. Our administrative systems track patients waiting for a new patient appointment, but patients wait for months for another follow-up slot. Information technology alone is not going to solve this, but can we step back and re-imagine our care processes and <em>use</em> information technology to enable that change?</p>
+
+<p>Here is an example overview of how longitudinal prospectively collected information about a patient can be combined from disparate sources:</p>
+
+<p><img src="/images/cis_design/data_pipelines.png" alt="Data Pipelines" /></p>
+
+<p>How can we make sense of step-count data without an understanding that the patient had a hip replacement in May 2017? Likewise, how can we looks at biomarkers on a serum sample taken in April 2017 without understanding the patient had a seizure the day before? We need to integrate, summarise and make available information from multiple disparate sources to the patient and those that support that patient.</p>
+
+<p>If a patient has a clinic appointment in three weeks time, it is possible to have a medical records department that fetches a set of paper notes from the archive and ensures (mostly) that I have them on my desk in clinic at the right time. This model does not scale to support a patient calling us to discuss their care or to support multiple teams looking after patients across multiple disciplines and organisations - who has got the notes? As such, we can use information technology to support a change in the way that we work.</p>
+
+<h1 id="monolithic-architectures">Monolithic architectures</h1>
+
+<p>In the early days of the Internet, we had Compuserve and later AOL. As I recall, every computer magazine had a floppy disk or later a CD-ROM with their software on it. Both were proprietary, locked-down portals accessible using a dial-up modem that offered everything from email to bulletin boards to news. As the internet took over, built on open-standards and interoperability, these systems faded into irrelevance and obsolescence. Both tried to react to the more open ‘World Wide Web’ by allowing some degree of information exchange such as permitting emails to be sent and received from the internet, but such limited interoperability was insufficient to prevent the irresistible march of progress.</p>
+
+<p>Healthcare information technology is at a similar level of development to those systems from the 1980s and early 1990s with monolithic systems and single portals pitched as the solution to all healthcare problems. Large-scale enterprise applications (such as Epic and Cerner’s Millenium) are now installed in many hospitals and these have started offering limited interoperability in order to make their data available to other systems.</p>
+
+<p>Similarly, those systems can offer a patient portal in which patients themselves can login and interact with that organisation and its teams. In addition, there are now increasing numbers of more consumer-focused patient portals acting as “personal health records” (PHRs) such as <a href="https://www.patientsknowbest.com">Patients Know Best</a>, Microsoft’s <a href="https://www.healthvault.com/en-gb/">HealthVault</a> and Google’s (now closed) <a href="https://en.wikipedia.org/wiki/Google_Health">Health</a> PHR. An overview of the <a href="https://www.rcplondon.ac.uk/file/3738/download?token=lPb9TkQE">use of PHRs was written by the Royal College of Physicians’ Health Informatics Unit in 2016</a> with a focus on PHRs provided by healthcare organisations themselves. In all cases, these products create portals to which patients may interact, and their use is principally communication between the patient and their healthcare team.</p>
+
+<p>The advantage of a monolithic system is that the patient portal can encrypt all communications between itself and the patient or their device(s) and appropriately manage the secure transmission of clinical information to and from other clinical systems within a wider healthcare enterprise.</p>
+
+<p>The disadvantage of a monolithic system is similar to the problems experienced by users of closed systems like Compuserve and AOL; they are locked into using that system and potentially innovative smaller enterprises become excluded from the market. If a particular provider does not support data from a particular device, such as a new product to detect seizures occurring in a patient as they sleep, then that patient cannot share that data with their healthcare team. Finally, which system should be used? Should the patient choose? Should the organisation choose? And what about patients who are looked after by multiple organisations?</p>
+
+<h1 id="can-we-do-better">Can we do better?</h1>
+
+<p>The problem with healthcare data is that it is private and sensitive. So how can we make healthcare data more open and more accessible and yet keep that data safe and confidential? How can we connect the patient and their devices and everyone else involved, whatever their organisation? And if we want to make healthcare data more available, won’t we exacerbate our existing explosion of data and will need tools to make sense of that information. I don’t want to have to read through all of the day-to-day nursing notes recorded when a patient was an inpatient to find that critical piece of information.</p>
+
+<p>We need systems that can make health information more widely available within our NHS network between NHS organisations, but that is insufficient. We also need to extend our reach to the patient, to other care providers such as social services and the third-sector.</p>
+
+<p>So, what do we need?</p>
+
+<ol>
+  <li>A secure but open distributed infrastructure:
+    <ul>
+      <li>Solve the seemingly mutually exclusive goals of security and availability. I think the answer will have to come in a future blog post, but we need to consider how to make a secure, distributed, decentralised infrastructure on which open standards permit semantic interoperability between disparate systems. We think that there are some clever ways that this might be achieved.</li>
+      <li>Can such a system adopt both a messaging function, in which electronic communication can be sent securely from one end-point to another, but also a publish-subscribe (multicast) model in which different services contribute and receive information about their patients?</li>
+    </ul>
+  </li>
+  <li>Support data standards and semantic interoperability with clinical modelling for data and process:
+    <ul>
+      <li>Build tools to capture structured data at the point-of-care, and make entering structured data easier to do than entering unstructured free text.</li>
+      <li>Build tools to turn unstructured data into structured information by advances in natural language processing.</li>
+      <li>Build tools to support making sense of large amounts of unstructured and structured information in a variety of different clinical, professional and personal contexts.</li>
+      <li>Understand what we mean by a clinical service and a team, not defined by an organisation but how they <em>work together</em> for a patient.</li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>Essentially, we need an “information superhighway” for healthcare, in which we can exchange communications securely and yet privately between multiple end-points</strong>.</p>
+
+<p>One of the problems with the secure exchange of information is that, while we can encrypt the contents of my message, the metadata (data about data) leaks confidential information:</p>
+
+<p><img src="/images/communication/msg-leaking-metadata.jpg" alt="Msg Leaking Metadata" /></p>
+
+<p>In this rather contrived example, you can see that I sent some information to the genito-urinary clinic and then received some information back. You can guess that a result was included as the laboratory has also been involved. You don’t need to see the contents to make some inferences about what is happening.</p>
+
+<p>Leaking information via your metadata is even more problematic for electronic communications. If my patient sends and receives electronic communication to a HIV helpline address, that information tells me something important and leaks private information.</p>
+
+<p>Any distributed system connecting patients and their devices to our healthcare enterprises needs to solve this privacy concern.</p>
+
+<hr />
+<h4 id="further-reading">Further reading</h4>
+
+<ul>
+  <li><a href="/clinical-informatics/2017/05/27/patientcare-epr.html">Overview of my PatientCare EPR</a></li>
+  <li><a href="{$ link _posts/2017-02-03-domain-drive-design.markdown %}">Domain-driven design</a></li>
+</ul>
+
+  </div>
+
+  
+</article>
+        
+      </div>
+    </main>
+    
+    
+    
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Dr. Mark Wardle</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Dr. Mark Wardle
+            
+            </li>
+            
+            <li><a href="mailto:mark@wardle.org">mark@wardle.org</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/wardle"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">wardle</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/mwardle"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">mwardle</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

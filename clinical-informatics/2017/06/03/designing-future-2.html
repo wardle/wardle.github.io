@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Designing the future 2/3: modelling process</title>
+  <meta name="description" content="This is part two of a 3-part series on designing future clinical information systems. Part 1 covers the importance of data models. This part covers clinical ...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://www.wardle.org/clinical-informatics/2017/06/03/designing-future-2.html">
+  <link rel="alternate" type="application/rss+xml" title="Dr. Mark Wardle" href="/feed.xml">
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-97389603-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="/">Dr. Mark Wardle</a>
+  
+  
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+           <a class="page-link" href="/">All posts</a>
+          
+            
+            
+            <a class="page-link" href="/about/">About</a>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Designing the future 2/3: modelling process</h1>
+    <p class="post-meta">
+      <time datetime="2017-06-03T16:09:00+01:00" itemprop="datePublished">
+        
+        3 June 2017
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>This is part two of a 3-part series on designing future clinical information systems. Part 1 covers the <a href="/clinical-informatics/2017/06/03/designing-future-1.html">importance of data models</a>. This part covers clinical modelling in relation to process and workflow. Part 3 covers <a href="/clinical-informatics/2017/06/03/designing-future-3.html">patient portals and the internet-of-things</a>.</p>
+
+<hr />
+
+<p><img src="/images/post-it-note.jpg" alt="Post It Note" /></p>
+
+<p>In this blog post, I want to talk about how we model clinical information systems and how communication between patients, professionals and services underpins all that we do in healthcare.</p>
+
+<p>Essentially, my arguments are:</p>
+
+<ol>
+  <li>It is easy to see information technology (IT) as a product to be deployed: “drop it in and all will be well”. This isn’t true. Instead, IT should be used to support existing workflow and planned changes in that workflow to improve patient care. You need to therefore understand workflow.</li>
+  <li>This boils down to understanding how we work in teams and how those relationships between people need to be modelled within any computer system designed to support healthcare.</li>
+</ol>
+
+<hr />
+
+<p>Healthcare is all about communication: between patient and the team and between team members and the services that we use. The communication may be a patient phoning us, but it is much more that that. For example, the communication from the laboratory to us on the ward relating to the results of a blood investigation such as a renal function test or a full blood count, the discussion I have with a colleague about the most appropriate next step or my request for that MRI scan of the brain sent from my clinic this morning.</p>
+
+<p>However, it is easy to forget and instead see technology as an answer itself. As such, we end up with a read-only portal to which I login to see a list of patients on the ward, a list of pending outpatient referrals and a chronological list of investigations for that patient. Such software has been created in response to a requirement such as “allow the professionals to see all of the results”, which seems like an entirely reasonable statement of the requirements.</p>
+
+<p>But has that requirement been correctly scoped?</p>
+
+<h1 id="poor-scoping-and-the-mismatched-model">Poor scoping and the mismatched model</h1>
+
+<p>We need to step back and consider all of the information flows that exist, and particularly note the difference between “push” and “pull” communications. A “push” communication is a message that you receive as an active process : a letter is posted through your letterbox, a result is placed on your desk, the laboratory phones you because the haemoglobin is very low. A “pull” communication is something you fetch yourself : you go and read the noticeboard, you look through a list of results on the computer, you look through the notes to find a filed letter.</p>
+
+<p>Historically, information technology in healthcare has adopted a “pull” model for end-users because there was no practical way of offering “push” notifications. This is an interesting paradox because at a technological level, most health enterprises have used “push” messaging (HL7) to integrate different systems within their architecture. There are many reasons why end-users have missed out:</p>
+
+<ul>
+  <li>How could a system stand any chance of sending a blood result to the right person when, as designed, no computer could work out to whom to send the result? The request was made on paper, with an illegible name for the consultant, and no way of knowing which professionals worked in which team.</li>
+  <li>How do push notifications work when ward computers are used by multiple users, many of whom move around every few months? Users did not carry personal devices.</li>
+</ul>
+
+<p>And yet so many processes are predicated upon a “push” model, in which the receipt of a communication (a request or a result of a test), is an integral part of the workflow of a service. The team need to know the result of the blood test in order to send the patient home; a delay in getting that blood test results in a <a href="http://qir.bmj.com/content/5/1/u209098.w3772.full">late discharge and a consequent effect on hospital bed efficiencies</a>.</p>
+
+<p>Nevertheless, I still get a lot of “push” notifications: my office is cluttered with paper records, post-it notes and a paper inbox. Similarly, I have NHS email with an electronic inbox that fills up with alarming rapidity with stuff for me to do but none of those emails end up linked into the patient record and are not visible to anyone else in the team.</p>
+
+<p><img src="/images/pile-of-notes.jpg" alt="Pile Of Notes" /></p>
+
+<p>Just as email is not designed as a system to manage workflow, these different systems are not joined up and do not support me in my care for patients. Most of us set-up workaround systems that mean that when we sign off typed letters, we get the notes and can check the results.</p>
+
+<p>The systems I have to use don’t support the clinical processes I need in order to provide safe, good care. I have solutions that have been poorly scoped, poorly thought through and a mismatch between reality and the implicit or explicit model underlying those solutions.</p>
+
+<p>We need help!</p>
+
+<h1 id="modelling-process">Modelling process</h1>
+
+<p>As the examples above demonstrate, I now receive a variety of healthcare information via paper, traditional email, and existing organisation-provided and national all-Wales portals. I also receive messages within my own homegrown electronic patient record system.</p>
+
+<p>Paper post-it notes and my in-tray on my shelf do not support modern ways of working and timely collaboration of patient care, but at least there is no mismatch in the process. I request something, the result is posted back, an administrator bundles the result with the notes and I can deal with it. It is a workflow that is generally safe, if not rather old-fashioned.</p>
+
+<p>My health board turned off paper reports for laboratory investigations. I currently receive no notifications about results, whether normal or abnormal. It is left to chance, unless I make a habit of always checking results whenever I sign off letters. This is a process model mismatch. I have to login and manually check results for patients under my care and there is currently no way of knowing that someone has dealt with a result. Now we’re starting to fix this as part of the Welsh Clinical Portal project within NHS Wales but there is more work to do.</p>
+
+<p>In the PatientCare EPR, I built a model for rapid team-based, patient-linked electronic communication. While not perfect, it builds in a task-manager so that users can track what they have and have not dealt with. At the time of writing, users have sent 57,412 messages between each other with 45,743 explicitly linked to a patient record. Users now send over 1,000 messages per month to one another.</p>
+
+<p><img src="/images/patientcare-messages.png" alt="Patientcare Messages" /></p>
+
+<p>As the graph shows, the vast majority of messages are sent by administrators and by specialist nurses.</p>
+
+<hr />
+
+<p>There are many different ways of supporting team communication and it is important for users to be able to send messages from lots of different contexts.</p>
+
+<p>The first context is the software’s encounter wizard, which can be used to record clinic encounters, ward reviews or telephone calls (or any other user-defined service-specific type of encounter):</p>
+
+<p><img src="/images/communication/msg-encounter-wizard.png" alt="Msg Encounter Wizard" /></p>
+
+<p>Here you see an administrator recording encounters against two patients. Those encounters will be recorded in the longitudinal record for that patient automatically. For each encounter, a user has the option of sending a message to a colleague. As such, in one click, the user records both an encounter with the patient and informs someone else of the need to do something. Once created, at any time a user can see a list of encounter. Users are able to filter the list depending on a range of different characteristics.</p>
+
+<p><img src="/images/communication/msg-encounter-list.png" alt="Msg Encounter List" /></p>
+
+<p>Of course, we can also see a pure list of the messages for that patient, irrespective of whether an encounter exists.</p>
+
+<p><img src="/images/communication/msg-message-view.png" alt="Msg Message View" /></p>
+
+<p>And we can create a message directly from the patient’s record:</p>
+
+<p><img src="/images/communication/msg-simple.png" alt="Msg Simple" /></p>
+
+<p>Users can choose whether to receive an email notification about secure messages received. If all our users had their own personal handheld devices, a push notification would work similarly. In addition, within the PatientCare EPR, they have a simple inbox functionality to see their unread messages:</p>
+
+<p><img src="/images/communication/msg-inbox.png" alt="Msg Inbox" /></p>
+
+<p>And to facilitate task management, messages can be flagged as complete:</p>
+
+<p><img src="/images/communication/msg-completed.png" alt="Msg Completed" /></p>
+
+<p>The most important feature is that the contents of the communications are available to all members of the team looking after that patient, because it is recorded within the patient record.</p>
+
+<h1 id="a-model-for-the-future">A model for the future</h1>
+
+<p>Importantly, patients and users are explicitly linked to one another via the concept of “episodes of care” and “user registration”. As such, the system supports a finely-grained security model in which we can vouch that a particular health professional has a direct-care relationship with a specific patient.</p>
+
+<p><img src="/images/care-plans/patient-project-membership.png" alt="Patient Project Membership" /></p>
+
+<p>For our services for long-term health conditions, the episode is lifelong as you would expect. For more acute services, such as our liaison neurology service, the system closes episodes after a custom defined period (e.g. 3 months). At any point, users with the correct permissions can themselves can register patients to a service.</p>
+
+<p>As a result of this information and process model, the software is a fine abstraction of the real-world, making it more likely that it can be repurposed for future needs. This approach creates systems that have longevity.</p>
+
+<p>Given this modelling of real-life processes and communication, it is easy to see how dealing with communications from patients could work. Rather than communications being sent to an individual health professional, who conceivably may be on leave or unable to respond, building a process and information model that mimics real-life offers the potential to build true team/patient communication. Likewise, the same model works for data from the patient’s own devices, whether they be home-monitors or wearables.</p>
+
+<p>Part 3 of this series covers <a href="/clinical-informatics/2017/06/03/designing-future-3.html">patient portals and the internet-of-things</a>.</p>
+
+
+  </div>
+
+  
+</article>
+        
+      </div>
+    </main>
+    
+    
+    
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Dr. Mark Wardle</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Dr. Mark Wardle
+            
+            </li>
+            
+            <li><a href="mailto:mark@wardle.org">mark@wardle.org</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/wardle"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">wardle</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/mwardle"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">mwardle</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
