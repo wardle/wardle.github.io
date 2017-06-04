@@ -154,6 +154,22 @@ The <a href="http://webarchive.nationalarchives.gov.uk/20130107105354/http://www
 
 <p>It is important to have robust scrutiny in relation to the use of patient-identifiable information by third-parties. However, I am surprised that Dame Caldicott has suggested that it might be inappropriate to test software systems designed for direct care with real patient information. I would argue that such testing is necessary in the final stages of development to ensure that new technology is safely deployed in live clinical environments.</p>
 
+<hr />
+
+<p><strong>Update 4th June 2017</strong>:</p>
+<blockquote>
+  <p>It has been pointed out to me that I have not explicitly explained the difference between two distinct workstreams in this post. 
+In order to build software, it is usually appropriate to break up a large problem into distinct and manageable chunks of work. If it were me developing this application, we’d break it up like this:</p>
+  <ol>
+    <li>Integrate data from two different laboratory and patient administrative systems across sites within the Trust and provide a unified view of results from those systems to clinicians.</li>
+    <li>Develop an acute kidney injury algorithm in code.</li>
+    <li>Deployment.</li>
+  </ol>
+
+  <p>Now, all aspects of that work need “testing”. Only (2) needs certification as a medical device. It seems entirely reasonable to me that a transfer of data would be needed in order to develop and test (1), and that could be done before or after the certification of (2). Indeed, testing and certifying (2) doesn’t actually need real patient data - the MHRA simply needs to know that a medical device <a href="/clinical-informatics/2017/05/10/machine-learning.html">“does what it says on the tin”</a>. I am interested to know what the ICO makes of the arrangement.</p>
+</blockquote>
+
+
   </div>
 
   
