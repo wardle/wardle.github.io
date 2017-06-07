@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-06-07T16:52:09+01:00</updated><id>https://www.wardle.org/</id><title type="html">Dr. Mark Wardle</title><subtitle>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-06-07T22:50:10+01:00</updated><id>https://www.wardle.org/</id><title type="html">Dr. Mark Wardle</title><subtitle>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
 </subtitle><entry><title type="html">Using data for patient safety</title><link href="https://www.wardle.org/clinical-informatics/2017/06/06/using-data-patient-safety.html" rel="alternate" type="text/html" title="Using data for patient safety" /><published>2017-06-06T16:42:00+01:00</published><updated>2017-06-06T16:42:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/06/06/using-data-patient-safety</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/06/06/using-data-patient-safety.html">&lt;p&gt;&lt;em&gt;This blog post is from a talk I gave to the RCPE in December 2016.&lt;/em&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -11,7 +11,7 @@
   &lt;li&gt;to support clinical research and innovation.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;At such, the effective use of data is critical for patient safety, both now and in the future. So, you might expect healthcare services to have highly developed systems to allow the recording of structured longitudinal observational data?&lt;/p&gt;
+&lt;p&gt;As such, the effective use of data is critical for patient safety, both now and in the future. So, you might expect healthcare services to have highly developed systems to allow the recording of structured longitudinal observational data?&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/pile-of-notes-2.png&quot; alt=&quot;Pile Of Notes 2&quot; /&gt;&lt;/p&gt;
 
@@ -83,7 +83,7 @@
 
 &lt;p&gt;&lt;img src=&quot;/images/one-way-registry.png&quot; alt=&quot;One Way Registry&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;When I am clinic, I might see a patient with epilepsy, then chronic fatigue syndrome, then headache, then multiple sclerosis. How can I possibly use a different clinical system for each individual patient, and don’t start asking what I should do if a patient has more than one problem!&lt;/p&gt;
+&lt;p&gt;When I am in clinic, I might see consecutive patients with epilepsy, chronic fatigue syndrome, headache, and then multiple sclerosis. How can I possibly use a different clinical system for each individual patient, and what should I do if a patient has more than one problem!&lt;/p&gt;
 
 &lt;p&gt;The most important disadvantage is the lack of timely feedback for users. All clinical systems must provide value to the users of that system, with the value of a system arithmetically divided by the length of time it takes to return that value back to the user. If I am going to spend time entering information, that information must create value immediately so that we create a virtuous cycle of continuous data improvement.&lt;/p&gt;
 
