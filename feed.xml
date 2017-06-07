@@ -1,5 +1,156 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-06-04T10:02:44+01:00</updated><id>https://www.wardle.org/</id><title type="html">Dr. Mark Wardle</title><subtitle>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
-</subtitle><entry><title type="html">Designing the future 3/3: the patient</title><link href="https://www.wardle.org/clinical-informatics/2017/06/03/designing-future-3.html" rel="alternate" type="text/html" title="Designing the future 3/3: the patient" /><published>2017-06-03T16:10:00+01:00</published><updated>2017-06-03T16:10:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/06/03/designing-future-3</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/06/03/designing-future-3.html">&lt;p&gt;This is part three of a 3-part series on designing future clinical information systems. Part 1 covers the &lt;a href=&quot;/clinical-informatics/2017/06/03/designing-future-1.html&quot;&gt;importance of data models&lt;/a&gt;. Part 2 covers &lt;a href=&quot;/clinical-informatics/2017/06/03/designing-future-2.html&quot;&gt;clinical modelling in relation to process and workflow&lt;/a&gt;. This part covers patient portals and the internet-of-things.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-06-07T16:41:18+01:00</updated><id>https://www.wardle.org/</id><title type="html">Dr. Mark Wardle</title><subtitle>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
+</subtitle><entry><title type="html">Using data for patient safety</title><link href="https://www.wardle.org/clinical-informatics/2017/06/03/using-data-patient-safety.html" rel="alternate" type="text/html" title="Using data for patient safety" /><published>2017-06-03T16:10:00+01:00</published><updated>2017-06-03T16:10:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/06/03/using-data-patient-safety</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/06/03/using-data-patient-safety.html">&lt;p&gt;&lt;em&gt;This blog post is from a talk I gave to the RCPE from December 2016.&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;In healthcare, we use data for:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;the day-to-day care of individual patients&lt;/li&gt;
+  &lt;li&gt;the management and governance of our clinical services&lt;/li&gt;
+  &lt;li&gt;to support clinical research and innovation.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;At such, the effective use of data is critical for patient safety, both now and in the future. So, you might expect healthcare services to have highly developed systems to allow the recording of structured longitudinal observational data?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/pile-of-notes-2.png&quot; alt=&quot;Pile Of Notes 2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Well, no we don’t. Instead, we largely have expensive paper records, poorly accessible with no support for team working. Paper records frequently end up poorly structured containing lots of data but in a format difficult to use in any systematic, safe or indeed automated way.&lt;/p&gt;
+
+&lt;h1 id=&quot;supporting-your-practice&quot;&gt;Supporting your practice&lt;/h1&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/qMsPXSMTpFI&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“You’re a victim of it or a triumph because of it. The human mind simply cannot carry all the information without error so the record becomes part of your practice”&lt;/p&gt;
+
+  &lt;p&gt;“if you can’t audit a thing for quality, it means you do not have the means to produce quality”&lt;/p&gt;
+
+  &lt;p&gt;Dr Larry Weed, Internal Medicine Grand Rounds, 1971&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The information in the medical record isn’t something separate to the day-to-day care of an individual patient or indeed a group of patients, but instead is part of that care. However, we clinicians have historically been neglected and the information we need to run our services is not available in a routine and systematic way.&lt;/p&gt;
+
+&lt;p&gt;We should not capture information unless it is useful and, as its most fundamental, data are only useful if they influence a decision or reduce uncertainty in relation to that decision, whether it is a decision for a single patient sitting in front of you or a whole group of patients sharing some defined characteristics.&lt;/p&gt;
+
+&lt;h1 id=&quot;what-is-already-collected&quot;&gt;What is already collected?&lt;/h1&gt;
+
+&lt;p&gt;Since the Korner report was published in 1982, there has been a commitment to routinely collect a national set of data for the management of the NHS.&lt;/p&gt;
+
+&lt;p&gt;As a result the health service &lt;em&gt;does&lt;/em&gt; collect lots of data, such as the hospital episode statistics (HES):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/hes-data.png&quot; alt=&quot;Hes Data&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It is illuminating to read contemporary criticism of that report such as that from &lt;a href=&quot;http://www.bmj.com/content/285/6350/1227&quot;&gt;Sir Douglas Black&lt;/a&gt;, then RCP president who noted:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“the focus of the inquiry seems to have been on the use of information in management, not in any way as a criticism (improvement in management is both possible and desirable) but to underline that the report must be judged in that context and not in relation to other uses of information in clinical medicine or clinical epidemiology.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“The recommendation that diagnostic data should be collected on all patients covered by the system is to be welcomed; its omission would make these scheme &lt;em&gt;even more obviously&lt;/em&gt; a management exercise, thereby lessening its appeal to the active clinician” (my emphasis added)&lt;/p&gt;
+
+  &lt;p&gt;Sir Douglas Black, 1982.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I think it is reasonable to say that the majority of clinicians have not engaged with these data, nor have they used those data to support their own practice or indeed plan their own service developments. In addition, while there are clinical coders recording diagnostic and procedural codes for inpatient episodes of care, no such information is recorded for outpatient clinics. As a result, we know how many patients are seen in our outpatient clinics, but have little idea why they are seen or how they fare. Importantly, most hospital patient administrative systems do not record information relating to any other type of patient encounter, such as telephone calls&lt;sup&gt;&lt;a href=&quot;#telephone&quot;&gt;a&lt;/a&gt;&lt;/sup&gt;, home visits or electronic communication.&lt;/p&gt;
+
+&lt;p&gt;The limitations of HES data have been widely known; perhaps the most important limitation is that it is incomplete. As a result, those data bear little resemblance to what happens in real-life, do not recognise team-working and are not recorded by health professionals. Consequently, health professionals rarely see the data, and when they do, they scoff at its inaccuracy.&lt;/p&gt;
+
+&lt;p&gt;But this isn’t of only academic interest; this is serious and important to our health services.&lt;/p&gt;
+
+&lt;p&gt;Please read this extract from the Bristol children’s heart surgery report 16 years ago (2001). Are you confident that we have addressed this within the NHS in 2017?&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The various clinical systems, many of them paper based, differed from one another and had no relationship with the administrative hospital-wide systems. The funding made available in the late 1980s and early 1990s for medical and later clinical audit helped to reinforce this separation by making available to groups of clinicians money for small local computer systems. The lack of any connection between these different systems, one administrative, the others clinical, for collecting data cannot be explained solely on the basis of some technical or technological reason. It was just as strongly a reflection of a mindset that clinical matters were the sole domain of clinicians and non-clinical matters, to do with the management of resources and with the movement of patients into and through the hospital, were the preserve of managers and administrators.&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://webarchive.nationalarchives.gov.uk/20090811143745/http:/www.bristol-inquiry.org.uk/final_report/the_report.pdf&quot;&gt;Bristol Heart Enquiry, 2001&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;so-is-the-answer-another-registry&quot;&gt;So, is the answer another registry?&lt;/h1&gt;
+
+&lt;p&gt;The answer for many clinical services appears to have been the creation of bespoke, specialty or disease-specific registries. Such registries are often created by a particular medical or surgical specialty, a disease-specific organisation such as a charity or an academic centre looking to build a cohort of patients for clinical research.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/plurality-of-registries.jpg&quot; alt=&quot;Plurality Of Registries&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The problems with dedicated disease or speciality-specific registries are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;there are lots of them, so potentially lots of disparate systems&lt;/li&gt;
+  &lt;li&gt;not embedded in day-to-day workflow&lt;/li&gt;
+  &lt;li&gt;sometimes little feedback, result or reward, particularly in any timely manner&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/one-way-registry.png&quot; alt=&quot;One Way Registry&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;When I am clinic, I might see a patient with epilepsy, then chronic fatigue syndrome, then headache, then multiple sclerosis. How can I possibly use a different clinical system for each individual patient, and don’t start asking what I should do if a patient has more than one problem!&lt;/p&gt;
+
+&lt;p&gt;The most important disadvantage is the lack of timely feedback for users. All clinical systems must provide value to the users of that system, with the value of a system arithmetically divided by the length of time it takes to return that value back to the user. If I am going to spend time entering information, that information must create value immediately so that we create a virtuous cycle of continuous data improvement.&lt;/p&gt;
+
+&lt;p&gt;For example, in stroke medicine, we have the &lt;a href=&quot;https://www.strokeaudit.org&quot;&gt;Sentinal Stroke National Audit Programme (SSNAP)&lt;/a&gt;. This is a large-scale national audit project in which teams of health professionals perform notes review, completing data collection forms answering questions to derive data on outcomes such as “Median number of minutes per day on which physiotherapy is received”. The aggregated results for a region and comparison of these indicators with other regions are then disseminated months later.&lt;/p&gt;
+
+&lt;p&gt;Instead, we need systems in place that can answer that question for our current inpatients today so that, for this example, our physiotherapy colleagues can identify those patients who need to receive physiotherapy. To achieve real-time dashboards of these clinical indicators, we must provide appropriate information technology systems so that we can embed the routine and systematic collection of data into our day-to-day processes to capture data as a side-effect of our direct care, and not as an afterthought once care has been provided.&lt;/p&gt;
+
+&lt;h1 id=&quot;so-what-is-the-answer&quot;&gt;So what is the answer?&lt;/h1&gt;
+
+&lt;p&gt;We need to be ambitious and demand systems that enable intelligent and prudent healthcare. We need to start with &lt;a href=&quot;/clinical-informatics/2017/06/03/designing-future-1.html&quot;&gt;understanding our problems&lt;/a&gt;, and design our clinical information systems to solve those problems. As clinicians, we need to take ownership of the data on our patients and make data collection routine.&lt;/p&gt;
+
+&lt;p&gt;Importantly, taking a domain-driven approach to solving clinical information system design results in boiling down most of our data problems into two broad categories:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Cohorts&lt;/li&gt;
+  &lt;li&gt;Outcomes&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;A cohort is a group of patients who share a defining characteristic, such as the same diagnosis, symptom, clinical finding, or receipt of the same procedure or treatment. I have written about the &lt;a href=&quot;/clinical-informatics/2017/04/28/importance-of-cohorts.html&quot;&gt;importance of defining cohorts previously&lt;/a&gt; and will not duplicate that post here except to say that SNOMED-CT, a comprehensive and modern terminology provides a hierarchical ontology. As a result, we can record that a patient has “Addison’s disease” (concept identifier 363732003) and determine algorithmically, by virtue of the ontology, that the patient has a type of “hypoadrenalism” (concept identifier 111563005). As such, we can then potentially identify all patients with hypoadrenalism even if they have been recorded as having “Addison’s disease”.&lt;sup&gt;&lt;a href=&quot;#snomed-understand&quot;&gt;b&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;Value-based healthcare is predicated upon understanding and improving our patients’ health outcomes. As such, the systematic and routine collection of outcomes must underpin everything we do; what point in doing a hip replacement if we do not assess how our patient fares? Outcome data may be recorded by health professionals, but the most important outcomes are those that address the needs of our patients and as a result, patient-reported outcomes are critical in understanding how to configure and how to monitor our clinical services. In addition, there are other techniques that provide compelling real-world measures of outcome such as return to employment, need for care, long-term dependency and frequency of complications which should be combined with our other data in order to build well-rounded, comprehensive longitudinal measures of outcomes.&lt;/p&gt;
+
+&lt;p&gt;Importantly, these two broad categories are mutually dependent. How can we interpret quality of life information without an understanding of the patient characteristics?&lt;/p&gt;
+
+&lt;p&gt;As such, SNOMED-CT permits us to understand our cohorts and partially allows us to record patient outcomes, but we must supplement SNOMED-CT with the routine collection of outcome data by professionals and by patients using a variety of disease/procedure and generic outcome tools.&lt;/p&gt;
+
+&lt;h1 id=&quot;routine-collection-of-data&quot;&gt;Routine collection of data&lt;/h1&gt;
+
+&lt;p&gt;So how can we build the right tools for health professionals and patients to allow the routine and systematic collection of data to support our cohorts and monitor our outcomes? Well, I’ve been trying to do this since 2009….&lt;/p&gt;
+
+&lt;p&gt;Here is an example of recording diagnoses:&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/Cppjedy-hMo&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Here we routinely record the toxin, dose and site of injections for our botulinum toxin clinic. It saves time for the clinician, because we can then generate the letter to the general practitioner automatically.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/tgw4FRAiRVs&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Behind the scenes, each click records data as a SNOMED-CT coded procedure and site and drug.&lt;/p&gt;
+
+&lt;p&gt;And here, my iPad application collects patient reported outcome measures in the clinic and makes them immediately available to the clinician:&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/GTo0fGHgoIA&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/pd-data.png&quot; alt=&quot;Pd Data&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/pd-data-letter.png&quot; alt=&quot;Pd Data Letter&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;how-can-do-this-at-scale&quot;&gt;How can do this at scale?&lt;/h1&gt;
+
+&lt;p&gt;Importantly, my software records highly structured data using SNOMED-CT and an open information model. As such, documents created using the system consist of a binary blob of data representing a PDF representation as well as a computer-readable data structure recording diagnoses, problems, procedures and interventions in a standardised way. The problem is that, presently, while I expose some of these data as a FHIR end-point, there are no other applications running in the live clinical environment that are able to interact, yet.&lt;/p&gt;
+
+&lt;p&gt;As such, we must stop thinking at the scale of individual services, diseases and organisations and instead recognise that we must support interoperability between multiple disparate clinical information systems across enterprises. This requires action to define appropriate data standards and data exchange, with the adoption of terminology such as SNOMED-CT and LOINC, the use of defined information models such as HL7 FHIR and openEHR.&lt;/p&gt;
+
+&lt;p&gt;Such standards must be mandated for new developments to avoid vendor lock-in, and ideally we should be building vendor-neutral archives of data that other applications, whether in-house or from third-parties, can use for data persistence and retrieval.&lt;/p&gt;
+
+&lt;p&gt;The design of clinical systems must begin with the patient and support the provision of their care irrespective of whether they begin their journey in one organisation and continue it in another. Similarly, we need to train a cadre of experts in health informatics in order to ensure that the routine use of open, standards-backed interoperable information for healthcare is given priority in system development instead of a traditional focus on information for the &lt;em&gt;management&lt;/em&gt; of an individual organisation.&lt;/p&gt;
+
+&lt;p&gt;Most importantly, if you are a health professional, you must start to demand more information technology in order to support your day-to-day work looking after patients. You need systems to allow the rapid and routine collection of structured data and to be given the required tools in order to make sense of those data for your patient and your services with data linkage and realtime clinical dashboards for your services, your cohorts and your outcomes.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h1&gt;
+
+&lt;p&gt;&lt;a name=&quot;telephone&quot;&gt;a&lt;/a&gt;: The telephone was patented in 1876.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;snomed-understand&quot;&gt;b&lt;/a&gt;: I have turned the usual use of SNOMED-CT upside-down as a simple demonstration of using the ontology to derive semantic understanding in a &lt;a href=&quot;/clinical-informatics/2017/05/20/using-snomed-ct.html&quot;&gt;recent blog post&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">This blog post is from a talk I gave to the RCPE from December 2016.</summary></entry><entry><title type="html">Designing the future 3/3: the patient</title><link href="https://www.wardle.org/clinical-informatics/2017/06/03/designing-future-3.html" rel="alternate" type="text/html" title="Designing the future 3/3: the patient" /><published>2017-06-03T16:10:00+01:00</published><updated>2017-06-03T16:10:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/06/03/designing-future-3</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/06/03/designing-future-3.html">&lt;p&gt;This is part three of a 3-part series on designing future clinical information systems. Part 1 covers the &lt;a href=&quot;/clinical-informatics/2017/06/03/designing-future-1.html&quot;&gt;importance of data models&lt;/a&gt;. Part 2 covers &lt;a href=&quot;/clinical-informatics/2017/06/03/designing-future-2.html&quot;&gt;clinical modelling in relation to process and workflow&lt;/a&gt;. This part covers patient portals and the internet-of-things.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -176,7 +327,7 @@
 
 &lt;p&gt;Given this modelling of real-life processes and communication, it is easy to see how dealing with communications from patients could work. Rather than communications being sent to an individual health professional, who conceivably may be on leave or unable to respond, building a process and information model that mimics real-life offers the potential to build true team/patient communication. Likewise, the same model works for data from the patient’s own devices, whether they be home-monitors or wearables.&lt;/p&gt;
 
-&lt;p&gt;Part 3 of this series covers &lt;a href=&quot;/clinical-informatics/2017/06/03/designing-future-3.html&quot;&gt;patient portals and the internet-of-things&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">This is part two of a 3-part series on designing future clinical information systems. Part 1 covers the importance of data models. This part covers clinical modelling in relation to process and workflow. Part 3 covers patient portals and the internet-of-things.</summary></entry><entry><title type="html">Designing the future 1/3: modelling data</title><link href="https://www.wardle.org/clinical-informatics/2017/06/03/designing-future-1.html" rel="alternate" type="text/html" title="Designing the future 1/3: modelling data" /><published>2017-06-03T16:08:00+01:00</published><updated>2017-06-03T16:08:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/06/03/designing-future-1</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/06/03/designing-future-1.html">&lt;p&gt;This is part one of a 3-part series on designing future clinical information systems. This post covers the importance of data models. Part 2 covers &lt;a href=&quot;/clinical-informatics/2017/06/03/designing-future-2.html&quot;&gt;clinical modelling in relation to process and workflow&lt;/a&gt;. Part 3 covers &lt;a href=&quot;(/clinical-informatics/2017/06/03/designing-future-3.html)&quot;&gt;patient portals and the internet-of-things&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Part 3 of this series covers &lt;a href=&quot;/clinical-informatics/2017/06/03/designing-future-3.html&quot;&gt;patient portals and the internet-of-things&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">This is part two of a 3-part series on designing future clinical information systems. Part 1 covers the importance of data models. This part covers clinical modelling in relation to process and workflow. Part 3 covers patient portals and the internet-of-things.</summary></entry><entry><title type="html">Designing the future 1/3: modelling data</title><link href="https://www.wardle.org/clinical-informatics/2017/06/03/designing-future-1.html" rel="alternate" type="text/html" title="Designing the future 1/3: modelling data" /><published>2017-06-03T16:08:00+01:00</published><updated>2017-06-03T16:08:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/06/03/designing-future-1</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/06/03/designing-future-1.html">&lt;p&gt;This is part one of a 3-part series on designing future clinical information systems. This post covers the importance of data models. Part 2 covers &lt;a href=&quot;/clinical-informatics/2017/06/03/designing-future-2.html&quot;&gt;clinical modelling in relation to process and workflow&lt;/a&gt;. Part 3 covers &lt;a href=&quot;/clinical-informatics/2017/06/03/designing-future-3.html&quot;&gt;patient portals and the internet-of-things&lt;/a&gt;.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -1292,102 +1443,4 @@ In order to build software, it is usually appropriate to break up a large proble
 
 &lt;p&gt;A controlled trial of ML might be possible within a single organisation but I would envisage a trial across multiple organisations would be needed in order to compare the efficacy and safety between those using AI and those who are not. For such a study, we would try to isolate the use of machine learning as the only difference between the control and intervention arm. As a result, deployment would need to be across both organisations with the only difference being the use of ML itself.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">In a previous blog post, I have discussed the value of information technology in supporting clinical care, unashamedly stealing and modifying Google’s original mantra:</summary></entry><entry><title type="html">Clinical information system design: 3. Data standards and terminology</title><link href="https://www.wardle.org/cis-design/2017/05/02/data-standards.html" rel="alternate" type="text/html" title="Clinical information system design: 3. Data standards and terminology" /><published>2017-05-02T15:20:00+01:00</published><updated>2017-05-02T15:20:00+01:00</updated><id>https://www.wardle.org/cis-design/2017/05/02/data-standards</id><content type="html" xml:base="https://www.wardle.org/cis-design/2017/05/02/data-standards.html">&lt;p&gt;A terminology is a body of terms used within a particular subject of study or profession. A classification is a systematic organisation of things into classes. A classification system such as ICD-10 cannot be used as a terminology and many terminologies cannot be easily used as a classification system. This is an important distinction and relates to the how those data are primarily used.&lt;/p&gt;
-
-&lt;h1 id=&quot;snomed-ct&quot;&gt;SNOMED CT&lt;/h1&gt;
-
-&lt;p&gt;SNOMED CT is a very large and comprehensive terminology.  Importantly terms can be linked by multiple relationships to other terms. 
-This makes it possible for software to determine that “multiple sclerosis” is a disease defined by “demyelination” of the “central nervous system”. 
-When implemented properly, SNOMED CT enables software to make intelligent decisions about what to show, what data to request and what forms to present, based on the diagnoses entered. For example, the database would know that a patient had epilepsy if they were given a diagnosis of juvenile myoclonic epilepsy or frontal lobe epilepsy or any of the hundreds of other terms that are equivalent to a diagnosis of epilepsy.&lt;br /&gt;
-Thus a command to ‘send an alert when a patient, belonging to a particular consultant, with motor neurone disease loses 5% of their body mass compared to their baseline at diagnosis’, can be implemented easily. SNOMED CT allows the underlying logic to simply ask whether the patient has a type of “motor neurone disease” and this would automatically include all patients with related diagnoses such as “primary lateral sclerosis” and “pseudobulbar palsy”.&lt;/p&gt;
-
-&lt;p&gt;SNOMED CT is not confined to diagnostic and procedural information.  There are hierarchies covering a wide range of medical terminology including anatomical structures, pathology, occupations and ethnic origins. With local extensions such as the NHS’ DM&amp;amp;D (dictionary of medicines and devices) these codes can be used in any field that needs structured coded information.&lt;/p&gt;
-
-&lt;p&gt;Another advantage is support for synonyms. A distinct clinical concept can and usually has multiple synonyms - for example “Granulomatosis with polyangiitis” was previously known as “Wegener granulomatosis”. With synonym support, a user entering an outdated or synonymous term would find the synonym and see it mapped into the new modern preferred description of the term.&lt;/p&gt;
-
-&lt;p&gt;Within SNOMED CT, clinical terms are “concepts”, “synonyms” are “descriptions” and the relationships between concepts are recorded as “relationships”. While seemingly simple, as relationships themselves are defined by concepts (such as ‘IS-A’ as in “‘Motor neurone disease—IS-A—Disorder of nervous system”) it means that the relationship tree is infinitely extendable over time.&lt;/p&gt;
-
-&lt;p&gt;SNOMED CT is owned by Snomed International - and is an international terminology, with the UK version managed by the UK Terminology Centre (UKTC) of the Health and Social Care Information Centre (HSCIC) - now called NHS Digital.  There are online &lt;a href=&quot;http://systems.hscic.gov.uk/data/uktc/training&quot;&gt;training resources&lt;/a&gt; as well as a simple online &lt;a href=&quot;http://browser.ihtsdotools.org&quot;&gt;SNOMED CT browser&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;I have developed an open-source terminology server that provides fast free-text search and navigation around the SNOMED CT hierarchy as well as providing semantic understanding for any concept, allowing client software to answer questions like “does this patient have a type of granulomatous disease?”, “was this patient born in Europe?” or even “is this drug a type of beta-blocker?” . It would answer yes to the first question simply by understanding the diseases that the patient has been listed as having, answering “yes” if a patient had sarcoidosis and “no” if they had multiple sclerosis. Similarly, it would respond with “yes” if a patient was recorded as being born in France but “no” if they were born in Afghanistan.  SNOMED CT provides the logical relationships in order to drive such computerised decision-making.&lt;/p&gt;
-
-&lt;h1 id=&quot;information-models&quot;&gt;Information models&lt;/h1&gt;
-
-&lt;p&gt;Each SNOMED CT concept, description and relationship has a unique and persistent identifier that can be stored in a data store. 
-Most clinical applications persist information in a relational database and so a simple implementation may simply store the identifier as a foreign key to the row that represents that entity. However, whilst these terms have meaning when used in isolation (e.g. storing the identifier representing”myocardial infarction”), it is only when these terms are combined together in a logical way as part of a larger data model, that true meaning can be understood. It is analogous to definitions for individual words in a dictionary but true expression results only when these words are combined into sentences and paragraphs. As such, most concepts are only useful when considered within the information model in which it is recorded.&lt;/p&gt;
-
-&lt;p&gt;The information model used in which SNOMED CT concepts are stored is therefore critical to derive understanding from what can be inferred from the recording of a concept. This is particularly important for a terminology such as SNOMED CT in which terms may be recorded together to form a compositional (post-coordinated) term such as “Family history of…” (281666001) and “Obesity” (414916001) or out of convenience represented as a single SNOMED CT term “Family history: Obesity” (160311006).&lt;/p&gt;
-
-&lt;p&gt;If SNOMED CT had not only defined a terminology but also a wider information model then such compound pre-coordinated terms would be unnecessary and the recording of “obesity” within a model defining a family history would be sufficient. However, while compound pre-coordinated terms risk an explosion of terms to cater for multiple combinations, they do make it easier for end-users to find concepts that represent what they are trying to record and support workflows in which clinical terms are recorded in a relatively unstructured information model, such as that used in primary care historically using Read codes. Of course, SNOMED CT was developed as an amalgamation of SNOMED from the College of American Pathologists and Read (Clinical Terms Version 3) codes with the latter recorded prospectively and longitudinally in UK primary care systems in a relatively unstructured format. There are advantages in SNOMED CT being independent from the surrounding data model within which it is transmitted or stored particularly as SNOMED CT terms generally reflect core concepts relating to health, disease and the processes of care. As a result a range of models can be used with SNOMED CT and similarly, different terminologies can be bound to a model such as LOINC - LOINC is an alternative terminology focused on tests, measurements and observations — see &lt;a href=&quot;https://loinc.org&quot;&gt;LOINC&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;I generally recommend a highly structured approach to the storage of SNOMED CT codes in which the information model in which they are stored ensures no uncertainty in interpretation and that to simplify subsequent analysis and retrieval, compound pre-coordinated terms are decomposed into their components are stored appropriately. As such, users may enter information via a highly structured workflow in which the context is evident as part of the user interface such as recording family history or allergies or a less structured workflow in which terms can be entered and decomposed and entered into a more structured information model. Alternatively, an implementation may instead store the codes as entered and deal with ensuring that a diagnostic term recorded in a family history model is equivalent to the compound term.&lt;/p&gt;
-
-&lt;p&gt;To provide evidence to support a highly structured approach, I suggest considering how one might use SNOMED CT to record examination findings. While there is a code for “supranuclear gaze palsy” (420675003) there is no compound code to record that there is an absence of this examination finding. While one could request an addition to SNOMED CT, it is much more appropriate to consider examination findings in two categories, those found and those not found. The recording of a lack of clinical sign is important in clinical practice as well as for medico-legal reasons. As such, the information model in which this clinical finding is recorded is critical in providing understanding. SNOMED CT does allow post-coordinated terms in which multiple terms are combined together to give meaning. One possible way of representing the ‘lack of’ a clinical finding is to post-coordinate with a negation concept to form a compositional term but I advocate using a robust information model as a simpler method of expressing clinical knowledge particularly when one considers &lt;em&gt;how&lt;/em&gt; users are expected to record such findings.&lt;/p&gt;
-
-&lt;p&gt;Example information models which can record SNOMED CT terms in context are HL7 and openEHR. OpenEHR uses the term ‘archetype’ as a synonym for ‘information model’. The use of validated and published data structures support subsequent interoperability between disparate systems which can process that model. However, the use of a specific information model does not necessarily force the use of that model as a format in which to store data, but may be used only as a representation of data to be used for interoperability with other systems. Indeed, a focus on a model of any form improves the potential for interoperability because that model is likely to be an abstraction of real-life concepts and thus it becomes possible to map from one information model to another.&lt;/p&gt;
-
-&lt;p&gt;However, even if two information models represent the same real-life concept and they look superficially similar, the process of mapping can introduce ambiguity and potentially even errors, particularly if a data element is present in one model but not in another. In addition, different terminologies may be used with an information model in a process called ‘terminology binding’ and so simply mandating a particular kind of information model does not guarantee interoperability.&lt;/p&gt;
-
-&lt;h1 id=&quot;hl7&quot;&gt;HL7&lt;/h1&gt;
-&lt;p&gt;Health Level Seven (HL7) is an international standards development organisation that publishes standards for healthcare interoperability. For more information, see the &lt;a href=&quot;http://www.hl7.org.uk&quot;&gt;HL7 website&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;HL7 publish a range of interoperability standards including HL7 V2, HL7 V3 and CDA, and the HL7 FHIR.&lt;/p&gt;
-
-&lt;h2 id=&quot;hl7-v2&quot;&gt;HL7 V2&lt;/h2&gt;
-&lt;p&gt;HL7 V2 refers to HL7’s currently most used health standard from HL7 first released in 1989 and deployed internationally. See more information &lt;a href=&quot;http://www.hl7.org/implement/standards/product_brief.cfm?product_id=185&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;http://www.hl7.org/about/FAQs/index.cfm?ref=nav&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;It is fundamentally a messaging standard and early versions focused on ‘ADT’ messages, messaging relating to the admission, discharge and transfer of patients. Such messages are sent as ‘triggers’ and therefore adopt a ‘push’ model of health interoperability. HL7 has grown organically and iteratively over many years with an increasing number of message types including those to record clinical observations and laboratory results for example. The latest version is HL7 v2.6 which was approved as an ANSI standard in 2007.&lt;/p&gt;
-
-&lt;h2 id=&quot;hl7-v3-and-the-rim&quot;&gt;HL7 V3 and the RIM&lt;/h2&gt;
-&lt;p&gt;HL7 V3 was developed from 1992 to define a Reference Information Model (RIM) describing healthcare-related messages and trigger events relating to those messages. 
-The RIM defines an object-orientated model in which types are sub-specialisms of a more generic type. For example, in the same way as bicycles and cars are &lt;em&gt;types&lt;/em&gt; of vehicles, a ‘Person’ is a type of a ‘Living Subject’ but veterinary patients such as dogs and cats are represented as a ‘Non-person living subject’. As in object-orientated programming languages, specialist models inherit attributes and behaviours from their more generic parent types.&lt;/p&gt;
-
-&lt;p&gt;The three core classes in HL7 RIM are ‘Act’, ‘Entity’ and ‘Role’:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;An act is a record of something that has or will happen. This will usually include what has been done, to whom, by whom, when, where and how and possibly documenting why.&lt;/li&gt;
-  &lt;li&gt;An entity is a living or non-living thing such as a person, animal or organisation.&lt;/li&gt;
-  &lt;li&gt;A role represents a skill or competency of an Entity, such as patient, employee, place or organisation.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The HL7 V3 standard is large and complex and many healthcare organisations with an existing infrastructure built using HL7 V2 have been reluctant to adopt the newer standard so HL7 RIM is not used as much as HL7 V2 internationally.&lt;/p&gt;
-
-&lt;h2 id=&quot;hl7-v3-cda&quot;&gt;HL7 V3 CDA&lt;/h2&gt;
-&lt;p&gt;The HL7 V3 Clinical Document Architecture (CDA) defines a document-based information model in which components of the HL7 V3 RIM is used as a header together with a document body consisting of a mixture of unstructured and structured data. As I discuss in my post on &lt;a href=&quot;/cis-design/2017/05/02/clinical-modelling.html&quot;&gt;clinical modelling&lt;/a&gt;, a document-based architecture is an appropriate abstraction of real-life processes and explicitly ensures that clinical information is recorded together with its context; such a document can stand in isolation and be understood by the reader. When contextual clues are removed, interpretation of structured and unstructured information is potentially hazardous. A document can be immutable once created and document lifecycle and process management including creation, editing and repudiation can be modelled in a straightforward manner.&lt;/p&gt;
-
-&lt;p&gt;There are three CDA levels:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;CDA level one: has a header and human-readable body usually in an unstructured format such as free text or file types such as images or documents (e.g. Adobe PDF).&lt;/li&gt;
-  &lt;li&gt;CDA level two: extends level one by including more structured data within the body of the document.&lt;/li&gt;
-  &lt;li&gt;CDA level three: allows highly-structured data to be encoded at a high level of granularity.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;With the document paradigm limiting mismatch between model and real-life, adoption of the CDA standard has been widespread internationally. It is the most adopted &lt;a href=&quot;http://www.hl7.org/FHIR/comparison-cda.html&quot;&gt;HL7 V3 standard&lt;/a&gt;.
-In addition, the different CDA levels permit flexibility in the recording of unstructured and structured data, easing adoption of the standard. Such an approach permits implementers to use level one of the HL7 CDA to store relatively unstructured documents initially but evolve over time to permit newer applications to store more structured information and yet remain interoperable.&lt;/p&gt;
-
-&lt;h2 id=&quot;fhir&quot;&gt;FHIR&lt;/h2&gt;
-
-&lt;p&gt;FHIR, &lt;a href=&quot;https://www.hl7.org/fhir/summary.html&quot;&gt;Fast Health Interoperability Resources&lt;/a&gt;, is a new framework created by HL7 which uses modern web services over HTTP to create, edit and share modular resources. Importantly, the HL7 FHIR standards are free to use without restriction and focus on data standards and the implementation of those standards within clinical systems.&lt;/p&gt;
-
-&lt;p&gt;The use of FHIR does not mandate that existing and new clinical systems use FHIR standards to define their internal architecture or internal &lt;em&gt;storage&lt;/em&gt; formats, but the use of FHIR can provide an open and standard interface to permit interoperability between different systems created by different vendors. As such, an application or service can provide access to data in an open and extensible format by providing a FHIR server and consume different data as a FHIR client.&lt;/p&gt;
-
-&lt;p&gt;There are a range of FHIR &lt;a href=&quot;http://www.hl7.org/FHIR/implementation.html&quot;&gt;frameworks&lt;/a&gt; including:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Search: within a resource, such as searching for a patient.&lt;/li&gt;
-  &lt;li&gt;Operations: on a resource such as fetching an encounter record or processing a message. These are in addition to the standard CREATE, READ, UPDATE and DELETE REST-based interactions.&lt;/li&gt;
-  &lt;li&gt;Documents: representing a composition of other resources with a fixed presentation linked to context.&lt;/li&gt;
-  &lt;li&gt;Messages: to allow messages to be sent in response to a specific event.&lt;/li&gt;
-  &lt;li&gt;Services: to provide a representation of a service-orientated architecture within healthcare. See the &lt;a href=&quot;http://www.hl7.org/FHIR/services.html&quot;&gt;FHIR service documentation&lt;/a&gt; for more information.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;There is backwards-compatibility so that FHIR documents can contain HL7 V3 CDA documents. FHIR potentially improves the integration and interoperability between disparate systems. The standard uses open web standards over the HTTP protocol and so development can be straightforward. However, FHIR is still under active development at the time of writing and the current release is designated as a “draft standard for trial use”. As such, future versions of FHIR may result in non-compatible future changes.&lt;/p&gt;
-
-&lt;h1 id=&quot;openehr&quot;&gt;openEHR&lt;/h1&gt;
-
-&lt;p&gt;openEHR is an open standard for the recording of health-related data maintained by the &lt;a href=&quot;http://openehr.org&quot;&gt;OpenEHR foundation&lt;/a&gt;. It defines a multi-level information model in which the core model (the ‘reference model’) does &lt;em&gt;not&lt;/em&gt; include clinical information but focuses on core generic abstractions and process. Archetypes represent the clinical information model, with models created, edited and curated as part of a ‘clinical knowledge manager’ (CKM). This multi-level modelling approach means that health professionals can undertake clinical modelling independent of the underlying implementation. In addition, small and re-usable domain models can be aggregated into a ‘template’. For example, if a domain model contains ‘blood pressure’ and ‘heart rate’ then this model can be incorporated within a larger ‘template’ representing an emergency unit admission. An overview is available &lt;a href=&quot;http://www.openehr.org/releases/AM/latest/docs/Overview/Overview.html&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;In addition, there is a new openEHR REST-based application programming interface (API) which proposes to define standards to which an openEHR implementation should adhere. However, the development of these standards is still in development and has not yet been finalised.&lt;/p&gt;
-
-&lt;h1 id=&quot;loinc&quot;&gt;LOINC&lt;/h1&gt;
-&lt;p&gt;LOINC is a freely available international standard for tests, measurements and observations. The official website is &lt;a href=&quot;https://loinc.org&quot;&gt;https://loinc.org&lt;/a&gt;.&lt;br /&gt;
-Although limited in scope, it has been adopted by HL7 as the standard code system for laboratory results. In addition, there is a project to map LOINC codes to SNOMED-CT and vice versa.&lt;/p&gt;</content><author><name></name></author><summary type="html">A terminology is a body of terms used within a particular subject of study or profession. A classification is a systematic organisation of things into classes. A classification system such as ICD-10 cannot be used as a terminology and many terminologies cannot be easily used as a classification system. This is an important distinction and relates to the how those data are primarily used.</summary></entry></feed>
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">In a previous blog post, I have discussed the value of information technology in supporting clinical care, unashamedly stealing and modifying Google’s original mantra:</summary></entry></feed>
