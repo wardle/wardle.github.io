@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-06-07T16:47:52+01:00</updated><id>https://www.wardle.org/</id><title type="html">Dr. Mark Wardle</title><subtitle>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-06-07T16:52:09+01:00</updated><id>https://www.wardle.org/</id><title type="html">Dr. Mark Wardle</title><subtitle>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
 </subtitle><entry><title type="html">Using data for patient safety</title><link href="https://www.wardle.org/clinical-informatics/2017/06/06/using-data-patient-safety.html" rel="alternate" type="text/html" title="Using data for patient safety" /><published>2017-06-06T16:42:00+01:00</published><updated>2017-06-06T16:42:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/06/06/using-data-patient-safety</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/06/06/using-data-patient-safety.html">&lt;p&gt;&lt;em&gt;This blog post is from a talk I gave to the RCPE in December 2016.&lt;/em&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -135,6 +135,10 @@
 &lt;h1 id=&quot;how-can-do-this-at-scale&quot;&gt;How can do this at scale?&lt;/h1&gt;
 
 &lt;p&gt;Importantly, my software records highly structured data using SNOMED-CT and an open information model. As such, documents created using the system consist of a binary blob of data representing a PDF representation as well as a computer-readable data structure recording diagnoses, problems, procedures and interventions in a standardised way. The problem is that, presently, while I expose these data, there are no other applications running in the live clinical environment that are able to interact, yet.&lt;/p&gt;
+
+&lt;p&gt;We need to collect these data across all of our organisations and services:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/care-plans/patient-data-cohorts.png&quot; alt=&quot;Patient Data Cohorts&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;As such, we must stop thinking at the scale of individual services, diseases and organisations and instead recognise that we must support interoperability between multiple disparate clinical information systems across enterprises. This requires action to define appropriate data standards and data exchange, with the adoption of terminology such as SNOMED-CT and LOINC, the use of defined information models such as HL7 FHIR and openEHR.&lt;/p&gt;
 
