@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-06-17T22:30:23+01:00</updated><id>https://www.wardle.org/</id><title type="html">Dr. Mark Wardle</title><subtitle>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-06-18T08:29:07+01:00</updated><id>https://www.wardle.org/</id><title type="html">Dr. Mark Wardle</title><subtitle>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
 </subtitle><entry><title type="html">Embedding data in routine clinical practice</title><link href="https://www.wardle.org/clinical-informatics/2017/06/15/embedding-data.html" rel="alternate" type="text/html" title="Embedding data in routine clinical practice" /><published>2017-06-15T20:22:00+01:00</published><updated>2017-06-15T20:22:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/06/15/embedding-data</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/06/15/embedding-data.html">&lt;p&gt;I spent today at a medical conference relating to motor neurone disease. Today’s conference reinforced my previously held beliefs about the best strategy for healthcare information technology improvement.&lt;/p&gt;
 
 &lt;p&gt;At the conference, we had a mixture of health professionals and academics, all struggling to do what they need to do. The nursing and care coordinators desperately need tools to support their day-to-day work, managing patients and recording their interactions and communicating with one another. The Motor Neurone Disease Association (MNDA)  want them to use Excel spreadsheets to audit their services for benchmarking and assessment against the NICE guidance. The researchers in the room want a population-based registry in which patient data are recorded to support national history modelling, epidemiological students and subsequently act as a platform for subsequent interventional studies. We heard about researchers collecting patient reported data using paper and pen.&lt;/p&gt;
@@ -46,28 +46,9 @@
   &lt;li&gt;it can send alerts if patients lose weight or are admitted to hospital, based on an understanding of defined cohorts for long-term health conditions.&lt;/li&gt;
   &lt;li&gt;it can generate clinical correspondence automatically from data entered during the day-to-day processes of clinical care&lt;/li&gt;
   &lt;li&gt;it acts as a communication hub between different members of the team, with messages linked to the patient record&lt;/li&gt;
-  &lt;li&gt;it supports&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;So my frustration is that I have (personally) written the software to do all of that and spend considerable time maintaining an existing installation in Wales - but, I need help to either roll it out more widely, (or instead roll out the design principles within a new version) to give people the tools that they need.&lt;/p&gt;
-
-&lt;h1 id=&quot;so-how-to-scale&quot;&gt;So how to scale…&lt;/h1&gt;
-
-&lt;p&gt;I am looking for a business partner and a technical partner, or an existing friendly technology company with whom I can work.&lt;/p&gt;
-
-&lt;p&gt;The current technology in use is:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Java application server (Apple WebObjects, Project Wonder/ERRest).&lt;/li&gt;
-  &lt;li&gt;PostgreSQL&lt;/li&gt;
-  &lt;li&gt;Apache Lucene&lt;/li&gt;
-  &lt;li&gt;Apache Cayenne&lt;/li&gt;
-  &lt;li&gt;iOS applications written in Objective-C and more recently, Swift.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I want to work on the next generation of healthcare information technology. I now see that if I continue my current course,  I am inadvertently limiting the impact and scope of my existing software and reducing my chance to work on shaping the next generation of software. I’d like to adapt the design principles to create a next generation open platform on which we can build innovation clinician, administrator, manager and patient-facing applications that interoperate and bring healthcare information technology into the 21st Century.&lt;/p&gt;
-
-&lt;p&gt;Ideally, I’d like to be able to make the core platform available for free across the UK, but this would take resources to do that and so perhaps creating a non-profit organisation might be best. If you’re interested in helping, let me know.&lt;/p&gt;
+&lt;p&gt;I’m now working on scaling out this suite of products more generally.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">I spent today at a medical conference relating to motor neurone disease. Today’s conference reinforced my previously held beliefs about the best strategy for healthcare information technology improvement.</summary></entry><entry><title type="html">Using data for patient safety</title><link href="https://www.wardle.org/clinical-informatics/2017/06/06/using-data-patient-safety.html" rel="alternate" type="text/html" title="Using data for patient safety" /><published>2017-06-06T16:42:00+01:00</published><updated>2017-06-06T16:42:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/06/06/using-data-patient-safety</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/06/06/using-data-patient-safety.html">&lt;p&gt;&lt;em&gt;This blog post is from a talk I gave to the RCPE in December 2016.&lt;/em&gt;&lt;/p&gt;
 
