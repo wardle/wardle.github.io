@@ -1,5 +1,65 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-06-18T10:42:57+01:00</updated><id>https://www.wardle.org/</id><title type="html">Dr. Mark Wardle</title><subtitle>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
-</subtitle><entry><title type="html">Embedding data in routine clinical practice</title><link href="https://www.wardle.org/clinical-informatics/2017/06/15/embedding-data.html" rel="alternate" type="text/html" title="Embedding data in routine clinical practice" /><published>2017-06-15T20:22:00+01:00</published><updated>2017-06-15T20:22:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/06/15/embedding-data</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/06/15/embedding-data.html">&lt;p&gt;I spent today at a medical conference relating to motor neurone disease. Today’s conference reinforced my previously held beliefs about the best strategy for healthcare information technology improvement.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-06-20T16:40:54+01:00</updated><id>https://www.wardle.org/</id><title type="html">Dr. Mark Wardle</title><subtitle>Consultant Neurologist, clinical informatics, entrepreneur and software developer.
+</subtitle><entry><title type="html">The hazards of paper?</title><link href="https://www.wardle.org/clinical-informatics/2017/06/20/hazards-of-paper.html" rel="alternate" type="text/html" title="The hazards of paper?" /><published>2017-06-20T12:48:00+01:00</published><updated>2017-06-20T12:48:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/06/20/hazards-of-paper</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/06/20/hazards-of-paper.html">&lt;blockquote&gt;
+  &lt;p&gt;“Paper is one of the most hazardous substances in a hospital.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Keeping paper over EHR is like keeping horse and cart for fear of theft of cars.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Software is eating the world.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The first two are informal quips from colleagues on Twitter, but as I am going to argue that they are wrong, they shall remain nameless!&lt;/p&gt;
+
+&lt;p&gt;Many of you will recognise the last quote from &lt;a href=&quot;https://www.wsj.com/articles/SB10001424053111903480904576512250915629460&quot;&gt;Marc Andreeson&lt;/a&gt;. I truly believe that software is critical to the future of healthcare, in supporting both patients and health professionals in their respective roles.&lt;/p&gt;
+
+&lt;p&gt;As a professional, I want information systems that support me in my work and facilitate changes in working practices that mean that I can do &lt;em&gt;my job&lt;/em&gt; more effectively and to the greater benefit of my patients. If I have electronic records wherever I am, I can have a consultation at any time, perhaps in person but perhaps not. With paper records, such responsiveness is not possible; who is going to fetch the notes from the archives?&lt;/p&gt;
+
+&lt;p&gt;As a patient, I want information systems that support me and facilitate changes in working practices that mean that I can do &lt;em&gt;my job&lt;/em&gt; more effectively.&lt;/p&gt;
+
+&lt;h1 id=&quot;paper-isnt-all-bad-it-has-workflow-built-in&quot;&gt;Paper isn’t all bad… it has workflow built-in&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Dear Doctors, Can we stop printing out the electronic discharge summaries from the neurology day unit now that they are available in &lt;em&gt;Welsh Clinical Portal&lt;/em&gt;?”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“No. Please keep sending them, as otherwise we won’t know when the patient has been admitted and has had their investigations.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;It is very easy to design clinical information systems thinking about how the system will look and work and build a product that will solve the &lt;em&gt;perceived&lt;/em&gt; problem. I have written before about how we need to be careful on &lt;a href=&quot;/clinical-design/2017/03/23/scope-framing-clinical-design.html&quot;&gt;framing our problem and scoping the solution to that problem&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Many hospitals now generate discharge documents electronically. They solve a problem: namely transcribing medications and then creating a discharge document. When a patient is discharged from hospital, a communication should be sent to ensure that the patient’s general practitioner is aware of the admission and what happened. Just like a referral to hospital, it is a handover of care from one team to another made up of a diagnostic synthesis and chain of reasoning supporting those diagnoses including results of relevant investigations together with any procedures or interventions and their complications. We used to hand-write these and then the fourth (illegible) copy would be sent to the general practitioner. Later, and sometimes months later, a team member might dictate a more formal summary.&lt;/p&gt;
+
+&lt;p&gt;But my colleague above, in asking for the electronic notifications to be printed, has identified a missing need that the new electronic discharge system fails to solve: a notification to support his workflow in his ongoing care of the patient.&lt;/p&gt;
+
+&lt;h1 id=&quot;digitisation&quot;&gt;Digitisation&lt;/h1&gt;
+
+&lt;p&gt;Paper is not the most hazardous substance in the hospital; it is a key enabler of many processes and workflows with its use and subsequent benefits not necessarily explicitly understood by outsiders. A benefit of paper is that it allows end-users to rapid prototype a system that support a business workflow when an alternative is either not provided or impedes productivity. In essence, workflows built upon paper were the original “feral” systems until such time that they were replaced with a more formal system or became that system by virtue of its ongoing use.&lt;/p&gt;
+
+&lt;p&gt;We all have these “systems”. My secretary places notes in my in-tray and I process them. It is a workflow, albeit a rudimentary one:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/pile-of-notes.jpg&quot; alt=&quot;Pile Of Notes&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The problem is that these “feral systems” may not be acknowledged explicitly during information technology deployments - the workflow may be understood by all who work there but never explicitly expressed - it is tacit knowledge.&lt;/p&gt;
+
+&lt;h1 id=&quot;software-should-be-eating-healthcare&quot;&gt;Software &lt;em&gt;should&lt;/em&gt; be “eating healthcare”&lt;/h1&gt;
+
+&lt;p&gt;I have previously written about the &lt;a href=&quot;/clinical-informatics/2017/03/09/google-information.html&quot;&gt;importance of software in healthcare&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Digital transformation is more than simply replacing a single paper-based process with an electronic one. Instead, one needs to understand the workflows and processes that are dependent on the process you are examining and ensure that these are included in your design for a clinical information system:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Start with data and the structures that will be used to hold that data. Data, particularly in health, will be immutable as it reflects what was done at that timepoint and changes in data should be modelled accordingly. Prefer open standards, adopt published information models and bind appropriate terminologies and data dictionaries so that you can provide semantic interoperability with partner software.&lt;/li&gt;
+  &lt;li&gt;Examine the workflow and processes that are dependent and create explicit process models; there may be many such processes for different services with different perspectives on the same data. Different professionals need different views of the same data. Consider how such models can be flexibly configured at runtime using rule-based engines written in the language of the business, rather than hard-coding processes.&lt;/li&gt;
+  &lt;li&gt;Acknowledge that, at its most fundamental, healthcare is about communication. Software that ignores human factors will be doomed in the pit of &lt;a href=&quot;/cis-design/2017/05/02/clinical-modelling.html&quot;&gt;real-life/model mismatch.&lt;/a&gt; Build systems that improve communication between and among the healthcare team. Create shared records but understand there is a difference between notifications and alerts and reading a medical record.&lt;/li&gt;
+  &lt;li&gt;Use the design of user-interfaces as a useful part of an exploratory process to understand data and workflow, but build a layered architecture with separation of data persistence, business/application logic and user interface. Consider user-facing applications to be minimal, thin-wrappers around more substantial services forming a “platform”, providing different perspectives for different users of the same data.&lt;/li&gt;
+  &lt;li&gt;Plan user-facing applications for multiple devices, even if you don’t intend to create different versions now so that no-one inadvertently loses separation between business logic and the user interface. Make user interfaces “smart” in the way that they help the user but “stupid” in that they delegate their logic to underlying business services.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">“Paper is one of the most hazardous substances in a hospital.”</summary></entry><entry><title type="html">Embedding data in routine clinical practice</title><link href="https://www.wardle.org/clinical-informatics/2017/06/15/embedding-data.html" rel="alternate" type="text/html" title="Embedding data in routine clinical practice" /><published>2017-06-15T20:22:00+01:00</published><updated>2017-06-15T20:22:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/06/15/embedding-data</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/06/15/embedding-data.html">&lt;p&gt;I spent today at a medical conference relating to motor neurone disease. Today’s conference reinforced my previously held beliefs about the best strategy for healthcare information technology improvement.&lt;/p&gt;
 
 &lt;p&gt;At the conference, we had a mixture of health professionals and academics, all struggling to do what they need to do. The nursing and care coordinators desperately need tools to support their day-to-day work, managing patients and recording their interactions and communicating with one another. The Motor Neurone Disease Association (MNDA)  want them to use Excel spreadsheets to audit their services for benchmarking and assessment against the NICE guidance. The researchers in the room want a population-based registry in which patient data are recorded to support national history modelling, epidemiological students and subsequently act as a platform for subsequent interventional studies. We heard about researchers collecting patient reported data using paper and pen.&lt;/p&gt;
 
@@ -50,7 +110,7 @@
   &lt;li&gt;it acts as a communication hub between different members of the team, with messages linked to the patient record&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;I’m now working on scaling out this suite of products and the underlying data-driven principles of the architecture more generally.&lt;/p&gt;
+&lt;p&gt;I’m now working on scaling out this suite of products and the underlying data-driven principles of the architecture more generally. My goal is to create an open, semantically interoperable architecture for healthcare.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">I spent today at a medical conference relating to motor neurone disease. Today’s conference reinforced my previously held beliefs about the best strategy for healthcare information technology improvement.</summary></entry><entry><title type="html">Using data for patient safety</title><link href="https://www.wardle.org/clinical-informatics/2017/06/06/using-data-patient-safety.html" rel="alternate" type="text/html" title="Using data for patient safety" /><published>2017-06-06T16:42:00+01:00</published><updated>2017-06-06T16:42:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/06/06/using-data-patient-safety</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/06/06/using-data-patient-safety.html">&lt;p&gt;&lt;em&gt;This blog post is from a talk I gave to the RCPE in December 2016.&lt;/em&gt;&lt;/p&gt;
 
@@ -1277,83 +1337,4 @@ As each step is dependent on each other, modelling must be an iterative work wit
   &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;total&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;169&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><author><name></name></author><summary type="html">I think that many clinicians have made some fundamental incorrect conclusions about the use of SNOMED CT in clinical practice. In particular, as SNOMED CT is touted as a replacement for Read codes, widely used in general practice in the UK, it is easy to conclude that SNOMED CT adds complexity and redundant codes without adding any other value.</summary></entry><entry><title type="html">Google DeepMind Caldicott letter</title><link href="https://www.wardle.org/clinical-informatics/2017/05/10/caldicott.html" rel="alternate" type="text/html" title="Google DeepMind Caldicott letter" /><published>2017-05-10T11:55:00+01:00</published><updated>2017-05-10T11:55:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/05/10/caldicott</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/05/10/caldicott.html">&lt;blockquote&gt;
-  &lt;p&gt;Google Deepmind may have received the personally identifying medical records of million NHS patients on a legally inappropriate basis&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://twitter.com/skynewstonight/status/864183833960235014&quot;&gt;Sky News, 15th May 2017&lt;/a&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Taking into account what you have now clarified, it is my view and that of my panel that the purpose for the transfer of 1.6 million identifiable patient records to Google DeepMind was for the testing of the Streams application, and not for the provision of direct care to patients. Given that Streams was going through testing and therefore could not be relied upon for patient care, any role the application might have played in supporting the provision of direct care would have been limited and secondary to the purpose of the data transfer. My considered opinion therefore remains that it would not have been within the reasonable expectation of patients that their records would have been shared for this purpose.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;dame-fiona-caldicott-national-data-guardian-february-2017&quot;&gt;&lt;a href=&quot;https://twitter.com/lexanderjmartin/status/864183460478541825&quot;&gt;Dame Fiona Caldicott, National Data Guardian, February 2017&lt;/a&gt;&lt;/h2&gt;
-
-&lt;h1 id=&quot;trust-and-openness&quot;&gt;Trust and openness&lt;/h1&gt;
-
-&lt;p&gt;Fundamentally, this is about trust and openness. It is what is reasonable and expected.&lt;/p&gt;
-
-&lt;p&gt;However, while that’s quite easy to say, who decides what is reasonable and expected? Do you know how your medical information is stored and to whom they are shared? For example, would you expect an IT supplier to potentially have access to your information?&lt;/p&gt;
-
-&lt;p&gt;Here is an extract from a contract between a UK health organisation and an IT system supplier (and it is not the Google DeepMind contract):&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;em&gt;Personal data and medical records.&lt;/em&gt; The Supplier shall at all times comply with the Data Protection Legislate. In particular the Supplier acknowledges that in the course of providing the Works and/or Services it may access Personal Data. As needed the Supplier undertakes: a) to maintain technical and organisational security measures sufficient to comply at least with the obligations imposed on the Trust by the Seventh Data Protection Principle; b) only to process Personal Data for and on behalf of the Trust, in accordance with the instructions of the Trust and for the purpose of performance of the; c) to allow the Trust to audit the Supplier’s compliance with the requirements of this Clause on reasonable notice and/or to provide the Trust with evidence of its compliance with the obligations set out in this Clause.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Indeed, the Royal Free have published a useful video on how patient information may be used within an organisation and with suppliers who are acting &lt;em&gt;for and on behalf&lt;/em&gt; of them:&lt;/p&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/VgpzDYStjm0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;It is therefore clear that a large health organisation will use patient information for direct clinical care but will share those data when appropriate when other organisations or suppliers are acting “for and on behalf” of them to support the care of patients.&lt;/p&gt;
-
-&lt;p&gt;I’m surprised by the level of criticism on Twitter this evening and impressed by the balanced view given by the Sky News item. Dame Caldicott has written to the Information Commissioner’s Office (ICO) to raise her concerns. There will be an investigation from the ICO who will make a decision regarding whether data sharing was appropriate or not.&lt;/p&gt;
-
-&lt;h1 id=&quot;what-is-testing&quot;&gt;What is “testing”?&lt;/h1&gt;
-
-&lt;p&gt;The issue at hand appears to be the use of patient data to test a software application. Dame Caldicott opines that as data were transferred for testing, then such transfer was unreasonable.&lt;/p&gt;
-
-&lt;p&gt;To make a judgement on this matter, one needs to understand the law relating to confidential information, the information governance principles and software development. 
-The &lt;a href=&quot;https://www.gov.uk/data-protection/the-data-protection-act&quot;&gt;Data Protection Act&lt;/a&gt; requires that data be used fairly and lawfully in a way that is adequate, relevant and not excessive. 
-The &lt;a href=&quot;http://webarchive.nationalarchives.gov.uk/20130107105354/http://www.dh.gov.uk/en/Publicationsandstatistics/Publications/PublicationsPolicyAndGuidance/DH_4068403&quot;&gt;first Caldicott Committee report&lt;/a&gt; was released in 1997 and stipulated six key principles for information governance. The &lt;a href=&quot;https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/192572/2900774_InfoGovernance_accv2.pdf&quot;&gt;second report&lt;/a&gt; refined these core principles and emphasised the difference between implicit consent for direct patient care and explicit consent for research. The &lt;a href=&quot;https://www.gov.uk/government/publications/review-of-data-security-consent-and-opt-outs&quot;&gt;third report&lt;/a&gt;, commissioned after the care.data debacle, was published last year and we await an official Government response.&lt;/p&gt;
-
-&lt;h3 id=&quot;is-the-streams-application-for-direct-care&quot;&gt;Is the Streams application for direct care?&lt;/h3&gt;
-
-&lt;p&gt;Therefore, the first question to ask is whether the Streams application is for the direct care of patients?&lt;/p&gt;
-
-&lt;p&gt;The Streams application runs on mobile devices and receives notifications about patients who have developed an acute kidney injury. Such an application needs a considerable underlying infrastructure in order to make it work. Much like an online shopping application on your phone, the actual work occurs in a server in a data centre. When a clinician gets an alert, they can view the patient’s record, including information about admissions, discharges, diagnoses and previous blood results in order to prioritise the care of that patient. It is not simply a notification but a window into the patient record. It is my opinion that this application satisfies the requirements of direct care for patients. Watch the Sky News report and how the consultant nurse describes its use. I am not aware of any serious argument to suggest that it is not for direct care.&lt;/p&gt;
-
-&lt;h3 id=&quot;were-not-buying-a-new-car&quot;&gt;We’re not buying a new car&lt;/h3&gt;
-
-&lt;p&gt;The next consideration is how one builds software that works safely and consistently. In general, the best way of prove that software works correctly is to test it. There are multiple levels of testing in which larger and larger components of a total solution are tested iteratively. If you want to read more, I cover testing in my &lt;a href=&quot;https://www.dropbox.com/s/62sg71a19voxpts/cis_design.pdf?dl=0&quot;&gt;Domain-driven design for clinical information systems document&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Unit testing checks that a single unit of functionality works as expected, testing the module in isolation to check that the outputs are what one would expect given the specified inputs. It is possible to run these tests every time code is changed and such tests are possible using dummy fake data designed to test how a module performs given both usual and unusual data inputs.&lt;/p&gt;
-
-&lt;p&gt;Integration and system testing test the combination of modules together as well as their interactions with other components within a wider ecosystem. For a simple application with few interactions, integration tests can be straightforward but such testing can be complex and involved when there are multiple different interactions, particularly when those interactions are with other systems that have been created by other vendors.&lt;/p&gt;
-
-&lt;p&gt;It is possible to run such tests in a specific environment for tests in which there are fake ‘mock’ services. For example, one might have a fake patient administration system or a fake laboratory information system running with dummy information in order to test interactions between those systems. However, at some point during application development, the application must be deployed.&lt;/p&gt;
-
-&lt;p&gt;Software applications are not like buying a car. When I go and buy a car, I know that it will work on the road and it will fit onto my drive and I’ll  take care that it’s got the right number of seats for my family. The car design has been tested and quality tests would have been performed before it was ready for purchase. I can buy it and drive it home.&lt;/p&gt;
-
-&lt;p&gt;Instead, software development is much more like teaching your child to ride a bicycle. We can use dummy data like we use stabilisers, but at some point we have to take off those stabilisers! Similarly, at some point, we need to expose our new application to real data.&lt;/p&gt;
-
-&lt;p&gt;Now if you are anything like me when teaching a child to ride a bicycle, you took off the stabilisers and then ran very quickly alongside the child as they wobbled precariously from side-to-side! In the same way, any responsible organisation writing software applications cannot and should not hand over their application without further monitoring and testing to ensure that what you think will work does not work in a live environment. Once in the live environment, it would be unreasonable for a software company to &lt;em&gt;not&lt;/em&gt; perform additional testing to be sure that their software works as expected. Similarly, we run next to our child and check that they are safe and don’t forget to keep on pedalling!&lt;/p&gt;
-
-&lt;h1 id=&quot;conclusions&quot;&gt;Conclusions&lt;/h1&gt;
-
-&lt;p&gt;It is important to have robust scrutiny in relation to the use of patient-identifiable information by third-parties. However, I am surprised that Dame Caldicott has suggested that it might be inappropriate to test software systems designed for direct care with real patient information. I would argue that such testing is necessary in the final stages of development to ensure that new technology is safely deployed in live clinical environments.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;Update 4th June 2017&lt;/strong&gt;:&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;It has been pointed out to me that I have not explicitly explained the difference between two distinct workstreams in this post. 
-In order to build software, it is usually appropriate to break up a large problem into distinct and manageable chunks of work. If it were me developing this application, we’d break it up like this:&lt;/p&gt;
-  &lt;ol&gt;
-    &lt;li&gt;Integrate data from two different laboratory and patient administrative systems across sites within the Trust and provide a unified view of results from those systems to clinicians.&lt;/li&gt;
-    &lt;li&gt;Develop an acute kidney injury algorithm in code.&lt;/li&gt;
-    &lt;li&gt;Deployment.&lt;/li&gt;
-  &lt;/ol&gt;
-
-  &lt;p&gt;Now, all aspects of that work need “testing”. Only (2) needs certification as a medical device. It seems entirely reasonable to me that a transfer of data would be needed in order to develop and test (1), and that could be done before or after the certification of (2). Indeed, testing and certifying (2) doesn’t actually need real patient data - the MHRA simply needs to know that a medical device &lt;a href=&quot;/clinical-informatics/2017/05/10/machine-learning.html&quot;&gt;“does what it says on the tin”&lt;/a&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><summary type="html">Google Deepmind may have received the personally identifying medical records of million NHS patients on a legally inappropriate basis</summary></entry></feed>
+&lt;/div&gt;</content><author><name></name></author><summary type="html">I think that many clinicians have made some fundamental incorrect conclusions about the use of SNOMED CT in clinical practice. In particular, as SNOMED CT is touted as a replacement for Read codes, widely used in general practice in the UK, it is easy to conclude that SNOMED CT adds complexity and redundant codes without adding any other value.</summary></entry></feed>
