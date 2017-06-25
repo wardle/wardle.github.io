@@ -1,7 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-06-25T22:23:01+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics, entrepreneur and software developer.
-</subtitle><entry><title type="html">Safely deploying machine learning in healthcare 2/2</title><link href="https://www.wardle.org/clinical-informatics/2017/06/20/machine-learning-2.html" rel="alternate" type="text/html" title="Safely deploying machine learning in healthcare 2/2" /><published>2017-06-20T12:48:00+01:00</published><updated>2017-06-20T12:48:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/06/20/machine-learning-2</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/06/20/machine-learning-2.html">&lt;p&gt;I outlined the &lt;a href=&quot;/clinical-informatics/2017/05/10/machine-learning.html&quot;&gt;regulatory issues according to the MHRA of the application of AI in healthcare in a prior blog post.&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Similarly, I have previously discussed the value of information technology in supporting clinical care, unashamedly stealing and modifying Google’s original mantra:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-06-25T22:25:59+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics, entrepreneur and software developer.
+</subtitle><entry><title type="html">Safely deploying machine learning in healthcare 2/2</title><link href="https://www.wardle.org/clinical-informatics/2017/06/20/machine-learning-2.html" rel="alternate" type="text/html" title="Safely deploying machine learning in healthcare 2/2" /><published>2017-06-20T12:48:00+01:00</published><updated>2017-06-20T12:48:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/06/20/machine-learning-2</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/06/20/machine-learning-2.html">&lt;p&gt;I have previously discussed the value of information technology in supporting clinical care, unashamedly stealing and modifying Google’s original mantra:&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;“to organise the world’s information and make it universally accessible and useful”.&lt;/p&gt;
@@ -15,17 +13,17 @@
 
 &lt;p&gt;and argued that we should be making healthcare safer by &lt;a href=&quot;/information-governance/2017/03/19/information-governance.html&quot;&gt;running it on rails&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;I want to talk about artificial intelligence and healthcare in relation to measurement, data and decision making.&lt;/p&gt;
+&lt;p&gt;I want to talk about artificial intelligence and healthcare in relation to measurement, data and decision making. I outlined the &lt;a href=&quot;/clinical-informatics/2017/05/10/machine-learning.html&quot;&gt;regulatory issues according to the MHRA of the application of AI in healthcare in a prior blog post.&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h1 id=&quot;decision-making&quot;&gt;Decision making&lt;/h1&gt;
 
 &lt;p&gt;Why is information important? At its most fundamental, healthcare is about decision making. As such, I would argue that making the right information available at the right time is critical in reducing the uncertainty around any decision in healthcare.&lt;/p&gt;
 
-&lt;p&gt;I am reading &lt;a href=&quot;http://www.howtomeasureanything.com&quot;&gt;“How to measure anything” by Douglas Hubbard&lt;/a&gt;. It is not primarily written for healthcare, but instead how to use measurement to reduce the uncertainty around business decisions with a particular emphasis on the importance of &lt;em&gt;what&lt;/em&gt; is measured.&lt;/p&gt;
+&lt;p&gt;I am reading &lt;a href=&quot;http://www.howtomeasureanything.com&quot;&gt;“How to measure anything” by Douglas Hubbard&lt;/a&gt;. It is not primarily written for healthcare, but instead focuses on how to use measurement to reduce the uncertainty around business decisions with a particular emphasis on the importance of &lt;em&gt;what&lt;/em&gt; is measured.&lt;/p&gt;
 
-&lt;p&gt;Decision-making in healthcare may be relating to the diagnosis or treatment of an individual patient but just as importantly relates to decision-making for groups of patients when we design our healthcare services.&lt;/p&gt;
+&lt;p&gt;Decision-making in healthcare may be relating to the diagnosis or treatment of an individual patient but just as importantly relates to decision-making for groups of patients when we are making decisions about the design of our healthcare services.&lt;/p&gt;
 
-&lt;p&gt;Douglas Hubbard:&lt;/p&gt;
+&lt;p&gt;From Douglas Hubbard:&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;In business cases, most of the variables have an “information value” at or near zero. But usually at least some variables have an information value that is so high that some deliberate measurement effort is easily justified.&lt;/p&gt;
@@ -98,7 +96,7 @@
 
 &lt;p&gt;As such, we need clinical information systems that enable health professionals and patients to make inferences and support clinical decision making, and AI can and must play a useful role in supporting those systems.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">I outlined the regulatory issues according to the MHRA of the application of AI in healthcare in a prior blog post..</summary></entry><entry><title type="html">The hazards of paper?</title><link href="https://www.wardle.org/clinical-informatics/2017/06/20/hazards-of-paper.html" rel="alternate" type="text/html" title="The hazards of paper?" /><published>2017-06-20T12:48:00+01:00</published><updated>2017-06-20T12:48:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/06/20/hazards-of-paper</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/06/20/hazards-of-paper.html">&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">I have previously discussed the value of information technology in supporting clinical care, unashamedly stealing and modifying Google’s original mantra:</summary></entry><entry><title type="html">The hazards of paper?</title><link href="https://www.wardle.org/clinical-informatics/2017/06/20/hazards-of-paper.html" rel="alternate" type="text/html" title="The hazards of paper?" /><published>2017-06-20T12:48:00+01:00</published><updated>2017-06-20T12:48:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/06/20/hazards-of-paper</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/06/20/hazards-of-paper.html">&lt;blockquote&gt;
   &lt;p&gt;“Paper is one of the most hazardous substances in a hospital.”&lt;/p&gt;
 &lt;/blockquote&gt;
 
