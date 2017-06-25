@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Safely deploying machine learning in healthcare</title>
-  <meta name="description" content="In a previous blog post, I have discussed the value of information technology in supporting clinical care, unashamedly stealing and modifying Google’s origin...">
+  <title>Safely deploying machine learning in healthcare 1/2</title>
+  <meta name="description" content="Updated 25th June 2017. Edited to focus on regulatory requirements and to improve readability.">
 
   <link rel="stylesheet" href="/assets/main.css">
   <link rel="canonical" href="https://www.wardle.org/clinical-informatics/2017/05/10/machine-learning.html">
@@ -78,7 +78,7 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Safely deploying machine learning in healthcare</h1>
+    <h1 class="post-title" itemprop="name headline">Safely deploying machine learning in healthcare 1/2</h1>
     <p class="post-meta">
       <time datetime="2017-05-10T11:55:00+01:00" itemprop="datePublished">
         
@@ -88,31 +88,17 @@
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <p>In a previous blog post, I have discussed the value of information technology in supporting clinical care, unashamedly stealing and modifying Google’s original mantra:</p>
-
-<blockquote>
-  <p>“to organise the world’s information and make it universally accessible and useful”.</p>
+    <blockquote>
+  <p>Updated 25th June 2017. Edited to focus on regulatory requirements and to improve readability.</p>
 </blockquote>
 
-<p>and adapting it to healthcare information:</p>
+<p>There is considerable excitement (and hype) relating to the potential benefits of machine learning (ML) and artificial intelligence (AI) in healthcare. However, while increases in computer processing power have allowed more sophisticated ML in recent years, many types of machine learning have been in use for decades. The difference now is that it is now becoming practical to <em>apply</em> the results of ML to create usable AI within healthcare.</p>
 
-<blockquote>
-  <p><a href="/clinical-informatics/2017/03/09/google-information.html">to organise healthcare information and make it universally accessible and useful</a></p>
-</blockquote>
+<p>Such AI will act as a software-as-a-device and as such, there are important regulatory requirements to consider before deploying this technology.</p>
 
-<p>and argued that we should be making healthcare safer by <a href="/information-governance/2017/03/19/information-governance.html">running it on rails</a>.</p>
+<h1 id="looking-inside-the-box">Looking “inside the box”</h1>
 
-<p>Now I also regularly argue that we should be routinely recording structured information about our patients including information relating to problems, diagnoses and outcomes. Such data then allows us to make appropriate inferences about our patients such as, how is this patient doing compared to other patients with this condition? In many clinical situations, identifying the patient not behaving as expected is important.</p>
-
-<p>While machine learning (ML) holds the promise for creating tools that can make such inferences independently or semi-independently, I would argue that information technology can also valuably support care by organising and presenting information about patients to patients and clinicians and providing intuitive adaptive tools that allow the systematic recording of clinical information.</p>
-
-<p>Such goals may sound mundane compared to the future possibilities of machine learning in healthcare, but to clinicians and patients who have spent many years being “information-poor”, the power of having all relevant information available on hand as well as adaptive tools to record that information quickly and efficiently should not be under-estimated.</p>
-
-<p>The conclusion is, therefore, that we need clinical information systems that enable health professionals and patients to make inferences and support clinical decision making.</p>
-
-<h1 id="machine-learning-for-clinical-decision-making">Machine learning for clinical decision making</h1>
-
-<p>The problem with inferences made independently by ML is that we may not be able to, figuratively speaking, open the box and see the logical, sequential arguments and premises used to reach a conclusion. Much as in legal argument or any other form of logical reasoning, carefully crafted reasoning and argument are built upon a framework of assumptions and known evidence. In such reasoning, one can craft inferences upon inferences and justify the final conclusions by examination of each step.</p>
+<p>The problem with inferences made independently by AI is that we may not be able to, figuratively speaking, open the box and see the logical, sequential arguments and premises used to reach a conclusion. Much as in legal argument or any other form of logical reasoning, carefully crafted reasoning and argument are built upon a framework of assumptions and known evidence. In such reasoning, one can craft inferences upon inferences and justify the final conclusions by examination of each step.</p>
 
 <p>Human decision making is fallible and frequently non-deterministic with <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3057365/">human error often the source of important errors in healthcare</a>. Indeed, systems designed to reduce the frequency and impact of human error such as checklists, redundancy, guidelines and protocols are attempts to make human decision making more deterministic and less at risk of bias. Many systems work by breaking down a larger decision or process of care into smaller discrete steps.</p>
 
@@ -123,11 +109,11 @@
 <p>So the logical questions are:</p>
 
 <ul>
-  <li>what are the regulatory requirements within which we must work in order to make effective use of ML in healthcare?</li>
+  <li>what are the regulatory requirements within which we must work in order to make effective use of AI in healthcare?</li>
   <li>do we need to understand how machines arrive at their conclusions, so we can justify using those conclusions in clinical practice?</li>
   <li>won’t designing  information systems that arrive at their conclusions without justification risk replicating the fallibility of human decision making?</li>
   <li>must we be able to <em>see inside the box</em>?</li>
-  <li>can augmented ML decision support processes be decomposed into discrete steps with the results of one semi-deterministic “black-box” feeding the action of another? Does such decomposition result in creating a partial ‘window’ to allow us to understand the chain of reasoning created by ML devices?</li>
+  <li>can augmented AI decision support processes be decomposed into discrete steps with the results of one semi-deterministic “black-box” feeding the action of another? Does such decomposition result in creating a partial ‘window’ to allow us to understand the chain of reasoning created by AI devices?</li>
   <li>and finally, how can we introduce machine learning in a safe and incremental manner in healthcare?</li>
 </ul>
 
@@ -171,7 +157,7 @@
 
 <p>The natural conclusion is to plan for two parallel streams of work in relation to machine learning.</p>
 
-<p>The first stream is to support the ascertainment, aggregation and presentation of data relating to patients in order to support clinical care. Such data might range from the results from laboratory tests to links to guidelines that might apply in that general clinical context. This stream of work will not meet the criteria for a “medical device” and yet ML offers opportunities to improve how information is recorded, retrieved and shown. Importantly, I’d argue that the graphical display of data is under-used in healthcare and yet is a powerful way of summarising information without inadvertently creating a device that needs accreditation as a medical device.</p>
+<p>The first stream is to support the ascertainment, aggregation and presentation of data relating to patients in order to support clinical care. Such data might range from the results from laboratory tests to links to guidelines that might apply in that general clinical context. This stream of work will not meet the criteria for a “medical device” and yet AI offers opportunities to improve how information is recorded, retrieved and shown. Importantly, I’d argue that the graphical display of data is under-used in healthcare and yet is a powerful way of summarising information without inadvertently creating a device that needs accreditation as a medical device.</p>
 
 <p>The second stream is the development of software that can independently make inferences and judgements and present those results in order to influence or change patient management. Such software would be categorised as a “medical device”, and as a result, this stream of work must be undertaken much as the development of a new pharmacological product, via a phased and iterative structured research programme. The four phases for pharmaceutical products are:</p>
 
@@ -194,7 +180,7 @@
 
 <p>However, this scheme is modified for medical devices which need to prove safety and performance (as claimed) rather than efficacy. This distinction is made in the <a href="http://www.hra.nhs.uk/documents/2013/09/approval-of-medical-devices-research-version-2-april-2008.pdf">UK’s National Patient Safety Agency (NPSA) National Research Ethics Service (NRES) guidance</a> from 2008. Assessment of safety requires studies to determine whether there are any “undesirable side effects under normal conditions of use and to allow an informed clinical opinion to assess whether these are acceptable when weighed against the benefits in relation to the intended performance of the device.” Assessment of performance requires studies “to verify that under normal conditions of use the performance characteristics of the device are those intended by the manufacturer.”</p>
 
-<p>Just because a study is required to demonstrate safety and performance, the nature of ML devices is that such studies may not necessarily have to be performed prospectively. Indeed, a simple ML device that is claimed to, for example, recognise a deteriorating renal function, may simply require a study of performance against retrospective clinical data in order to verify that it is performing as required; this is an <em>in-silico trial</em>. It is important to note that such a process would need to be repeated if the device or its logic changed but this would be straightforward if the device to be tested simply needs to process the validation dataset and have its results checked. Indeed, this is the very essence of test-driven development in which a set of tests are written to validate that a piece of software is correct. The logical conclusions that follow from a need to perform both ML training and then subsequent validation is the provision of large-scale real clinical datasets.</p>
+<p>Just because a study is required to demonstrate safety and performance, the nature of AI devices is that such studies may not necessarily have to be performed prospectively. Indeed, a simple AI device that is claimed to, for example, recognise a deteriorating renal function, may simply require a study of performance against retrospective clinical data in order to verify that it is performing as required; this is an <em>in-silico trial</em>. It is important to note that such a process would need to be repeated if the device or its logic changed but this would be straightforward if the device to be tested simply needs to process the validation dataset and have its results checked. Indeed, this is the very essence of test-driven development in which a set of tests are written to validate that a piece of software is correct. The logical conclusions that follow from a need to perform both ML training and then subsequent validation is the provision of large-scale real clinical datasets.</p>
 
 <p>However, is it possible to reduce the assessment of a medical device to a process of validation of the outputs given the specified inputs?</p>
 
@@ -204,7 +190,7 @@
 
 <p>For example, this might result in inappropriate inferences being made, such as flagging up a patient on the intensive care unit (ICU) as needing intervention more than a patient on the ward. The training data would show that the patient on the ICU to be at greater risk of death, but of course, the presence of the patient on ICU is a result of clinicians identifying that patient and bringing them to the ICU. Such logic may result in paradoxical inferences that ignore a deteriorating patient on a surgical ward.</p>
 
-<p>Do we have a framework that can certify such logic as being fit-for-purpose? Much like a pharmaceutical product, our more complex ML may have unintended consequences that are not easily demonstrable. In essence, the introduction of ML into a clinical environment becomes an intervention in a similar way to a pharmaceutical product. So, does that mean we must run randomised controlled trials of ML solutions?</p>
+<p>Do we have a framework that can certify such logic as being fit-for-purpose? Much like a pharmaceutical product, our more complex AI may have unintended consequences that are not easily demonstrable. In essence, the introduction of AI into a clinical environment becomes an intervention in a similar way to a pharmaceutical product. So, does that mean we must run randomised controlled trials of AI solutions?</p>
 
 <h3 id="healthcare-technology-deployment">Healthcare technology deployment</h3>
 
@@ -214,23 +200,27 @@
 
 <p>However, we do not routinely run clinical trials when deploying new software systems within healthcare. When we introduce a systems for electronic prescribing, patients are not randomised into two groups. There is not a group of patients whose prescriptions are written electronically while another continues to have their medications prescribed on paper. Instead, a system might be deployed incrementally and rolled out piecemeal across an organisation, or the system is procured because there are safety data relating to the product or the type of product from a different organisation. If we know errors in prescription are common when using paper and they were reduced when an electronic system was deployed in another organisation, is this sufficient evidence of its performance?</p>
 
-<p>Would it be possible to run clinical trials of technology with the same rigour as those used for pharmaceutical products, not simply assessing performance against those claimed but looking for genuine efficacy? Certainly there would be considerable practical difficulties not least in trying to randomise patients to the intervention - in this case a new ML system - and placebo. Most organisations recognise that it is not possible to run randomised controlled trials of changes in their services, structure or indeed, information technology. Instead, they <em>should</em> adopt a <a href="/cis-design/2017/05/01/medical-record.html">continuous improvement methodology</a> in which they continuously measure, analyse and monitor their services and subsequently effect improvements and repeat.</p>
+<p>Would it be possible to run clinical trials of technology with the same rigour as those used for pharmaceutical products, not simply assessing performance against those claimed but looking for genuine efficacy? Certainly there would be considerable practical difficulties not least in trying to randomise patients to the intervention - in this case a new AI system - and placebo. Most organisations recognise that it is not possible to run randomised controlled trials of changes in their services, structure or indeed, information technology. Instead, they <em>should</em> adopt a <a href="/cis-design/2017/05/01/medical-record.html">continuous improvement methodology</a> in which they continuously measure, analyse and monitor their services and subsequently effect improvements and repeat.</p>
 
-<h1 id="conclusions-for-ml">Conclusions for ML</h1>
+<h1 id="conclusions-for-ai">Conclusions for AI</h1>
 
 <p>In conclusion, health professionals and patients are ‘information-poor’ and information technology must be used to improve access to information. However, there are risks in such an approach as important data may be lost within a large amount of irrelevant information and there will be an increasing need to curate, summarise and infer from these data in order to support clinical decision making.</p>
 
-<p>As such, my first suggestion is that we should be exploring the use of technology and ML to record and display the right information at the right time. It is possible for me to contrive what information I’d like to see when I see a patient with multiple sclerosis, but how can we do this at scale? Can we train deep learning systems with what information to show by giving those systems data on what information a clinician clicks on and reads and subsequently use those insights and heuristics to learn in real-time? Such a learning system should improve over time in response to the navigation choices made by clinicians in different contexts. As a result, instead of showing me a chronological list of investigations, I might be shown the most recent platelet count (dropped to 70 from a previous normal value) along with graph.</p>
+<p>As such, my first suggestion is that we should be exploring the use of technology and AI to record and display the right information at the right time. It is possible for me to contrive what information I’d like to see when I see a patient with multiple sclerosis, but how can we do this at scale? Can we train deep learning systems with what information to show by giving those systems data on what information a clinician clicks on and reads and subsequently use those insights and heuristics to learn in real-time? Such a learning system should improve over time in response to the navigation choices made by clinicians in different contexts. As a result, instead of showing me a chronological list of investigations, I might be shown the most recent platelet count (dropped to 70 from a previous normal value) along with graph.</p>
 
-<p>Such a solution will be made much more powerful by ensuring that the ML systems have access to a wide-range of structured clinical information, such as diagnoses and procedures. My second suggestion is therefore to work on the development of a range of clinically useful tools to facilitate the routine, systematic and real-time collection of structured data.</p>
+<p>Such a solution will be made much more powerful by ensuring that the AI systems have access to a wide-range of structured clinical information, such as diagnoses and procedures. My second suggestion is therefore to work on the development of a range of clinically useful tools to facilitate the routine, systematic and real-time collection of structured data.</p>
 
-<p>Thirdly, in order to look back at ML ‘decisions’, we must be able to see a snapshot of the data used by ML at the time of the decision. This means that it must be possible to either store or recreate what the algorithm saw at the time of making any inferences as well as a record of those inferences and the action taken.</p>
+<p>Thirdly, in order to look back at AI ‘decisions’, we must be able to see a snapshot of the data used by AI at the time of the decision. This means that it must be possible to either store or recreate what the algorithm saw at the time of making any inferences as well as a record of those inferences and the action taken.</p>
 
-<p>Fourthly, the introduction of ML within healthcare should aim to surpass the formal regulatory requirements. Any software deployment should adopt a continuous improvement methodology in which there is an attempt to measure its performance and safety in a real-life clinical environment. All ML systems should have training and subsequent validation using independent data via <em>in silico</em> clinical trials and overseen by appropriate governance arrangements.</p>
+<p>Fourthly, the introduction of AI within healthcare should aim to surpass the formal regulatory requirements. Any software deployment should adopt a continuous improvement methodology in which there is an attempt to measure its performance and safety in a real-life clinical environment. All AI systems should have training and subsequent validation using independent data via <em>in silico</em> clinical trials and overseen by appropriate governance arrangements.</p>
 
-<p>In particular, any ML system that meets the requirements of a medical device requires additional safeguards and I would argue that current requirement to simply demonstrate its performance compared to what is claimed is insufficient.  Instead, I suggest that phase III clinical trials of medical devices containing artificial intelligence (AI) must be performed in a way that permits us as a health community to understand the value and the risk from the introduction of artificial intelligence over and above the other technology required.</p>
+<p>In particular, any AI system that meets the requirements of a medical device requires additional safeguards and I would argue that current requirement to simply demonstrate its performance compared to what is claimed is insufficient.  Instead, I suggest that phase III clinical trials of medical devices containing artificial intelligence (AI) must be performed in a way that permits us as a health community to understand the value and the risk from the introduction of artificial intelligence over and above the other technology required.</p>
 
-<p>A controlled trial of ML might be possible within a single organisation but I would envisage a trial across multiple organisations would be needed in order to compare the efficacy and safety between those using AI and those who are not. For such a study, we would try to isolate the use of machine learning as the only difference between the control and intervention arm. As a result, deployment would need to be across both organisations with the only difference being the use of ML itself.</p>
+<p>A controlled trial of AI might be possible within a single organisation but I would envisage a trial across multiple organisations would be needed in order to compare the efficacy and safety between those using AI and those who are not. For such a study, we would try to isolate the use of machine learning as the only difference between the control and intervention arm. As a result, deployment would need to be across both organisations with the only difference being the use of AI itself.</p>
+
+<blockquote>
+  <p>Part two of this article focuses on the use of AI to make the <a href="/clinical-informatics/2017/06/20/machine-learning-2.html">right information available at the right time</a></p>
+</blockquote>
 
 <p><em>Mark</em></p>
 
