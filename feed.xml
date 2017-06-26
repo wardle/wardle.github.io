@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-06-25T22:26:53+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics, entrepreneur and software developer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-06-26T21:14:24+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics, entrepreneur and software developer.
 </subtitle><entry><title type="html">Safely deploying machine learning in healthcare 2/2</title><link href="https://www.wardle.org/clinical-informatics/2017/06/20/machine-learning-2.html" rel="alternate" type="text/html" title="Safely deploying machine learning in healthcare 2/2" /><published>2017-06-20T12:48:00+01:00</published><updated>2017-06-20T12:48:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/06/20/machine-learning-2</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/06/20/machine-learning-2.html">&lt;p&gt;I have previously discussed the value of information technology in supporting clinical care, unashamedly stealing and modifying Google’s original mantra:&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -95,6 +95,15 @@
 &lt;p&gt;In conclusion therefore, AI can valuably support healthcare by making the right information available at the right time, and learning how to present that information in the appropriate way to reduce the uncertainty relating to clinical decisions. In addition, adaptive systems can usefully identify the “measurements” (data) required to further reduce uncertainty, leveraging ‘a priori’ knowledge and appropriately adjusting to an individual scenario.&lt;/p&gt;
 
 &lt;p&gt;As such, we need clinical information systems that enable health professionals and patients to make inferences and support clinical decision making, and AI can and must play a useful role in supporting those systems.&lt;/p&gt;
+
+&lt;h1 id=&quot;further-reading&quot;&gt;Further reading&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/03/09/google-information.html&quot;&gt;Organise healthcare information and make it universally accessible and useful&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/information-governance/2017/03/19/information-governance.html&quot;&gt;Making healthcare “run on rails” - the importance of technology&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/05/10/machine-learning.html&quot;&gt;Regulatory issues of the application of AI in healthcare&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.howtomeasureanything.com&quot;&gt;“How to measure anything” by Douglas Hubbard&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">I have previously discussed the value of information technology in supporting clinical care, unashamedly stealing and modifying Google’s original mantra:</summary></entry><entry><title type="html">The hazards of paper?</title><link href="https://www.wardle.org/clinical-informatics/2017/06/20/hazards-of-paper.html" rel="alternate" type="text/html" title="The hazards of paper?" /><published>2017-06-20T12:48:00+01:00</published><updated>2017-06-20T12:48:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/06/20/hazards-of-paper</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/06/20/hazards-of-paper.html">&lt;blockquote&gt;
   &lt;p&gt;“Paper is one of the most hazardous substances in a hospital.”&lt;/p&gt;
