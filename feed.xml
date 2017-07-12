@@ -1,5 +1,94 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-07-07T21:59:08+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics, entrepreneur and software developer.
-</subtitle><entry><title type="html">Disruptive influences in healthcare</title><link href="https://www.wardle.org/clinical-informatics/2017/07/07/disruptive-infiuences-health.html" rel="alternate" type="text/html" title="Disruptive influences in healthcare" /><published>2017-07-07T21:59:00+01:00</published><updated>2017-07-07T21:59:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/07/07/disruptive-infiuences-health</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/07/07/disruptive-infiuences-health.html">&lt;p&gt;Healthcare has traditionally been conservative in its adoption of new technologies. Many clinicians still routinely use pen and paper to record medical information during a face-to-face encounter with a patient on the ward or in the clinic.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-07-12T15:46:51+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics, entrepreneur and software developer.
+</subtitle><entry><title type="html">Disruptive influences in healthcare: current solutions</title><link href="https://www.wardle.org/clinical-informatics/2017/07/11/disruptive-influences-current.html" rel="alternate" type="text/html" title="Disruptive influences in healthcare: current solutions" /><published>2017-07-11T21:59:00+01:00</published><updated>2017-07-11T21:59:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/07/11/disruptive-influences-current</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/07/11/disruptive-influences-current.html">&lt;p&gt;In my previous blog post, I discussed &lt;a href=&quot;/clinical-informatics/2017/07/07/disruptive-influences-health.html&quot;&gt;three core disruptive influences&lt;/a&gt; that must be considered when designing the architecture of clinical information systems.&lt;/p&gt;
+
+&lt;p&gt;The three disruptive influences are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Changes in the models of care&lt;/li&gt;
+  &lt;li&gt;Patients as active participants&lt;/li&gt;
+  &lt;li&gt;‘Hospitals without walls’&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In this post, I discuss the current landscape with healthcare information technology and how current products have evolved to deal with these disruptions as well as their deficiencies.&lt;/p&gt;
+
+&lt;h1 id=&quot;current-solutions-and-their-problems&quot;&gt;Current solutions and their problems&lt;/h1&gt;
+
+&lt;p&gt;A number of strategies have already been adopted to deal with these disruptive influences:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Enterprise-wide clinical information systems hosted by organisations to provide clinical record keeping as well as administrative functionality.&lt;/li&gt;
+  &lt;li&gt;Research portals and registries&lt;/li&gt;
+  &lt;li&gt;Patient portals to allow patients to view and contribute to their record -  “personal health records”&lt;/li&gt;
+  &lt;li&gt;Patient-facing mobile device applications to allow recruitment into research.&lt;/li&gt;
+  &lt;li&gt;Organisation-by-organisation procurement and data sharing agreements with commercial entities.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;monolithic-organisation-specific-systems&quot;&gt;Monolithic organisation-specific systems&lt;/h4&gt;
+
+&lt;p&gt;Computer software deployed within healthcare has traditionally been procured and hosted by the organisation in which it is used. Many health organisations in the United Kingdom (UK) have closed networks in which desktop computers are wired into the network and run a mixture of different types of software with file-based network storage. More recent deployments of electronic patient record (EPR) systems such as Cerner’s Millenium and Epic within the UK have repeated this historic approach centred on an organisation.&lt;/p&gt;
+
+&lt;p&gt;Such an architecture benefits that organisation in meeting its statutory duty to care for patients, combining administrative and clinical data. In the United States, where these products were designed, that combination permits item-level billing and as a result they are integral to business operations.&lt;/p&gt;
+
+&lt;p&gt;However, this type of architecture is less suitable for cross-organisational working in which multiple disparate teams of health professionals and the patient collaborate. Such an architecture means that community teams, for example, might need to be registered directly as users on any systems in which data on their may reside to permit interaction with other professionals involved in a patient’s care. As a result, professionals may need to switch between applications in order to view a complete record. Similarly, single organisation-bound systems do not easily support sharing information between organisations so that information relating to a patient presenting as an emergency when on holiday to a different facility may not be readily available.&lt;/p&gt;
+
+&lt;p&gt;Currently, solutions to cross-organisational working adopt a health-information exchange (HIE) model in which information from multiple organisations, typically within a defined geographical region, exchange information. Commercial companies are now increasingly adopting data standards to try to provide semantic interoperability, and it is likely that their products will transform to a ``platform’’ on which other applications can run.&lt;/p&gt;
+
+&lt;p&gt;There are several important initiatives encouraging and supporting semantic and technical interoperability:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Apperta foundation: http://www.apperta.org&lt;/li&gt;
+  &lt;li&gt;HL7 FHIR: CareConnect profiles (UK): https://github.com/HL7-UK/CareConnect-profiles&lt;/li&gt;
+  &lt;li&gt;openEHR: http://www.openehr.org&lt;/li&gt;
+  &lt;li&gt;SNOMED-CT: http://www.snomed.org/snomed-ct, browser: http://browser.ihtsdotools.org, my blog posts: http://wardle.org such as http://wardle.org/clinical-informatics/2017/06/02/future-hospital-snomed-ct.html&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The current focus is therefore on increasing interoperability at an organisation level, or between organisations within a defined geographic region (such as the Great North Care Record).&lt;/p&gt;
+
+&lt;h4 id=&quot;patient-portals&quot;&gt;Patient portals&lt;/h4&gt;
+
+&lt;p&gt;The current solution to giving patients access to their records is a secure `patient portal’, or multiple portals providing different functionality.&lt;/p&gt;
+
+&lt;p&gt;While `patient portals’ may  allow patients to communicate with their teams, see their results and contribute data to their records, such portals are frequently tied a single organisation or service. For example, Cerner offer a &lt;a href=&quot;https://www.cerner.com/solutions/hospitals_and_health_systems/patient_portal/?langtype=2057&quot;&gt;proprietary patient portal&lt;/a&gt; which is linked with its own EPR. Even when patient portals are not tied to a single health organisation such as with &lt;a href=&quot;https://www.patientsknowbest.com&quot;&gt;‘Patients Know Best’ (PKB)&lt;/a&gt; an organisation must have signed up to use that provider in order to allow a patient to interact with them via that portal. In Wales, there is a patient portal available for certain GP surgeries providing functionality for booking appointments but this is not universal and there is a separate portal for the recording of patient reported outcome measures, the results of which are not made available in clinicians. The &lt;a href=&quot;https://www.healthwisewales.gov.wales/homepage/&quot;&gt;Healthwise Wales&lt;/a&gt; programme is a separate portal that allows the population of Wales to register for a research project on wellbeing and health, but it does not integrate with or support the enrolment into any other research.&lt;/p&gt;
+
+&lt;p&gt;As a result, the choice of patient portals is by the organisation and not the patient, who may wish to interact with multiple providers of healthcare and flag their interest in multiple research projects.&lt;/p&gt;
+
+&lt;p&gt;As such, how can a patient interact with all of their disparate health services across multiple organisations? Do we expect our patients to use multiple portals depending on whether they are visiting the Royal Free or the Royal London Hospital?&lt;/p&gt;
+
+&lt;p&gt;Similarly, patients with specific needs, such as those who do not have a fixed address, or those requiring communication via braille or spoken text, must hope that a single provider supports those needs. What if a patient cannot manage appointments themselves, but has a proxy who needs to be involved in their care, such as a nursing home resident?&lt;/p&gt;
+
+&lt;h4 id=&quot;research-portals-and-registries&quot;&gt;Research portals and registries&lt;/h4&gt;
+
+&lt;p&gt;Clinical research has traditionally focused on recording longitudinal patient outcomes in well-defined cohorts of patients recruited as part of observation or interventional trials. As a result, there are now many different research registries which are usually disease or specialty-specific. I have written about the &lt;a href=&quot;/clinical-informatics/2017/06/06/using-data-patient-safety.html&quot;&gt;disadvantages of registries before&lt;/a&gt;, but essentially they don’t really support clinical practice. The main problems are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;there are lots of them, so potentially lots of disparate systems (they are not joined up)&lt;/li&gt;
+  &lt;li&gt;they are not embedded in day-to-day workflow&lt;/li&gt;
+  &lt;li&gt;there is sometimes little feedback, result or reward, particularly in any timely manner&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;patient-consent&quot;&gt;Patient consent&lt;/h4&gt;
+
+&lt;p&gt;The current mainstream solution for clinical research is direct recruitment by clinicians in their clinical practice or via advertising in newsletters of third-party charitable organisations. However, technology such as Apple’s ResearchKit provides a simple framework for research teams to build trivial mobile device applications to allow patients to sign up themselves, consent and then take part in any necessary data capture for clinical research. As a result, patients can be recruited in large numbers for a single project. As an example, see the mPower study on &lt;a href=&quot;http://www.nature.com/articles/sdata201611&quot;&gt;Parkinson’s disease published in Nature&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;A limitation of these approaches is that research data are typically collected separately from routinely collected clinical data. Historically, this has not had any significant drawback due to a lack of routinely collected clinical data that would actually be usable for clinical research. However, given the other disruptive changes in healthcare, it is likely that structured longitudinal data will be increasingly available from systematic collection in clinical practice. Much like the failed &lt;a href=&quot;https://www.gov.uk/government/speeches/review-of-health-and-care-data-security-and-consent&quot;&gt;‘care.data’ project&lt;/a&gt;, such data would need to be combined with multiple other disparate sources of information and as a result, patients must be given appropriate tools to understand and control the use of their information. Importantly however, a record of consent must take care to not divulge personal information as a result of its existence. Just as in email communications, if information relating to a withdrawal of consent of a patient from a HIV project is made available, then confidential information is leaked. Thus, a patient’s current and historic opt-in or opt-out choices must be made available so those choices can be enforced and yet remain private.&lt;/p&gt;
+
+&lt;h4 id=&quot;organisation-by-organisation-procurement-and-data-sharing-agreements&quot;&gt;Organisation-by-organisation procurement and data sharing agreements&lt;/h4&gt;
+
+&lt;p&gt;Most innovative healthcare information technology solutions must still be procured by organisations and then deployed. As a result, a commercial entity acts on behalf of that health organisation and, if data are transferred, formal data sharing agreements signed. For small and medium sized enterprises, procurement processes are long, complex and expensive and traditionally have favoured larger, more established companies over smaller companies.&lt;/p&gt;
+
+&lt;p&gt;Likewise, procuring an established, ‘proven’ solution is perceived as lower in risk than collaborating with a small or medium-sized enterprise in a development partnership. Procurement rules frequently require levels of insurance, financial and regulatory backing that make it more difficult for new enterprises to deploy and scale innovation with the health system.&lt;/p&gt;
+
+&lt;p&gt;How then to balance innovation and governance? Unfortunately, there are many examples of innovative projects that are closed down as a result of a loss of trust in the governance of private and confidential medical information. For example, the `care.data’ project aimed to combine multiple large scale datasets together across multiple organisations in order to support population health research within England, but controversy resulted in its closure. Similarly, Google DeepMind’s project to provide a smartphone clinical application (Streams) to clinicians at the Royal Free has been mired in controversy with negative press reports and a referral from the National Data Guardian to the Information Commissioner’s Office (ICO) and a formal ruling pending.&lt;/p&gt;
+
+&lt;p&gt;Such debacles result in a perception of wrongdoing even if no information was shared inappropriately and risk the deployment of innovative technologies in the future Unfortunately, few commentators note the consequences of &lt;em&gt;not&lt;/em&gt; deploying modern technology in order to support healthcare or indeed note the gap between where we should be and where we current stand.&lt;/p&gt;
+
+&lt;h1 id=&quot;conclusions&quot;&gt;Conclusions&lt;/h1&gt;
+
+&lt;p&gt;In summary, existing technology focuses on an organisation, a specialty or a specific project. In essence, the digitisation has followed existing paper-based processes instead of using technology to underpin transforming our healthcare services around the patient.&lt;/p&gt;
+
+&lt;p&gt;If you have read my other blog posts, you will already know the answers to the problems posed in this and the previous post; we need to focus on a data-driven standards-based “platform” consisting of multiple well-defined services working together to create vendor-neutral archives of immutable clinical information in structured formats. My next post will cover the components of this platform in more detail.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">In my previous blog post, I discussed three core disruptive influences that must be considered when designing the architecture of clinical information systems.</summary></entry><entry><title type="html">Disruptive influences in healthcare</title><link href="https://www.wardle.org/clinical-informatics/2017/07/07/disruptive-influences-health.html" rel="alternate" type="text/html" title="Disruptive influences in healthcare" /><published>2017-07-07T21:59:00+01:00</published><updated>2017-07-07T21:59:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/07/07/disruptive-influences-health</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/07/07/disruptive-influences-health.html">&lt;p&gt;Healthcare has traditionally been conservative in its adoption of new technologies. Many clinicians still routinely use pen and paper to record medical information during a face-to-face encounter with a patient on the ward or in the clinic.&lt;/p&gt;
 
 &lt;p&gt;Information technology was first adopted in order to manage the administrative running of hospitals such as appointment scheduling and tracking the location of paper records. Traditionally, there has been a separation of these patient administrative systems (PAS) from clinical systems used by health professionals, even if such systems were available.&lt;sup&gt;&lt;a href=&quot;#patient-safety&quot;&gt;a&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
@@ -109,7 +198,7 @@
 
 &lt;hr /&gt;
 
-&lt;p&gt;My next post will discuss the current solutions in place for these disruptive influences.&lt;/p&gt;
+&lt;p&gt;My &lt;a href=&quot;/clinical-informatics/2017/07/11/disruptive-influences-current.html&quot;&gt;next post discusses the current solutions&lt;/a&gt; already created in response to these disruptive influences.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -718,70 +807,4 @@
 
 &lt;p&gt;Part 2 of this series covers &lt;a href=&quot;/clinical-informatics/2017/06/03/designing-future-2.html&quot;&gt;clinical modelling in relation to process and workflow&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">This is part one of a 3-part series on designing future clinical information systems. This post covers the importance of data models. Part 2 covers clinical modelling in relation to process and workflow. Part 3 covers patient portals and the internet-of-things.</summary></entry><entry><title type="html">Implementation of SNOMED-CT in a clinical information system</title><link href="https://www.wardle.org/clinical-informatics/2017/06/02/future-hospital-snomed-ct.html" rel="alternate" type="text/html" title="Implementation of SNOMED-CT in a clinical information system" /><published>2017-06-02T16:08:00+01:00</published><updated>2017-06-02T16:08:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/06/02/future-hospital-snomed-ct</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/06/02/future-hospital-snomed-ct.html">&lt;p&gt;My article on the &lt;a href=&quot;http://m.futurehospital.rcpjournal.org/content/4/2/126.full.pdf&quot;&gt;implementation of SNOMED-CT as the ‘lingua franca’ within a clinical information system&lt;/a&gt; has been published in the Future Hospital Journal.&lt;/p&gt;
 
-&lt;p&gt;The article is available &lt;a href=&quot;http://m.futurehospital.rcpjournal.org/content/4/2/126&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">My article on the implementation of SNOMED-CT as the ‘lingua franca’ within a clinical information system has been published in the Future Hospital Journal.</summary></entry><entry><title type="html">PatientCare EPR: care plans</title><link href="https://www.wardle.org/clinical-informatics/2017/05/30/patientcare-care-plans.html" rel="alternate" type="text/html" title="PatientCare EPR: care plans" /><published>2017-05-30T22:56:00+01:00</published><updated>2017-05-30T22:56:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/05/30/patientcare-care-plans</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/05/30/patientcare-care-plans.html">&lt;p&gt;In a &lt;a href=&quot;/clinical-informatics/2017/05/27/patientcare-epr.html&quot;&gt;recent blog post&lt;/a&gt;, I gave a whirlwind tour of some of the functionality within the PatientCare EPR. There is a lot I haven’t really mentioned and so, I thought I’d add some details over a few other blog posts.&lt;/p&gt;
-
-&lt;p&gt;A care plan is a document that sets out a patient’s future care and support. Patients should be fully involved in the preparation of such a care plan and ideally this plan should contain:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;what are the intended &lt;em&gt;outcomes&lt;/em&gt; for a patient, including wishes and preferences.&lt;/li&gt;
-  &lt;li&gt;an assessment of the &lt;em&gt;needs&lt;/em&gt; of a patient in order to achieve those outcomes&lt;/li&gt;
-  &lt;li&gt;how those needs are to be &lt;em&gt;met by the agencies&lt;/em&gt; involved in supporting that patient&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;As such, a care plan should be individualised and specific for a single patient and will need to include plans for the care in a range of care domains, such as medical, nursing and social.&lt;/p&gt;
-
-&lt;p&gt;However, there are types of care plans aimed at different scenarios, such as an emergency care plan to document a plan of care should there be an emergency deterioration in a patient’s health. Such a plan would focus on ensuring that emergency unit staff know what to do and this kind of plan can be particularly helpful for patients with long-term health conditions.&lt;/p&gt;
-
-&lt;h1 id=&quot;care-plans-within-the-patientcare-epr&quot;&gt;Care plans within the PatientCare EPR.&lt;/h1&gt;
-
-&lt;p&gt;I have built an emergency care plan registry within the PatientCare EPR.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/care-plans/schematic-care-plan.png&quot; alt=&quot;Schematic Care Plan&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The idea being that we could configure our emergency unit system to check for the presence of an emergency care plan via a REST API and ensure that caregivers have access to that plan in safely and securely.&lt;/p&gt;
-
-&lt;h4 id=&quot;building-individualised-plans&quot;&gt;Building individualised plans&lt;/h4&gt;
-
-&lt;p&gt;Modelling care plans requires an understanding of the processes and workflow that create and maintain those plans. As such, it is not sufficient to simply model the data relating to a care plan.&lt;/p&gt;
-
-&lt;p&gt;For instance, care plans are typically collaborative documents in which multiple authors work to create a unified document. In addition, the users involved need to know the care plans for which they are responsible. Most importantly, how many of us have seen guidelines, protocols and care plans with an expiry date many months or years in the past? As such, it is vital that there are processes in place to identify out-of-date care plans and ensure that they are kept up to date.&lt;/p&gt;
-
-&lt;p&gt;Historically, healthcare professionals have relied on patients turning up in clinic in order to drive their healthcare. This is an outdated and inefficient way of running a health service. If we truly want a responsive service, we need to ensure that information technology is used to its fullest in order to enable care.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/care-plans/first-draft.png&quot; alt=&quot;First Draft&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;In this first screenshot, we generate a care plan. It is automatically populated by the contents of the emergency care guidance from any clinical services for which the patient is registered. I can add a number of users so for example, if I have a paediatric patient with epilepsy and nutritional problems, one section may the responsibility of a paediatric neurologist and the other a gastroenterologist.&lt;/p&gt;
-
-&lt;p&gt;Each user can edit or add new sections and order those sections:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/care-plans/seizures.png&quot; alt=&quot;Seizures&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;which then populate the care plan document:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/care-plans/second-draft.png&quot; alt=&quot;Second Draft&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Users can choose the review date and the expiry date and users receive notifications when a care plan needs to be reviewed or signed.&lt;/p&gt;
-
-&lt;p&gt;Once a user signs off the document, the content is locked until either all users have signed it off, or someone unlocks the document. Only after all users sign off the document is it finally &lt;a href=&quot;/images/care-plans/care-plan.pdf&quot;&gt;published to the repository&lt;/a&gt;:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/care-plans/final-output.png&quot; alt=&quot;Final Output&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;but-how-can-we-do-this-for-thousands-of-patients&quot;&gt;But how can we do this for thousands of patients?&lt;/h4&gt;
-
-&lt;p&gt;Care plans are particularly useful for those patients with complex needs and multiple co-morbidities. For such patients, it is easy to see how investing time and resource in preparing and maintaining emergency care plans can improve patient care in the event of an emergency. But how can we do this for all of the patients under our care?&lt;/p&gt;
-
-&lt;p&gt;Within the PatientCare EPR, all patients are registered to clinical services and projects by virtue of an episode of care. This episode may be lifelong for a long-term health condition, or short for an acute clinical service. As health professionals are registered with different roles to different services, this permits a finely grained security model in which only those staff involved in the direct care of that patient has access to the record.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/care-plans/patient-project-membership.png&quot; alt=&quot;Patient Project Membership&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Furthermore, this model provides a way of building dynamic care plans for all of the patients under our care. As such, the PatientCare EPR can automatically generate a default care plan individualised to that patient by virtue of that patient’s membership of different clinical teams.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/care-plans/editing-service-care-plan.png&quot; alt=&quot;Editing Service Care Plan&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Here I edit the configuration for a local Parkinson’s disease service. This will be used to automatically generate a care plan for the patients registered to that service.&lt;/p&gt;
-
-&lt;p&gt;I have built a REST-based API that looks for manually-created emergency care plan but, if that doesn’t exist and the clinical services are configured to have “automatic care plan generation” turned on, the system will dynamically generate a document for the use of emergency services.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/care-plans/pd-drug-timings.png&quot; alt=&quot;Pd Drug Timings&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;In this example, I have linked to the &lt;a href=&quot;https://www.parkinsons.org.uk/sites/default/files/publications/download/english/pk0135_emergencymanagement.pdf&quot;&gt;Parkinson’s UK emergency care guidelines&lt;/a&gt; and emphasised that patients with Parkinson’s disease need their medications administered on time.&lt;/p&gt;</content><author><name></name></author><summary type="html">In a recent blog post, I gave a whirlwind tour of some of the functionality within the PatientCare EPR. There is a lot I haven’t really mentioned and so, I thought I’d add some details over a few other blog posts.</summary></entry></feed>
+&lt;p&gt;The article is available &lt;a href=&quot;http://m.futurehospital.rcpjournal.org/content/4/2/126&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">My article on the implementation of SNOMED-CT as the ‘lingua franca’ within a clinical information system has been published in the Future Hospital Journal.</summary></entry></feed>
