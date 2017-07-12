@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-07-12T15:46:51+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics, entrepreneur and software developer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-07-12T15:55:16+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics, entrepreneur and software developer.
 </subtitle><entry><title type="html">Disruptive influences in healthcare: current solutions</title><link href="https://www.wardle.org/clinical-informatics/2017/07/11/disruptive-influences-current.html" rel="alternate" type="text/html" title="Disruptive influences in healthcare: current solutions" /><published>2017-07-11T21:59:00+01:00</published><updated>2017-07-11T21:59:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/07/11/disruptive-influences-current</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/07/11/disruptive-influences-current.html">&lt;p&gt;In my previous blog post, I discussed &lt;a href=&quot;/clinical-informatics/2017/07/07/disruptive-influences-health.html&quot;&gt;three core disruptive influences&lt;/a&gt; that must be considered when designing the architecture of clinical information systems.&lt;/p&gt;
 
 &lt;p&gt;The three disruptive influences are:&lt;/p&gt;
@@ -36,10 +36,10 @@
 &lt;p&gt;There are several important initiatives encouraging and supporting semantic and technical interoperability:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Apperta foundation: http://www.apperta.org&lt;/li&gt;
-  &lt;li&gt;HL7 FHIR: CareConnect profiles (UK): https://github.com/HL7-UK/CareConnect-profiles&lt;/li&gt;
-  &lt;li&gt;openEHR: http://www.openehr.org&lt;/li&gt;
-  &lt;li&gt;SNOMED-CT: http://www.snomed.org/snomed-ct, browser: http://browser.ihtsdotools.org, my blog posts: http://wardle.org such as http://wardle.org/clinical-informatics/2017/06/02/future-hospital-snomed-ct.html&lt;/li&gt;
+  &lt;li&gt;Apperta foundation: &lt;a href=&quot;http://www.apperta.org&quot;&gt;http://www.apperta.org&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;HL7 FHIR: CareConnect profiles (UK): &lt;a href=&quot;https://github.com/HL7-UK/CareConnect-profiles&quot;&gt;https://github.com/HL7-UK/CareConnect-profiles&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;openEHR: &lt;a href=&quot;http://www.openehr.org&quot;&gt;http://www.openehr.org&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;SNOMED-CT: &lt;a href=&quot;http://www.snomed.org/snomed-ct&quot;&gt;http://www.snomed.org/snomed-ct&lt;/a&gt;, browser: &lt;a href=&quot;http://browser.ihtsdotools.org&quot;&gt;http://browser.ihtsdotools.org&lt;/a&gt;, my blog posts: &lt;a href=&quot;http://wardle.org&quot;&gt;http://wardle.org&lt;/a&gt; such as &lt;a href=&quot;http://wardle.org/clinical-informatics/2017/06/02/future-hospital-snomed-ct.html&quot;&gt;http://wardle.org/clinical-informatics/2017/06/02/future-hospital-snomed-ct.html&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;The current focus is therefore on increasing interoperability at an organisation level, or between organisations within a defined geographic region (such as the Great North Care Record).&lt;/p&gt;
