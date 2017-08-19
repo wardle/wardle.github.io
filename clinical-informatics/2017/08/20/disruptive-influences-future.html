@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Disruptive influences in healthcare: the future</title>
+  <meta name="description" content="I previously discussed three disruptive influences in healthcare in my previous blog post that, over the next five years, will disrupt both the provision of ...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://www.wardle.org/clinical-informatics/2017/08/20/disruptive-influences-future.html">
+  <link rel="alternate" type="application/rss+xml" title="Health informatics and information technology" href="/feed.xml">
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-97389603-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="/">Health informatics and information technology</a>
+  
+  
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+           <a class="page-link" href="/">All posts</a>
+          
+            
+            
+            <a class="page-link" href="/about/">About</a>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Disruptive influences in healthcare: the future</h1>
+    <p class="post-meta">
+      <time datetime="2017-08-20T11:00:00+02:00" itemprop="datePublished">
+        
+        20 August 2017
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>I previously discussed <a href="/clinical-informatics/2017/07/07/disruptive-influences-health.html">three disruptive influences in healthcare in my previous blog post</a> that, over the next five years, will disrupt both the provision of healthcare and the technological solutions currently used to support that care:</p>
+
+<ul>
+  <li>Changes in the models of care</li>
+  <li>Patients as active participants</li>
+  <li>‘Hospitals without walls’</li>
+</ul>
+
+<p>And subsequently, I tried to <a href="/clinical-informatics/2017/07/11/disruptive-influences-current.html">give an overview of how current strategies used by health services and commercial companies will struggle to meet those disruptions</a>, principally as a result of a focus on single organisations and enterprises.</p>
+
+<p>I hope to draw these strands together in one place and hopefully provide some important context for some of my other blog posts. In my view, the two planks of work to form the foundation of our work are:</p>
+
+<ol>
+  <li>An “open decentralised platform” for healthcare made up of multiple standards-based interoperable services and data repositories.</li>
+  <li>A single distributed logical patient record made up of multiple shards connected with multiple pseudo-identities wrapped in a consent model.</li>
+</ol>
+
+<p>In essence, we need the right structures in place to allow us <a href="/clinical-informatics/2017/03/09/google-information.html">“to organise healthcare and patient information and make it universally accessible and useful.”</a> We need to be much more ambitious and yet plan to iterate to get to that future.</p>
+
+<h1 id="1-open-platforms-in-health">1. Open platforms in health</h1>
+
+<p>Fundamentally, administrative and clinical information relating to patients must be made more widely available outside of closed networks and across disciplines, services, organisations and sectors.</p>
+
+<p>To do this, we must discuss the “open platform” approach.</p>
+
+<p>The Internet is one example of an “open platform”, in which open standards result in an open network in which many different software applications and devices can be connected and exchange information. One important consequence of an “open platform” is its use for applications not originally considered by its designers. For example, TCP/IP, the networking protocol that underpins the Internet handles, in a generic way, the low-level handling of bundles of data (messages) between computer systems. This open technical architecture was used as the foundation of the HTTP protocol, although other protocols such as Gopher were also built using TCP/IP as a foundation. This is an example of a <em>layered architecture</em> in which an open platform, the <a href="https://technet.microsoft.com/en-gb/library/cc958821.aspx">“Open Systems Interconnection (OSI) model”</a> is made up of multiple layers in which scope and function are well defined. Importantly, each subsequent layer usually provides a higher-level of abstraction from the detail. Low-levels of the OSI platform handle the physical connectivity and nitty-gritty details of networking such as data exchange and acknowledgements of transfer. Higher-levels allow software to ignore these low levels of networking management and simply exchange information.</p>
+
+<p>The Internet has made information of all types universally accessible, useful and searchable and most of us now do this on mobile devices we carry with us all of the time. We now carry around practically unlimited computing resources in our pockets, so why can we not do that in healthcare?</p>
+
+<h4 id="why-an-open-platform">Why an open platform?</h4>
+
+<p>Why does the “open platform” matter in healthcare? I have <a href="/clinical-informatics/2017/07/11/disruptive-influences-current.html">touched on the problems previously</a>. Essentially, healthcare informatics has been dominated by:</p>
+
+<ul>
+  <li>a focus on administrative functionality rather than prioritising clinical care and the patient.</li>
+  <li>large commercial vendors with closed systems and little or no interoperability.</li>
+  <li>a focus on the procurement of “products” based on <em>features</em> on a capital expenditure basis with old-fashioned project plans built using a waterfall methodology with start and completion dates and little or no concept of iterative improvement</li>
+  <li>organisations that are hierarchical and autocratic, designed to funnel information upwards and decisions made by those at the top flowing downwards. In essence, such structures have arisen as a result of trying to manage risk; when one considers large multi-million pound procurements, one must attempt to slow down decision making and reduce the risk of a bad decision</li>
+  <li>organisations that are risk-averse and fail slowly like a car crash in slow motion, rather than failing fast and learning from those failures.</li>
+</ul>
+
+<p>In essence, how do we create the right structures that lower risk and allow more rapid iterative development?</p>
+
+<p>To answer that, we must ask… what is our goal?</p>
+
+<p>An open platform is simply the foundation for a longer and much more ambitious journey in healthcare information technology. It is so important to have a vision for a future in 5 or 10 years; we are certain to be wrong, but having ambitious goals <em>and</em> understanding that we’re going to have to change some of our plans; probably the details of some of the steps used to get there; but we won’t be changing the the direction of travel.</p>
+
+<p>So… my goal is to provide the right structures and technology to create high-quality, valuable user-centric applications that can help solve clinical problems, with the “user” being a patient or a professional or other worker involved in care. I want those applications running <em>now</em> so that we can start work on the next generation of clinical applications. I want to understand my patients and have ready access to tools that support me and my team in providing care for patients. Iteration is the key; we will never be finished and there will always be more to do. How can we enable that?</p>
+
+<p>I’ve previously described user-facing applications as ideally being “almost throwaway” in our team meetings here in Wales and such statements have sometimes resulted in looks of incredulity. However, “throwaway” applications reflect the following logical chain of reasoning:</p>
+
+<ul>
+  <li>You say I can write clinical applications are “almost throwaway”?</li>
+  <li>Therefore, the engineering work must be quite straightforward, because I’m a lazy engineer.</li>
+  <li>But surely there is a tonne of clever engineering work needed in healthcare, such as managing users, managing access, looking at patients, managing consent, access logs, getting and storing complex medical information and understanding the status of a variety of healthcare resources?</li>
+  <li>Ah! The clever stuff must be already be provided elsewhere!</li>
+  <li>So, can you show me the API endpoints and documentation?</li>
+</ul>
+
+<p>The logical conclusion is therefore that we strive for an open platform in which applications coordinate and leverage multiple services provided within the platform; applications are the conductors for our orchestra of services. I expect some core services that are initially, mainly enterprise-bound, provided by individual organisations so that a single application can be deployed with little change between and across multiple those organisations. However, with time, I’d expect to see a marketplace of increasingly sophisticated “services” that are provided outside of the scope of individual organisations, many provided by commercial vendors, in which sophisticated additional functionality can be made available on a cost per-use basis. Over time, the functionality of “the platform” extends upwards into <em>the cloud</em> increasingly combining traditional data from organisations with new forms of patient-reported, patient-recorded real-life data.</p>
+
+<p>As such, I see an “open platform” as stage one of a larger plan, but how do we get started?</p>
+
+<h4 id="what-is-an-open-platform">What is an open platform?</h4>
+
+<p>We’ve been discussing strategy at length within NHS Wales and continue to have a fierce debate about the best way of using limited resources in the most valuable way. Perhaps reasonably, there are some who think we should be concentrating our limited resources on a single all-Wales application, the Welsh Clinical  Portal (WCP). I will not cover that debate here, but I feel strongly that a focus on an application is a <a href="/clinical-informatics/2017/03/15/once-for-wales.html">poor way of meeting both present and future challenges</a>.</p>
+
+<p>So I hope, instead, to influence the national strategy in favour of a platform approach. For example, at the moment, laboratory and radiology investigation results are available only through the WCP application. We currently tightly bind WCP into our commercially procured laboratory management system and make WCP the only way of viewing those data, allowing other applications to open a separate frame in a web browser “stapling” functionality together.</p>
+
+<p>Here is my schematic of the architecture of a more “open”  test requesting and results service:</p>
+
+<p><img src="/images/platform/platform-lab.png" alt="Platform Lab" /></p>
+
+<p>Here WCP is but one view on the <em>same data</em> and <em>same services</em>. Importantly, an approach which staples together pieces of user interface but does not expose the underlying data fails to support the use of those underlying data in any innovative manner and so fails to appreciate the importance of data analytics for supporting clinical decision making for an individual patient, managing our clinical services for groups of patients or for research.</p>
+
+<p>The laboratory information management system (LIMS) is provided by Intersystems (Trakcare) and we replicate that data source in a vendor-neutral archive (VNA). This abstraction is an important tool in making commercial systems a <em>commodity</em>. Commoditisation of components of an open platform is a vital step in reducing vendor lock-in and focusing on what is important; our data and its intrinsic value rather than a product. In this schematic, the VNA is represented by the “results archival service”. Now if TrakCare exposed a standardised application programming interface (API), for example using HL7 FHIR, then it may be that API could be used by the service layer. But the important lesson is that <em>it doesn’t matter</em>, because we’ve abstracted the service. Indeed, the same approach would work if we were trying to provide a unified set of results across multiple laboratories all using different laboratory systems, so long as we built a VNA and carefully managed patient identity between different instances.</p>
+
+<p>Our business logic is created at the <em>service level</em> and not the application level and, to manage changes in business processes and clinical need, many of the rules that underpin that business logic should be delegated to a rules engine, which allows business rules to be recorded dynamically in a declarative and not procedural fashion in the language of the business.</p>
+
+<p>I’ve previously discussed the importance of <em>scope</em>; starting with our problem and broadening the scope to create generic solutions. However, that doesn’t mean that we have to build everything in one step. Instead, if we get the architecture right at the beginning, we can offer a laboratory test requesting and results service and then extend the platform to also support radiology requesting and reported as well. The schematic shows this evolution, with a FHIR test requesting service acting as a <em>concierge</em>-type service, taking a request and delegating that request to the appropriate, now private, test service depending on the details of that request.</p>
+
+<p>The test requesting / results service would fit into the wider architecture like this:</p>
+
+<p><img src="/images/platform/platform-overall.png" alt="Platform Overall" /></p>
+
+<p>Once again, a pipeline in which data is extracted, transformed and modelled ready for analytics is critical in ensuring that clinical information is made available at the right time to the right people.</p>
+
+<p>This “platform” shows the important components required by clinical applications, such as patient demography, user management (a user directory which for NHS Wales is a large Active Directory), logging and security, laboratory and radiology test requesting and results, clinical documents, structured clinical information including patient outcomes, electronic prescribing and reference data. HL7 FHIR supports presenting all of these types of data and services as a RESTful API already. As a result, legacy services would require either a FHIR facade to wrap and map that existing service or a method to replicate information to a VNA that exposed that information in a standardised way.</p>
+
+<p>An application written for such a platform, using FHIR end-points to make use of data and services provided by that platform, can potentially be deployed in any environment which provides similar services.</p>
+
+<h1 id="2-balancing-availability-and-privacy--consent">2. Balancing availability and privacy = consent!</h1>
+
+<p>It is not difficult to imagine scaling an open platform across multiple organisations and enterprises much like the Internet has scaled so dramatically since its inception with patient data stored encrypted at rest and in transit by those organisations or their proxies and made available to others. The next logical step is to take that information and <a href="/clinical-informatics/2017/03/09/google-information.html">“make it universally accessible and useful.”</a></p>
+
+<p>However, there is an important paradox here: we want to increase information sharing and yet preserving privacy and confidentiality for that health information.</p>
+
+<p>As a result, healthcare information technology must consider the use of privacy-enhancing technologies in order to:</p>
+
+<ul>
+  <li>allow safe and secure information sharing between multiple organisations, professionals, sectors and the patient</li>
+  <li>give patients the tools required in order to control when and how their information is shared</li>
+  <li>provide a distributed, verifiable infrastructure</li>
+  <li>support a range of mobile devices used by patients and staff</li>
+  <li>maintain the privacy of both patients and staff when mobile devices are ubiquitous.</li>
+</ul>
+
+<p>Patients must have trust that their private and confidential information is secure and yet want that same information available when it is required. As a result, information systems and the way that they are connected must be <em>secure-by-design</em>, with security and transparency built-in as a result of the architecture and networking protocols. Layered upon this infrastructure must be mechanisms to capture patient consent. A <em>private-by-design</em> networking layer would need to implement and support a range of services including:</p>
+
+<ul>
+  <li>cross-organisational identity, for both patient and professionals as well as other parties such as carers.</li>
+  <li>multiple pseudo-identities, in which identity may be obfuscated for a particular use to prevent linkage beyond what is permitted.</li>
+  <li>commoditising semantic interoperability and data standards</li>
+  <li>decoupling of logical systems, including `patient portals’ so that patients not only can choose a provider themselves but then use that portal to communicate and interact with multiple decentralised services.</li>
+  <li>networking that does not leak information as a result of analysis of the traffic within it.</li>
+  <li>support for innovation, trust and verifiability with `sandboxing’ for health applications.</li>
+</ul>
+
+<p>So my final assertion is that HL7 FHIR is only a component of a wider health informatics strategy. We must consider how to create a <em>single patient record</em>, with information about a single individual made available at the right time and right place when approved by that individual. Fundamentally, this is predicated upon systems to manage <em>identity and patient consent</em>.</p>
+
+<p>Do we rely on applications and third-party services to double-check that they have consent or is it possible to build that consent into the architecture itself as part of how applications and services locate and use resources about that patient? I think the best way of handling this is the use of multiple pseudo-identities which can be linked or unlinked into an aggregated view of a <em>single patient record</em>. In essence, we don’t want to rely on software to have to check whether it can access patient data but instead not even know that data exists or where to find it.</p>
+
+<p>Interestingly, another definition of a “platform” is a set of services that bring together users and providers to form a multisided market. Is it possible then to take our “open platform” and start to think of a future in which we have products and services that actually do enable a re-imagining of healthcare provision to bring together patients, carers, health professionals, commissioners, analytics, researchers and all other stakeholders in a safe and secure manner?</p>
+
+<h3 id="secure-by-design-sandboxing-services-and-applications">Secure-by-design: sandboxing services and applications</h3>
+
+<p>One practical way of considering the problem is to consider how to permit innovation in a safe and secure way and have successful work quickly scaled out across and between organisations. For example, if a new startup company can create tools to automatically identify and monitor patients on drugs such as methotrexate and ensure that they have the required blood tests, how could such tools be deployed safely with certainty as to how, when and why that information was processed with support for an opt-out should a patient not agree to their information being used for that purpose? Can an infrastructure be created that means such applications can be installed in essentially a `sandbox’ in which its interactions with patient data are controlled and monitored automatically? Could that paradigm scale to support access to health data in a generic fashion?</p>
+
+<p>Applications running on Apple’s iOS provide a useful analogy. In order to gain access to components of the underlying device and its operating system, such as the camera, the photo archive, location services etc, the application must use the appropriate API which forces explicit user consent. This “sandbox” environment means that an application is prevented from accessing resources to which consent has not been provided and presumably can log each and every attempt should that be required.</p>
+
+<p>Can we do the same for health applications and services? It seems to me that we can create tremendous value from healthcare data - for patients, for health professionals and for society - but the foundation must be to allow that information to be organised in such a way that we can make it “universally accessible and useful” <em>subject to individual consent</em>.</p>
+
+<p>As I started writing a version of this post back in June, Estonia had just announced its plans for its EU presidency to include the <a href="https://www.eu2017.ee/sites/default/files/2017-06/EU2017EE\%20Programme_0.pdf">cross-border movement of health data for the purposes of treatment, research and innovation and to promote data-based innovation in healthcare</a>. Creating secure platforms on which such communications can operate would be a pre-requisite for those aspirations.</p>
+
+<h1 id="so-what-next">So what next?</h1>
+
+<p>I think that there are several important strands of work, most of which require health organisations and technology companies to work together to use technology as an enabler for the transformation of healthcare:</p>
+
+<ul>
+  <li>work together on joint data standards and both technical and semantic interoperability</li>
+  <li>build open platforms to bring together meaningful structured clinical information with data from legacy applications, adopting open standards such as HL7 FHIR and openEHR.</li>
+  <li>transform healthcare IT procurement moving away from capital “product”-based procurements to recurring expenditure models based on services ensuring that such procurements are measured against interoperability standards. Procure “products” only when truly contributing to or enabling a larger platform within and potentially between organisations.</li>
+  <li>break-down hierarchical autocratic organisations, and instead create highly functionally integrated teams combining skills from multiple disciplines who can take responsibility for achieving their goals; similarly, with such teams we should not be afraid of in-house development work when appropriate.</li>
+  <li>explore ways of turning unstructured information into usable and valuable data to explore clinical phenotypes, identify cohorts and use real-life outcome data.</li>
+  <li>look to improve the routine real-time use of analytics in healthcare for patient care and service improvement; if we can’t do simple survival curves in real-time for patients having emergency surgery in the last 30 days stratified by age, gender and co-morbidities, then we won’t be able to adopt more sophisticated analytics based on deep learning.</li>
+  <li>consider picking niche specialist “vertical” markets such as long-term health conditions, in order to innovate and iterate before taking the lessons learnt to a wider audience.</li>
+  <li>take a 5-year (long-term) view and work on applying innovative technology (that probably exists today but just needs combining in interesting ways) into healthcare to support a secure, privacy-enhancing distributed patient record that engenders public and agency trust. I think it has something to do with a high-level abstraction of a distributed patient record, with multiple pseudo-identities bound together by consent with verifiable audit logs and service discovery based on that consent security model.</li>
+</ul>
+
+<p>Why should a technology company be interested in building such an open platform? Because, like the Internet, it will be an enabler and create value for years to come.</p>
+
+<p><em>Mark</em></p>
+
+<h1 id="further-reading">Further reading</h1>
+
+<ul>
+  <li><a href="/clinical-informatics/2017/02/03/domain-driven-design.html">Domain-driven design in clinical informatics</a></li>
+  <li><a href="/clinical-informatics/2017/03/09/google-information.html">Organise healthcare information and make it universally accessible and useful</a></li>
+  <li><a href="/clinical-informatics/2017/06/20/hazards-of-paper.html">The hazards of paper</a></li>
+</ul>
+
+
+  </div>
+
+  
+</article>
+        
+      </div>
+    </main>
+    
+    
+    
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Health informatics and information technology</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Health informatics and information technology
+            
+            </li>
+            
+            <li><a href="mailto:mark@wardle.org">mark@wardle.org</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/wardle"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">wardle</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/mwardle"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">mwardle</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
