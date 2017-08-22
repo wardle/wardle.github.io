@@ -1,5 +1,71 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-08-20T22:42:52+02:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
-</subtitle><entry><title type="html">Disruptive influences in healthcare: the future</title><link href="https://www.wardle.org/clinical-informatics/2017/08/20/disruptive-influences-future.html" rel="alternate" type="text/html" title="Disruptive influences in healthcare: the future" /><published>2017-08-20T11:00:00+02:00</published><updated>2017-08-20T11:00:00+02:00</updated><id>https://www.wardle.org/clinical-informatics/2017/08/20/disruptive-influences-future</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/08/20/disruptive-influences-future.html">&lt;p&gt;I previously discussed &lt;a href=&quot;/clinical-informatics/2017/07/07/disruptive-influences-health.html&quot;&gt;three disruptive influences in healthcare in my previous blog post&lt;/a&gt; that, over the next five years, will disrupt both the provision of healthcare and the technological solutions currently used to support that care:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-08-22T22:40:01+02:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</subtitle><entry><title type="html">Health data - start with a problem</title><link href="https://www.wardle.org/clinical-informatics/2017/08/22/health-data.html" rel="alternate" type="text/html" title="Health data - start with a problem" /><published>2017-08-22T22:00:00+02:00</published><updated>2017-08-22T22:00:00+02:00</updated><id>https://www.wardle.org/clinical-informatics/2017/08/22/health-data</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/08/22/health-data.html">&lt;p&gt;Walk about on the wards.&lt;/p&gt;
+
+&lt;p&gt;Chat with nursing, medical or pharmacy staff. Chat with physiotherapists, occupational therapists, managers.&lt;/p&gt;
+
+&lt;p&gt;They all have problems that need to be solved, problems that make carrying out their day-to-day work more difficult.&lt;/p&gt;
+
+&lt;p&gt;Ask them:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“What would make your job easier?”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“What would enable you to provide &lt;em&gt;better&lt;/em&gt; care?”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;At their most fundamental, their problems and the solutions to those problems relate to data.&lt;/p&gt;
+
+&lt;p&gt;You may scoff. Oh here he is again, going on about data as the answer to everything.&lt;/p&gt;
+
+&lt;p&gt;Well it is.&lt;/p&gt;
+
+&lt;p&gt;That’s why clinical research, such as a clinical trial, used to answer questions such as “Does this treatment work?”, is built on data; carefully acquired, carefully managed and carefully analysed data.&lt;/p&gt;
+
+&lt;p&gt;We have a nursing staffing crisis! We should be solving it, with data.&lt;/p&gt;
+
+&lt;p&gt;We need to run an audit to see whether our service is performing well. Solve it, with data (and in a computer on not on paper).&lt;/p&gt;
+
+&lt;p&gt;We want to identify that patient not responding to conventional treatments; we want to show them their progress compared to their peers, because we need to have a discussion about more aggressive treatments. Solve it, with data.&lt;/p&gt;
+
+&lt;p&gt;How many nursing staff do we need on &lt;em&gt;that&lt;/em&gt; ward, with &lt;em&gt;those&lt;/em&gt; patients, for &lt;em&gt;this&lt;/em&gt; shift? How can we identify the deteriorating patient? Show the admitting team looking after the patient with muscular weakness that the GP had already checked the acetyl-choline receptor antibodies two weeks ago and the result is already available tonight. How do patients &lt;em&gt;like me&lt;/em&gt; fare after that procedure?&lt;/p&gt;
+
+&lt;h1 id=&quot;think-big-with-data&quot;&gt;THINK BIG WITH DATA&lt;/h1&gt;
+
+&lt;p&gt;We now have virtually unlimited computer resources at our disposal, both in terms of storage and computational power. We need to think big and have grand aims. It’s then our job to develop strategies to carefully take advantage of that technology to envisage better ways of working and to iterate our way to achieve those aims. As I mentioned in my &lt;a href=&quot;/clinical-informatics/2017/08/20/disruptive-influences-future.html&quot;&gt;disruptive influences blog post&lt;/a&gt;, we may change the detail, but not necessarily our direction of travel.&lt;/p&gt;
+
+&lt;h1 id=&quot;we-dont-have-all-of-the-answers-but-we-dont-have-all-of-the-questions-either-&quot;&gt;We don’t have all of the answers…. but we don’t have all of the questions either *&lt;/h1&gt;
+
+&lt;p&gt;The key message, and I cannot say this too many times, is:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;We need to build an infrastructure that explicitly recognises that we don’t have all of the answers, and therefore must support innovation. Such innovation may simply be incremental improvement of existing technology, but also must cope with and embrace the introduction of transformative and disruptive technologies.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I wrote that during &lt;a href=&quot;/clinical-informatics/2017/03/15/once-for-wales.html&quot;&gt;debates within NHS Wales&lt;/a&gt; about the best way to formulate an information technology strategy. I’m reviewing a “functional requirements” list for a project currently which will end up with a procurement. It is hard work and it brings into sharp focus an important question: how can I know what will happen when our systems finally meet their users?&lt;/p&gt;
+
+&lt;p&gt;Instead, we should be focusing on &lt;em&gt;data&lt;/em&gt; first, as &lt;em&gt;data&lt;/em&gt; as the solution to a &lt;em&gt;problem&lt;/em&gt;. Data, structured, understandable, semantically interoperable data are the foundation on which clinical applications and our analytics can run.&lt;/p&gt;
+
+&lt;p&gt;And that is why you should be learning:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;openEHR : &lt;a href=&quot;https://www.openehr.org&quot;&gt;www.openehr.org&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;HL7 FHIR &lt;a href=&quot;https://www.hl7.org/fhir/overview.html&quot;&gt;https://www.hl7.org/fhir/overview.html&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;SNOMED-CT &lt;a href=&quot;/cis-design/2017/05/02/data-standards.html&quot;&gt;see my introduction&lt;/a&gt; or a paper relating to how I &lt;a href=&quot;http://m.futurehospital.rcpjournal.org/content/4/2/126.full.pdf&quot;&gt;implemented SNOMED-CT in a clinical system in the Future Hospital Journal&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And start thinking about immutable, structured and understandable data stored in vendor-neutral archives or exposed using an open application programming interface.&lt;/p&gt;
+
+&lt;p&gt;And for homework, start thinking about how you might create an infrastructure for real-time analytics… for example, show me some simple survival curves in real-time for patients having emergency surgery for any type of pancreatic surgery in the last 30 days stratified by age, gender and co-morbidities… Or, for that matter, the data that might be needed to solve the nursing staffing allocation problem…&lt;/p&gt;
+
+&lt;p&gt;If we’re going to make “health information universally accessible and useful”, then let’s get the right information in the first place. After all, there are two words in “information technology”…&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;further-reading&quot;&gt;Further reading:&lt;/h1&gt;
+
+&lt;p&gt;Disruptive influences in healthcare information technology: &lt;a href=&quot;/clinical-informatics/2017/07/07/disruptive-influences-health.html&quot;&gt;part 1&lt;/a&gt;, &lt;a href=&quot;/clinical-informatics/2017/07/11/disruptive-influences-current.html&quot;&gt;part 2&lt;/a&gt; and &lt;a href=&quot;/clinical-informatics/2017/08/20/disruptive-influences-future.html&quot;&gt;part 3&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Walk about on the wards.</summary></entry><entry><title type="html">Disruptive influences in healthcare: the future</title><link href="https://www.wardle.org/clinical-informatics/2017/08/20/disruptive-influences-future.html" rel="alternate" type="text/html" title="Disruptive influences in healthcare: the future" /><published>2017-08-20T11:00:00+02:00</published><updated>2017-08-20T11:00:00+02:00</updated><id>https://www.wardle.org/clinical-informatics/2017/08/20/disruptive-influences-future</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/08/20/disruptive-influences-future.html">&lt;p&gt;I previously discussed &lt;a href=&quot;/clinical-informatics/2017/07/07/disruptive-influences-health.html&quot;&gt;three disruptive influences in healthcare in my previous blog post&lt;/a&gt; that, over the next five years, will disrupt both the provision of healthcare and the technological solutions currently used to support that care:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Changes in the models of care&lt;/li&gt;
@@ -927,52 +993,4 @@
 
 &lt;p&gt;Given this modelling of real-life processes and communication, it is easy to see how dealing with communications from patients could work. Rather than communications being sent to an individual health professional, who conceivably may be on leave or unable to respond, building a process and information model that mimics real-life offers the potential to build true team/patient communication. Likewise, the same model works for data from the patient’s own devices, whether they be home-monitors or wearables.&lt;/p&gt;
 
-&lt;p&gt;Part 3 of this series covers &lt;a href=&quot;/clinical-informatics/2017/06/03/designing-future-3.html&quot;&gt;patient portals and the internet-of-things&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">This is part two of a 3-part series on designing future clinical information systems. Part 1 covers the importance of data models. This part covers clinical modelling in relation to process and workflow. Part 3 covers patient portals and the internet-of-things.</summary></entry><entry><title type="html">Designing the future 1/3: modelling data</title><link href="https://www.wardle.org/clinical-informatics/2017/06/03/designing-future-1.html" rel="alternate" type="text/html" title="Designing the future 1/3: modelling data" /><published>2017-06-03T17:08:00+02:00</published><updated>2017-06-03T17:08:00+02:00</updated><id>https://www.wardle.org/clinical-informatics/2017/06/03/designing-future-1</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/06/03/designing-future-1.html">&lt;p&gt;This is part one of a 3-part series on designing future clinical information systems. This post covers the importance of data models. Part 2 covers &lt;a href=&quot;/clinical-informatics/2017/06/03/designing-future-2.html&quot;&gt;clinical modelling in relation to process and workflow&lt;/a&gt;. Part 3 covers &lt;a href=&quot;/clinical-informatics/2017/06/03/designing-future-3.html&quot;&gt;patient portals and the internet-of-things&lt;/a&gt;.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;There are two fundamental principles that we must consider when designing clinical information systems for the future:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;We can’t build perfect systems straightaway; if we wait until everything is perfect, we’ll never get anything done.&lt;/li&gt;
-  &lt;li&gt;We shouldn’t give up on creating perfect systems. We’ll never achieve perfection of course, because they will always be something even &lt;em&gt;better&lt;/em&gt; to implement, so we need a roadmap for stuff we need to solve now, solve tomorrow and solve in the future.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;The conclusion is, therefore, we must get technology in the hands of users, but plan to iterate and try to design systems that are future-proof.&lt;/p&gt;
-
-&lt;p&gt;As such, information technology (IT) is not something that one can buy, deploy and then sit back and bask in the glory of improved efficiency and streamlined processes. Instead, we need to consider how our clinical processes work now, how they might, could or should work in the future and build systems that support those processes. At the very least, our designs should not unnecessarily limit our ability to adapt to new ways of working.&lt;/p&gt;
-
-&lt;p&gt;None of us have all of the answers at this point in time, so what can we do to create future-proof systems that solve problems now that don’t unnecessarily limit our future scope and prevent future innovation?&lt;/p&gt;
-
-&lt;p&gt;The answer is to develop clinical models of data and the processes and workflows relating to those data.&lt;/p&gt;
-
-&lt;p&gt;We start with our data.&lt;/p&gt;
-
-&lt;h1 id=&quot;clinical-modelling&quot;&gt;Clinical modelling&lt;/h1&gt;
-
-&lt;p&gt;Perhaps I can draw a parallel between software engineering and a famous Danish interlocking brick toy company?&lt;/p&gt;
-
-&lt;p&gt;If that toy company creates a model with blocks that are specific to that model, only usable in the construction of that car or boat or train, then it might be possible to try to re-purpose those blocks to build an aeroplane, but it is much less likely. Conversely, creating a wide-range of general purpose blocks means that those blocks can be re-used in hundreds of different applications right now and in the future.&lt;/p&gt;
-
-&lt;p&gt;As I opined in my &lt;a href=&quot;/clinical-informatics/2017/02/03/domain-driven-design.html&quot;&gt;Domain-driven clinical design document&lt;/a&gt;, the same is true in software. The best way of creating systems that solve problems right now and support our future iterative development efforts is to start with open and standard data structures with a core focus on interoperability. I cannot overstate the importance of supporting interoperability, even in the unlikely event that you think you don’t need to interoperate with any other system right now. Baking in interoperability forces you and your team to make the right decisions when it comes to designing an architecture to support your software. I have heard people argue that interoperability is something “nice to have” but we’ve “got to get something done” as if designing systems properly will somehow slow or impede development.&lt;/p&gt;
-
-&lt;p&gt;Now, the designers of the interlocking brick systems have a problem. They can’t know what bricks to make until they start thinking about the toys they want to be able to build with those bricks, but they can’t design the toys until they know which bricks they have available. So they need to ensure their teams work iteratively, bringing people together with different skills, using some common basic bricks and adding more specialised bricks for certain use-cases. Likewise, in software, modelling data and process requires an understanding of both and how they might be used now and changed in the future.&lt;/p&gt;
-
-&lt;p&gt;However, we can make it easier for ourselves. We can begin with modelling the easy things: won’t a blood pressure recorded in millimetres of mercury will always be a blood pressure recorded in millimetres of mercury? Well yes, but don’t we also need to codify who took it, when they took it, how they took it, and what the patient was doing at the time? How can we create a representation in a computer that is re-usable and understandable by multiple systems? So now we need something to represent “120/70 mmHg taken in the right arm by Dr Wardle in the sitting position at rest using a manual sphygmomanometer”. But what about a blood pressure taken using a transducer from an arterial line in the intensive care unit?&lt;/p&gt;
-
-&lt;p&gt;So suddenly we need to start thinking not just about representing a numeric value in specified units but all of the additional metadata. We are building an information model to represent a real-life concept.&lt;/p&gt;
-
-&lt;p&gt;Fortunately, someone has done most of the work for us already. Read Dr Heather Leslie’s (@omowizard) blog post about blood pressure to see how openEHR provides a rich model of the concept of blood pressure. Similarly, the HL7 FHIR observation resource provides a simpler but similar representation with metadata represented either as a choice of options in openEHR or using a standardised terminology such as SNOMED-CT for FHIR.&lt;/p&gt;
-
-&lt;p&gt;Indeed, there are already a large number of archetypes defined within openEHR representing a wide-range of clinical concepts. Similarly, HL7 FHIR already supports exposing a great variety of (similar) clinical concepts as part of an API.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;openEHR clinical knowledge manager: &lt;a href=&quot;http://www.openehr.org/ckm/&quot;&gt;http://www.openehr.org/ckm/&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;HL7 FHIR 3.0.1 resources: &lt;a href=&quot;https://www.hl7.org/fhir/resourcelist.html&quot;&gt;https://www.hl7.org/fhir/resourcelist.html&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;next-steps&quot;&gt;Next steps&lt;/h1&gt;
-
-&lt;p&gt;The future of healthcare systems is based on open-standards and semantic interoperability in which multiple systems can share information about patients. We can use vendor-neutral archives for data persistence of openEHR archetypes or expose proprietary legacy information to other systems using a standardised HL7 FHIR API. Whatever the case, starting with our data allows us to solve our immediate problems and permits ongoing iterative development to use that information in new and innovative ways in order to support the care of patients.&lt;/p&gt;
-
-&lt;p&gt;Part 2 of this series covers &lt;a href=&quot;/clinical-informatics/2017/06/03/designing-future-2.html&quot;&gt;clinical modelling in relation to process and workflow&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">This is part one of a 3-part series on designing future clinical information systems. This post covers the importance of data models. Part 2 covers clinical modelling in relation to process and workflow. Part 3 covers patient portals and the internet-of-things.</summary></entry></feed>
+&lt;p&gt;Part 3 of this series covers &lt;a href=&quot;/clinical-informatics/2017/06/03/designing-future-3.html&quot;&gt;patient portals and the internet-of-things&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">This is part two of a 3-part series on designing future clinical information systems. Part 1 covers the importance of data models. This part covers clinical modelling in relation to process and workflow. Part 3 covers patient portals and the internet-of-things.</summary></entry></feed>
