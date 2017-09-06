@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Privacy and Artificial intelligence</title>
+  <meta name="description" content="I recently gave an interview for a Wired UK article on privacy and healthcare. Here is my full response.">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://www.wardle.org/clinical-informatics/2017/09/06/privacy-ai.html">
+  <link rel="alternate" type="application/rss+xml" title="Health informatics and information technology" href="/feed.xml">
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-97389603-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="/">Health informatics and information technology</a>
+  
+  
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+           <a class="page-link" href="/">All posts</a>
+          
+            
+            
+            <a class="page-link" href="/projects/">Projects</a>
+            
+          
+            
+            
+            <a class="page-link" href="/about/">About</a>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Privacy and Artificial intelligence</h1>
+    <p class="post-meta">
+      <time datetime="2017-09-06T20:18:00+01:00" itemprop="datePublished">
+        
+        6 September 2017
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>I recently gave an interview for a <a href="wired uk ai privacy">Wired UK article on privacy and healthcare</a>. Here is my full response.</p>
+
+<h1 id="should-we-worry-about-big-dataaimachine-learning-in-healthcare">Should we worry about ‘Big Data’/AI/machine learning in healthcare?</h1>
+
+<p>In my opinion, the two main concerns relate to privacy and value: fundamentally, privacy simply relates to the risk to individuals of sharing information about those individuals and value relates to the intrinsic worth of that data as well as the value of any algorithms or software produced as a result of analysis of that data.</p>
+
+<p>It is difficult to explore the privacy concerns without clarifying what we mean by data and how it is already used, particularly as privacy depends fundamentally on the purpose to which the data is processed and by whom. For example, in medical settings, you might expect me as your neurologist to have access to your relevant medical information from other healthcare professionals, such as reports, documents and the results of investigations such as scans and laboratory investigations. Currently, most such data is held by NHS organisations or commercial companies operated for and behalf of those healthcare providers. There are, therefore, already many current situations in which selected data is shared externally with healthcare, social care and commercial entities. Such data are used for direct care of individual patients and for managing our clinical services. Likewise, there are already many situations in which routine NHS data is combined and de-identified in some way and made available for research such as the CPRD (<a href="https://www.cprd.com/home/">https://www.cprd.com/home/</a>) and SAIL (<a href="https://saildatabank.com">https://saildatabank.com</a>). Such systems usually try to remove obviously identifiable information such as name and date of birth and instead generate categorical variables (e.g. year of birth) to try to obfuscate the identify of individuals. Have a look at <a href="https://understandingpatientdata.org.uk/what-does-anonymised-mean">https://understandingpatientdata.org.uk/what-does-anonymised-mean</a> in relation to de-identified, anonymous and pseudonymous data.</p>
+
+<p>Unfortunately, there is not a discontinuity between identifiable and non-identifiable information but instead a spectrum running from low to high risk of re-identification. This risk increases as more and more data are made available and this is where the concept of “big data” results in privacy concerns. You may not be able to identify me from only knowing I’m a neurologist, but if you know I work in Wales and have an interest in information technology then you’re likely to know it’s me. As a result, “big data” in which large amounts of different types of data are made available and aggregated can undermine techniques to de-identify that data.</p>
+
+<p>The next question is, does sharing identifiable or re-identifiable data matter? In general, the answer depends on who is doing the processing and the consequences, benefits and risks from that processing. People naturally have different expectations for the usage of data depending on whether it is for direct care, for clinical research, for a perceived “greater-good” or for commercial means. The care.data fiasco demonstrated the strong public concern relating to the release of information to commercial such as the insurance industry (e.g. see <a href="https://www.theguardian.com/commentisfree/2014/feb/28/care-data-is-in-chaos">https://www.theguardian.com/commentisfree/2014/feb/28/care-data-is-in-chaos</a>). Fundamentally therefore, this means that we need strong and appropriate legal and regulatory frameworks to ensure that we take advantage of the enormous opportunities inherent in combining these sources of data with modern technology to improve patient care and clinical research. The new GDPR legislation extends the rights of individuals to control the purposes to which their information is used, and we in healthcare must take these changes into account when considering “big data” and machine learning. See <a href="https://ico.org.uk/for-organisations/data-protection-reform/overview-of-the-gdpr/">https://ico.org.uk/for-organisations/data-protection-reform/overview-of-the-gdpr/</a></p>
+
+<p>Similarly, the issue of “value” depends on who gains that value. If an algorithm is developed that can, for example, screen a chest x-ray to determine whether it is normal or abnormal, with only the latter images needing formal radiologist review, then there would a huge interest across the world in commercialising that technology and free up valuable time for radiologists. Who should own that technology? The services providing the data or the technology companies who have built the systems to learn from that data? For me, this should be a partnership between health and technology as both need each other in order to make progress to potentially improve patient care. As a result, I’d always expect explicit clauses relating to intellectual property rights to be included in data sharing agreements in which software and algorithms may be of commercial value.</p>
+
+<h1 id="what-other-privacy-protectingenhancing-technologies-are-there">What other privacy-protecting/enhancing technologies are there?</h1>
+
+<p>I really like “Understanding patient data” : see <a href="https://understandingpatientdata.org.uk/how-data-kept-safe">https://understandingpatientdata.org.uk/how-data-kept-safe</a> and its explanations.</p>
+
+<p>Essentially, it is necessary to have a mixed set of strategies as there is no single “magic bullet” that magically preserves or enhances privacy.  Instead, we need a combination of appropriate legal and regulatory frameworks (as I mentioned above), independent review and audit, formal software specifications and methodologies and, most importantly, a conversation with everyone about the benefits and risks of the use of patient data to improve care, now and in the future. As part of that national debate, we must determine the scenarios in which different levels of consent are required, such as an explicit opt-in for clinical research or an opt-out for other uses. At the same time, we must increase general public awareness about the benefits and risks of the wider use of health information. Ideally, data should be de-identified as much as possible for the specific use-case in question so that we instead start to talk about “risk of re-identification” and it is likely that different levels of risk will be acceptable for different use-cases.</p>
+
+<p>There are additional technologies to add into the mix such as “differential privacy” (see <a href="https://en.wikipedia.org/wiki/Differential_privacy">https://en.wikipedia.org/wiki/Differential_privacy</a> for more information) which introduce randomness into aggregated data in order to reduce the risk of re-identification and yet preserve conclusions made from the use of that data. Another interesting research development has been homomorphic encryption allows information such as private medical data to be encrypted and subsequently processed without needing decryption. Have a look at <a href="https://en.wikipedia.org/wiki/Homomorphic_encryption">https://en.wikipedia.org/wiki/Homomorphic_encryption</a> but such technology is, as far as I am aware, at a very early stage as it is extremely computationally-intensive.</p>
+
+<h1 id="are-we-considering-privacy-enough">Are we considering privacy enough?</h1>
+
+<p>Probably not!</p>
+
+<p>Health data becomes even more complex when one considers the ever increasing use of new technologies in healthcare. I have written about these in my “disruptive technologies” blog post (see <a href="http://wardle.org/clinical-informatics/2017/07/07/disruptive-influences-health.html">http://wardle.org/clinical-informatics/2017/07/07/disruptive-influences-health.html</a>) and in particular, how we deal with data from multiple sources such as devices carried by the patient or installed in the home. As a result, there will be an increasing number of <em>“attack surfaces”</em> in which confidential medical information may be leaked. For instance, how will we deal with the data sent from a device designed to monitor an elderly patient and check for falls, or whether they have left their home, or their activity? How will we ensure that only the right people receive that information?   The same issues apply to medical and health applications aimed at consumers which may leak confidential medical information. There are many examples unfortunately - see <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4419898/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4419898/</a>  for just some of the examples.</p>
+
+<p>A useful resource is the “privacy-by-design” page from the ICO: see <a href="https://ico.org.uk/for-organisations/guide-to-data-protection/privacy-by-design/">https://ico.org.uk/for-organisations/guide-to-data-protection/privacy-by-design/</a> in which organisations undertake a privacy impact assessment to reduce potential harm to patients. Such tools are only useful when they are used, so the concept of sandboxes is also important, particularly for mobile device “apps”. For example, on most mobile devices, an application must request permission to access contacts, the camera or onboard health data and checks of those permissions are not a function of the application to implement (or not) but a function instead of the sandbox in which the application runs and all data access can be logged. So I think device manufacturers have a role in checking and verifying applications in their app stores and programmes like NHS digital’s app store (see https://apps.beta.nhs.uk) add an additional layer of inspection and curation.</p>
+
+<h1 id="conclusions">Conclusions</h1>
+
+<p>I can’t add much more to what Dame Fiona Caldicott said : <a href="https://www.gov.uk/government/news/national-data-guardian-ndg-statement-on-government-response-to-the-ndg-review">https://www.gov.uk/government/news/national-data-guardian-ndg-statement-on-government-response-to-the-ndg-review</a></p>
+
+<p>The main conclusion is that there is no single answer but a combination of solutions :</p>
+
+<ul>
+  <li>give people choice,</li>
+  <li>engender public trust by appropriate regulatory and legislative frameworks,</li>
+  <li>adopt appropriate technical safeguards and de-identify information at a level that minimises re-identification risk and satisfies the specific requirements for analytics on that occasion,</li>
+  <li>use verifiable logs to ensure access to confidential information is logged and capable of inspection.</li>
+</ul>
+
+<p>Medical data is terrifically valuable, powerful and offers tremendous scope to do good, but we also have a great responsibility to protect those data and ensure access is safe, secure and transparent.</p>
+
+<p>Best wishes,</p>
+
+<p>Mark</p>
+
+  </div>
+
+  
+</article>
+        
+      </div>
+    </main>
+    
+    
+    
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Health informatics and information technology</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Health informatics and information technology
+            
+            </li>
+            
+            <li><a href="mailto:mark@wardle.org">mark@wardle.org</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/wardle"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">wardle</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/mwardle"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">mwardle</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
