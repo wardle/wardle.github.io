@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-09-06T20:18:36+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
-</subtitle><entry><title type="html">Privacy and Artificial intelligence</title><link href="https://www.wardle.org/clinical-informatics/2017/09/06/privacy-ai.html" rel="alternate" type="text/html" title="Privacy and Artificial intelligence" /><published>2017-09-06T20:18:00+01:00</published><updated>2017-09-06T20:18:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/09/06/privacy-ai</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/09/06/privacy-ai.html">&lt;p&gt;I recently gave an interview for a &lt;a href=&quot;wired uk ai privacy&quot;&gt;Wired UK article on privacy and healthcare&lt;/a&gt;. Here is my full response.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-09-06T20:22:37+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</subtitle><entry><title type="html">Privacy and Artificial intelligence</title><link href="https://www.wardle.org/clinical-informatics/2017/09/06/privacy-ai.html" rel="alternate" type="text/html" title="Privacy and Artificial intelligence" /><published>2017-09-06T20:18:00+01:00</published><updated>2017-09-06T20:18:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/09/06/privacy-ai</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/09/06/privacy-ai.html">&lt;p&gt;I recently gave contributed to a &lt;a href=&quot;wired uk ai privacy&quot;&gt;Wired UK article on privacy and healthcare&lt;/a&gt;. Here is my full response.&lt;/p&gt;
 
 &lt;h1 id=&quot;should-we-worry-about-big-dataaimachine-learning-in-healthcare&quot;&gt;Should we worry about ‘Big Data’/AI/machine learning in healthcare?&lt;/h1&gt;
 
@@ -33,7 +33,7 @@
 
 &lt;p&gt;I can’t add much more to what Dame Fiona Caldicott said : &lt;a href=&quot;https://www.gov.uk/government/news/national-data-guardian-ndg-statement-on-government-response-to-the-ndg-review&quot;&gt;https://www.gov.uk/government/news/national-data-guardian-ndg-statement-on-government-response-to-the-ndg-review&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;The main conclusion is that there is no single answer but a combination of solutions :&lt;/p&gt;
+&lt;p&gt;My main conclusion is that there is no single answer but a combination of solutions :&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;give people choice,&lt;/li&gt;
@@ -46,7 +46,7 @@
 
 &lt;p&gt;Best wishes,&lt;/p&gt;
 
-&lt;p&gt;Mark&lt;/p&gt;</content><author><name></name></author><summary type="html">I recently gave an interview for a Wired UK article on privacy and healthcare. Here is my full response.</summary></entry><entry><title type="html">Health data - start with a problem</title><link href="https://www.wardle.org/clinical-informatics/2017/08/22/health-data.html" rel="alternate" type="text/html" title="Health data - start with a problem" /><published>2017-08-22T22:00:00+01:00</published><updated>2017-08-22T22:00:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/08/22/health-data</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/08/22/health-data.html">&lt;p&gt;Walk about on the wards.&lt;/p&gt;
+&lt;p&gt;Mark&lt;/p&gt;</content><author><name></name></author><summary type="html">I recently gave contributed to a Wired UK article on privacy and healthcare. Here is my full response.</summary></entry><entry><title type="html">Health data - start with a problem</title><link href="https://www.wardle.org/clinical-informatics/2017/08/22/health-data.html" rel="alternate" type="text/html" title="Health data - start with a problem" /><published>2017-08-22T22:00:00+01:00</published><updated>2017-08-22T22:00:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/08/22/health-data</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/08/22/health-data.html">&lt;p&gt;Walk about on the wards.&lt;/p&gt;
 
 &lt;p&gt;Chat with nursing, medical or pharmacy staff. Chat with physiotherapists, occupational therapists, managers.&lt;/p&gt;
 
