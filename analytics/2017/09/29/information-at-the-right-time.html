@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Information at the right time...</title>
+  <meta name="description" content="It is surprising how my interests have converged and supported one another over time: computing, technology and programming; data analysis, clinical medicine...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://www.wardle.org/analytics/2017/09/29/information-at-the-right-time.html">
+  <link rel="alternate" type="application/rss+xml" title="Health informatics and information technology" href="/feed.xml">
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-97389603-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="/">Health informatics and information technology</a>
+  
+  
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+           <a class="page-link" href="/">All posts</a>
+          
+            
+            
+            <a class="page-link" href="/projects/">Projects</a>
+            
+          
+            
+            
+            <a class="page-link" href="/about/">About</a>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Information at the right time...</h1>
+    <p class="post-meta">
+      <time datetime="2017-09-29T20:18:00+01:00" itemprop="datePublished">
+        
+        29 September 2017
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>It is surprising how my interests have converged and supported one another over time: computing, technology and programming; data analysis, clinical medicine, neuroscience, clinical neurology and genetics; undergraduate assessments and psychometrics.</p>
+
+<p>In this blog post, I want to discuss the fundamental importance of data in clinical medicine and the overlap between direct care, service management and improvement and clinical research. The overlap and relationships between these three are shown in this schematic:</p>
+
+<p><img src="/images/cis_design/data_pipelines.png" alt="Data Pipelines" /></p>
+
+<p>In clinical research, we have relatively small numbers of individuals with highly detailed information (“high level phenotypic data”). In day-to-day clinical practice, we have large numbers of patients with patchy or low level clinical data.</p>
+
+<p>A common theme that runs through this blog is, I hope, that the <a href="/cis-design/2017/05/01/medical-record.html">medical record defines our clinical practice</a>, and the foundation of that medical record is usable data… usable <em>information</em>.  We use that information for direct care of individual patients, organising our services to support the care of groups of patients and to perform clinical research.</p>
+
+<h1 id="creating-a-data-driven-culture">Creating a data-driven culture</h1>
+
+<p>In 2005 I started using R (The R Project for Statistical Computing) for my statistical analysis during my doctorate. I’d been disappointed with SPSS and its point and click user interface and crude scripting language. As a researcher, I realised that I would need to run and re-run many different analyses and remembering how to transform and clean-up in preparation for configuring and then running different types of statistical test was going to be difficult and time-consuming.</p>
+
+<p>I wrote about R on my <a href="http://www.medicalnerds.com/10-pieces-of-free-software-every-doctor-should-havean-introduction-to-r/">old blog in 2007</a> and since then, I have managed to convince many colleagues to adopt it for their own research. In 2005, I didn’t know anyone else using R (except the R-help mailing list) but it was immediately appealing:</p>
+
+<ul>
+  <li>it is a programming language, an environment for statistical computing and not simply an application to run statistical tests</li>
+  <li>it results in reproducibility. I can run the same analyses over and over again, for example when my data are updated</li>
+  <li>it is open-source</li>
+</ul>
+
+<p>My own research involved clinical epidemiology, phenotype-genotype correlations, clinical genetics and psychometrics and, if you are very keen (and want to know a bit more about ataxia), you can <a href="/images/wardle-2009-thesis.pdf">read my thesis</a>.</p>
+
+<h1 id="deep-phenotyping">Deep phenotyping</h1>
+
+<p>As a junior researcher, I quickly learnt the value of “deep phenotyping”, the importance of systematically recording the longitudinal morphology of disease for individual patients, aggregating those data for groups of similar patients and understanding the cohort by the use of those data. To do this, one needs to consider the hypotheses and ensure that the appropriate clinical data is captured and recorded in a format that allows those hypotheses to be tested. My project looked at clinical progression, rating scales, the use of wearables and genetics with the combination of different sources of data to make logical inferences about these patient groups.</p>
+
+<p>Clinical research requires compromise, intuition and judgement:</p>
+
+<ul>
+  <li>how much data should be collected?</li>
+  <li>what will be important?</li>
+  <li>what can be collected in the timeframe?</li>
+  <li>how many patients do I need to assess in order to reach a valid conclusion</li>
+  <li>how will I record that data and in what format so that it is practical for storage, retrieval and analysis?</li>
+</ul>
+
+<p>Early on, we generated lots of ideas. For example, I gave up on the wearables project when we realised that patients were recording 0 steps in 24 hours, that the devices were too cumbersome and so were being left on the shelf rather than being worn. In those days, the technology was such that the wearable wasn’t actually very wearable.</p>
+
+<p>As you might have already concluded, none of these questions are unique to the specific neurological conditions I was interested in at the same and in fact are generic and widely applicable.</p>
+
+<h1 id="building-analytics">Building analytics</h1>
+
+<p>I built an analytics pipeline in which clinical and genetic data were extracted, cleaned up and transformed and analysed. This combined a database and used R to do the rest, generating analyses and charts based on those data. With Sweave, I combined those results into reports, clinical papers and eventually my thesis by linking R and LaTeX:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>We identified \Sexpr{nrow(subset(cl, excluded==F))} patients with a reported history of 
+cerebellar ataxia between 1999 and 2007 in South East Wales.
+Applying inclusion and exclusion criteria as described above resulted in a subset of 
+\Sexpr{cf.loca$total} with chronic progressive \ac{loca} with no identified aetiology 
+as a denominator population for study. There were \Sexpr{cf.loca$num.familial} 
+(\Sexpr{nrow(subset(loca, fh==T &amp; sex=='Male'))} male, 
+\Sexpr{nrow(subset(loca, fh==T &amp; sex=='Female'))} female)
+familial cases segregating in \Sexpr{cf.loca$num.families} kindreds 
+and \Sexpr{cf.loca$num.sporadic} 
+(\Sexpr{nrow(subset(loca, fh==F &amp; sex=='Male'))} male, 
+\Sexpr{nrow(subset(loca, fh==F &amp; sex=='Female'))} female)
+sporadic patients.
+</code></pre>
+</div>
+
+<p>When run, this would output the following text:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>We identified 401 patients with a reported history of cerebellar ataxia between 1999 
+and 2007 in South East Wales. Applying inclusion and exclusion criteria as described 
+above resulted in a subset of 178 with chronic progressive LOCA with no identified 
+aetiology as a denominator population for study. There were 55 (26 male, 29 female) 
+familial cases segregating in 38 kindreds and 123 (79 male, 44 female) sporadic patients.
+</code></pre>
+</div>
+
+<p>But of course, much more sophisticated analyses were possible, including the dynamic generation of charts, maps and statistics. For example, this chart is dynamically generated from our data source</p>
+
+<p><img src="/images/data-driven/sca-prevalence.png" alt="Sca Prevalence" /></p>
+
+<p>generated using the following code:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>\begin{figure}[!tb]
+% This is the same as the ACNR graph, but using the (NEW) new SCA prevalence functions
+&lt;&lt;sca-prev-adca, echo=FALSE, quiet=T, fig=T,width=6,height=4&gt;&gt;=
+sp = sp.sca.prev(subset=patient.type=='ADCA' &amp; total&gt;10 &amp; (region=='Asia' | region=='Europe' ), by=region, FUN=sp.percentage)
+barplot(as.matrix(sp[,c(2:7,12)]), beside=T,
+		xlab='Disease', ylab='Percentage of families', 
+        main="", 		#  Ethnic differences in SCA subtype frequency",
+        legend.text=c(
+		    paste('Asia   (n=',sp[sp$region=='Asia',]$total,')',sep=""),
+		    paste('Europe (n=',sp[sp$region=='Europe',]$total,')',sep="")))
+@
+\caption[Aggregated data showing ethnic differences in SCA subtype frequency among families with ADCA.]{Aggregated data showing ethnic differences in SCA subtype frequency among families with ADCA. Data from Table~\ref{tab:sca.prev.adca}.}
+% \cite{\Sexpr{print.citations(sp$cite)}}
+\label{fig:sca.prev}
+\end{figure}
+</code></pre>
+</div>
+
+<p>The sp.sca.prev() function source code is <a href="/images/data-driven/sp-sca-prev.R">here</a>.</p>
+
+<p>As a result, all of my papers and my thesis were built automatically whenever I wanted, simply by running <code class="highlighter-rouge">make</code> that would run a series of steps in a <a href="/images/data-driven/Makefile">Makefile</a>. Consequently, I could identify any obvious errors in data entry quickly and ensure they were fixed as well as build analyses based on interim data with the confidence that they could be run again and again as data were added. I did all the work in LaTeX, R and used subversion as a version control system.</p>
+
+<h1 id="so-what-different-lenses-same-data">So what? Different lenses, same data</h1>
+
+<p>We’ve been discussing data warehouses, data lakes and analytic pipelines within NHS Wales. Some of us are pushing for an “open platform” based on a foundation of structured data recorded in using open standards and integrating a range of new and legacy services and systems via an API-approach (API - application programming interface) while others think we should be getting on with developing applications and thinking about interoperability later.</p>
+
+<p>My clinical colleagues want the right information about the patient in front of them, irrespective of organisational boundaries, so that clinical information recorded by other teams in different organisations, or even in different countries, is available at the point-of-care. We are overloaded by information, and this will increase (particularly given recent and ongoing <a href="/clinical-informatics/2017/07/07/disruptive-influences-health.html">disruptive influences</a>) so we need the right tools to make sense of that information. Presently, much of the administrative data is computerised but most clinical data exists only on paper.</p>
+
+<p>My more senior clinical and managerial colleagues want to understand more about how our services perform and how can they be improved. They want to aggregate individual patient data and prepare data to inform decisions across our organisations and need to feed much of that information to other authorities as part of central returns. As only administrative data are routinely digitised, most analytics are focused on administrative matters, so we might <a href="http://wardle.org/clinical-informatics/2017/06/06/using-data-patient-safety.html">know how many people were seen, but not really have an idea as to why</a>.</p>
+
+<p>My academic colleagues want to recruit patients into clinical research and capture data in a much more systematic and structured way and use that information to study and publish and inform.</p>
+
+<p>The answer to all three requirements is, of course, <em>data</em>.</p>
+
+<p>While we may need to include much more detail for our research projects, I cannot stress the importance of the systematic and routine collection of outcome data in normal clinical practice for direct clinical care and management of our services.</p>
+
+<h1 id="adopting-a-data-driven-clinical-practice">Adopting a data-driven clinical practice</h1>
+
+<p>So as <a href="/clinical-informatics/2017/08/22/health-data.html">I wrote previously</a>:</p>
+
+<blockquote>
+  <p>We should be focusing on <em>data</em> first, as <em>data</em> as the solution to a <em>problem</em>. Data, structured, understandable, semantically interoperable data are the foundation on which clinical applications and our analytics can run.</p>
+</blockquote>
+
+<p>So, what was wrong with my research analytics pipeline? Although at the end of it I could run and re-run it and get almost immediate results, my data were not stored in a standardised format and my code can’t easily be picked up and used by others.</p>
+
+<p>It can be done differently: storing structured, informative and useful clinical data recorded by patients and health professionals; combining data from multiple sources to add value to information and creating learning adaptive systems that support our work.</p>
+
+<p>Here is an example I have used before, in which I present a dashboard on which the important information for a patient with motor neurone disease is aggregated in a single view. The determination as to whether the patient has a gastrostomy (or other kinds nutritional support) is a sequential look at the record of procedures performed (insertions and removal of gastrostomy tubes):</p>
+
+<p><img src="/images/mnd-dashboard.png" alt="Mnd Dashboard" /></p>
+
+<p>That dashboard took me about 10 minutes of work to write as all of the important information was already being collected in a sequence of clinical encounters by my colleagues from palliative care, speech and language, dietetics, specialist nurses and neurologists.</p>
+
+<h1 id="the-power-of-aggregation">The power of aggregation…</h1>
+
+<p>The EDSS is the expanded disability scale score, a relatively easy-to-use scale running from 0 to 10 that is used as a clinical indicator of disability. Health professionals can record it but we can also derive the score directly from patients using my iPad application:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/N3PQ2EEQNt4" frameborder="0" allowfullscreen=""></iframe>
+
+<p>The following dynamically generated chart shows a single patient’s disease course over time compared to every single other patient we know with multiple sclerosis or a type of that disease:</p>
+
+<p><img src="/images/edss-graph.jpg" alt="Edss Graph" /></p>
+
+<p>The single patient’s course is shown by the red line, with relapses (acute deteriorations) marked with an “R”. The dotted lines are like the centile lines on a baby’s growth chart: from disease onset, the median disability for the whole cohort is shown. At a glance, we can then see whether an individual patient is deteriorating more quickly than expected or is more disabled that their peers and helps us to tailor their treatments appropriately. In patients with aggressive disease, we might choose to use more aggressive treatments with a greater risk of side-effects.</p>
+
+<p>The SQL code that identifies all patients with any type of multiple sclerosis, tracks their progress and aggregates the disability data is <a href="/images/data-driven/msss-edss.sql">here</a>.</p>
+
+<h1 id="iteration">Iteration</h1>
+
+<p>But we don’t stop there. We continue to build statistical models to track disease progression, combining different outcome measures and their proxies to try to understand the disease. As a result, our work will never be done; we can generate new models of disease progression that better predict deterioration and must embed that work into our day-to-day clinical practice. As such, we should aim for a virtuous cycle of continuous improvement, embedding clinical research into our day-to-day clinical practice in a similar way to the <a href="https://www.isixsigma.com/dictionary/dmaic/">Six Sigma quality initiative</a>:</p>
+
+<p><img src="/images/cis_design/dmaic.png" alt="Dmaic" /></p>
+
+<p>Machine learning is a useful addition to our analytics platform. We can already use standard survival analysis to identify the factors that are important in predicting survival and subsequently build a heuristic to help us in our clinical decision making. New technology offers us hope to improve those models and to speed up the iterative cycle to build continuously adaptive and learning systems.</p>
+
+<p>Here is a schematic representing how I think we need to create an open platform for healthcare in Wales:</p>
+
+<p><img src="/images/platform/platform-overall.png" alt="Platform Overall" /></p>
+
+<p>In this schematic, the platform represents a range of APIs providing access to a unified aggregated view of a single patient record, but the other definition of a “platform” is of a multisided market:</p>
+
+<blockquote>
+  <p>Interestingly, another definition of a “platform” is a set of services that bring together users and providers to form a multisided market. Is it possible then to take our “open platform” and start to think of a future in which we have products and services that actually do enable a re-imagining of healthcare provision to bring together patients, carers, health professionals, commissioners, analytics, researchers and all other stakeholders in a safe and secure manner?  (see <a href="/clinical-informatics/2017/08/20/disruptive-influences-future.html">a previous blog post</a>)</p>
+</blockquote>
+
+<p>At the moment, our health platforms, if they exist, are lopsided asymmetric systems in which patients play little or no role. We must start thinking about creating a data-driven architecture that corrects this asymmetry in power and control.</p>
+
+<p>In all cases, the foundation of that work is data. Technology is the enabler; it can release the value from our data.</p>
+
+<p>Mark</p>
+
+  </div>
+
+  
+</article>
+        
+      </div>
+    </main>
+    
+    
+    
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Health informatics and information technology</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Health informatics and information technology
+            
+            </li>
+            
+            <li><a href="mailto:mark@wardle.org">mark@wardle.org</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/wardle"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">wardle</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/mwardle"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">mwardle</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

@@ -1,5 +1,172 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-09-06T20:25:08+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
-</subtitle><entry><title type="html">Privacy and Artificial intelligence</title><link href="https://www.wardle.org/clinical-informatics/2017/09/06/privacy-ai.html" rel="alternate" type="text/html" title="Privacy and Artificial intelligence" /><published>2017-09-06T20:18:00+01:00</published><updated>2017-09-06T20:18:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/09/06/privacy-ai</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/09/06/privacy-ai.html">&lt;p&gt;I recently contributed to a &lt;a href=&quot;wired uk ai privacy&quot;&gt;Wired UK article on privacy and healthcare&lt;/a&gt;. Here is my full response.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-09-30T12:31:27+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</subtitle><entry><title type="html">Information at the right time…</title><link href="https://www.wardle.org/analytics/2017/09/29/information-at-the-right-time.html" rel="alternate" type="text/html" title="Information at the right time..." /><published>2017-09-29T20:18:00+01:00</published><updated>2017-09-29T20:18:00+01:00</updated><id>https://www.wardle.org/analytics/2017/09/29/information-at-the-right-time</id><content type="html" xml:base="https://www.wardle.org/analytics/2017/09/29/information-at-the-right-time.html">&lt;p&gt;It is surprising how my interests have converged and supported one another over time: computing, technology and programming; data analysis, clinical medicine, neuroscience, clinical neurology and genetics; undergraduate assessments and psychometrics.&lt;/p&gt;
+
+&lt;p&gt;In this blog post, I want to discuss the fundamental importance of data in clinical medicine and the overlap between direct care, service management and improvement and clinical research. The overlap and relationships between these three are shown in this schematic:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/cis_design/data_pipelines.png&quot; alt=&quot;Data Pipelines&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In clinical research, we have relatively small numbers of individuals with highly detailed information (“high level phenotypic data”). In day-to-day clinical practice, we have large numbers of patients with patchy or low level clinical data.&lt;/p&gt;
+
+&lt;p&gt;A common theme that runs through this blog is, I hope, that the &lt;a href=&quot;/cis-design/2017/05/01/medical-record.html&quot;&gt;medical record defines our clinical practice&lt;/a&gt;, and the foundation of that medical record is usable data… usable &lt;em&gt;information&lt;/em&gt;.  We use that information for direct care of individual patients, organising our services to support the care of groups of patients and to perform clinical research.&lt;/p&gt;
+
+&lt;h1 id=&quot;creating-a-data-driven-culture&quot;&gt;Creating a data-driven culture&lt;/h1&gt;
+
+&lt;p&gt;In 2005 I started using R (The R Project for Statistical Computing) for my statistical analysis during my doctorate. I’d been disappointed with SPSS and its point and click user interface and crude scripting language. As a researcher, I realised that I would need to run and re-run many different analyses and remembering how to transform and clean-up in preparation for configuring and then running different types of statistical test was going to be difficult and time-consuming.&lt;/p&gt;
+
+&lt;p&gt;I wrote about R on my &lt;a href=&quot;http://www.medicalnerds.com/10-pieces-of-free-software-every-doctor-should-havean-introduction-to-r/&quot;&gt;old blog in 2007&lt;/a&gt; and since then, I have managed to convince many colleagues to adopt it for their own research. In 2005, I didn’t know anyone else using R (except the R-help mailing list) but it was immediately appealing:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;it is a programming language, an environment for statistical computing and not simply an application to run statistical tests&lt;/li&gt;
+  &lt;li&gt;it results in reproducibility. I can run the same analyses over and over again, for example when my data are updated&lt;/li&gt;
+  &lt;li&gt;it is open-source&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;My own research involved clinical epidemiology, phenotype-genotype correlations, clinical genetics and psychometrics and, if you are very keen (and want to know a bit more about ataxia), you can &lt;a href=&quot;/images/wardle-2009-thesis.pdf&quot;&gt;read my thesis&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;deep-phenotyping&quot;&gt;Deep phenotyping&lt;/h1&gt;
+
+&lt;p&gt;As a junior researcher, I quickly learnt the value of “deep phenotyping”, the importance of systematically recording the longitudinal morphology of disease for individual patients, aggregating those data for groups of similar patients and understanding the cohort by the use of those data. To do this, one needs to consider the hypotheses and ensure that the appropriate clinical data is captured and recorded in a format that allows those hypotheses to be tested. My project looked at clinical progression, rating scales, the use of wearables and genetics with the combination of different sources of data to make logical inferences about these patient groups.&lt;/p&gt;
+
+&lt;p&gt;Clinical research requires compromise, intuition and judgement:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;how much data should be collected?&lt;/li&gt;
+  &lt;li&gt;what will be important?&lt;/li&gt;
+  &lt;li&gt;what can be collected in the timeframe?&lt;/li&gt;
+  &lt;li&gt;how many patients do I need to assess in order to reach a valid conclusion&lt;/li&gt;
+  &lt;li&gt;how will I record that data and in what format so that it is practical for storage, retrieval and analysis?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Early on, we generated lots of ideas. For example, I gave up on the wearables project when we realised that patients were recording 0 steps in 24 hours, that the devices were too cumbersome and so were being left on the shelf rather than being worn. In those days, the technology was such that the wearable wasn’t actually very wearable.&lt;/p&gt;
+
+&lt;p&gt;As you might have already concluded, none of these questions are unique to the specific neurological conditions I was interested in at the same and in fact are generic and widely applicable.&lt;/p&gt;
+
+&lt;h1 id=&quot;building-analytics&quot;&gt;Building analytics&lt;/h1&gt;
+
+&lt;p&gt;I built an analytics pipeline in which clinical and genetic data were extracted, cleaned up and transformed and analysed. This combined a database and used R to do the rest, generating analyses and charts based on those data. With Sweave, I combined those results into reports, clinical papers and eventually my thesis by linking R and LaTeX:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;We identified \Sexpr{nrow(subset(cl, excluded==F))} patients with a reported history of 
+cerebellar ataxia between 1999 and 2007 in South East Wales.
+Applying inclusion and exclusion criteria as described above resulted in a subset of 
+\Sexpr{cf.loca$total} with chronic progressive \ac{loca} with no identified aetiology 
+as a denominator population for study. There were \Sexpr{cf.loca$num.familial} 
+(\Sexpr{nrow(subset(loca, fh==T &amp;amp; sex=='Male'))} male, 
+\Sexpr{nrow(subset(loca, fh==T &amp;amp; sex=='Female'))} female)
+familial cases segregating in \Sexpr{cf.loca$num.families} kindreds 
+and \Sexpr{cf.loca$num.sporadic} 
+(\Sexpr{nrow(subset(loca, fh==F &amp;amp; sex=='Male'))} male, 
+\Sexpr{nrow(subset(loca, fh==F &amp;amp; sex=='Female'))} female)
+sporadic patients.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;When run, this would output the following text:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;We identified 401 patients with a reported history of cerebellar ataxia between 1999 
+and 2007 in South East Wales. Applying inclusion and exclusion criteria as described 
+above resulted in a subset of 178 with chronic progressive LOCA with no identified 
+aetiology as a denominator population for study. There were 55 (26 male, 29 female) 
+familial cases segregating in 38 kindreds and 123 (79 male, 44 female) sporadic patients.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;But of course, much more sophisticated analyses were possible, including the dynamic generation of charts, maps and statistics. For example, this chart is dynamically generated from our data source&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/data-driven/sca-prevalence.png&quot; alt=&quot;Sca Prevalence&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;generated using the following code:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;\begin{figure}[!tb]
+% This is the same as the ACNR graph, but using the (NEW) new SCA prevalence functions
+&amp;lt;&amp;lt;sca-prev-adca, echo=FALSE, quiet=T, fig=T,width=6,height=4&amp;gt;&amp;gt;=
+sp = sp.sca.prev(subset=patient.type=='ADCA' &amp;amp; total&amp;gt;10 &amp;amp; (region=='Asia' | region=='Europe' ), by=region, FUN=sp.percentage)
+barplot(as.matrix(sp[,c(2:7,12)]), beside=T,
+		xlab='Disease', ylab='Percentage of families', 
+        main=&quot;&quot;, 		#  Ethnic differences in SCA subtype frequency&quot;,
+        legend.text=c(
+		    paste('Asia   (n=',sp[sp$region=='Asia',]$total,')',sep=&quot;&quot;),
+		    paste('Europe (n=',sp[sp$region=='Europe',]$total,')',sep=&quot;&quot;)))
+@
+\caption[Aggregated data showing ethnic differences in SCA subtype frequency among families with ADCA.]{Aggregated data showing ethnic differences in SCA subtype frequency among families with ADCA. Data from Table~\ref{tab:sca.prev.adca}.}
+% \cite{\Sexpr{print.citations(sp$cite)}}
+\label{fig:sca.prev}
+\end{figure}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The sp.sca.prev() function source code is &lt;a href=&quot;/images/data-driven/sp-sca-prev.R&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;As a result, all of my papers and my thesis were built automatically whenever I wanted, simply by running &lt;code class=&quot;highlighter-rouge&quot;&gt;make&lt;/code&gt; that would run a series of steps in a &lt;a href=&quot;/images/data-driven/Makefile&quot;&gt;Makefile&lt;/a&gt;. Consequently, I could identify any obvious errors in data entry quickly and ensure they were fixed as well as build analyses based on interim data with the confidence that they could be run again and again as data were added. I did all the work in LaTeX, R and used subversion as a version control system.&lt;/p&gt;
+
+&lt;h1 id=&quot;so-what-different-lenses-same-data&quot;&gt;So what? Different lenses, same data&lt;/h1&gt;
+
+&lt;p&gt;We’ve been discussing data warehouses, data lakes and analytic pipelines within NHS Wales. Some of us are pushing for an “open platform” based on a foundation of structured data recorded in using open standards and integrating a range of new and legacy services and systems via an API-approach (API - application programming interface) while others think we should be getting on with developing applications and thinking about interoperability later.&lt;/p&gt;
+
+&lt;p&gt;My clinical colleagues want the right information about the patient in front of them, irrespective of organisational boundaries, so that clinical information recorded by other teams in different organisations, or even in different countries, is available at the point-of-care. We are overloaded by information, and this will increase (particularly given recent and ongoing &lt;a href=&quot;/clinical-informatics/2017/07/07/disruptive-influences-health.html&quot;&gt;disruptive influences&lt;/a&gt;) so we need the right tools to make sense of that information. Presently, much of the administrative data is computerised but most clinical data exists only on paper.&lt;/p&gt;
+
+&lt;p&gt;My more senior clinical and managerial colleagues want to understand more about how our services perform and how can they be improved. They want to aggregate individual patient data and prepare data to inform decisions across our organisations and need to feed much of that information to other authorities as part of central returns. As only administrative data are routinely digitised, most analytics are focused on administrative matters, so we might &lt;a href=&quot;http://wardle.org/clinical-informatics/2017/06/06/using-data-patient-safety.html&quot;&gt;know how many people were seen, but not really have an idea as to why&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;My academic colleagues want to recruit patients into clinical research and capture data in a much more systematic and structured way and use that information to study and publish and inform.&lt;/p&gt;
+
+&lt;p&gt;The answer to all three requirements is, of course, &lt;em&gt;data&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;While we may need to include much more detail for our research projects, I cannot stress the importance of the systematic and routine collection of outcome data in normal clinical practice for direct clinical care and management of our services.&lt;/p&gt;
+
+&lt;h1 id=&quot;adopting-a-data-driven-clinical-practice&quot;&gt;Adopting a data-driven clinical practice&lt;/h1&gt;
+
+&lt;p&gt;So as &lt;a href=&quot;/clinical-informatics/2017/08/22/health-data.html&quot;&gt;I wrote previously&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;We should be focusing on &lt;em&gt;data&lt;/em&gt; first, as &lt;em&gt;data&lt;/em&gt; as the solution to a &lt;em&gt;problem&lt;/em&gt;. Data, structured, understandable, semantically interoperable data are the foundation on which clinical applications and our analytics can run.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So, what was wrong with my research analytics pipeline? Although at the end of it I could run and re-run it and get almost immediate results, my data were not stored in a standardised format and my code can’t easily be picked up and used by others.&lt;/p&gt;
+
+&lt;p&gt;It can be done differently: storing structured, informative and useful clinical data recorded by patients and health professionals; combining data from multiple sources to add value to information and creating learning adaptive systems that support our work.&lt;/p&gt;
+
+&lt;p&gt;Here is an example I have used before, in which I present a dashboard on which the important information for a patient with motor neurone disease is aggregated in a single view. The determination as to whether the patient has a gastrostomy (or other kinds nutritional support) is a sequential look at the record of procedures performed (insertions and removal of gastrostomy tubes):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/mnd-dashboard.png&quot; alt=&quot;Mnd Dashboard&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;That dashboard took me about 10 minutes of work to write as all of the important information was already being collected in a sequence of clinical encounters by my colleagues from palliative care, speech and language, dietetics, specialist nurses and neurologists.&lt;/p&gt;
+
+&lt;h1 id=&quot;the-power-of-aggregation&quot;&gt;The power of aggregation…&lt;/h1&gt;
+
+&lt;p&gt;The EDSS is the expanded disability scale score, a relatively easy-to-use scale running from 0 to 10 that is used as a clinical indicator of disability. Health professionals can record it but we can also derive the score directly from patients using my iPad application:&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/N3PQ2EEQNt4&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;The following dynamically generated chart shows a single patient’s disease course over time compared to every single other patient we know with multiple sclerosis or a type of that disease:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/edss-graph.jpg&quot; alt=&quot;Edss Graph&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The single patient’s course is shown by the red line, with relapses (acute deteriorations) marked with an “R”. The dotted lines are like the centile lines on a baby’s growth chart: from disease onset, the median disability for the whole cohort is shown. At a glance, we can then see whether an individual patient is deteriorating more quickly than expected or is more disabled that their peers and helps us to tailor their treatments appropriately. In patients with aggressive disease, we might choose to use more aggressive treatments with a greater risk of side-effects.&lt;/p&gt;
+
+&lt;p&gt;The SQL code that identifies all patients with any type of multiple sclerosis, tracks their progress and aggregates the disability data is &lt;a href=&quot;/images/data-driven/msss-edss.sql&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;iteration&quot;&gt;Iteration&lt;/h1&gt;
+
+&lt;p&gt;But we don’t stop there. We continue to build statistical models to track disease progression, combining different outcome measures and their proxies to try to understand the disease. As a result, our work will never be done; we can generate new models of disease progression that better predict deterioration and must embed that work into our day-to-day clinical practice. As such, we should aim for a virtuous cycle of continuous improvement, embedding clinical research into our day-to-day clinical practice in a similar way to the &lt;a href=&quot;https://www.isixsigma.com/dictionary/dmaic/&quot;&gt;Six Sigma quality initiative&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/cis_design/dmaic.png&quot; alt=&quot;Dmaic&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Machine learning is a useful addition to our analytics platform. We can already use standard survival analysis to identify the factors that are important in predicting survival and subsequently build a heuristic to help us in our clinical decision making. New technology offers us hope to improve those models and to speed up the iterative cycle to build continuously adaptive and learning systems.&lt;/p&gt;
+
+&lt;p&gt;Here is a schematic representing how I think we need to create an open platform for healthcare in Wales:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/platform/platform-overall.png&quot; alt=&quot;Platform Overall&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In this schematic, the platform represents a range of APIs providing access to a unified aggregated view of a single patient record, but the other definition of a “platform” is of a multisided market:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Interestingly, another definition of a “platform” is a set of services that bring together users and providers to form a multisided market. Is it possible then to take our “open platform” and start to think of a future in which we have products and services that actually do enable a re-imagining of healthcare provision to bring together patients, carers, health professionals, commissioners, analytics, researchers and all other stakeholders in a safe and secure manner?  (see &lt;a href=&quot;/clinical-informatics/2017/08/20/disruptive-influences-future.html&quot;&gt;a previous blog post&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;At the moment, our health platforms, if they exist, are lopsided asymmetric systems in which patients play little or no role. We must start thinking about creating a data-driven architecture that corrects this asymmetry in power and control.&lt;/p&gt;
+
+&lt;p&gt;In all cases, the foundation of that work is data. Technology is the enabler; it can release the value from our data.&lt;/p&gt;
+
+&lt;p&gt;Mark&lt;/p&gt;</content><author><name></name></author><summary type="html">It is surprising how my interests have converged and supported one another over time: computing, technology and programming; data analysis, clinical medicine, neuroscience, clinical neurology and genetics; undergraduate assessments and psychometrics.</summary></entry><entry><title type="html">Privacy and Artificial intelligence</title><link href="https://www.wardle.org/clinical-informatics/2017/09/06/privacy-ai.html" rel="alternate" type="text/html" title="Privacy and Artificial intelligence" /><published>2017-09-06T20:18:00+01:00</published><updated>2017-09-06T20:18:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/09/06/privacy-ai</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/09/06/privacy-ai.html">&lt;p&gt;I recently contributed to a &lt;a href=&quot;wired uk ai privacy&quot;&gt;Wired UK article on privacy and healthcare&lt;/a&gt;. Here is my full response.&lt;/p&gt;
 
 &lt;h1 id=&quot;should-we-worry-about-big-dataaimachine-learning-in-healthcare&quot;&gt;Should we worry about ‘Big Data’/AI/machine learning in healthcare?&lt;/h1&gt;
 
@@ -37,9 +204,13 @@
 
 &lt;ul&gt;
   &lt;li&gt;give people choice,&lt;/li&gt;
-  &lt;li&gt;engender public trust by appropriate regulatory and legislative frameworks,&lt;/li&gt;
-  &lt;li&gt;adopt appropriate technical safeguards and de-identify information at a level that minimises re-identification risk and satisfies the specific requirements for analytics on that occasion,&lt;/li&gt;
-  &lt;li&gt;use verifiable logs to ensure access to confidential information is logged and capable of inspection.&lt;/li&gt;
+  &lt;li&gt;engender public trust by
+    &lt;ul&gt;
+      &lt;li&gt;appropriate regulatory and legislative frameworks,&lt;/li&gt;
+      &lt;li&gt;adopting appropriate technical safeguards and de-identify information at a level that minimises re-identification risk and satisfies the specific requirements for analytics on that occasion,&lt;/li&gt;
+      &lt;li&gt;using verifiable logs to ensure access to confidential information is logged and capable of inspection.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Medical data is terrifically valuable, powerful and offers tremendous scope to do good, but we also have a great responsibility to protect those data and ensure access is safe, secure and transparent.&lt;/p&gt;
@@ -863,79 +1034,4 @@
 
 &lt;p&gt;&lt;a name=&quot;telephone&quot;&gt;a&lt;/a&gt;: The telephone was patented in 1876.&lt;/p&gt;
 
-&lt;p&gt;&lt;a name=&quot;snomed-understand&quot;&gt;b&lt;/a&gt;: I have turned the usual use of SNOMED-CT upside-down as a simple demonstration of using the ontology to derive semantic understanding in a &lt;a href=&quot;/clinical-informatics/2017/05/20/using-snomed-ct.html&quot;&gt;recent blog post&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">This blog post is from a talk I gave to the RCPE in December 2016.</summary></entry><entry><title type="html">Designing the future 3/3: the patient</title><link href="https://www.wardle.org/clinical-informatics/2017/06/03/designing-future-3.html" rel="alternate" type="text/html" title="Designing the future 3/3: the patient" /><published>2017-06-03T16:10:00+01:00</published><updated>2017-06-03T16:10:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/06/03/designing-future-3</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/06/03/designing-future-3.html">&lt;p&gt;This is part three of a 3-part series on designing future clinical information systems. Part 1 covers the &lt;a href=&quot;/clinical-informatics/2017/06/03/designing-future-1.html&quot;&gt;importance of data models&lt;/a&gt;. Part 2 covers &lt;a href=&quot;/clinical-informatics/2017/06/03/designing-future-2.html&quot;&gt;clinical modelling in relation to process and workflow&lt;/a&gt;. This part covers patient portals and the internet-of-things.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;So we need to take several steps back from sitting in our clinics and understand what we do and where we are likely to be going in healthcare. Can we model this in an abstract and future-proof way? Can we do what we did when we &lt;a href=&quot;/clinical-informatics/2017/06/03/designing-future-2.html&quot;&gt;model a blood pressure&lt;/a&gt;, but for something more complex?&lt;/p&gt;
-
-&lt;p&gt;It is useful to imagine a patient with several long-term health conditions. These are problems that a patient will have for the rest of their life and most such conditions need ongoing monitoring. This monitoring will be usually managed by a primary care physician or a specialist and their respective teams. As such, several different professionals will be involved, including a range of administrative staff, nurses, physiotherapists, occupational therapists, third-sector providers, social services and doctors. These professionals may all work in the same organisation, but it is much more likely that they will work across organisational boundaries and yet need to collaborate and share information in supporting their patient together.&lt;/p&gt;
-
-&lt;p&gt;Importantly, a patient is not and cannot be a passive recipient of healthcare. Instead, patients should be active members and leaders of the team, setting achievable goals and defining priorities of care. As such, patients need to be able to interact and collaborate with their teams and not only see the information relating to their care but contribute to it as well. Why do we either not measure outcomes or use surrogate proxy markers of outcomes when a patient can tell us, either directly or indirectly by virtue of their activity data, their prospectively recorded log of seizures or their home monitoring equipment?&lt;/p&gt;
-
-&lt;p&gt;So the model of care in which a patient comes for a 6-monthly outpatient clinic is outdated, inefficient and does not respect the patient - placing them in a subservient, passive role in order to receive healthcare. They arrive, sit in a waiting room, have their pulse and blood pressure measured and are weighed and then, as any who has experienced an outpatient clinic will testify, feel their autonomy fade away. We give them an appointment for six months which doesn’t fit with their schedule and will probably be cancelled. Our administrative systems track patients waiting for a new patient appointment, but patients wait for months for another follow-up slot. Information technology alone is not going to solve this, but can we step back and re-imagine our care processes and &lt;em&gt;use&lt;/em&gt; information technology to enable that change?&lt;/p&gt;
-
-&lt;p&gt;Here is an example overview of how longitudinal prospectively collected information about a patient can be combined from disparate sources:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/cis_design/data_pipelines.png&quot; alt=&quot;Data Pipelines&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;How can we make sense of step-count data without an understanding that the patient had a hip replacement in May 2017? Likewise, how can we looks at biomarkers on a serum sample taken in April 2017 without understanding the patient had a seizure the day before? We need to integrate, summarise and make available information from multiple disparate sources to the patient and those that support that patient.&lt;/p&gt;
-
-&lt;p&gt;If a patient has a clinic appointment in three weeks time, it is possible to have a medical records department that fetches a set of paper notes from the archive and ensures (mostly) that I have them on my desk in clinic at the right time. This model does not scale to support a patient calling us to discuss their care or to support multiple teams looking after patients across multiple disciplines and organisations - who has got the notes? As such, we can use information technology to support a change in the way that we work.&lt;/p&gt;
-
-&lt;h1 id=&quot;monolithic-architectures&quot;&gt;Monolithic architectures&lt;/h1&gt;
-
-&lt;p&gt;In the early days of the Internet, we had Compuserve and later AOL. As I recall, every computer magazine had a floppy disk or later a CD-ROM with their software on it. Both were proprietary, locked-down portals accessible using a dial-up modem that offered everything from email to bulletin boards to news. As the internet took over, built on open-standards and interoperability, these systems faded into irrelevance and obsolescence. Both tried to react to the more open ‘World Wide Web’ by allowing some degree of information exchange such as permitting emails to be sent and received from the internet, but such limited interoperability was insufficient to prevent the irresistible march of progress.&lt;/p&gt;
-
-&lt;p&gt;Healthcare information technology is at a similar level of development to those systems from the 1980s and early 1990s with monolithic systems and single portals pitched as the solution to all healthcare problems. Large-scale enterprise applications (such as Epic and Cerner’s Millenium) are now installed in many hospitals and these have started offering limited interoperability in order to make their data available to other systems.&lt;/p&gt;
-
-&lt;p&gt;Similarly, those systems can offer a patient portal in which patients themselves can login and interact with that organisation and its teams. In addition, there are now increasing numbers of more consumer-focused patient portals acting as “personal health records” (PHRs) such as &lt;a href=&quot;https://www.patientsknowbest.com&quot;&gt;Patients Know Best&lt;/a&gt;, Microsoft’s &lt;a href=&quot;https://www.healthvault.com/en-gb/&quot;&gt;HealthVault&lt;/a&gt; and Google’s (now closed) &lt;a href=&quot;https://en.wikipedia.org/wiki/Google_Health&quot;&gt;Health&lt;/a&gt; PHR. An overview of the &lt;a href=&quot;https://www.rcplondon.ac.uk/file/3738/download?token=lPb9TkQE&quot;&gt;use of PHRs was written by the Royal College of Physicians’ Health Informatics Unit in 2016&lt;/a&gt; with a focus on PHRs provided by healthcare organisations themselves. In all cases, these products create portals to which patients may interact, and their use is principally communication between the patient and their healthcare team.&lt;/p&gt;
-
-&lt;p&gt;The advantage of a monolithic system is that the patient portal can encrypt all communications between itself and the patient or their device(s) and appropriately manage the secure transmission of clinical information to and from other clinical systems within a wider healthcare enterprise.&lt;/p&gt;
-
-&lt;p&gt;The disadvantage of a monolithic system is similar to the problems experienced by users of closed systems like Compuserve and AOL; they are locked into using that system and potentially innovative smaller enterprises become excluded from the market. If a particular provider does not support data from a particular device, such as a new product to detect seizures occurring in a patient as they sleep, then that patient cannot share that data with their healthcare team. Finally, which system should be used? Should the patient choose? Should the organisation choose? And what about patients who are looked after by multiple organisations?&lt;/p&gt;
-
-&lt;h1 id=&quot;can-we-do-better&quot;&gt;Can we do better?&lt;/h1&gt;
-
-&lt;p&gt;The problem with healthcare data is that it is private and sensitive. So how can we make healthcare data more open and more accessible and yet keep that data safe and confidential? How can we connect the patient and their devices and everyone else involved, whatever their organisation? And if we want to make healthcare data more available, won’t we exacerbate our existing explosion of data and will need tools to make sense of that information. I don’t want to have to read through all of the day-to-day nursing notes recorded when a patient was an inpatient to find that critical piece of information.&lt;/p&gt;
-
-&lt;p&gt;We need systems that can make health information more widely available within our NHS network between NHS organisations, but that is insufficient. We also need to extend our reach to the patient, to other care providers such as social services and the third-sector.&lt;/p&gt;
-
-&lt;p&gt;So, what do we need?&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;A secure but open distributed infrastructure:
-    &lt;ul&gt;
-      &lt;li&gt;Solve the seemingly mutually exclusive goals of security and availability. I think the answer will have to come in a future blog post, but we need to consider how to make a secure, distributed, decentralised infrastructure on which open standards permit semantic interoperability between disparate systems. We think that there are some clever ways that this might be achieved.&lt;/li&gt;
-      &lt;li&gt;Can such a system adopt both a messaging function, in which electronic communication can be sent securely from one end-point to another, but also a publish-subscribe (multicast) model in which different services contribute and receive information about their patients?&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Support data standards and semantic interoperability with clinical modelling for data and process:
-    &lt;ul&gt;
-      &lt;li&gt;Build tools to capture structured data at the point-of-care, and make entering structured data easier to do than entering unstructured free text.&lt;/li&gt;
-      &lt;li&gt;Build tools to turn unstructured data into structured information by advances in natural language processing.&lt;/li&gt;
-      &lt;li&gt;Build tools to support making sense of large amounts of unstructured and structured information in a variety of different clinical, professional and personal contexts.&lt;/li&gt;
-      &lt;li&gt;Understand what we mean by a clinical service and a team, not defined by an organisation but how they &lt;em&gt;work together&lt;/em&gt; for a patient.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;Essentially, we need an “information superhighway” for healthcare, in which we can exchange communications securely and yet privately between multiple end-points&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;One of the problems with the secure exchange of information is that, while we can encrypt the contents of my message, the metadata (data about data) leaks confidential information:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/communication/msg-leaking-metadata.jpg&quot; alt=&quot;Msg Leaking Metadata&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;In this rather contrived example, you can see that I sent some information to the genito-urinary clinic and then received some information back. You can guess that a result was included as the laboratory has also been involved. You don’t need to see the contents to make some inferences about what is happening.&lt;/p&gt;
-
-&lt;p&gt;Leaking information via your metadata is even more problematic for electronic communications. If my patient sends and receives electronic communication to a HIV helpline address, that information tells me something important and leaks private information.&lt;/p&gt;
-
-&lt;p&gt;Any distributed system connecting patients and their devices to our healthcare enterprises needs to solve this privacy concern.&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;h4 id=&quot;further-reading&quot;&gt;Further reading&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/05/27/patientcare-epr.html&quot;&gt;Overview of my PatientCare EPR&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;{$ link _posts/2017-02-03-domain-drive-design.markdown %}&quot;&gt;Domain-driven design&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">This is part three of a 3-part series on designing future clinical information systems. Part 1 covers the importance of data models. Part 2 covers clinical modelling in relation to process and workflow. This part covers patient portals and the internet-of-things.</summary></entry></feed>
+&lt;p&gt;&lt;a name=&quot;snomed-understand&quot;&gt;b&lt;/a&gt;: I have turned the usual use of SNOMED-CT upside-down as a simple demonstration of using the ontology to derive semantic understanding in a &lt;a href=&quot;/clinical-informatics/2017/05/20/using-snomed-ct.html&quot;&gt;recent blog post&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">This blog post is from a talk I gave to the RCPE in December 2016.</summary></entry></feed>
