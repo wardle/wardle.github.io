@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>The &#39;fractal&#39; medical record</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://www.wardle.org/medical-records/2017/10/08/the-broken-medical-record.html">
+  <link rel="alternate" type="application/rss+xml" title="Health informatics and information technology" href="/feed.xml">
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-97389603-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="/">Health informatics and information technology</a>
+  
+  
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+           <a class="page-link" href="/">All posts</a>
+          
+            
+            
+            <a class="page-link" href="/projects/">Projects</a>
+            
+          
+            
+            
+            <a class="page-link" href="/about/">About</a>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">The &#39;fractal&#39; medical record</h1>
+    <p class="post-meta">
+      <time datetime="2017-10-08T04:14:15+01:00" itemprop="datePublished">
+        
+        8 October 2017
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p><img src="/images/fractal/mandelbrot.gif" alt="Mandelbrot" /></p>
+
+<p>Medical data are complex and heterogeneous with individual patient records combining multiple disparate sources of information including :</p>
+
+<ul>
+  <li>administrative data, scheduling and context (e.g. outpatient neurology clinic - movement disorders)</li>
+  <li>patient reported outcome and experience measures  (e.g. “I can walk”, “he was rude”)</li>
+  <li>clinical diagnostic, procedural and outcome measures    (e.g. “multiple sclerosis”)</li>
+  <li>diagnostic synthesis and management plans  (e.g. “offer a new high-risk disease modifying treatment”)</li>
+</ul>
+
+<p>Between those categories, it is possible that we can answer the what, who, how and possibly the why.</p>
+
+<p>What many people don’t realise is that the interpretation of medical data, irrespective of its form, depends, to a variable degree on everything else. The most important dependency, in my view, is the context in which that data were acquired. This need for interpretation is why the phrase, “the single source of truth”, when used in building health record software, is only a partially useful mantra; it hopefully encourages a data-focused, clinical modelling approach but it inappropriately suggests that there is a “single truth”.</p>
+
+<p>So you need to re-appraise how you consider, for example, “problem lists” - and understand that the meaning of “angina”, whether encoded as a consecutive array of letters of the alphabet (e.g. in English: “a-n-g-i-n-a” as free text) or encoded using a code from a medical terminology or classification system (e.g. in SNOMED-CT: Angina (disorder) SCTID: 194828000 with synonyms: Angina, Cardiac angina, Angina pectoris, Stenocardia,  Anginal syndrome, AP - Angina pectoris, Ischemic heart disease - angina, Ischaemic heart disease - angina,   Angina (disorder)) cannot be understood without contextual information, including the series of logical inferences that resulted in that diagnosis.</p>
+
+<p>In particular, you should regard a diagnosis of “angina” with skepticism if it was given by me, a consultant neurologist but you might trust my diagnosis of “myasthenia gravis” even if the antibody test for that condition is negative.</p>
+
+<p>Even data sourced from an accredited laboratory requires careful interpretation. A single test might be a false-negative result unless there is 100% sensitivity. Likewise, a positive test may be false-positive unless there is 100% specificity; either scenario would be extremely unusual indeed. In addition, tests, such as laboratory tests may be combined to improve their predictive power. It becomes even more complex as sensitivity and specificity depends on the <em>a priori</em> probability of that test in that population. As a result the interpretation of a test or combination of tests depends on the context in which those tests were performed. A positive test result performed as the result of screening a whole unselected population has less importance than a test performed in a patient suspected of having the disease in question.</p>
+
+<p>So if a laboratory test does not perfectly predict a disease, we can easily see how more subjective, opinion-based tests and diagnostic processes such as radiology or getting a clinical opinion in an outpatient clinic, will suffer from the same issues. In particular, if a report changes (and they do) or clinical opinions vary (fairly common) then “truth” becomes a poor conceptual foundation for our electronic health systems.</p>
+
+<p>The logical conclusion  is that there is no single “truth”, but instead a deeply hierarchical, nested inter-dependent, frequently correlated set of multi-dimensional data. Does it matter?</p>
+
+<h1 id="data-for-decision-making">Data for decision-making</h1>
+
+<p>I’ve written about measurement <a href="/clinical-informatics/2017/06/20/machine-learning-2.html">previously</a> concluding that medical data, whether a measurement of a physiological parameter, a laboratory test result or report from a radiological investigation, is useful only in <em>reducing the uncertainty around a decision</em>.</p>
+
+<p>As such, we perform measurements, of whatever type, to support decision making and conceptually, those decisions may be grouped into three broad categories:</p>
+
+<ul>
+  <li>the direct care of that patient</li>
+  <li>the care of groups of patients within our clinical service(s) and organisations</li>
+  <li>clinical research</li>
+</ul>
+
+<p>If we have measurements that don’t influence current or future decisions in any of these domains, then we must ask ourselves why are we performing and recording those measurements at all?</p>
+
+<p>Similarly, if we have imperfect measurements that are not 100% sensitive or 100% specific, then we have to ask, sensitive and specific to <em>what</em>? Realising this provides an important insight: when applied, say to clinical diagnosis, is that almost all of our measurements in medicine are as if we are looking at the truth out of the corner of our eye. We cannot see the <em>hidden truth</em> but a combination of our measurements are, together, governed by a few simpler variables or concepts that are actually the cause of the results of the measurements that we can measure. As a result, we hope that our measurements can be used to understand the <em>latent</em> variable(s) that are actually the hidden cause of those measurements.</p>
+
+<p>For example, sometimes we get an elevated C-reactive protein (CRP) result. It is usually raised in certain types of inflammatory or infectious disorders. It is like the smoke from a fire in a forest, we see the smoke from our helicopter but do not necessarily the cause of the fire. If the patient has had a cough for three days and has a fever, and when we listen to the chest there are crepitations in the right lower zone and the CRP is raised, the diagnosis is likely to be a community-acquired pneumonia. We have to take into account the <em>a priori</em> probability as well, which means that we consider common causes more frequently than rare causes. Likewise, if the patient has had a cough for three months then we might reach a different conclusion.</p>
+
+<p>As such, when we consider clinical diagnosis, our combination of multi-dimensional <em>measurements</em> is providing us with a probabilistic determination of a specific considered diagnosis. Over time and with experience, most clinicians build up a set of heuristics that imperfectly approximate this diagnostic process and learn a range of practical short-cuts in order to cope.</p>
+
+<p>It has always been a surprise to me that we have not yet developed tools to support this fundamentally complex and difficult problem; while we teach “red flags” to aid the identification of the unusual patient (e.g. a headache that is the worst ever headache), such decision-support aids remain crude.</p>
+
+<h1 id="nested-data">Nested data</h1>
+
+<p>When we know a patient has a history of angina and presents with chest pain, understanding how and why that <em>label</em> of “angina” was given is important. In fact, what does that label actually mean? Is it the diagnosis given by a consultant cardiologist or, inappropriately by a rather over-enthusiastic neurologist?</p>
+
+<p>We’re actually using the term “angina” to represent an approximate and subjective clinical concept as an abbreviation rather than endlessly writing down the multiple logical inferences made in order to determine that the patient suffered, for example, chest pain on exertion and had a stent placed for stenosis in her coronary circulation. It is a placeholder that actually hides a lot of potential complexity and permits professionals and patients to communicate and make decisions.</p>
+
+<p><img src="/images/fractal/angina-1.png" alt="Angina 1" /></p>
+
+<p>Here we see that a constellation of information (our measurements, binary choices or continuous variables) allows us to apply a pragmatic diagnostic label, “angina”.</p>
+
+<p>Except is that right? What is the point of that label unless it too is useful for future decision making? If I visit the catheter laboratory and ask my cardiology colleague for a coronary angiogram because a patient has “angina”, they’ll want to interrogate that diagnostic label in much greater detail to make a decision about whether a patient should have a specific intervention. They will want to know more than simply “angina”!</p>
+
+<p>Our measurements and our labels are therefore interpretable and usable only in a specific context and for a specific set of circumstances in order to make a decision to effect care. Indeed, for future care, perhaps the diagnosis of “angina” is less useful than an understanding of pathology : ie whether the patient has significant arteriosclerotic vascular disease or not; after all, perhaps that is the biggest predictor of future cardiac events?</p>
+
+<p><img src="/images/fractal/angina-2.png" alt="Angina 2" /></p>
+
+<p>Here we see <em>how</em> we use information when a patient presents to the emergency department with new crushing chest pain. Clinical decisions at the front door can simply use our placeholder diagnostic lists in order to action safe care and combine that historic information (that the patient has proven coronary artery disease) together with new information to make a diagnosis of acute myocardial infarction.</p>
+
+<h1 id="fractal-data">Fractal data</h1>
+
+<p><img src="/images/fractal/angina-3.png" alt="Angina 3" /></p>
+
+<p>So now we see a repeated pattern in our data used for clinical decision making. Not only is our information nested, but we see that there are similarities in our data at different levels of detail. This repeating pattern of data at different levels of our decision making hierarchy is similar to that seen in <em>fractal data</em>. In essence, a combination of measurements (data) are used to identify a hidden (latent) trait that itself is difficult to measure to inform a clinical reasoning process. The end-result of that clinical reasoning may be itself used in future clinical reasoning. This highlights the naturally <em>recursive</em> nature of medical information.</p>
+
+<p>Importantly, an understanding of the hierarchical nature of clinical decision making allows us to consider the considerable redundancy and correlations seen between different covariates; for instance both having a drug-eluting coronary stent placed in 2014 and a diagnosis of unstable angina both flag an underlying (more difficult to measure) latent trait, namely that of arteriosclerotic coronary artery disease. Those characteristics are therefore highly correlated and may be redundant in a single patient.</p>
+
+<h1 id="decision-making---by-humans-and-by-machines">Decision making - by humans and by machines</h1>
+
+<p>Redundancy and latent traits are important when we consider what information needs to be made available at the time of a clinical decision. How do we make sense of large volumes of hierarchical, highly correlated fractal-type data and decide what needs to be seen by a clinician in a particular clinical scenario, or indeed what needs to be used by a machine to learn to appropriately make a diagnosis or decide on a treatment plan? We cannot show or indeed use all information, and not all information is in fact useful at any particular clinical context. As such, we should be considering techniques to reduce the redundant dimensions that exist within healthcare data. For data mining and “big data” processing, we should be exploring dimensionality reduction techniques in order to make sense of an overload of redundant medical information.</p>
+
+<p>Importantly, we need clinical systems to appropriately model the clinical decision making process and understand that there is no single “truth” but a chain of clinical reasoning at a given point in time that should take into account any and all variables that influence the results of a clinical decision.</p>
+
+<p>Similarly, this is where machine learning and more general purpose artificial intelligence can most help us in our day-to-day clinical work. We need tools to help us understand what our measurements, our data, actually mean and how, in combination, they hide latent variables that should truly determine our next clinical decision. Our knowledge of this fractal-type pattern of clinical decision making should inform how we can generate training data for machine learning and apply those algorithms in the real-world. We should be aiming to replace our informal human heuristics, those short-cuts we use to permit decision-making at a time of significant uncertainty and instead build a data-driven approach to clinical reasoning.</p>
+
+<p>We now have access to sufficient computing power to allow machine supported clinical decision making but those algorithms need to be trained. As such, we must study and understand clinical decision making, adequately model both clinical data and clinical reasoning and make those data available for machine learning so we can build the next generation of tools to improve medical care for all of us.</p>
+
+<p><em>Mark</em></p>
+
+<hr />
+
+<p>Notes:</p>
+
+<ul>
+  <li>
+    <p>The term “fractal” was <a href="https://en.wikipedia.org/wiki/Fractal">coined by Mandelbrot</a> who “based it on the Latin frāctus meaning ‘broken’ or ‘fractured’, and used it to extend the concept of theoretical fractional dimensions to geometric patterns in nature.” I’ve therefore titled this blog post the broken medical record for two different reasons: 1) medical records are broken and fragmented in the truest sense of the word, 2) they have similarities to fractal data as they are deeply hierarchical and nested with clinical reasoning built upon chains of previous reasoning (e.g. a process of clinical reasoning takes place in order to order an investigation, the radiologist reporting the scan performs her own reasoning based on the referral and the actual imaging, a receiving clinician repeats the process now integrating all of those chains of reasoning).</p>
+  </li>
+  <li>
+    <p>(Mandelbrot generated by <a href="//commons.wikimedia.org/w/index.php?title=User:Mjdean&amp;action=edit&amp;redlink=1" class="new" title="User:Mjdean (page does not exist)">Michael James Dean</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=17070006">Link</a>)</p>
+  </li>
+</ul>
+
+
+  </div>
+
+  
+</article>
+        
+      </div>
+    </main>
+    
+    
+    
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Health informatics and information technology</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Health informatics and information technology
+            
+            </li>
+            
+            <li><a href="mailto:mark@wardle.org">mark@wardle.org</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/wardle"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">wardle</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/mwardle"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">mwardle</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

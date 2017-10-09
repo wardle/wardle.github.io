@@ -1,5 +1,101 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-09-30T12:31:27+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
-</subtitle><entry><title type="html">Information at the right time…</title><link href="https://www.wardle.org/analytics/2017/09/29/information-at-the-right-time.html" rel="alternate" type="text/html" title="Information at the right time..." /><published>2017-09-29T20:18:00+01:00</published><updated>2017-09-29T20:18:00+01:00</updated><id>https://www.wardle.org/analytics/2017/09/29/information-at-the-right-time</id><content type="html" xml:base="https://www.wardle.org/analytics/2017/09/29/information-at-the-right-time.html">&lt;p&gt;It is surprising how my interests have converged and supported one another over time: computing, technology and programming; data analysis, clinical medicine, neuroscience, clinical neurology and genetics; undergraduate assessments and psychometrics.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-10-09T14:28:49+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</subtitle><entry><title type="html">The ‘fractal’ medical record</title><link href="https://www.wardle.org/medical-records/2017/10/08/the-broken-medical-record.html" rel="alternate" type="text/html" title="The 'fractal' medical record" /><published>2017-10-08T04:14:15+01:00</published><updated>2017-10-08T04:14:15+01:00</updated><id>https://www.wardle.org/medical-records/2017/10/08/the-broken-medical-record</id><content type="html" xml:base="https://www.wardle.org/medical-records/2017/10/08/the-broken-medical-record.html">&lt;p&gt;&lt;img src=&quot;/images/fractal/mandelbrot.gif&quot; alt=&quot;Mandelbrot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Medical data are complex and heterogeneous with individual patient records combining multiple disparate sources of information including :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;administrative data, scheduling and context (e.g. outpatient neurology clinic - movement disorders)&lt;/li&gt;
+  &lt;li&gt;patient reported outcome and experience measures  (e.g. “I can walk”, “he was rude”)&lt;/li&gt;
+  &lt;li&gt;clinical diagnostic, procedural and outcome measures    (e.g. “multiple sclerosis”)&lt;/li&gt;
+  &lt;li&gt;diagnostic synthesis and management plans  (e.g. “offer a new high-risk disease modifying treatment”)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Between those categories, it is possible that we can answer the what, who, how and possibly the why.&lt;/p&gt;
+
+&lt;p&gt;What many people don’t realise is that the interpretation of medical data, irrespective of its form, depends, to a variable degree on everything else. The most important dependency, in my view, is the context in which that data were acquired. This need for interpretation is why the phrase, “the single source of truth”, when used in building health record software, is only a partially useful mantra; it hopefully encourages a data-focused, clinical modelling approach but it inappropriately suggests that there is a “single truth”.&lt;/p&gt;
+
+&lt;p&gt;So you need to re-appraise how you consider, for example, “problem lists” - and understand that the meaning of “angina”, whether encoded as a consecutive array of letters of the alphabet (e.g. in English: “a-n-g-i-n-a” as free text) or encoded using a code from a medical terminology or classification system (e.g. in SNOMED-CT: Angina (disorder) SCTID: 194828000 with synonyms: Angina, Cardiac angina, Angina pectoris, Stenocardia,  Anginal syndrome, AP - Angina pectoris, Ischemic heart disease - angina, Ischaemic heart disease - angina,   Angina (disorder)) cannot be understood without contextual information, including the series of logical inferences that resulted in that diagnosis.&lt;/p&gt;
+
+&lt;p&gt;In particular, you should regard a diagnosis of “angina” with skepticism if it was given by me, a consultant neurologist but you might trust my diagnosis of “myasthenia gravis” even if the antibody test for that condition is negative.&lt;/p&gt;
+
+&lt;p&gt;Even data sourced from an accredited laboratory requires careful interpretation. A single test might be a false-negative result unless there is 100% sensitivity. Likewise, a positive test may be false-positive unless there is 100% specificity; either scenario would be extremely unusual indeed. In addition, tests, such as laboratory tests may be combined to improve their predictive power. It becomes even more complex as sensitivity and specificity depends on the &lt;em&gt;a priori&lt;/em&gt; probability of that test in that population. As a result the interpretation of a test or combination of tests depends on the context in which those tests were performed. A positive test result performed as the result of screening a whole unselected population has less importance than a test performed in a patient suspected of having the disease in question.&lt;/p&gt;
+
+&lt;p&gt;So if a laboratory test does not perfectly predict a disease, we can easily see how more subjective, opinion-based tests and diagnostic processes such as radiology or getting a clinical opinion in an outpatient clinic, will suffer from the same issues. In particular, if a report changes (and they do) or clinical opinions vary (fairly common) then “truth” becomes a poor conceptual foundation for our electronic health systems.&lt;/p&gt;
+
+&lt;p&gt;The logical conclusion  is that there is no single “truth”, but instead a deeply hierarchical, nested inter-dependent, frequently correlated set of multi-dimensional data. Does it matter?&lt;/p&gt;
+
+&lt;h1 id=&quot;data-for-decision-making&quot;&gt;Data for decision-making&lt;/h1&gt;
+
+&lt;p&gt;I’ve written about measurement &lt;a href=&quot;/clinical-informatics/2017/06/20/machine-learning-2.html&quot;&gt;previously&lt;/a&gt; concluding that medical data, whether a measurement of a physiological parameter, a laboratory test result or report from a radiological investigation, is useful only in &lt;em&gt;reducing the uncertainty around a decision&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;As such, we perform measurements, of whatever type, to support decision making and conceptually, those decisions may be grouped into three broad categories:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;the direct care of that patient&lt;/li&gt;
+  &lt;li&gt;the care of groups of patients within our clinical service(s) and organisations&lt;/li&gt;
+  &lt;li&gt;clinical research&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If we have measurements that don’t influence current or future decisions in any of these domains, then we must ask ourselves why are we performing and recording those measurements at all?&lt;/p&gt;
+
+&lt;p&gt;Similarly, if we have imperfect measurements that are not 100% sensitive or 100% specific, then we have to ask, sensitive and specific to &lt;em&gt;what&lt;/em&gt;? Realising this provides an important insight: when applied, say to clinical diagnosis, is that almost all of our measurements in medicine are as if we are looking at the truth out of the corner of our eye. We cannot see the &lt;em&gt;hidden truth&lt;/em&gt; but a combination of our measurements are, together, governed by a few simpler variables or concepts that are actually the cause of the results of the measurements that we can measure. As a result, we hope that our measurements can be used to understand the &lt;em&gt;latent&lt;/em&gt; variable(s) that are actually the hidden cause of those measurements.&lt;/p&gt;
+
+&lt;p&gt;For example, sometimes we get an elevated C-reactive protein (CRP) result. It is usually raised in certain types of inflammatory or infectious disorders. It is like the smoke from a fire in a forest, we see the smoke from our helicopter but do not necessarily the cause of the fire. If the patient has had a cough for three days and has a fever, and when we listen to the chest there are crepitations in the right lower zone and the CRP is raised, the diagnosis is likely to be a community-acquired pneumonia. We have to take into account the &lt;em&gt;a priori&lt;/em&gt; probability as well, which means that we consider common causes more frequently than rare causes. Likewise, if the patient has had a cough for three months then we might reach a different conclusion.&lt;/p&gt;
+
+&lt;p&gt;As such, when we consider clinical diagnosis, our combination of multi-dimensional &lt;em&gt;measurements&lt;/em&gt; is providing us with a probabilistic determination of a specific considered diagnosis. Over time and with experience, most clinicians build up a set of heuristics that imperfectly approximate this diagnostic process and learn a range of practical short-cuts in order to cope.&lt;/p&gt;
+
+&lt;p&gt;It has always been a surprise to me that we have not yet developed tools to support this fundamentally complex and difficult problem; while we teach “red flags” to aid the identification of the unusual patient (e.g. a headache that is the worst ever headache), such decision-support aids remain crude.&lt;/p&gt;
+
+&lt;h1 id=&quot;nested-data&quot;&gt;Nested data&lt;/h1&gt;
+
+&lt;p&gt;When we know a patient has a history of angina and presents with chest pain, understanding how and why that &lt;em&gt;label&lt;/em&gt; of “angina” was given is important. In fact, what does that label actually mean? Is it the diagnosis given by a consultant cardiologist or, inappropriately by a rather over-enthusiastic neurologist?&lt;/p&gt;
+
+&lt;p&gt;We’re actually using the term “angina” to represent an approximate and subjective clinical concept as an abbreviation rather than endlessly writing down the multiple logical inferences made in order to determine that the patient suffered, for example, chest pain on exertion and had a stent placed for stenosis in her coronary circulation. It is a placeholder that actually hides a lot of potential complexity and permits professionals and patients to communicate and make decisions.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/fractal/angina-1.png&quot; alt=&quot;Angina 1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here we see that a constellation of information (our measurements, binary choices or continuous variables) allows us to apply a pragmatic diagnostic label, “angina”.&lt;/p&gt;
+
+&lt;p&gt;Except is that right? What is the point of that label unless it too is useful for future decision making? If I visit the catheter laboratory and ask my cardiology colleague for a coronary angiogram because a patient has “angina”, they’ll want to interrogate that diagnostic label in much greater detail to make a decision about whether a patient should have a specific intervention. They will want to know more than simply “angina”!&lt;/p&gt;
+
+&lt;p&gt;Our measurements and our labels are therefore interpretable and usable only in a specific context and for a specific set of circumstances in order to make a decision to effect care. Indeed, for future care, perhaps the diagnosis of “angina” is less useful than an understanding of pathology : ie whether the patient has significant arteriosclerotic vascular disease or not; after all, perhaps that is the biggest predictor of future cardiac events?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/fractal/angina-2.png&quot; alt=&quot;Angina 2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here we see &lt;em&gt;how&lt;/em&gt; we use information when a patient presents to the emergency department with new crushing chest pain. Clinical decisions at the front door can simply use our placeholder diagnostic lists in order to action safe care and combine that historic information (that the patient has proven coronary artery disease) together with new information to make a diagnosis of acute myocardial infarction.&lt;/p&gt;
+
+&lt;h1 id=&quot;fractal-data&quot;&gt;Fractal data&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/fractal/angina-3.png&quot; alt=&quot;Angina 3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So now we see a repeated pattern in our data used for clinical decision making. Not only is our information nested, but we see that there are similarities in our data at different levels of detail. This repeating pattern of data at different levels of our decision making hierarchy is similar to that seen in &lt;em&gt;fractal data&lt;/em&gt;. In essence, a combination of measurements (data) are used to identify a hidden (latent) trait that itself is difficult to measure to inform a clinical reasoning process. The end-result of that clinical reasoning may be itself used in future clinical reasoning. This highlights the naturally &lt;em&gt;recursive&lt;/em&gt; nature of medical information.&lt;/p&gt;
+
+&lt;p&gt;Importantly, an understanding of the hierarchical nature of clinical decision making allows us to consider the considerable redundancy and correlations seen between different covariates; for instance both having a drug-eluting coronary stent placed in 2014 and a diagnosis of unstable angina both flag an underlying (more difficult to measure) latent trait, namely that of arteriosclerotic coronary artery disease. Those characteristics are therefore highly correlated and may be redundant in a single patient.&lt;/p&gt;
+
+&lt;h1 id=&quot;decision-making---by-humans-and-by-machines&quot;&gt;Decision making - by humans and by machines&lt;/h1&gt;
+
+&lt;p&gt;Redundancy and latent traits are important when we consider what information needs to be made available at the time of a clinical decision. How do we make sense of large volumes of hierarchical, highly correlated fractal-type data and decide what needs to be seen by a clinician in a particular clinical scenario, or indeed what needs to be used by a machine to learn to appropriately make a diagnosis or decide on a treatment plan? We cannot show or indeed use all information, and not all information is in fact useful at any particular clinical context. As such, we should be considering techniques to reduce the redundant dimensions that exist within healthcare data. For data mining and “big data” processing, we should be exploring dimensionality reduction techniques in order to make sense of an overload of redundant medical information.&lt;/p&gt;
+
+&lt;p&gt;Importantly, we need clinical systems to appropriately model the clinical decision making process and understand that there is no single “truth” but a chain of clinical reasoning at a given point in time that should take into account any and all variables that influence the results of a clinical decision.&lt;/p&gt;
+
+&lt;p&gt;Similarly, this is where machine learning and more general purpose artificial intelligence can most help us in our day-to-day clinical work. We need tools to help us understand what our measurements, our data, actually mean and how, in combination, they hide latent variables that should truly determine our next clinical decision. Our knowledge of this fractal-type pattern of clinical decision making should inform how we can generate training data for machine learning and apply those algorithms in the real-world. We should be aiming to replace our informal human heuristics, those short-cuts we use to permit decision-making at a time of significant uncertainty and instead build a data-driven approach to clinical reasoning.&lt;/p&gt;
+
+&lt;p&gt;We now have access to sufficient computing power to allow machine supported clinical decision making but those algorithms need to be trained. As such, we must study and understand clinical decision making, adequately model both clinical data and clinical reasoning and make those data available for machine learning so we can build the next generation of tools to improve medical care for all of us.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Notes:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;The term “fractal” was &lt;a href=&quot;https://en.wikipedia.org/wiki/Fractal&quot;&gt;coined by Mandelbrot&lt;/a&gt; who “based it on the Latin frāctus meaning ‘broken’ or ‘fractured’, and used it to extend the concept of theoretical fractional dimensions to geometric patterns in nature.” I’ve therefore titled this blog post the broken medical record for two different reasons: 1) medical records are broken and fragmented in the truest sense of the word, 2) they have similarities to fractal data as they are deeply hierarchical and nested with clinical reasoning built upon chains of previous reasoning (e.g. a process of clinical reasoning takes place in order to order an investigation, the radiologist reporting the scan performs her own reasoning based on the referral and the actual imaging, a receiving clinician repeats the process now integrating all of those chains of reasoning).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;(Mandelbrot generated by &lt;a href=&quot;//commons.wikimedia.org/w/index.php?title=User:Mjdean&amp;amp;action=edit&amp;amp;redlink=1&quot; class=&quot;new&quot; title=&quot;User:Mjdean (page does not exist)&quot;&gt;Michael James Dean&lt;/a&gt; - &lt;span class=&quot;int-own-work&quot; lang=&quot;en&quot;&gt;Own work&lt;/span&gt;, &lt;a href=&quot;https://creativecommons.org/licenses/by-sa/3.0&quot; title=&quot;Creative Commons Attribution-Share Alike 3.0&quot;&gt;CC BY-SA 3.0&lt;/a&gt;, &lt;a href=&quot;https://commons.wikimedia.org/w/index.php?curid=17070006&quot;&gt;Link&lt;/a&gt;)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Information at the right time…</title><link href="https://www.wardle.org/analytics/2017/09/29/information-at-the-right-time.html" rel="alternate" type="text/html" title="Information at the right time..." /><published>2017-09-29T20:18:00+01:00</published><updated>2017-09-29T20:18:00+01:00</updated><id>https://www.wardle.org/analytics/2017/09/29/information-at-the-right-time</id><content type="html" xml:base="https://www.wardle.org/analytics/2017/09/29/information-at-the-right-time.html">&lt;p&gt;It is surprising how my interests have converged and supported one another over time: computing, technology and programming; data analysis, clinical medicine, neuroscience, clinical neurology and genetics; undergraduate assessments and psychometrics.&lt;/p&gt;
 
 &lt;p&gt;In this blog post, I want to discuss the fundamental importance of data in clinical medicine and the overlap between direct care, service management and improvement and clinical research. The overlap and relationships between these three are shown in this schematic:&lt;/p&gt;
 
@@ -879,159 +975,4 @@ barplot(as.matrix(sp[,c(2:7,12)]), beside=T,
 
 &lt;p&gt;I’m now working on scaling out this suite of products and the underlying data-driven principles of the architecture more generally. My goal is to create an open, semantically interoperable architecture for healthcare.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">I spent today at a medical conference relating to motor neurone disease. Today’s conference reinforced my previously held beliefs about the best strategy for healthcare information technology improvement.</summary></entry><entry><title type="html">Using data for patient safety</title><link href="https://www.wardle.org/clinical-informatics/2017/06/06/using-data-patient-safety.html" rel="alternate" type="text/html" title="Using data for patient safety" /><published>2017-06-06T16:42:00+01:00</published><updated>2017-06-06T16:42:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/06/06/using-data-patient-safety</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/06/06/using-data-patient-safety.html">&lt;p&gt;&lt;em&gt;This blog post is from a talk I gave to the RCPE in December 2016.&lt;/em&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;In healthcare, we use data for:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;the day-to-day care of individual patients&lt;/li&gt;
-  &lt;li&gt;the management and governance of our clinical services&lt;/li&gt;
-  &lt;li&gt;to support clinical research and innovation.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;As such, the effective use of data is critical for patient safety, both now and in the future. So, you might expect healthcare services to have highly developed systems to allow the recording of structured longitudinal observational data?&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/pile-of-notes-2.png&quot; alt=&quot;Pile Of Notes 2&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Well, no we don’t. Instead, we largely have expensive paper records, poorly accessible with no support for team working. Paper records frequently end up poorly structured containing lots of data but in a format difficult to use in any systematic, safe or indeed automated way.&lt;/p&gt;
-
-&lt;h1 id=&quot;supporting-your-practice&quot;&gt;Supporting your practice&lt;/h1&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/qMsPXSMTpFI&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“You’re a victim of it or a triumph because of it. The human mind simply cannot carry all the information without error so the record becomes part of your practice”&lt;/p&gt;
-
-  &lt;p&gt;“if you can’t audit a thing for quality, it means you do not have the means to produce quality”&lt;/p&gt;
-
-  &lt;p&gt;Dr Larry Weed, Internal Medicine Grand Rounds, 1971&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The information in the medical record isn’t something separate to the day-to-day care of an individual patient or indeed a group of patients, but instead is part of that care. However, we clinicians have historically been neglected and the information we need to run our services is not available in a routine and systematic way.&lt;/p&gt;
-
-&lt;p&gt;We should not capture information unless it is useful and, as its most fundamental, data are only useful if they influence a decision or reduce uncertainty in relation to that decision, whether it is a decision for a single patient sitting in front of you or a whole group of patients sharing some defined characteristics.&lt;/p&gt;
-
-&lt;h1 id=&quot;what-is-already-collected&quot;&gt;What is already collected?&lt;/h1&gt;
-
-&lt;p&gt;Since the Korner report was published in 1982, there has been a commitment to routinely collect a national set of data for the management of the NHS.&lt;/p&gt;
-
-&lt;p&gt;As a result the health service &lt;em&gt;does&lt;/em&gt; collect lots of data, such as the hospital episode statistics (HES):&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/hes-data.png&quot; alt=&quot;Hes Data&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;It is illuminating to read contemporary criticism of that report such as that from &lt;a href=&quot;http://www.bmj.com/content/285/6350/1227&quot;&gt;Sir Douglas Black&lt;/a&gt;, then RCP president who noted:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“the focus of the inquiry seems to have been on the use of information in management, not in any way as a criticism (improvement in management is both possible and desirable) but to underline that the report must be judged in that context and not in relation to other uses of information in clinical medicine or clinical epidemiology.”&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“The recommendation that diagnostic data should be collected on all patients covered by the system is to be welcomed; its omission would make these scheme &lt;em&gt;even more obviously&lt;/em&gt; a management exercise, thereby lessening its appeal to the active clinician” (my emphasis added)&lt;/p&gt;
-
-  &lt;p&gt;Sir Douglas Black, 1982.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;I think it is reasonable to say that the majority of clinicians have not engaged with these data, nor have they used those data to support their own practice or indeed plan their own service developments. In addition, while there are clinical coders recording diagnostic and procedural codes for inpatient episodes of care, no such information is recorded for outpatient clinics. As a result, we know how many patients are seen in our outpatient clinics, but have little idea why they are seen or how they fare. Importantly, most hospital patient administrative systems do not record information relating to any other type of patient encounter, such as telephone calls&lt;sup&gt;&lt;a href=&quot;#telephone&quot;&gt;a&lt;/a&gt;&lt;/sup&gt;, home visits or electronic communication.&lt;/p&gt;
-
-&lt;p&gt;The limitations of HES data have been widely known; perhaps the most important limitation is that it is incomplete. As a result, those data bear little resemblance to what happens in real-life, do not recognise team-working and are not recorded by health professionals. Consequently, health professionals rarely see the data, and when they do, they scoff at its inaccuracy.&lt;/p&gt;
-
-&lt;p&gt;But this isn’t of only academic interest; this is serious and important to our health services.&lt;/p&gt;
-
-&lt;p&gt;Please read this extract from the Bristol children’s heart surgery report 16 years ago (2001). Are you confident that we have addressed this within the NHS in 2017?&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;The various clinical systems, many of them paper based, differed from one another and had no relationship with the administrative hospital-wide systems. The funding made available in the late 1980s and early 1990s for medical and later clinical audit helped to reinforce this separation by making available to groups of clinicians money for small local computer systems. The lack of any connection between these different systems, one administrative, the others clinical, for collecting data cannot be explained solely on the basis of some technical or technological reason. It was just as strongly a reflection of a mindset that clinical matters were the sole domain of clinicians and non-clinical matters, to do with the management of resources and with the movement of patients into and through the hospital, were the preserve of managers and administrators.&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;http://webarchive.nationalarchives.gov.uk/20090811143745/http:/www.bristol-inquiry.org.uk/final_report/the_report.pdf&quot;&gt;Bristol Heart Enquiry, 2001&lt;/a&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&quot;so-is-the-answer-another-registry&quot;&gt;So, is the answer another registry?&lt;/h1&gt;
-
-&lt;p&gt;The answer for many clinical services appears to have been the creation of bespoke, specialty or disease-specific registries. Such registries are often created by a particular medical or surgical specialty, a disease-specific organisation such as a charity or an academic centre looking to build a cohort of patients for clinical research.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/plurality-of-registries.jpg&quot; alt=&quot;Plurality Of Registries&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The problems with dedicated disease or speciality-specific registries are:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;there are lots of them, so potentially lots of disparate systems&lt;/li&gt;
-  &lt;li&gt;not embedded in day-to-day workflow&lt;/li&gt;
-  &lt;li&gt;sometimes little feedback, result or reward, particularly in any timely manner&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/one-way-registry.png&quot; alt=&quot;One Way Registry&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;When I am in clinic, I might see consecutive patients with epilepsy, chronic fatigue syndrome, headache, and then multiple sclerosis. How can I possibly use a different clinical system for each individual patient, and what should I do if a patient has more than one problem!&lt;/p&gt;
-
-&lt;p&gt;The most important disadvantage is the lack of timely feedback for users. All clinical systems must provide value to the users of that system, with the value of a system arithmetically divided by the length of time it takes to return that value back to the user. If I am going to spend time entering information, that information must create value immediately so that we create a virtuous cycle of continuous data improvement.&lt;/p&gt;
-
-&lt;p&gt;For example, in stroke medicine, we have the &lt;a href=&quot;https://www.strokeaudit.org&quot;&gt;Sentinal Stroke National Audit Programme (SSNAP)&lt;/a&gt;. This is a large-scale national audit project in which teams of health professionals perform notes review, completing data collection forms answering questions to derive data on outcomes such as “Median number of minutes per day on which physiotherapy is received”. The aggregated results for a region and comparison of these indicators with other regions are then disseminated months later.&lt;/p&gt;
-
-&lt;p&gt;Instead, we need systems in place that can answer that question for our current inpatients today so that, for this example, our physiotherapy colleagues can identify those patients who need to receive physiotherapy. To achieve real-time dashboards of these clinical indicators, we must provide appropriate information technology systems so that we can embed the routine and systematic collection of data into our day-to-day processes to capture data as a side-effect of our direct care, and not as an afterthought once care has been provided.&lt;/p&gt;
-
-&lt;h1 id=&quot;so-what-is-the-answer&quot;&gt;So what is the answer?&lt;/h1&gt;
-
-&lt;p&gt;We need to be ambitious and demand systems that enable intelligent and prudent healthcare. We need to start with &lt;a href=&quot;/clinical-informatics/2017/06/03/designing-future-1.html&quot;&gt;understanding our problems&lt;/a&gt;, and design our clinical information systems to solve those problems. As clinicians, we need to take ownership of the data on our patients and make data collection routine.&lt;/p&gt;
-
-&lt;p&gt;Importantly, taking a domain-driven approach to solving clinical information system design results in boiling down most of our data problems into two broad categories:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Cohorts&lt;/li&gt;
-  &lt;li&gt;Outcomes&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;A cohort is a group of patients who share a defining characteristic, such as the same diagnosis, symptom, clinical finding, or receipt of the same procedure or treatment. I have written about the &lt;a href=&quot;/clinical-informatics/2017/04/28/importance-of-cohorts.html&quot;&gt;importance of defining cohorts previously&lt;/a&gt; and will not duplicate that post here except to say that SNOMED-CT, a comprehensive and modern terminology provides a hierarchical ontology. As a result, we can record that a patient has “Addison’s disease” (concept identifier 363732003) and determine algorithmically, by virtue of the ontology, that the patient has a type of “hypoadrenalism” (concept identifier 111563005). As such, we can then potentially identify all patients with hypoadrenalism even if they have been recorded as having “Addison’s disease”.&lt;sup&gt;&lt;a href=&quot;#snomed-understand&quot;&gt;b&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-
-&lt;p&gt;Value-based healthcare is predicated upon understanding and improving our patients’ health outcomes. As such, the systematic and routine collection of outcomes must underpin everything we do; what point in doing a hip replacement if we do not assess how our patient fares? Outcome data may be recorded by health professionals, but the most important outcomes are those that address the needs of our patients and as a result, patient-reported outcomes are critical in understanding how to configure and how to monitor our clinical services. In addition, there are other techniques that provide compelling real-world measures of outcome such as return to employment, need for care, long-term dependency and frequency of complications which should be combined with our other data in order to build well-rounded, comprehensive longitudinal measures of outcomes.&lt;/p&gt;
-
-&lt;p&gt;Importantly, these two broad categories are mutually dependent. How can we interpret quality of life information without an understanding of the patient characteristics?&lt;/p&gt;
-
-&lt;p&gt;As such, SNOMED-CT permits us to understand our cohorts and partially allows us to record patient outcomes, but we must supplement SNOMED-CT with the routine collection of outcome data by professionals and by patients using a variety of disease/procedure and generic outcome tools.&lt;/p&gt;
-
-&lt;h1 id=&quot;routine-collection-of-data&quot;&gt;Routine collection of data&lt;/h1&gt;
-
-&lt;p&gt;So how can we build the right tools for health professionals and patients to allow the routine and systematic collection of data to support our cohorts and monitor our outcomes? Well, I’ve been trying to do this since 2009….&lt;/p&gt;
-
-&lt;p&gt;Here is an example of recording diagnoses:&lt;/p&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/Cppjedy-hMo&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;Here we routinely record the toxin, dose and site of injections for our botulinum toxin clinic. It saves time for the clinician, because we can then generate the letter to the general practitioner automatically.&lt;/p&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/tgw4FRAiRVs&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;Behind the scenes, each click records data as a SNOMED-CT coded procedure and site and drug.&lt;/p&gt;
-
-&lt;p&gt;And here, my iPad application collects patient reported outcome measures in the clinic and makes them immediately available to the clinician:&lt;/p&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/GTo0fGHgoIA&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/pd-data.png&quot; alt=&quot;Pd Data&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/pd-data-letter.png&quot; alt=&quot;Pd Data Letter&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;how-can-do-this-at-scale&quot;&gt;How can do this at scale?&lt;/h1&gt;
-
-&lt;p&gt;Importantly, my software records highly structured data using SNOMED-CT and an open information model. As such, documents created using the system consist of a binary blob of data representing a PDF representation as well as a computer-readable data structure recording diagnoses, problems, procedures and interventions in a standardised way. The problem is that, presently, while I expose these data, there are no other applications running in the live clinical environment that are able to interact, yet.&lt;/p&gt;
-
-&lt;p&gt;We need to collect these data across all of our organisations and services:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/care-plans/patient-data-cohorts.png&quot; alt=&quot;Patient Data Cohorts&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;As such, we must stop thinking at the scale of individual services, diseases and organisations and instead recognise that we must support interoperability between multiple disparate clinical information systems across enterprises. This requires action to define appropriate data standards and data exchange, with the adoption of terminology such as SNOMED-CT and LOINC, the use of defined information models such as HL7 FHIR and openEHR.&lt;/p&gt;
-
-&lt;p&gt;Such standards must be mandated for new developments to avoid vendor lock-in, and ideally we should be building vendor-neutral archives of data that other applications, whether in-house or from third-parties, can use for data persistence and retrieval.&lt;/p&gt;
-
-&lt;p&gt;The design of clinical systems must begin with the patient and support the provision of their care irrespective of whether they begin their journey in one organisation and continue it in another. Similarly, we need to train a cadre of experts in health informatics in order to ensure that the routine use of open, standards-backed interoperable information for healthcare is given priority in system development instead of a traditional focus on information for the &lt;em&gt;management&lt;/em&gt; of an individual organisation.&lt;/p&gt;
-
-&lt;p&gt;Most importantly, if you are a health professional, you must start to demand more information technology in order to support your day-to-day work looking after patients. You need systems to allow the rapid and routine collection of structured data and to be given the required tools in order to make sense of those data for your patient and your services with data linkage and realtime clinical dashboards for your services, your cohorts and your outcomes.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h1&gt;
-
-&lt;p&gt;&lt;a name=&quot;telephone&quot;&gt;a&lt;/a&gt;: The telephone was patented in 1876.&lt;/p&gt;
-
-&lt;p&gt;&lt;a name=&quot;snomed-understand&quot;&gt;b&lt;/a&gt;: I have turned the usual use of SNOMED-CT upside-down as a simple demonstration of using the ontology to derive semantic understanding in a &lt;a href=&quot;/clinical-informatics/2017/05/20/using-snomed-ct.html&quot;&gt;recent blog post&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">This blog post is from a talk I gave to the RCPE in December 2016.</summary></entry></feed>
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">I spent today at a medical conference relating to motor neurone disease. Today’s conference reinforced my previously held beliefs about the best strategy for healthcare information technology improvement.</summary></entry></feed>
