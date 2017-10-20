@@ -1,5 +1,170 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-10-09T14:45:52+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
-</subtitle><entry><title type="html">The ‘fractal’ medical record</title><link href="https://www.wardle.org/medical-records/2017/10/08/the-broken-medical-record.html" rel="alternate" type="text/html" title="The 'fractal' medical record" /><published>2017-10-08T04:14:15+01:00</published><updated>2017-10-08T04:14:15+01:00</updated><id>https://www.wardle.org/medical-records/2017/10/08/the-broken-medical-record</id><content type="html" xml:base="https://www.wardle.org/medical-records/2017/10/08/the-broken-medical-record.html">&lt;p&gt;&lt;img src=&quot;/images/fractal/mandelbrot.gif&quot; alt=&quot;Mandelbrot&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-10-20T16:00:08+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</subtitle><entry><title type="html">Data-driven healthcare: integration</title><link href="https://www.wardle.org/clinical-informatics/2017/10/19/data-driven.html" rel="alternate" type="text/html" title="Data-driven healthcare: integration" /><published>2017-10-19T23:22:22+01:00</published><updated>2017-10-19T23:22:22+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/10/19/data-driven</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/10/19/data-driven.html">&lt;p&gt;This post is from a talk I gave at the inaugural Digital Health and Care Conference at the Principality Stadium in Cardiff, Wales on the 19th October 2017&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.001.jpeg&quot; alt=&quot;Wardle Digital Health.001&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I am going to talk about being data-driven in healthcare - how we need to create an architecture that enables us to capture and use data to improve patient care and our clinical services.&lt;/p&gt;
+
+&lt;p&gt;I want us to develop an open platform for healthcare in Wales built on a foundation of standards and interoperability.Data-driven healthcare : national open platform in Wales&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.002.jpeg&quot; alt=&quot;Wardle Digital Health.001&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You need to remember three things, the three “P”s - platform, patient and preparation.&lt;/p&gt;
+
+&lt;p&gt;By “platform”, I mean a collection of interoperating computing services built using industry standards a) on which we can build multiple applications for clinicians, patients and managers and b) provides a single consistent and logical patient record.&lt;/p&gt;
+
+&lt;p&gt;By “patient”, I mean that we need to re-focus our work on our patients : and avoid simply digitising our old ways of working but to make use of digital tools to support all citizens to interact with and contribute to their records and importantly help them manage their own healthcare.&lt;/p&gt;
+
+&lt;p&gt;And finally, by “preparation”, I mean that we need to create systems now that support solving our current problems but does not limit future development and innovation. We need to develop an infrastructure that fosters innovation in a safe way.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.003.jpeg&quot; alt=&quot;Wardle Digital Health.001&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The Informed Health and Care strategy, as you all know, is split into four key themes, focused on the patient, the professional, our services and our future.&lt;/p&gt;
+
+&lt;p&gt;Essentially for patients, the requirements boil down to enabling patients to monitor and manage their own health, accessing, contributing to and controlling their own data. This patient focus is important and is essentially a disruptive influence on how our clinical services should develop in the future.&lt;/p&gt;
+
+&lt;p&gt;For professionals, we essentially want access to the right information at the right time, information that reduces uncertainty about the decisions we make.&lt;/p&gt;
+
+&lt;p&gt;Likewise, we are responsible for multiple cohorts of patients across our clinical services and need to ensure that we configure those services appropriately and permit innovation in service design and research and development.&lt;/p&gt;
+
+&lt;p&gt;Similarly, we need to build systems - and I use that word in as loose fashion as possible - that support working in partnership - in collaboration to drive up quality and performance.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.004.jpeg&quot; alt=&quot;Wardle Digital Health.001&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I would argue that the solution to these requirements is not the development of multiple software applications but instead to develop a widespread recognition that DATA is at the heart of those aims.&lt;/p&gt;
+
+&lt;p&gt;It is DATA that tells us:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;what happened,&lt;/li&gt;
+  &lt;li&gt;what is happening now&lt;/li&gt;
+  &lt;li&gt;why it happened and even, if we get it right…&lt;/li&gt;
+  &lt;li&gt;and what will happen…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It is DATA that drives our work and digitisation of that data - historically on paper - means that we can do it at scale and in real-time -  it is analysis of renal function blood tests that should prompt a real-time notification that our patient is deteriorating.&lt;/p&gt;
+
+&lt;p&gt;So the question is how to successfully digitise healthcare?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.005.jpeg&quot; alt=&quot;Wardle Digital Health.001&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I spend a lot of time thinking about what “the medical record” actually means and I can’t express it better than the late Larry Weed, the founder of the problem-based medical record, who said, in his Internal medicine grand rounds&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“You’re a victim of it or a triumph because of it. The human mind simply cannot carry all the information without error so the record becomes part of your practice”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;And of course by medical record, I am not talking about an application running on a desktop computer, on an app on a mobile device: I’m talking about the logical medical record comprising all of the information that supports our decision making. It’s the data - the medical record that counts, and not the applications that we use to access that record.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.006.jpeg&quot; alt=&quot;Wardle Digital Health.001&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I think our biggest failure in healthcare IT is to create artificial boundaries between data : for example, in 2001, The Bristol Heart Enquiry highlighted the consequences of separating administrative and clinical data.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“The various clinical systems, many of them paper based, 
+differed from one another and had no relationship with the administrative hospital-wide systems. The funding made available in the late 1980s and early 1990s for medical and later clinical audit helped to reinforce this separation by making available to groups of clinicians money for small local computer systems. The lack of any connection between these different systems, one administrative, the others clinical, for collecting data cannot be explained solely on the basis of some technical or technological reason. It was just as strongly a reflection of a mindset that clinical matters were the sole domain of clinicians and non-clinical matters, to do with the management of resources and with the movement of patients into and through the hospital, were the preserve of managers and administrators.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;We must stop thinking about administrative systems, clinical systems and research systems, and instead, focus on data - on the patient and the varying types of longitudinal data that are collected - by the patient, their devices and the professionals involved in their care. Of course, different people have need to see those data in different ways - different perspectives - different prisms, but the data - the  patient record - that is key.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.007.jpeg&quot; alt=&quot;Wardle Digital Health.001&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So I recommend starting with PROBLEMS.&lt;/p&gt;
+
+&lt;p&gt;Problems define your requirements.&lt;/p&gt;
+
+&lt;p&gt;For example:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;“Show me all of my upcoming appointments. I have multiple chronic conditions and need to organise my life.”&lt;/li&gt;
+  &lt;li&gt;“Should I say ‘yes’ to this high risk treatment?”&lt;/li&gt;
+  &lt;li&gt;“Show me how a patient with multiple sclerosis is doing compared to their peers. Do I need to give more aggressive treatment?”&lt;/li&gt;
+  &lt;li&gt;“I know how many patients are seen in outpatients, but I don’t know why or indeed, how they fare.”&lt;/li&gt;
+  &lt;li&gt;“Which of our patients are suitable for this trial? Find me patients with drug-refractory epilepsy who have not tried lamotrigine and are keen on research?”&lt;/li&gt;
+  &lt;li&gt;“How can we work together collaboratively?”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For instance, what are the informatics challenges facing us in solving “show me all of my upcoming appointments”, particularly if we need to solve that across multiple organisations? We need to integrate data from across multiple PAS - and provide a unified view.&lt;/p&gt;
+
+&lt;p&gt;We should prioritise our requirements and consider the data requirements.&lt;/p&gt;
+
+&lt;p&gt;So how can we help patients come to decisions about a high-risk treatment? How can we understand our outpatient services without setting in motion systems to track clinical problems and diagnoses in a structured way rather than free text?&lt;/p&gt;
+
+&lt;p&gt;How can we make Wales the best place for IT, for collaboration?&lt;/p&gt;
+
+&lt;p&gt;My thesis is: we think about the data required to solve those problems.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.008.jpeg&quot; alt=&quot;Wardle Digital Health.008&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So given our problems, what kinds of data must we capture and link together to make them meaningful? I feel strongly that understanding  cohorts of patients - grouped by disease or clinical problem or intervention or contact with a specific service - these underpin the interpretation of all other data. For example, how can we interpret patient reported outcomes without understanding all of those issues? Information has to be linked.&lt;/p&gt;
+
+&lt;p&gt;And so essentially, we stop thinking about applications and think instead about the patient record, combining administrative, clinical records - including GP and hospital records, laboratory and other sources of information - into a logical longitudinal record.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.009.jpeg&quot; alt=&quot;Logical longitudinal record&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And when we start thinking about a patient record, we must consider how we link disparate pieces of information together to solve our problems. We must stop creating data silos with information unusable outside of where it is collected.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.010.jpeg&quot; alt=&quot;Wardle Digital Health.010&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Perhaps an example would be useful. Here is a screenshot from my own clinical information system that is currently used to look after over 25,000 patients in Wales and records 4,500 clinical encounters every month for a range of neurological and non-neurological diseases.&lt;/p&gt;
+
+&lt;p&gt;This chart shows the progress of a single patient  marked with a red line against the progression of the disease in all patients with multiple sclerosis in South East Wales.&lt;/p&gt;
+
+&lt;p&gt;How did we do this? The chart is generated in real-time using analysis of all patient data taking to into account diagnosis and disease progression recorded by patients and clinicians. In clinic we find it useful to also see charted the  medications received by the patient - you can see that they have had alemtuzumab and methylprednisolone and also their exacerbations in their disease - marked with an “R” - for relapse.&lt;/p&gt;
+
+&lt;p&gt;We now have years of longitudinal data for a wide range of cohorts of patients such as multiple sclerosis, motor neurone disease and Parkinson’s disease and real-time analytics and clinically-useful dashboards form an important part of making it &lt;em&gt;worth&lt;/em&gt; entering information. It is no good having either professionals or patients enter data or use devices to collect data unless we use that data for decisions.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/Cppjedy-hMo&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;One of the most important aspects of our work must be to support the collection of data by clinicians for clinicians in the day-to-day work. One important technology is SNOMED-CT a comprehensive terminology that supports the entry of structured clinical information coded in a computer-readable format. This is a KEY enabler of data-driven clinical systems and analytics. Using this, we can record a patient has multiple sclerosis and firstly expect that other software will understand this diagnosis and secondly understand what type of disease that this is. SNOMED-CT is an ontology - it not only includes concepts but the relationships between them, so I can potentially find all patients with a demyelinating disease and it will support me finding patients with multiple sclerosis but also related conditions.&lt;/p&gt;
+
+&lt;p&gt;Entering codes can be as simple as typing free text.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.012.jpeg&quot; alt=&quot;Wardle Digital Health.011&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;With such a data-driven foundation, it becomes straightforward to build useful dashboards that take data from multiple systems and multiple sources and presents them in a useful fashion for end-users. Here we have a dashboard bringing together important information about a patient with motor neurone disease.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.013.jpeg&quot; alt=&quot;Wardle Digital Health.011&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And we must ensure our patients can engage fully…. in the Parkinson’s disease clinic we have successfully trialled the use of iPads to connect to the EPR and allow them to contribute to their medical record via adaptive questionnaires. Here is a view of all patient data from a single clinic visit that is used to generate our clinic letter automatically. Each of these outcomes can be graphed to show changes over time.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.014.jpeg&quot; alt=&quot;Wardle Digital Health.011&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So how can we take what we’ve done and scale it to every other clinical encounter in Wales? The problem is that “We don’t realise how much we don’t know”. I am sure that there are some clever people who can take my Parkinson’s disease medication and disease progression data and turn it into something even more useful, who can then link it to home monitoring technology and falls detection and send our team alerts when necessary.&lt;/p&gt;
+
+&lt;p&gt;How can we design or implement software that solves our problems today and adopts a sufficiently flexible approach that we can innovate and adapt to solve the problems of our future?&lt;/p&gt;
+
+&lt;p&gt;If you haven’t read it, I recommend Domain-driven design by Eric Evans - a focus on data modelling to support complex systems.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.015.jpeg&quot; alt=&quot;Wardle Digital Health.011&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The answer, of course, is an open innovation platform built on a secure foundation of structured, semantically meaningful data. On top of this foundation, we provide a range of core application programming interfaces or APIs - providing access to a range of useful services such as identity, access and consent. Together, these form a platform.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.016.jpeg&quot; alt=&quot;Wardle Digital Health.016&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We must stop thinking about applications and instead think about how our platform can interact with our work streams - our patients, our professionals, our partners and the future.&lt;/p&gt;
+
+&lt;p&gt;Most businesses have already realised that information technology forms an inherent part of their operations; in essence, they have realised IT &lt;em&gt;IS&lt;/em&gt; their way of doing business. It is about time healthcare did the same.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.017.jpeg&quot; alt=&quot;Wardle Digital Health.017&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So the model becomes a data-centric core, open platforms exposing those data and multiple lightweight applications solving specific process and workflow problems for patients and professionals.&lt;/p&gt;
+
+&lt;p&gt;As a result, we create a single patient record : and ensure that we can see all of the relevant information for a patient while not getting lost in an excess of data.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.018.jpeg&quot; alt=&quot;Wardle Digital Health.018&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And this is how it could look in Wales. We open up our core services, create a platform leveraging new technologies such as HL7 FHIR to expose application programming interfaces that can be used by multiple applications providing different views and different perspectives on a single patient record or collections of those records. 
+[ explain diagram ]
+We must focus on data standards and interoperability, creating lightweight applications at pace and design useful real-time analytics services for clinicians and managers. Critically, we build a platform that can provide the building blocks for future innovation.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.019.jpeg&quot; alt=&quot;Wardle Digital Health.019&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So in summary, I remind you to remember three “P”s : we need to build an open platform, ensure we focus on our patients and… prepare for and permit future innovation by understanding that we don’t have all of the answers… at least - not yet.&lt;/p&gt;
+
+&lt;p&gt;Thank you.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">This post is from a talk I gave at the inaugural Digital Health and Care Conference at the Principality Stadium in Cardiff, Wales on the 19th October 2017</summary></entry><entry><title type="html">The ‘fractal’ medical record</title><link href="https://www.wardle.org/medical-records/2017/10/08/the-broken-medical-record.html" rel="alternate" type="text/html" title="The 'fractal' medical record" /><published>2017-10-08T04:14:15+01:00</published><updated>2017-10-08T04:14:15+01:00</updated><id>https://www.wardle.org/medical-records/2017/10/08/the-broken-medical-record</id><content type="html" xml:base="https://www.wardle.org/medical-records/2017/10/08/the-broken-medical-record.html">&lt;p&gt;&lt;img src=&quot;/images/fractal/mandelbrot.gif&quot; alt=&quot;Mandelbrot&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Medical data are complex and heterogeneous with individual patient records combining multiple disparate sources of information including :&lt;/p&gt;
 
@@ -922,57 +1087,4 @@ barplot(as.matrix(sp[,c(2:7,12)]), beside=T,
   &lt;li&gt;Plan user-facing applications for multiple devices, even if you don’t intend to create different versions now so that no-one inadvertently loses separation between business logic and the user interface. Make user interfaces “smart” in the way that they help the user but “stupid” in that they delegate their logic to underlying business services.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">“Paper is one of the most hazardous substances in a hospital.”</summary></entry><entry><title type="html">Embedding data in routine clinical practice</title><link href="https://www.wardle.org/clinical-informatics/2017/06/15/embedding-data.html" rel="alternate" type="text/html" title="Embedding data in routine clinical practice" /><published>2017-06-15T20:22:00+01:00</published><updated>2017-06-15T20:22:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/06/15/embedding-data</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/06/15/embedding-data.html">&lt;p&gt;I spent today at a medical conference relating to motor neurone disease. Today’s conference reinforced my previously held beliefs about the best strategy for healthcare information technology improvement.&lt;/p&gt;
-
-&lt;p&gt;At the conference, we had a mixture of health professionals and academics, all struggling to do what they need to do. The nursing and care coordinators desperately need tools to support their day-to-day work, managing patients and recording their interactions and communicating with one another. The Motor Neurone Disease Association (MNDA)  want them to use Excel spreadsheets to audit their services for benchmarking and assessment against the NICE guidance. The researchers in the room want a population-based registry in which patient data are recorded to support national history modelling, epidemiological students and subsequently act as a platform for subsequent interventional studies. We heard about researchers collecting patient reported data using paper and pen.&lt;/p&gt;
-
-&lt;p&gt;This pattern recurs again and again and I’ve referenced the three core needs of:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;supporting day-to-day clinical care,&lt;/li&gt;
-  &lt;li&gt;audit and quality improvement and&lt;/li&gt;
-  &lt;li&gt;research&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;in my blog posts repeatedly: (eg see my post on &lt;a href=&quot;http://wardle.org/clinical-informatics/2017/06/06/using-data-patient-safety.html&quot;&gt;patient safety&lt;/a&gt;). This approach is not specific to motor neurone disease and is widely applicable. The critical issue is to embed the three processes within the same system so that, for example, a clinician recording research-level detailed phenotypic information about a patient for their area of interest uses the same system as the one that he or she uses to simply record a register of diagnoses. I think of a nested approach in one has small numbers of very well phenotyped patients and large numbers of less well phenotyped patients.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/pyramid-of-data.png&quot; alt=&quot;Pyramid Of Data&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;An important component of this approach is increasing patient involvement in research. Patients want it but there are impediments such as the time needed to obtain patient consent and the resources needed to perform more detailed clinical evaluations. As such, using technology to support enrolment into clinical research is vital; that is, we must provide tools to obtain consent from large numbers of patients in a way that satisfies the regulatory frameworks in which we work.&lt;/p&gt;
-
-&lt;p&gt;Similarly, we are increasingly using patient-reported outcomes and adaptive questionnaires to not only understand how our patients fare but even to shape subsequent clinical consultations.&lt;/p&gt;
-
-&lt;p&gt;So it becomes straightforward to imagine an architecture that will support these needs. Indeed, if built correctly with a generic core, a standardised terminology and bolt-on specialist modules, one could imagine it being a disruptive product, creating a commodity platform. I want to see a future in which the platform becomes an interchangeable commodity with innovation and differentiation occurring at a higher conceptual level of support for medical practice. Rather than simple data collection, our mission must be to imagine a future in which medical practice, which at its most fundamental is about clinical decision making, is supported by the most sophisticated tools possible to improve patient care.&lt;/p&gt;
-
-&lt;p&gt;This mission’s greatest risk is in the continued creation of data silos in which health information is locked away in proprietary systems. The answer is to create an open, extensible platform on which innovation can thrive.&lt;/p&gt;
-
-&lt;p&gt;I would draw a parallel to the evolution of the Internet. In the early days of computer networking, there were many proprietary networking protocols. The advent of TCP/IP and the creation of an interoperable but layered architecture in which at the highest conceptual layer, lower level details of networking were abstracted has resulted in the thriving interconnected Internet as we know it. Similarly, we need create abstractions of our high level clinical requirements but take into account the complexities and paradoxes required in order to share private confidential medical information safely.&lt;/p&gt;
-
-&lt;h1 id=&quot;minimally-viable-products&quot;&gt;Minimally viable products&lt;/h1&gt;
-
-&lt;p&gt;I have always liked the concept of minimally viable products (MVP) in which one works to prove a methodology or design by creating a minimal proof-of-concept and running it in the real world&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/minimal-viable-product.png&quot; alt=&quot;Minimal Viable Product&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I have built my own electronic patient record system and think it is essentially an MVP for healthcare information technology, although perhaps it has now better regarded as an actual product given it is in-use in live clinical environments.&lt;/p&gt;
-
-&lt;p&gt;In general, clinicians need solutions that solve their problems, and that will vary depending on their role, their speciality and their particular interests. While clinical practice and research are separate processes, having a single system that supports the collection of clinical and research data in different contexts but as part of the same record has been a powerful and valuable tool.&lt;/p&gt;
-
-&lt;p&gt;Essentially:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;it is an NHS-hosted web-based electronic patient record system already in use for 8 years&lt;/li&gt;
-  &lt;li&gt;it now records 3000 clinical encounters every month by a wide variety of multidisciplinary teams, recording structured clinical information and embedding SNOMED-CT into clinical practice.&lt;/li&gt;
-  &lt;li&gt;it links to multiple PAS within different hospitals and sends clinical documents into a document repository&lt;/li&gt;
-  &lt;li&gt;it allows flexible data collection configured at runtime to support multiple cohorts of patients and the generic and disease-specific outcome measures. As such, it is used widely for multiple sclerosis, Parkinson’s disease, metabolic disease, neuromuscular disease, motor neurone disease. It is about to be used for adult cystic fibrosis services.&lt;/li&gt;
-  &lt;li&gt;it uses SNOMED-CT as a lingua franca to allow loose-coupling between components and switch functionality on and off in different clinical circumstances.&lt;/li&gt;
-  &lt;li&gt;it provides an Internet-hosted portal for patient reported outcomes and mobile device management&lt;/li&gt;
-  &lt;li&gt;it has client iPad applications to collect patient reported outcome measures and obtain patient consent using Apple’s ResearchKit software.&lt;/li&gt;
-  &lt;li&gt;it can send alerts if patients lose weight or are admitted to hospital, based on an understanding of defined cohorts for long-term health conditions.&lt;/li&gt;
-  &lt;li&gt;it can generate clinical correspondence automatically from data entered during the day-to-day processes of clinical care&lt;/li&gt;
-  &lt;li&gt;it acts as a communication hub between different members of the team, with messages linked to the patient record&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I’m now working on scaling out this suite of products and the underlying data-driven principles of the architecture more generally. My goal is to create an open, semantically interoperable architecture for healthcare.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">I spent today at a medical conference relating to motor neurone disease. Today’s conference reinforced my previously held beliefs about the best strategy for healthcare information technology improvement.</summary></entry></feed>
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">“Paper is one of the most hazardous substances in a hospital.”</summary></entry></feed>
