@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-10-20T19:07:34+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-10-21T08:46:41+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
 </subtitle><entry><title type="html">Data-driven healthcare: integration</title><link href="https://www.wardle.org/clinical-informatics/2017/10/19/data-driven.html" rel="alternate" type="text/html" title="Data-driven healthcare: integration" /><published>2017-10-19T23:22:22+01:00</published><updated>2017-10-19T23:22:22+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/10/19/data-driven</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/10/19/data-driven.html">&lt;p&gt;This post is from a talk I gave at the inaugural Digital Health and Care Conference at the Principality Stadium in Cardiff, Wales on the 19th October 2017&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -17,13 +17,13 @@
 
 &lt;p&gt;By “platform”, I mean a collection of interoperating computing services built using industry standards a) on which we can build multiple applications for clinicians, patients and managers and b) provides a single consistent and logical patient record.&lt;/p&gt;
 
-&lt;p&gt;By “patient”, I mean that we need to re-focus our work on our patients : and avoid simply digitising our old ways of working but to make use of digital tools to support all citizens to interact with and contribute to their records and importantly help them manage their own healthcare.&lt;/p&gt;
+&lt;p&gt;By “patient”, I mean that we need to re-focus our work on our patients : and avoid simply digitising our old ways of working but instead make use of digital tools to support all citizens to interact with and contribute to their records and importantly, help them manage their own healthcare.&lt;/p&gt;
 
 &lt;p&gt;And finally, by “preparation”, I mean that we need to create systems now that support solving our current problems but does not limit future development and innovation. We need to develop an infrastructure that fosters innovation in a safe way.&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;The Informed Health and Care strategy, as you all know, is split into four key themes, focused on the patient, the professional, our services and our future.&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&quot;http://gov.wales/topics/health/nhswales/about/e-health/?lang=en&quot;&gt;Informed Health and Care strategy&lt;/a&gt;, as you all know, is split into four key themes, focused on the patient, the professional, our services and our future.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.003.jpeg&quot; alt=&quot;Wardle Digital Health.001&quot; /&gt;&lt;/p&gt;
 
@@ -37,7 +37,7 @@
 
 &lt;hr /&gt;
 
-&lt;p&gt;I would argue that the solution to these requirements is not the development of multiple software applications but instead to develop a widespread recognition that DATA is at the heart of those aims.&lt;/p&gt;
+&lt;p&gt;I would argue that the solution to these requirements is not to jump to developing multiple software applications  but instead to develop a widespread recognition that DATA is at the heart of those aims.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.004.jpeg&quot; alt=&quot;Wardle Digital Health.001&quot; /&gt;&lt;/p&gt;
 
@@ -129,7 +129,7 @@ differed from one another and had no relationship with the administrative hospit
 
 &lt;p&gt;Perhaps an example would be useful. Here is a screenshot from my own clinical information system that is currently used to look after over 25,000 patients in Wales and records 4,500 clinical encounters every month for a range of neurological and non-neurological diseases:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.010.jpeg&quot; alt=&quot;Wardle Digital Health.010&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.010.jpeg&quot; alt=&quot;EDSS graph for patient plotted over time compared to peers&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This chart shows the progress of a single patient  marked with a red line against the progression of the disease in all patients with multiple sclerosis in South East Wales.&lt;/p&gt;
 
@@ -164,9 +164,11 @@ differed from one another and had no relationship with the administrative hospit
 
 &lt;p&gt;How can we design or implement software that solves our problems today and adopts a sufficiently flexible approach that we can innovate and adapt to solve the problems of our future?&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.014.jpeg&quot; alt=&quot;Wardle Digital Health.011&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.014.jpeg&quot; alt=&quot;We don't realise how much we don't know&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;If you haven’t read it, I recommend Domain-driven design by Eric Evans - a focus on data modelling to support complex systems.&lt;/p&gt;
+
+&lt;p&gt;We start with a model of our data; this model will change but slowly over time — a blood pressure measured in the right arm will always be a blood pressure measured in the right arm. On top of this information model, we build conceptual models of workflow and process, a platform made up of core services providing access to those models and finally lightweight applications. Process and workflow models will change much more frequently that our data model and likely need dynamic customisation via rules engines for different contexts. Applications should be the most ephemeral component of our designs.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -174,7 +176,7 @@ differed from one another and had no relationship with the administrative hospit
 
 &lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.015.jpeg&quot; alt=&quot;Open innovation platform&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;The answer, of course, is an open innovation platform built on a secure foundation of structured, semantically meaningful data. On top of this foundation, we provide a range of core application programming interfaces or APIs - providing access to a range of useful services such as identity, access and consent. Together, these form a platform.&lt;/p&gt;
+&lt;p&gt;As a result, we create an &lt;em&gt;open innovation platform&lt;/em&gt; built on a secure foundation of structured, semantically meaningful data. We provide a range of core application programming interfaces or APIs - providing access to a range of useful services such as identity, access and consent. Together, these form a platform.&lt;/p&gt;
 
 &lt;hr /&gt;
 
