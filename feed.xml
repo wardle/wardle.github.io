@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-10-21T08:46:41+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-10-22T09:23:49+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
 </subtitle><entry><title type="html">Data-driven healthcare: integration</title><link href="https://www.wardle.org/clinical-informatics/2017/10/19/data-driven.html" rel="alternate" type="text/html" title="Data-driven healthcare: integration" /><published>2017-10-19T23:22:22+01:00</published><updated>2017-10-19T23:22:22+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/10/19/data-driven</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/10/19/data-driven.html">&lt;p&gt;This post is from a talk I gave at the inaugural Digital Health and Care Conference at the Principality Stadium in Cardiff, Wales on the 19th October 2017&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -215,7 +215,16 @@ differed from one another and had no relationship with the administrative hospit
 
 &lt;p&gt;Thank you.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">This post is from a talk I gave at the inaugural Digital Health and Care Conference at the Principality Stadium in Cardiff, Wales on the 19th October 2017</summary></entry><entry><title type="html">The ‘fractal’ medical record</title><link href="https://www.wardle.org/medical-records/2017/10/08/the-broken-medical-record.html" rel="alternate" type="text/html" title="The 'fractal' medical record" /><published>2017-10-08T04:14:15+01:00</published><updated>2017-10-08T04:14:15+01:00</updated><id>https://www.wardle.org/medical-records/2017/10/08/the-broken-medical-record</id><content type="html" xml:base="https://www.wardle.org/medical-records/2017/10/08/the-broken-medical-record.html">&lt;p&gt;&lt;img src=&quot;/images/fractal/mandelbrot.gif&quot; alt=&quot;Mandelbrot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h4 id=&quot;further-reading&quot;&gt;Further reading:&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/03/09/google-information.html&quot;&gt;Organise healthcare information and make it universally accessible and useful&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/07/07/disruptive-influences-health.html&quot;&gt;Disruptive influences in healthcare information technology&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/06/20/hazards-of-paper.html&quot;&gt;The hazards of paper&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">This post is from a talk I gave at the inaugural Digital Health and Care Conference at the Principality Stadium in Cardiff, Wales on the 19th October 2017</summary></entry><entry><title type="html">The ‘fractal’ medical record</title><link href="https://www.wardle.org/medical-records/2017/10/08/the-broken-medical-record.html" rel="alternate" type="text/html" title="The 'fractal' medical record" /><published>2017-10-08T04:14:15+01:00</published><updated>2017-10-08T04:14:15+01:00</updated><id>https://www.wardle.org/medical-records/2017/10/08/the-broken-medical-record</id><content type="html" xml:base="https://www.wardle.org/medical-records/2017/10/08/the-broken-medical-record.html">&lt;p&gt;&lt;img src=&quot;/images/fractal/mandelbrot.gif&quot; alt=&quot;Mandelbrot&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Medical data are complex and heterogeneous with individual patient records combining multiple disparate sources of information including :&lt;/p&gt;
 
