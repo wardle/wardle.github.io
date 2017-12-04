@@ -193,7 +193,7 @@
   <li>a audit event logging service</li>
 </ul>
 
-<p>In software engineering, we frequency use a concept called <em>dependency injection</em> to pass through dependencies to a subsystem so that we can configure it appropriately and appropriately isolate separate functionality. As such, much like the AWS Serverless application model referenced above, we need to consider how we glue together sensitive health data with different services, perhaps provided by multiple different vendors?</p>
+<p>In software engineering, we frequently use a concept called <em>dependency injection</em> to pass through dependencies to a subsystem so that we can configure it appropriately and appropriately isolate separate functionality. As such, much like the AWS Serverless application model referenced above, we need to consider how we glue together sensitive health data with different services, perhaps provided by multiple different vendors?</p>
 
 <p>Given that all the functionality our serverless application needs is provided by HL7 FHIR resource endpoints (<a href="https://www.hl7.org/fhir/diagnosticreport.html">diagnostic reports</a>, <a href="https://www.hl7.org/fhir/procedurerequest.html">procedure request</a>, <a href="https://www.hl7.org/implement/standards/fhir/documentreference.html">documents</a> and <a href="https://www.hl7.org/fhir/auditevent.html">audit</a>), it might be possible to simply pass in those endpoints as dependencies either when the service is provisioned or even when it is called.</p>
 
