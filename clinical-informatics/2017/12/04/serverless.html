@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Serverless in healthcare</title>
+  <meta name="description" content="On serverless:">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://www.wardle.org/clinical-informatics/2017/12/04/serverless.html">
+  <link rel="alternate" type="application/rss+xml" title="Health informatics and information technology" href="/feed.xml">
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-97389603-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="/">Health informatics and information technology</a>
+  
+  
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+           <a class="page-link" href="/">All posts</a>
+          
+            
+            
+            <a class="page-link" href="/projects/">Projects</a>
+            
+          
+            
+            
+            <a class="page-link" href="/about/">About</a>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Serverless in healthcare</h1>
+    <p class="post-meta">
+      <time datetime="2017-12-04T22:22:22+00:00" itemprop="datePublished">
+        
+        4 December 2017
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>On serverless:</p>
+
+<blockquote>
+  <p>Serverless computing allows users to run code without provisioning or managing any underlying system or application infrastructure, and they automatically scale to support increasing or decreasing loads. 
+<a href="https://blogs.gartner.com/andrew-lerner/2017/07/21/serverless-is-not-networkless/">https://blogs.gartner.com/andrew-lerner/2017/07/21/serverless-is-not-networkless/</a></p>
+</blockquote>
+
+<p>A serverless architecture forces an enterprise architectural design that modularises and isolates code. Rather than creating a full-stack enterprise application containing components for user interactions, business logic, business rules and a persistence layer, one can break-up a solution into its functional constituents isolated from one another.</p>
+
+<p>A serverless function such as <a href="https://cloudacademy.com/blog/microsoft-azure-functions-vs-google-cloud-functions-fight-for-serverless-cloud-domination-continues/">AWS Lambda, Google Cloud Functions or Microsoft Azure Functions</a> can be written and deployed virtually instantly, with the hosting provider automatically scaling to manage the load. Ideally, such a function should do one or a few things very well, perhaps offering a set of application programming interfaces for clients to use with clear documentation as to how it can be called and what results might be expected. As such, the function is isolated and can be tested in lots of ways to ensure that it provides the results it is contracted to provide.</p>
+
+<p>However, writing small, well-defined services that provide a limited range of function is a characteristic of any microservice. What makes a serverless approach different is that managing the deployment and scaling of that service is delegated to the hosting provider, such as Amazon, Google or Microsoft.</p>
+
+<p>As a result, a rarely used operation may take up no computing resources until it is triggered by an event, such as a HTTP request. Rather than trying to implement all functionality into a single or clustered server, one can break-up that functionality into separate functions. For instance, rather than writing a service to accept uploaded image files, process them, create thumbnails and then serve them as a photo-album, one might write a range of individual separate serverless functions to handle each step of that process so that, the thumbnail generation is automatically executed after a file is uploaded.</p>
+
+<p>One then imagines an overall application being simply a range of different independent pieces of functionality stitched together in a declarative manner to solve a specific range of problems.</p>
+
+<blockquote>
+  <p>“This declarative approach then becomes a key driver of architecture. The application speaks the language of the domain and it’s easy to detect and fix force-fits, gaps, misrepresentations and erroneous assumptions in the application each time the implementation is reviewed against the domain. A declarative interface makes it easy to adapt to changes in the domain model.”
+<a href="http://www.pragatisoftware.com/blog/functional-programming-and-software-architecture">http://www.pragatisoftware.com/blog/functional-programming-and-software-architecture</a></p>
+</blockquote>
+
+<blockquote>
+  <p>“Functional programs are often organized as, sort of, a data flow graph, rather than a dependency structure. There’s declarative orchestration, right,? You just set up a whole bunch of things and you can see how they are related but you don’t have to, sort of, specify the order in which things happen, and you have referential transparency, right? I hand two values to a function, it will always give me the same value as the output because of referential transparency.”
+<a href="https://serverless.com/blog/bobby-calderwood-functional-programming-microservices-emit-2017/">https://serverless.com/blog/bobby-calderwood-functional-programming-microservices-emit-2017/</a></p>
+</blockquote>
+
+<p>As a result, one is forced to focus on two core perspectives: an <em>overall</em> perspective that takes in the combined architecture in which multiple microservices are stitched together and a <em>granular</em> perspective at the level of an individual microservice.</p>
+
+<h1 id="healthcare-takes-steps-into-the-cloud">Healthcare takes steps into the cloud…</h1>
+
+<p>Many, if not most, health services still run applications on local servers physically sitting on their premises, running on a private intranet inaccessible to the outside world running the day-to-day organisational processes of the business and usually providing clinical information to clinicians as well.</p>
+
+<p>But things are changing, many years after most industries have made extensive use of cloud-based services, we are now seeing health organisations move to host servers on commodity cloud providers, resulting in a hybrid approach in which some services run locally and others run elsewhere.</p>
+
+<p>In addition, rather than buying software and installing it for local users, we are starting to see organisations starting to procure platforms-as-a-service (PAAS) in which cloud-based services are used within the enterprise. For instance, in most modern organisations, a previously private intranet is increasingly having new communication channels laid down in order to enable interaction with patients and their devices.</p>
+
+<p>For instance, some providers now use PAAS-based patient portals such as <a href="https://www.patientsknowbest.com/">Patients Know Best</a> to enable patients to view their records. Such portals are also committing to opening up their data so that patients can choose to share their information with other providers;  for instance have a look at their <a href="http://dev.patientsknowbest.com/home/fhir-api">plans for a FHIR API</a>). Likewise, other cloud-hosted services such as <a href="http://drdoctor.co.uk/">DrDoctor</a> permit organisations to manage their outpatients by providing a platform on which patients can be contacted ahead of appointments to provide reminders and to collect outcome data.</p>
+
+<p>As such, we already see health organisations making use of cloud-based services for hosting their own infrastructure and by using ready made large-scale off-the-shelf services from other providers.</p>
+
+<p>As such, we <em>already</em> have a distributed healthcare platform; it is hosted by our organisations and unfortunately is usually disconnected so that clinical staff in one organisation cannot see health information about their patients from another organisation. Presently, we see healthcare making tentative steps to either move to or adopt cloud hosted services, but these usually remain organisationally-bound.</p>
+
+<h1 id="in-parallel-healthcare-is-changing">In parallel, healthcare is changing…</h1>
+
+<p>In parallel with these technological changes, we see a range of <a href="/clinical-informatics/2017/07/07/disruptive-influences-health.html">disruptive influences in healthcare</a> highlighting three core changes enabled by new technology:</p>
+
+<ul>
+  <li>Changes in models of care</li>
+  <li>Patients as active participants</li>
+  <li>‘Hospitals without walls’</li>
+</ul>
+
+<p>Fundamentally, advances in technology enable a transformation of care. We should look to information technology to re-imagine how citizens interact with their health services. I spoke at a recent <a href="/clinical-informatics/2017/10/19/data-driven.html">Digital Health and Care Conference on the benefits of an open platform</a>.</p>
+
+<p>In summary, I highlighted the importance of modelling data <sup><a href="#data-modelling">a</a></sup> and workflow/process <sup><a href="#process-modelling">b</a></sup>. It has been a source of surprise and frustration that so many efforts to digitise healthcare neglect communication between professionals and with the patient, particularly when information technology has been used so effectively for communication in other domains.</p>
+
+<p>This is my phase 1 vision of an appropriate enterprise architecture for NHS Wales:</p>
+
+<p><img src="/images/platform/platform-overall.png" alt="Platform Overall" /></p>
+
+<p>See that little box, “test requesting and results”. This is what is inside it:</p>
+
+<p><img src="/images/platform/platform-lab.png" alt="Platform Lab" /></p>
+
+<p>Here we abstract a new notification service that handles notifications to users such as professionals in response to a result being made available by the laboratory.</p>
+
+<p>Why is this phase 1? Because I see the building blocks of our  architecture becoming increasingly distributed and shared among healthcare providers. Why embed a terminology service within an application when one can pick one off the shelf and use on a subscription or pay-as-you-go model?</p>
+
+<h1 id="so-what-could-the-shift-to-a-services-based-economy-mean-for-health">So what could the shift to a services-based economy mean for health?</h1>
+
+<p>A microservice economy means that multiple providers will offer small-scale, well-defined software functionality on a pay-as-you-go basis. We heard an announcement last week from Amazon launching their new <a href="https://aws.amazon.com/blogs/aws/aws-serverless-app-repo/">AWS serverless application repository</a> to enable a new marketplace of serverless apps that can be consumed by clients in order to solve real-life problems. I expect other providers to do the same, and there is ongoing work to create <a href="https://serverless.com/">toolkits</a> that permit serverless applications to be hosted by any cloud provider.</p>
+
+<p>These technological trends mean that we will see large software applications and platforms being broken up into modules and as we progress, we will stitch together functionality from multiple providers to order to create clinical applications.</p>
+
+<p>If we combine these trends with a need to support cross-organisational working, to make patients “active participants in their care” and create “hospitals without walls”, we can see that we are moving to a distributed, decentralised, data-driven and cloud-hosting mixed environment combining functionality from multiple providers in order to create and run our health services.</p>
+
+<p>We could see core services providing data access and basic workflow models for each organisation but we will increasingly wish to federate across those services, creating a combined view of all data from multiple organisations. For example, an organisation may own or rent a document repository, probably based on IHE-XDS or FHIR document model and because other organisations also converge on standards-based open services then, subject to citizen consent, those repositories can be federated so we see a list of documents across all repositories.</p>
+
+<p>Similarly, we could quickly see a marketplace of value-added functions that provide functionality layered upon those core services. For example, we might find a market for advanced natural language processing of unstructured text or services that encapsulate the application of machine learning algorithms to existing and new data. For example, why not rent a service that can, given a citizen’s distributed health record data, identify those taking a particular disease modifying treatment such as methotrexate and monitor and arrange the required three-monthly blood tests to check for signs of bone marrow suppression, renal impairment or liver damage? If that service was provided algorithmically as a microservice, given access to the required data and cost a fraction of a pence per patient, it could replace the administrators and specialist nursing staff whose job it currently is to monitor these patients.</p>
+
+<h1 id="healthcare-application-sandboxes">Healthcare application sandboxes</h1>
+
+<p>It is easy to see how some serverless resources might work. They may simply provide a HL7 FHIR resource endpoint and allow applications to use its application programming interface as if it were hosted locally. Imagine a distributed audit trail functionality, made available via the <a href="https://www.hl7.org/fhir/auditevent.html">HL7 FHIR AuditEvent endpoint</a>. FHIR servers can support one or many different types of resource and it is not difficult to imagine a single serverless application providing a <a href="https://www.hl7.org/fhir/capabilitystatement.html">capability statement</a> documenting only a single end-point and providing that functionality in an automatically scalable fashion.</p>
+
+<p>Such a model would be fine for a single organisation, but how can that work in a distributed fashion?</p>
+
+<p>But we need to create a distributed platform that means that we can plug-and-play these different microservices and make them useful to the wider health economy. To do that, we must design a sandbox environment in which user facing applications running on desktops, web-pages and mobile devices and backend serverless applications can be dropped and expect to work.</p>
+
+<p>Much like Apple has “app stores” for mobile and desktop applications and Google has similar for Android, we need to consider what architecture is required for user-facing and serverless applications to be deployed easily and quickly into our distributed healthcare economy. Amazon has introduced the <a href="https://aws.amazon.com/about-aws/whats-new/2016/11/introducing-the-aws-serverless-application-model/">AWS Serverless Application Model</a> which annotates a serverless application with information about its dependent resource types needed for its proper operation.</p>
+
+<p>So how could this work for our methotrexate monitoring example serverless application? It needs to be provided with a sane runtime environment from which it can safely access the information it needs and to take any actions that are necessary. So what does it need access to?</p>
+
+<ul>
+  <li>a test results service to get results including renal profile, full blood count and liver function tests</li>
+  <li>a test requesting service</li>
+  <li>a document or clinical narrative repository</li>
+  <li>a audit event logging service</li>
+</ul>
+
+<p>In software engineering, we frequency use a concept called <em>dependency injection</em> to pass through dependencies to a subsystem so that we can configure it appropriately and appropriately isolate separate functionality. As such, much like the AWS Serverless application model referenced above, we need to consider how we glue together sensitive health data with different services, perhaps provided by multiple different vendors?</p>
+
+<p>Given that all the functionality our serverless application needs is provided by HL7 FHIR resource endpoints (<a href="https://www.hl7.org/fhir/diagnosticreport.html">diagnostic reports</a>, <a href="https://www.hl7.org/fhir/procedurerequest.html">procedure request</a>, <a href="https://www.hl7.org/implement/standards/fhir/documentreference.html">documents</a> and <a href="https://www.hl7.org/fhir/auditevent.html">audit</a>), it might be possible to simply pass in those endpoints as dependencies either when the service is provisioned or even when it is called.</p>
+
+<p>And now the logical question becomes, how do we manage looking up and accessing resources across a distributed health enterprise, particularly when we are dealing with sensitive private data?</p>
+
+<p>As I wrote in the <a href="[next post](/clinical-informatics/2017/08/20/disruptive-influences-future.html)">part three of my disruptive influences series</a>:</p>
+
+<blockquote>
+  <p>Applications running on Apple’s iOS provide a useful analogy. In order to gain access to components of the underlying device and its operating system, such as the camera, the photo archive, location services etc, the application must use the appropriate API which forces explicit user consent. This “sandbox” environment means that an application is prevented from accessing resources to which consent has not been provided and presumably can log each and every attempt should that be required.</p>
+</blockquote>
+
+<blockquote>
+  <p>Can we do the same for health applications and services? It seems to me that we can create tremendous value from healthcare data - for patients, for health professionals and for society - but the foundation must be to allow that information to be organised in such a way that we can make it “universally accessible and useful” <em>subject to individual consent</em>.</p>
+</blockquote>
+
+<p>The answer to our distributed future, built declaratively to glue together distributed data and services, is underpinned by a robust model of citizen consent that itself is hardwired into the systems to manage resource lookup and access. We now need to start thinking about how this will work, and how a “healthcare application model” might operate so that we can make use of new technology to improve the care of our patients.</p>
+
+<p>Thank you.</p>
+
+<p><em>Mark</em></p>
+
+<hr />
+
+<h1 id="footnotes">Footnotes</h1>
+
+<p><a name="data-modelling">a</a>: Data modelling ensures that we create semantically interoperable data coded in such a way as to make it meaningful to multiple disparate units of software. Such data may represent all types of clinical information, such as a blood pressure measured with a traditional sphygmomanometer on the right arm or the result of a laboratory test. As such, a focus on data standards is important so that there is agreement as to how individual items are coded and contextual information can be understood, such as who performed the measurement, how it was done and when.</p>
+
+<p><a name="process-modelling">b</a>: While a prospective clinical record of structured and unstructured information forms our medical record, the medical record does much more than simply record a narrative of events. Our medical records <em>are</em> our clinical practice, enabling processes and workflow. Paper medical records have important properties in enabling workflow; <a href="/clinical-informatics/2017/06/20/hazards-of-paper.html">their presence on my desk with a post-it note tells to do something vital</a>. It is therefore important to conceptualise not only a model of healthcare data but also model the workflow, processes and communications that enable care.</p>
+
+<hr />
+<h4 id="further-reading">Further reading:</h4>
+
+<ul>
+  <li><a href="/clinical-informatics/2017/03/09/google-information.html">Organise healthcare information and make it universally accessible and useful</a></li>
+  <li><a href="/clinical-informatics/2017/07/07/disruptive-influences-health.html">Disruptive influences in healthcare information technology</a></li>
+  <li><a href="/clinical-informatics/2017/06/20/hazards-of-paper.html">The hazards of paper</a></li>
+</ul>
+
+  </div>
+
+  
+</article>
+        
+      </div>
+    </main>
+    
+    
+    
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Health informatics and information technology</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Health informatics and information technology
+            
+            </li>
+            
+            <li><a href="mailto:mark@wardle.org">mark@wardle.org</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/wardle"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">wardle</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/mwardle"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">mwardle</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

@@ -1,5 +1,142 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-10-22T09:23:49+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
-</subtitle><entry><title type="html">Data-driven healthcare: integration</title><link href="https://www.wardle.org/clinical-informatics/2017/10/19/data-driven.html" rel="alternate" type="text/html" title="Data-driven healthcare: integration" /><published>2017-10-19T23:22:22+01:00</published><updated>2017-10-19T23:22:22+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/10/19/data-driven</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/10/19/data-driven.html">&lt;p&gt;This post is from a talk I gave at the inaugural Digital Health and Care Conference at the Principality Stadium in Cardiff, Wales on the 19th October 2017&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-12-04T22:44:11+00:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</subtitle><entry><title type="html">Serverless in healthcare</title><link href="https://www.wardle.org/clinical-informatics/2017/12/04/serverless.html" rel="alternate" type="text/html" title="Serverless in healthcare" /><published>2017-12-04T22:22:22+00:00</published><updated>2017-12-04T22:22:22+00:00</updated><id>https://www.wardle.org/clinical-informatics/2017/12/04/serverless</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/12/04/serverless.html">&lt;p&gt;On serverless:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Serverless computing allows users to run code without provisioning or managing any underlying system or application infrastructure, and they automatically scale to support increasing or decreasing loads. 
+&lt;a href=&quot;https://blogs.gartner.com/andrew-lerner/2017/07/21/serverless-is-not-networkless/&quot;&gt;https://blogs.gartner.com/andrew-lerner/2017/07/21/serverless-is-not-networkless/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;A serverless architecture forces an enterprise architectural design that modularises and isolates code. Rather than creating a full-stack enterprise application containing components for user interactions, business logic, business rules and a persistence layer, one can break-up a solution into its functional constituents isolated from one another.&lt;/p&gt;
+
+&lt;p&gt;A serverless function such as &lt;a href=&quot;https://cloudacademy.com/blog/microsoft-azure-functions-vs-google-cloud-functions-fight-for-serverless-cloud-domination-continues/&quot;&gt;AWS Lambda, Google Cloud Functions or Microsoft Azure Functions&lt;/a&gt; can be written and deployed virtually instantly, with the hosting provider automatically scaling to manage the load. Ideally, such a function should do one or a few things very well, perhaps offering a set of application programming interfaces for clients to use with clear documentation as to how it can be called and what results might be expected. As such, the function is isolated and can be tested in lots of ways to ensure that it provides the results it is contracted to provide.&lt;/p&gt;
+
+&lt;p&gt;However, writing small, well-defined services that provide a limited range of function is a characteristic of any microservice. What makes a serverless approach different is that managing the deployment and scaling of that service is delegated to the hosting provider, such as Amazon, Google or Microsoft.&lt;/p&gt;
+
+&lt;p&gt;As a result, a rarely used operation may take up no computing resources until it is triggered by an event, such as a HTTP request. Rather than trying to implement all functionality into a single or clustered server, one can break-up that functionality into separate functions. For instance, rather than writing a service to accept uploaded image files, process them, create thumbnails and then serve them as a photo-album, one might write a range of individual separate serverless functions to handle each step of that process so that, the thumbnail generation is automatically executed after a file is uploaded.&lt;/p&gt;
+
+&lt;p&gt;One then imagines an overall application being simply a range of different independent pieces of functionality stitched together in a declarative manner to solve a specific range of problems.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“This declarative approach then becomes a key driver of architecture. The application speaks the language of the domain and it’s easy to detect and fix force-fits, gaps, misrepresentations and erroneous assumptions in the application each time the implementation is reviewed against the domain. A declarative interface makes it easy to adapt to changes in the domain model.”
+&lt;a href=&quot;http://www.pragatisoftware.com/blog/functional-programming-and-software-architecture&quot;&gt;http://www.pragatisoftware.com/blog/functional-programming-and-software-architecture&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Functional programs are often organized as, sort of, a data flow graph, rather than a dependency structure. There’s declarative orchestration, right,? You just set up a whole bunch of things and you can see how they are related but you don’t have to, sort of, specify the order in which things happen, and you have referential transparency, right? I hand two values to a function, it will always give me the same value as the output because of referential transparency.”
+&lt;a href=&quot;https://serverless.com/blog/bobby-calderwood-functional-programming-microservices-emit-2017/&quot;&gt;https://serverless.com/blog/bobby-calderwood-functional-programming-microservices-emit-2017/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;As a result, one is forced to focus on two core perspectives: an &lt;em&gt;overall&lt;/em&gt; perspective that takes in the combined architecture in which multiple microservices are stitched together and a &lt;em&gt;granular&lt;/em&gt; perspective at the level of an individual microservice.&lt;/p&gt;
+
+&lt;h1 id=&quot;healthcare-takes-steps-into-the-cloud&quot;&gt;Healthcare takes steps into the cloud…&lt;/h1&gt;
+
+&lt;p&gt;Many, if not most, health services still run applications on local servers physically sitting on their premises, running on a private intranet inaccessible to the outside world running the day-to-day organisational processes of the business and usually providing clinical information to clinicians as well.&lt;/p&gt;
+
+&lt;p&gt;But things are changing, many years after most industries have made extensive use of cloud-based services, we are now seeing health organisations move to host servers on commodity cloud providers, resulting in a hybrid approach in which some services run locally and others run elsewhere.&lt;/p&gt;
+
+&lt;p&gt;In addition, rather than buying software and installing it for local users, we are starting to see organisations starting to procure platforms-as-a-service (PAAS) in which cloud-based services are used within the enterprise. For instance, in most modern organisations, a previously private intranet is increasingly having new communication channels laid down in order to enable interaction with patients and their devices.&lt;/p&gt;
+
+&lt;p&gt;For instance, some providers now use PAAS-based patient portals such as &lt;a href=&quot;https://www.patientsknowbest.com/&quot;&gt;Patients Know Best&lt;/a&gt; to enable patients to view their records. Such portals are also committing to opening up their data so that patients can choose to share their information with other providers;  for instance have a look at their &lt;a href=&quot;http://dev.patientsknowbest.com/home/fhir-api&quot;&gt;plans for a FHIR API&lt;/a&gt;). Likewise, other cloud-hosted services such as &lt;a href=&quot;http://drdoctor.co.uk/&quot;&gt;DrDoctor&lt;/a&gt; permit organisations to manage their outpatients by providing a platform on which patients can be contacted ahead of appointments to provide reminders and to collect outcome data.&lt;/p&gt;
+
+&lt;p&gt;As such, we already see health organisations making use of cloud-based services for hosting their own infrastructure and by using ready made large-scale off-the-shelf services from other providers.&lt;/p&gt;
+
+&lt;p&gt;As such, we &lt;em&gt;already&lt;/em&gt; have a distributed healthcare platform; it is hosted by our organisations and unfortunately is usually disconnected so that clinical staff in one organisation cannot see health information about their patients from another organisation. Presently, we see healthcare making tentative steps to either move to or adopt cloud hosted services, but these usually remain organisationally-bound.&lt;/p&gt;
+
+&lt;h1 id=&quot;in-parallel-healthcare-is-changing&quot;&gt;In parallel, healthcare is changing…&lt;/h1&gt;
+
+&lt;p&gt;In parallel with these technological changes, we see a range of &lt;a href=&quot;/clinical-informatics/2017/07/07/disruptive-influences-health.html&quot;&gt;disruptive influences in healthcare&lt;/a&gt; highlighting three core changes enabled by new technology:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Changes in models of care&lt;/li&gt;
+  &lt;li&gt;Patients as active participants&lt;/li&gt;
+  &lt;li&gt;‘Hospitals without walls’&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Fundamentally, advances in technology enable a transformation of care. We should look to information technology to re-imagine how citizens interact with their health services. I spoke at a recent &lt;a href=&quot;/clinical-informatics/2017/10/19/data-driven.html&quot;&gt;Digital Health and Care Conference on the benefits of an open platform&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In summary, I highlighted the importance of modelling data &lt;sup&gt;&lt;a href=&quot;#data-modelling&quot;&gt;a&lt;/a&gt;&lt;/sup&gt; and workflow/process &lt;sup&gt;&lt;a href=&quot;#process-modelling&quot;&gt;b&lt;/a&gt;&lt;/sup&gt;. It has been a source of surprise and frustration that so many efforts to digitise healthcare neglect communication between professionals and with the patient, particularly when information technology has been used so effectively for communication in other domains.&lt;/p&gt;
+
+&lt;p&gt;This is my phase 1 vision of an appropriate enterprise architecture for NHS Wales:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/platform/platform-overall.png&quot; alt=&quot;Platform Overall&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;See that little box, “test requesting and results”. This is what is inside it:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/platform/platform-lab.png&quot; alt=&quot;Platform Lab&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here we abstract a new notification service that handles notifications to users such as professionals in response to a result being made available by the laboratory.&lt;/p&gt;
+
+&lt;p&gt;Why is this phase 1? Because I see the building blocks of our  architecture becoming increasingly distributed and shared among healthcare providers. Why embed a terminology service within an application when one can pick one off the shelf and use on a subscription or pay-as-you-go model?&lt;/p&gt;
+
+&lt;h1 id=&quot;so-what-could-the-shift-to-a-services-based-economy-mean-for-health&quot;&gt;So what could the shift to a services-based economy mean for health?&lt;/h1&gt;
+
+&lt;p&gt;A microservice economy means that multiple providers will offer small-scale, well-defined software functionality on a pay-as-you-go basis. We heard an announcement last week from Amazon launching their new &lt;a href=&quot;https://aws.amazon.com/blogs/aws/aws-serverless-app-repo/&quot;&gt;AWS serverless application repository&lt;/a&gt; to enable a new marketplace of serverless apps that can be consumed by clients in order to solve real-life problems. I expect other providers to do the same, and there is ongoing work to create &lt;a href=&quot;https://serverless.com/&quot;&gt;toolkits&lt;/a&gt; that permit serverless applications to be hosted by any cloud provider.&lt;/p&gt;
+
+&lt;p&gt;These technological trends mean that we will see large software applications and platforms being broken up into modules and as we progress, we will stitch together functionality from multiple providers to order to create clinical applications.&lt;/p&gt;
+
+&lt;p&gt;If we combine these trends with a need to support cross-organisational working, to make patients “active participants in their care” and create “hospitals without walls”, we can see that we are moving to a distributed, decentralised, data-driven and cloud-hosting mixed environment combining functionality from multiple providers in order to create and run our health services.&lt;/p&gt;
+
+&lt;p&gt;We could see core services providing data access and basic workflow models for each organisation but we will increasingly wish to federate across those services, creating a combined view of all data from multiple organisations. For example, an organisation may own or rent a document repository, probably based on IHE-XDS or FHIR document model and because other organisations also converge on standards-based open services then, subject to citizen consent, those repositories can be federated so we see a list of documents across all repositories.&lt;/p&gt;
+
+&lt;p&gt;Similarly, we could quickly see a marketplace of value-added functions that provide functionality layered upon those core services. For example, we might find a market for advanced natural language processing of unstructured text or services that encapsulate the application of machine learning algorithms to existing and new data. For example, why not rent a service that can, given a citizen’s distributed health record data, identify those taking a particular disease modifying treatment such as methotrexate and monitor and arrange the required three-monthly blood tests to check for signs of bone marrow suppression, renal impairment or liver damage? If that service was provided algorithmically as a microservice, given access to the required data and cost a fraction of a pence per patient, it could replace the administrators and specialist nursing staff whose job it currently is to monitor these patients.&lt;/p&gt;
+
+&lt;h1 id=&quot;healthcare-application-sandboxes&quot;&gt;Healthcare application sandboxes&lt;/h1&gt;
+
+&lt;p&gt;It is easy to see how some serverless resources might work. They may simply provide a HL7 FHIR resource endpoint and allow applications to use its application programming interface as if it were hosted locally. Imagine a distributed audit trail functionality, made available via the &lt;a href=&quot;https://www.hl7.org/fhir/auditevent.html&quot;&gt;HL7 FHIR AuditEvent endpoint&lt;/a&gt;. FHIR servers can support one or many different types of resource and it is not difficult to imagine a single serverless application providing a &lt;a href=&quot;https://www.hl7.org/fhir/capabilitystatement.html&quot;&gt;capability statement&lt;/a&gt; documenting only a single end-point and providing that functionality in an automatically scalable fashion.&lt;/p&gt;
+
+&lt;p&gt;Such a model would be fine for a single organisation, but how can that work in a distributed fashion?&lt;/p&gt;
+
+&lt;p&gt;But we need to create a distributed platform that means that we can plug-and-play these different microservices and make them useful to the wider health economy. To do that, we must design a sandbox environment in which user facing applications running on desktops, web-pages and mobile devices and backend serverless applications can be dropped and expect to work.&lt;/p&gt;
+
+&lt;p&gt;Much like Apple has “app stores” for mobile and desktop applications and Google has similar for Android, we need to consider what architecture is required for user-facing and serverless applications to be deployed easily and quickly into our distributed healthcare economy. Amazon has introduced the &lt;a href=&quot;https://aws.amazon.com/about-aws/whats-new/2016/11/introducing-the-aws-serverless-application-model/&quot;&gt;AWS Serverless Application Model&lt;/a&gt; which annotates a serverless application with information about its dependent resource types needed for its proper operation.&lt;/p&gt;
+
+&lt;p&gt;So how could this work for our methotrexate monitoring example serverless application? It needs to be provided with a sane runtime environment from which it can safely access the information it needs and to take any actions that are necessary. So what does it need access to?&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;a test results service to get results including renal profile, full blood count and liver function tests&lt;/li&gt;
+  &lt;li&gt;a test requesting service&lt;/li&gt;
+  &lt;li&gt;a document or clinical narrative repository&lt;/li&gt;
+  &lt;li&gt;a audit event logging service&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In software engineering, we frequency use a concept called &lt;em&gt;dependency injection&lt;/em&gt; to pass through dependencies to a subsystem so that we can configure it appropriately and appropriately isolate separate functionality. As such, much like the AWS Serverless application model referenced above, we need to consider how we glue together sensitive health data with different services, perhaps provided by multiple different vendors?&lt;/p&gt;
+
+&lt;p&gt;Given that all the functionality our serverless application needs is provided by HL7 FHIR resource endpoints (&lt;a href=&quot;https://www.hl7.org/fhir/diagnosticreport.html&quot;&gt;diagnostic reports&lt;/a&gt;, &lt;a href=&quot;https://www.hl7.org/fhir/procedurerequest.html&quot;&gt;procedure request&lt;/a&gt;, &lt;a href=&quot;https://www.hl7.org/implement/standards/fhir/documentreference.html&quot;&gt;documents&lt;/a&gt; and &lt;a href=&quot;https://www.hl7.org/fhir/auditevent.html&quot;&gt;audit&lt;/a&gt;), it might be possible to simply pass in those endpoints as dependencies either when the service is provisioned or even when it is called.&lt;/p&gt;
+
+&lt;p&gt;And now the logical question becomes, how do we manage looking up and accessing resources across a distributed health enterprise, particularly when we are dealing with sensitive private data?&lt;/p&gt;
+
+&lt;p&gt;As I wrote in the &lt;a href=&quot;[next post](/clinical-informatics/2017/08/20/disruptive-influences-future.html)&quot;&gt;part three of my disruptive influences series&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Applications running on Apple’s iOS provide a useful analogy. In order to gain access to components of the underlying device and its operating system, such as the camera, the photo archive, location services etc, the application must use the appropriate API which forces explicit user consent. This “sandbox” environment means that an application is prevented from accessing resources to which consent has not been provided and presumably can log each and every attempt should that be required.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Can we do the same for health applications and services? It seems to me that we can create tremendous value from healthcare data - for patients, for health professionals and for society - but the foundation must be to allow that information to be organised in such a way that we can make it “universally accessible and useful” &lt;em&gt;subject to individual consent&lt;/em&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The answer to our distributed future, built declaratively to glue together distributed data and services, is underpinned by a robust model of citizen consent that itself is hardwired into the systems to manage resource lookup and access. We now need to start thinking about how this will work, and how a “healthcare application model” might operate so that we can make use of new technology to improve the care of our patients.&lt;/p&gt;
+
+&lt;p&gt;Thank you.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h1&gt;
+
+&lt;p&gt;&lt;a name=&quot;data-modelling&quot;&gt;a&lt;/a&gt;: Data modelling ensures that we create semantically interoperable data coded in such a way as to make it meaningful to multiple disparate units of software. Such data may represent all types of clinical information, such as a blood pressure measured with a traditional sphygmomanometer on the right arm or the result of a laboratory test. As such, a focus on data standards is important so that there is agreement as to how individual items are coded and contextual information can be understood, such as who performed the measurement, how it was done and when.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;process-modelling&quot;&gt;b&lt;/a&gt;: While a prospective clinical record of structured and unstructured information forms our medical record, the medical record does much more than simply record a narrative of events. Our medical records &lt;em&gt;are&lt;/em&gt; our clinical practice, enabling processes and workflow. Paper medical records have important properties in enabling workflow; &lt;a href=&quot;/clinical-informatics/2017/06/20/hazards-of-paper.html&quot;&gt;their presence on my desk with a post-it note tells to do something vital&lt;/a&gt;. It is therefore important to conceptualise not only a model of healthcare data but also model the workflow, processes and communications that enable care.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h4 id=&quot;further-reading&quot;&gt;Further reading:&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/03/09/google-information.html&quot;&gt;Organise healthcare information and make it universally accessible and useful&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/07/07/disruptive-influences-health.html&quot;&gt;Disruptive influences in healthcare information technology&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/06/20/hazards-of-paper.html&quot;&gt;The hazards of paper&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">On serverless:</summary></entry><entry><title type="html">Data-driven healthcare: integration</title><link href="https://www.wardle.org/clinical-informatics/2017/10/19/data-driven.html" rel="alternate" type="text/html" title="Data-driven healthcare: integration" /><published>2017-10-19T23:22:22+01:00</published><updated>2017-10-19T23:22:22+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/10/19/data-driven</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/10/19/data-driven.html">&lt;p&gt;This post is from a talk I gave at the inaugural Digital Health and Care Conference at the Principality Stadium in Cardiff, Wales on the 19th October 2017&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -1087,64 +1224,4 @@ barplot(as.matrix(sp[,c(2:7,12)]), beside=T,
   &lt;li&gt;&lt;a href=&quot;http://www.howtomeasureanything.com&quot;&gt;“How to measure anything” by Douglas Hubbard&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">I have previously discussed the value of information technology in supporting clinical care, unashamedly stealing and modifying Google’s original mantra:</summary></entry><entry><title type="html">The hazards of paper?</title><link href="https://www.wardle.org/clinical-informatics/2017/06/20/hazards-of-paper.html" rel="alternate" type="text/html" title="The hazards of paper?" /><published>2017-06-20T12:48:00+01:00</published><updated>2017-06-20T12:48:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/06/20/hazards-of-paper</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/06/20/hazards-of-paper.html">&lt;blockquote&gt;
-  &lt;p&gt;“Paper is one of the most hazardous substances in a hospital.”&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“Keeping paper over EHR is like keeping horse and cart for fear of theft of cars.”&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“Software is eating the world.”&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The first two are informal quips from colleagues on Twitter, but as I am going to argue that they are wrong, they shall remain nameless!&lt;/p&gt;
-
-&lt;p&gt;Many of you will recognise the last quote from &lt;a href=&quot;https://www.wsj.com/articles/SB10001424053111903480904576512250915629460&quot;&gt;Marc Andreeson&lt;/a&gt;. I truly believe that software is critical to the future of healthcare, in supporting both patients and health professionals in their respective roles.&lt;/p&gt;
-
-&lt;p&gt;As a professional, I want information systems that support me in my work and facilitate changes in working practices that mean that I can do &lt;em&gt;my job&lt;/em&gt; more effectively and to the greater benefit of my patients. If I have electronic records wherever I am, I can have a consultation at any time, perhaps in person but perhaps not. With paper records, such responsiveness is not possible; who is going to fetch the notes from the archives?&lt;/p&gt;
-
-&lt;p&gt;As a patient, I want information systems that support me and facilitate changes in working practices that mean that I can do &lt;em&gt;my job&lt;/em&gt; more effectively.&lt;/p&gt;
-
-&lt;h1 id=&quot;paper-isnt-all-bad-it-has-workflow-built-in&quot;&gt;Paper isn’t all bad… it has workflow built-in&lt;/h1&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“Dear Doctors, Can we stop printing out the electronic discharge summaries from the neurology day unit now that they are available in &lt;em&gt;Welsh Clinical Portal&lt;/em&gt;?”&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“No. Please keep sending them, as otherwise we won’t know when the patient has been admitted and has had their investigations.”&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;It is very easy to design clinical information systems thinking about how the system will look and work and build a product that will solve the &lt;em&gt;perceived&lt;/em&gt; problem. I have written before about how we need to be careful on &lt;a href=&quot;/clinical-design/2017/03/23/scope-framing-clinical-design.html&quot;&gt;framing our problem and scoping the solution to that problem&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Many hospitals now generate discharge documents electronically. They solve a problem: namely transcribing medications and then creating a discharge document. When a patient is discharged from hospital, a communication should be sent to ensure that the patient’s general practitioner is aware of the admission and what happened. Just like a referral to hospital, it is a handover of care from one team to another made up of a diagnostic synthesis and chain of reasoning supporting those diagnoses including results of relevant investigations together with any procedures or interventions and their complications. We used to hand-write these and then the fourth (illegible) copy would be sent to the general practitioner. Later, and sometimes months later, a team member might dictate a more formal summary.&lt;/p&gt;
-
-&lt;p&gt;But my colleague above, in asking for the electronic notifications to be printed, has identified a missing need that the new electronic discharge system fails to solve: a notification to support his workflow in his ongoing care of the patient.&lt;/p&gt;
-
-&lt;h1 id=&quot;digitisation&quot;&gt;Digitisation&lt;/h1&gt;
-
-&lt;p&gt;Paper is not the most hazardous substance in the hospital; it is a key enabler of many processes and workflows with its use and subsequent benefits not necessarily explicitly understood by outsiders. A benefit of paper is that it allows end-users to rapid prototype a system that support a business workflow when an alternative is either not provided or impedes productivity. In essence, workflows built upon paper were the original “feral” systems until such time that they were replaced with a more formal system or became that system by virtue of its ongoing use.&lt;/p&gt;
-
-&lt;p&gt;We all have these “systems”. My secretary places notes in my in-tray and I process them. It is a workflow, albeit a rudimentary one:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/pile-of-notes.jpg&quot; alt=&quot;Pile Of Notes&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The problem is that these “feral systems” may not be acknowledged explicitly during information technology deployments - the workflow may be understood by all who work there but never explicitly expressed - it is tacit knowledge.&lt;/p&gt;
-
-&lt;h1 id=&quot;software-should-be-eating-healthcare&quot;&gt;Software &lt;em&gt;should&lt;/em&gt; be “eating healthcare”&lt;/h1&gt;
-
-&lt;p&gt;I have previously written about the &lt;a href=&quot;/clinical-informatics/2017/03/09/google-information.html&quot;&gt;importance of software in healthcare&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Digital transformation is more than simply replacing a single paper-based process with an electronic one. Instead, one needs to understand the workflows and processes that are dependent on the process you are examining and ensure that these are included in your design for a clinical information system:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Start with data and the structures that will be used to hold that data. Data, particularly in health, will be immutable as it reflects what was done at that timepoint and changes in data should be modelled accordingly. Prefer open standards, adopt published information models and bind appropriate terminologies and data dictionaries so that you can provide semantic interoperability with partner software.&lt;/li&gt;
-  &lt;li&gt;Examine the workflow and processes that are dependent and create explicit process models; there may be many such processes for different services with different perspectives on the same data. Different professionals need different views of the same data. Consider how such models can be flexibly configured at runtime using rule-based engines written in the language of the business, rather than hard-coding processes.&lt;/li&gt;
-  &lt;li&gt;Acknowledge that, at its most fundamental, healthcare is about communication. Software that ignores human factors will be doomed in the pit of &lt;a href=&quot;/cis-design/2017/05/02/clinical-modelling.html&quot;&gt;real-life/model mismatch.&lt;/a&gt; Build systems that improve communication between and among the healthcare team. Create shared records but understand there is a difference between notifications and alerts and reading a medical record.&lt;/li&gt;
-  &lt;li&gt;Use the design of user-interfaces as a useful part of an exploratory process to understand data and workflow, but build a layered architecture with separation of data persistence, business/application logic and user interface. Consider user-facing applications to be minimal, thin-wrappers around more substantial services forming a “platform”, providing different perspectives for different users of the same data.&lt;/li&gt;
-  &lt;li&gt;Plan user-facing applications for multiple devices, even if you don’t intend to create different versions now so that no-one inadvertently loses separation between business logic and the user interface. Make user interfaces “smart” in the way that they help the user but “stupid” in that they delegate their logic to underlying business services.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">“Paper is one of the most hazardous substances in a hospital.”</summary></entry></feed>
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">I have previously discussed the value of information technology in supporting clinical care, unashamedly stealing and modifying Google’s original mantra:</summary></entry></feed>
