@@ -1,5 +1,53 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-12-04T22:58:32+00:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
-</subtitle><entry><title type="html">Serverless in healthcare</title><link href="https://www.wardle.org/clinical-informatics/2017/12/04/serverless.html" rel="alternate" type="text/html" title="Serverless in healthcare" /><published>2017-12-04T22:22:22+00:00</published><updated>2017-12-04T22:22:22+00:00</updated><id>https://www.wardle.org/clinical-informatics/2017/12/04/serverless</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/12/04/serverless.html">&lt;p&gt;On serverless:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-12-05T09:38:21+00:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</subtitle><entry><title type="html">Enabling innovation</title><link href="https://www.wardle.org/clinical-informatics/2017/12/04/enabling-innovation.html" rel="alternate" type="text/html" title="Enabling innovation" /><published>2017-12-04T22:22:22+00:00</published><updated>2017-12-04T22:22:22+00:00</updated><id>https://www.wardle.org/clinical-informatics/2017/12/04/enabling-innovation</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/12/04/enabling-innovation.html">&lt;p&gt;The &lt;a href=&quot;http://gov.wales/docs/dhss/publications/151211reporten.pdf&quot;&gt;Informed Health and Care Strategy, 2015&lt;/a&gt; sets out a clear vision for Wales to use digital technology and online services to support and enable care. The strategy is divided into clearly divided into four workstreams: 1) Information for you, 2) Supporting Professionals, 3) Improvement and Innovation, 4) A Planned Future&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.003.jpeg&quot; alt=&quot;Wardle Digital Health.003&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Delivery of this vision would result in Wales uniquely blending socialised universal value-based prudent healthcare with modern state-of-the-art technology to provide a responsive, fair and quality service.&lt;/p&gt;
+
+&lt;p&gt;But we have to question whether we have the current organisational and governance structures within NHS Wales to most effectively implement this strategy? Historically, there has been a lack of pace in the delivery of individual projects that, together, should be incrementally fulfilling important components of the wider vision. Together, those individual projects should be stepping stones on which we deliver that vision.&lt;/p&gt;
+
+&lt;p&gt;Wales is a unique place to deliver an effective healthcare information technology strategy given its size and our lack of purchaser-provider split and as a result, technology should be being used to effect broad-based transformational change. It is disappointing that we have not been able to make more progress but with the right changes, Wales can become a global example of a modern, forward-thinking healthcare economy underpinned by data standards, interoperability and an open platform to combine “Once for Wales” solutions with a mixed and thriving economy built on innovation.&lt;/p&gt;
+
+&lt;h1 id=&quot;a-paradox-of-control&quot;&gt;A paradox of control&lt;/h1&gt;
+
+&lt;p&gt;Transformational change, enabled by technology, must be driven from the bottom-up, from those who deliver healthcare permitting incremental development and innovation while at the same time lowering risk. However, top-down governance must ensure that solutions are standards-compliant, fit-for-purpose and safe as well as checking that developments are not orthogonal to the overall strategic vision.&lt;/p&gt;
+
+&lt;p&gt;There is an important paradox in many health services, including Wales, is that there is a tendency to centralise the day-to-day management and delivery of individual products and yet high-level strategic and prioritisation decisions are decentralised, haphazard and dependant on capital funding with little or no consideration or control as to how those projects will fit into a wider technical healthcare enterprise architecture.&lt;/p&gt;
+
+&lt;h1 id=&quot;performance-management-and-delivery&quot;&gt;Performance management and delivery&lt;/h1&gt;
+&lt;p&gt;Part of the responsibility of being part of “learning organisations” is to measure our effectiveness and performance, but do we really do that and how can we do that? What formal processes do we have to measure, for example, satisfaction with our clinical applications? Likewise, how is NHS Wales held to account in terms of performance management when delivering transformational change?&lt;/p&gt;
+
+&lt;p&gt;We should be asking the following questions:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;who is responsible for determining and prioritising the high-level clinical requirements in each of the four workstreams in the strategy?&lt;/li&gt;
+  &lt;li&gt;who is responsible for looking at the common themes between the workstreams and designing a national architecture that will enable delivery of those workstreams as well as giving consideration to future needs?&lt;/li&gt;
+  &lt;li&gt;who is tasked with taking items of user-need and translating these needs into the design of software to meet those needs?&lt;/li&gt;
+  &lt;li&gt;who is responsible for developing an iterative roadmap that delivers incremental benefits at pace and yet can deliver increasing functionality over time?&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;If we cannot answer those questions, then we have a duty to change our organisational, governance and technical structures so that we can all be held to account. Unfortunately, it is likely that the different organisations within complex multi-organisation enterprises such as NHS Wales will all attribute the failure of delivery to each other because delivery is dependent on so many interactions between so many levels of multiple, highly hierarchical organisations all with different models of funding and sometimes contradictory opinions on prioritisation.&lt;/p&gt;
+
+&lt;p&gt;It is clear to me that we need to change our approach.&lt;/p&gt;
+
+&lt;h1 id=&quot;collaboration-and-an-appropriate-technical-infrastructure&quot;&gt;Collaboration and an appropriate technical infrastructure&lt;/h1&gt;
+
+&lt;p&gt;Fundamentally, we need a new collaborative model in which a national open technical platform, adopting robust industry standards, underpins the development of national and local applications as well as supporting innovation from organisations both within the NHS and from the commercial sector.&lt;/p&gt;
+
+&lt;p&gt;Such a collaborative model must be underpinned by:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;the adoption of technical standards and open application programming interfaces&lt;/li&gt;
+  &lt;li&gt;a renewed focus on a health enterprise “platform” for Wales, underpinning by a re-imagining of our software architecture&lt;/li&gt;
+  &lt;li&gt;encourage the development and evaluation of innovative projects by all&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Wales is a unique place to leverage modern information technology in order to deliver transformational change for our clinical services, providing important support for patients, clinicians and managers. With the right technical architecture and organisational structures, Wales can collaborate to safely deliver the Informed Health and Care Strategy and deliver tangible benefit for our citizens.&lt;/p&gt;
+
+&lt;p&gt;We must start to openly debate the most effective way of delivering that strategy.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">The Informed Health and Care Strategy, 2015 sets out a clear vision for Wales to use digital technology and online services to support and enable care. The strategy is divided into clearly divided into four workstreams: 1) Information for you, 2) Supporting Professionals, 3) Improvement and Innovation, 4) A Planned Future</summary></entry><entry><title type="html">Serverless in healthcare</title><link href="https://www.wardle.org/clinical-informatics/2017/12/04/serverless.html" rel="alternate" type="text/html" title="Serverless in healthcare" /><published>2017-12-04T22:22:22+00:00</published><updated>2017-12-04T22:22:22+00:00</updated><id>https://www.wardle.org/clinical-informatics/2017/12/04/serverless</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/12/04/serverless.html">&lt;p&gt;On serverless:&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Serverless computing allows users to run code without provisioning or managing any underlying system or application infrastructure, and they automatically scale to support increasing or decreasing loads. 
@@ -1118,110 +1166,4 @@ barplot(as.matrix(sp[,c(2:7,12)]), beside=T,
 
 &lt;p&gt;&lt;a name=&quot;patient-safety&quot;&gt;a&lt;/a&gt;: For more information on the separation of administrative and clinical systems, see my &lt;a href=&quot;http://wardle.org/clinical-informatics/2017/06/06/using-data-patient-safety.html&quot;&gt;blog post on patient safety&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;a name=&quot;linkage&quot;&gt;b&lt;/a&gt;: I’m not sure that everyone realises this.&lt;/p&gt;</content><author><name></name></author><summary type="html">Healthcare has traditionally been conservative in its adoption of new technologies. Many clinicians still routinely use pen and paper to record medical information during a face-to-face encounter with a patient on the ward or in the clinic.</summary></entry><entry><title type="html">Safely deploying machine learning in healthcare 2/2</title><link href="https://www.wardle.org/clinical-informatics/2017/06/20/machine-learning-2.html" rel="alternate" type="text/html" title="Safely deploying machine learning in healthcare 2/2" /><published>2017-06-20T12:48:00+01:00</published><updated>2017-06-20T12:48:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/06/20/machine-learning-2</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/06/20/machine-learning-2.html">&lt;p&gt;I have previously discussed the value of information technology in supporting clinical care, unashamedly stealing and modifying Google’s original mantra:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“to organise the world’s information and make it universally accessible and useful”.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;and adapted it to healthcare information:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;a href=&quot;/clinical-informatics/2017/03/09/google-information.html&quot;&gt;to organise healthcare information and make it universally accessible and useful&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;and argued that we should be making healthcare safer by &lt;a href=&quot;/information-governance/2017/03/19/information-governance.html&quot;&gt;running it on rails&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;I want to talk about artificial intelligence and healthcare in relation to measurement, data and decision making. I outlined the &lt;a href=&quot;/clinical-informatics/2017/05/10/machine-learning.html&quot;&gt;regulatory issues according to the MHRA of the application of AI in healthcare in a prior blog post.&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h1 id=&quot;decision-making&quot;&gt;Decision making&lt;/h1&gt;
-
-&lt;p&gt;Why is information important? At its most fundamental, healthcare is about decision making. As such, I would argue that making the right information available at the right time is critical in reducing the uncertainty around any decision in healthcare.&lt;/p&gt;
-
-&lt;p&gt;I am reading &lt;a href=&quot;http://www.howtomeasureanything.com&quot;&gt;“How to measure anything” by Douglas Hubbard&lt;/a&gt;. It is not primarily written for healthcare, but instead focuses on how to use measurement to reduce the uncertainty around business decisions with a particular emphasis on the importance of &lt;em&gt;what&lt;/em&gt; is measured.&lt;/p&gt;
-
-&lt;p&gt;Decision-making in healthcare may be relating to the diagnosis or treatment of an individual patient but just as importantly relates to decision-making for groups of patients when we are making decisions about the design of our healthcare services.&lt;/p&gt;
-
-&lt;p&gt;From Douglas Hubbard:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;In business cases, most of the variables have an “information value” at or near zero. But usually at least some variables have an information value that is so high that some deliberate measurement effort is easily justified.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;In medicine, many of our “measurements” (facts gleaned about how a symptom developed, results of investigations) have very high “information values”. Others have very little.&lt;/p&gt;
-
-&lt;p&gt;Now I have regularly argued that we should be routinely recording structured information about our patients including information relating to problems, diagnoses and outcomes. Such data then allows us to make appropriate inferences about our patients such as, how is this patient doing compared to other patients with this condition? In many clinical situations, identifying the patient not behaving as expected is important.&lt;/p&gt;
-
-&lt;p&gt;In fact, many of our current “measurements” in healthcare relate to information easily acquired, rather than measurements of &lt;em&gt;value&lt;/em&gt;. Before deciding on measurement, he opines:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;ol&gt;
-    &lt;li&gt;What is the decision this measurement is supposed to support?&lt;/li&gt;
-    &lt;li&gt;What is the definition of the thing being measured in terms of observable consequences?&lt;/li&gt;
-    &lt;li&gt;How, exactly, does this thing matter to the decision being asked?&lt;/li&gt;
-    &lt;li&gt;How much do you know about it now (i.e., what is your current level of uncertainty)?&lt;/li&gt;
-    &lt;li&gt;What is the value of additional information?&lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;If you are recording information (making measurements) that do not support decision making and that information has no intrinsic worth itself, then why are we asking/examining/performing/assaying/recording it at all?&lt;/p&gt;
-
-&lt;h1 id=&quot;reducing-uncertainty&quot;&gt;Reducing uncertainty&lt;/h1&gt;
-
-&lt;p&gt;So if we decide that a measurement is worth doing, do we need to perform that measurement on all patients in order to make appropriate conclusions? The answer of course is no. We saw this in the recent UK general election in which an &lt;a href=&quot;http://www2.warwick.ac.uk/fac/sci/statistics/staff/academic-research/firth/exit-poll-explainer/&quot;&gt;exit poll&lt;/a&gt; correctly predicted the outcome based on sampling a small number of voters (100-200) at each polling station.&lt;/p&gt;
-
-&lt;p&gt;Accordingly, decision-making relating to groups of patients, particularly in relation to how we configure services or apply limited resources to populations of patients, does not need measurement of all people within those populations in order to reduce the uncertainty relating to those decisions. Instead, it is reasonable to perform those measurements on a random sample. A random sample is, however, not a sample based on a subgroup of patients who have volunteered to take part. Such a sampling methodology will introduce bias in your results. Instead, sampling should, ideally, be a random sample of individuals&lt;/p&gt;
-
-&lt;p&gt;Now these three propositions are outlined in the book (I have reworded them slightly to suit medicine):&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;We care about measurements because measurements inform uncertain decisions.&lt;/li&gt;
-  &lt;li&gt;For any decision or set of decisions, there are a large combination of things to measure and ways to measure them—but perfect certainty is rarely a realistic option.&lt;/li&gt;
-  &lt;li&gt;Therefore, we need a method to analyse options for reducing uncertainty about decisions.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&quot;using-ai-to-reduce-uncertainty&quot;&gt;Using AI to reduce uncertainty&lt;/h1&gt;
-
-&lt;p&gt;In healthcare, we have a problem with information overload. I must manually scroll through laboratory results looking for something relevant, and in the current (nationally-provided) software I have to use, one has to actually click to open each individual result to check what it showed.&lt;/p&gt;
-
-&lt;p&gt;So we can refine our needs to include the importance of displaying the &lt;em&gt;right information at the right time&lt;/em&gt;. In other words, which “measurements” to show at a given time point that will most reduce the uncertainty relating to a decision.&lt;/p&gt;
-
-&lt;p&gt;While machine learning holds the promise for creating tools that can make clinical decisions inferences independently or semi-independently, I would argue that information technology should focus on valuably supporting care by organising and presenting information about patients to patients and clinicians and providing intuitive adaptive tools that allow the systematic recording of clinical information.&lt;/p&gt;
-
-&lt;p&gt;There is considerable hype relating to AI in healthcare, but this risks overlooking concrete and tangible benefits in the short-term to &lt;em&gt;augment&lt;/em&gt; and &lt;em&gt;support&lt;/em&gt; humans, whether patient or clinician, in healthcare.&lt;/p&gt;
-
-&lt;p&gt;Such goals may sound mundane compared to the future possibilities of machine learning in healthcare, but to clinicians and patients who have spent many years being “information-poor”, the power of having all relevant information available on hand as well as adaptive tools to record that information quickly and efficiently should not be under-estimated.&lt;/p&gt;
-
-&lt;p&gt;Imagine a patient admitted with weakness as an emergency. An acetyl-choline receptor antibody test was requested by the general practitioner four weeks ago before the patient deteriorated quickly. Do you think the admitting team will notice that result sitting in the laboratory? At the moment, it will be left to luck. How can that be?&lt;/p&gt;
-
-&lt;p&gt;Instead, adaptive, learning, intelligent systems should be able to curate medical information (our “measurements”) in order to reduce uncertainty (in this case, our diagnosis of myasthenia gravis).&lt;/p&gt;
-
-&lt;p&gt;We could try to manually curate the rules behind adaptive information displays with complex if…then statements, but ML offers scope to learn from clinicians. For example, real-time adaptive systems could learn what clinicians click on in different circumstances, “see” that patients are having repeated blood tests after a surgical procedure and then subsequently “understand” that it is useful to graph them. Like Amazon can suggest other things for you to buy, adaptive displays of information can “learn” to present the right information at the right time.&lt;/p&gt;
-
-&lt;p&gt;For example, you have multiple sclerosis? Here are your outcomes over time compared to patients like you of the same age:
-&lt;img src=&quot;/images/edss-graph.jpg&quot; alt=&quot;Edss Graph&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I have built that manually, but why can’t machines curate the information for us?&lt;/p&gt;
-
-&lt;h1 id=&quot;bayesian-logic&quot;&gt;Bayesian logic&lt;/h1&gt;
-
-&lt;p&gt;Healthcare professionals regularly use tacit rules to arrive at clinical decisions based on a set heuristics which will include ‘a priori’ knowledge applied to individual patients. For example, if I know Wilson’s disease is rare but treatable, I will attempt to diagnose it more frequently that something rare but untreatable. Likewise, if a condition is common, then I will test for it more frequently. Likewise, no investigation or diagnostic test is foolproof, with false positive and false negative results. &lt;em&gt;Bayesian inference&lt;/em&gt; is a way of adjusting the probability of a hypothesis (eg. my patient has Wilson’s disease) based on a combination of `a priori’ knowledge (e.g. its prevalence) combined with new information.&lt;/p&gt;
-
-&lt;p&gt;However, in clinical practice it is difficult to truly understand the significance of new information. Just as we need to make information available, we also need help in deciding whether new information (“measurements”) are relevant to the clinical decision we face. As a result, we need technology to identify ‘a priori’ knowledge and support us in interpreting how new data influences our clinical decisions.&lt;/p&gt;
-
-&lt;h1 id=&quot;conclusions&quot;&gt;Conclusions&lt;/h1&gt;
-
-&lt;p&gt;In conclusion therefore, AI can valuably support healthcare by making the right information available at the right time, and learning how to present that information in the appropriate way to reduce the uncertainty relating to clinical decisions. In addition, adaptive systems can usefully identify the “measurements” (data) required to further reduce uncertainty, leveraging ‘a priori’ knowledge and appropriately adjusting to an individual scenario.&lt;/p&gt;
-
-&lt;p&gt;As such, we need clinical information systems that enable health professionals and patients to make inferences and support clinical decision making, and AI can and must play a useful role in supporting those systems.&lt;/p&gt;
-
-&lt;h1 id=&quot;further-reading&quot;&gt;Further reading&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/03/09/google-information.html&quot;&gt;Organise healthcare information and make it universally accessible and useful&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/information-governance/2017/03/19/information-governance.html&quot;&gt;Making healthcare “run on rails” - the importance of technology&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/05/10/machine-learning.html&quot;&gt;Regulatory issues of the application of AI in healthcare&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.howtomeasureanything.com&quot;&gt;“How to measure anything” by Douglas Hubbard&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">I have previously discussed the value of information technology in supporting clinical care, unashamedly stealing and modifying Google’s original mantra:</summary></entry></feed>
+&lt;p&gt;&lt;a name=&quot;linkage&quot;&gt;b&lt;/a&gt;: I’m not sure that everyone realises this.&lt;/p&gt;</content><author><name></name></author><summary type="html">Healthcare has traditionally been conservative in its adoption of new technologies. Many clinicians still routinely use pen and paper to record medical information during a face-to-face encounter with a patient on the ward or in the clinic.</summary></entry></feed>
