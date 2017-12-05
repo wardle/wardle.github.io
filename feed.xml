@@ -1,9 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-12-05T09:40:35+00:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
-</subtitle><entry><title type="html">Enabling innovation</title><link href="https://www.wardle.org/clinical-informatics/2017/12/05/enabling-innovation.html" rel="alternate" type="text/html" title="Enabling innovation" /><published>2017-12-05T08:40:40+00:00</published><updated>2017-12-05T08:40:40+00:00</updated><id>https://www.wardle.org/clinical-informatics/2017/12/05/enabling-innovation</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/12/05/enabling-innovation.html">&lt;p&gt;The &lt;a href=&quot;http://gov.wales/docs/dhss/publications/151211reporten.pdf&quot;&gt;Informed Health and Care Strategy, 2015&lt;/a&gt; sets out a clear vision for Wales to use digital technology and online services to support and enable care. The strategy is divided into clearly divided into four workstreams: 1) Information for you, 2) Supporting Professionals, 3) Improvement and Innovation, 4) A Planned Future&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-12-05T09:53:00+00:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</subtitle><entry><title type="html">Enabling innovation</title><link href="https://www.wardle.org/clinical-informatics/2017/12/05/enabling-innovation.html" rel="alternate" type="text/html" title="Enabling innovation" /><published>2017-12-05T08:40:40+00:00</published><updated>2017-12-05T08:40:40+00:00</updated><id>https://www.wardle.org/clinical-informatics/2017/12/05/enabling-innovation</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/12/05/enabling-innovation.html">&lt;p&gt;The &lt;a href=&quot;http://gov.wales/docs/dhss/publications/151211reporten.pdf&quot;&gt;Informed Health and Care Strategy, 2015&lt;/a&gt; sets out a clear vision for Wales to use digital technology and online services to support and enable care. The strategy is divided into four workstreams:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Information for you&lt;/li&gt;
+  &lt;li&gt;Supporting Professionals&lt;/li&gt;
+  &lt;li&gt;Improvement and Innovation&lt;/li&gt;
+  &lt;li&gt;A Planned Future&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.003.jpeg&quot; alt=&quot;Wardle Digital Health.003&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Delivery of this vision would result in Wales uniquely blending socialised universal value-based prudent healthcare with modern state-of-the-art technology to provide a responsive, fair and quality service.&lt;/p&gt;
+&lt;p&gt;Delivery of this vision would result in Wales uniquely blending socialised universal prudent healthcare with modern state-of-the-art technology to provide a responsive, fair and quality service.&lt;/p&gt;
 
 &lt;p&gt;But we have to question whether we have the current organisational and governance structures within NHS Wales to most effectively implement this strategy? Historically, there has been a lack of pace in the delivery of individual projects that, together, should be incrementally fulfilling important components of the wider vision. Together, those individual projects should be stepping stones on which we deliver that vision.&lt;/p&gt;
 
@@ -40,14 +47,14 @@
 &lt;ul&gt;
   &lt;li&gt;the adoption of technical standards and open application programming interfaces&lt;/li&gt;
   &lt;li&gt;a renewed focus on a health enterprise “platform” for Wales, underpinning by a re-imagining of our software architecture&lt;/li&gt;
-  &lt;li&gt;encourage the development and evaluation of innovative projects by all&lt;/li&gt;
+  &lt;li&gt;encouraging the development and evaluation of innovative projects by all&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Wales is a unique place to leverage modern information technology in order to deliver transformational change for our clinical services, providing important support for patients, clinicians and managers. With the right technical architecture and organisational structures, Wales can collaborate to safely deliver the Informed Health and Care Strategy and deliver tangible benefit for our citizens.&lt;/p&gt;
 
 &lt;p&gt;We must start to openly debate the most effective way of delivering that strategy.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">The Informed Health and Care Strategy, 2015 sets out a clear vision for Wales to use digital technology and online services to support and enable care. The strategy is divided into clearly divided into four workstreams: 1) Information for you, 2) Supporting Professionals, 3) Improvement and Innovation, 4) A Planned Future</summary></entry><entry><title type="html">Serverless in healthcare</title><link href="https://www.wardle.org/clinical-informatics/2017/12/04/serverless.html" rel="alternate" type="text/html" title="Serverless in healthcare" /><published>2017-12-04T22:22:22+00:00</published><updated>2017-12-04T22:22:22+00:00</updated><id>https://www.wardle.org/clinical-informatics/2017/12/04/serverless</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/12/04/serverless.html">&lt;p&gt;On serverless:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">The Informed Health and Care Strategy, 2015 sets out a clear vision for Wales to use digital technology and online services to support and enable care. The strategy is divided into four workstreams:</summary></entry><entry><title type="html">Serverless in healthcare</title><link href="https://www.wardle.org/clinical-informatics/2017/12/04/serverless.html" rel="alternate" type="text/html" title="Serverless in healthcare" /><published>2017-12-04T22:22:22+00:00</published><updated>2017-12-04T22:22:22+00:00</updated><id>https://www.wardle.org/clinical-informatics/2017/12/04/serverless</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/12/04/serverless.html">&lt;p&gt;On serverless:&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Serverless computing allows users to run code without provisioning or managing any underlying system or application infrastructure, and they automatically scale to support increasing or decreasing loads. 
