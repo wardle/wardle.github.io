@@ -1,5 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-12-05T09:53:00+00:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
-</subtitle><entry><title type="html">Enabling innovation</title><link href="https://www.wardle.org/clinical-informatics/2017/12/05/enabling-innovation.html" rel="alternate" type="text/html" title="Enabling innovation" /><published>2017-12-05T08:40:40+00:00</published><updated>2017-12-05T08:40:40+00:00</updated><id>https://www.wardle.org/clinical-informatics/2017/12/05/enabling-innovation</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/12/05/enabling-innovation.html">&lt;p&gt;The &lt;a href=&quot;http://gov.wales/docs/dhss/publications/151211reporten.pdf&quot;&gt;Informed Health and Care Strategy, 2015&lt;/a&gt; sets out a clear vision for Wales to use digital technology and online services to support and enable care. The strategy is divided into four workstreams:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-12-06T10:42:44+00:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</subtitle><entry><title type="html">The paradox of ambition</title><link href="https://www.wardle.org/clinical-informatics/2017/12/06/paradox-of-ambition.html" rel="alternate" type="text/html" title="The paradox of ambition" /><published>2017-12-06T10:39:39+00:00</published><updated>2017-12-06T10:39:39+00:00</updated><id>https://www.wardle.org/clinical-informatics/2017/12/06/paradox-of-ambition</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/12/06/paradox-of-ambition.html">&lt;h1 id=&quot;the-paradox-of-ambition&quot;&gt;The paradox of ambition&lt;/h1&gt;
+
+&lt;p&gt;We have information technology projects in healthcare which are hugely ambitious in their scope - for example, the nursing documentation project in Wales - in which there are many requirements, interactions, dependencies and fundamentally so many issues of change management required across multiple organisations, that it is hugely ambitious as a result of it being really very difficult. That worries me, because ambition to solve something that is extremely difficult is misplaced ambition.&lt;/p&gt;
+
+&lt;iframe src=&quot;http://player.nafw.cloud.vualto.com/Player/Index/f81e649d-044a-40b0-8f42-8d6017d78557?autostart=False&amp;amp;captionsOn=False&quot; name=&quot;NAFW Player&quot; seamless=&quot;seamless&quot; frameborder=&quot;0&quot; width=&quot;640&quot; height=&quot;360&quot;&gt;
+&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.senedd.tv/Meeting/Index/f81e649d-044a-40b0-8f42-8d6017d78557&quot;&gt;Welsh Senedd meeting on nursing documentation project&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The right kind of ambition is ambition to make a difference and deliver value at pace.&lt;/p&gt;
+
+&lt;p&gt;So when we talk about nursing documentation, it is ambitious because I think, the project, as currently designed, will just not work. The approach is just wrong; it needs to be something driven from the bottom-up and not the top-down. What the top-down should be doing is setting the direction of travel, setting the rulebook, giving the users and the people who work on their behalf the tools to solve their problems. You need to get software in the hands of users as soon as possible in order to more fully understand the problems you are trying to solve; a more agile approach is required.&lt;/p&gt;
+
+&lt;p&gt;The right kind of ambition is to deliver. So what I mean by ambition is that I want to have my consultations recorded and my dictation to order blood investigations automatically. Who will be the first to deploy “Amazon Echo” or “Google Home” in the clinic to support my outpatient consultations? How can we enable that innovative future? We do it by creating an appropriate open services-based architecture and allow multiple applications to use those services.&lt;/p&gt;
+
+&lt;p&gt;So sure, build test requesting into a portal but don’t build the whole stack of functionality into that single codebase so it is inaccessible to any other application. Likewise, don’t build a service that only one application can use. Break it up, make test requesting a service. Make the applications, such as Welsh Clinical Portal, use that service. Don’t make any single application mandating for use.&lt;/p&gt;
+
+&lt;p&gt;So then if we come along and want to get Amazon or Apple or Google to listen to our speech in clinic, to turn that speech into text and make a range of test requests based on that text, then don’t stop us doing that. Create something that enables that. Enable innovation and don’t suffocate it.&lt;/p&gt;
+
+&lt;p&gt;There is another paradox here in that I keep repeating in this forum and others, that we don’t know all the stuff we need to solve. We need to look really hard at people who think that they have all of the answers, because they don’t. Getting everyone in a room, and listing the requirements, building a technical specification and building it like it was a bridge, is not the way to build software.&lt;/p&gt;
+
+&lt;p&gt;Be ambitious, be realistic. Have a vision and plan to deliver that vision incrementally at pace.&lt;/p&gt;</content><author><name></name></author><summary type="html">The paradox of ambition</summary></entry><entry><title type="html">Enabling innovation</title><link href="https://www.wardle.org/clinical-informatics/2017/12/05/enabling-innovation.html" rel="alternate" type="text/html" title="Enabling innovation" /><published>2017-12-05T08:40:40+00:00</published><updated>2017-12-05T08:40:40+00:00</updated><id>https://www.wardle.org/clinical-informatics/2017/12/05/enabling-innovation</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/12/05/enabling-innovation.html">&lt;p&gt;The &lt;a href=&quot;http://gov.wales/docs/dhss/publications/151211reporten.pdf&quot;&gt;Informed Health and Care Strategy, 2015&lt;/a&gt; sets out a clear vision for Wales to use digital technology and online services to support and enable care. The strategy is divided into four workstreams:&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Information for you&lt;/li&gt;
@@ -1055,122 +1075,4 @@ barplot(as.matrix(sp[,c(2:7,12)]), beside=T,
 
 &lt;p&gt;If you have read my other blog posts, you will already know the answers to the problems posed in this and the previous post; we need to focus on a data-driven standards-based “platform” consisting of multiple well-defined services working together to create vendor-neutral archives of immutable clinical information in structured formats. My &lt;a href=&quot;/clinical-informatics/2017/08/20/disruptive-influences-future.html&quot;&gt;next post&lt;/a&gt; covers the components of this platform in more detail.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">In my previous blog post, I discussed three core disruptive influences that must be considered when designing the architecture of clinical information systems.</summary></entry><entry><title type="html">Disruptive influences in healthcare</title><link href="https://www.wardle.org/clinical-informatics/2017/07/07/disruptive-influences-health.html" rel="alternate" type="text/html" title="Disruptive influences in healthcare" /><published>2017-07-07T21:59:00+01:00</published><updated>2017-07-07T21:59:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/07/07/disruptive-influences-health</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/07/07/disruptive-influences-health.html">&lt;p&gt;Healthcare has traditionally been conservative in its adoption of new technologies. Many clinicians still routinely use pen and paper to record medical information during a face-to-face encounter with a patient on the ward or in the clinic.&lt;/p&gt;
-
-&lt;p&gt;Information technology was first adopted in order to manage the administrative running of hospitals such as appointment scheduling and tracking the location of paper records. Traditionally, there has been a separation of these patient administrative systems (PAS) from clinical systems used by health professionals, even if such systems were available.&lt;sup&gt;&lt;a href=&quot;#patient-safety&quot;&gt;a&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-
-&lt;p&gt;However, there are a number of transformative and disruptive influences in health that, together with new technology, are driving and will continue to drive new ways of working. I’ve grouped these influences into three broad related categories:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Changes in the models of care&lt;/li&gt;
-  &lt;li&gt;Patients as active participants&lt;/li&gt;
-  &lt;li&gt;‘Hospitals without walls’&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;changes-in-the-models-of-care&quot;&gt;Changes in the models of care&lt;/h1&gt;
-
-&lt;p&gt;The first group of transformative influences relate to the changing way in which healthcare is provided, primarily as a result of changing working practices, a need for safe and secure channels of communication between the patient and multi-disciplinary teams from different organisations and different sectors and a focus on measures of outcome and not process. Such changes are particularly relevant to an ageing population with individuals living longer with multiple long-term health conditions.&lt;/p&gt;
-
-&lt;h4 id=&quot;changes-in-how-patients-experience-their-care&quot;&gt;Changes in how patients experience their care&lt;/h4&gt;
-&lt;p&gt;The traditional approach to healthcare is based on face-to-face consultations with a primary care physician in a community-based facility, an outpatient clinic with a specialist in a hospital or an unscheduled or scheduled stay within that hospital for a medical emergency or an elective procedure.&lt;/p&gt;
-
-&lt;p&gt;As a consequence of this model, patients with diabetes mellitus used to be called for specialist outpatient review every 3-months and care would be provided by a fragmented patchwork with little or no overall coordination between services.&lt;/p&gt;
-
-&lt;p&gt;A modern approach to healthcare requires support for:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Management of multiple long-term health conditions requiring multi-disciplinary teamwork, cross-organisation care coordination as well as involvement of non-health partners such as social care and the third-sector when appropriate.&lt;/li&gt;
-  &lt;li&gt;Shared care between teams with remote monitoring using modern technology.&lt;/li&gt;
-  &lt;li&gt;Avoidance of ‘information silos’ that would usually result in information not being available at the right time or place for clinical decision making. Information should follow the patient and not be fixed in the organisation.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;As a result, a patient with diabetes mellitus should now be able to monitor their disease themselves with support from community teams including the general practitioner who can call upon a range of specialist services for specific complications or surveillance. Rather than a patient being screened for retinopathy (a complication of diabetes mellitus) in a clinic by an inexperienced junior doctor, they are called to a dedicated diabetic retinopathy screening programme with retinal photography and the results made available to all others in the team.&lt;/p&gt;
-
-&lt;h4 id=&quot;changes-in-how-we-measure-care&quot;&gt;Changes in how we measure care&lt;/h4&gt;
-
-&lt;p&gt;An important parallel change has been a focus on health outcomes rather than assessing services according to simply how many patients are seen or how many have a procedure. A focus on outcomes permits services to judge whether an intervention such as a knee replacement, actually improves outcomes in groups of patients with similar characteristics to yours. By analysing aggregated outcomes for groups of patients, we can modify our services to achieve the best outcome for patients and benchmark local services with those from elsewhere.&lt;/p&gt;
-
-&lt;p&gt;Changing our practice to consider outcomes requires an infrastructure that allows the routine and systematic capture of structured clinical data before and after by both clinicians and patients. Outcomes may be based on questionnaires but can just as easily be other outcomes such as return to work, number of steps walked per day, ability to exercise or managing to live independently in one’s home.&lt;/p&gt;
-
-&lt;h4 id=&quot;big-data&quot;&gt;“Big data”&lt;/h4&gt;
-
-&lt;p&gt;As a result, we face a future in which we have ever increasing amounts of data on patients. Information sourced from multiple organisations, increasingly structured outcome data and information from technology worn by the patient or used in the home to monitor progress and health status.&lt;/p&gt;
-
-&lt;p&gt;Genomics is an important additional potential source of “big data”. Genomics provides genotype data which, when linked with phenotypic data (what the patient looks like), allows us to assess genotype-phenotype correlations. Such analysis allows us to understand the causes of disease and the modifiers that affect progression of disease or predict responsiveness to treatment.&lt;/p&gt;
-
-&lt;p&gt;All such data is sensitive and it is in the &lt;em&gt;linkage&lt;/em&gt; of these datasets that is most important. While all medical information is confidential, it is &lt;em&gt;linkage&lt;/em&gt; that those of us who are interested in protected privacy should focus.&lt;sup&gt;&lt;a href=&quot;#linkage&quot;&gt;b&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;patients-as-active-participants&quot;&gt;Patients as active participants&lt;/h1&gt;
-
-&lt;p&gt;The second group of transformative influences relate to a repositioning of a patient from a person unto which &lt;em&gt;care is performed&lt;/em&gt; to an &lt;em&gt;active and involved participant&lt;/em&gt; in their care, controlling their interactions and deciding how and with whom their information should be shared. Such a repositioning is necessary given the changes in models care care outlined above.&lt;/p&gt;
-
-&lt;p&gt;As a result of this paradigm shift, it becomes necessary to design our information systems around the patient and not our organisations. Instead of fragmented services being run using fragmented software, information technology is needed to support an approach in which the patient is at the centre.&lt;/p&gt;
-
-&lt;p&gt;Accordingly, patients must be able to:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;View and contribute to their own records.&lt;/li&gt;
-  &lt;li&gt;Record their aims and objectives as well as their own outcomes for use in monitoring their problems and assessing the efficacy of any intervention.&lt;/li&gt;
-  &lt;li&gt;Communicate with members of their healthcare teams as well as other professionals and volunteers who are involved in their care with those communications forming part of a longitudinal record.&lt;/li&gt;
-  &lt;li&gt;Control how and what information is shared about them, including choosing to share their information for clinical research.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;communication-between-patients-and-their-services&quot;&gt;Communication between patients and their services&lt;/h4&gt;
-
-&lt;p&gt;The Government Procurement Service (GPS) has estimated that the NHS in England spends £79 million each year on postal costs. While many patients do try to communicate with their healthcare teams via email, there are several problems that restrict its wider use:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Current email is insecure with both content and metadata unencrypted with no way of proving identity. While cryptographic technologies are available, tools for signing and encrypting communications, such as ‘PGP’, are too difficult for most users to use routinely.&lt;/li&gt;
-  &lt;li&gt;Email communications are not usually filed into medical records and so the record is not available to the wider team, unless printed and placed into paper records.&lt;/li&gt;
-  &lt;li&gt;Even encrypted email communications leak confidential information by virtue of the metadata required to appropriately route those communications. For example, one can infer a relationship between a patient and the HIV clinic if they regularly communicate with hiv-clinic-cardiff@wales.nhs.uk even if the content of that communication is encrypted.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Communication may be appointment letters, cancellations, clinical communications but also data from devices such as a video recorded of an epileptic seizure, a step-count from an ambulatory step-monitor or an implantable device monitoring heart rhythm.&lt;/p&gt;
-
-&lt;h4 id=&quot;consent&quot;&gt;Consent&lt;/h4&gt;
-
-&lt;p&gt;Patient consent for information sharing may be implicit, in which, consent is assumed until a patient opts out, or explicit, in which a specific opt-in is required before information retrieval or processing can begin.&lt;/p&gt;
-
-&lt;p&gt;Typically, an opt-in model is required for patients to participate in clinical research. It is recognised that patients are keen to be involved in research but wish to be &lt;a href=&quot;https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/192572/2900774_InfoGovernance_accv2.pdf&quot;&gt;asked for their consent before their identifiable information is shared&lt;/a&gt;. However, that report also notes that “more could be done to increase awareness of the benefits of research”. As a result, intermediary brokering services are needed to allow patients to signify their interest in clinical research and permit them to subsequently be informed of &lt;em&gt;relevant&lt;/em&gt; research projects without divulging their private information. ‘Research brokers’ should match patients to projects and aim to maximise participation. To enable such functionality, private information such as diagnosis and treatments must be processed but via mechanisms that prevent the inappropriate use of that information for other purposes. A patient who opts-in to receive information about research suitable for them must (i) expect to have their information not used for any other purpose except brokering, and (ii) not be shown projects that are obviously unsuitable for them.&lt;/p&gt;
-
-&lt;p&gt;Much like Google connects users to advertisers, there is value in brokering connections between patients and researchers. The &lt;a href=&quot;http://wardle.org/clinical-informatics/2017/05/20/using-snomed-ct.html&quot;&gt;use of SNOMED-CT as an ontology&lt;/a&gt; (algorithmically I can understand that ‘multiple sclerosis’ IS-A type of ‘demyelinating disease’ for example) can help to support such connections based on diagnosis, procedure or other facets.&lt;/p&gt;
-
-&lt;p&gt;While simple brokering requires little more than matching on SNOMED-CT, how can more complex requirements be assessed such as, “patients with JME who have not yet had lamotrigine” -  how can allow a broker permit a third-party to check suitability without divulging identity?&lt;/p&gt;
-
-&lt;h1 id=&quot;hospitals-without-walls&quot;&gt;Hospitals without walls&lt;/h1&gt;
-
-&lt;p&gt;The third group of transformative influences relate to the decentralisation and democratisation of healthcare enabled by new technologies. These technologies comprise:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Increasing availability of personal mobile devices&lt;/li&gt;
-  &lt;li&gt;Increasing capability for smart home monitoring with an ‘internet of things’ in which multiple devices are connected together and combine to provide a unified view of a patient&lt;/li&gt;
-  &lt;li&gt;New commercial models of care, including advanced analytics, supported clinical decision making with applied machine learning for ‘artificial intelligence’.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;mobile-devices-home-monitoring-and-the-internet-of-things&quot;&gt;Mobile devices, home monitoring and the ‘internet of things’&lt;/h4&gt;
-
-&lt;p&gt;New technology means that patients can now increasingly receive their care and monitoring in their home using a range of medical grade devices. For example, implantable loop recorders can be inserted under the skin and, in the event of a cardiac event, the results sent wirelessly to the healthcare team. In addition, there is increasing acceptance of commodity consumer-grade devices, frequently marketed as fitness devices, in order to gain objective data on health outcomes in order to monitor a disease or to assess the effect of an intervention.  There are parallels with the technology used for video-conferencing in which professional, enterprise-grade devices installed in business are increasingly replaced with consumer-grade devices.&lt;/p&gt;
-
-&lt;p&gt;As a result, there is now consumer-grade technology available to allow patients to obtain ongoing advice and care from a range of professionals from a range of organisations via electronic communication channels such as electronic mail or voice or video calls rather than attending for routine outpatient clinic appointments. Such communications need to be safe and secure, with guarantees about identity at both sides of the communication, with guarantees of non-repudiation and verifiability with an appropriate entry recorded contemporaneously in the medical record.&lt;/p&gt;
-
-&lt;p&gt;However, just as outlined above, data transfers from a patient and their devices to clinical services must be encrypted and be kept private with avoidance of information leakage. As a result, not only must the content of those transfers be encrypted but the metadata needed to describe and route those transfers must be kept private. For example, network traffic analysis may be able to identify all elderly frail patients living alone with dementia in a region simply by looking for specific types of electronic monitoring data streams in a similar way to being able to identify when a person leaves their house by eavesdropping on smart meter data.&lt;/p&gt;
-
-&lt;h4 id=&quot;innovation-data-sharing-and-analytics&quot;&gt;Innovation, data sharing and analytics&lt;/h4&gt;
-
-&lt;p&gt;There is significant potential benefit to the use of software within healthcare in order to improve outcomes, safety and efficiency.&lt;/p&gt;
-
-&lt;p&gt;Such software might provide functionality to improve the care of a single patient, or might work across groups of patients to provide analysis of services and outcomes providing a view for clinicians and managers that combines data from multiple sources. In parallel, clinical users are now expecting to be able to use their own or the organisation’s mobile devices in order to work effectively when on the ward. Such applications support team-working, communication and alerts regarding patients under their care.&lt;/p&gt;
-
-&lt;p&gt;The traditional approach has been to bring innovation ‘within the walls’ of health organisations which can work when procuring specific products from vendors in order to perform a specific task. However, this model is less suitable for products which provide services via ‘cloud computing’ in which large-scale computing power may be provided across the network. For example, if a commercial entity provided automated or computer-assisted interpretation of histological slides or radiology imaging to multiple organisations using the results of deep learning, that functionality may be better provided across a network rather than being installed within the server rooms of a health organisation.&lt;/p&gt;
-
-&lt;p&gt;As a result, the “hospitals-without-walls” trend requires a focus on the network with a mixed economy of core functionality upon which innovative applications can operate in secure sandboxes, in which data access and interactions can be monitored and controlled.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;My &lt;a href=&quot;/clinical-informatics/2017/07/11/disruptive-influences-current.html&quot;&gt;next post discusses the current solutions&lt;/a&gt; already created in response to these disruptive influences. The &lt;a href=&quot;/clinical-informatics/2017/08/20/disruptive-influences-future.html&quot;&gt;third post discusses how an open platform might better deal with these disrupting influences in the future&lt;/a&gt;.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h1&gt;
-
-&lt;p&gt;&lt;a name=&quot;patient-safety&quot;&gt;a&lt;/a&gt;: For more information on the separation of administrative and clinical systems, see my &lt;a href=&quot;http://wardle.org/clinical-informatics/2017/06/06/using-data-patient-safety.html&quot;&gt;blog post on patient safety&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a name=&quot;linkage&quot;&gt;b&lt;/a&gt;: I’m not sure that everyone realises this.&lt;/p&gt;</content><author><name></name></author><summary type="html">Healthcare has traditionally been conservative in its adoption of new technologies. Many clinicians still routinely use pen and paper to record medical information during a face-to-face encounter with a patient on the ward or in the clinic.</summary></entry></feed>
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">In my previous blog post, I discussed three core disruptive influences that must be considered when designing the architecture of clinical information systems.</summary></entry></feed>
