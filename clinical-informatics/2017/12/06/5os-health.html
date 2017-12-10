@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>The 5 Os of healthcare IT</title>
+  <meta name="description" content="My writing on domain-driven design arose because of my own experience building an electronic patient record system:">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://www.wardle.org/clinical-informatics/2017/12/06/5os-health.html">
+  <link rel="alternate" type="application/rss+xml" title="Health informatics and information technology" href="/feed.xml">
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-97389603-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="/">Health informatics and information technology</a>
+  
+  
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+           <a class="page-link" href="/">All posts</a>
+          
+            
+            
+            <a class="page-link" href="/projects/">Projects</a>
+            
+          
+            
+            
+            <a class="page-link" href="/about/">About</a>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">The 5 Os of healthcare IT</h1>
+    <p class="post-meta">
+      <time datetime="2017-12-06T10:39:39+00:00" itemprop="datePublished">
+        
+        6 December 2017
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>My writing on <a href="/clinical-informatics/2017/02/03/domain-driven-design.html">domain-driven design</a> arose because of my own experience building an electronic patient record system:</p>
+
+<blockquote>
+  <p>“A model is an abstraction of the real-world distilling knowledge into core concepts and processes.”</p>
+
+  <p>from <a href="/clinical-informatics/2017/02/03/domain-driven-design.html">Towards a domain-driven, model-based approach to developing clinical information systems: innovating for the future in NHS Wales</a></p>
+</blockquote>
+
+<p>In that development, I was fortunate to use technologies developed by NeXT (and continued by Apple - WebObjects), which enforced a strict separation of model, controllers and the view. Importantly, I learned an important principle: the importance of starting with a data model conceived with a deep understanding of the domain in which I worked in my day job.</p>
+
+<p>It was only later that I read Eric Evans’ “Domain-driven design” which, while not about healthcare, has much to teach us in health information technology about the importance of data modelling.</p>
+
+<blockquote>
+  <p>“There are many things that make software development complex. But the heart of this complexity is the essential intricacy of the problem domain itself. If you’re trying to add automation to complicated human enterprise, then your software cannot dodge this complexity—all it can do is control it.
+The key to controlling complexity is a good domain model, a model that goes beyond a surface vision of a domain by introducing an underlying structure, which gives the software developers the leverage they need. A good domain model can be incredibly valuable, but it’s not something that’s easy to make. Few people can do it well, and it’s very hard to teach.”</p>
+
+  <p>Martin Fowler</p>
+
+  <p>Excerpt From: Eric Evans. <a href="https://itunes.apple.com/gb/book/domain-driven-design-tackling-complexity-in-heart-software/id502848358?mt=11">“Domain-Driven Design: Tackling Complexity in the Heart of Software.”</a></p>
+</blockquote>
+
+<h1 id="a-digital-drive">A digital drive</h1>
+
+<p>It is easy to see information technology as a product rather than what it really is - an enabler of transformation.</p>
+
+<p>How can we deliver transformative change in healthcare using digital technologies?</p>
+
+<p>I suggest that there are five broad principles… my 5 Os of healthcare IT:</p>
+
+<h1 id="1-objectives">1. Objectives</h1>
+
+<p>Define a clear vision. For example, in Wales, the Welsh Government <a href="http://gov.wales/topics/health/nhswales/about/e-health/?lang=en">Informed Health and Care strategy</a> is a very good start.</p>
+
+<p>Then define tangible definite high-level objectives. This should not be “deploy XXX” where XXX is a product you want to deploy, but instead focus on user need - the requirements, the problems you are solving and the transformation you enable. So, for me, in the next 3 months, NHS Wales should:</p>
+
+<ul>
+  <li>ensure laboratory and radiology results and clinical documents are available to all clinical users when they are seeing a patient, irrespective of where those investigations were performed</li>
+  <li>identify deteriorating patients on the ward</li>
+</ul>
+
+<p>Your prioritisation list might be different, but those objectives should support the aims in your overall vision. I have a different list for 6-months, 12-months and onwards (a subject for another post).</p>
+
+<p>It is sensible to define a list of all objectives, each a stepping stone on the way to delivering your overall vision. You will need to take into account political and business priorities as well so it is about negotiation, discussion and understanding.</p>
+
+<p>To illustrate this, we currently have a PACS replacement project ongoing. For me, replacing one PACS (picture archiving and communication systems) with another, in the absence of a well argued need, does <em>not</em> meet the standard required. In a resource limited environment, wasting resources without good reason is difficult to defend. Always ask for a compelling reason <em>why</em> something is important! What value do we gain that cannot be achieved in more prudent manner?</p>
+
+<p>Likewise, what is the point in forcing organisations to rip out a patient administrative system to replace with a new “Once for Wales” PAS if each will be configured differently with different information standards? Similarly, if the project to “deploy” the system doesn’t end up providing administrative and clinical staff or indeed the patient, information from across multiple organisations, then what are we trying to achieve?</p>
+
+<p>Your objectives define your work.</p>
+
+<h1 id="2-ownership">2. Ownership</h1>
+
+<p>Make information technology and the transformation agenda owned by the users.</p>
+
+<p>But who are the users? You need to consider : health professionals, administrators, managers, analysts, the patient, and more!</p>
+
+<p>The users must be engaged, must be empowered to own and drive their work. We need to understand the areas in which there is synergy between requirements from different perspectives and design our enterprise to provide the common tools to solve their problems.</p>
+
+<p>Rather than top-down “You will…”, consider instead “Here are the tools to achieve your goals… do you want help?”</p>
+
+<p>For all users, ask them what they want.</p>
+
+<p>For instance, what do our patients want from a healthcare services that recognises that digital is one way of providing a service? Are you sure that we know the answer to this yet?</p>
+
+<h1 id="3-openness">3. Openness</h1>
+
+<p><em>Allow debate. Make your work transparent.</em></p>
+
+<p>Information technology is difficult, so ensure plenty of debate to hear all of the views. There is no right way, but favour solutions to deploy quickly, get software in hands of users early and get feedback, favour an approach that set a foundation for future plans and don’t limit what you don’t know you don’t know. As I have said many times before:</p>
+
+<blockquote>
+  <p>We need to build an infrastructure that explicitly recognises that we don’t have all of the answers, and therefore must support innovation. Such innovation may simply be incremental improvement of existing technology, but also must cope with and embrace the introduction of transformative and disruptive technologies.</p>
+
+  <p><a href="/clinical-informatics/2017/03/15/once-for-wales.html">Once for Wales debate, March 2017</a></p>
+</blockquote>
+
+<p>We should debate and build in the open. There are few situations in which work, particularly funded by the public, should be behind closed doors. Transparency is key; options analyses of the most appropriate way to deliver solutions to our problems. Like everything in medicine, our decisions are rarely black-and-white, but careful  judgements balancing many different options.</p>
+
+<h1 id="4-optimise">4. Optimise</h1>
+
+<p><em>Permit failure.  Fail fast. Recognise the relative unchanging components and iterate and prototype the components that change more quickly.</em></p>
+
+<p>How can we develop a “can-do” digital culture in healthcare? Should we clone the “Move fast and break things” culture reporting in technological startups? We need to approach information technology in a different way but we can’t “break things”! We work in a safety-critical environment, but we must recognise that the <em>pace of change</em> and the <em>level of risk</em> can be different at different levels of our enterprise.</p>
+
+<p><img src="/images/rate-of-change-layered.png" alt="Rate Of Change Layered" /></p>
+
+<p>In this diagram, we see that our architecture consists of an open platform approach, built using application programming interfaces.</p>
+
+<ul>
+  <li>The data layer contains longitudinal episodic patient data relating to admissions, appointments, measurements and outcomes. This layer may consist of multiple data repositories for laboratory systems, documents, clinical data and aggregate data from across multiple patient administrative systems from multiple organisations. These complexities are abstracted within our architecture as a set of simple open application programming interfaces (APIs). This layer changes the least. A blood pressure in the right arm will always be a blood pressure recorded in the right arm.</li>
+  <li>The business logic, services and process/workflow layers provides important reusable services that execute business logic.  This ensures that user-facing applications do not make the mistake of embedding important business logic and rules. For example, if access to information needs to be logged, then it is better to perform this at the API level rather than within a user-facing application.</li>
+  <li>The user-facing components and applications leverage the underlying platform in order to provide value for users. User-facing applications are most likely to need to change frequently given our technological advances. You should consider these to be relatively ephemeral, taking advantage of new mobile devices and other new technology.</li>
+</ul>
+
+<p>You can see this approach in more detail in my <a href="/clinical-informatics/2017/10/19/data-driven.html">plan for an open platform in NHS Wales</a> :</p>
+
+<p><img src="/images/platform/platform-overall.png" alt="Platform Overall" /></p>
+
+<p>Without a platform, one ends up procuring multiple systems that need to be connected together, rather than to a common enterprise platform. This results in:</p>
+
+<ul>
+  <li>Data silos: most current products store their data in a proprietary format within that product. As a result, we create multiple silos. If one can access that information and connect it to your other deployed products, you hit the complexity of n*(n-1)/2 data interoperability, in which you have to somehow connect that product to everything else (2 systems need one connection, 3 needs 3, 4 needs 6, 5 needs 10, 6 needs 15,7 needs 21!) so one ends up with a combinatorial nightmare. <img src="/images/cis_design/multiple-interfaces.png" alt="Multiple Interfaces" /></li>
+  <li>Procurement rules: it is difficult to scale a solution across a wide enterprise as costs hit thresholds for OJEU rules and suddenly, you and your team are committing large sums of money in a high risk deployment in which failure cannot be countenanced.</li>
+</ul>
+
+<p>Instead, think “open platform”!</p>
+
+<h1 id="5-organic">5. Organic</h1>
+
+<p><em>Scale organically, enthusiasts and early adopters, grow horizontally; get people asking “can we have that too?”, until your solutions are the default, that they make process easier and not more difficult.</em></p>
+
+<p>It is difficult to supporting innovation if we cannot tolerate variation. It is easy to assume that all variation across health services is bad, and so it is easy to think you should harmonise people and processes with technology.</p>
+
+<p>Such an approach is wrong. Firstly, harmonisation is a people and processes issue, not technological, and secondly, how can you be sure you are harmonising to raise standards? What if you are standardising to the lowest common denominator? Variation allows you, as part of systems continuous improvement, to innovate, appraise and improve. Conversely, unmeasured and unmonitored variation is difficult to justify.</p>
+
+<p>As such, recognise that information technology is fundamentally an enabler for transformation and that transformation needs to be driven from the bottom-up; imposing a software solution from central diktat rarely results in satisfied users or effective change. Design the health enterprise to instead allow iteration and innovation in a safe way, playing by a well-defined rulebook.</p>
+
+<p><img src="/images/DiffusionOfInnovation.png" alt="DiffusionOfInnovation" /></p>
+
+<p>(CC BY 2.5, <a href="https://en.wikipedia.org/w/index.php?curid=11484459">https://en.wikipedia.org/w/index.php?curid=11484459</a>).</p>
+
+<p>Work with early adopters and enthusiasts and then plan to scale organically, proving benefit using a quality improvement methodology such as DMAIC. Measure!</p>
+
+<p><img src="/images/cis_design/dmaic.png" alt="Dmaic" /></p>
+
+<h1 id="conclusions">Conclusions</h1>
+
+<p>Projects relating to information technology fail frequently and this is seen in many industries, including healthcare. Healthcare enterprises are complex heterogeneous environments with many stakeholders and significant complexity; mistakes may cost lives. It is easy to assume that, faced with such risks, one should centralise and control and drive change from above, but such an approach actually results in a greater risk of failure.</p>
+
+<blockquote>
+  <p>There is an important paradox in many health services, including Wales, is that there is a tendency to centralise the day-to-day management and delivery of individual products and yet high-level strategic and prioritisation decisions are decentralised, haphazard and dependant on capital funding with little or no consideration or control as to how those projects will fit into a wider technical healthcare enterprise architecture.</p>
+
+  <p><a href="/clinical-informatics/2017/12/05/enabling-innovation.html">“A paradox of control”</a></p>
+</blockquote>
+
+<p>The high-level strategic roadmap to deliver to vision should be centralised across an enterprise. Similarly, the rules of engagement, the the contractual obligations at a human and technical level that permit interaction with the open platform (API and data standards etc.) should defined centrally. Likewise, the day-to-day management and delivery of individual projects should be driven, bottom-up, by the users and for the users.</p>
+
+<p><em>Mark</em></p>
+
+<h4 id="further-reading">Further reading</h4>
+
+<ul>
+  <li><a href="http://wardle.org/clinical-informatics/2017/03/15/once-for-wales.html">“Once for Wales debate”</a></li>
+  <li><a href="http://wardle.org/clinical-design/2017/03/23/scope-framing-clinical-design.html">Scope and framing in clinical information system design</a></li>
+  <li><a href="http://wardle.org/clinical-informatics/2017/04/04/test-requesting.html">Test requesting design: building an open API-based architecture</a></li>
+  <li><a href="http://wardle.org/clinical-informatics/2017/10/19/data-driven.html">Data driven healthcare information technology</a></li>
+</ul>
+
+
+  </div>
+
+  
+</article>
+        
+      </div>
+    </main>
+    
+    
+    
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Health informatics and information technology</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Health informatics and information technology
+            
+            </li>
+            
+            <li><a href="mailto:mark@wardle.org">mark@wardle.org</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/wardle"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">wardle</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/mwardle"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">mwardle</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
