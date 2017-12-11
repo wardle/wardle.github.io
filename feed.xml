@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-12-11T07:32:15+00:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-12-11T07:40:28+00:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
 </subtitle><entry><title type="html">The 5 Os of healthcare IT</title><link href="https://www.wardle.org/clinical-informatics/2017/12/06/5os-health.html" rel="alternate" type="text/html" title="The 5 Os of healthcare IT" /><published>2017-12-06T10:39:39+00:00</published><updated>2017-12-06T10:39:39+00:00</updated><id>https://www.wardle.org/clinical-informatics/2017/12/06/5os-health</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/12/06/5os-health.html">&lt;p&gt;My writing on &lt;a href=&quot;/clinical-informatics/2017/02/03/domain-driven-design.html&quot;&gt;domain-driven design&lt;/a&gt; arose because of my own experience building an electronic patient record system:&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -24,7 +24,7 @@ The key to controlling complexity is a good domain model, a model that goes beyo
 
 &lt;p&gt;It is easy to see information technology as a product rather than what it really is - an enabler of transformation.&lt;/p&gt;
 
-&lt;p&gt;How can we deliver transformative change in healthcare using digital technologies?&lt;/p&gt;
+&lt;p&gt;How can we deliver transformative change in healthcare using digital technologies? Why does a domain-driven design approach help us? Why and how should we start with domain models?&lt;/p&gt;
 
 &lt;p&gt;I suggest that there are five broad principles… my 5 Os of healthcare IT:&lt;/p&gt;
 
