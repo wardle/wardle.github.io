@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-12-17T15:44:18+00:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-12-17T16:04:49+00:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
 </subtitle><entry><title type="html">Applying artificial intelligence in healthcare</title><link href="https://www.wardle.org/machine-learning/2017/12/17/diagnostic-inference.html" rel="alternate" type="text/html" title="Applying artificial intelligence in healthcare" /><published>2017-12-17T14:32:32+00:00</published><updated>2017-12-17T14:32:32+00:00</updated><id>https://www.wardle.org/machine-learning/2017/12/17/diagnostic-inference</id><content type="html" xml:base="https://www.wardle.org/machine-learning/2017/12/17/diagnostic-inference.html">&lt;p&gt;In this post, I discuss machine learning and computer-aided decision support in healthcare.&lt;/p&gt;
 
 &lt;p&gt;Firstly, I discuss the importance of understanding the process of clinical decision making and how we use information to support that process.&lt;/p&gt;
@@ -340,6 +340,15 @@ which tells us we’re measuring “renin”…&lt;/p&gt;
 decision-making; indeed, decision-making is a partnership between professional and patient. However, for too long, human professionals have had to spend time gathering the right information instead of focussing on where our skills are needed most : high-level thinking and communication. We should be working towards building tools that support us in the care of our patients.&lt;/p&gt;
 
 &lt;p&gt;I have started work on the first version of the OCMR and I am going to try to build some publicly-available datasets to kickstart the application of machine learning in healthcare. As an experiment, I have built a fake dataset generator (&lt;a href=&quot;https://bitbucket.org/wardle/go-snomed&quot;&gt;go-snomed&lt;/a&gt;) which builds a fake OCMR JSON structure to try to understand the pitfalls of this approach.&lt;/p&gt;
+
+&lt;p&gt;I think the next steps are:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Build natural language processing tools to extract clinical terms from different sources of clinical knowledge such as monographs and questions from exam banks.&lt;/li&gt;
+  &lt;li&gt;Work with universities and colleges to obtain questions for machine learning. In the interim, generate fake questions for testing.&lt;/li&gt;
+  &lt;li&gt;Generate dimensionality reduction techniques to genericise highly granular concepts and their relationships identifying the broad underlying principles at play.&lt;/li&gt;
+  &lt;li&gt;Work on collecting incidence and prevalence data from a variety of different clinical contexts.&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;p&gt;I would love to hear from you if you would like to be involved or indeed, help support this work.&lt;/p&gt;
 
