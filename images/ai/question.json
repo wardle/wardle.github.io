@@ -1,0 +1,1414 @@
+  {
+    "Age": 73,
+    "Sex": "male",
+    "Findings": [
+      {
+        "Concept": {
+          "ConceptID": 29857009,
+          "FullySpecifiedName": "Chest pain (finding)",
+          "Status": {
+            "Code": 0,
+            "Title": "Current",
+            "IsActive": true
+          },
+          "Parents": [
+            609623002,
+            301366005,
+            404684003,
+            302292003,
+            22253000,
+            699697007,
+            138875005,
+            279001004,
+            106147001,
+            276435006,
+            298705000,
+            102957003,
+            118234003,
+            301857004
+          ]
+        },
+        "Parents": [
+          {
+            "ConceptID": 609623002,
+            "FullySpecifiedName": "Finding of upper trunk (finding)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": [
+              404684003,
+              302292003,
+              138875005,
+              118234003,
+              301857004
+            ]
+          },
+          {
+            "ConceptID": 301366005,
+            "FullySpecifiedName": "Pain of truncal structure (finding)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": [
+              404684003,
+              302292003,
+              22253000,
+              699697007,
+              138875005,
+              279001004,
+              106147001,
+              276435006,
+              102957003,
+              118234003,
+              301857004
+            ]
+          },
+          {
+            "ConceptID": 404684003,
+            "FullySpecifiedName": "Clinical finding (finding)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": [
+              138875005
+            ]
+          },
+          {
+            "ConceptID": 302292003,
+            "FullySpecifiedName": "Finding of trunk structure (finding)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": [
+              404684003,
+              138875005,
+              118234003,
+              301857004
+            ]
+          },
+          {
+            "ConceptID": 22253000,
+            "FullySpecifiedName": "Pain (finding)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": [
+              404684003,
+              138875005,
+              106147001,
+              276435006,
+              102957003
+            ]
+          },
+          {
+            "ConceptID": 699697007,
+            "FullySpecifiedName": "Finding of sensation by site (finding)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": [
+              404684003,
+              138875005,
+              106147001,
+              102957003,
+              118234003
+            ]
+          },
+          {
+            "ConceptID": 138875005,
+            "FullySpecifiedName": "SNOMED CT Concept (SNOMED RT+CTV3)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": []
+          },
+          {
+            "ConceptID": 279001004,
+            "FullySpecifiedName": "Pain finding at anatomical site (finding)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": [
+              404684003,
+              22253000,
+              699697007,
+              138875005,
+              106147001,
+              276435006,
+              102957003,
+              118234003
+            ]
+          },
+          {
+            "ConceptID": 106147001,
+            "FullySpecifiedName": "Sensory nervous system finding (finding)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": [
+              404684003,
+              138875005,
+              102957003
+            ]
+          },
+          {
+            "ConceptID": 276435006,
+            "FullySpecifiedName": "Pain / sensation finding (finding)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": [
+              404684003,
+              138875005,
+              106147001,
+              102957003
+            ]
+          },
+          {
+            "ConceptID": 298705000,
+            "FullySpecifiedName": "Finding of region of thorax (finding)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": [
+              609623002,
+              404684003,
+              302292003,
+              138875005,
+              118234003,
+              301857004
+            ]
+          },
+          {
+            "ConceptID": 102957003,
+            "FullySpecifiedName": "Neurological finding (finding)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": [
+              404684003,
+              138875005
+            ]
+          },
+          {
+            "ConceptID": 118234003,
+            "FullySpecifiedName": "Finding by site (finding)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": [
+              404684003,
+              138875005
+            ]
+          },
+          {
+            "ConceptID": 301857004,
+            "FullySpecifiedName": "Finding of body region (finding)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": [
+              404684003,
+              138875005,
+              118234003
+            ]
+          }
+        ],
+        "Duration": "Acute"
+      },
+      {
+        "Concept": {
+          "ConceptID": 267036007,
+          "FullySpecifiedName": "Dyspnea (finding)",
+          "Status": {
+            "Code": 0,
+            "Title": "Current",
+            "IsActive": true
+          },
+          "Parents": [
+            404684003,
+            138875005,
+            301282008,
+            230145002,
+            106048009,
+            366139009,
+            118234003
+          ]
+        },
+        "Parents": [
+          {
+            "ConceptID": 404684003,
+            "FullySpecifiedName": "Clinical finding (finding)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": [
+              138875005
+            ]
+          },
+          {
+            "ConceptID": 138875005,
+            "FullySpecifiedName": "SNOMED CT Concept (SNOMED RT+CTV3)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": []
+          },
+          {
+            "ConceptID": 301282008,
+            "FullySpecifiedName": "Finding of respiration (finding)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": [
+              404684003,
+              138875005,
+              106048009,
+              118234003
+            ]
+          },
+          {
+            "ConceptID": 230145002,
+            "FullySpecifiedName": "Difficulty breathing (finding)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": [
+              404684003,
+              138875005,
+              301282008,
+              106048009,
+              366139009,
+              118234003
+            ]
+          },
+          {
+            "ConceptID": 106048009,
+            "FullySpecifiedName": "Respiratory finding (finding)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": [
+              404684003,
+              138875005,
+              118234003
+            ]
+          },
+          {
+            "ConceptID": 366139009,
+            "FullySpecifiedName": "Finding of ease of respiration (finding)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": [
+              404684003,
+              138875005,
+              301282008,
+              106048009,
+              118234003
+            ]
+          },
+          {
+            "ConceptID": 118234003,
+            "FullySpecifiedName": "Finding by site (finding)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": [
+              404684003,
+              138875005
+            ]
+          }
+        ],
+        "Duration": "Acute"
+      },
+      {
+        "Concept": {
+          "ConceptID": 415690000,
+          "FullySpecifiedName": "Sweating (finding)",
+          "Status": {
+            "Code": 0,
+            "Title": "Current",
+            "IsActive": true
+          },
+          "Parents": [
+            404684003,
+            106077005,
+            138875005,
+            106076001,
+            415531008,
+            297978007,
+            118234003,
+            301857004,
+            248402002
+          ]
+        },
+        "Parents": [
+          {
+            "ConceptID": 404684003,
+            "FullySpecifiedName": "Clinical finding (finding)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": [
+              138875005
+            ]
+          },
+          {
+            "ConceptID": 106077005,
+            "FullySpecifiedName": "Integumentary system finding (finding)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": [
+              404684003,
+              138875005,
+              118234003
+            ]
+          },
+          {
+            "ConceptID": 138875005,
+            "FullySpecifiedName": "SNOMED CT Concept (SNOMED RT+CTV3)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": []
+          },
+          {
+            "ConceptID": 106076001,
+            "FullySpecifiedName": "Skin finding (finding)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": [
+              404684003,
+              106077005,
+              138875005,
+              415531008,
+              118234003,
+              301857004,
+              248402002
+            ]
+          },
+          {
+            "ConceptID": 415531008,
+            "FullySpecifiedName": "Skin AND/OR mucosa finding (finding)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": [
+              404684003,
+              138875005,
+              118234003
+            ]
+          },
+          {
+            "ConceptID": 297978007,
+            "FullySpecifiedName": "Finding of sweating (finding)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": [
+              404684003,
+              106077005,
+              138875005,
+              106076001,
+              415531008,
+              118234003,
+              301857004,
+              248402002
+            ]
+          },
+          {
+            "ConceptID": 118234003,
+            "FullySpecifiedName": "Finding by site (finding)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": [
+              404684003,
+              138875005
+            ]
+          },
+          {
+            "ConceptID": 301857004,
+            "FullySpecifiedName": "Finding of body region (finding)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": [
+              404684003,
+              138875005,
+              118234003
+            ]
+          },
+          {
+            "ConceptID": 248402002,
+            "FullySpecifiedName": "General finding of soft tissue (finding)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": [
+              404684003,
+              138875005,
+              118234003
+            ]
+          }
+        ],
+        "Duration": "Acute"
+      },
+      {
+        "Concept": {
+          "ConceptID": 426555006,
+          "FullySpecifiedName": "Pain radiating to jaw (finding)",
+          "Status": {
+            "Code": 0,
+            "Title": "Current",
+            "IsActive": true
+          },
+          "Parents": [
+            404684003,
+            22253000,
+            138875005,
+            9972008,
+            106147001,
+            276435006,
+            102957003,
+            301369003
+          ]
+        },
+        "Parents": [
+          {
+            "ConceptID": 404684003,
+            "FullySpecifiedName": "Clinical finding (finding)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": [
+              138875005
+            ]
+          },
+          {
+            "ConceptID": 22253000,
+            "FullySpecifiedName": "Pain (finding)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": [
+              404684003,
+              138875005,
+              106147001,
+              276435006,
+              102957003
+            ]
+          },
+          {
+            "ConceptID": 138875005,
+            "FullySpecifiedName": "SNOMED CT Concept (SNOMED RT+CTV3)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": []
+          },
+          {
+            "ConceptID": 9972008,
+            "FullySpecifiedName": "Radiating pain (finding)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": [
+              404684003,
+              22253000,
+              138875005,
+              106147001,
+              276435006,
+              102957003,
+              301369003
+            ]
+          },
+          {
+            "ConceptID": 106147001,
+            "FullySpecifiedName": "Sensory nervous system finding (finding)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": [
+              404684003,
+              138875005,
+              102957003
+            ]
+          },
+          {
+            "ConceptID": 276435006,
+            "FullySpecifiedName": "Pain / sensation finding (finding)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": [
+              404684003,
+              138875005,
+              106147001,
+              102957003
+            ]
+          },
+          {
+            "ConceptID": 102957003,
+            "FullySpecifiedName": "Neurological finding (finding)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": [
+              404684003,
+              138875005
+            ]
+          },
+          {
+            "ConceptID": 301369003,
+            "FullySpecifiedName": "Finding of pattern of pain (finding)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": [
+              404684003,
+              22253000,
+              138875005,
+              106147001,
+              276435006,
+              102957003
+            ]
+          }
+        ],
+        "Duration": "Acute"
+      },
+      {
+        "Concept": {
+          "ConceptID": 76388001,
+          "FullySpecifiedName": "ST segment elevation (finding)",
+          "Status": {
+            "Code": 0,
+            "Title": "Current",
+            "IsActive": true
+          },
+          "Parents": [
+            404684003,
+            365416000,
+            138875005,
+            102592004,
+            102594003,
+            365408009,
+            55930002,
+            442618008,
+            441742003
+          ]
+        },
+        "Parents": [
+          {
+            "ConceptID": 404684003,
+            "FullySpecifiedName": "Clinical finding (finding)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": [
+              138875005
+            ]
+          },
+          {
+            "ConceptID": 365416000,
+            "FullySpecifiedName": "Finding of electrocardiogram ST segment (finding)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": [
+              404684003,
+              138875005,
+              102592004,
+              365408009,
+              441742003
+            ]
+          },
+          {
+            "ConceptID": 138875005,
+            "FullySpecifiedName": "SNOMED CT Concept (SNOMED RT+CTV3)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": []
+          },
+          {
+            "ConceptID": 102592004,
+            "FullySpecifiedName": "Electrocardiogram finding (finding)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": [
+              404684003,
+              138875005,
+              441742003
+            ]
+          },
+          {
+            "ConceptID": 102594003,
+            "FullySpecifiedName": "Electrocardiogram abnormal (finding)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": [
+              404684003,
+              138875005,
+              102592004,
+              442618008,
+              441742003
+            ]
+          },
+          {
+            "ConceptID": 365408009,
+            "FullySpecifiedName": "Finding of electrocardiogram waveform (finding)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": [
+              404684003,
+              138875005,
+              102592004,
+              441742003
+            ]
+          },
+          {
+            "ConceptID": 55930002,
+            "FullySpecifiedName": "Electrocardiographic ST segment changes (finding)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": [
+              404684003,
+              365416000,
+              138875005,
+              102592004,
+              102594003,
+              365408009,
+              442618008,
+              441742003
+            ]
+          },
+          {
+            "ConceptID": 442618008,
+            "FullySpecifiedName": "Abnormal finding on evaluation procedure (finding)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": [
+              404684003,
+              138875005,
+              441742003
+            ]
+          },
+          {
+            "ConceptID": 441742003,
+            "FullySpecifiedName": "Evaluation finding (finding)",
+            "Status": {
+              "Code": 0,
+              "Title": "Current",
+              "IsActive": true
+            },
+            "Parents": [
+              404684003,
+              138875005
+            ]
+          }
+        ],
+        "Duration": "Acute"
+      }
+    ],
+    "LeadIn": 0,
+    "PossibleAnswers": null,
+    "CorrectAnswer": {
+      "ConceptID": 22298006,
+      "FullySpecifiedName": "Myocardial infarction (disorder)",
+      "Status": {
+        "Code": 0,
+        "Title": "Current",
+        "IsActive": true
+      },
+      "Parents": [
+        609623002,
+        609410002,
+        404684003,
+        414545008,
+        302292003,
+        362965005,
+        106063007,
+        138875005,
+        301095005,
+        128599005,
+        301122000,
+        57809008,
+        49601007,
+        251052000,
+        301296002,
+        609411003,
+        64572001,
+        49483002,
+        417163006,
+        406123005,
+        298705000,
+        609622007,
+        118946009,
+        251061000,
+        118234003,
+        128121009,
+        301857004,
+        56265001,
+        123946008
+      ]
+    },
+    "Parents": [
+      {
+        "ConceptID": 609623002,
+        "FullySpecifiedName": "Finding of upper trunk (finding)",
+        "Status": {
+          "Code": 0,
+          "Title": "Current",
+          "IsActive": true
+        },
+        "Parents": [
+          404684003,
+          302292003,
+          138875005,
+          118234003,
+          301857004
+        ]
+      },
+      {
+        "ConceptID": 609410002,
+        "FullySpecifiedName": "Necrosis of anatomical site (disorder)",
+        "Status": {
+          "Code": 0,
+          "Title": "Current",
+          "IsActive": true
+        },
+        "Parents": [
+          404684003,
+          138875005,
+          609411003,
+          64572001,
+          417163006,
+          118234003,
+          123946008
+        ]
+      },
+      {
+        "ConceptID": 404684003,
+        "FullySpecifiedName": "Clinical finding (finding)",
+        "Status": {
+          "Code": 0,
+          "Title": "Current",
+          "IsActive": true
+        },
+        "Parents": [
+          138875005
+        ]
+      },
+      {
+        "ConceptID": 414545008,
+        "FullySpecifiedName": "Ischemic heart disease (disorder)",
+        "Status": {
+          "Code": 0,
+          "Title": "Current",
+          "IsActive": true
+        },
+        "Parents": [
+          609623002,
+          404684003,
+          302292003,
+          362965005,
+          106063007,
+          138875005,
+          301095005,
+          128599005,
+          49601007,
+          301296002,
+          609411003,
+          64572001,
+          49483002,
+          417163006,
+          406123005,
+          298705000,
+          609622007,
+          118946009,
+          118234003,
+          128121009,
+          301857004,
+          56265001,
+          123946008
+        ]
+      },
+      {
+        "ConceptID": 302292003,
+        "FullySpecifiedName": "Finding of trunk structure (finding)",
+        "Status": {
+          "Code": 0,
+          "Title": "Current",
+          "IsActive": true
+        },
+        "Parents": [
+          404684003,
+          138875005,
+          118234003,
+          301857004
+        ]
+      },
+      {
+        "ConceptID": 362965005,
+        "FullySpecifiedName": "Disorder of body system (disorder)",
+        "Status": {
+          "Code": 0,
+          "Title": "Current",
+          "IsActive": true
+        },
+        "Parents": [
+          404684003,
+          138875005,
+          64572001,
+          118234003,
+          123946008
+        ]
+      },
+      {
+        "ConceptID": 106063007,
+        "FullySpecifiedName": "Cardiovascular finding (finding)",
+        "Status": {
+          "Code": 0,
+          "Title": "Current",
+          "IsActive": true
+        },
+        "Parents": [
+          404684003,
+          138875005,
+          118234003
+        ]
+      },
+      {
+        "ConceptID": 138875005,
+        "FullySpecifiedName": "SNOMED CT Concept (SNOMED RT+CTV3)",
+        "Status": {
+          "Code": 0,
+          "Title": "Current",
+          "IsActive": true
+        },
+        "Parents": []
+      },
+      {
+        "ConceptID": 301095005,
+        "FullySpecifiedName": "Cardiac finding (finding)",
+        "Status": {
+          "Code": 0,
+          "Title": "Current",
+          "IsActive": true
+        },
+        "Parents": [
+          609623002,
+          404684003,
+          302292003,
+          106063007,
+          138875005,
+          301296002,
+          406123005,
+          298705000,
+          118234003,
+          301857004
+        ]
+      },
+      {
+        "ConceptID": 128599005,
+        "FullySpecifiedName": "Structural disorder of heart (disorder)",
+        "Status": {
+          "Code": 0,
+          "Title": "Current",
+          "IsActive": true
+        },
+        "Parents": [
+          609623002,
+          404684003,
+          302292003,
+          362965005,
+          106063007,
+          138875005,
+          301095005,
+          49601007,
+          301296002,
+          64572001,
+          49483002,
+          406123005,
+          298705000,
+          609622007,
+          118946009,
+          118234003,
+          128121009,
+          301857004,
+          56265001,
+          123946008
+        ]
+      },
+      {
+        "ConceptID": 301122000,
+        "FullySpecifiedName": "Myocardial lesion (finding)",
+        "Status": {
+          "Code": 0,
+          "Title": "Current",
+          "IsActive": true
+        },
+        "Parents": [
+          609623002,
+          404684003,
+          302292003,
+          106063007,
+          138875005,
+          301095005,
+          251052000,
+          301296002,
+          406123005,
+          298705000,
+          118234003,
+          301857004
+        ]
+      },
+      {
+        "ConceptID": 57809008,
+        "FullySpecifiedName": "Myocardial disease (disorder)",
+        "Status": {
+          "Code": 0,
+          "Title": "Current",
+          "IsActive": true
+        },
+        "Parents": [
+          609623002,
+          404684003,
+          302292003,
+          362965005,
+          106063007,
+          138875005,
+          301095005,
+          49601007,
+          251052000,
+          301296002,
+          64572001,
+          49483002,
+          406123005,
+          298705000,
+          609622007,
+          118946009,
+          118234003,
+          128121009,
+          301857004,
+          56265001,
+          123946008
+        ]
+      },
+      {
+        "ConceptID": 49601007,
+        "FullySpecifiedName": "Disorder of cardiovascular system (disorder)",
+        "Status": {
+          "Code": 0,
+          "Title": "Current",
+          "IsActive": true
+        },
+        "Parents": [
+          404684003,
+          362965005,
+          106063007,
+          138875005,
+          64572001,
+          118234003,
+          123946008
+        ]
+      },
+      {
+        "ConceptID": 251052000,
+        "FullySpecifiedName": "Myocardial finding (finding)",
+        "Status": {
+          "Code": 0,
+          "Title": "Current",
+          "IsActive": true
+        },
+        "Parents": [
+          609623002,
+          404684003,
+          302292003,
+          106063007,
+          138875005,
+          301095005,
+          301296002,
+          406123005,
+          298705000,
+          118234003,
+          301857004
+        ]
+      },
+      {
+        "ConceptID": 301296002,
+        "FullySpecifiedName": "Mediastinal finding (finding)",
+        "Status": {
+          "Code": 0,
+          "Title": "Current",
+          "IsActive": true
+        },
+        "Parents": [
+          609623002,
+          404684003,
+          302292003,
+          138875005,
+          298705000,
+          118234003,
+          301857004
+        ]
+      },
+      {
+        "ConceptID": 609411003,
+        "FullySpecifiedName": "Traumatic and/or non-traumatic injury of anatomical site (disorder)",
+        "Status": {
+          "Code": 0,
+          "Title": "Current",
+          "IsActive": true
+        },
+        "Parents": [
+          404684003,
+          138875005,
+          64572001,
+          417163006,
+          118234003,
+          123946008
+        ]
+      },
+      {
+        "ConceptID": 64572001,
+        "FullySpecifiedName": "Disease (disorder)",
+        "Status": {
+          "Code": 0,
+          "Title": "Current",
+          "IsActive": true
+        },
+        "Parents": [
+          404684003,
+          138875005
+        ]
+      },
+      {
+        "ConceptID": 49483002,
+        "FullySpecifiedName": "Disorder of mediastinum (disorder)",
+        "Status": {
+          "Code": 0,
+          "Title": "Current",
+          "IsActive": true
+        },
+        "Parents": [
+          609623002,
+          404684003,
+          302292003,
+          362965005,
+          138875005,
+          301296002,
+          64572001,
+          298705000,
+          609622007,
+          118946009,
+          118234003,
+          128121009,
+          301857004,
+          123946008
+        ]
+      },
+      {
+        "ConceptID": 417163006,
+        "FullySpecifiedName": "Traumatic AND/OR non-traumatic injury (disorder)",
+        "Status": {
+          "Code": 0,
+          "Title": "Current",
+          "IsActive": true
+        },
+        "Parents": [
+          404684003,
+          138875005,
+          64572001
+        ]
+      },
+      {
+        "ConceptID": 406123005,
+        "FullySpecifiedName": "Viscus structure finding (finding)",
+        "Status": {
+          "Code": 0,
+          "Title": "Current",
+          "IsActive": true
+        },
+        "Parents": [
+          404684003,
+          138875005,
+          118234003
+        ]
+      },
+      {
+        "ConceptID": 298705000,
+        "FullySpecifiedName": "Finding of region of thorax (finding)",
+        "Status": {
+          "Code": 0,
+          "Title": "Current",
+          "IsActive": true
+        },
+        "Parents": [
+          609623002,
+          404684003,
+          302292003,
+          138875005,
+          118234003,
+          301857004
+        ]
+      },
+      {
+        "ConceptID": 609622007,
+        "FullySpecifiedName": "Disorder of thoracic segment of trunk (disorder)",
+        "Status": {
+          "Code": 0,
+          "Title": "Current",
+          "IsActive": true
+        },
+        "Parents": [
+          609623002,
+          404684003,
+          302292003,
+          138875005,
+          64572001,
+          118234003,
+          128121009,
+          301857004,
+          123946008
+        ]
+      },
+      {
+        "ConceptID": 118946009,
+        "FullySpecifiedName": "Disorder of thorax (disorder)",
+        "Status": {
+          "Code": 0,
+          "Title": "Current",
+          "IsActive": true
+        },
+        "Parents": [
+          609623002,
+          404684003,
+          302292003,
+          138875005,
+          64572001,
+          298705000,
+          609622007,
+          118234003,
+          128121009,
+          301857004,
+          123946008
+        ]
+      },
+      {
+        "ConceptID": 251061000,
+        "FullySpecifiedName": "Myocardial necrosis (finding)",
+        "Status": {
+          "Code": 0,
+          "Title": "Current",
+          "IsActive": true
+        },
+        "Parents": [
+          609623002,
+          404684003,
+          302292003,
+          106063007,
+          138875005,
+          301095005,
+          301122000,
+          251052000,
+          301296002,
+          406123005,
+          298705000,
+          118234003,
+          301857004
+        ]
+      },
+      {
+        "ConceptID": 118234003,
+        "FullySpecifiedName": "Finding by site (finding)",
+        "Status": {
+          "Code": 0,
+          "Title": "Current",
+          "IsActive": true
+        },
+        "Parents": [
+          404684003,
+          138875005
+        ]
+      },
+      {
+        "ConceptID": 128121009,
+        "FullySpecifiedName": "Disorder of trunk (disorder)",
+        "Status": {
+          "Code": 0,
+          "Title": "Current",
+          "IsActive": true
+        },
+        "Parents": [
+          404684003,
+          302292003,
+          138875005,
+          64572001,
+          118234003,
+          301857004,
+          123946008
+        ]
+      },
+      {
+        "ConceptID": 301857004,
+        "FullySpecifiedName": "Finding of body region (finding)",
+        "Status": {
+          "Code": 0,
+          "Title": "Current",
+          "IsActive": true
+        },
+        "Parents": [
+          404684003,
+          138875005,
+          118234003
+        ]
+      },
+      {
+        "ConceptID": 56265001,
+        "FullySpecifiedName": "Heart disease (disorder)",
+        "Status": {
+          "Code": 0,
+          "Title": "Current",
+          "IsActive": true
+        },
+        "Parents": [
+          609623002,
+          404684003,
+          302292003,
+          362965005,
+          106063007,
+          138875005,
+          301095005,
+          49601007,
+          301296002,
+          64572001,
+          49483002,
+          406123005,
+          298705000,
+          609622007,
+          118946009,
+          118234003,
+          128121009,
+          301857004,
+          123946008
+        ]
+      },
+      {
+        "ConceptID": 123946008,
+        "FullySpecifiedName": "Disorder by body site (disorder)",
+        "Status": {
+          "Code": 0,
+          "Title": "Current",
+          "IsActive": true
+        },
+        "Parents": [
+          404684003,
+          138875005,
+          64572001,
+          118234003
+        ]
+      }
+    ]
+  }

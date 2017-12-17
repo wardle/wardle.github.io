@@ -1,5 +1,349 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-12-11T07:40:28+00:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
-</subtitle><entry><title type="html">The 5 Os of healthcare IT</title><link href="https://www.wardle.org/clinical-informatics/2017/12/06/5os-health.html" rel="alternate" type="text/html" title="The 5 Os of healthcare IT" /><published>2017-12-06T10:39:39+00:00</published><updated>2017-12-06T10:39:39+00:00</updated><id>https://www.wardle.org/clinical-informatics/2017/12/06/5os-health</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/12/06/5os-health.html">&lt;p&gt;My writing on &lt;a href=&quot;/clinical-informatics/2017/02/03/domain-driven-design.html&quot;&gt;domain-driven design&lt;/a&gt; arose because of my own experience building an electronic patient record system:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2017-12-17T15:44:18+00:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</subtitle><entry><title type="html">Applying artificial intelligence in healthcare</title><link href="https://www.wardle.org/machine-learning/2017/12/17/diagnostic-inference.html" rel="alternate" type="text/html" title="Applying artificial intelligence in healthcare" /><published>2017-12-17T14:32:32+00:00</published><updated>2017-12-17T14:32:32+00:00</updated><id>https://www.wardle.org/machine-learning/2017/12/17/diagnostic-inference</id><content type="html" xml:base="https://www.wardle.org/machine-learning/2017/12/17/diagnostic-inference.html">&lt;p&gt;In this post, I discuss machine learning and computer-aided decision support in healthcare.&lt;/p&gt;
+
+&lt;p&gt;Firstly, I discuss the importance of understanding the process of clinical decision making and how we use information to support that process.&lt;/p&gt;
+
+&lt;p&gt;Secondly, I discuss how software can valuably support out clinical decision making.&lt;/p&gt;
+
+&lt;p&gt;Finally, I would like to convince you of the need for an computable data structure which I have termed OCMR, the &lt;em&gt;“open computable medical record”&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;We, as a community, must collaborate to define the structure of the OCMR. This structure must allow us to create large amounts of publicly-available training data to provide to machine learning algorithms. Likewise, when it comes to evaluation and use of that trained algorithm, we need a computable data structure that can be populated from the real records of an individual patient.&lt;/p&gt;
+
+&lt;h1 id=&quot;applying-artificial-intelligence-in-healthcare&quot;&gt;Applying artificial intelligence in healthcare&lt;/h1&gt;
+
+&lt;p&gt;Artificial intelligence is a term used to describe intelligent machines that makes inferences or decisions based on data with little or no human interaction. Such decisions might be simple and rule-based (“Does this patient have anaemia?”) or more complex inferences based on multiple variables.&lt;/p&gt;
+
+&lt;p&gt;Statistical modelling, in which we study an outcome and the covariates that contribute to that outcome is, in itself, not that different to machine learning, at least conceptually; they are akin to two sides of the same coin. The advent of powerful computing power in every desktop and even in your pocket has meant that computationally-intensive methods, such as machine learning, are a useful tool in any statistician’s armamentarium.&lt;/p&gt;
+
+&lt;p&gt;Historically, we could create a tool, such as a &lt;a href=&quot;https://www.chadsvasc.org/&quot;&gt;“CHADSVASC”&lt;/a&gt;, that could calculate the risk of a patient having a stroke if they had atrial fibrillation. That tool was generated from a conventional statistical approach looking at thousands of patients, their outcomes and the possible determinants of that outcome; the statistical model would identify the important factors that influence the outcome and provide a coefficient for each factor giving an indication as to its influence. The tool, created based on an understanding of those factors and their influence, can then be evaluated in clinical practice to ensure it is safe and accurate; such analyses might include estimates of sensitivity and specificity in specific populations of patients. For example, a tool generated from data from a non-representative sample of patients is unlikely to be generalisable to other populations. If such a tool is proven valid for a population of patients, then it could be used in clinical practice to support clinical decision making.&lt;/p&gt;
+
+&lt;p&gt;Machine learning approaches the problem from a different perspective usign a computationally-intensive approach, often from data with many more variables than one could plan to use in a more conventional statistical approach such as logistic regression, to predict results from data. However, the end result is that machine learning can be used to understand data in a broadly similar way to more conventional statistical approaches.&lt;/p&gt;
+
+&lt;p&gt;Deep learning is a type of machine learning that has seen rapid advances in the last decade; it is a technology that has been used in computer vision applications to recognise handwriting or categorise images based on the objects or things they contain. However, there are increasing applications outside of this field such as voice recognition, natural language processing and playing common computer and board games to a standard greater than that possible by humans, sooner than expected simply by virtue of advances in raw computing power.&lt;/p&gt;
+
+&lt;p&gt;Deep learning uses multiple layers of neural networks to extract, transform and process information in multiple steps, with each layer using the output from the previous layer as input and training performed by backpropagation using a type of gradient descent. This backpropagation is akin to maximum likelihood estimation (MLE) in statistical regression in which estimates of parameters are generated; backpropagation works to train the network to give the outputs as labelled in the training data.&lt;/p&gt;
+
+&lt;h2 id=&quot;chains-of-inference&quot;&gt;Chains of inference&lt;/h2&gt;
+
+&lt;p&gt;We already use multiple structured models in clinical practice - such as CHADSVASC or &lt;a href=&quot;https://www.england.nhs.uk/wp-content/uploads/2014/06/psa-aki-alg.pdf&quot;&gt;identifying acute kidney injury&lt;/a&gt; - as part of the wider care of patients to support a range of purposes such as clinical decision support.&lt;/p&gt;
+
+&lt;p&gt;Such models can be considered, generically, as a black-box that when provided with inputs is expected to give an answer:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ai/generic-model.png&quot; alt=&quot;Generic Model&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Indeed, such a model does not only apply to proven tools or computer-based decision making but is also applicable to human decision-makers. In the &lt;a href=&quot;/medical-records/2017/10/08/the-broken-medical-record.html&quot;&gt;“Fractal medical record”&lt;/a&gt;, I discussed the concept of nested hierarchical data being used to make inferences which themselves are used as inputs to support further inferences:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/fractal/angina-2.png&quot; alt=&quot;Angina 2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here the patient reports a crushing tight chest pain when they exert themselves walking up a hill, investigations show a normal resting electrocardiogram (ECG) and a history of smoking, together with some other findings. A diagnosis of angina is made; a useful diagnostic label to aid communication and, importantly, to aid clinical decision making and pattern recognition. When the patient presents in the future with new chest pain and ST segment elevation in the anterior leads of an ECG, old and new factors are combined implicitly to derive two conceptual diagnoses: &lt;a href=&quot;/medical-records/2017/10/08/the-broken-medical-record.html&quot;&gt;one is the latent trait of arteriosclerotic disease, perhaps never recorded but concluded implicitly, and one is a new acute anterior myocardial infarction&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Similarly, a consultant radiologist will be given a brief summary of a patient’s clinical problems (“shortness of breath”, “wheeze”), the contextual clues (inpatient vs. outpatient, name of the referrer) and the imaging itself to provide a diagnostic opinion. A respiratory physician may take those same clinical problems, the radiology report and additional investigation results to provide a further diagnostic opinion. The diagnostic inferences become nested:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/fractal/angina-3.png&quot; alt=&quot;Angina 3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The end result? A chain of multiple abstract black-boxes representing models accepting input data and providing an output.&lt;/p&gt;
+
+&lt;p&gt;So what do all of these models need in order to provider inferences?&lt;/p&gt;
+
+&lt;p&gt;Models, whether human or algorithms built using software, need &lt;strong&gt;information&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;To make best use of that information we need, to paraphrase a well known commercial motto:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“to organise clinical information and make it universally accessible and useful”.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;the-record-becomes-part-of-your-practice&quot;&gt;“The record becomes part of your practice”&lt;/h1&gt;
+
+&lt;p&gt;In relation to the medical record:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“You’re a victim of it or a triumph because of it. The human mind simply cannot carry all the information without error so the record becomes part of your practice.”&lt;/p&gt;
+
+  &lt;p&gt;Dr Larry Weed, Internal Medicine Grand Rounds, 1971&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So how we structure and use our medical records, whether on paper or digitally, is critical in supporting good clinical care. So how do we use our records to come to a diagnosis?&lt;/p&gt;
+
+&lt;h4 id=&quot;step-one-look-at-raw-information&quot;&gt;Step one: look at raw information&lt;/h4&gt;
+
+&lt;p&gt;Here we see a list of investigation results from an individual patient in a tabular view sorted by descending date:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ai/flat-results.png&quot; alt=&quot;Flat Results&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A view like this is seen in many different electronic health record systems and it is usable. As clinicians, we can click on one of the rows and see the result. Most systems allow the graphical display of various results over time permitting us to assess trends.&lt;/p&gt;
+
+&lt;p&gt;Likewise, we will have gathered additional raw information directly from the patient or carers about current and past symptoms, established previous medical problems such as chronic obstructive airways disease, an allergy to penicillin or previous cholecystectomy. In addition, we can corroborate and supplement that information from a review of the previous medical records. Such records may be on paper, in which case it is unlikely that they will be available in the emergency department, or electronic, either as a summary problem list or from piecing together information from multiple pieces of correspondence from multiple specialties.&lt;/p&gt;
+
+&lt;p&gt;Most health professionals will have sympathy with the analogy that we work as hunter-gatherers; our job is to find the right information at the right time and most of us will readily admit that this is usually time-consuming and error-prone.&lt;/p&gt;
+
+&lt;p&gt;For example, imagine a patient presents with drooping of the eyelids to their general practitioner, and that doctor checks for acetyl-choline receptor antibodies. This is an investigation that will take two weeks to be processed.  Imagine the patient deteriorates after the test result is back but before it is seen by the general practitioner. Imagine then that the patient presents to the emergency unit, do you have confidence that your current clinical systems will make that result available to the admitting team or, even if it is available, that the team will specifically look for that test result?&lt;/p&gt;
+
+&lt;p&gt;As such, we have a problem: we must trawl through the medical record in order to manually organise information and make it useful. We take a problem with thousands of dimensions - our raw results - and reduce them to some high-level concepts.&lt;/p&gt;
+
+&lt;h4 id=&quot;step-two-summarise-and-synthesise&quot;&gt;Step two: summarise and synthesise&lt;/h4&gt;
+
+&lt;p&gt;As such, to make sense of an excess of information in the medical record, most clinicians will attempt to create a summary to aid decision making. This is, in machine learning terms, a process of dimensionality reduction to identify the latent traits that are giving rise to the measurements that we can see. For example, one might write:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;2-hours central chest pain&lt;/p&gt;
+
+  &lt;p&gt;Sweating&lt;/p&gt;
+
+  &lt;p&gt;Breathless&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;ECG: ST elevation anterior leads&lt;/p&gt;
+
+  &lt;p&gt;Known: 
+angina
+acute coronary syndrome 1997 -&amp;gt; stent in circumflex - angioplasty 1997
+hypertension
+smoker&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;We conceive of the important information and apply that information to arrive at a clinical diagnosis.&lt;/p&gt;
+
+&lt;p&gt;Another example:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;3-months of headache&lt;/p&gt;
+
+  &lt;p&gt;subacute encephalopathy&lt;/p&gt;
+
+  &lt;p&gt;deteriorating renal function&lt;/p&gt;
+
+  &lt;p&gt;chronic lymphocytic meningitis&lt;/p&gt;
+
+  &lt;p&gt;leptomeningeal enhancement on MRI brain&lt;/p&gt;
+
+  &lt;p&gt;bilateral facial nerve palsies&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;For each, just as in Dr Larry Weed’s problem orientated medical records (POMR), we summarise at the most specific conceptual level that is defensible. If only a single lumbar puncture had been performed, we’d probably conceive of “lymphocytic meningitis” only, unless we could make an inference that the pathological process was chronic because of other factors, such as chronic headache and a long history of multiple cranial neuropathies. We might conclude chronicity based on repeated lumbar punctures or from synthesising the temporal pattern of clinical symptoms and signs over time. We populate our problem list based on the synthesis of multiple inferences from multiple sources.&lt;/p&gt;
+
+&lt;p&gt;For the first example, we have summarised the salient facts and have enough information to suggest “anterior myocardial infarction” as a most likely diagnosis. Indeed, we could use our anatomical knowledge to opine that the patient most likely has an occlusion in the left anterior descending coronary artery.&lt;/p&gt;
+
+&lt;p&gt;In the second example, we do not have sufficient information to arrive at a single most likely diagnosis, but we can arrive at a sensible differential diagnosis, a list of possible diagnoses such as “malignant meningitis”, “neurosarcoidosis” or “tuberculous meningitis”. The cause of the deteriorating renal function is unclear; we need more information to solve that problem.&lt;/p&gt;
+
+&lt;p&gt;We have defined the &lt;em&gt;essence&lt;/em&gt; of the clinical scenario in order to help us make clinical decisions; we reduce the uncertainty about those decisions to a level which permits rational decision making. As I have &lt;a href=&quot;/clinical-informatics/2017/06/20/machine-learning-2.html&quot;&gt;previously quoted&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;ol&gt;
+    &lt;li&gt;We care about measurements because measurements inform uncertain decisions.&lt;/li&gt;
+    &lt;li&gt;For any decision or set of decisions, there are a large combination of things to measure and ways to measure them—but perfect certainty is rarely a realistic option.&lt;/li&gt;
+    &lt;li&gt;Therefore, we need a method to analyse options for reducing uncertainty about decisions.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;step-three-iterate&quot;&gt;Step three: iterate&lt;/h3&gt;
+
+&lt;p&gt;Generating a differential diagnostic list is important; it allows us to consider the &lt;em&gt;next steps&lt;/em&gt; of the diagnostic pathway: what questions to ask previously omitted and what tests to arrange. Such a methodology re-affirms the nested hierarchical nature of diagnostic inference and the importance of understanding &lt;em&gt;a priori&lt;/em&gt; probabilities and the &lt;em&gt;a posteriori&lt;/em&gt; probability after our measurement, test or indeed any other method of obtaining more information.&lt;/p&gt;
+
+&lt;p&gt;A test can only be interpreted in a wider clinical context. Acetyl-choline receptor antibodies, tested in a patient with a pattern of symptoms (what the patient says) and signs (what we find on examination) suggestive of myasthenia gravis, are highly, but not perfectly sensitive to a diagnosis of myasthenia gravis. As I have &lt;a href=&quot;/medical-records/2017/10/08/the-broken-medical-record.html&quot;&gt;written before&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Similarly, if we have imperfect measurements that are not 100% sensitive or 100% specific, then we have to ask, sensitive and specific to &lt;em&gt;what&lt;/em&gt;? Realising this provides an important insight: when applied, say to clinical diagnosis, is that almost all of our measurements in medicine are as if we are looking at the truth out of the corner of our eye. We cannot see the &lt;em&gt;hidden truth&lt;/em&gt; but a combination of our measurements are, together, governed by a few simpler variables or concepts that are actually the cause of the results of the measurements that we can measure. As a result, we hope that our measurements can be used to understand the &lt;em&gt;latent&lt;/em&gt; variable(s) that are actually the hidden cause of those measurements.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;A latent variable is a variable that cannot be measured directly but we can infer its value from measurement of other observable measurements. In essence, we might conceptualise a latent trait as the real process to which our tests and assessments, combined together, provide an imperfect measurement.&lt;/p&gt;
+
+&lt;h3 id=&quot;step-four--reduce-dimensionality-reduction&quot;&gt;Step four : reduce (dimensionality reduction)&lt;/h3&gt;
+
+&lt;p&gt;As such, our highly complex, multi-dimensional medical record, combining symptoms, signs and investigation results, can potentially be simplified in terms of latent traits. Such a process is termed &lt;em&gt;dimensionality reduction&lt;/em&gt; and humans perform this task implicitly to simplify both the process of decision making and the communication required around that decision-making between professionals and the patient.&lt;/p&gt;
+
+&lt;p&gt;For instance, a 72-year-old patient with a long history of smoking cigarettes and a prior myocardial infarction is likely to have atherosclerotic vascular disease. When that patient presents with new right sided arm and face weakness, we are likely to assume that their stroke has been caused by emboli from atherosclerosis rather than a dissection, even if both causes are possible. The same clinical event occurring in a 32-year-old patient during high-intensity exercise is likely to have had a stroke due to arterial dissection. Humans perform such inferences without necessarily being explicit in documenting their chain of inference; over years we build a set of heuristics, rough and ready rules of thumb, that mean we make reasonable conclusions.&lt;/p&gt;
+
+&lt;h3 id=&quot;step-five--avoid-biases&quot;&gt;Step five : avoid biases&lt;/h3&gt;
+
+&lt;p&gt;Unfortunately, humans are subject to a range of &lt;a href=&quot;https://en.wikipedia.org/wiki/Cognitive_bias&quot;&gt;cognitive biases&lt;/a&gt; (see &lt;a href=&quot;https://www.amazon.co.uk/Thinking-Fast-Slow-Daniel-Kahneman/dp/0141033576/ref=sr_1_2?ie=UTF8&amp;amp;qid=1513438649&amp;amp;sr=8-2&amp;amp;keywords=cognitive+biases&quot;&gt;“Thinking fast and slow” by Prof. Daniel Kahneman&lt;/a&gt;) which results in a failure of our heuristics. For example, in confirmation bias, we may place greater emphasis on new information if it confirms a pre-existing belief or conclusion.&lt;/p&gt;
+
+&lt;p&gt;&lt;a title=&quot;By Jm3 (Own work) [CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)], via Wikimedia Commons&quot; href=&quot;https://commons.wikimedia.org/wiki/File%3AThe_Cognitive_Bias_Codex_-_180%2B_biases%2C_designed_by_John_Manoogian_III_(jm3).png&quot;&gt;&lt;img width=&quot;512&quot; alt=&quot;The Cognitive Bias Codex - 180+ biases, designed by John Manoogian III (jm3)&quot; src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/The_Cognitive_Bias_Codex_-_180%2B_biases%2C_designed_by_John_Manoogian_III_%28jm3%29.png/512px-The_Cognitive_Bias_Codex_-_180%2B_biases%2C_designed_by_John_Manoogian_III_%28jm3%29.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;As such, the structure of our medical records, whether on paper or electronic, can inadvertently exaggerate our own biases. Conversely, properly organised and well structured records may help us to spot our biases and support their avoidance.&lt;/p&gt;
+
+&lt;p&gt;For instance, it is easy to fall into the trap of “anchoring”, in which the first piece of information acquired skews all subsequent inference as it is prioritised ahead of subsequent information.&lt;/p&gt;
+
+&lt;h1 id=&quot;computer-assisted-care&quot;&gt;Computer-assisted care&lt;/h1&gt;
+
+&lt;p&gt;Information technology can and should valuably support caring for patients. Unfortunately, healthcare has not adopted information technology as quickly or effectively as other industries. For others, information technology is now &lt;em&gt;the&lt;/em&gt; way that those businesses operate. Healthcare could immediately benefit from better scheduling, planning and communication using off-the-shelf technologies widely used in other domains. In addition, we should be adopting other technologies as soon as possible : identity management, delegation and consent, evaluating &lt;a href=&quot;https://en.wikipedia.org/wiki/Privacy-enhancing_technologies&quot;&gt;privacy-enhancing technologies (PETs)&lt;/a&gt; with focus on re-imagining our services around patients and enabling that transformation with technology.&lt;/p&gt;
+
+&lt;p&gt;However, in this essay, I want to focus on discussing computer-aided decision support and the value of applying machine learning in supporting the care of patients. With the right tools, we could do much to:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;support presenting the right information at the right time&lt;/li&gt;
+  &lt;li&gt;suggest “measurements” (to obtain new information such as symptoms, signs or investigation results) that will add valuably to the decision-making process&lt;/li&gt;
+  &lt;li&gt;suggest differential diagnoses or treatment plans&lt;/li&gt;
+  &lt;li&gt;take steps to avoid common human cognitive biases&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;machine-learning-and-healthcare&quot;&gt;Machine learning and healthcare&lt;/h4&gt;
+
+&lt;p&gt;The reason that machine learning has been used so effectively for image interpretation was the creation of large amounts of training data. Training data, for machine learning, needs to provide the input parameters and the labelled expected output. For an image, you might have a human label an image of a cat as a “cat” and then, together with hundreds of thousands of other images, a machine learning model can be trained and tested. There are now many publicly available training datasets &lt;a href=&quot;https://en.wikipedia.org/wiki/List_of_datasets_for_machine_learning_research&quot;&gt;available&lt;/a&gt; from multiple sources.&lt;/p&gt;
+
+&lt;p&gt;So how can we achieve superhuman performance for clinical decision making?&lt;/p&gt;
+
+&lt;p&gt;We need to start thinking now about how to structure medical information so that it is possible to create large-scale publicly available training datasets and to understand how to transform clinical data from electronic patient records into the same format to permit testing and application in real-life clinical scenarios.&lt;/p&gt;
+
+&lt;p&gt;In short, we need a &lt;em&gt;“open computable medical record”&lt;/em&gt;, the OCMR.&lt;/p&gt;
+
+&lt;h4 id=&quot;open-computable-medical-record-ocmr&quot;&gt;Open Computable Medical Record (OCMR)&lt;/h4&gt;
+
+&lt;p&gt;The OCMR is a simple intermediary data structure that can be used to be build datasets representing clinical knowledge. Initially for version 1, its focus is on diagnostic inference, mapping a combination of clinical findings to a most likely diagnosis. We use SNOMED-CT, an international terminology to represent the concepts in our clinical knowledge model; they are the primitives around which we build our knowledge.&lt;/p&gt;
+
+&lt;p&gt;For example, the simplest structure might be:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;[acute kidney injury:&lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;amp;conceptId1=14669001&quot; target=&quot;_blank&quot;&gt;14669001&lt;/a&gt;] + [naproxen:&lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;amp;conceptId1=11847009&quot; target=&quot;_blank&quot;&gt;11847009&lt;/a&gt;] = [Analgesic nephropathy:&lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;amp;conceptId1=59400006&quot; target=&quot;_blank&quot;&gt;59400006&lt;/a&gt;]&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Each link will take you to the NHS digital SNOMED CT browser.&lt;/p&gt;
+
+&lt;p&gt;Why should we use SNOMED CT?&lt;/p&gt;
+
+&lt;p&gt;SNOMED CT is a human-curated ontology tracking clinical and non-clinical concepts and the relationships between them. For instance, SNOMED CT will tell you that [acute kidney injury] is a type of [kidney disease:&lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;amp;conceptId1=90708001&quot; target=&quot;_blank&quot;&gt;90708001&lt;/a&gt;].&lt;/p&gt;
+
+&lt;p&gt;My own SNOMED CT REST API provides this information in a computationally-useful manner : &lt;a href=&quot;http://msdata.org.uk:8080/snomedct/concepts/14669001?include=recursiveParentConcepts&quot; target=&quot;_blank&quot;&gt;acute kidney injury&lt;/a&gt; and &lt;a href=&quot;http://msdata.org.uk:8080/snomedct/concepts/11847009?include=recursiveParentConcepts&quot; target=&quot;_blank&quot;&gt;naproxen&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;What this means is that an algorithm can potentially learn generic knowledge from specific examples.&lt;/p&gt;
+
+&lt;p&gt;It is conceivable that a model, knowing that naproxen can cause acute kidney injury, can also learn that the broad class of analgesics can cause acute kidney injury and so, when faced with a patient on ibuprofen, can suggest a correct judgement.&lt;/p&gt;
+
+&lt;p&gt;While SNOMED CT contains many types of relationships permitting us to infer that “acute kidney injury” is a type of kidney disease, it does not contain any data providing support for diagnostic inference. As such, we need to embed SNOMED CT concepts within a wider OCMR information model in order to express potential diagnostic inferential relationships.&lt;/p&gt;
+
+&lt;p&gt;It is not difficult to conceptualise the OCMR as a 2-dimensional image with each pixel representing a clinical finding:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ai/mi.png&quot; alt=&quot;Conceptualising the OCMR as an image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here, the source “image”, a set of factors representing “chest pain”, “shortness of breath” and “ECG ST elevation” are analysed and the most likely diagnosis given: “acute MI” (myocardial infarction).&lt;/p&gt;
+
+&lt;p&gt;It is not difficult to envisage making an OCMR more structured and more refined to provide additional contextual information relating to clinical context, baseline characteristics of the patient such as age and sex as well as the severity and nature of each clinical finding; we might categorise these as acute, sub-acute, chronic or episodic for example.&lt;/p&gt;
+
+&lt;p&gt;I have included an example OCMR record for a diagnosis of myocardial infarction. It is available as a JSON-formatted file including the clinical problems (and for each the higher-order more generic concepts) and the final diagnosis. The example file is available &lt;a href=&quot;/images/ai/question.json&quot;&gt;here&lt;/a&gt;. I would envisage converting this to a flat vector for ease of processing.&lt;/p&gt;
+
+&lt;h4 id=&quot;meta-learning-and-dimensionality-reduction&quot;&gt;Meta-learning and dimensionality reduction&lt;/h4&gt;
+
+&lt;p&gt;The rationale behind defining an OCMR is to provide machine learning models with a set of deep underlying (latent) traits that act as as the core principles supporting diagnostic inference, just as used by humans.&lt;/p&gt;
+
+&lt;p&gt;We do not simply want a model that, given free text, outputs possible diagnoses, even though that might be an eventual result. Instead we want models that support building a more thorough foundation for clinical inference, that might even allow us, with the right right tools, to identify and understand inferential relationships and latent traits that we currently do not recognise.&lt;/p&gt;
+
+&lt;p&gt;For example, we might use the models to take new input from a patient’s medical record and support their direct care. In a patient with chest pain, a trained algorithm should be able to make diagnostic inferences and suggest information that is required such as “we need an ECG for this patient presenting with chest pain”. The model has learnt the relationship between chest pain and an ECG and even troponin results; with the right integration of decision support into our electronic health records, the algorithm could help us by highlighting the important information rather than simply showing all results in chronological order.&lt;/p&gt;
+
+&lt;h4 id=&quot;sources-of-training-data&quot;&gt;Sources of training data&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ai/model-generation.png&quot; alt=&quot;Model Generation&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;How can we build a corpus of medical knowledge containing diagnostic inferential relationships as well as codifying choice of next diagnostic steps, interventions and treatments?&lt;/p&gt;
+
+&lt;p&gt;I would argue that we need to consider multiple sources of medical knowledge and make them usable by converting them into the OCMR format; the OCMR data model is essentially an intermediary data structure for medical information in the same way as images can be represented as a bitmap image file and readily analysed.&lt;/p&gt;
+
+&lt;p&gt;The potential sources of information are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;core epidemiological data - providing information on incidence and prevalence for a range of disease&lt;/li&gt;
+  &lt;li&gt;free-text monographs about diseases, such as those from rare disease databases&lt;/li&gt;
+  &lt;li&gt;free-text monographs about drugs&lt;/li&gt;
+  &lt;li&gt;textbooks&lt;/li&gt;
+  &lt;li&gt;exam questions&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;epidemiological-data&quot;&gt;Epidemiological data&lt;/h4&gt;
+
+&lt;p&gt;Epidemiological data relating to the incidence and prevalence of different diseases are usually well-described in the literature. Such data can provide important &lt;em&gt;a priori&lt;/em&gt; probabilities of different diagnoses in different clinical contexts.&lt;/p&gt;
+
+&lt;p&gt;Such data could be supplemented by real-life data taken from known patients - for example, the GP research database (&lt;a href=&quot;https://www.herc.ox.ac.uk/downloads/health_datasets/browse-data-sets/general-practice-research-database-gprd&quot;&gt;GPRD&lt;/a&gt;) or hospital episode statistics (HES) for hospital admission and discharges. Such data will be recorded either as Read codes or ICD-10, but these are readily convertible to SNOMED-CT and could contribute to an publicly-accessible OCMR.&lt;/p&gt;
+
+&lt;h4 id=&quot;free-text-monographs-literature-and-textbooks&quot;&gt;Free-text monographs, literature and textbooks&lt;/h4&gt;
+
+&lt;p&gt;For many rare diseases, there are excellent semi-structured and authoritative descriptions of clinical features and types of presentation. It is not difficult to see how natural language processing could be used to extract the important phenotypic features of a range of rare diseases in order to support the identification of patients usually only possible by specialists.&lt;/p&gt;
+
+&lt;p&gt;For example, the OMIM (Online Mendelian Inheritance in Man) resource on &lt;a href=&quot;http://omim.org/entry/125370?search=drpla&amp;amp;highlight=drpla&quot;&gt;DRPLA&lt;/a&gt;, a rare neurodegenerative disorder is detailed and includes the important symptoms and signs. OMIM make their dataset available on the Internet in both human-readable and machine-readable formats.&lt;/p&gt;
+
+&lt;p&gt;Similarly, adverse-effects of different pharmaceutical compounds could be imputed from monographs in standard pharmacopeiae and so potentially highlight to non-specialists where a drug might be contributing to a patient’s problems.&lt;/p&gt;
+
+&lt;h4 id=&quot;exam-questions&quot;&gt;Exam questions&lt;/h4&gt;
+
+&lt;p&gt;We have been building up large numbers of semi-structured questions in medical schools across the UK and have a collaborative national question bank run by the Medical Schools Council Assessment Alliance (MSC-AA). We also have similar banks of questions for the postgraduate examinations managed by our Royal Colleges.&lt;/p&gt;
+
+&lt;p&gt;Could these question banks be useful as a corpus of knowledge for machine learning?&lt;/p&gt;
+
+&lt;p&gt;In my prior role in the School of Medicine at Cardiff University, we used to encourage students to use assessments to drive their learning by sitting as many exam questions as possible. As part of that work, we implemented a “progress test” in which students sat 3-4 exams per year with detailed feedback to identify areas for which they needed more help. We now have thousands of questions in our bank alone.&lt;/p&gt;
+
+&lt;p&gt;Can questions drive learning for machines?&lt;/p&gt;
+
+&lt;p&gt;For example, this is from the &lt;a href=&quot;http://www.usmle.org/pdfs/step-
+1/2015samples_step1.pdf&quot;&gt;USMLE&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A 52-year- old woman comes to the physician because of a 1-month history of headache, weakness, tingling of her extremities, muscle cramping, and fatigue. Her blood pressure is 170/110 mm Hg. Physical examination shows no other abnormalities. Laboratory studies show a decreased serum potassium concentration, metabolic alkalosis, and decreased plasma renin activity; serum sodium concentration is within the reference range. Urine catecholamine concentrations are within the reference range.&lt;/p&gt;
+
+  &lt;p&gt;Which of the following is the most likely diagnosis?
+A. Adrenal adenoma
+B. Focal segmental glomerulosclerosis
+C. Hypothalamic tumor
+D. Juxtaglomerular cell tumor
+E. Renal artery stenosis&lt;/p&gt;
+
+  &lt;p&gt;Answer : A&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The important characteristics of exam questions are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;they are a succinct distillation of important clinical concepts with a labelled answer; they usually do not contain extraneous information&lt;/li&gt;
+  &lt;li&gt;they contain sufficient information information to identify a single best answer&lt;/li&gt;
+  &lt;li&gt;there is a single best answer, although the distractors should be reasonable to someone who doesn’t know the answer&lt;/li&gt;
+  &lt;li&gt;they are semi-structured - with a stem (the clinical scenario), a lead-in (the question), the possible answers and the correct keyed answer.&lt;/li&gt;
+  &lt;li&gt;medical schools and colleges &lt;em&gt;should&lt;/em&gt; write questions on the most important and common clinical scenarios; they should represent a representative corpus of medical knowledge&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The potential problems with exam questions are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;is it possible to obtain sufficient questions in order to contribute to the learning of a model?&lt;/li&gt;
+  &lt;li&gt;is it possible to use natural language processing to extract the terms from the lead-in and to map the possible answers into a structured format suitable for our OCMR?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If these issues can be overcome, then the SNOMED-CT ontology tells us “headache” is a type of “pain” in the “head” so that any learning system can learn on the broad generic concepts and not only the concept used at the time.&lt;/p&gt;
+
+&lt;p&gt;For example, we can map each entity within that free text to a SNOMED-CT concept. Here I use my relatively rudimentary free-text mapping service:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://msdata.org.uk:8080/snomedct/search?s=plasma%20renin%20activity&quot;&gt;Plasma renin activity&lt;/a&gt;
+maps to to &lt;a href=&quot;http://browser.ihtsdotools.org/?perspective=full&amp;amp;conceptId1=8883510000001
+02&amp;amp;edition=uk-edition&amp;amp;release=v20170401&amp;amp;server=https://prod- browser-
+exten.ihtsdotools.org/api/snomed&amp;amp;langRefset=900000000000508004&quot;&gt;8883510000001&lt;/a&gt;
+or in JSON:
+&lt;a href=&quot;http://msdata.org.uk:8080/snomedct/concepts/888351000000102/recursiveP
+arents&quot;&gt;http://msdata.org.uk:8080/snomedct/concepts/888351000000102/recursiveP
+arents&lt;/a&gt;
+which tells us we’re measuring “renin”…&lt;/p&gt;
+
+&lt;p&gt;Similarly, we match on &lt;a href=&quot;http://msdata.org.uk:8080/snomedct/search?s=headache&quot;&gt;“headache”&lt;/a&gt; and understand that this is a type of &lt;a href=&quot;http://msdata.org.uk:8080/snomedct/concepts/25064002/recursiveParents&quot;&gt;“pain”…. in the “head”…&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;And the right answer is (A)… Adrenal adenoma, so, we can look that up too…&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://msdata.org.uk:8080/snomedct/search?s=adrenal adenoma&quot;&gt;http://msdata.org.uk:8080/snomedct/search?s=adrenal adenoma&lt;/a&gt;
+&lt;a href=&quot;http://msdata.org.uk:8080/snomedct/concepts/255036008/recursiveParents&quot;&gt;http://msdata.org.uk:8080/snomedct/concepts/255036008/recursiveParents&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;and then understand that this is a type of benign neoplasm of the adrenal gland.&lt;/p&gt;
+
+&lt;p&gt;As such, for any single question, it might be possible to &lt;em&gt;impute&lt;/em&gt; a range of different data based on more generic high-level broad concepts. Likewise, if there is insufficient training data for creating a high-dimensional map at a high level of granularity, we can use techniques to reduce dimensionality and create a low-dimensional model. Indeed, it is likely that identifying the core principles and trends from high-dimensional datasets will permit better predictive models to be created.&lt;/p&gt;
+
+&lt;p&gt;For example, this question not only links a diagnosis of adrenal adenoma with fatigue, hypertension, a low serum potassium concentration and metabolic alkalosis, but it is conceivable that the training data could be used to identify patients with similar symptoms and signs and suggest that renal profile should be checked.&lt;/p&gt;
+
+&lt;p&gt;Likewise, the resultant model may be able to generate additional questions for subsequent training, by humans and algorithms alike.&lt;/p&gt;
+
+&lt;h1 id=&quot;conclusions&quot;&gt;Conclusions&lt;/h1&gt;
+
+&lt;p&gt;Information technology has the potential to revolutionise healthcare and augment our clinical decisions by helping us understand patient information in ways to directly improve care. Clinical decision making is complex and we need to consider ways to both understand and support our decision-making. We don’t want to abdicate responsibility for 
+decision-making; indeed, decision-making is a partnership between professional and patient. However, for too long, human professionals have had to spend time gathering the right information instead of focussing on where our skills are needed most : high-level thinking and communication. We should be working towards building tools that support us in the care of our patients.&lt;/p&gt;
+
+&lt;p&gt;I have started work on the first version of the OCMR and I am going to try to build some publicly-available datasets to kickstart the application of machine learning in healthcare. As an experiment, I have built a fake dataset generator (&lt;a href=&quot;https://bitbucket.org/wardle/go-snomed&quot;&gt;go-snomed&lt;/a&gt;) which builds a fake OCMR JSON structure to try to understand the pitfalls of this approach.&lt;/p&gt;
+
+&lt;p&gt;I would love to hear from you if you would like to be involved or indeed, help support this work.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">In this post, I discuss machine learning and computer-aided decision support in healthcare.</summary></entry><entry><title type="html">The 5 Os of healthcare IT</title><link href="https://www.wardle.org/clinical-informatics/2017/12/06/5os-health.html" rel="alternate" type="text/html" title="The 5 Os of healthcare IT" /><published>2017-12-06T10:39:39+00:00</published><updated>2017-12-06T10:39:39+00:00</updated><id>https://www.wardle.org/clinical-informatics/2017/12/06/5os-health</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/12/06/5os-health.html">&lt;p&gt;My writing on &lt;a href=&quot;/clinical-informatics/2017/02/03/domain-driven-design.html&quot;&gt;domain-driven design&lt;/a&gt; arose because of my own experience building an electronic patient record system:&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;“A model is an abstraction of the real-world distilling knowledge into core concepts and processes.”&lt;/p&gt;
@@ -962,173 +1306,4 @@ barplot(as.matrix(sp[,c(2:7,12)]), beside=T,
 
 &lt;h1 id=&quot;further-reading&quot;&gt;Further reading:&lt;/h1&gt;
 
-&lt;p&gt;Disruptive influences in healthcare information technology: &lt;a href=&quot;/clinical-informatics/2017/07/07/disruptive-influences-health.html&quot;&gt;part 1&lt;/a&gt;, &lt;a href=&quot;/clinical-informatics/2017/07/11/disruptive-influences-current.html&quot;&gt;part 2&lt;/a&gt; and &lt;a href=&quot;/clinical-informatics/2017/08/20/disruptive-influences-future.html&quot;&gt;part 3&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Walk about on the wards.</summary></entry><entry><title type="html">Disruptive influences in healthcare: the future</title><link href="https://www.wardle.org/clinical-informatics/2017/08/20/disruptive-influences-future.html" rel="alternate" type="text/html" title="Disruptive influences in healthcare: the future" /><published>2017-08-20T10:00:00+01:00</published><updated>2017-08-20T10:00:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/08/20/disruptive-influences-future</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/08/20/disruptive-influences-future.html">&lt;p&gt;I previously discussed &lt;a href=&quot;/clinical-informatics/2017/07/07/disruptive-influences-health.html&quot;&gt;three disruptive influences in healthcare in my previous blog post&lt;/a&gt; that, over the next five years, will disrupt both the provision of healthcare and the technological solutions currently used to support that care:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Changes in the models of care&lt;/li&gt;
-  &lt;li&gt;Patients as active participants&lt;/li&gt;
-  &lt;li&gt;‘Hospitals without walls’&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;And subsequently, I tried to &lt;a href=&quot;/clinical-informatics/2017/07/11/disruptive-influences-current.html&quot;&gt;give an overview of how current strategies used by health services and commercial companies will struggle to meet those disruptions&lt;/a&gt;, principally as a result of a focus on single organisations and enterprises.&lt;/p&gt;
-
-&lt;p&gt;I hope to draw these strands together in one place and hopefully provide some important context for some of my other blog posts. In my view, the two planks of work to form the foundation of our work are:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;An “open decentralised platform” for healthcare made up of multiple standards-based interoperable services and data repositories.&lt;/li&gt;
-  &lt;li&gt;A single distributed logical patient record made up of multiple shards connected with multiple pseudo-identities wrapped in a consent model.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;In essence, we need the right structures in place to allow us &lt;a href=&quot;/clinical-informatics/2017/03/09/google-information.html&quot;&gt;“to organise healthcare and patient information and make it universally accessible and useful.”&lt;/a&gt; We need to be much more ambitious and yet plan to iterate to get to that future.&lt;/p&gt;
-
-&lt;h1 id=&quot;1-open-platforms-in-health&quot;&gt;1. Open platforms in health&lt;/h1&gt;
-
-&lt;p&gt;Fundamentally, administrative and clinical information relating to patients must be made more widely available outside of closed networks and across disciplines, services, organisations and sectors.&lt;/p&gt;
-
-&lt;p&gt;To do this, we must discuss the “open platform” approach.&lt;/p&gt;
-
-&lt;p&gt;The Internet is one example of an “open platform”, in which open standards result in an open network in which many different software applications and devices can be connected and exchange information. One important consequence of an “open platform” is its use for applications not originally considered by its designers. For example, TCP/IP, the networking protocol that underpins the Internet handles, in a generic way, the low-level handling of bundles of data (messages) between computer systems. This open technical architecture was used as the foundation of the HTTP protocol, although other protocols such as Gopher were also built using TCP/IP as a foundation. This is an example of a &lt;em&gt;layered architecture&lt;/em&gt; in which an open platform, the &lt;a href=&quot;https://technet.microsoft.com/en-gb/library/cc958821.aspx&quot;&gt;“Open Systems Interconnection (OSI) model”&lt;/a&gt; is made up of multiple layers in which scope and function are well defined. Importantly, each subsequent layer usually provides a higher-level of abstraction from the detail. Low-levels of the OSI platform handle the physical connectivity and nitty-gritty details of networking such as data exchange and acknowledgements of transfer. Higher-levels allow software to ignore these low levels of networking management and simply exchange information.&lt;/p&gt;
-
-&lt;p&gt;The Internet has made information of all types universally accessible, useful and searchable and most of us now do this on mobile devices we carry with us all of the time. We now carry around practically unlimited computing resources in our pockets, so why can we not do that in healthcare?&lt;/p&gt;
-
-&lt;h4 id=&quot;why-an-open-platform&quot;&gt;Why an open platform?&lt;/h4&gt;
-
-&lt;p&gt;Why does the “open platform” matter in healthcare? I have &lt;a href=&quot;/clinical-informatics/2017/07/11/disruptive-influences-current.html&quot;&gt;touched on the problems previously&lt;/a&gt;. Essentially, healthcare informatics has been dominated by:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;a focus on administrative functionality rather than prioritising clinical care and the patient.&lt;/li&gt;
-  &lt;li&gt;large commercial vendors with closed systems and little or no interoperability.&lt;/li&gt;
-  &lt;li&gt;a focus on the procurement of “products” based on &lt;em&gt;features&lt;/em&gt; on a capital expenditure basis with old-fashioned project plans built using a waterfall methodology with start and completion dates and little or no concept of iterative improvement&lt;/li&gt;
-  &lt;li&gt;organisations that are hierarchical and autocratic, designed to funnel information upwards and decisions made by those at the top flowing downwards. In essence, such structures have arisen as a result of trying to manage risk; when one considers large multi-million pound procurements, one must attempt to slow down decision making and reduce the risk of a bad decision&lt;/li&gt;
-  &lt;li&gt;organisations that are risk-averse and fail slowly like a car crash in slow motion, rather than failing fast and learning from those failures.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;In essence, how do we create the right structures that lower risk and allow more rapid iterative development?&lt;/p&gt;
-
-&lt;p&gt;To answer that, we must ask… what is our goal?&lt;/p&gt;
-
-&lt;p&gt;An open platform is simply the foundation for a longer and much more ambitious journey in healthcare information technology. It is so important to have a vision for a future in 5 or 10 years; we are certain to be wrong, but having ambitious goals &lt;em&gt;and&lt;/em&gt; understanding that we’re going to have to change some of our plans; probably the details of some of the steps used to get there; but we won’t be changing the the direction of travel.&lt;/p&gt;
-
-&lt;p&gt;So… shouldn’t our goal be to provide the right structures and technology to create high-quality, valuable user-centric applications that can help solve clinical problems, with the “user” being a patient or a professional or other worker involved in care. Don’t we want those applications running &lt;em&gt;now&lt;/em&gt; so that we can start work on the next generation of clinical applications. We want to understand our patients and have ready access to tools that support our teams in providing care for patients. Iteration is the key; we will never be finished and there will always be more to do. How can we enable that?&lt;/p&gt;
-
-&lt;p&gt;I’ve previously described user-facing applications as ideally being “almost throwaway” in our team meetings here in Wales and such statements have sometimes resulted in looks of incredulity. However, describing applications as “throwaway” simply reflects the following logical chain of reasoning:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;You say I can write clinical applications are “almost throwaway”?&lt;/li&gt;
-  &lt;li&gt;Therefore, the engineering work must be quite straightforward, because I’m a lazy engineer.&lt;/li&gt;
-  &lt;li&gt;But surely there is a tonne of clever engineering work needed in healthcare, such as managing users, managing access, looking at patients, managing consent, access logs, getting and storing complex medical information and understanding the status of a variety of healthcare resources?&lt;/li&gt;
-  &lt;li&gt;Ah! The clever stuff must be already be provided elsewhere!&lt;/li&gt;
-  &lt;li&gt;So, can you show me the API endpoints and documentation?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The logical conclusion is therefore that we strive for an open platform in which applications coordinate and leverage multiple services provided within the platform; applications are the conductors for our orchestra of services. I expect some core services that are initially, mainly enterprise-bound, provided by individual organisations so that a single application can be deployed with little change between and across multiple those organisations.&lt;/p&gt;
-
-&lt;p&gt;However, with time, I’d expect to see a marketplace of increasingly sophisticated “services” that are provided outside of the scope of individual organisations, many provided by commercial vendors, in which sophisticated additional functionality can be made available on a cost per-use basis. Over time, the functionality of “the platform” extends upwards into &lt;em&gt;the cloud&lt;/em&gt; increasingly combining traditional data from organisations with new forms of patient-reported, patient-recorded real-life data.&lt;/p&gt;
-
-&lt;p&gt;We are already seeing the commercialisation of services like that in other sectors, with Google Cloud Functions and Amazon AWS lambda services providing serverless and maintenance free deployment and scaling of discrete pieces of logic. When are we going to do this for healthcare? Who’ll be first to offer a natural language processing API that takes a legacy clinical document and turns it into a structured document together with mapping to SNOMED-CT for £0.0001 per document? &lt;sup&gt;&lt;a href=&quot;#snomed&quot;&gt;a&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-
-&lt;p&gt;As such, I see an “open platform” as stage one of a larger plan, but how do we get started?&lt;/p&gt;
-
-&lt;h4 id=&quot;what-is-an-open-platform&quot;&gt;What is an open platform?&lt;/h4&gt;
-
-&lt;p&gt;We’ve been discussing strategy at length within NHS Wales and continue to have a fierce debate about the best way of using limited resources in the most valuable way. Perhaps reasonably, there are some who think we should be concentrating our limited resources on a single all-Wales application, the Welsh Clinical  Portal (WCP). I will not cover that debate here, but I feel strongly that a focus on an application is a &lt;a href=&quot;/clinical-informatics/2017/03/15/once-for-wales.html&quot;&gt;poor way of meeting both present and future challenges&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;So I hope, instead, to influence the national strategy in favour of a platform approach.&lt;sup&gt;&lt;a href=&quot;#getting-sacked&quot;&gt;b&lt;/a&gt;&lt;/sup&gt; For example, at the moment, laboratory and radiology investigation results are available only through the WCP application. We currently tightly bind WCP into our commercially procured laboratory management system and make WCP the only way of viewing those data, allowing other applications to open a separate frame in a web browser “stapling” functionality together.&lt;/p&gt;
-
-&lt;p&gt;Here is my schematic of the architecture of a more “open”  test requesting and results service:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/platform/platform-lab.png&quot; alt=&quot;Platform Lab&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Here WCP is but one view on the &lt;em&gt;same data&lt;/em&gt; and &lt;em&gt;same services&lt;/em&gt;. Unfortunately, there are some people that think that embedding different parts of an application within another at the user-interface level, using technology such as frames is a better approach. Importantly, such an approach does not expose the underlying data and so fails to support the use of those underlying data in any innovative manner and thus fails to appreciate the importance of data analytics for supporting clinical decision making for an individual patient, managing our clinical services for groups of patients or for research.&lt;/p&gt;
-
-&lt;p&gt;The laboratory information management system (LIMS) is provided by Intersystems (Trakcare) and we should replicate that data source in a vendor-neutral archive (VNA) that is exposed to client software via a standardised application programming interface (API). This abstraction is an important tool in making commercial systems a &lt;em&gt;commodity&lt;/em&gt;. Commoditisation of components of an open platform is a vital step in reducing vendor lock-in and focusing on what is important; our data and its intrinsic value rather than a product. In this schematic, the VNA is represented by the “results archival service”. Now if TrakCare exposed a standardised API, for example using HL7 FHIR, then it may be that API could be used by the service layer. But the important lesson is that &lt;em&gt;it doesn’t matter&lt;/em&gt;, because we’ve abstracted the service. Indeed, the same approach would work if we were trying to provide a unified set of results across multiple laboratories all using different laboratory systems, so long as we built a VNA and carefully managed patient identity between different instances. Indeed, our laboratory colleagues could completely change their systems and our application software &lt;em&gt;does not even need to be aware&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Our business logic is codified at the &lt;em&gt;service level&lt;/em&gt; and not the application level and, to manage changes in business processes and clinical need, many of the rules that underpin that business logic should be delegated to a rules engine, which allows business rules to be recorded dynamically in a declarative and not procedural fashion in the language of the business.&lt;/p&gt;
-
-&lt;p&gt;I’ve previously discussed the importance of &lt;em&gt;scope&lt;/em&gt;; starting with our problem and broadening the scope to create generic solutions. However, that doesn’t mean that we have to build everything in one step. Instead, if we get the architecture right at the beginning, we can offer a laboratory test requesting and results service and then extend the platform to also support radiology requesting and reported as well. The schematic shows this evolution, with a FHIR test requesting service acting as a &lt;em&gt;concierge&lt;/em&gt;-type service, taking a request and delegating that request to the appropriate, now private, test service depending on the details of that request.&lt;/p&gt;
-
-&lt;p&gt;The test requesting / results service would fit into the wider architecture like this:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/platform/platform-overall.png&quot; alt=&quot;Platform Overall&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Once again, a pipeline in which data is extracted, transformed and modelled ready for analytics is critical in ensuring that clinical information is made available at the right time to the right people.&lt;/p&gt;
-
-&lt;p&gt;This “platform” shows the important components required by clinical applications, such as patient demography, user management (a user directory which for NHS Wales is a large Active Directory), logging and security, laboratory and radiology test requesting and results, clinical documents, structured clinical information including patient outcomes, electronic prescribing and reference data. HL7 FHIR supports presenting all of these types of data and services as a RESTful API already. As a result, legacy services would require either a FHIR facade to wrap and map that existing service or a method to replicate information to a VNA that exposed that information in a standardised way.&lt;/p&gt;
-
-&lt;p&gt;An application written for such a platform, using FHIR end-points to make use of data and services provided by that platform, can potentially be deployed in any environment which provides similar services.&lt;/p&gt;
-
-&lt;h1 id=&quot;2-balancing-availability-and-privacy--consent&quot;&gt;2. Balancing availability and privacy = consent!&lt;/h1&gt;
-
-&lt;p&gt;It is not difficult to imagine scaling an open platform across multiple organisations and enterprises much like the Internet has scaled so dramatically since its inception with patient data stored encrypted at rest and in transit by those organisations or their proxies and made available to others. The next logical step is to take that information and &lt;a href=&quot;/clinical-informatics/2017/03/09/google-information.html&quot;&gt;“make it universally accessible and useful.”&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;However, there is an important paradox here: we want to increase information sharing and yet preserving privacy and confidentiality for that health information.&lt;/p&gt;
-
-&lt;p&gt;As a result, healthcare information technology must consider the use of privacy-enhancing technologies in order to:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;allow safe and secure information sharing between multiple organisations, professionals, sectors and the patient&lt;/li&gt;
-  &lt;li&gt;give patients the tools required in order to control when and how their information is shared&lt;/li&gt;
-  &lt;li&gt;provide a distributed, verifiable infrastructure&lt;/li&gt;
-  &lt;li&gt;support a range of mobile devices used by patients and staff&lt;/li&gt;
-  &lt;li&gt;maintain the privacy of both patients and staff when mobile devices are ubiquitous.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Patients must have trust that their private and confidential information is secure and yet want that same information available when it is required. As a result, information systems and the way that they are connected must be &lt;em&gt;secure-by-design&lt;/em&gt;, with security and transparency built-in as a result of the architecture and networking protocols. Layered upon this infrastructure must be mechanisms to capture patient consent. A &lt;em&gt;private-by-design&lt;/em&gt; networking layer would need to implement and support a range of services including:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;cross-organisational identity, for both patient and professionals as well as other parties such as carers.&lt;/li&gt;
-  &lt;li&gt;multiple pseudo-identities, in which identity may be obfuscated for a particular use to prevent linkage beyond what is permitted.&lt;/li&gt;
-  &lt;li&gt;commoditising semantic interoperability and data standards&lt;/li&gt;
-  &lt;li&gt;decoupling of logical systems, including `patient portals’ so that patients not only can choose a provider themselves but then use that portal to communicate and interact with multiple decentralised services.&lt;/li&gt;
-  &lt;li&gt;networking that does not leak information as a result of analysis of the traffic within it.&lt;/li&gt;
-  &lt;li&gt;support for innovation, trust and verifiability with `sandboxing’ for health applications.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;So my final assertion is that HL7 FHIR is only a component of a wider health informatics strategy. We must consider how to create a &lt;em&gt;single patient record&lt;/em&gt;, with information about a single individual made available at the right time and right place when approved by that individual. Fundamentally, this is predicated upon systems to manage &lt;em&gt;identity and patient consent&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Do we rely on applications and third-party services to double-check that they have consent or is it possible to build that consent into the architecture itself as part of how applications and services locate and use resources about that patient? I think the best way of handling this is the use of multiple pseudo-identities which can be linked or unlinked into an aggregated view of a &lt;em&gt;single patient record&lt;/em&gt;. In essence, we don’t want to rely on software to have to check whether it can access patient data but instead not even know that data exists or where to find it.&lt;/p&gt;
-
-&lt;p&gt;Interestingly, another definition of a “platform” is a set of services that bring together users and providers to form a multisided market. Is it possible then to take our “open platform” and start to think of a future in which we have products and services that actually do enable a re-imagining of healthcare provision to bring together patients, carers, health professionals, commissioners, analytics, researchers and all other stakeholders in a safe and secure manner?&lt;/p&gt;
-
-&lt;h3 id=&quot;secure-by-design-sandboxing-services-and-applications&quot;&gt;Secure-by-design: sandboxing services and applications&lt;/h3&gt;
-
-&lt;p&gt;One practical way of considering the problem is to consider how to permit innovation in a safe and secure way and have successful work quickly scaled out across and between organisations. For example, if a new startup company can create tools to automatically identify and monitor patients on drugs such as methotrexate and ensure that they have the required blood tests, how could such tools be deployed safely with certainty as to how, when and why that information was processed with support for an opt-out should a patient not agree to their information being used for that purpose? Can an infrastructure be created that means such applications can be installed in essentially a `sandbox’ in which its interactions with patient data are controlled and monitored automatically? Could that paradigm scale to support access to health data in a generic fashion?&lt;/p&gt;
-
-&lt;p&gt;Applications running on Apple’s iOS provide a useful analogy. In order to gain access to components of the underlying device and its operating system, such as the camera, the photo archive, location services etc, the application must use the appropriate API which forces explicit user consent. This “sandbox” environment means that an application is prevented from accessing resources to which consent has not been provided and presumably can log each and every attempt should that be required.&lt;/p&gt;
-
-&lt;p&gt;Can we do the same for health applications and services? It seems to me that we can create tremendous value from healthcare data - for patients, for health professionals and for society - but the foundation must be to allow that information to be organised in such a way that we can make it “universally accessible and useful” &lt;em&gt;subject to individual consent&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;As I started writing a version of this post back in June, Estonia had just announced its plans for its EU presidency to include the &lt;a href=&quot;https://www.eu2017.ee/sites/default/files/2017-06/EU2017EE\%20Programme_0.pdf&quot;&gt;cross-border movement of health data for the purposes of treatment, research and innovation and to promote data-based innovation in healthcare&lt;/a&gt;. Creating secure platforms on which such communications can operate would be a pre-requisite for those aspirations.&lt;/p&gt;
-
-&lt;h1 id=&quot;so-what-next&quot;&gt;So what next?&lt;/h1&gt;
-
-&lt;p&gt;I think that there are several important strands of work, most of which require health organisations and technology companies to work together to use technology as an enabler for the transformation of healthcare:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;work together on joint data standards and both technical and semantic interoperability&lt;/li&gt;
-  &lt;li&gt;build open platforms to bring together meaningful structured clinical information with data from legacy applications, adopting open standards such as HL7 FHIR and openEHR.&lt;/li&gt;
-  &lt;li&gt;transform healthcare IT procurement moving away from capital “product”-based procurements to recurring expenditure models based on services ensuring that such procurements are measured against interoperability standards. Procure “products” only when truly contributing to or enabling a larger platform within and potentially between organisations.&lt;/li&gt;
-  &lt;li&gt;break-down hierarchical autocratic organisations, and instead create highly functionally integrated teams combining skills from multiple disciplines who can take responsibility for achieving their goals; similarly, with such teams we should not be afraid of in-house development work when appropriate.&lt;/li&gt;
-  &lt;li&gt;explore ways of turning unstructured information into usable and valuable data to explore clinical phenotypes, identify cohorts and use real-life outcome data.&lt;/li&gt;
-  &lt;li&gt;look to improve the routine real-time use of analytics in healthcare for patient care and service improvement; if we can’t do simple survival curves in real-time for patients having emergency surgery in the last 30 days stratified by age, gender and co-morbidities, then we won’t be able to adopt more sophisticated analytics based on deep learning.&lt;/li&gt;
-  &lt;li&gt;consider picking niche specialist “vertical” markets such as long-term health conditions, in order to innovate and iterate before taking the lessons learnt to a wider audience.&lt;/li&gt;
-  &lt;li&gt;take a 5-year (long-term) view and work on applying innovative technology (that probably exists today but just needs combining in interesting ways) into healthcare to support a secure, privacy-enhancing distributed patient record that engenders public and agency trust. I think it has something to do with a high-level abstraction of a distributed patient record, with multiple pseudo-identities bound together by consent with verifiable audit logs and service discovery based on that consent security model.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Why should a technology company be interested in building such an open platform? Because, like the Internet, it will be an enabler and create value for years to come.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;further-reading&quot;&gt;Further reading&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/02/03/domain-driven-design.html&quot;&gt;Domain-driven design in clinical informatics&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/03/09/google-information.html&quot;&gt;Organise healthcare information and make it universally accessible and useful&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/06/20/hazards-of-paper.html&quot;&gt;The hazards of paper&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h1&gt;
-
-&lt;p&gt;&lt;a name=&quot;snomed&quot;&gt;a&lt;/a&gt;: Actually, don’t do that, as I’m already working on this using my SNOMED-CT service  (&lt;a href=&quot;https://www.github.com/wardle/rsterminology&quot;&gt;rsterminology&lt;/a&gt;) and using Google Cloud’s NLP API to identify entities within the text.&lt;/p&gt;
-
-&lt;p&gt;&lt;a name=&quot;getting-sacked&quot;&gt;b&lt;/a&gt;: And hopefully without being sacked in the process.&lt;/p&gt;</content><author><name></name></author><summary type="html">I previously discussed three disruptive influences in healthcare in my previous blog post that, over the next five years, will disrupt both the provision of healthcare and the technological solutions currently used to support that care:</summary></entry></feed>
+&lt;p&gt;Disruptive influences in healthcare information technology: &lt;a href=&quot;/clinical-informatics/2017/07/07/disruptive-influences-health.html&quot;&gt;part 1&lt;/a&gt;, &lt;a href=&quot;/clinical-informatics/2017/07/11/disruptive-influences-current.html&quot;&gt;part 2&lt;/a&gt; and &lt;a href=&quot;/clinical-informatics/2017/08/20/disruptive-influences-future.html&quot;&gt;part 3&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Walk about on the wards.</summary></entry></feed>
