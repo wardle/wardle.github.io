@@ -1,125 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-01-19T16:25:30+00:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
-</subtitle><entry><title type="html">Focus focus focus</title><link href="https://www.wardle.org/clinical-informatics/2018/01/19/focus-focus-focus.html" rel="alternate" type="text/html" title="Focus focus focus" /><published>2018-01-19T14:44:44+00:00</published><updated>2018-01-19T14:44:44+00:00</updated><id>https://www.wardle.org/clinical-informatics/2018/01/19/focus-focus-focus</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2018/01/19/focus-focus-focus.html">&lt;p&gt;&lt;a href=&quot;http://gov.wales/topics/health/nhswales/about/e-health/?lang=en&quot;&gt;“Informed health and care – A digital health and social care strategy for Wales”&lt;/a&gt; sets out a clear vision for the use of information technology to support the provision of healthcare for citizens within Wales.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-01-19T22:12:37+00:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</subtitle><entry><title type="html">Focus : meeting the challenges</title><link href="https://www.wardle.org/clinical-informatics/2018/01/19/focus-solutions.html" rel="alternate" type="text/html" title="Focus : meeting the challenges" /><published>2018-01-19T14:46:46+00:00</published><updated>2018-01-19T14:46:46+00:00</updated><id>https://www.wardle.org/clinical-informatics/2018/01/19/focus-solutions</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2018/01/19/focus-solutions.html">&lt;p&gt;In &lt;a href=&quot;/clinical-informatics/2018/01/19/focus-focus-focus.html&quot;&gt;part one of this series&lt;/a&gt;, I introduced the &lt;a href=&quot;http://gov.wales/topics/health/nhswales/about/e-health/?lang=en&quot;&gt;“Informed health and care – A digital health and social care strategy for Wales”&lt;/a&gt; and talked in broad terms about the importance of a coherent strategy to deliver that vision.&lt;/p&gt;
 
-&lt;p&gt;This vision is split into four key themes:&lt;/p&gt;
+&lt;p&gt;In &lt;a href=&quot;/clinical-informatics/2018/01/19/focus-challenges.html&quot;&gt;part two of this series&lt;/a&gt;, I attempted to articulate the challenges we face; concluding that essentially, we need to balance centralised planning and control with support for innovation and change, particularly given the new technologies on the horizon which offer the potential to transform how we configure and deliver care to our citizens.&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;“Information for You”&lt;/li&gt;
-  &lt;li&gt;“Supporting professionals”&lt;/li&gt;
-  &lt;li&gt;“Improvement and innovation”&lt;/li&gt;
-  &lt;li&gt;“A Planned future”.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“We want a future where staff, service users, patients and carers are empowered and better informed, where organisational boundaries are not a barrier to effective care, as information is available electronically and joined-up, and where innovation and improvement can flourish built on a solid technical infrastructure and a safe environment for those who work in or are served by health and care services in Wales.”&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The key question for us to answer is, what are the key challenges that must be overcome to deliver this vision? As part of that process, we must be frank and honest about both current and future impediments to delivery. It is easy to fall into a trap of thinking of the “Informed Health and Care” strategy as an finished product instead of what it is, a set of high level goals which requires us to build a tangible and specific roadmap bringing together multiple strands of work into a truly cohesive vision.&lt;/p&gt;
-
-&lt;p&gt;Likewise, we must be honest about the economical and political environment in which we work, acknowledging the limitations in resources. We face a multitude of potentially conflicting demands and interests; as such, delivering the “Informed Health and Care Strategy” requires us to not only understand what we must do to achieve those goals but critically to understand what we must stop doing.&lt;/p&gt;
-
-&lt;p&gt;What is our strategy to deliver the vision?&lt;/p&gt;
-
-&lt;h4 id=&quot;difficult-choices--we-cannot-do-it-all&quot;&gt;Difficult choices : we cannot do it all&lt;/h4&gt;
-
-&lt;p&gt;NHS Wales must face some difficult choices.  For too long, external factors have resulted in incoherent and inconsistent delivery or projects, frequency orthogonal to delivery of the wider vision; in many cases it has been driven by the budgeting process and the availability of funds in any single financial year.&lt;/p&gt;
-
-&lt;p&gt;A coherent strategy needs more than a list of disconnected and incompatible goals but instead a clear understanding of what needs to be done and what doesn’t need to be done; we must know when to say “no”. Instead, we focus our limited resources on specific tangible actions and make some difficult decisions to prune areas of work that do not support delivery of the wider vision.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;… you should have a very short list of the most important things for the company to do. Then you will have a basis for moving forward.&lt;/p&gt;
-
-  &lt;p&gt;from &lt;a href=&quot;https://www.amazon.co.uk/Good-Strategy-Bad-Difference-Matters/dp/1846684811&quot;&gt;“Good Strategy Bad Strategy”, 2011 by Richard Rumelt&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;As such, we need a coordinated all-Wales approach that permits all stakeholders to work cooperatively and collaboratively with clear lines of responsibility and governance. We need to re-organise our approach to healthcare information technology that takes into account the steps needed to deliver the vision, the principles of enterprise architectural design, modern information standards and interoperability, modern quality improvement methodology and user-centred design.&lt;/p&gt;
-
-&lt;p&gt;I believe that the only logical response to the &lt;a href=&quot;https://www.wao.gov.uk/publication/informatics-systems-nhs-wales&quot;&gt;Welsh Audit Office report&lt;/a&gt; is to re-imagine the relationship between the NHS Wales Informatics Service (NWIS) and the health boards. Such a re-imagining requires us to stop ignoring the, in my view, currently incoherent set of responsibilities and divisions of labour that exist within Wales.&lt;/p&gt;
-
-&lt;p&gt;For example, is NWIS a standards and governance body, a consultancy, a software development house, a provider of a computing platform, a user experience and design shop, a procurement specialist, a business intelligence and analytics service or a provider of information technology infrastructure? Who is responsible? Who takes the credit and who takes the blame when something is not delivered? If we cannot answer such questions, we have to question our governance and organisational structures.&lt;/p&gt;
-
-&lt;p&gt;In addition, while it makes sense that the “Informed Health and Care” strategy is divided into four workstreams, I believe it is incorrect to assume that the safe and efficient delivery of those objectives is necessarily delineated into separate workstreams in which it is assumed that work may continue semi-independently without consideration to other projects. There are, in my opinion, too many common goals and solutions to solve those goals that cross-cut those workstreams to consider them independently.&lt;/p&gt;
-
-&lt;p&gt;Instead, we must consider a “target architecture”, an enterprise master-plan which lays out an overall set of systems and functions that will support delivery of our shared vision. For example, understanding the similarities and differences between providing information for patients or professionals provides important insight into the shared data and software components that must serve both sets of requirements. Patients and health professionals need to see past and prior appointments and entries on waiting lists; there are shared needs that cut across those workstreams.&lt;/p&gt;
-
-&lt;p&gt;Similarly, transformational change, enabled by technology, must be driven from the bottom-up, from those who deliver healthcare permitting incremental development and innovation while at the same time lowering risk? Likewise, don’t we all know that we must have top-down governance to ensure that solutions are standards-compliant, fit-for-purpose and safe as well as checking that developments are not orthogonal to the overall strategic vision so eloquently described in four workstreams of the Informed Health and Care Strategy?&lt;/p&gt;
-
-&lt;p&gt;The paradox, put simply, is that we, in NHS Wales, have centralised the day-to-day management and delivery of individual projects and yet high-level strategic and prioritisation decisions are decentralised, haphazard and dependant on capital funding with little or no consideration or control as to how those projects will fit into a wider technical all-Wales architecture.&lt;/p&gt;
-
-&lt;h1 id=&quot;what-are-the-challenges-we-face&quot;&gt;What are the challenges we face?&lt;/h1&gt;
-
-&lt;p&gt;So what are our challenges in delivering the vision today?  The recent &lt;a href=&quot;https://www.wao.gov.uk/publication/informatics-systems-nhs-wales&quot;&gt;Welsh Audit Office report&lt;/a&gt;  raised important concerns about healthcare information technology in Wales including:&lt;/p&gt;
+&lt;p&gt;In this part, I discuss some possible solutions to the obstacles we face including:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Highlighting the inherent complexity of deploying information technology across a large complex system, spread across multiple organisations, with staff operating out of hospitals, GP practices and in the community.&lt;/li&gt;
-  &lt;li&gt;Significant delays in delivery of projects&lt;/li&gt;
-  &lt;li&gt;Lack of strategic prioritisation&lt;/li&gt;
-  &lt;li&gt;Disagreements between some NHS bodies and NWIS in relation to delivery and the meaning of “Once for Wales”&lt;/li&gt;
-  &lt;li&gt;A need to strengthen leadership&lt;/li&gt;
-  &lt;li&gt;Weakness in governance arrangements, lack of independent scrutiny and unbalanced reporting of progress&lt;/li&gt;
-  &lt;li&gt;Inadequate funding&lt;/li&gt;
-  &lt;li&gt;Inconsistent planning with a need to aligning plans across organisations&lt;/li&gt;
-  &lt;li&gt;Issues of information technology staff capacity.&lt;/li&gt;
-  &lt;li&gt;Issues of clinical engagement and dissatisfaction.&lt;/li&gt;
-  &lt;li&gt;Concerns about the quality and functionality of many national systems&lt;/li&gt;
-  &lt;li&gt;Unclear lines of responsibility in relation to delivering and monitoring the benefits of projects.&lt;/li&gt;
+  &lt;li&gt;adopting good information system design principles&lt;/li&gt;
+  &lt;li&gt;focusing on process and workflow and user-centred design&lt;/li&gt;
+  &lt;li&gt;delivering an open enterprise health and care informatics platform&lt;/li&gt;
+  &lt;li&gt;re-imagining the organisational structures and their responsibilities and governance in Wales&lt;/li&gt;
+  &lt;li&gt;prioritisation&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;Similarly, we must also consider what challenges our services will face in the future. Healthcare is ever-changing and there are a number of transformative and disruptive influences in health that, together with new technology, are driving and will continue to drive new ways of working. I wrote about these in my &lt;a href=&quot;/clinical-informatics/2017/07/07/disruptive-influences-health.html&quot;&gt;disruptive challenges series of blog posts&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Changes in model of care:
-    &lt;ul&gt;
-      &lt;li&gt;Management of multiple long-term health conditions, cross-disciplinary teamwork, non-health partnerships including social care and third-sector&lt;/li&gt;
-      &lt;li&gt;Shared care and shared records&lt;/li&gt;
-      &lt;li&gt;Remote monitoring using modern technology including wearables and the “Internet of things”.&lt;/li&gt;
-      &lt;li&gt;Focus on health outcomes and prudent healthcare, a need to support big data and real-time analytics and embed artificial intelligence into management and clinical practice.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Patients as active participants:
-    &lt;ul&gt;
-      &lt;li&gt;View and contribute to their own records, recording their own aims and objectives and target outcomes&lt;/li&gt;
-      &lt;li&gt;Communication with the healthcare team&lt;/li&gt;
-      &lt;li&gt;Control the sharing of their information for direct care, for service evaluation and for research via consent and robust citizen identity services&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Hospitals without walls:
-    &lt;ul&gt;
-      &lt;li&gt;Increasing availability of personal mobile devices, wearables and smart home monitoring&lt;/li&gt;
-      &lt;li&gt;New commercial models of care and software provision&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The &lt;a href=&quot;http://gov.wales/docs/dhss/publications/180116reviewen.pdf&quot;&gt;Parliamentary Review of Health and Social Care report&lt;/a&gt;, published in January 2018 highlights the need for a seamless health and care system in Wales, centred around the citizen irrespective of where they live with the avoidance of creating artificial barriers between services and organisations.&lt;/p&gt;
-
-&lt;p&gt;It highlights that such service redesign can be enabled by the appropriate use of digital technology. In addition, it explains how frontline innovation across different parts of Wales has already emerged and the importance of being able to disseminate good practice once proven as well as adopting continuous quality improvement methodologies to create a learning health and care system. Similarly, it recognises that different localities across Wales do not need to operate in the same way or that services must be identical.&lt;/p&gt;
-
-&lt;p&gt;In that report, similar concerns to that from the WAO were raised :&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Simply put, activity is just too dispersed and stretched, and lacks overall commitment around a unified vision and set of priorities.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;At the same time, the report draws out the seemingly conflicting goals between local variation and harmonisation and standardisation. We want to support innovation, appropriate variation in services and the delivery of a thriving digital ecosystem supporting local industry and at the same time reduce needless variation, share good practice and harmonise across systems?&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;I do not, for example, want patients to be disadvantaged because the technology used in one health board is different to another and the information available is incomplete and the pathway of care disrupted. This is why Wales has committed to working together to adopt common information services and I expect all parts of the NHS in Wales, supported by the Informatics Service, to adopt them&lt;/p&gt;
-
-  &lt;p&gt;Dr Andrew Goodall,  Chief Executive, NHS Wales.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;How can we deliver these two seemingly mutually exclusive goals?&lt;/p&gt;
-
-&lt;p&gt;The answer, of course, is to understand that coordination and central control can be applied differently depending on what is being discussed.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Thus we should seek coordinated policies only when the gains are very large. There will be costs to demanding coordination, because it will ride roughshod over economies of specialization and more nuanced local responses. The brilliance of good organization is not in making sure that everything is connected to everything else. How that road lies a frozen maladaptive stasis. Good strategy and good organization lie in specializing on the right activities and imposing only the essential amount of coordination.&lt;/p&gt;
-
-  &lt;p&gt;from “Good Strategy Bad Strategy”, 2011 by Richard Rumelt&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Our strategy must therefore take into account a need for national coordination for some areas of our work and yet enable innovation and variation in others.&lt;/p&gt;
 
 &lt;h1 id=&quot;how-do-we-meet-those-challenges&quot;&gt;How do we meet those challenges?&lt;/h1&gt;
 
@@ -209,7 +101,7 @@
   &lt;li&gt;An infrastructure group&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;The current “strategy” focused on delivering a portal is not fit-for-purpose and must be vigorously challenged. A portal approach, in which one plans a national portal through which all functionality is provided, risks creating a brittle top-down centralised design, needlessly limits innovation and does not take full advantage of the use of information technology to re-imagine and transform our clinical services.&lt;/p&gt;
+&lt;p&gt;The current plan to deliver the strategy, created by NWIS, is focused on delivering a portal. This plan, in my opinion, is not fit-for-purpose and must be vigorously challenged. A portal approach, in which one plans a national portal through which all functionality is provided, risks creating a brittle top-down centralised design, needlessly limits innovation and does not take full advantage of the use of information technology to re-imagine and transform our clinical services.&lt;/p&gt;
 
 &lt;p&gt;Instead, NWIS should become a provider of a platform and a toolbox of components useful for building clinical applications that use open industry-standards such as HL7 FHIR and SNOMED-CT. The services and modules provided by the groups would be mandated by an all-Wales governance group on behalf of NHS Wales representing all stakeholders.&lt;/p&gt;
 
@@ -248,7 +140,183 @@
 
 &lt;p&gt;Finally, we should be working in the open. My blog is one example of this; we should foster debate of the difficult issues, acknowledging that there is no easy or straightforward solution, but only compromise, collaboration and cooperation to do the right thing for patients in Wales.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">“Informed health and care – A digital health and social care strategy for Wales” sets out a clear vision for the use of information technology to support the provision of healthcare for citizens within Wales.</summary></entry><entry><title type="html">Applying artificial intelligence in healthcare</title><link href="https://www.wardle.org/machine-learning/2017/12/17/diagnostic-inference.html" rel="alternate" type="text/html" title="Applying artificial intelligence in healthcare" /><published>2017-12-17T14:32:32+00:00</published><updated>2017-12-17T14:32:32+00:00</updated><id>https://www.wardle.org/machine-learning/2017/12/17/diagnostic-inference</id><content type="html" xml:base="https://www.wardle.org/machine-learning/2017/12/17/diagnostic-inference.html">&lt;p&gt;In this post, I discuss machine learning and computer-aided decision support in healthcare.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Other posts in this series:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Part 1 : &lt;a href=&quot;/clinical-informatics/2018/01/19/focus-focus-focus.html&quot;&gt;The importance of strategy : focus&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Part 2 : &lt;a href=&quot;/clinical-informatics/2018/01/19/focus-challenges.html&quot;&gt;The challenges we face in delivering the vision&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Part 3 : &lt;a href=&quot;/clinical-informatics/2018/01/19/focus-solutions.html&quot;&gt;Pragmatic solutions to those challenges&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">In part one of this series, I introduced the “Informed health and care – A digital health and social care strategy for Wales” and talked in broad terms about the importance of a coherent strategy to deliver that vision.</summary></entry><entry><title type="html">Focus: the challenges</title><link href="https://www.wardle.org/clinical-informatics/2018/01/19/focus-challenges.html" rel="alternate" type="text/html" title="Focus: the challenges" /><published>2018-01-19T14:45:45+00:00</published><updated>2018-01-19T14:45:45+00:00</updated><id>https://www.wardle.org/clinical-informatics/2018/01/19/focus-challenges</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2018/01/19/focus-challenges.html">&lt;p&gt;In &lt;a href=&quot;/clinical-informatics/2018/01/19/focus-focus-focus.html&quot;&gt;part one of this series&lt;/a&gt;, I introduced the &lt;a href=&quot;http://gov.wales/topics/health/nhswales/about/e-health/?lang=en&quot;&gt;“Informed health and care – A digital health and social care strategy for Wales”&lt;/a&gt; and talked in broad terms about the importance of a coherent strategy - a specific action-focused plan -  to deliver that vision.&lt;/p&gt;
+
+&lt;p&gt;In this part, I try to articulate the importance challenges we face in delivering the vision, concluding that essentially, we need to balance centralised planning and control with support for innovation and change, particularly given the new technologies on the horizon which offer the potential to transform how we configure and deliver care to our citizens.&lt;/p&gt;
+
+&lt;p&gt;We need a coherent plan to deliver our vision. In &lt;a href=&quot;(/clinical-informatics/2018/01/19/focus-solutions.html)&quot;&gt;part 3, I discuss the best way to meet those challenges.&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;what-are-the-challenges-we-face&quot;&gt;What are the challenges we face?&lt;/h1&gt;
+
+&lt;p&gt;So what are our challenges in delivering the vision today?  We can look to the recent &lt;a href=&quot;https://www.wao.gov.uk/publication/informatics-systems-nhs-wales&quot;&gt;Welsh Audit Office report&lt;/a&gt;; this has raised important concerns about healthcare information technology in Wales including:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Highlighting the inherent complexity of deploying information technology across a large complex system, spread across multiple organisations, with staff operating out of hospitals, GP practices and in the community.&lt;/li&gt;
+  &lt;li&gt;Significant delays in delivery of projects&lt;/li&gt;
+  &lt;li&gt;Lack of strategic prioritisation&lt;/li&gt;
+  &lt;li&gt;Disagreements between some NHS bodies and NWIS in relation to delivery and the meaning of “Once for Wales”&lt;/li&gt;
+  &lt;li&gt;A need to strengthen leadership&lt;/li&gt;
+  &lt;li&gt;Weakness in governance arrangements, lack of independent scrutiny and unbalanced reporting of progress&lt;/li&gt;
+  &lt;li&gt;Inadequate funding&lt;/li&gt;
+  &lt;li&gt;Inconsistent planning with a need to aligning plans across organisations&lt;/li&gt;
+  &lt;li&gt;Issues of information technology staff capacity.&lt;/li&gt;
+  &lt;li&gt;Issues of clinical engagement and dissatisfaction.&lt;/li&gt;
+  &lt;li&gt;Concerns about the quality and functionality of many national systems&lt;/li&gt;
+  &lt;li&gt;Unclear lines of responsibility in relation to delivering and monitoring the benefits of projects.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Similarly, we must also consider what challenges our services will face in the future. Healthcare is ever-changing and there are a number of transformative and disruptive influences in health that, together with new technology, are driving and will continue to drive new ways of working. I wrote about these in my &lt;a href=&quot;/clinical-informatics/2017/07/07/disruptive-influences-health.html&quot;&gt;disruptive challenges series of blog posts&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Changes in model of care:
+    &lt;ul&gt;
+      &lt;li&gt;Management of multiple long-term health conditions, cross-disciplinary teamwork, non-health partnerships including social care and third-sector&lt;/li&gt;
+      &lt;li&gt;Shared care and shared records&lt;/li&gt;
+      &lt;li&gt;Remote monitoring using modern technology including wearables and the “Internet of things”.&lt;/li&gt;
+      &lt;li&gt;Focus on health outcomes and prudent healthcare, a need to support big data and real-time analytics and embed artificial intelligence into management and clinical practice.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Patients as active participants:
+    &lt;ul&gt;
+      &lt;li&gt;View and contribute to their own records, recording their own aims and objectives and target outcomes&lt;/li&gt;
+      &lt;li&gt;Communication with the healthcare team&lt;/li&gt;
+      &lt;li&gt;Control the sharing of their information for direct care, for service evaluation and for research via consent and robust citizen identity services&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Hospitals without walls:
+    &lt;ul&gt;
+      &lt;li&gt;Increasing availability of personal mobile devices, wearables and smart home monitoring&lt;/li&gt;
+      &lt;li&gt;New commercial models of care and software provision&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The &lt;a href=&quot;http://gov.wales/docs/dhss/publications/180116reviewen.pdf&quot;&gt;Parliamentary Review of Health and Social Care report&lt;/a&gt;, published in January 2018 highlights the need for a seamless health and care system in Wales, centred around the citizen irrespective of where they live with the avoidance of creating artificial barriers between services and organisations.&lt;/p&gt;
+
+&lt;p&gt;It highlights that such service redesign can be enabled by the appropriate use of digital technology. In addition, it explains how frontline innovation across different parts of Wales has already emerged and the importance of being able to disseminate good practice once proven as well as adopting continuous quality improvement methodologies to create a learning health and care system. Similarly, it recognises that different localities across Wales do not need to operate in the same way or that services must be identical.&lt;/p&gt;
+
+&lt;p&gt;In that report, similar concerns to that from the WAO were raised :&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Simply put, activity is just too dispersed and stretched, and lacks overall commitment around a unified vision and set of priorities.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;At the same time, the report draws out the seemingly conflicting goals between local variation and harmonisation and standardisation. We want to support innovation, appropriate variation in services and the delivery of a thriving digital ecosystem supporting local industry and at the same time reduce needless variation, share good practice and harmonise across systems?&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;I do not, for example, want patients to be disadvantaged because the technology used in one health board is different to another and the information available is incomplete and the pathway of care disrupted. This is why Wales has committed to working together to adopt common information services and I expect all parts of the NHS in Wales, supported by the Informatics Service, to adopt them&lt;/p&gt;
+
+  &lt;p&gt;Dr Andrew Goodall,  Chief Executive, NHS Wales.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;How can we deliver these two seemingly mutually exclusive goals?&lt;/p&gt;
+
+&lt;p&gt;The answer, of course, is to understand that coordination and central control can be applied differently depending on what is being discussed.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Thus we should seek coordinated policies only when the gains are very large. There will be costs to demanding coordination, because it will ride roughshod over economies of specialization and more nuanced local responses. The brilliance of good organization is not in making sure that everything is connected to everything else. How that road lies a frozen maladaptive stasis. Good strategy and good organization lie in specializing on the right activities and imposing only the essential amount of coordination.&lt;/p&gt;
+
+  &lt;p&gt;from “Good Strategy Bad Strategy”, 2011 by Richard Rumelt&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Our strategy must therefore take into account a need for national coordination for some areas of our work and yet enable innovation and variation in others.&lt;/p&gt;
+
+&lt;p&gt;We need a coherent plan to deliver our vision. In &lt;a href=&quot;/clinical-informatics/2018/01/19/focus-solutions.html&quot;&gt;part 3, I discuss the best way to meet these challenges.&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Other posts in this series:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Part 1 : &lt;a href=&quot;/clinical-informatics/2018/01/19/focus-focus-focus.html&quot;&gt;The importance of strategy : focus&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Part 2 : &lt;a href=&quot;/clinical-informatics/2018/01/19/focus-challenges.html&quot;&gt;The challenges we face in delivering the vision&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Part 3 : &lt;a href=&quot;/clinical-informatics/2018/01/19/focus-solutions.html&quot;&gt;Pragmatic solutions to those challenges&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">In part one of this series, I introduced the “Informed health and care – A digital health and social care strategy for Wales” and talked in broad terms about the importance of a coherent strategy - a specific action-focused plan - to deliver that vision.</summary></entry><entry><title type="html">Focus focus focus</title><link href="https://www.wardle.org/clinical-informatics/2018/01/19/focus-focus-focus.html" rel="alternate" type="text/html" title="Focus focus focus" /><published>2018-01-19T14:44:44+00:00</published><updated>2018-01-19T14:44:44+00:00</updated><id>https://www.wardle.org/clinical-informatics/2018/01/19/focus-focus-focus</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2018/01/19/focus-focus-focus.html">&lt;p&gt;&lt;a href=&quot;http://gov.wales/topics/health/nhswales/about/e-health/?lang=en&quot;&gt;“Informed health and care – A digital health and social care strategy for Wales”&lt;/a&gt; sets out a clear vision for the use of information technology to support the provision of healthcare for citizens within Wales.&lt;/p&gt;
+
+&lt;p&gt;This vision is split into four key themes:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;“Information for You”&lt;/li&gt;
+  &lt;li&gt;“Supporting professionals”&lt;/li&gt;
+  &lt;li&gt;“Improvement and innovation”&lt;/li&gt;
+  &lt;li&gt;“A Planned future”.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“We want a future where staff, service users, patients and carers are empowered and better informed, where organisational boundaries are not a barrier to effective care, as information is available electronically and joined-up, and where innovation and improvement can flourish built on a solid technical infrastructure and a safe environment for those who work in or are served by health and care services in Wales.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The key question for us to answer is, what are the key challenges that must be overcome to deliver this vision? As part of that process, we must be frank and honest about both current and future impediments to delivery. It is easy to fall into a trap of thinking of the “Informed Health and Care” strategy as an finished product instead of what it is, a set of high level goals which requires us to build a tangible and specific roadmap bringing together multiple strands of work into a truly cohesive vision.&lt;/p&gt;
+
+&lt;p&gt;Likewise, we must be honest about the economical and political environment in which we work, acknowledging the limitations in resources. We face a multitude of potentially conflicting demands and interests; as such, delivering the “Informed Health and Care Strategy” requires us to not only understand what we must do to achieve those goals but critically to understand what we must stop doing.&lt;/p&gt;
+
+&lt;p&gt;What is our strategy to deliver the vision?&lt;/p&gt;
+
+&lt;h4 id=&quot;difficult-choices--we-cannot-do-it-all&quot;&gt;Difficult choices : we cannot do it all&lt;/h4&gt;
+
+&lt;p&gt;NHS Wales must face some difficult choices.  For too long, external factors have resulted in incoherent and inconsistent delivery or projects, frequency orthogonal to delivery of the wider vision; in many cases it has been driven by the budgeting process and the availability of funds in any single financial year.&lt;/p&gt;
+
+&lt;p&gt;A coherent strategy needs more than a list of disconnected and incompatible goals but instead a clear understanding of what needs to be done and what doesn’t need to be done; we must know when to say “no”. Instead, we focus our limited resources on specific tangible actions and make some difficult decisions to prune areas of work that do not support delivery of the wider vision.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;… you should have a very short list of the most important things for the company to do. Then you will have a basis for moving forward.&lt;/p&gt;
+
+  &lt;p&gt;from &lt;a href=&quot;https://www.amazon.co.uk/Good-Strategy-Bad-Difference-Matters/dp/1846684811&quot;&gt;“Good Strategy Bad Strategy”, 2011 by Richard Rumelt&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;As such, we need a coordinated all-Wales approach that permits all stakeholders to work cooperatively and collaboratively with clear lines of responsibility and governance. We need to re-organise our approach to healthcare information technology that takes into account the steps needed to deliver the vision, the principles of enterprise architectural design, modern information standards and interoperability, modern quality improvement methodology and user-centred design.&lt;/p&gt;
+
+&lt;p&gt;I believe that the only logical response to the &lt;a href=&quot;https://www.wao.gov.uk/publication/informatics-systems-nhs-wales&quot;&gt;Welsh Audit Office report&lt;/a&gt; is to re-imagine the relationship between the NHS Wales Informatics Service (NWIS) and the health boards. Such a re-imagining requires us to stop ignoring the, in my view, currently incoherent set of responsibilities and divisions of labour that exist within Wales.&lt;/p&gt;
+
+&lt;p&gt;For example, is NWIS a standards and governance body, a consultancy, a software development house, a provider of a computing platform, a user experience and design shop, a procurement specialist, a business intelligence and analytics service or a provider of information technology infrastructure? Who is responsible? Who takes the credit and who takes the blame when something is not delivered? If we cannot answer such questions, we have to question our governance and organisational structures.&lt;/p&gt;
+
+&lt;p&gt;In addition, while it makes sense that the “Informed Health and Care” strategy is divided into four workstreams, I believe it is incorrect to assume that the safe and efficient delivery of those objectives is necessarily delineated into separate workstreams in which it is assumed that work may continue semi-independently without consideration to other projects. There are, in my opinion, too many common goals and solutions to solve those goals that cross-cut those workstreams to consider them independently.&lt;/p&gt;
+
+&lt;p&gt;Instead, we must consider a “target architecture”, an enterprise master-plan which lays out an overall set of systems and functions that will support delivery of our shared vision. For example, understanding the similarities and differences between providing information for patients or professionals provides important insight into the shared data and software components that must serve both sets of requirements. Patients and health professionals need to see past and prior appointments and entries on waiting lists; there are shared needs that cut across those workstreams.&lt;/p&gt;
+
+&lt;p&gt;Similarly, transformational change, enabled by technology, must be driven from the bottom-up, from those who deliver healthcare permitting incremental development and innovation while at the same time lowering risk? Likewise, don’t we all know that we must have top-down governance to ensure that solutions are standards-compliant, fit-for-purpose and safe as well as checking that developments are not orthogonal to the overall strategic vision so eloquently described in four workstreams of the Informed Health and Care Strategy?&lt;/p&gt;
+
+&lt;p&gt;The paradox, put simply, is that we, in NHS Wales, have centralised the day-to-day management and delivery of individual projects and yet high-level strategic and prioritisation decisions are decentralised, haphazard and dependant on capital funding with little or no consideration or control as to how those projects will fit into a wider technical all-Wales architecture.&lt;/p&gt;
+
+&lt;p&gt;In &lt;a href=&quot;/clinical-informatics/2018/01/19/focus-challenges.html&quot;&gt;part 2 of this series, I discuss the challenges that we face in NHS Wales in delivering the vision in our strategy&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Other posts in this series:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Part 1 : &lt;a href=&quot;/clinical-informatics/2018/01/19/focus-focus-focus.html&quot;&gt;The importance of strategy : focus&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Part 2 : &lt;a href=&quot;/clinical-informatics/2018/01/19/focus-challenges.html&quot;&gt;The challenges we face in delivering the vision&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Part 3 : &lt;a href=&quot;/clinical-informatics/2018/01/19/focus-solutions.html&quot;&gt;Pragmatic solutions to those challenges&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">“Informed health and care – A digital health and social care strategy for Wales” sets out a clear vision for the use of information technology to support the provision of healthcare for citizens within Wales.</summary></entry><entry><title type="html">Applying artificial intelligence in healthcare</title><link href="https://www.wardle.org/machine-learning/2017/12/17/diagnostic-inference.html" rel="alternate" type="text/html" title="Applying artificial intelligence in healthcare" /><published>2017-12-17T14:32:32+00:00</published><updated>2017-12-17T14:32:32+00:00</updated><id>https://www.wardle.org/machine-learning/2017/12/17/diagnostic-inference</id><content type="html" xml:base="https://www.wardle.org/machine-learning/2017/12/17/diagnostic-inference.html">&lt;p&gt;In this post, I discuss machine learning and computer-aided decision support in healthcare.&lt;/p&gt;
 
 &lt;p&gt;Firstly, I discuss the importance of understanding the process of clinical decision making and how we use information to support that process.&lt;/p&gt;
 
@@ -1280,222 +1348,4 @@ differed from one another and had no relationship with the administrative hospit
   &lt;li&gt;
     &lt;p&gt;(Mandelbrot generated by &lt;a href=&quot;//commons.wikimedia.org/w/index.php?title=User:Mjdean&amp;amp;action=edit&amp;amp;redlink=1&quot; class=&quot;new&quot; title=&quot;User:Mjdean (page does not exist)&quot;&gt;Michael James Dean&lt;/a&gt; - &lt;span class=&quot;int-own-work&quot; lang=&quot;en&quot;&gt;Own work&lt;/span&gt;, &lt;a href=&quot;https://creativecommons.org/licenses/by-sa/3.0&quot; title=&quot;Creative Commons Attribution-Share Alike 3.0&quot;&gt;CC BY-SA 3.0&lt;/a&gt;, &lt;a href=&quot;https://commons.wikimedia.org/w/index.php?curid=17070006&quot;&gt;Link&lt;/a&gt;)&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Information at the right time…</title><link href="https://www.wardle.org/analytics/2017/09/29/information-at-the-right-time.html" rel="alternate" type="text/html" title="Information at the right time..." /><published>2017-09-29T20:18:00+01:00</published><updated>2017-09-29T20:18:00+01:00</updated><id>https://www.wardle.org/analytics/2017/09/29/information-at-the-right-time</id><content type="html" xml:base="https://www.wardle.org/analytics/2017/09/29/information-at-the-right-time.html">&lt;p&gt;It is surprising how my interests have converged and supported one another over time: computing, technology and programming; data analysis, clinical medicine, neuroscience, clinical neurology and genetics; undergraduate assessments and psychometrics.&lt;/p&gt;
-
-&lt;p&gt;In this blog post, I want to discuss the fundamental importance of data in clinical medicine and the overlap between direct care, service management and improvement and clinical research. The overlap and relationships between these three are shown in this schematic:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/cis_design/data_pipelines.png&quot; alt=&quot;Data Pipelines&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;In clinical research, we have relatively small numbers of individuals with highly detailed information (“high level phenotypic data”). In day-to-day clinical practice, we have large numbers of patients with patchy or low level clinical data.&lt;/p&gt;
-
-&lt;p&gt;A common theme that runs through this blog is, I hope, that the &lt;a href=&quot;/cis-design/2017/05/01/medical-record.html&quot;&gt;medical record defines our clinical practice&lt;/a&gt;, and the foundation of that medical record is usable data… usable &lt;em&gt;information&lt;/em&gt;.  We use that information for direct care of individual patients, organising our services to support the care of groups of patients and to perform clinical research.&lt;/p&gt;
-
-&lt;h1 id=&quot;creating-a-data-driven-culture&quot;&gt;Creating a data-driven culture&lt;/h1&gt;
-
-&lt;p&gt;In 2005 I started using R (The R Project for Statistical Computing) for my statistical analysis during my doctorate. I’d been disappointed with SPSS and its point and click user interface and crude scripting language. As a researcher, I realised that I would need to run and re-run many different analyses and remembering how to transform and clean-up in preparation for configuring and then running different types of statistical test was going to be difficult and time-consuming.&lt;/p&gt;
-
-&lt;p&gt;I wrote about R on my &lt;a href=&quot;http://www.medicalnerds.com/10-pieces-of-free-software-every-doctor-should-havean-introduction-to-r/&quot;&gt;old blog in 2007&lt;/a&gt; and since then, I have managed to convince many colleagues to adopt it for their own research. In 2005, I didn’t know anyone else using R (except the R-help mailing list) but it was immediately appealing:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;it is a programming language, an environment for statistical computing and not simply an application to run statistical tests&lt;/li&gt;
-  &lt;li&gt;it results in reproducibility. I can run the same analyses over and over again, for example when my data are updated&lt;/li&gt;
-  &lt;li&gt;it is open-source&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;My own research involved clinical epidemiology, phenotype-genotype correlations, clinical genetics and psychometrics and, if you are very keen (and want to know a bit more about ataxia), you can &lt;a href=&quot;/images/wardle-2009-thesis.pdf&quot;&gt;read my thesis&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h1 id=&quot;deep-phenotyping&quot;&gt;Deep phenotyping&lt;/h1&gt;
-
-&lt;p&gt;As a junior researcher, I quickly learnt the value of “deep phenotyping”, the importance of systematically recording the longitudinal morphology of disease for individual patients, aggregating those data for groups of similar patients and understanding the cohort by the use of those data. To do this, one needs to consider the hypotheses and ensure that the appropriate clinical data is captured and recorded in a format that allows those hypotheses to be tested. My project looked at clinical progression, rating scales, the use of wearables and genetics with the combination of different sources of data to make logical inferences about these patient groups.&lt;/p&gt;
-
-&lt;p&gt;Clinical research requires compromise, intuition and judgement:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;how much data should be collected?&lt;/li&gt;
-  &lt;li&gt;what will be important?&lt;/li&gt;
-  &lt;li&gt;what can be collected in the timeframe?&lt;/li&gt;
-  &lt;li&gt;how many patients do I need to assess in order to reach a valid conclusion&lt;/li&gt;
-  &lt;li&gt;how will I record that data and in what format so that it is practical for storage, retrieval and analysis?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Early on, we generated lots of ideas. For example, I gave up on the wearables project when we realised that patients were recording 0 steps in 24 hours, that the devices were too cumbersome and so were being left on the shelf rather than being worn. In those days, the technology was such that the wearable wasn’t actually very wearable.&lt;/p&gt;
-
-&lt;p&gt;As you might have already concluded, none of these questions are unique to the specific neurological conditions I was interested in at the same and in fact are generic and widely applicable.&lt;/p&gt;
-
-&lt;h1 id=&quot;building-analytics&quot;&gt;Building analytics&lt;/h1&gt;
-
-&lt;p&gt;I built an analytics pipeline in which clinical and genetic data were extracted, cleaned up and transformed and analysed. This combined a database and used R to do the rest, generating analyses and charts based on those data. With Sweave, I combined those results into reports, clinical papers and eventually my thesis by linking R and LaTeX:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;We identified \Sexpr{nrow(subset(cl, excluded==F))} patients with a reported history of 
-cerebellar ataxia between 1999 and 2007 in South East Wales.
-Applying inclusion and exclusion criteria as described above resulted in a subset of 
-\Sexpr{cf.loca$total} with chronic progressive \ac{loca} with no identified aetiology 
-as a denominator population for study. There were \Sexpr{cf.loca$num.familial} 
-(\Sexpr{nrow(subset(loca, fh==T &amp;amp; sex=='Male'))} male, 
-\Sexpr{nrow(subset(loca, fh==T &amp;amp; sex=='Female'))} female)
-familial cases segregating in \Sexpr{cf.loca$num.families} kindreds 
-and \Sexpr{cf.loca$num.sporadic} 
-(\Sexpr{nrow(subset(loca, fh==F &amp;amp; sex=='Male'))} male, 
-\Sexpr{nrow(subset(loca, fh==F &amp;amp; sex=='Female'))} female)
-sporadic patients.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;When run, this would output the following text:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;We identified 401 patients with a reported history of cerebellar ataxia between 1999 
-and 2007 in South East Wales. Applying inclusion and exclusion criteria as described 
-above resulted in a subset of 178 with chronic progressive LOCA with no identified 
-aetiology as a denominator population for study. There were 55 (26 male, 29 female) 
-familial cases segregating in 38 kindreds and 123 (79 male, 44 female) sporadic patients.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;But of course, much more sophisticated analyses were possible, including the dynamic generation of charts, maps and statistics. For example, this chart is dynamically generated from our data source&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/data-driven/sca-prevalence.png&quot; alt=&quot;Sca Prevalence&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;generated using the following code:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;\begin{figure}[!tb]
-% This is the same as the ACNR graph, but using the (NEW) new SCA prevalence functions
-&amp;lt;&amp;lt;sca-prev-adca, echo=FALSE, quiet=T, fig=T,width=6,height=4&amp;gt;&amp;gt;=
-sp = sp.sca.prev(subset=patient.type=='ADCA' &amp;amp; total&amp;gt;10 &amp;amp; (region=='Asia' | region=='Europe' ), by=region, FUN=sp.percentage)
-barplot(as.matrix(sp[,c(2:7,12)]), beside=T,
-		xlab='Disease', ylab='Percentage of families', 
-        main=&quot;&quot;, 		#  Ethnic differences in SCA subtype frequency&quot;,
-        legend.text=c(
-		    paste('Asia   (n=',sp[sp$region=='Asia',]$total,')',sep=&quot;&quot;),
-		    paste('Europe (n=',sp[sp$region=='Europe',]$total,')',sep=&quot;&quot;)))
-@
-\caption[Aggregated data showing ethnic differences in SCA subtype frequency among families with ADCA.]{Aggregated data showing ethnic differences in SCA subtype frequency among families with ADCA. Data from Table~\ref{tab:sca.prev.adca}.}
-% \cite{\Sexpr{print.citations(sp$cite)}}
-\label{fig:sca.prev}
-\end{figure}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;The sp.sca.prev() function source code is &lt;a href=&quot;/images/data-driven/sp-sca-prev.R&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;As a result, all of my papers and my thesis were built automatically whenever I wanted, simply by running &lt;code class=&quot;highlighter-rouge&quot;&gt;make&lt;/code&gt; that would run a series of steps in a &lt;a href=&quot;/images/data-driven/Makefile&quot;&gt;Makefile&lt;/a&gt;. Consequently, I could identify any obvious errors in data entry quickly and ensure they were fixed as well as build analyses based on interim data with the confidence that they could be run again and again as data were added. I did all the work in LaTeX, R and used subversion as a version control system.&lt;/p&gt;
-
-&lt;h1 id=&quot;so-what-different-lenses-same-data&quot;&gt;So what? Different lenses, same data&lt;/h1&gt;
-
-&lt;p&gt;We’ve been discussing data warehouses, data lakes and analytic pipelines within NHS Wales. Some of us are pushing for an “open platform” based on a foundation of structured data recorded in using open standards and integrating a range of new and legacy services and systems via an API-approach (API - application programming interface) while others think we should be getting on with developing applications and thinking about interoperability later.&lt;/p&gt;
-
-&lt;p&gt;My clinical colleagues want the right information about the patient in front of them, irrespective of organisational boundaries, so that clinical information recorded by other teams in different organisations, or even in different countries, is available at the point-of-care. We are overloaded by information, and this will increase (particularly given recent and ongoing &lt;a href=&quot;/clinical-informatics/2017/07/07/disruptive-influences-health.html&quot;&gt;disruptive influences&lt;/a&gt;) so we need the right tools to make sense of that information. Presently, much of the administrative data is computerised but most clinical data exists only on paper.&lt;/p&gt;
-
-&lt;p&gt;My more senior clinical and managerial colleagues want to understand more about how our services perform and how can they be improved. They want to aggregate individual patient data and prepare data to inform decisions across our organisations and need to feed much of that information to other authorities as part of central returns. As only administrative data are routinely digitised, most analytics are focused on administrative matters, so we might &lt;a href=&quot;http://wardle.org/clinical-informatics/2017/06/06/using-data-patient-safety.html&quot;&gt;know how many people were seen, but not really have an idea as to why&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;My academic colleagues want to recruit patients into clinical research and capture data in a much more systematic and structured way and use that information to study and publish and inform.&lt;/p&gt;
-
-&lt;p&gt;The answer to all three requirements is, of course, &lt;em&gt;data&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;While we may need to include much more detail for our research projects, I cannot stress the importance of the systematic and routine collection of outcome data in normal clinical practice for direct clinical care and management of our services.&lt;/p&gt;
-
-&lt;h1 id=&quot;adopting-a-data-driven-clinical-practice&quot;&gt;Adopting a data-driven clinical practice&lt;/h1&gt;
-
-&lt;p&gt;So as &lt;a href=&quot;/clinical-informatics/2017/08/22/health-data.html&quot;&gt;I wrote previously&lt;/a&gt;:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;We should be focusing on &lt;em&gt;data&lt;/em&gt; first, as &lt;em&gt;data&lt;/em&gt; as the solution to a &lt;em&gt;problem&lt;/em&gt;. Data, structured, understandable, semantically interoperable data are the foundation on which clinical applications and our analytics can run.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;So, what was wrong with my research analytics pipeline? Although at the end of it I could run and re-run it and get almost immediate results, my data were not stored in a standardised format and my code can’t easily be picked up and used by others.&lt;/p&gt;
-
-&lt;p&gt;It can be done differently: storing structured, informative and useful clinical data recorded by patients and health professionals; combining data from multiple sources to add value to information and creating learning adaptive systems that support our work.&lt;/p&gt;
-
-&lt;p&gt;Here is an example I have used before, in which I present a dashboard on which the important information for a patient with motor neurone disease is aggregated in a single view. The determination as to whether the patient has a gastrostomy (or other kinds nutritional support) is a sequential look at the record of procedures performed (insertions and removal of gastrostomy tubes):&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/mnd-dashboard.png&quot; alt=&quot;Mnd Dashboard&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;That dashboard took me about 10 minutes of work to write as all of the important information was already being collected in a sequence of clinical encounters by my colleagues from palliative care, speech and language, dietetics, specialist nurses and neurologists.&lt;/p&gt;
-
-&lt;h1 id=&quot;the-power-of-aggregation&quot;&gt;The power of aggregation…&lt;/h1&gt;
-
-&lt;p&gt;The EDSS is the expanded disability scale score, a relatively easy-to-use scale running from 0 to 10 that is used as a clinical indicator of disability. Health professionals can record it but we can also derive the score directly from patients using my iPad application:&lt;/p&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/N3PQ2EEQNt4&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;The following dynamically generated chart shows a single patient’s disease course over time compared to every single other patient we know with multiple sclerosis or a type of that disease:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/edss-graph.jpg&quot; alt=&quot;Edss Graph&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The single patient’s course is shown by the red line, with relapses (acute deteriorations) marked with an “R”. The dotted lines are like the centile lines on a baby’s growth chart: from disease onset, the median disability for the whole cohort is shown. At a glance, we can then see whether an individual patient is deteriorating more quickly than expected or is more disabled that their peers and helps us to tailor their treatments appropriately. In patients with aggressive disease, we might choose to use more aggressive treatments with a greater risk of side-effects.&lt;/p&gt;
-
-&lt;p&gt;The SQL code that identifies all patients with any type of multiple sclerosis, tracks their progress and aggregates the disability data is &lt;a href=&quot;/images/data-driven/msss-edss.sql&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h1 id=&quot;iteration&quot;&gt;Iteration&lt;/h1&gt;
-
-&lt;p&gt;But we don’t stop there. We continue to build statistical models to track disease progression, combining different outcome measures and their proxies to try to understand the disease. As a result, our work will never be done; we can generate new models of disease progression that better predict deterioration and must embed that work into our day-to-day clinical practice. As such, we should aim for a virtuous cycle of continuous improvement, embedding clinical research into our day-to-day clinical practice in a similar way to the &lt;a href=&quot;https://www.isixsigma.com/dictionary/dmaic/&quot;&gt;Six Sigma quality initiative&lt;/a&gt;:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/cis_design/dmaic.png&quot; alt=&quot;Dmaic&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Machine learning is a useful addition to our analytics platform. We can already use standard survival analysis to identify the factors that are important in predicting survival and subsequently build a heuristic to help us in our clinical decision making. New technology offers us hope to improve those models and to speed up the iterative cycle to build continuously adaptive and learning systems.&lt;/p&gt;
-
-&lt;p&gt;Here is a schematic representing how I think we need to create an open platform for healthcare in Wales:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/platform/platform-overall.png&quot; alt=&quot;Platform Overall&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;In this schematic, the platform represents a range of APIs providing access to a unified aggregated view of a single patient record, but the other definition of a “platform” is of a multisided market:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Interestingly, another definition of a “platform” is a set of services that bring together users and providers to form a multisided market. Is it possible then to take our “open platform” and start to think of a future in which we have products and services that actually do enable a re-imagining of healthcare provision to bring together patients, carers, health professionals, commissioners, analytics, researchers and all other stakeholders in a safe and secure manner?  (see &lt;a href=&quot;/clinical-informatics/2017/08/20/disruptive-influences-future.html&quot;&gt;a previous blog post&lt;/a&gt;)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;At the moment, our health platforms, if they exist, are lopsided asymmetric systems in which patients play little or no role. We must start thinking about creating a data-driven architecture that corrects this asymmetry in power and control.&lt;/p&gt;
-
-&lt;p&gt;In all cases, the foundation of that work is data. Technology is the enabler; it can release the value from our data.&lt;/p&gt;
-
-&lt;p&gt;Mark&lt;/p&gt;</content><author><name></name></author><summary type="html">It is surprising how my interests have converged and supported one another over time: computing, technology and programming; data analysis, clinical medicine, neuroscience, clinical neurology and genetics; undergraduate assessments and psychometrics.</summary></entry><entry><title type="html">Privacy and Artificial intelligence</title><link href="https://www.wardle.org/clinical-informatics/2017/09/06/privacy-ai.html" rel="alternate" type="text/html" title="Privacy and Artificial intelligence" /><published>2017-09-06T20:18:00+01:00</published><updated>2017-09-06T20:18:00+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/09/06/privacy-ai</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/09/06/privacy-ai.html">&lt;p&gt;I recently contributed to a &lt;a href=&quot;wired uk ai privacy&quot;&gt;Wired UK article on privacy and healthcare&lt;/a&gt;. Here is my full response.&lt;/p&gt;
-
-&lt;h1 id=&quot;should-we-worry-about-big-dataaimachine-learning-in-healthcare&quot;&gt;Should we worry about ‘Big Data’/AI/machine learning in healthcare?&lt;/h1&gt;
-
-&lt;p&gt;In my opinion, the two main concerns relate to privacy and value: fundamentally, privacy simply relates to the risk to individuals of sharing information about those individuals and value relates to the intrinsic worth of that data as well as the value of any algorithms or software produced as a result of analysis of that data.&lt;/p&gt;
-
-&lt;p&gt;It is difficult to explore the privacy concerns without clarifying what we mean by data and how it is already used, particularly as privacy depends fundamentally on the purpose to which the data is processed and by whom. For example, in medical settings, you might expect me as your neurologist to have access to your relevant medical information from other healthcare professionals, such as reports, documents and the results of investigations such as scans and laboratory investigations. Currently, most such data is held by NHS organisations or commercial companies operated for and behalf of those healthcare providers. There are, therefore, already many current situations in which selected data is shared externally with healthcare, social care and commercial entities. Such data are used for direct care of individual patients and for managing our clinical services. Likewise, there are already many situations in which routine NHS data is combined and de-identified in some way and made available for research such as the CPRD (&lt;a href=&quot;https://www.cprd.com/home/&quot;&gt;https://www.cprd.com/home/&lt;/a&gt;) and SAIL (&lt;a href=&quot;https://saildatabank.com&quot;&gt;https://saildatabank.com&lt;/a&gt;). Such systems usually try to remove obviously identifiable information such as name and date of birth and instead generate categorical variables (e.g. year of birth) to try to obfuscate the identify of individuals. Have a look at &lt;a href=&quot;https://understandingpatientdata.org.uk/what-does-anonymised-mean&quot;&gt;https://understandingpatientdata.org.uk/what-does-anonymised-mean&lt;/a&gt; in relation to de-identified, anonymous and pseudonymous data.&lt;/p&gt;
-
-&lt;p&gt;Unfortunately, there is not a discontinuity between identifiable and non-identifiable information but instead a spectrum running from low to high risk of re-identification. This risk increases as more and more data are made available and this is where the concept of “big data” results in privacy concerns. You may not be able to identify me from only knowing I’m a neurologist, but if you know I work in Wales and have an interest in information technology then you’re likely to know it’s me. As a result, “big data” in which large amounts of different types of data are made available and aggregated can undermine techniques to de-identify that data.&lt;/p&gt;
-
-&lt;p&gt;The next question is, does sharing identifiable or re-identifiable data matter? In general, the answer depends on who is doing the processing and the consequences, benefits and risks from that processing. People naturally have different expectations for the usage of data depending on whether it is for direct care, for clinical research, for a perceived “greater-good” or for commercial means. The care.data fiasco demonstrated the strong public concern relating to the release of information to commercial such as the insurance industry (e.g. see &lt;a href=&quot;https://www.theguardian.com/commentisfree/2014/feb/28/care-data-is-in-chaos&quot;&gt;https://www.theguardian.com/commentisfree/2014/feb/28/care-data-is-in-chaos&lt;/a&gt;). Fundamentally therefore, this means that we need strong and appropriate legal and regulatory frameworks to ensure that we take advantage of the enormous opportunities inherent in combining these sources of data with modern technology to improve patient care and clinical research. The new GDPR legislation extends the rights of individuals to control the purposes to which their information is used, and we in healthcare must take these changes into account when considering “big data” and machine learning. See &lt;a href=&quot;https://ico.org.uk/for-organisations/data-protection-reform/overview-of-the-gdpr/&quot;&gt;https://ico.org.uk/for-organisations/data-protection-reform/overview-of-the-gdpr/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Similarly, the issue of “value” depends on who gains that value. If an algorithm is developed that can, for example, screen a chest x-ray to determine whether it is normal or abnormal, with only the latter images needing formal radiologist review, then there would a huge interest across the world in commercialising that technology and free up valuable time for radiologists. Who should own that technology? The services providing the data or the technology companies who have built the systems to learn from that data? For me, this should be a partnership between health and technology as both need each other in order to make progress to potentially improve patient care. As a result, I’d always expect explicit clauses relating to intellectual property rights to be included in data sharing agreements in which software and algorithms may be of commercial value.&lt;/p&gt;
-
-&lt;h1 id=&quot;what-other-privacy-protectingenhancing-technologies-are-there&quot;&gt;What other privacy-protecting/enhancing technologies are there?&lt;/h1&gt;
-
-&lt;p&gt;I really like “Understanding patient data” : see &lt;a href=&quot;https://understandingpatientdata.org.uk/how-data-kept-safe&quot;&gt;https://understandingpatientdata.org.uk/how-data-kept-safe&lt;/a&gt; and its explanations.&lt;/p&gt;
-
-&lt;p&gt;Essentially, it is necessary to have a mixed set of strategies as there is no single “magic bullet” that magically preserves or enhances privacy.  Instead, we need a combination of appropriate legal and regulatory frameworks (as I mentioned above), independent review and audit, formal software specifications and methodologies and, most importantly, a conversation with everyone about the benefits and risks of the use of patient data to improve care, now and in the future. As part of that national debate, we must determine the scenarios in which different levels of consent are required, such as an explicit opt-in for clinical research or an opt-out for other uses. At the same time, we must increase general public awareness about the benefits and risks of the wider use of health information. Ideally, data should be de-identified as much as possible for the specific use-case in question so that we instead start to talk about “risk of re-identification” and it is likely that different levels of risk will be acceptable for different use-cases.&lt;/p&gt;
-
-&lt;p&gt;There are additional technologies to add into the mix such as “differential privacy” (see &lt;a href=&quot;https://en.wikipedia.org/wiki/Differential_privacy&quot;&gt;https://en.wikipedia.org/wiki/Differential_privacy&lt;/a&gt; for more information) which introduce randomness into aggregated data in order to reduce the risk of re-identification and yet preserve conclusions made from the use of that data. Another interesting research development has been homomorphic encryption allows information such as private medical data to be encrypted and subsequently processed without needing decryption. Have a look at &lt;a href=&quot;https://en.wikipedia.org/wiki/Homomorphic_encryption&quot;&gt;https://en.wikipedia.org/wiki/Homomorphic_encryption&lt;/a&gt; but such technology is, as far as I am aware, at a very early stage as it is extremely computationally-intensive.&lt;/p&gt;
-
-&lt;h1 id=&quot;are-we-considering-privacy-enough&quot;&gt;Are we considering privacy enough?&lt;/h1&gt;
-
-&lt;p&gt;Probably not!&lt;/p&gt;
-
-&lt;p&gt;Health data becomes even more complex when one considers the ever increasing use of new technologies in healthcare. I have written about these in my “disruptive technologies” blog post (see &lt;a href=&quot;http://wardle.org/clinical-informatics/2017/07/07/disruptive-influences-health.html&quot;&gt;http://wardle.org/clinical-informatics/2017/07/07/disruptive-influences-health.html&lt;/a&gt;) and in particular, how we deal with data from multiple sources such as devices carried by the patient or installed in the home. As a result, there will be an increasing number of &lt;em&gt;“attack surfaces”&lt;/em&gt; in which confidential medical information may be leaked. For instance, how will we deal with the data sent from a device designed to monitor an elderly patient and check for falls, or whether they have left their home, or their activity? How will we ensure that only the right people receive that information?   The same issues apply to medical and health applications aimed at consumers which may leak confidential medical information. There are many examples unfortunately - see &lt;a href=&quot;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4419898/&quot;&gt;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4419898/&lt;/a&gt;  for just some of the examples.&lt;/p&gt;
-
-&lt;p&gt;A useful resource is the “privacy-by-design” page from the ICO: see &lt;a href=&quot;https://ico.org.uk/for-organisations/guide-to-data-protection/privacy-by-design/&quot;&gt;https://ico.org.uk/for-organisations/guide-to-data-protection/privacy-by-design/&lt;/a&gt; in which organisations undertake a privacy impact assessment to reduce potential harm to patients. Such tools are only useful when they are used, so the concept of sandboxes is also important, particularly for mobile device “apps”. For example, on most mobile devices, an application must request permission to access contacts, the camera or onboard health data and checks of those permissions are not a function of the application to implement (or not) but a function instead of the sandbox in which the application runs and all data access can be logged. So I think device manufacturers have a role in checking and verifying applications in their app stores and programmes like NHS digital’s app store (see https://apps.beta.nhs.uk) add an additional layer of inspection and curation.&lt;/p&gt;
-
-&lt;h1 id=&quot;conclusions&quot;&gt;Conclusions&lt;/h1&gt;
-
-&lt;p&gt;I can’t add much more to what Dame Fiona Caldicott said : &lt;a href=&quot;https://www.gov.uk/government/news/national-data-guardian-ndg-statement-on-government-response-to-the-ndg-review&quot;&gt;https://www.gov.uk/government/news/national-data-guardian-ndg-statement-on-government-response-to-the-ndg-review&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;My main conclusion is that there is no single answer but a combination of solutions :&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;give people choice,&lt;/li&gt;
-  &lt;li&gt;engender public trust by
-    &lt;ul&gt;
-      &lt;li&gt;appropriate regulatory and legislative frameworks,&lt;/li&gt;
-      &lt;li&gt;adopting appropriate technical safeguards and de-identify information at a level that minimises re-identification risk and satisfies the specific requirements for analytics on that occasion,&lt;/li&gt;
-      &lt;li&gt;using verifiable logs to ensure access to confidential information is logged and capable of inspection.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Medical data is terrifically valuable, powerful and offers tremendous scope to do good, but we also have a great responsibility to protect those data and ensure access is safe, secure and transparent.&lt;/p&gt;
-
-&lt;p&gt;Best wishes,&lt;/p&gt;
-
-&lt;p&gt;Mark&lt;/p&gt;</content><author><name></name></author><summary type="html">I recently contributed to a Wired UK article on privacy and healthcare. Here is my full response.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name></name></author><summary type="html"></summary></entry></feed>
