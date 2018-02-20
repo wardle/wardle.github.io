@@ -1,5 +1,126 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-01-20T08:08:12+00:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
-</subtitle><entry><title type="html">Focus : meeting the challenges</title><link href="https://www.wardle.org/clinical-informatics/2018/01/19/focus-solutions.html" rel="alternate" type="text/html" title="Focus : meeting the challenges" /><published>2018-01-19T14:46:46+00:00</published><updated>2018-01-19T14:46:46+00:00</updated><id>https://www.wardle.org/clinical-informatics/2018/01/19/focus-solutions</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2018/01/19/focus-solutions.html">&lt;p&gt;In &lt;a href=&quot;/clinical-informatics/2018/01/19/focus-focus-focus.html&quot;&gt;part one of this series&lt;/a&gt;, I introduced the &lt;a href=&quot;http://gov.wales/topics/health/nhswales/about/e-health/?lang=en&quot;&gt;“Informed health and care – A digital health and social care strategy for Wales”&lt;/a&gt; and talked in broad terms about the importance of a coherent strategy to deliver that vision.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-02-20T07:28:00+00:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</subtitle><entry><title type="html">So I built an electronic patient record system in my spare time…</title><link href="https://www.wardle.org/patientcare/2018/02/19/so-I-built-an-EPR.html" rel="alternate" type="text/html" title="So I built an electronic patient record system in my spare time..." /><published>2018-02-19T19:19:19+00:00</published><updated>2018-02-19T19:19:19+00:00</updated><id>https://www.wardle.org/patientcare/2018/02/19/so-I-built-an-EPR</id><content type="html" xml:base="https://www.wardle.org/patientcare/2018/02/19/so-I-built-an-EPR.html">&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/1zZtnV44vgU&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;It uses SNOMED-CT as its lingua-franca. Notice how it maps free text into the UK dm+d (dictionary of medicines and devices), parsing dose route and directions and handling units and equivalence. It suggests a correction when I mistype salbutamol.&lt;/p&gt;
+
+&lt;p&gt;Similarly, the entered term acetaminophen is switched to the preferred term, paracetamol. Doctors of a certain age will recognise that bendrofluazide was the term for the drug now known as bendroflumethiazide. Likewise, the doses, frequencies and routes are parsed from free-text into structured, coded, SNOMED-CT data:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/so-i-wrote/medication-mapped.jpeg&quot; alt=&quot;Medication Mapped&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Using that information, the software generates a permanent artefact of the consultation, combining human-viewable PDF with structured semantically-useful information for machines.&lt;/p&gt;
+
+&lt;p&gt;It calculates in real-time what medications have started, have stopped, are unchanged or have had a change made. If you start doing that, you can track medication changes over a long period of time and show them graphically. The software can calculate the total daily dose, understanding the dose, units and frequencies.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/so-i-wrote/medication-graphed.jpeg&quot; alt=&quot;Medication Graphed&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Notice how we can see how the doses have changed or started or stopped over time. For our patients with long-term health conditions, this is very helpful.&lt;/p&gt;
+
+&lt;h1 id=&quot;structured-documents&quot;&gt;Structured documents&lt;/h1&gt;
+
+&lt;p&gt;I don’t understand how some folk think about structured documents as simply documents with the same types of headings. To me, clinical documents should be structured so that they are useful to humans but also useful to machines. The headings and the information models needed are related but different. We have to make medical data understandable by both humans and machines.&lt;/p&gt;
+
+&lt;p&gt;For too long we have created documents from which we hope to derive data. Why not create documents from our data, instead?&lt;/p&gt;
+
+&lt;p&gt;So here we record what botulinum toxin injections we have used and generate a letter that goes into the organisation’s document repository…. but we keep the data in a useful and structured format.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/3ekeblq9YEg&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Likewise, if I record a patient’s specialist walking assessment then we can use SNOMED-CT as a useful, intermediary structure to allow semantic interoperability. Semantic interoperability means that software written by other people can derive meaning from the data that I exchange with it. Users don’t need to see this, but computers do.&lt;/p&gt;
+
+&lt;p&gt;This form, viewable by the professional in the EPR, was populated by the patient entering their information into their iPad.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/so-i-wrote/edss.jpeg&quot; alt=&quot;Edss&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So for interoperability, behind-the-scenes, other software can understand what we’ve done, without necessarily having to understand the Kurtzke EDSS scale. They can, in essence, answer the question “Can this patient walk?” without difficulty.&lt;/p&gt;
+
+&lt;p&gt;Here is a simple flat representation of the information from this encounter, recording diagnoses, treatments and outcomes. Even a flat representation allows us to later perform sophisticated searches such as, which patients are currently taking methotrexate. Similarly, I have exposed internal data as HL7 FHIR endpoints using the HAPI libraries.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/so-i-wrote/snomed-intermediary.jpeg&quot; alt=&quot;Snomed Intermediary&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;My document therefore consists of a PDF for human consumption and large amounts of structured and semantically useful data that can be processed for that individual or for a whole cohort of patients.&lt;/p&gt;
+
+&lt;h1 id=&quot;cohorts&quot;&gt;Cohorts&lt;/h1&gt;
+
+&lt;p&gt;Defining cohorts is important to me, based on service, diagnosis, problem, treatment, intervention or any arbitrary combination thereof. Understanding cohorts is a pre-requisite for understanding outcomes and value. See my previous blog post on the &lt;a href=&quot;https://t.co/8MCOn73pCZ&quot;&gt;importance of cohorts&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Most users have no idea that they are using SNOMED, if you do this right. Here we are entering country of birth, ethnicity and occupation.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/so-i-wrote/background.jpg&quot; alt=&quot;Background&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Notice how the countries are grouped as American, Asian and European. This isn’t hard-coded by I have set a single property to categorise by the 1st parent of each country-of-birth term in the SNOMED-CT hierarchy.&lt;/p&gt;
+
+&lt;p&gt;Internally, I have built a range of different UI components that are configured declaratively to allow choice of SNOMED concept from different subsets or parts of the hierarchy. Here are the rules defining the country of birth pop-up.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/so-i-wrote/rule-engine.jpeg&quot; alt=&quot;Rule Engine&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I love declarative architectures. They are extremely powerful and support building systems responsive to need. I can change most of the application’s behaviour at runtime by using an administrative portal. Most data collection forms are automatically generated from the underlying data model without any additional work for me.&lt;/p&gt;
+
+&lt;p&gt;Entering terms should be quicker than using free text. Try entering “MI” into my basic demonstration application - &lt;a href=&quot;https://msdata.org.uk/apps/WebObjects/SnomedBrowser.woa/&quot;&gt;https://msdata.org.uk/apps/WebObjects/SnomedBrowser.woa/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/so-i-wrote/snomed-search.jpeg&quot; alt=&quot;Snomed Search&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you give tools to professionals that make it easier to enter coded structured information than free-text, they will do so. Coding diagnoses, procedures and background information is critical in understanding outcome data; they are a foundation on which more complex and sophisticated analytics can be built.&lt;/p&gt;
+
+&lt;h1 id=&quot;patients&quot;&gt;Patients&lt;/h1&gt;
+
+&lt;p&gt;Since 2015, I have been trialling the use of iPads to allow patients to directly contribute to their records. The obvious next step is to roll this out more fully and permit patients to use their own devices, rather than devices we lend them in the clinic.&lt;/p&gt;
+
+&lt;p&gt;First, a member of the clinic staff logs in and chooses a patient from the clinic list for the day. This is fetched by the iPad via the EPR to one of two PAS in Wales to which I have interfaced, depending on clinic context. For demonstration purposes, I have built a fake PAS so I don’t inadvertently share patient-identifiable information for these videos:&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/NGbQIT5uFQ4&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;The iPad is handed to the patient for them to complete. As the experience is locked to that patient, they cannot “go back” and look at the list of patients or see any information that they shouldn’t be able to see.&lt;/p&gt;
+
+&lt;p&gt;I can configure what to show dynamically based on diagnosis, context and previous responses. I want to start showing the complete patient record at some point.&lt;/p&gt;
+
+&lt;p&gt;So here is it running in “Parkinson’s clinic” mode, showing different questionnaires adaptively. The important feature is that patient data is available immediately for the consultation for clinical care.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/pAmaUXMu_bk&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;In fact, most of the useful data goes into the automatically generated letter and is obviously available to be charted over time for that single patient, or aggregated later on for audit and research.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/so-i-wrote/m4-epr-results.jpeg&quot; alt=&quot;M4 Epr Results&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The patient is asked whether they wish to take part in research and then shown research projects and consent forms suitable to them, by virtue of applied inclusion and exclusion criteria, mainly using SNOMED-CT subsumption.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/so-i-wrote/m2-research-registration.jpeg&quot; alt=&quot;M2 Research Registration&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This is all configured at runtime obviously using my administrative portal. Here I edit the consent form interactively.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/so-i-wrote/m5-epr-consent.jpeg&quot; alt=&quot;M5 Epr Consent&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/so-i-wrote/m5-epr-edit-consent.jpeg&quot; alt=&quot;M5 Epr Edit Consent&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And once I sign off that consent form, it is used immediately by all iPads.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/KBLDA42TwzU&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;h1 id=&quot;technical-architecture&quot;&gt;Technical architecture&lt;/h1&gt;
+
+&lt;p&gt;I have built it slowly and incrementally using PostgreSQL and java for the web-based application. This exposes an interface for humans via a web front-end and a range of &lt;a href=&quot;https://en.wikipedia.org/wiki/Representational_state_transfer&quot;&gt;RESTful services&lt;/a&gt; for use by machines.&lt;/p&gt;
+
+&lt;p&gt;One of the most important facets is the abstraction of multiple other external services, such as services provided by a hospital PAS (patient administrative system) and document repositories. So much software is focused on a single organisation, but our multidisciplinary teams cross both disciplinary and organisation divides! Therefore, my application can be configured to interact with multiple external software systems to make the user experience more seamless.&lt;/p&gt;
+
+&lt;h1 id=&quot;what-has-this-taught-me&quot;&gt;What has this taught me?&lt;/h1&gt;
+
+&lt;p&gt;The benefits of:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Standards&lt;/li&gt;
+  &lt;li&gt;Encapsulation&lt;/li&gt;
+  &lt;li&gt;Decoupling&lt;/li&gt;
+  &lt;li&gt;Coherent architectural design&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;My future plans are to break-up the application into a suite of interoperating microservices. I have already done that for my SNOMED-CT terminology engine, first of all as a java-based microservice and now one built using golang. As I do this, I rewrite my original application to make use of the standalone service. I have written about the potential benefits of &lt;a href=&quot;/clinical-informatics/2017/12/04/serverless.html&quot;&gt;microservices and serverless architectures in healthcare previously&lt;/a&gt;), including the declarative nature of combining those services together by carefully considering how data flows between them in order to deliver value.&lt;/p&gt;
+
+&lt;p&gt;We need open architectures that interoperate, are standards-compliant and multi-layered. Foundational services, such as data persistence and core services like terminology should be used by more specialist and increasingly high-value functionality such as read-time analytics and aggregators.&lt;/p&gt;
+
+&lt;p&gt;I see a future in which those foundational services are provided via open-source tools and new commercial models evolve selling advanced services on a pay-as-you-go model. For example, anyone want a disease-modifying treatment service that monitors your patients on drugs like methotrexate and orders blood tests when needed and lets you know when their blood counts drop? We can no longer think in terms of monolithic applications but distributed applications and services stitching together functionality to support healthcare.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Focus : meeting the challenges</title><link href="https://www.wardle.org/clinical-informatics/2018/01/19/focus-solutions.html" rel="alternate" type="text/html" title="Focus : meeting the challenges" /><published>2018-01-19T14:46:46+00:00</published><updated>2018-01-19T14:46:46+00:00</updated><id>https://www.wardle.org/clinical-informatics/2018/01/19/focus-solutions</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2018/01/19/focus-solutions.html">&lt;p&gt;In &lt;a href=&quot;/clinical-informatics/2018/01/19/focus-focus-focus.html&quot;&gt;part one of this series&lt;/a&gt;, I introduced the &lt;a href=&quot;http://gov.wales/topics/health/nhswales/about/e-health/?lang=en&quot;&gt;“Informed health and care – A digital health and social care strategy for Wales”&lt;/a&gt; and talked in broad terms about the importance of a coherent strategy to deliver that vision.&lt;/p&gt;
 
 &lt;p&gt;In &lt;a href=&quot;/clinical-informatics/2018/01/19/focus-challenges.html&quot;&gt;part two of this series&lt;/a&gt;, I attempted to articulate the challenges we face; concluding that essentially, we need to balance centralised planning and control with support for innovation and change, particularly given the new technologies on the horizon which offer the potential to transform how we configure and deliver care to our citizens.&lt;/p&gt;
 
@@ -1256,100 +1377,4 @@ differed from one another and had no relationship with the administrative hospit
   &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/03/09/google-information.html&quot;&gt;Organise healthcare information and make it universally accessible and useful&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/07/07/disruptive-influences-health.html&quot;&gt;Disruptive influences in healthcare information technology&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/06/20/hazards-of-paper.html&quot;&gt;The hazards of paper&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">This post is from a talk I gave at the inaugural Digital Health and Care Conference at the Principality Stadium in Cardiff, Wales on the 19th October 2017</summary></entry><entry><title type="html">The ‘fractal’ medical record</title><link href="https://www.wardle.org/medical-records/2017/10/08/the-broken-medical-record.html" rel="alternate" type="text/html" title="The 'fractal' medical record" /><published>2017-10-08T04:14:15+01:00</published><updated>2017-10-08T04:14:15+01:00</updated><id>https://www.wardle.org/medical-records/2017/10/08/the-broken-medical-record</id><content type="html" xml:base="https://www.wardle.org/medical-records/2017/10/08/the-broken-medical-record.html">&lt;p&gt;&lt;img src=&quot;/images/fractal/mandelbrot.gif&quot; alt=&quot;Mandelbrot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Medical data are complex and heterogeneous with individual patient records combining multiple disparate sources of information including :&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;administrative data, scheduling and context (e.g. outpatient neurology clinic - movement disorders)&lt;/li&gt;
-  &lt;li&gt;patient reported outcome and experience measures  (e.g. “I can walk”, “he was rude”)&lt;/li&gt;
-  &lt;li&gt;clinical diagnostic, procedural and outcome measures    (e.g. “multiple sclerosis”)&lt;/li&gt;
-  &lt;li&gt;diagnostic synthesis and management plans  (e.g. “offer a new high-risk disease modifying treatment”)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Between those categories, it is possible that we can answer the what, who, how and possibly the why.&lt;/p&gt;
-
-&lt;p&gt;What many people don’t realise is that the interpretation of medical data, irrespective of its form, depends, to a variable degree on everything else. The most important dependency, in my view, is the context in which those data were acquired. This need for interpretation is why the phrase, “the single source of truth”, when used in building health record software, is only a partially useful mantra; it hopefully encourages a data-focused, clinical modelling approach but it inappropriately suggests that there is a “single truth”.&lt;/p&gt;
-
-&lt;p&gt;So you need to re-appraise how you consider, for example, “problem lists” - and understand that the meaning of “angina”, whether encoded as a consecutive array of letters of the alphabet (e.g. in English: “a-n-g-i-n-a” as free text) or encoded using a code from a medical terminology or classification system (e.g. in SNOMED-CT: Angina (disorder) SCTID: 194828000 with synonyms: Angina, Cardiac angina, Angina pectoris, Stenocardia,  Anginal syndrome, AP - Angina pectoris, Ischemic heart disease - angina, Ischaemic heart disease - angina,   Angina (disorder)) cannot be understood without contextual information, including the series of logical inferences that resulted in that diagnosis.&lt;/p&gt;
-
-&lt;p&gt;In particular, you should regard a diagnosis of “angina” with skepticism if it was given by me, a consultant neurologist but you might trust my diagnosis of “myasthenia gravis” even if the antibody test for that condition is negative.&lt;/p&gt;
-
-&lt;p&gt;Even data sourced from an accredited laboratory requires careful interpretation. A single test might be a false-negative result unless there is 100% sensitivity. Likewise, a positive test may be false-positive unless there is 100% specificity; either scenario would be extremely unusual indeed. In addition, tests, such as laboratory tests may be combined to improve their predictive power. It becomes even more complex as sensitivity and specificity depends on the &lt;em&gt;a priori&lt;/em&gt; probability of that test in that population. As a result the interpretation of a test or combination of tests depends on the context in which those tests were performed. A positive test result performed as the result of screening a whole unselected population has less importance than a test performed in a patient suspected of having the disease in question.&lt;/p&gt;
-
-&lt;p&gt;So if a laboratory test does not perfectly predict a disease, we can easily see how more subjective, opinion-based tests and diagnostic processes such as radiology or getting a clinical opinion in an outpatient clinic, will suffer from the same issues. In particular, if a report changes (and they do) or clinical opinions vary (fairly common) then “truth” becomes a poor conceptual foundation for our electronic health systems.&lt;/p&gt;
-
-&lt;p&gt;The logical conclusion  is that there is no single “truth”, but instead a deeply hierarchical, nested inter-dependent, frequently correlated set of multi-dimensional data. Does it matter?&lt;/p&gt;
-
-&lt;h1 id=&quot;data-for-decision-making&quot;&gt;Data for decision-making&lt;/h1&gt;
-
-&lt;p&gt;I’ve written about measurement &lt;a href=&quot;/clinical-informatics/2017/06/20/machine-learning-2.html&quot;&gt;previously&lt;/a&gt; concluding that medical data, whether a measurement of a physiological parameter, a laboratory test result or report from a radiological investigation, is useful only in &lt;em&gt;reducing the uncertainty around a decision&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;As such, we perform measurements, of whatever type, to support decision making and conceptually, those decisions may be grouped into three broad categories:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;the direct care of that patient&lt;/li&gt;
-  &lt;li&gt;the care of groups of patients within our clinical service(s) and organisations&lt;/li&gt;
-  &lt;li&gt;clinical research&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;If we have measurements that don’t influence current or future decisions in any of these domains, then we must ask ourselves why are we performing and recording those measurements at all?&lt;/p&gt;
-
-&lt;p&gt;Similarly, if we have imperfect measurements that are not 100% sensitive or 100% specific, then we have to ask, sensitive and specific to &lt;em&gt;what&lt;/em&gt;? Realising this provides an important insight: when applied, say to clinical diagnosis, is that almost all of our measurements in medicine are as if we are looking at the truth out of the corner of our eye. We cannot see the &lt;em&gt;hidden truth&lt;/em&gt; but a combination of our measurements are, together, governed by a few simpler variables or concepts that are actually the cause of the results of the measurements that we can measure. As a result, we hope that our measurements can be used to understand the &lt;em&gt;latent&lt;/em&gt; variable(s) that are actually the hidden cause of those measurements.&lt;/p&gt;
-
-&lt;p&gt;For example, sometimes we get an elevated C-reactive protein (CRP) result. It is usually raised in certain types of inflammatory or infectious disorders. It is like the smoke from a fire in a forest, we see the smoke from our helicopter but do not necessarily the cause of the fire. If the patient has had a cough for three days and has a fever, and when we listen to the chest there are crepitations in the right lower zone and the CRP is raised, the diagnosis is likely to be a community-acquired pneumonia. We have to take into account the &lt;em&gt;a priori&lt;/em&gt; probability as well, which means that we consider common causes more frequently than rare causes. Likewise, if the patient has had a cough for three months then we might reach a different conclusion.&lt;/p&gt;
-
-&lt;p&gt;As such, when we consider clinical diagnosis, our combination of multi-dimensional &lt;em&gt;measurements&lt;/em&gt; is providing us with a probabilistic determination of a specific considered diagnosis. Over time and with experience, most clinicians build up a set of heuristics that imperfectly approximate this diagnostic process and learn a range of practical short-cuts in order to cope.&lt;/p&gt;
-
-&lt;p&gt;It has always been a surprise to me that we have not yet developed tools to support this fundamentally complex and difficult problem; while we teach “red flags” to aid the identification of the unusual patient (e.g. a headache that is the worst ever headache), such decision-support aids remain crude.&lt;/p&gt;
-
-&lt;h1 id=&quot;nested-data&quot;&gt;Nested data&lt;/h1&gt;
-
-&lt;p&gt;When we know a patient has a history of angina and presents with chest pain, understanding how and why that &lt;em&gt;label&lt;/em&gt; of “angina” was given is important. In fact, what does that label actually mean? Is it the diagnosis given by a consultant cardiologist or, inappropriately by a rather over-enthusiastic neurologist?&lt;/p&gt;
-
-&lt;p&gt;We’re actually using the term “angina” to represent an approximate and subjective clinical concept as an abbreviation rather than endlessly writing down the multiple logical inferences made in order to determine that the patient suffered, for example, chest pain on exertion and had a stent placed for stenosis in her coronary circulation. It is a placeholder that actually hides a lot of potential complexity and permits professionals and patients to communicate and make decisions.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/fractal/angina-1.png&quot; alt=&quot;Angina 1&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Here we see that a constellation of information (our measurements, binary choices or continuous variables) allows us to apply a pragmatic diagnostic label, “angina”.&lt;/p&gt;
-
-&lt;p&gt;Except is that right? What is the point of that label unless it too is useful for future decision making? If I visit the catheter laboratory and ask my cardiology colleague for a coronary angiogram because a patient has “angina”, they’ll want to interrogate that diagnostic label in much greater detail to make a decision about whether a patient should have a specific intervention. They will want to know more than simply “angina”!&lt;/p&gt;
-
-&lt;p&gt;Our measurements and our labels are therefore interpretable and usable only in a specific context and for a specific set of circumstances in order to make a decision to effect care. Indeed, for future care, perhaps the diagnosis of “angina” is less useful than an understanding of pathology : ie whether the patient has significant arteriosclerotic vascular disease or not; after all, perhaps that is the biggest predictor of future cardiac events?&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/fractal/angina-2.png&quot; alt=&quot;Angina 2&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Here we see &lt;em&gt;how&lt;/em&gt; we use information when a patient presents to the emergency department with new crushing chest pain. Clinical decisions at the front door can simply use our placeholder diagnostic lists in order to action safe care and combine that historic information (that the patient has proven coronary artery disease) together with new information to make a diagnosis of acute myocardial infarction.&lt;/p&gt;
-
-&lt;h1 id=&quot;fractal-data&quot;&gt;Fractal data&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/fractal/angina-3.png&quot; alt=&quot;Angina 3&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;So now we see a repeated pattern in our data used for clinical decision making. Not only is our information nested, but we see that there are similarities in our data at different levels of detail. This repeating pattern of data at different levels of our decision making hierarchy is similar to that seen in &lt;em&gt;fractal data&lt;/em&gt;. In essence, a combination of measurements (data) are used to identify a hidden (latent) trait that itself is difficult to measure to inform a clinical reasoning process. The end-result of that clinical reasoning may be itself used in future clinical reasoning. This highlights the naturally &lt;em&gt;recursive&lt;/em&gt; nature of medical information.&lt;/p&gt;
-
-&lt;p&gt;Importantly, an understanding of the hierarchical nature of clinical decision making allows us to consider the considerable redundancy and correlations seen between different covariates; for instance both having a drug-eluting coronary stent placed in 2014 and a diagnosis of unstable angina both flag an underlying (more difficult to measure) latent trait, namely that of arteriosclerotic coronary artery disease. Those characteristics are therefore highly correlated and may be redundant in a single patient.&lt;/p&gt;
-
-&lt;h1 id=&quot;decision-making---by-humans-and-by-machines&quot;&gt;Decision making - by humans and by machines&lt;/h1&gt;
-
-&lt;p&gt;Redundancy and latent traits are important when we consider what information needs to be made available at the time of a clinical decision. How do we make sense of large volumes of hierarchical, highly correlated fractal-type data and decide what needs to be seen by a clinician in a particular clinical scenario, or indeed what needs to be used by a machine to learn to appropriately make a diagnosis or decide on a treatment plan? We cannot show or indeed use all information, and not all information is in fact useful at any particular clinical context. As such, we should be considering techniques to reduce the redundant dimensions that exist within healthcare data. For data mining and “big data” processing, we should be exploring dimensionality reduction techniques in order to make sense of an overload of redundant medical information.&lt;/p&gt;
-
-&lt;p&gt;Importantly, we need clinical systems to appropriately model the clinical decision making process and understand that there is no single “truth” but a chain of clinical reasoning at a given point in time that should take into account any and all variables that influence the results of a clinical decision.&lt;/p&gt;
-
-&lt;p&gt;Similarly, this is where machine learning and more general purpose artificial intelligence can most help us in our day-to-day clinical work. We need tools to help us understand what our measurements, our data, actually mean and how, in combination, they hide latent variables that should truly determine our next clinical decision. Our knowledge of this fractal-type pattern of clinical decision making should inform how we can generate training data for machine learning and apply those algorithms in the real-world. We should be aiming to replace our informal human heuristics, those short-cuts we use to permit decision-making at a time of significant uncertainty and instead build a data-driven approach to clinical reasoning.&lt;/p&gt;
-
-&lt;p&gt;We now have access to sufficient computing power to allow machine supported clinical decision making but those algorithms need to be trained. As such, we must study and understand clinical decision making, adequately model both clinical data and clinical reasoning and make those data available for machine learning so we can build the next generation of tools to improve medical care for all of us.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Notes:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;The term “fractal” was &lt;a href=&quot;https://en.wikipedia.org/wiki/Fractal&quot;&gt;coined by Mandelbrot&lt;/a&gt; who “based it on the Latin frāctus meaning ‘broken’ or ‘fractured’, and used it to extend the concept of theoretical fractional dimensions to geometric patterns in nature.” I’ve therefore titled this blog post “the broken medical record” for two different reasons: 1) medical records are broken and fragmented in the truest sense of those words, 2) they have similarities to fractal data as they are deeply hierarchical and nested with clinical reasoning built upon chains of previous reasoning (e.g. a process of clinical reasoning takes place in order to order an investigation, the radiologist reporting the scan performs her own reasoning based on the referral and the actual imaging, a receiving clinician repeats the process now integrating all of those chains of reasoning).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;(Mandelbrot generated by &lt;a href=&quot;//commons.wikimedia.org/w/index.php?title=User:Mjdean&amp;amp;action=edit&amp;amp;redlink=1&quot; class=&quot;new&quot; title=&quot;User:Mjdean (page does not exist)&quot;&gt;Michael James Dean&lt;/a&gt; - &lt;span class=&quot;int-own-work&quot; lang=&quot;en&quot;&gt;Own work&lt;/span&gt;, &lt;a href=&quot;https://creativecommons.org/licenses/by-sa/3.0&quot; title=&quot;Creative Commons Attribution-Share Alike 3.0&quot;&gt;CC BY-SA 3.0&lt;/a&gt;, &lt;a href=&quot;https://commons.wikimedia.org/w/index.php?curid=17070006&quot;&gt;Link&lt;/a&gt;)&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html"></summary></entry></feed>
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">This post is from a talk I gave at the inaugural Digital Health and Care Conference at the Principality Stadium in Cardiff, Wales on the 19th October 2017</summary></entry></feed>
