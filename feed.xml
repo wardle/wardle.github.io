@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-02-20T10:47:56+00:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-02-20T10:50:52+00:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
 </subtitle><entry><title type="html">So I built an electronic patient record system in my spare time…</title><link href="https://www.wardle.org/patientcare/2018/02/19/so-I-built-an-EPR.html" rel="alternate" type="text/html" title="So I built an electronic patient record system in my spare time..." /><published>2018-02-19T19:19:19+00:00</published><updated>2018-02-19T19:19:19+00:00</updated><id>https://www.wardle.org/patientcare/2018/02/19/so-I-built-an-EPR</id><content type="html" xml:base="https://www.wardle.org/patientcare/2018/02/19/so-I-built-an-EPR.html">&lt;p&gt;This blog post is based on a series of threads I posted on Twitter, which I have refined and expanded for this post.&lt;/p&gt;
 
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/1zZtnV44vgU&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
@@ -49,7 +49,7 @@
 
 &lt;p&gt;&lt;img src=&quot;/images/so-i-wrote/background.jpg&quot; alt=&quot;Background&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Notice how the countries are grouped as American, Asian and European. This isn’t hard-coded by I have set a single property to categorise by the 1st parent of each country-of-birth term in the SNOMED-CT hierarchy.&lt;/p&gt;
+&lt;p&gt;Notice how the countries are grouped as American, Asian and European. This isn’t hard-coded but instead I have set a single property to categorise each country-of-birth term by region in the SNOMED-CT hierarchy.&lt;/p&gt;
 
 &lt;p&gt;Internally, I have built a range of different UI components that are configured declaratively to allow choice of SNOMED concept from different subsets or parts of the hierarchy. Here are the rules defining the country of birth pop-up.&lt;/p&gt;
 
