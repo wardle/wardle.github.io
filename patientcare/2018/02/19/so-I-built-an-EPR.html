@@ -193,7 +193,7 @@
 
 <h1 id="technical-architecture">Technical architecture</h1>
 
-<p>I have built it slowly and incrementally using PostgreSQL and java for the web-based application. This exposes an interface for humans via a web front-end and a range of <a href="https://en.wikipedia.org/wiki/Representational_state_transfer">RESTful services</a> for use by machines.</p>
+<p>I have built it slowly and incrementally using PostgreSQL and java for the web-based application. This exposes an interface for humans via a web front-end and a range of <a href="https://en.wikipedia.org/wiki/Representational_state_transfer">RESTful services</a> for use by machines. I built the iOS applications in objective-C originally and then migrated to Swift for the current versions. These talk to the main EPR via HTTPS.</p>
 
 <p>One of the most important facets is the abstraction of multiple other external services, such as services provided by a hospital PAS (patient administrative system) and document repositories. While my software could be used standalone, it isn’t really designed to work like that and instead wants to interoperate with a broad set of external services. It wants to talk and exchange structured codified clinically-driven data with other systems.</p>
 
