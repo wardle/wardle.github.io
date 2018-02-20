@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>So I built an electronic patient record system in my spare time...</title>
-  <meta name="description" content="">
+  <meta name="description" content="This blog post is based on a series of threads I posted on Twitter, which I have refined and expanded for this post.">
 
   <link rel="stylesheet" href="/assets/main.css">
   <link rel="canonical" href="https://www.wardle.org/patientcare/2018/02/19/so-I-built-an-EPR.html">
@@ -93,7 +93,9 @@
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/1zZtnV44vgU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+    <p>This blog post is based on a series of threads I posted on Twitter, which I have refined and expanded for this post.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1zZtnV44vgU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
 
 <p>It uses SNOMED-CT as its lingua-franca. Notice how it maps free text into the UK dm+d (dictionary of medicines and devices), parsing dose route and directions and handling units and equivalence. It suggests a correction when I mistype salbutamol.</p>
 
@@ -193,29 +195,40 @@
 
 <p>I have built it slowly and incrementally using PostgreSQL and java for the web-based application. This exposes an interface for humans via a web front-end and a range of <a href="https://en.wikipedia.org/wiki/Representational_state_transfer">RESTful services</a> for use by machines.</p>
 
-<p>One of the most important facets is the abstraction of multiple other external services, such as services provided by a hospital PAS (patient administrative system) and document repositories. So much software is focused on a single organisation, but our multidisciplinary teams cross both disciplinary and organisation divides! Therefore, my application can be configured to interact with multiple external software systems to make the user experience more seamless.</p>
+<p>One of the most important facets is the abstraction of multiple other external services, such as services provided by a hospital PAS (patient administrative system) and document repositories. While my software could be used standalone, it isn’t really designed to work like that and instead wants to interoperate with a broad set of external services. It wants to talk and exchange structured codified clinically-driven data with other systems.</p>
+
+<p>So much software is focused on a single organisation, but our multidisciplinary teams cross both disciplinary and organisation divides! Therefore, my application can be configured to interact with multiple external software systems to make the user experience more seamless.</p>
 
 <h1 id="what-has-this-taught-me">What has this taught me?</h1>
 
 <p>The benefits of:</p>
 
 <ul>
-  <li>Standards</li>
-  <li>Encapsulation</li>
+  <li>Technical and semantic interoperability with the use of standards</li>
+  <li>Encapsulation and substitutability</li>
   <li>Decoupling</li>
   <li>Coherent architectural design</li>
 </ul>
 
-<p>My future plans are to break-up the application into a suite of interoperating microservices. I have already done that for my SNOMED-CT terminology engine, first of all as a java-based microservice and now one built using golang. As I do this, I rewrite my original application to make use of the standalone service. I have written about the potential benefits of <a href="/clinical-informatics/2017/12/04/serverless.html">microservices and serverless architectures in healthcare previously</a>), including the declarative nature of combining those services together by carefully considering how data flows between them in order to deliver value.</p>
+<p>Much of the hard work has been in getting permission and then implementing technical interfaces to other systems. It would have been much easier for me to create valuable software if I had a set of tools and frameworks on which to build. This is reason why I am a advocate for an open platform approach in healthcare information technology so that we can build a stable infrastructure and yet still enable transformative innovation and embrace new digital technologies such as machine learning. I shouldn’t be wasting my time building the foundations of applications, but instead I should be able to leverage a suite of frameworks and tools on which hitherto unconsidered new and exciting functionality can be built.</p>
+
+<p>When any of us build an application for iOS or Android, we don’t start with nothing but have a suite of frameworks and tools to enable drag-and-drop user interface design, data persistence and cloud synchronisation. Why don’t we have the same for healthcare yet?</p>
+
+<p>My future plans are to break-up the application into a suite of interoperating microservices. I have already done that for my SNOMED-CT terminology engine, first of all as a java-based microservice and now one built using golang. As I do this, I rewrite my original application to make use of the standalone service.</p>
+
+<p>I have written about the potential benefits of <a href="/clinical-informatics/2017/12/04/serverless.html">microservices and serverless architectures in healthcare previously</a>), including the declarative nature of combining those services together by carefully considering how data flows between them in order to deliver value.</p>
 
 <p>We need open architectures that interoperate, are standards-compliant and multi-layered. Foundational services, such as data persistence and core services like terminology should be used by more specialist and increasingly high-value functionality such as read-time analytics and aggregators.</p>
 
-<p>I see a future in which those foundational services are provided via open-source tools and new commercial models evolve selling advanced services on a pay-as-you-go model. For example, anyone want a disease-modifying treatment service that monitors your patients on drugs like methotrexate and orders blood tests when needed and lets you know when their blood counts drop? We can no longer think in terms of monolithic applications but distributed applications and services stitching together functionality to support healthcare.</p>
+<p>I see a future in which those foundational services are provided via open-source tools and new commercial models evolve selling advanced services on a pay-as-you-go model. For example, would any of you want to take advantage of a disease-modifying treatment service that monitors your patients on drugs like methotrexate and orders blood tests when needed and lets you know when their blood counts drop?</p>
+
+<p>We need to define a standards-based framework which means that we can not only deploy such innovative technology, but enable their assessment and evaluation in a safe way. One of the ways of enabling that are the principles of decoupling, encapsulation and substitutability, in which we can safely replace a modular component without other modules being aware. Only then can we enable safe technological-focused quality improvement and research, by running A-B testing in which different algorithms can be tested in isolation.</p>
+
+<p>Such aspirations require a renewed focus on consent and in particular, making it possible to seek explicit opt-in consent in an easy way from citizens. Why not use technology to show informative video, interactive consent tools and start to recruit the majority of our patients into many different types of research project, obtaining robust and useful data on the effects of interventions, including the applied use of machine learning and algorithms, across our health systems?</p>
+
+<p>We can no longer think in terms of monolithic applications and think of interoperability as something to tack on after those applications are finished. Instead, we should focus on how we build an open platform to enable distributed applications and services and permit innovators to stitch together that functionality in novel ways to support and improve and re-imagine our healthcare systems.</p>
 
 <p><em>Mark</em></p>
-
-<p><em>Mark</em></p>
-
 
   </div>
 
