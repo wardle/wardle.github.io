@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-03-03T22:52:09+00:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-03-03T23:36:07+00:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
 </subtitle><entry><title type="html">An open digital health platform: what we need to do next</title><link href="https://www.wardle.org/digital-platform/2018/03/03/platform-wales-3.html" rel="alternate" type="text/html" title="An open digital health platform: what we need to do next" /><published>2018-03-03T03:03:03+00:00</published><updated>2018-03-03T03:03:03+00:00</updated><id>https://www.wardle.org/digital-platform/2018/03/03/platform-wales-3</id><content type="html" xml:base="https://www.wardle.org/digital-platform/2018/03/03/platform-wales-3.html">&lt;blockquote&gt;
   &lt;p&gt;This is part three of a three-part series on why and how we should be building an open digital health platform in Wales.&lt;/p&gt;
 
@@ -7,13 +7,15 @@
 
 &lt;p&gt;We need to change what we are doing in Wales. We have two important reports that have criticised how healthcare information technology has been delivered - the Welsh Audit Office report and the Parliamentary Review.&lt;/p&gt;
 
+&lt;p&gt;We must ask hard questions about what we should do about the issues raised in the audit report including defects in governance and leadership, lack of delivery and concerns about the quality of information technology systems that are delivered.&lt;/p&gt;
+
 &lt;blockquote&gt;
   &lt;p&gt;I believe that the only logical response to the &lt;a href=&quot;https://www.wao.gov.uk/publication/informatics-systems-nhs-wales&quot;&gt;Welsh Audit Office report&lt;/a&gt; is to re-imagine the relationship between the NHS Wales Informatics Service (NWIS) and the health boards. Such a re-imagining requires us to stop ignoring the, in my view, currently incoherent set of responsibilities and divisions of labour that exist within Wales.&lt;/p&gt;
 
   &lt;p&gt;from my blog post, &lt;a href=&quot;/clinical-informatics/2018/01/19/focus-focus-focus.html&quot;&gt;“Focus focus focus”&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;In essence, we need to focus our energy on creating an open platform onto which the next generation of applications, created internally and externally, can run.&lt;/p&gt;
+&lt;p&gt;In my view, we need to focus our energy on creating an open platform onto which the next generation of applications, created internally and externally, can run.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;The &lt;a href=&quot;http://gov.wales/docs/dhss/publications/180116reviewen.pdf&quot;&gt;Parliamentary Review of Health and Social Care report&lt;/a&gt;, published in January 2018 highlights the need for a seamless health and care system in Wales, centred around the citizen irrespective of where they live with the avoidance of creating artificial barriers between services and organisations.&lt;/p&gt;
