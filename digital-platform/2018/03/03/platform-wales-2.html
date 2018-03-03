@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>An open digital health platform: an API-first approach</title>
+  <meta name="description" content="This is part two of a three-part series on why and how we should be building an open digital health platform in Wales. Part one is a high-level overview of h...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://www.wardle.org/digital-platform/2018/03/03/platform-wales-2.html">
+  <link rel="alternate" type="application/rss+xml" title="Health informatics and information technology" href="/feed.xml">
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-97389603-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="/">Health informatics and information technology</a>
+  
+  
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+           <a class="page-link" href="/">All posts</a>
+          
+            
+            
+            <a class="page-link" href="/projects/">Projects</a>
+            
+          
+            
+            
+            <a class="page-link" href="/about/">About</a>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">An open digital health platform: an API-first approach</h1>
+    <p class="post-meta">
+      <time datetime="2018-03-03T03:03:03+00:00" itemprop="datePublished">
+        
+        3 March 2018
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <blockquote>
+  <p>This is part two of a three-part series on why and how we should be building an open digital health platform in Wales.</p>
+
+  <p><a href="/digital-platform/2018/03/03/platform-wales-1.html">Part one</a> is a high-level overview of how standards and interoperability are critical in building a digital ecosystem. This part assesses our current messaging-based architecture and highlights the benefits of an API-first enterprise architecture together with the new technologies that have facilitated the move to cloud computing in other industries. <a href="/digital-platform/2018/03/03/platform-wales-3.html">Part three</a> ties together these strands into a manifesto for phase 1 of building our open platform.</p>
+</blockquote>
+
+<p>So, what is the most effective overall enterprise architecture that facilitates modern interoperability and an ecosystem, as described?</p>
+
+<p>Any answer to that question must consider legacy systems already supporting clinical care within and between our organisations. There are many such services, such as patient administrative systems (eg HL7v2), laboratory information management systems, user identity and authentication and in Wales, we have an enterprise service bus (ESB)-based messaging architecture linking them together. In addition, there are sometimes explicit, often implicit reference data and rules and heuristics built into each application and service.</p>
+
+<p>The first consideration is whether those services and applications currently deployed can support both robust interoperability and our ecosystem project. The second consideration is, if they cannot, how can we most effectively use what we have to do so?</p>
+
+<h1 id="can-our-current-architecture-support-interoperability-and-an-ecosystem">Can our current architecture support interoperability and an ecosystem?</h1>
+
+<p>An ESB-architecture is one example of an event-driven architecture connecting disparate software without tight-coupling. An ESB is the typical technology to use in a Service Orientated Architecture (SOA) which were most popular several years ago. For example, there are a set of services and applications supporting the care of patients on dialysis units across Wales which are supported by taking a live real-time feed of messages of laboratory results and persisting those data into a repository for that purpose.</p>
+
+<p>The ESB has supported integration, but it has required work <em>for all parties</em>, internal and external, to perform that integration. Normally, an ESB will adopt a standards-based messaging protocol and so data are sent within a data “envelope”, usually SOAP, reflecting the technology of the time. This solves interoperability from a technical standpoint, but semantic and legal interoperability are out-of-scope. The ESB is therefore a component of an event-driven SOA.</p>
+
+<p>Similarly, as an event-driven architecture, it can be difficult to handle long-running business processes and orchestrate workflow across services. In addition, while applications and services are disconnected, separated by the ESB, the overall architecture is much like a monolith, but with the added complexity of a distributed system with every component part of a larger stream of messages.</p>
+
+<p>This makes testing individual components difficult with changes in one system resulting in difficult to predict consequences on other systems. A test environment might need to replicate the entire ecosystem making it more difficult to automate and have confidence that any component or the whole ‘system’ is deterministic.</p>
+
+<p>In short, an ESB is an <em>internal</em> solution to enterprise architecture integration. It is,  poorly suited to creating a truly open platform.</p>
+
+<h1 id="what-can-we-learn-from-cloud-computing-and-modern-architectural-design">What can we learn from cloud computing and modern architectural design?</h1>
+
+<p>We have seen a revolution in both how data can be stored and how we can write software that operates on those data; we have <em>cloud computing</em>.</p>
+
+<p>Cloud computing brings together on-demand scalability and efficiency allowing organisations to consume storage and computing power to meet demand. Instead of running your own database in your own data centre, you can delegate its operation, backup and replication to a commercial supplier, normally on a pay-as-you-go basis. Example providers include Amazon AWS, Microsoft Azure and Google Cloud.</p>
+
+<p>The move to a cloud-based architecture has been predicated upon technological advances and new approaches to the design, creation, testing and deployment of modern applications. However, these advances are not necessarily limited to deployment to the cloud. Technologies such as “containers” can be used in local data centres as well. As such, software code can be built as lightweight portable services deployed in-house or to an external hosting provider anywhere. Indeed, this vendor-neutrality means that in essence we are moving to a future in which hosting data and software services is a commodity. As a result of this flexibility, many enterprises adopt a hybrid approach in which their existing infrastructure continues to run on private networks hosted in private data centres but these are supplemented with new services provided using containers, deployed either in-house or by a cloud provider or in combination.</p>
+
+<p>Modern application development and operations (such as testing and deployment into live environments) are called “DevOps” and support greater degrees of agility in all steps of the software lifecycle so that development becomes more modular, modules become more isolated and independently test-able, and changes to those modules can be committed, tested and even deployed with little or no manual intervention. We know that modern technology companies like Google deploy billions of containers per week across their cloud infrastructure; to do so requires automation in deployment and scaling to meet their ever-increasing demands for computing power.</p>
+
+<p>A new type of cloud-based architecture - Serverless - is increasingly popular, recognising that application developers wish to focus on their core business of creating value via writing software and not be concerned about the infrastructure that is needed to run that software. Serverless allows developers to write a function, which could perform any imagined well-defined computing task, and deploy it easily. Such a function can be used by other software components but the provider is responsible for automatically scaling the service to meet demand, expanding or contracting the resources required to computing power responsive to user need.</p>
+
+<p>We are now seeing a new market for software code, in which re-usable independent modules of code, deployed as containers as “microservices” or as “serverless” functions, can be knitted together to create functionality for end-users.  These modules might look simple on the surface but hide (abstract) a great deal of complexity to deliver their results. Have a look at the speech recognition services now available from <a href="https://aws.amazon.com/transcribe/?hp=tile&amp;so-exp=below">Amazon</a> and <a href="https://cloud.google.com/speech/">Google</a>. Developers using those services simply send an audio file and receive back a text file containing the transcribed text.</p>
+
+<p>It is easy to see that such an architecture permits vendor-neutrality, in which we could substitute one service for another based on quality and price, with our changes limited to changing how we locate the resources used to knit together an end-to-end solution for our users. Substitutability is an important architectural principle for future-proofing and requires us to adopt standardised and open application programming interfaces (APIs).</p>
+
+<p>I am convinced that we will see an increasingly sophisticated marketplace providing on-demand computing services in the next five years; for example, see the new <a href="https://aws.amazon.com/serverless/serverlessrepo/">Amazon Serverless Application Repository</a>.</p>
+
+<p>As such, we should recognise that cloud computing should inform our architectural designs for healthcare:</p>
+
+<ul>
+  <li>Virtually unlimited computing power on an as-required, scalable basis</li>
+  <li>Openness, modularisation and abstraction of software to appropriately ‘decouple’ software and thus facilitating evolutionary change.</li>
+  <li>Sophisticated support for “DevOps” in the develop-test-deploy software lifecycle with a focus on automation and rapid ‘agile’ development.</li>
+</ul>
+
+<h1 id="an-api-first-approach-for-an-open-architecture">An API-first approach for an open architecture</h1>
+
+<p>It is not difficult to see how healthcare has lagged behind other industries in adopting a more “open” approach to information technology. Most healthcare software has traditionally been dominated by vendors who supply whole-organisation scale software products that are usually ‘closed’ systems.</p>
+
+<p>Open systems provide interoperability so that different components from different vendors can communicate and exchange meaningful information. In addition, open systems support <em>portability</em> of applications and services. Portability means that software can be written once and deployed without change irrespective of the environment in which it is deployed. Portability requires standardisation and usually some form of runtime configuration and resource location. For example, to use a health example, if an application expects to use HL7 FHIR to fetch blood results and perform analytics, it should be possible to deploy that application within any ecosystem that provides those HL7 FHIR endpoints. These endpoints are what we mean by an standard “API”.</p>
+
+<p>So what is an “API”? An API is an <em>application programming interface</em>. Crudely, it is a set of usually related software functions that, for our purposes, can be called by one system to execute software functionality in another. Essentially, an API is an abstraction, a way of decoupling how a software service is used from its implementation. In the example above, you do not need to know how Amazon or Google have implemented their speech transcription service, you send the text file and get back text. For all you know, they have thousands of transcriptionists sitting at computers listening with headphones and typing! In addition, you do not really care whether they change how they implement the transcription service, so long as you get back the results you expect. They could switch over to a new implementation and you wouldn’t know. The use of APIs has meant you have isolated different modules of software from each other and permitted work to continue independently.</p>
+
+<p>For example, we might expect to be able to make use of a module to identify acute kidney injury (AKI). Currently, this could simply implement the <a href="https://www.england.nhs.uk/akiprogramme/aki-algorithm/">national AKI algorithm</a> but, could <em>also</em> be used to inform and develop the next-generation of algorithm that could perhaps identify patients <em>before</em> there is kidney injury and be <em>then</em> replaced with more sophisticated algorithms with different and hopefully improved receiver-operator curves for the patient group at hand.</p>
+
+<p>Not all APIs are “standard”. Proprietary APIs might allow interoperability but at the expense of new work, perhaps on both sides, to perform integration. Similarly, proprietary interfaces usually expose implementation details so that rather than being appropriately decoupled, the two separate software systems become entwined and dependent -  much like a limpet clinging to a rock than flexible and interchangeable plugs and sockets we all use for our electrical devices in the home!</p>
+
+<p>A focus on open and standard APIs is key to creating a powerful ecosystem so that both internal and external developers can contribute and work independently. Our ecosystem project in Wales must not simply cater to external users but <em>be</em> the platform on which new innovation can occur both internally and in partnership with others. This is a paradigm shift from the closed approach we have seen in healthcare in the past and treats external developers as first-class citizens in our digital health ecosystem.</p>
+
+<p>Our efforts in Wales on standards, interoperability and the digital ecosystem must therefore build a ‘connected business platform’ usable by developers, internal and external, on behalf of users, across health and care and most importantly the patient and their delegates, to support a transformation in how we deliver healthcare.</p>
+
+<h1 id="privacy-and-trust">Privacy and trust</h1>
+
+<p>It is important not to confuse “openness” with a lack of data security. Openness, at a principle in software architecture, relates to interoperability.  For example, TCP/IP, the technical underpinnings of the Internet, is an open protocol but that does not stop it being used by your bank to offer online banking to authorise and execute financial transactions.</p>
+
+<p>An open architecture does not mean that confidential patient information is made accessible to all. Any design for a target architecture for Wales must take into account the need for authentication (‘you are you say are’), authorisation (‘you are allowed to do what you are asking to do’) and verifiable logging (‘we are watching what you do’) as well as need to handle different levels of sensitive information. For example, it would be expected that sexual health, genomic, mental health and social care data might be treated differently to general health data.</p>
+
+<p>Similarly, not only might accessibility depend on the type of data, but the intended use of those data. For example, so that data made available for direct patient care might depend on the direct care relationship between citizen and professional while aggregated data for a clinical service or organisation used for planning and performance management and data made available to researchers would be handled quite differently.</p>
+
+<p>It is difficult to ensure privacy and trust when one uses as ‘push’ based messaging fabric like an ESB because data are sent to services who consume or decide to discard those messages. An API-based approach is usually a ‘pull’ service, in which a client requests something from a service and so a service can decide whether to satisfy that request by virtue of authentication and authorisation and can log such access via a logging service. Of course, an API-based approach can adapt to a ‘push’ model usually via ‘publish-and-subscribe’ in which interested clients subscribe to notifications from a service.</p>
+
+<h1 id="so-what-next">So what next?</h1>
+
+<p>The next question to ask is, what are the next steps that we need to take to build an open platform in Wales using these architectural design principles? I have tried to answer this in my <a href="/digital-platform/2018/03/03/platform-wales-3.html">next post</a>.</p>
+
+<blockquote>
+  <p><a href="/digital-platform/2018/03/03/platform-wales-3.html">Part three</a> ties together these strands into a manifesto for phase 1 of building our open platform.</p>
+</blockquote>
+
+  </div>
+
+  
+</article>
+        
+      </div>
+    </main>
+    
+    
+    
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Health informatics and information technology</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Health informatics and information technology
+            
+            </li>
+            
+            <li><a href="mailto:mark@wardle.org">mark@wardle.org</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/wardle"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">wardle</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/mwardle"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">mwardle</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

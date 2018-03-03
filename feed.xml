@@ -1,5 +1,311 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-02-20T14:05:51+00:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
-</subtitle><entry><title type="html">So I built an electronic patient record system in my spare time…</title><link href="https://www.wardle.org/patientcare/2018/02/19/so-I-built-an-EPR.html" rel="alternate" type="text/html" title="So I built an electronic patient record system in my spare time..." /><published>2018-02-19T19:19:19+00:00</published><updated>2018-02-19T19:19:19+00:00</updated><id>https://www.wardle.org/patientcare/2018/02/19/so-I-built-an-EPR</id><content type="html" xml:base="https://www.wardle.org/patientcare/2018/02/19/so-I-built-an-EPR.html">&lt;p&gt;This blog post is based on a series of threads I posted on Twitter, which I have refined and expanded for this post.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-03-03T22:40:51+00:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</subtitle><entry><title type="html">An open digital health platform: what we need to do next</title><link href="https://www.wardle.org/digital-platform/2018/03/03/platform-wales-3.html" rel="alternate" type="text/html" title="An open digital health platform: what we need to do next" /><published>2018-03-03T03:03:03+00:00</published><updated>2018-03-03T03:03:03+00:00</updated><id>https://www.wardle.org/digital-platform/2018/03/03/platform-wales-3</id><content type="html" xml:base="https://www.wardle.org/digital-platform/2018/03/03/platform-wales-3.html">&lt;blockquote&gt;
+  &lt;p&gt;This is part three of a three-part series on why and how we should be building an open digital health platform in Wales.&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;/digital-platform/2018/03/03/platform-wales-1.html&quot;&gt;Part one&lt;/a&gt; was a high-level overview of how standards and interoperability are critical in building a digital ecosystem. &lt;a href=&quot;/digital-platform/2018/03/03/platform-wales-1.html&quot;&gt;Part two&lt;/a&gt; assessed our current messaging-based architecture and highlighted the benefits of an API-first enterprise architecture together with the new technologies that have facilitated the move to cloud computing in other industries. This part ties together these strands into a manifesto for phase 1 of building our open platform.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;We need to change what we are doing in Wales. We have two important reports that have criticised how healthcare information technology has been delivered - the Welsh Audit Office report and the Parliamentary Review.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;I believe that the only logical response to the &lt;a href=&quot;https://www.wao.gov.uk/publication/informatics-systems-nhs-wales&quot;&gt;Welsh Audit Office report&lt;/a&gt; is to re-imagine the relationship between the NHS Wales Informatics Service (NWIS) and the health boards. Such a re-imagining requires us to stop ignoring the, in my view, currently incoherent set of responsibilities and divisions of labour that exist within Wales.&lt;/p&gt;
+
+  &lt;p&gt;from my blog post, &lt;a href=&quot;/clinical-informatics/2018/01/19/focus-focus-focus.html&quot;&gt;“Focus focus focus”&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In essence, we need to focus our energy on creating an open platform onto which the next generation of applications, created internally and externally, can run.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The &lt;a href=&quot;http://gov.wales/docs/dhss/publications/180116reviewen.pdf&quot;&gt;Parliamentary Review of Health and Social Care report&lt;/a&gt;, published in January 2018 highlights the need for a seamless health and care system in Wales, centred around the citizen irrespective of where they live with the avoidance of creating artificial barriers between services and organisations.&lt;/p&gt;
+
+  &lt;p&gt;from my blog post, &lt;a href=&quot;/clinical-informatics/2018/01/19/focus-challenges.html&quot;&gt;The challenges we face in delivering the vision&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Likewise, our services must re-focus on our citizens to transform healthcare with digital tools enabling that transformation. As I have written before, &lt;a href=&quot;/clinical-informatics/2017/12/05/enabling-innovation.html&quot;&gt;we need to enable innovation and invert the current paradox we have in command and control of our software systems&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;It is important to recognise the obstacles in our way, some of them non-technical:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Strategies focus resources, energy, and attention on some objectives rather than others. Unless
+collective ruin is imminent, a change in strategy will make some people worse off. Hence there will be powerful 
+forces opposed to almost any change in strategy.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;…&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;When organisations are unable to make new strategies - when people evade the work of choosing among different paths into the future - then you get vague mom-and-apple-pie goals that everyone can agree on. Such goals are direct evidence of leadership’s insufficient will or political power to make or enforce hard choices. Put differently, universal buy-in usually signals the absence of choice.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Good Strategy, Bad strategy” by Richard Rumelt.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;We need to make use of our existing good work and build on that. We cannot afford to rip-and-replace, but plan, pragmatically and carefully, taking advantage of the new digital technologies available to us, to transform our health system.&lt;/p&gt;
+
+&lt;h1 id=&quot;we-must-build-an-evolutionary-architecture&quot;&gt;We must build an evolutionary architecture&lt;/h1&gt;
+
+&lt;p&gt;An evolutionary architecture is one that supports change, recognising we need, both figuratively and literally, platform on which we can build solutions to meet our current &lt;em&gt;and&lt;/em&gt; future needs.&lt;/p&gt;
+
+&lt;p&gt;The principles to consider are:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Plan for change at the outset&lt;/li&gt;
+  &lt;li&gt;Build a cohesive vision&lt;/li&gt;
+  &lt;li&gt;Create modular services cared for by cross-functional teams&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;1-plan-for-change-at-the-outset&quot;&gt;1. Plan for change at the outset&lt;/h4&gt;
+
+&lt;p&gt;The most appropriate way to build an evolutionary architecture is to ensure that support for evolutionary change is built-in to your designs at the outset. This means recognising the components that are likely to change and those that are not. On many occasions, I have stressed the need for clinical modelling in which we think carefully about &lt;em&gt;how&lt;/em&gt; to create model data:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A model is an abstraction of the real-world distilling knowledge into core concepts and processes. A model is a careful balance between complexity and over-simplification with models that are too complex model providing brittle abstractions which are poorly generalisable and models that are too simple model not supporting all of the demands placed upon it in real-life clinical scenarios.&lt;/p&gt;
+
+  &lt;p&gt;by me, &lt;a href=&quot;/clinical-informatics/2017/02/03/domain-driven-design.html&quot;&gt;Towards a domain-driven, model-based approach to developing clinical information systems: innovating for the future in NHS Wales&lt;/a&gt;, November 2016.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This, essentially, underpins a data-driven approach in we consider data and the computing services that operate on those data as our platform onto which ephemeral and lightweight applications can be built.&lt;/p&gt;
+
+&lt;p&gt;It also means that we leverage what we have already built in Wales and plan to build increasingly sophisticated functionality over time. As a result, we turn the existing ESB-based architecture into a more modern, API-based architecture in which data and services are made available to both internal and external users.&lt;/p&gt;
+
+&lt;h4 id=&quot;2-build-a-cohesive-vision&quot;&gt;2. Build a cohesive vision&lt;/h4&gt;
+
+&lt;p&gt;Likewise, the components which underpin our platform must be &lt;em&gt;cohesive&lt;/em&gt;. Cohesion means that the plan and the components that make up delivery of that plan form a cohesive and integrated plan.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A coherent plan to deliver the [Informed Health and Care strategy] needs more than a list of disconnected and incompatible goals but instead a clear understanding of what needs to be done and what doesn’t need to be done; we must know when to say “no”. Instead, we focus our limited resources on specific tangible actions and make some difficult decisions to prune areas of work that do not support delivery of the wider vision.
+[…]
+As such, we need a coordinated all-Wales approach that permits all stakeholders to work cooperatively and collaboratively with clear lines of responsibility and governance. We need to re-organise our approach to healthcare information technology taking into account the steps needed to deliver the vision, the principles of enterprise architectural design, modern information standards and interoperability, modern quality improvement methodology and user-centred design.&lt;/p&gt;
+
+  &lt;p&gt;by me, &lt;a href=&quot;/clinical-informatics/2018/01/19/focus-focus-focus.html&quot;&gt;Focus focus focus&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;We need to build consensus around a cohesive plan to deliver the vision in the Informed Health and Care Strategy. This doesn’t mean getting everyone to agree, but requires political drive to make difficult decisions about what we can do with limited resources, taking into account our own strengths and weaknesses as public sector organisations.&lt;/p&gt;
+
+&lt;h4 id=&quot;3-create-modular-services-cared-for-by-cross-functional-teams&quot;&gt;3. Create modular services cared for by cross-functional teams&lt;/h4&gt;
+
+&lt;p&gt;I suggest that you read the very helpful &lt;a href=&quot;https://apperta.org/_attachment/DefiningOpenPlatform/Apperta_Defining_an_Open_Platform_SP.pdf&quot;&gt;Apperta documents on “open platforms”&lt;/a&gt;. In it, they give a high-level overview of the typical ‘services’ which are required from an open platform. They suggest:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Identity assurance&lt;/li&gt;
+  &lt;li&gt;Data repositories&lt;/li&gt;
+  &lt;li&gt;Record location&lt;/li&gt;
+  &lt;li&gt;Resource discovery and scheduling&lt;/li&gt;
+  &lt;li&gt;Knowledge sources&lt;/li&gt;
+  &lt;li&gt;Legacy connectors&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;These are a useful starting point, but the most helpful chapters are 3 and 4 on why an open platform is a good idea for healthcare and their proposed definition of an open platform.&lt;/p&gt;
+
+&lt;p&gt;In Wales, I would argue that we need a phased approach to make the best use of the good work already done. This could include in phase 1:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;User identity services
+    &lt;ul&gt;
+      &lt;li&gt;Wrap existing “NADEX” Windows (Kerberos) domain controllers into an &lt;a href=&quot;https://oauth.net/2/&quot;&gt;OAUTH2&lt;/a&gt; service that be used to authenticate and authorise healthcare users. Later phases should include federation of other authentication providers in non-health domains such as social care.&lt;/li&gt;
+      &lt;li&gt;Citizen identity and delegation. We need to evaluate different options including &lt;a href=&quot;https://www.gov.uk/government/publications/introducing-govuk-verify/introducing-govuk-verify&quot;&gt;GOV.UK VERIFY&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Electronic staff record integration that, together with the user directory from NADEX, is exposed as a FHIR &lt;a href=&quot;https://www.hl7.org/fhir/practitioner.html&quot;&gt;Practitioner resource&lt;/a&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Patient identity services
+    &lt;ul&gt;
+      &lt;li&gt;Wrap existing patient administration systems across Wales, the enterprise master patient index and the Welsh Demographic Service into a simple HL7 FHIR &lt;a href=&quot;https://www.hl7.org/fhir/patient.html&quot;&gt;Patient resource&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Results reporting and requesting services
+    &lt;ul&gt;
+      &lt;li&gt;Wrap existing vendor neutral archive of results from the national laboratory information management system as a FHIR &lt;a href=&quot;https://www.hl7.org/fhir/diagnosticreport.html&quot;&gt;Diagnostic report resource&lt;/a&gt; or &lt;a href=&quot;https://www.hl7.org/fhir/imagingstudy.html&quot;&gt;Imaging study resource&lt;/a&gt;.&lt;/li&gt;
+      &lt;li&gt;Create new requesting service based on HL7 FHIR &lt;a href=&quot;https://www.hl7.org/fhir/procedurerequest.html&quot;&gt;ProcedureRequest resource&lt;/a&gt; which acts as a concierge handling and delegating multiple different types of request to our existing underlying laboratory and radiology systems.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;New e-Obs repository to include HL7 FHIR &lt;a href=&quot;https://www.hl7.org/fhir/observation.html&quot;&gt;Observation&lt;/a&gt; resource permitting storage and retrieval of observations such as pulse, blood pressure and temperature.&lt;/li&gt;
+  &lt;li&gt;Appointments and scheduling including providing federated read-only views initially across our multiple PAS and radiology services to provide &lt;a href=&quot;https://www.hl7.org/fhir/episodeofcare.html&quot;&gt;Episode of care resources&lt;/a&gt;, &lt;a href=&quot;https://www.hl7.org/fhir/encounter.html&quot;&gt;Clinical encounters&lt;/a&gt; and &lt;a href=&quot;https://www.hl7.org/fhir/appointment.html&quot;&gt;Appointments&lt;/a&gt;. Such a service could be used by professionals and citizens alike to see upcoming appointments for example.&lt;/li&gt;
+  &lt;li&gt;Reference data services including the UK-wide organisational data services (ODS) to create FHIR endpoints including &lt;a href=&quot;https://www.hl7.org/fhir/organization.html&quot;&gt;Organisation&lt;/a&gt;, &lt;a href=&quot;https://www.hl7.org/fhir/healthcareservice.html&quot;&gt;Service&lt;/a&gt; and &lt;a href=&quot;https://www.hl7.org/fhir/location.html&quot;&gt;Location&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Centralised logging and audit services, exposing our existing national audit service as a FHIR &lt;a href=&quot;https://www.hl7.org/fhir/auditevent.html&quot;&gt;Audit event resource&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;These would form a bare-bones set of services that could be used by a new generation of applications providing the right information for users at the right time, whether professional, citizen or their delegate. In line with an evolutionary approach, we need to recognise the challenges ahead including:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;A robust approach to citizen consent in order to control how and why their health data is shared.&lt;/li&gt;
+  &lt;li&gt;We need to start thinking about how &lt;a href=&quot;http://microservices.io/patterns/apigateway.html&quot;&gt;“API gateways”&lt;/a&gt; could be used across our health enterprise.&lt;/li&gt;
+  &lt;li&gt;To work with industry on how we can enable an ecosystem of healthcare software, much like the Amazon AWS Serverless Application Model I have discussed &lt;a href=&quot;/clinical-informatics/2017/12/04/serverless.html&quot;&gt;previously in a blog post on “Serverless in healthcare”&lt;/a&gt;.  How can we safely make use of a cloud-hosted service that is the result of machine learning that can tell us whether a chest x-ray is normal or abnormal? What are the technical and legal requirements we must solve to do that?&lt;/li&gt;
+  &lt;li&gt;To work to move from a capital expenditure funding model to a revenue-based approach, in keeping with building cross-functional teams that can create and improve the services which make up our platform.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Thank you,&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;further-reading&quot;&gt;Further reading&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;/clinical-informatics/2017/10/19/data-driven.html&quot;&gt;Data driven healthcare information technology&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Strategy - focus, focus focus!&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&quot;/clinical-informatics/2018/01/19/focus-focus-focus.html&quot;&gt;Part 1 : The importance of strategy : focus&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&quot;/clinical-informatics/2018/01/19/focus-challenges.html&quot;&gt;Part 2 : The challenges we face in delivering the vision&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&quot;/clinical-informatics/2018/01/19/focus-solutions.html&quot;&gt;Part 3 : Pragmatic solutions to those challenges&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">This is part three of a three-part series on why and how we should be building an open digital health platform in Wales. Part one was a high-level overview of how standards and interoperability are critical in building a digital ecosystem. Part two assessed our current messaging-based architecture and highlighted the benefits of an API-first enterprise architecture together with the new technologies that have facilitated the move to cloud computing in other industries. This part ties together these strands into a manifesto for phase 1 of building our open platform.</summary></entry><entry><title type="html">An open digital health platform: an API-first approach</title><link href="https://www.wardle.org/digital-platform/2018/03/03/platform-wales-2.html" rel="alternate" type="text/html" title="An open digital health platform: an API-first approach" /><published>2018-03-03T03:03:03+00:00</published><updated>2018-03-03T03:03:03+00:00</updated><id>https://www.wardle.org/digital-platform/2018/03/03/platform-wales-2</id><content type="html" xml:base="https://www.wardle.org/digital-platform/2018/03/03/platform-wales-2.html">&lt;blockquote&gt;
+  &lt;p&gt;This is part two of a three-part series on why and how we should be building an open digital health platform in Wales.&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;/digital-platform/2018/03/03/platform-wales-1.html&quot;&gt;Part one&lt;/a&gt; is a high-level overview of how standards and interoperability are critical in building a digital ecosystem. This part assesses our current messaging-based architecture and highlights the benefits of an API-first enterprise architecture together with the new technologies that have facilitated the move to cloud computing in other industries. &lt;a href=&quot;/digital-platform/2018/03/03/platform-wales-3.html&quot;&gt;Part three&lt;/a&gt; ties together these strands into a manifesto for phase 1 of building our open platform.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So, what is the most effective overall enterprise architecture that facilitates modern interoperability and an ecosystem, as described?&lt;/p&gt;
+
+&lt;p&gt;Any answer to that question must consider legacy systems already supporting clinical care within and between our organisations. There are many such services, such as patient administrative systems (eg HL7v2), laboratory information management systems, user identity and authentication and in Wales, we have an enterprise service bus (ESB)-based messaging architecture linking them together. In addition, there are sometimes explicit, often implicit reference data and rules and heuristics built into each application and service.&lt;/p&gt;
+
+&lt;p&gt;The first consideration is whether those services and applications currently deployed can support both robust interoperability and our ecosystem project. The second consideration is, if they cannot, how can we most effectively use what we have to do so?&lt;/p&gt;
+
+&lt;h1 id=&quot;can-our-current-architecture-support-interoperability-and-an-ecosystem&quot;&gt;Can our current architecture support interoperability and an ecosystem?&lt;/h1&gt;
+
+&lt;p&gt;An ESB-architecture is one example of an event-driven architecture connecting disparate software without tight-coupling. An ESB is the typical technology to use in a Service Orientated Architecture (SOA) which were most popular several years ago. For example, there are a set of services and applications supporting the care of patients on dialysis units across Wales which are supported by taking a live real-time feed of messages of laboratory results and persisting those data into a repository for that purpose.&lt;/p&gt;
+
+&lt;p&gt;The ESB has supported integration, but it has required work &lt;em&gt;for all parties&lt;/em&gt;, internal and external, to perform that integration. Normally, an ESB will adopt a standards-based messaging protocol and so data are sent within a data “envelope”, usually SOAP, reflecting the technology of the time. This solves interoperability from a technical standpoint, but semantic and legal interoperability are out-of-scope. The ESB is therefore a component of an event-driven SOA.&lt;/p&gt;
+
+&lt;p&gt;Similarly, as an event-driven architecture, it can be difficult to handle long-running business processes and orchestrate workflow across services. In addition, while applications and services are disconnected, separated by the ESB, the overall architecture is much like a monolith, but with the added complexity of a distributed system with every component part of a larger stream of messages.&lt;/p&gt;
+
+&lt;p&gt;This makes testing individual components difficult with changes in one system resulting in difficult to predict consequences on other systems. A test environment might need to replicate the entire ecosystem making it more difficult to automate and have confidence that any component or the whole ‘system’ is deterministic.&lt;/p&gt;
+
+&lt;p&gt;In short, an ESB is an &lt;em&gt;internal&lt;/em&gt; solution to enterprise architecture integration. It is,  poorly suited to creating a truly open platform.&lt;/p&gt;
+
+&lt;h1 id=&quot;what-can-we-learn-from-cloud-computing-and-modern-architectural-design&quot;&gt;What can we learn from cloud computing and modern architectural design?&lt;/h1&gt;
+
+&lt;p&gt;We have seen a revolution in both how data can be stored and how we can write software that operates on those data; we have &lt;em&gt;cloud computing&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Cloud computing brings together on-demand scalability and efficiency allowing organisations to consume storage and computing power to meet demand. Instead of running your own database in your own data centre, you can delegate its operation, backup and replication to a commercial supplier, normally on a pay-as-you-go basis. Example providers include Amazon AWS, Microsoft Azure and Google Cloud.&lt;/p&gt;
+
+&lt;p&gt;The move to a cloud-based architecture has been predicated upon technological advances and new approaches to the design, creation, testing and deployment of modern applications. However, these advances are not necessarily limited to deployment to the cloud. Technologies such as “containers” can be used in local data centres as well. As such, software code can be built as lightweight portable services deployed in-house or to an external hosting provider anywhere. Indeed, this vendor-neutrality means that in essence we are moving to a future in which hosting data and software services is a commodity. As a result of this flexibility, many enterprises adopt a hybrid approach in which their existing infrastructure continues to run on private networks hosted in private data centres but these are supplemented with new services provided using containers, deployed either in-house or by a cloud provider or in combination.&lt;/p&gt;
+
+&lt;p&gt;Modern application development and operations (such as testing and deployment into live environments) are called “DevOps” and support greater degrees of agility in all steps of the software lifecycle so that development becomes more modular, modules become more isolated and independently test-able, and changes to those modules can be committed, tested and even deployed with little or no manual intervention. We know that modern technology companies like Google deploy billions of containers per week across their cloud infrastructure; to do so requires automation in deployment and scaling to meet their ever-increasing demands for computing power.&lt;/p&gt;
+
+&lt;p&gt;A new type of cloud-based architecture - Serverless - is increasingly popular, recognising that application developers wish to focus on their core business of creating value via writing software and not be concerned about the infrastructure that is needed to run that software. Serverless allows developers to write a function, which could perform any imagined well-defined computing task, and deploy it easily. Such a function can be used by other software components but the provider is responsible for automatically scaling the service to meet demand, expanding or contracting the resources required to computing power responsive to user need.&lt;/p&gt;
+
+&lt;p&gt;We are now seeing a new market for software code, in which re-usable independent modules of code, deployed as containers as “microservices” or as “serverless” functions, can be knitted together to create functionality for end-users.  These modules might look simple on the surface but hide (abstract) a great deal of complexity to deliver their results. Have a look at the speech recognition services now available from &lt;a href=&quot;https://aws.amazon.com/transcribe/?hp=tile&amp;amp;so-exp=below&quot;&gt;Amazon&lt;/a&gt; and &lt;a href=&quot;https://cloud.google.com/speech/&quot;&gt;Google&lt;/a&gt;. Developers using those services simply send an audio file and receive back a text file containing the transcribed text.&lt;/p&gt;
+
+&lt;p&gt;It is easy to see that such an architecture permits vendor-neutrality, in which we could substitute one service for another based on quality and price, with our changes limited to changing how we locate the resources used to knit together an end-to-end solution for our users. Substitutability is an important architectural principle for future-proofing and requires us to adopt standardised and open application programming interfaces (APIs).&lt;/p&gt;
+
+&lt;p&gt;I am convinced that we will see an increasingly sophisticated marketplace providing on-demand computing services in the next five years; for example, see the new &lt;a href=&quot;https://aws.amazon.com/serverless/serverlessrepo/&quot;&gt;Amazon Serverless Application Repository&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;As such, we should recognise that cloud computing should inform our architectural designs for healthcare:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Virtually unlimited computing power on an as-required, scalable basis&lt;/li&gt;
+  &lt;li&gt;Openness, modularisation and abstraction of software to appropriately ‘decouple’ software and thus facilitating evolutionary change.&lt;/li&gt;
+  &lt;li&gt;Sophisticated support for “DevOps” in the develop-test-deploy software lifecycle with a focus on automation and rapid ‘agile’ development.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;an-api-first-approach-for-an-open-architecture&quot;&gt;An API-first approach for an open architecture&lt;/h1&gt;
+
+&lt;p&gt;It is not difficult to see how healthcare has lagged behind other industries in adopting a more “open” approach to information technology. Most healthcare software has traditionally been dominated by vendors who supply whole-organisation scale software products that are usually ‘closed’ systems.&lt;/p&gt;
+
+&lt;p&gt;Open systems provide interoperability so that different components from different vendors can communicate and exchange meaningful information. In addition, open systems support &lt;em&gt;portability&lt;/em&gt; of applications and services. Portability means that software can be written once and deployed without change irrespective of the environment in which it is deployed. Portability requires standardisation and usually some form of runtime configuration and resource location. For example, to use a health example, if an application expects to use HL7 FHIR to fetch blood results and perform analytics, it should be possible to deploy that application within any ecosystem that provides those HL7 FHIR endpoints. These endpoints are what we mean by an standard “API”.&lt;/p&gt;
+
+&lt;p&gt;So what is an “API”? An API is an &lt;em&gt;application programming interface&lt;/em&gt;. Crudely, it is a set of usually related software functions that, for our purposes, can be called by one system to execute software functionality in another. Essentially, an API is an abstraction, a way of decoupling how a software service is used from its implementation. In the example above, you do not need to know how Amazon or Google have implemented their speech transcription service, you send the text file and get back text. For all you know, they have thousands of transcriptionists sitting at computers listening with headphones and typing! In addition, you do not really care whether they change how they implement the transcription service, so long as you get back the results you expect. They could switch over to a new implementation and you wouldn’t know. The use of APIs has meant you have isolated different modules of software from each other and permitted work to continue independently.&lt;/p&gt;
+
+&lt;p&gt;For example, we might expect to be able to make use of a module to identify acute kidney injury (AKI). Currently, this could simply implement the &lt;a href=&quot;https://www.england.nhs.uk/akiprogramme/aki-algorithm/&quot;&gt;national AKI algorithm&lt;/a&gt; but, could &lt;em&gt;also&lt;/em&gt; be used to inform and develop the next-generation of algorithm that could perhaps identify patients &lt;em&gt;before&lt;/em&gt; there is kidney injury and be &lt;em&gt;then&lt;/em&gt; replaced with more sophisticated algorithms with different and hopefully improved receiver-operator curves for the patient group at hand.&lt;/p&gt;
+
+&lt;p&gt;Not all APIs are “standard”. Proprietary APIs might allow interoperability but at the expense of new work, perhaps on both sides, to perform integration. Similarly, proprietary interfaces usually expose implementation details so that rather than being appropriately decoupled, the two separate software systems become entwined and dependent -  much like a limpet clinging to a rock than flexible and interchangeable plugs and sockets we all use for our electrical devices in the home!&lt;/p&gt;
+
+&lt;p&gt;A focus on open and standard APIs is key to creating a powerful ecosystem so that both internal and external developers can contribute and work independently. Our ecosystem project in Wales must not simply cater to external users but &lt;em&gt;be&lt;/em&gt; the platform on which new innovation can occur both internally and in partnership with others. This is a paradigm shift from the closed approach we have seen in healthcare in the past and treats external developers as first-class citizens in our digital health ecosystem.&lt;/p&gt;
+
+&lt;p&gt;Our efforts in Wales on standards, interoperability and the digital ecosystem must therefore build a ‘connected business platform’ usable by developers, internal and external, on behalf of users, across health and care and most importantly the patient and their delegates, to support a transformation in how we deliver healthcare.&lt;/p&gt;
+
+&lt;h1 id=&quot;privacy-and-trust&quot;&gt;Privacy and trust&lt;/h1&gt;
+
+&lt;p&gt;It is important not to confuse “openness” with a lack of data security. Openness, at a principle in software architecture, relates to interoperability.  For example, TCP/IP, the technical underpinnings of the Internet, is an open protocol but that does not stop it being used by your bank to offer online banking to authorise and execute financial transactions.&lt;/p&gt;
+
+&lt;p&gt;An open architecture does not mean that confidential patient information is made accessible to all. Any design for a target architecture for Wales must take into account the need for authentication (‘you are you say are’), authorisation (‘you are allowed to do what you are asking to do’) and verifiable logging (‘we are watching what you do’) as well as need to handle different levels of sensitive information. For example, it would be expected that sexual health, genomic, mental health and social care data might be treated differently to general health data.&lt;/p&gt;
+
+&lt;p&gt;Similarly, not only might accessibility depend on the type of data, but the intended use of those data. For example, so that data made available for direct patient care might depend on the direct care relationship between citizen and professional while aggregated data for a clinical service or organisation used for planning and performance management and data made available to researchers would be handled quite differently.&lt;/p&gt;
+
+&lt;p&gt;It is difficult to ensure privacy and trust when one uses as ‘push’ based messaging fabric like an ESB because data are sent to services who consume or decide to discard those messages. An API-based approach is usually a ‘pull’ service, in which a client requests something from a service and so a service can decide whether to satisfy that request by virtue of authentication and authorisation and can log such access via a logging service. Of course, an API-based approach can adapt to a ‘push’ model usually via ‘publish-and-subscribe’ in which interested clients subscribe to notifications from a service.&lt;/p&gt;
+
+&lt;h1 id=&quot;so-what-next&quot;&gt;So what next?&lt;/h1&gt;
+
+&lt;p&gt;The next question to ask is, what are the next steps that we need to take to build an open platform in Wales using these architectural design principles? I have tried to answer this in my &lt;a href=&quot;/digital-platform/2018/03/03/platform-wales-3.html&quot;&gt;next post&lt;/a&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;/digital-platform/2018/03/03/platform-wales-3.html&quot;&gt;Part three&lt;/a&gt; ties together these strands into a manifesto for phase 1 of building our open platform.&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><summary type="html">This is part two of a three-part series on why and how we should be building an open digital health platform in Wales. Part one is a high-level overview of how standards and interoperability are critical in building a digital ecosystem. This part assesses our current messaging-based architecture and highlights the benefits of an API-first enterprise architecture together with the new technologies that have facilitated the move to cloud computing in other industries. Part three ties together these strands into a manifesto for phase 1 of building our open platform.</summary></entry><entry><title type="html">An open digital health platform: standards and interoperability</title><link href="https://www.wardle.org/digital-platform/2018/03/03/platform-wales-1.html" rel="alternate" type="text/html" title="An open digital health platform: standards and interoperability" /><published>2018-03-03T03:03:03+00:00</published><updated>2018-03-03T03:03:03+00:00</updated><id>https://www.wardle.org/digital-platform/2018/03/03/platform-wales-1</id><content type="html" xml:base="https://www.wardle.org/digital-platform/2018/03/03/platform-wales-1.html">&lt;blockquote&gt;
+  &lt;p&gt;This is part one of a three-part series on why and how we should be building an open digital health platform in Wales.&lt;/p&gt;
+
+  &lt;p&gt;This part is a high-level overview of how standards and interoperability are critical in building a digital ecosystem. &lt;a href=&quot;/digital-platform/2018/03/03/platform-wales-2.html&quot;&gt;Part two&lt;/a&gt; assesses our current messaging-based architecture and highlights the benefits of an API-first enterprise architecture together with the new technologies that have facilitated the move to cloud computing in other industries. &lt;a href=&quot;/digital-platform/2018/03/03/platform-wales-3.html&quot;&gt;Part three&lt;/a&gt; ties together these strands into a manifesto for phase 1 of building our open platform.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I firmly believe that Wales has potential to be the best place in the World for digitally-enabled healthcare and innovation.&lt;/p&gt;
+
+&lt;p&gt;But we need to change what we have been doing. We need to move away from the single portal approach advocated by some and move to building an open platform, as I have &lt;a href=&quot;/clinical-informatics/2017/10/19/data-driven.html&quot;&gt;previously discussed&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In this three-part series, I bring together a focus on standards and interoperability with enabling a digital ecosystem in order to create that open platform.&lt;/p&gt;
+
+&lt;h1 id=&quot;standards-and-interoperability&quot;&gt;Standards and interoperability&lt;/h1&gt;
+
+&lt;p&gt;Our “Once-for-Wales” task and finish group has finished its work and we have recommended a new Welsh Technical Standards Board (WTSB) be set up to define and mandate the technical and semantic standards for interoperability across our principality. We have recognised that there are many services and system functions, such as patient demographics and identity, that should be provided nationally for every citizen in Wales across all of our health and social care organisations.&lt;/p&gt;
+
+&lt;p&gt;Likewise, we recognise that we must be able to exchange information with others, within Wales and without; including organisations outside of Wales. The latter is vital for patients who live on the border between Wales and England, and for those specialist service providers who care for patients from a different region. For instance, many specialist services in North Wales are provided from Liverpool, and we send patients from South Wales to either Bristol, Birmingham or London for highly specialist support.&lt;/p&gt;
+
+&lt;p&gt;But information exchange is not simply limited to health. We need to communicate with and build workflows across multiple disciplinary ‘borders’ including social care, the third-sector, academic researchers and service planners. Such communications must be acceptable to citizens, requiring implicit or explicit consent depending on purpose and level of aggregation.&lt;/p&gt;
+
+&lt;p&gt;Some people think we should write national one-size-fits-all applications and think about the interoperability aspects later. I would argue that interoperability is not something that can be “added later on” but must be designed at the outset, understanding that we must not only support technical interoperability but exchange semantically-meaningful information within a broader legal data sharing environment:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Legal interoperability covers the broader environment of laws, policies, procedures and
+cooperation agreements needed to allow the seamless exchange of information
+between different organisations, regions and countries.&lt;/p&gt;
+
+  &lt;p&gt;Semantic interoperability refers to the ability to ensure that the precise meaning of
+exchanged information is unambiguously interpretable by any other system, service or
+user.&lt;/p&gt;
+
+  &lt;p&gt;Technical interoperability means the ability of two or more information and
+communication technology applications, to accept data from each other and perform a
+given task in an appropriate and satisfactory manner without the need for extra
+operator intervention.&lt;/p&gt;
+
+  &lt;p&gt;from &lt;a href=&quot;https://ec.europa.eu/health//sites/health/files/ehealth/docs/ev_20121107_wd02_en.pdf&quot;&gt;eHealth Governance Initiative - Discussion paper on semantic and technical interoperability&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The important standards that should underpin our new open platform are SNOMED CT and HL7-FHIR. I have covered both of these technologies at length previously including a &lt;a href=&quot;/cis-design/2017/05/02/data-standards.html&quot;&gt;simple overview in this post&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;digital-ecosystems&quot;&gt;Digital ecosystems&lt;/h1&gt;
+
+&lt;p&gt;At the same time, many of us in Wales recognise the need to prioritise our limited resources and form partnerships with others. We cannot do everything ourselves and we should bring in partners who have strengths to complement our own.&lt;/p&gt;
+
+&lt;p&gt;In keeping with this view, Welsh Government have funded a new &lt;a href=&quot;https://www.lifescienceshubwales.com/dhew/&quot;&gt;Digital Health Ecosystem&lt;/a&gt; bringing together the Life Sciences Hub in Cardiff with the NHS Wales Informatics Service to:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;accelerate the delivery and adoption of the latest digital solutions to improve patient outcomes and reduce costs&lt;/li&gt;
+  &lt;li&gt;create a pathway for access to health and care data&lt;/li&gt;
+  &lt;li&gt;foster innovation from all stakeholders, encouraging cross sector cooperation and implementation&lt;/li&gt;
+  &lt;li&gt;support the development of new products and services to drive business growth, job security and creation, ensuring prosperity for all.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In essence, we are starting the journey towards opening up our architecture in order to make it easier to work in partnership with others. We need to identify the strengths and weaknesses across both the public and private sectors and create an ecosystem that permits us to leverage the strengths of both.&lt;/p&gt;
+
+&lt;p&gt;The question is, how can we build healthcare information technology architectures that can connect with external systems and data sources outside of our traditional walls?  It should not be surprising that robust interoperability is essential to delivering a working digital ecosystem in Wales.&lt;/p&gt;
+
+&lt;p&gt;The next question to ask is, do we currently have an architecture that can enable robust interoperability and satisfy our ambitions for our digital health ecosystem, and if we don’t, then we must also ask what we need to do in order to do so? Some of the answers are in the &lt;a href=&quot;/digital-platform/2018/03/03/platform-wales-2.html&quot;&gt;next post&lt;/a&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;/digital-platform/2018/03/03/platform-wales-2.html&quot;&gt;Part two&lt;/a&gt; assesses our current messaging-based architecture and highlights the benefits of an API-first enterprise architecture together with the new technologies that have facilitated the move to cloud computing in other industries. &lt;a href=&quot;/digital-platform/2018/03/03/platform-wales-3.html&quot;&gt;Part three&lt;/a&gt; ties together these strands into a manifesto for phase 1 of building our open platform.&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><summary type="html">This is part one of a three-part series on why and how we should be building an open digital health platform in Wales. This part is a high-level overview of how standards and interoperability are critical in building a digital ecosystem. Part two assesses our current messaging-based architecture and highlights the benefits of an API-first enterprise architecture together with the new technologies that have facilitated the move to cloud computing in other industries. Part three ties together these strands into a manifesto for phase 1 of building our open platform.</summary></entry><entry><title type="html">So I built an electronic patient record system in my spare time…</title><link href="https://www.wardle.org/patientcare/2018/02/19/so-I-built-an-EPR.html" rel="alternate" type="text/html" title="So I built an electronic patient record system in my spare time..." /><published>2018-02-19T19:19:19+00:00</published><updated>2018-02-19T19:19:19+00:00</updated><id>https://www.wardle.org/patientcare/2018/02/19/so-I-built-an-EPR</id><content type="html" xml:base="https://www.wardle.org/patientcare/2018/02/19/so-I-built-an-EPR.html">&lt;p&gt;This blog post is based on a series of threads I posted on Twitter, which I have refined and expanded for this post.&lt;/p&gt;
 
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/1zZtnV44vgU&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 
@@ -974,421 +1280,4 @@ The key to controlling complexity is a good domain model, a model that goes beyo
 
 &lt;p&gt;There is another paradox here in that I keep repeating in this forum and others, that we don’t know all the stuff we need to solve. We need to look really hard at people who think that they have all of the answers, because they don’t. Getting everyone in a room, and listing the requirements, building a technical specification and building it like it was a bridge, is not the way to build software.&lt;/p&gt;
 
-&lt;p&gt;Be ambitious, be realistic. Have a vision and plan to deliver that vision incrementally at pace.&lt;/p&gt;</content><author><name></name></author><summary type="html">The paradox of ambition</summary></entry><entry><title type="html">The paradox of control: Enabling innovation</title><link href="https://www.wardle.org/clinical-informatics/2017/12/05/enabling-innovation.html" rel="alternate" type="text/html" title="The paradox of control: Enabling innovation" /><published>2017-12-05T08:40:40+00:00</published><updated>2017-12-05T08:40:40+00:00</updated><id>https://www.wardle.org/clinical-informatics/2017/12/05/enabling-innovation</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/12/05/enabling-innovation.html">&lt;p&gt;The &lt;a href=&quot;http://gov.wales/docs/dhss/publications/151211reporten.pdf&quot;&gt;Informed Health and Care Strategy, 2015&lt;/a&gt; sets out a clear vision for Wales to use digital technology and online services to support and enable care. The strategy is divided into four workstreams:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Information for you&lt;/li&gt;
-  &lt;li&gt;Supporting Professionals&lt;/li&gt;
-  &lt;li&gt;Improvement and Innovation&lt;/li&gt;
-  &lt;li&gt;A Planned Future&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.003.jpeg&quot; alt=&quot;Wardle Digital Health.003&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Delivery of this vision would result in Wales uniquely blending socialised universal prudent healthcare with modern state-of-the-art technology to provide a responsive, fair and quality service.&lt;/p&gt;
-
-&lt;p&gt;But we have to question whether we have the current organisational and governance structures within NHS Wales to most effectively implement this strategy? Historically, there has been a lack of pace in the delivery of individual projects that, together, should be incrementally fulfilling important components of the wider vision. Together, those individual projects should be stepping stones on which we deliver that vision.&lt;/p&gt;
-
-&lt;p&gt;Wales is a unique place to deliver an effective healthcare information technology strategy given its size and our lack of purchaser-provider split and as a result, technology should be being used to effect broad-based transformational change. It is disappointing that we have not been able to make more progress but with the right changes, Wales can become a global example of a modern, forward-thinking healthcare economy underpinned by data standards, interoperability and an open platform to combine “Once for Wales” solutions with a mixed and thriving economy built on innovation.&lt;/p&gt;
-
-&lt;h1 id=&quot;a-paradox-of-control&quot;&gt;A paradox of control&lt;/h1&gt;
-
-&lt;p&gt;Transformational change, enabled by technology, must be driven from the bottom-up, from those who deliver healthcare permitting incremental development and innovation while at the same time lowering risk. However, top-down governance must ensure that solutions are standards-compliant, fit-for-purpose and safe as well as checking that developments are not orthogonal to the overall strategic vision.&lt;/p&gt;
-
-&lt;p&gt;There is an important paradox in many health services, including Wales, is that there is a tendency to centralise the day-to-day management and delivery of individual products and yet high-level strategic and prioritisation decisions are decentralised, haphazard and dependant on capital funding with little or no consideration or control as to how those projects will fit into a wider technical healthcare enterprise architecture.&lt;/p&gt;
-
-&lt;h1 id=&quot;performance-management-and-delivery&quot;&gt;Performance management and delivery&lt;/h1&gt;
-&lt;p&gt;Part of the responsibility of being part of “learning organisations” is to measure our effectiveness and performance, but do we really do that and how can we do that? What formal processes do we have to measure, for example, satisfaction with our clinical applications? Likewise, how is NHS Wales held to account in terms of performance management when delivering transformational change?&lt;/p&gt;
-
-&lt;p&gt;We should be asking the following questions:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;who is responsible for determining and prioritising the high-level clinical requirements in each of the four workstreams in the strategy?&lt;/li&gt;
-  &lt;li&gt;who is responsible for looking at the common themes between the workstreams and designing a national architecture that will enable delivery of those workstreams as well as giving consideration to future needs?&lt;/li&gt;
-  &lt;li&gt;who is tasked with taking items of user-need and translating these needs into the design of software to meet those needs?&lt;/li&gt;
-  &lt;li&gt;who is responsible for developing an iterative roadmap that delivers incremental benefits at pace and yet can deliver increasing functionality over time?&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;If we cannot answer those questions, then we have a duty to change our organisational, governance and technical structures so that we can all be held to account. Unfortunately, it is likely that the different organisations within complex multi-organisation enterprises such as NHS Wales will all attribute the failure of delivery to each other because delivery is dependent on so many interactions between so many levels of multiple, highly hierarchical organisations all with different models of funding and sometimes contradictory opinions on prioritisation.&lt;/p&gt;
-
-&lt;p&gt;It is clear to me that we need to change our approach.&lt;/p&gt;
-
-&lt;h1 id=&quot;collaboration-and-an-appropriate-technical-infrastructure&quot;&gt;Collaboration and an appropriate technical infrastructure&lt;/h1&gt;
-
-&lt;p&gt;Fundamentally, we need a new collaborative model in which a national open technical platform, adopting robust industry standards, underpins the development of national and local applications as well as supporting innovation from organisations both within the NHS and from the commercial sector.&lt;/p&gt;
-
-&lt;p&gt;Such a collaborative model must be underpinned by:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;the adoption of technical standards and open application programming interfaces&lt;/li&gt;
-  &lt;li&gt;a renewed focus on a health enterprise “platform” for Wales, underpinning by a re-imagining of our software architecture&lt;/li&gt;
-  &lt;li&gt;encouraging the development and evaluation of innovative projects by all&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Wales is a unique place to leverage modern information technology in order to deliver transformational change for our clinical services, providing important support for patients, clinicians and managers. With the right technical architecture and organisational structures, Wales can collaborate to safely deliver the Informed Health and Care Strategy and deliver tangible benefit for our citizens.&lt;/p&gt;
-
-&lt;p&gt;We must start to openly debate the most effective way of delivering that strategy.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">The Informed Health and Care Strategy, 2015 sets out a clear vision for Wales to use digital technology and online services to support and enable care. The strategy is divided into four workstreams:</summary></entry><entry><title type="html">Serverless in healthcare</title><link href="https://www.wardle.org/clinical-informatics/2017/12/04/serverless.html" rel="alternate" type="text/html" title="Serverless in healthcare" /><published>2017-12-04T22:22:22+00:00</published><updated>2017-12-04T22:22:22+00:00</updated><id>https://www.wardle.org/clinical-informatics/2017/12/04/serverless</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/12/04/serverless.html">&lt;p&gt;On serverless:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Serverless computing allows users to run code without provisioning or managing any underlying system or application infrastructure, and they automatically scale to support increasing or decreasing loads. 
-&lt;a href=&quot;https://blogs.gartner.com/andrew-lerner/2017/07/21/serverless-is-not-networkless/&quot;&gt;https://blogs.gartner.com/andrew-lerner/2017/07/21/serverless-is-not-networkless/&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;A serverless architecture forces an enterprise architectural design that modularises and isolates code. Rather than creating a full-stack enterprise application containing components for user interactions, business logic, business rules and a persistence layer, one can break-up a solution into its functional constituents isolated from one another.&lt;/p&gt;
-
-&lt;p&gt;A serverless function such as &lt;a href=&quot;https://cloudacademy.com/blog/microsoft-azure-functions-vs-google-cloud-functions-fight-for-serverless-cloud-domination-continues/&quot;&gt;AWS Lambda, Google Cloud Functions or Microsoft Azure Functions&lt;/a&gt; can be written and deployed virtually instantly, with the hosting provider automatically scaling to manage the load. Ideally, such a function should do one or a few things very well, perhaps offering a set of application programming interfaces for clients to use with clear documentation as to how it can be called and what results might be expected. As such, the function is isolated and can be tested in lots of ways to ensure that it provides the results it is contracted to provide.&lt;/p&gt;
-
-&lt;p&gt;However, writing small, well-defined services that provide a limited range of function is a characteristic of any microservice. What makes a serverless approach different is that managing the deployment and scaling of that service is delegated to the hosting provider, such as Amazon, Google or Microsoft.&lt;/p&gt;
-
-&lt;p&gt;As a result, a rarely used operation may take up no computing resources until it is triggered by an event, such as a HTTP request. Rather than trying to implement all functionality into a single or clustered server, one can break-up that functionality into separate functions. For instance, rather than writing a service to accept uploaded image files, process them, create thumbnails and then serve them as a photo-album, one might write a range of individual separate serverless functions to handle each step of that process so that, the thumbnail generation is automatically executed after a file is uploaded.&lt;/p&gt;
-
-&lt;p&gt;One then imagines an overall application being simply a range of different independent pieces of functionality stitched together in a declarative manner to solve a specific range of problems.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“This declarative approach then becomes a key driver of architecture. The application speaks the language of the domain and it’s easy to detect and fix force-fits, gaps, misrepresentations and erroneous assumptions in the application each time the implementation is reviewed against the domain. A declarative interface makes it easy to adapt to changes in the domain model.”
-&lt;a href=&quot;http://www.pragatisoftware.com/blog/functional-programming-and-software-architecture&quot;&gt;http://www.pragatisoftware.com/blog/functional-programming-and-software-architecture&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“Functional programs are often organized as, sort of, a data flow graph, rather than a dependency structure. There’s declarative orchestration, right,? You just set up a whole bunch of things and you can see how they are related but you don’t have to, sort of, specify the order in which things happen, and you have referential transparency, right? I hand two values to a function, it will always give me the same value as the output because of referential transparency.”
-&lt;a href=&quot;https://serverless.com/blog/bobby-calderwood-functional-programming-microservices-emit-2017/&quot;&gt;https://serverless.com/blog/bobby-calderwood-functional-programming-microservices-emit-2017/&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;As a result, one is forced to focus on two core perspectives: an &lt;em&gt;overall&lt;/em&gt; perspective that takes in the combined architecture in which multiple microservices are stitched together and a &lt;em&gt;granular&lt;/em&gt; perspective at the level of an individual microservice.&lt;/p&gt;
-
-&lt;h1 id=&quot;healthcare-takes-steps-into-the-cloud&quot;&gt;Healthcare takes steps into the cloud…&lt;/h1&gt;
-
-&lt;p&gt;Many, if not most, health services still run applications on local servers physically sitting on their premises, running on a private intranet inaccessible to the outside world running the day-to-day organisational processes of the business and usually providing clinical information to clinicians as well.&lt;/p&gt;
-
-&lt;p&gt;But things are changing, many years after most industries have made extensive use of cloud-based services, we are now seeing health organisations move to host servers on commodity cloud providers, resulting in a hybrid approach in which some services run locally and others run elsewhere.&lt;/p&gt;
-
-&lt;p&gt;In addition, rather than buying software and installing it for local users, we are starting to see organisations starting to procure platforms-as-a-service (PAAS) in which cloud-based services are used within the enterprise. For instance, in most modern organisations, a previously private intranet is increasingly having new communication channels laid down in order to enable interaction with patients and their devices.&lt;/p&gt;
-
-&lt;p&gt;For instance, some providers now use PAAS-based patient portals such as &lt;a href=&quot;https://www.patientsknowbest.com/&quot;&gt;Patients Know Best&lt;/a&gt; to enable patients to view their records. Such portals are also committing to opening up their data so that patients can choose to share their information with other providers;  for instance have a look at their &lt;a href=&quot;http://dev.patientsknowbest.com/home/fhir-api&quot;&gt;plans for a FHIR API&lt;/a&gt;). Likewise, other cloud-hosted services such as &lt;a href=&quot;http://drdoctor.co.uk/&quot;&gt;DrDoctor&lt;/a&gt; permit organisations to manage their outpatients by providing a platform on which patients can be contacted ahead of appointments to provide reminders and to collect outcome data.&lt;/p&gt;
-
-&lt;p&gt;As such, we already see health organisations making use of cloud-based services for hosting their own infrastructure and by using ready made large-scale off-the-shelf services from other providers.&lt;/p&gt;
-
-&lt;p&gt;As such, we &lt;em&gt;already&lt;/em&gt; have a distributed healthcare platform; it is hosted by our organisations and unfortunately is usually disconnected so that clinical staff in one organisation cannot see health information about their patients from another organisation. Presently, we see healthcare making tentative steps to either move to or adopt cloud hosted services, but these usually remain organisationally-bound.&lt;/p&gt;
-
-&lt;h1 id=&quot;in-parallel-healthcare-is-changing&quot;&gt;In parallel, healthcare is changing…&lt;/h1&gt;
-
-&lt;p&gt;In parallel with these technological changes, we see a range of &lt;a href=&quot;/clinical-informatics/2017/07/07/disruptive-influences-health.html&quot;&gt;disruptive influences in healthcare&lt;/a&gt; highlighting three core changes enabled by new technology:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Changes in models of care&lt;/li&gt;
-  &lt;li&gt;Patients as active participants&lt;/li&gt;
-  &lt;li&gt;‘Hospitals without walls’&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Fundamentally, advances in technology enable a transformation of care. We should look to information technology to re-imagine how citizens interact with their health services. I spoke at a recent &lt;a href=&quot;/clinical-informatics/2017/10/19/data-driven.html&quot;&gt;Digital Health and Care Conference on the benefits of an open platform&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;In summary, I highlighted the importance of modelling data &lt;sup&gt;&lt;a href=&quot;#data-modelling&quot;&gt;a&lt;/a&gt;&lt;/sup&gt; and workflow/process &lt;sup&gt;&lt;a href=&quot;#process-modelling&quot;&gt;b&lt;/a&gt;&lt;/sup&gt;. It has been a source of surprise and frustration that so many efforts to digitise healthcare neglect communication between professionals and with the patient, particularly when information technology has been used so effectively for communication in other domains.&lt;/p&gt;
-
-&lt;p&gt;This is my phase 1 vision of an appropriate enterprise architecture for NHS Wales:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/platform/platform-overall.png&quot; alt=&quot;Platform Overall&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;See that little box, “test requesting and results”. This is what is inside it:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/platform/platform-lab.png&quot; alt=&quot;Platform Lab&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Here we abstract a new notification service that handles notifications to users such as professionals in response to a result being made available by the laboratory.&lt;/p&gt;
-
-&lt;p&gt;Why is this phase 1? Because I see the building blocks of our  architecture becoming increasingly distributed and shared among healthcare providers. Why embed a terminology service within an application when one can pick one off the shelf and use on a subscription or pay-as-you-go model?&lt;/p&gt;
-
-&lt;h1 id=&quot;so-what-could-the-shift-to-a-services-based-economy-mean-for-health&quot;&gt;So what could the shift to a services-based economy mean for health?&lt;/h1&gt;
-
-&lt;p&gt;A microservice economy means that multiple providers will offer small-scale, well-defined software functionality on a pay-as-you-go basis. We heard an announcement last week from Amazon launching their new &lt;a href=&quot;https://aws.amazon.com/blogs/aws/aws-serverless-app-repo/&quot;&gt;AWS serverless application repository&lt;/a&gt; to enable a new marketplace of serverless apps that can be consumed by clients in order to solve real-life problems. I expect other providers to do the same, and there is ongoing work to create &lt;a href=&quot;https://serverless.com/&quot;&gt;toolkits&lt;/a&gt; that permit serverless applications to be hosted by any cloud provider.&lt;/p&gt;
-
-&lt;p&gt;These technological trends mean that we will see large software applications and platforms being broken up into modules and as we progress, we will stitch together functionality from multiple providers to order to create clinical applications.&lt;/p&gt;
-
-&lt;p&gt;If we combine these trends with a need to support cross-organisational working, to make patients “active participants in their care” and create “hospitals without walls”, we can see that we are moving to a distributed, decentralised, data-driven and cloud-hosting mixed environment combining functionality from multiple providers in order to create and run our health services.&lt;/p&gt;
-
-&lt;p&gt;We could see core services providing data access and basic workflow models for each organisation but we will increasingly wish to federate across those services, creating a combined view of all data from multiple organisations. For example, an organisation may own or rent a document repository, probably based on IHE-XDS or FHIR document model and because other organisations also converge on standards-based open services then, subject to citizen consent, those repositories can be federated so we see a list of documents across all repositories.&lt;/p&gt;
-
-&lt;p&gt;Similarly, we could quickly see a marketplace of value-added functions that provide functionality layered upon those core services. For example, we might find a market for advanced natural language processing of unstructured text or services that encapsulate the application of machine learning algorithms to existing and new data. For example, why not rent a service that can, given a citizen’s distributed health record data, identify those taking a particular disease modifying treatment such as methotrexate and monitor and arrange the required three-monthly blood tests to check for signs of bone marrow suppression, renal impairment or liver damage? If that service was provided algorithmically as a microservice, given access to the required data and cost a fraction of a pence per patient, it could replace the administrators and specialist nursing staff whose job it currently is to monitor these patients.&lt;/p&gt;
-
-&lt;h1 id=&quot;healthcare-application-sandboxes&quot;&gt;Healthcare application sandboxes&lt;/h1&gt;
-
-&lt;p&gt;It is easy to see how some serverless resources might work. They may simply provide a HL7 FHIR resource endpoint and allow applications to use its application programming interface as if it were hosted locally. Imagine a distributed audit trail functionality, made available via the &lt;a href=&quot;https://www.hl7.org/fhir/auditevent.html&quot;&gt;HL7 FHIR AuditEvent endpoint&lt;/a&gt;. FHIR servers can support one or many different types of resource and it is not difficult to imagine a single serverless application providing a &lt;a href=&quot;https://www.hl7.org/fhir/capabilitystatement.html&quot;&gt;capability statement&lt;/a&gt; documenting only a single end-point and providing that functionality in an automatically scalable fashion.&lt;/p&gt;
-
-&lt;p&gt;Such a model would be fine for a single organisation, but how can that work in a distributed fashion?&lt;/p&gt;
-
-&lt;p&gt;But we need to create a distributed platform that means that we can plug-and-play these different microservices and make them useful to the wider health economy. To do that, we must design a sandbox environment in which user facing applications running on desktops, web-pages and mobile devices and backend serverless applications can be dropped and expect to work.&lt;/p&gt;
-
-&lt;p&gt;Much like Apple has “app stores” for mobile and desktop applications and Google has similar for Android, we need to consider what architecture is required for user-facing and serverless applications to be deployed easily and quickly into our distributed healthcare economy. Amazon has introduced the &lt;a href=&quot;https://aws.amazon.com/about-aws/whats-new/2016/11/introducing-the-aws-serverless-application-model/&quot;&gt;AWS Serverless Application Model&lt;/a&gt; which annotates a serverless application with information about its dependent resource types needed for its proper operation.&lt;/p&gt;
-
-&lt;p&gt;So how could this work for our methotrexate monitoring example serverless application? It needs to be provided with a sane runtime environment from which it can safely access the information it needs and to take any actions that are necessary. So what does it need access to?&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;a test results service to get results including renal profile, full blood count and liver function tests&lt;/li&gt;
-  &lt;li&gt;a test requesting service&lt;/li&gt;
-  &lt;li&gt;a document or clinical narrative repository&lt;/li&gt;
-  &lt;li&gt;a audit event logging service&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;In software engineering, we frequently use a concept called &lt;em&gt;dependency injection&lt;/em&gt; to pass through dependencies to a subsystem so that we can configure it appropriately and appropriately isolate separate functionality. As such, much like the AWS Serverless application model referenced above, we need to consider how we glue together sensitive health data with different services, perhaps provided by multiple different vendors?&lt;/p&gt;
-
-&lt;p&gt;Given that all the functionality our serverless application needs is provided by HL7 FHIR resource endpoints (&lt;a href=&quot;https://www.hl7.org/fhir/diagnosticreport.html&quot;&gt;diagnostic reports&lt;/a&gt;, &lt;a href=&quot;https://www.hl7.org/fhir/procedurerequest.html&quot;&gt;procedure request&lt;/a&gt;, &lt;a href=&quot;https://www.hl7.org/implement/standards/fhir/documentreference.html&quot;&gt;documents&lt;/a&gt; and &lt;a href=&quot;https://www.hl7.org/fhir/auditevent.html&quot;&gt;audit&lt;/a&gt;), it might be possible to simply pass in those endpoints as dependencies either when the service is provisioned or even when it is called.&lt;/p&gt;
-
-&lt;p&gt;And now the logical question becomes, how do we manage looking up and accessing resources across a distributed health enterprise, particularly when we are dealing with sensitive private data?&lt;/p&gt;
-
-&lt;p&gt;As I wrote in the &lt;a href=&quot;[next post](/clinical-informatics/2017/08/20/disruptive-influences-future.html)&quot;&gt;part three of my disruptive influences series&lt;/a&gt;:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Applications running on Apple’s iOS provide a useful analogy. In order to gain access to components of the underlying device and its operating system, such as the camera, the photo archive, location services etc, the application must use the appropriate API which forces explicit user consent. This “sandbox” environment means that an application is prevented from accessing resources to which consent has not been provided and presumably can log each and every attempt should that be required.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Can we do the same for health applications and services? It seems to me that we can create tremendous value from healthcare data - for patients, for health professionals and for society - but the foundation must be to allow that information to be organised in such a way that we can make it “universally accessible and useful” &lt;em&gt;subject to individual consent&lt;/em&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The answer to our distributed future, built declaratively to glue together distributed data and services, is underpinned by a robust model of citizen consent that itself is hardwired into the systems to manage resource lookup and access. We now need to start thinking about how this will work, and how a “healthcare application model” might operate so that we can make use of new technology to improve the care of our patients. We need to start talking about how an “API gateway” might work for healthcare.&lt;/p&gt;
-
-&lt;p&gt;Thank you.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h1&gt;
-
-&lt;p&gt;&lt;a name=&quot;data-modelling&quot;&gt;a&lt;/a&gt;: Data modelling ensures that we create semantically interoperable data coded in such a way as to make it meaningful to multiple disparate units of software. Such data may represent all types of clinical information, such as a blood pressure measured with a traditional sphygmomanometer on the right arm or the result of a laboratory test. As such, a focus on data standards is important so that there is agreement as to how individual items are coded and contextual information can be understood, such as who performed the measurement, how it was done and when.&lt;/p&gt;
-
-&lt;p&gt;&lt;a name=&quot;process-modelling&quot;&gt;b&lt;/a&gt;: While a prospective clinical record of structured and unstructured information forms our medical record, the medical record does much more than simply record a narrative of events. Our medical records &lt;em&gt;are&lt;/em&gt; our clinical practice, enabling processes and workflow. Paper medical records have important properties in enabling workflow; &lt;a href=&quot;/clinical-informatics/2017/06/20/hazards-of-paper.html&quot;&gt;their presence on my desk with a post-it note tells to do something vital&lt;/a&gt;. It is therefore important to conceptualise not only a model of healthcare data but also model the workflow, processes and communications that enable care.&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;h4 id=&quot;further-reading&quot;&gt;Further reading:&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/03/09/google-information.html&quot;&gt;Organise healthcare information and make it universally accessible and useful&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/07/07/disruptive-influences-health.html&quot;&gt;Disruptive influences in healthcare information technology&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/06/20/hazards-of-paper.html&quot;&gt;The hazards of paper&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">On serverless:</summary></entry><entry><title type="html">Data-driven healthcare: integration</title><link href="https://www.wardle.org/clinical-informatics/2017/10/19/data-driven.html" rel="alternate" type="text/html" title="Data-driven healthcare: integration" /><published>2017-10-19T23:22:22+01:00</published><updated>2017-10-19T23:22:22+01:00</updated><id>https://www.wardle.org/clinical-informatics/2017/10/19/data-driven</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/10/19/data-driven.html">&lt;p&gt;This post is from a talk I gave at the inaugural Digital Health and Care Conference at the Principality Stadium in Cardiff, Wales on the 19th October 2017&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.001.jpeg&quot; alt=&quot;Introduction&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I am going to talk about being data-driven in healthcare - how we need to create an architecture that enables us to capture and use data to improve patient care and our clinical services.&lt;/p&gt;
-
-&lt;p&gt;I want us to develop an open platform for healthcare in Wales built on a foundation of standards and interoperability.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;You need to remember three things, the three “P”s - platform, patient and preparation.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.002.jpeg&quot; alt=&quot;Platform, Patient, Preparation&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;By “platform”, I mean a collection of interoperating computing services built using industry standards a) on which we can build multiple applications for clinicians, patients and managers and b) provides a single consistent and logical patient record.&lt;/p&gt;
-
-&lt;p&gt;By “patient”, I mean that we need to re-focus our work on our patients : and avoid simply digitising our old ways of working but instead make use of digital tools to support all citizens to interact with and contribute to their records and importantly, help them manage their own healthcare.&lt;/p&gt;
-
-&lt;p&gt;And finally, by “preparation”, I mean that we need to create systems now that support solving our current problems but does not limit future development and innovation. We need to develop an infrastructure that fosters innovation in a safe way.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;The &lt;a href=&quot;http://gov.wales/topics/health/nhswales/about/e-health/?lang=en&quot;&gt;Informed Health and Care strategy&lt;/a&gt;, as you all know, is split into four key themes, focused on the patient, the professional, our services and our future.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.003.jpeg&quot; alt=&quot;Wardle Digital Health.001&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Essentially for patients, the requirements boil down to enabling patients to monitor and manage their own health, accessing, contributing to and controlling their own data. This patient focus is important and is essentially a disruptive influence on how our clinical services should develop in the future.&lt;/p&gt;
-
-&lt;p&gt;For professionals, we essentially want access to the right information at the right time, information that reduces uncertainty about the decisions we make.&lt;/p&gt;
-
-&lt;p&gt;Likewise, we are responsible for multiple cohorts of patients across our clinical services and need to ensure that we configure those services appropriately and permit innovation in service design and research and development.&lt;/p&gt;
-
-&lt;p&gt;Similarly, we need to build systems - and I use that word in as loose fashion as possible - that support working in partnership - in collaboration to drive up quality and performance.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;I would argue that the solution to these requirements is not to jump to developing multiple software applications  but instead to develop a widespread recognition that DATA is at the heart of those aims.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.004.jpeg&quot; alt=&quot;Wardle Digital Health.001&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;It is DATA that tells us:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;what happened,&lt;/li&gt;
-  &lt;li&gt;what is happening now&lt;/li&gt;
-  &lt;li&gt;why it happened and even, if we get it right…&lt;/li&gt;
-  &lt;li&gt;and what will happen…&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;It is DATA that drives our work and digitisation of that data - historically on paper - means that we can do it at scale and in real-time -  it is analysis of renal function blood tests that should prompt a real-time notification that our patient is deteriorating.&lt;/p&gt;
-
-&lt;p&gt;So the question is how to successfully digitise healthcare?&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;I spend a lot of time thinking about what “the medical record” actually means and I can’t express it better than the late Larry Weed, the founder of the problem-based medical record, who said, in his Internal medicine grand rounds:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“You’re a victim of it or a triumph because of it. The human mind simply cannot carry all the information without error so the record becomes part of your practice”&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.005.jpeg&quot; alt=&quot;Wardle Digital Health.001&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;And of course by medical record, I am not talking about an application running on a desktop computer, on an app on a mobile device: I’m talking about the logical medical record comprising all of the information that supports our decision making. It’s the data - the medical record that counts, and not the applications that we use to access that record.&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;h1 id=&quot;joined-up-thinking&quot;&gt;Joined-up thinking&lt;/h1&gt;
-
-&lt;p&gt;I think our biggest failure in healthcare IT is to create artificial boundaries between data : for example, in 2001, The Bristol Heart Enquiry highlighted the consequences of separating administrative and clinical data.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“The various clinical systems, many of them paper based, 
-differed from one another and had no relationship with the administrative hospital-wide systems. The funding made available in the late 1980s and early 1990s for medical and later clinical audit helped to reinforce this separation by making available to groups of clinicians money for small local computer systems. The lack of any connection between these different systems, one administrative, the others clinical, for collecting data cannot be explained solely on the basis of some technical or technological reason. It was just as strongly a reflection of a mindset that clinical matters were the sole domain of clinicians and non-clinical matters, to do with the management of resources and with the movement of patients into and through the hospital, were the preserve of managers and administrators.”&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.006.jpeg&quot; alt=&quot;Wardle Digital Health.001&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;We must stop thinking about administrative systems, clinical systems and research systems, and instead, focus on data - on the patient and the varying types of longitudinal data that are collected - by the patient, their devices and the professionals involved in their care. Of course, different people have need to see those data in different ways - different perspectives - different prisms, but the data - the  patient record - that is key.&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;h1 id=&quot;start-with-problems&quot;&gt;Start with problems&lt;/h1&gt;
-
-&lt;p&gt;So I recommend starting with PROBLEMS.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.007.jpeg&quot; alt=&quot;Wardle Digital Health.001&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Problems define your requirements.&lt;/p&gt;
-
-&lt;p&gt;For example:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;“Show me all of my upcoming appointments. I have multiple chronic conditions and need to organise my life.”&lt;/li&gt;
-  &lt;li&gt;“Should I say ‘yes’ to this high risk treatment?”&lt;/li&gt;
-  &lt;li&gt;“Show me how a patient with multiple sclerosis is doing compared to their peers. Do I need to give more aggressive treatment?”&lt;/li&gt;
-  &lt;li&gt;“I know how many patients are seen in outpatients, but I don’t know why or indeed, how they fare.”&lt;/li&gt;
-  &lt;li&gt;“Which of our patients are suitable for this trial? Find me patients with drug-refractory epilepsy who have not tried lamotrigine and are keen on research?”&lt;/li&gt;
-  &lt;li&gt;“How can we work together collaboratively?”&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;For instance, what are the informatics challenges facing us in solving “show me all of my upcoming appointments”, particularly if we need to solve that across multiple organisations? We need to integrate data from across multiple PAS - and provide a unified view.&lt;/p&gt;
-
-&lt;p&gt;We should prioritise our requirements and consider the data requirements.&lt;/p&gt;
-
-&lt;p&gt;So how can we help patients come to decisions about a high-risk treatment? How can we understand our outpatient services without setting in motion systems to track clinical problems and diagnoses in a structured way rather than free text?&lt;/p&gt;
-
-&lt;p&gt;How can we make Wales the best place for IT, for collaboration?&lt;/p&gt;
-
-&lt;p&gt;My thesis is: we think about the data required to solve those problems.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;So given our problems, what kinds of data must we capture and link together to make them meaningful? I feel strongly that understanding  cohorts of patients - grouped by disease or clinical problem or intervention or contact with a specific service - these underpin the interpretation of all other data. For example, how can we interpret patient reported outcomes without understanding all of those issues? Information has to be linked.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.008.jpeg&quot; alt=&quot;Wardle Digital Health.008&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;And so essentially, we stop thinking about applications and think instead about the patient record, combining administrative, clinical records - including GP and hospital records, laboratory and other sources of information - into a logical longitudinal record.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;And when we start thinking about a patient record, we must consider how we link disparate pieces of information together to solve our problems. We must stop creating data silos with information unusable outside of where it is collected.&lt;/p&gt;
-
-&lt;p&gt;Here is an abstraction of a logical longitudinal record:
-&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.009.jpeg&quot; alt=&quot;Logical longitudinal record&quot; /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Perhaps an example would be useful. Here is a screenshot from my own clinical information system that is currently used to look after over 25,000 patients in Wales and records 4,500 clinical encounters every month for a range of neurological and non-neurological diseases:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.010.jpeg&quot; alt=&quot;EDSS graph for patient plotted over time compared to peers&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;This chart shows the progress of a single patient  marked with a red line against the progression of the disease in all patients with multiple sclerosis in South East Wales.&lt;/p&gt;
-
-&lt;p&gt;How did we do this? The chart is generated in real-time using analysis of all patient data taking to into account diagnosis and disease progression recorded by patients and clinicians. In clinic we find it useful to also see charted the  medications received by the patient - you can see that they have had alemtuzumab and methylprednisolone and also their exacerbations in their disease - marked with an “R” - for relapse.&lt;/p&gt;
-
-&lt;p&gt;We now have years of longitudinal data for a wide range of cohorts of patients such as multiple sclerosis, motor neurone disease and Parkinson’s disease and real-time analytics and clinically-useful dashboards form an important part of making it &lt;em&gt;worth&lt;/em&gt; entering information. It is no good having either professionals or patients enter data or use devices to collect data unless we use that data for decisions.&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;h1 id=&quot;snomed-ct&quot;&gt;SNOMED-CT&lt;/h1&gt;
-
-&lt;p&gt;One of the most important aspects of our work must be to support the collection of data by clinicians for clinicians in the day-to-day work. One important technology is SNOMED-CT a comprehensive terminology that supports the entry of structured clinical information coded in a computer-readable format. This is a KEY enabler of data-driven clinical systems and analytics. Using this, we can record a patient has multiple sclerosis and firstly expect that other software will understand this diagnosis and secondly understand what type of disease that this is. SNOMED-CT is an ontology - it not only includes concepts but the relationships between them, so I can potentially find all patients with a demyelinating disease and it will support me finding patients with multiple sclerosis but also related conditions.&lt;/p&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/Cppjedy-hMo&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;Entering codes can be as simple as typing free text.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;With such a data-driven foundation, it becomes straightforward to build useful dashboards that take data from multiple systems and multiple sources and presents them in a useful fashion for end-users. Here we have a dashboard bringing together important information about a patient with motor neurone disease:
-&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.012.jpeg&quot; alt=&quot;Wardle Digital Health.011&quot; /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;And we must ensure our patients can engage fully…. in the Parkinson’s disease clinic we have successfully trialled the use of iPads to connect to the EPR and allow them to contribute to their medical record via adaptive questionnaires. Here is a view of all patient data from a single clinic visit that is used to generate our clinic letter automatically. Each of these outcomes can be graphed to show changes over time.
-&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.013.jpeg&quot; alt=&quot;Wardle Digital Health.011&quot; /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;scaling&quot;&gt;Scaling&lt;/h1&gt;
-
-&lt;p&gt;So how can we take what we’ve done and scale it to every other clinical encounter in Wales? The problem is that “We don’t realise how much we don’t know”. I am sure that there are some clever people who can take my Parkinson’s disease medication and disease progression data and turn it into something even more useful, who can then link it to home monitoring technology and falls detection and send our team alerts when necessary.&lt;/p&gt;
-
-&lt;p&gt;How can we design or implement software that solves our problems today and adopts a sufficiently flexible approach that we can innovate and adapt to solve the problems of our future?&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.014.jpeg&quot; alt=&quot;We don't realise how much we don't know&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;If you haven’t read it, I recommend Domain-driven design by Eric Evans - a focus on data modelling to support complex systems.&lt;/p&gt;
-
-&lt;p&gt;We start with a model of our data; this model will change but slowly over time — a blood pressure measured in the right arm will always be a blood pressure measured in the right arm. On top of this information model, we build conceptual models of workflow and process, a platform made up of core services providing access to those models and finally lightweight applications. Process and workflow models will change much more frequently that our data model and likely need dynamic customisation via rules engines for different contexts. Applications should be the most ephemeral component of our designs.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;an-open-innovation-platform&quot;&gt;An open innovation platform&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.015.jpeg&quot; alt=&quot;Open innovation platform&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;As a result, we create an &lt;em&gt;open innovation platform&lt;/em&gt; built on a secure foundation of structured, semantically meaningful data. We provide a range of core application programming interfaces or APIs - providing access to a range of useful services such as identity, access and consent. Together, these form a platform.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;We must stop thinking about applications and instead think about how our platform can interact with our work streams - our patients, our professionals, our partners and the future.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.016.jpeg&quot; alt=&quot;Wardle Digital Health.016&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Most businesses have already realised that information technology forms an inherent part of their operations; in essence, they have realised IT &lt;em&gt;IS&lt;/em&gt; their way of doing business. It is about time healthcare did the same.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;So the model becomes a data-centric core, open platforms exposing those data and multiple lightweight applications solving specific process and workflow problems for patients and professionals.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.017.jpeg&quot; alt=&quot;Wardle Digital Health.017&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;As a result, we create a single patient record : and ensure that we can see all of the relevant information for a patient while not getting lost in an excess of data.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;And this is how it could look in Wales:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.018.jpeg&quot; alt=&quot;Wardle Digital Health.018&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;We open up our core services, create a platform leveraging new technologies such as HL7 FHIR to expose application programming interfaces that can be used by multiple applications providing different views and different perspectives on a single patient record or collections of those records.&lt;/p&gt;
-
-&lt;p&gt;[ explain diagram ]&lt;/p&gt;
-
-&lt;p&gt;We must focus on data standards and interoperability, creating lightweight applications at pace and design useful real-time analytics services for clinicians and managers. Critically, we build a platform that can provide the building blocks for future innovation.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.019.jpeg&quot; alt=&quot;Wardle Digital Health.019&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;So in summary, I remind you to remember three “P”s : we need to build an open platform, ensure we focus on our patients and… prepare for and permit future innovation by understanding that we don’t have all of the answers… at least - not yet.&lt;/p&gt;
-
-&lt;p&gt;Thank you.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;h4 id=&quot;further-reading&quot;&gt;Further reading:&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/03/09/google-information.html&quot;&gt;Organise healthcare information and make it universally accessible and useful&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/07/07/disruptive-influences-health.html&quot;&gt;Disruptive influences in healthcare information technology&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/06/20/hazards-of-paper.html&quot;&gt;The hazards of paper&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">This post is from a talk I gave at the inaugural Digital Health and Care Conference at the Principality Stadium in Cardiff, Wales on the 19th October 2017</summary></entry></feed>
+&lt;p&gt;Be ambitious, be realistic. Have a vision and plan to deliver that vision incrementally at pace.&lt;/p&gt;</content><author><name></name></author><summary type="html">The paradox of ambition</summary></entry></feed>
