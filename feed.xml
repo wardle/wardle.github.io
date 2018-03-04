@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-03-04T08:38:36+00:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-03-04T08:47:55+00:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
 </subtitle><entry><title type="html">An open digital health platform: what we need to do next</title><link href="https://www.wardle.org/digital-platform/2018/03/03/platform-wales-3.html" rel="alternate" type="text/html" title="An open digital health platform: what we need to do next" /><published>2018-03-03T03:03:03+00:00</published><updated>2018-03-03T03:03:03+00:00</updated><id>https://www.wardle.org/digital-platform/2018/03/03/platform-wales-3</id><content type="html" xml:base="https://www.wardle.org/digital-platform/2018/03/03/platform-wales-3.html">&lt;blockquote&gt;
   &lt;p&gt;This is part three of a three-part series on why and how we should be building an open digital health platform in Wales.&lt;/p&gt;
 
@@ -139,9 +139,19 @@ As such, we need a coordinated all-Wales approach that permits all stakeholders 
 &lt;ol&gt;
   &lt;li&gt;A robust approach to citizen consent in order to control how and why their health data is shared.&lt;/li&gt;
   &lt;li&gt;We need to start thinking about how &lt;a href=&quot;http://microservices.io/patterns/apigateway.html&quot;&gt;“API gateways”&lt;/a&gt; could be used across our health enterprise.&lt;/li&gt;
-  &lt;li&gt;To work with industry on how we can enable an ecosystem of healthcare software, much like the Amazon AWS Serverless Application Model I have discussed &lt;a href=&quot;/clinical-informatics/2017/12/04/serverless.html&quot;&gt;previously in a blog post on “Serverless in healthcare”&lt;/a&gt;.  How can we safely make use of a cloud-hosted service that is the result of machine learning that can tell us whether a chest x-ray is normal or abnormal? What are the technical and legal requirements we must solve to do that?&lt;/li&gt;
-  &lt;li&gt;To work to move from a capital expenditure funding model to a revenue-based approach, in keeping with building cross-functional teams that can create and improve the services which make up our platform.&lt;/li&gt;
+  &lt;li&gt;To work with industry on how we can enable an ecosystem of healthcare software and real-time analytics that permit the safe use of independent software modules within the wider ecosystem. We probably need something much like the Amazon AWS Serverless Application Model I have referenced previously when discussing &lt;a href=&quot;/clinical-informatics/2017/12/04/serverless.html&quot;&gt;“Serverless in healthcare”&lt;/a&gt;.  For example, how can we safely make use of a cloud-hosted service that is the result of machine learning that can tell us whether a chest x-ray is normal or abnormal? How can we make use of a new acute kidney injury algorithm? What are the technical and legal requirements we must solve to do that?&lt;/li&gt;
+  &lt;li&gt;To work to change our governance and funding models.&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;p&gt;On the latter point, we must recognise Conway’s Law:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“organizations which design systems … are constrained to produce designs which are copies of the communication structures of these organizations”&lt;/p&gt;
+
+  &lt;p&gt;Conway, Melvin E. (April 1968), &lt;a href=&quot;http://www.melconway.com/Home/Conways_Law.html&quot;&gt;“How do Committees Invent?”&lt;/a&gt;, Datamation, 14 (5): 28–31&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;We must, therefore, change our governance structures in tandem with changing our software architecture.&lt;/p&gt;
 
 &lt;p&gt;Thank you,&lt;/p&gt;
 
