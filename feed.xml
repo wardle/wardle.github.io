@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-03-03T23:36:07+00:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-03-04T08:38:36+00:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
 </subtitle><entry><title type="html">An open digital health platform: what we need to do next</title><link href="https://www.wardle.org/digital-platform/2018/03/03/platform-wales-3.html" rel="alternate" type="text/html" title="An open digital health platform: what we need to do next" /><published>2018-03-03T03:03:03+00:00</published><updated>2018-03-03T03:03:03+00:00</updated><id>https://www.wardle.org/digital-platform/2018/03/03/platform-wales-3</id><content type="html" xml:base="https://www.wardle.org/digital-platform/2018/03/03/platform-wales-3.html">&lt;blockquote&gt;
   &lt;p&gt;This is part three of a three-part series on why and how we should be building an open digital health platform in Wales.&lt;/p&gt;
 
@@ -123,11 +123,16 @@ As such, we need a coordinated all-Wales approach that permits all stakeholders 
       &lt;li&gt;Create new requesting service based on HL7 FHIR &lt;a href=&quot;https://www.hl7.org/fhir/procedurerequest.html&quot;&gt;ProcedureRequest resource&lt;/a&gt; which acts as a concierge handling and delegating multiple different types of request to our existing underlying laboratory and radiology systems.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;New e-Obs repository to include HL7 FHIR &lt;a href=&quot;https://www.hl7.org/fhir/observation.html&quot;&gt;Observation&lt;/a&gt; resource permitting storage and retrieval of observations such as pulse, blood pressure and temperature.&lt;/li&gt;
+  &lt;li&gt;New e-Obs repository to include HL7 FHIR &lt;a href=&quot;https://www.hl7.org/fhir/observation.html&quot;&gt;Observation&lt;/a&gt; resource permitting storage and retrieval of observations such as pulse, blood pressure, temperature and weight and height.&lt;/li&gt;
   &lt;li&gt;Appointments and scheduling including providing federated read-only views initially across our multiple PAS and radiology services to provide &lt;a href=&quot;https://www.hl7.org/fhir/episodeofcare.html&quot;&gt;Episode of care resources&lt;/a&gt;, &lt;a href=&quot;https://www.hl7.org/fhir/encounter.html&quot;&gt;Clinical encounters&lt;/a&gt; and &lt;a href=&quot;https://www.hl7.org/fhir/appointment.html&quot;&gt;Appointments&lt;/a&gt;. Such a service could be used by professionals and citizens alike to see upcoming appointments for example.&lt;/li&gt;
+  &lt;li&gt;A document repository, wrapping our existing national document repository (WCRS) but adding a more sophisticated metadata model to expose data as a HL7 FHIR &lt;a href=&quot;https://www.hl7.org/fhir/documents.html&quot;&gt;Document resource&lt;/a&gt;.&lt;/li&gt;
   &lt;li&gt;Reference data services including the UK-wide organisational data services (ODS) to create FHIR endpoints including &lt;a href=&quot;https://www.hl7.org/fhir/organization.html&quot;&gt;Organisation&lt;/a&gt;, &lt;a href=&quot;https://www.hl7.org/fhir/healthcareservice.html&quot;&gt;Service&lt;/a&gt; and &lt;a href=&quot;https://www.hl7.org/fhir/location.html&quot;&gt;Location&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Centralised logging and audit services, exposing our existing national audit service as a FHIR &lt;a href=&quot;https://www.hl7.org/fhir/auditevent.html&quot;&gt;Audit event resource&lt;/a&gt;.&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;p&gt;These services are shown in schematic form here, from my &lt;a href=&quot;(/clinical-informatics/2017/10/19/data-driven.html)&quot;&gt;data-driven presentation&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.018.jpeg&quot; alt=&quot;Wardle Digital Health.018&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;These would form a bare-bones set of services that could be used by a new generation of applications providing the right information for users at the right time, whether professional, citizen or their delegate. In line with an evolutionary approach, we need to recognise the challenges ahead including:&lt;/p&gt;
 
@@ -185,7 +190,7 @@ As such, we need a coordinated all-Wales approach that permits all stakeholders 
 
 &lt;p&gt;This makes testing individual components difficult with changes in one system resulting in difficult to predict consequences on other systems. A test environment might need to replicate the entire ecosystem making it more difficult to automate and have confidence that any component or the whole ‘system’ is deterministic.&lt;/p&gt;
 
-&lt;p&gt;In short, an ESB is an &lt;em&gt;internal&lt;/em&gt; solution to enterprise architecture integration. It is,  poorly suited to creating a truly open platform. We need to look elsewhere to see how technological trends could transform the way we build healthcare platforms.&lt;/p&gt;
+&lt;p&gt;In short, an ESB is an &lt;em&gt;internal&lt;/em&gt; solution to enterprise architecture integration. It is poorly suited to creating a truly open platform, although of course, can remain an important constituent part. We need to look elsewhere to see how technological trends could transform the way we build healthcare platforms.&lt;/p&gt;
 
 &lt;h1 id=&quot;what-can-we-learn-from-cloud-computing-and-modern-architectural-design&quot;&gt;What can we learn from cloud computing and modern architectural design?&lt;/h1&gt;
 
@@ -255,8 +260,6 @@ As such, we need a coordinated all-Wales approach that permits all stakeholders 
 
 &lt;p&gt;But we need to change what we have been doing. We need to move away from the single portal approach advocated by some and move to building an open platform, as I have &lt;a href=&quot;/clinical-informatics/2017/10/19/data-driven.html&quot;&gt;previously discussed&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;In this three-part series, I focus on the importance of standards and interoperability in enabling a digital ecosystem and how together, we can create an open digital health platform for Wales.&lt;/p&gt;
-
 &lt;h1 id=&quot;standards-and-interoperability&quot;&gt;Standards and interoperability&lt;/h1&gt;
 
 &lt;p&gt;Our “Once-for-Wales” task and finish group has finished its work and we have recommended a new Welsh Technical Standards Board (WTSB) be set up to define and mandate the technical and semantic standards for interoperability across our principality. We have recognised that there are many services and system functions, such as patient demographics and identity, that should be provided nationally for every citizen in Wales across all of our health and social care organisations.&lt;/p&gt;
@@ -302,6 +305,8 @@ operator intervention.&lt;/p&gt;
 &lt;p&gt;In essence, we are starting the journey towards opening up our architecture in order to make it easier to work in partnership with others. We need to identify the strengths and weaknesses across both the public and private sectors and create an ecosystem that permits us to leverage the strengths of both.&lt;/p&gt;
 
 &lt;p&gt;The question is, how can we build healthcare information technology architectures that can connect with external systems and data sources outside of our traditional walls?  It should not be surprising that robust interoperability is essential to delivering a working digital ecosystem in Wales.&lt;/p&gt;
+
+&lt;p&gt;In essence, interoperability isn’t something to think about later, it should be &lt;em&gt;how&lt;/em&gt; we build our systems today.&lt;/p&gt;
 
 &lt;p&gt;The next question to ask is, do we currently have an architecture that can enable robust interoperability and satisfy our ambitions for our digital health ecosystem, and if we don’t, then we must also ask what we need to do in order to do so? Some of the answers are in the &lt;a href=&quot;/digital-platform/2018/03/03/platform-wales-2.html&quot;&gt;next post&lt;/a&gt;.&lt;/p&gt;
 

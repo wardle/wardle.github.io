@@ -217,11 +217,16 @@ As such, we need a coordinated all-Wales approach that permits all stakeholders 
       <li>Create new requesting service based on HL7 FHIR <a href="https://www.hl7.org/fhir/procedurerequest.html">ProcedureRequest resource</a> which acts as a concierge handling and delegating multiple different types of request to our existing underlying laboratory and radiology systems.</li>
     </ul>
   </li>
-  <li>New e-Obs repository to include HL7 FHIR <a href="https://www.hl7.org/fhir/observation.html">Observation</a> resource permitting storage and retrieval of observations such as pulse, blood pressure and temperature.</li>
+  <li>New e-Obs repository to include HL7 FHIR <a href="https://www.hl7.org/fhir/observation.html">Observation</a> resource permitting storage and retrieval of observations such as pulse, blood pressure, temperature and weight and height.</li>
   <li>Appointments and scheduling including providing federated read-only views initially across our multiple PAS and radiology services to provide <a href="https://www.hl7.org/fhir/episodeofcare.html">Episode of care resources</a>, <a href="https://www.hl7.org/fhir/encounter.html">Clinical encounters</a> and <a href="https://www.hl7.org/fhir/appointment.html">Appointments</a>. Such a service could be used by professionals and citizens alike to see upcoming appointments for example.</li>
+  <li>A document repository, wrapping our existing national document repository (WCRS) but adding a more sophisticated metadata model to expose data as a HL7 FHIR <a href="https://www.hl7.org/fhir/documents.html">Document resource</a>.</li>
   <li>Reference data services including the UK-wide organisational data services (ODS) to create FHIR endpoints including <a href="https://www.hl7.org/fhir/organization.html">Organisation</a>, <a href="https://www.hl7.org/fhir/healthcareservice.html">Service</a> and <a href="https://www.hl7.org/fhir/location.html">Location</a></li>
   <li>Centralised logging and audit services, exposing our existing national audit service as a FHIR <a href="https://www.hl7.org/fhir/auditevent.html">Audit event resource</a>.</li>
 </ol>
+
+<p>These services are shown in schematic form here, from my <a href="(/clinical-informatics/2017/10/19/data-driven.html)">data-driven presentation</a>:</p>
+
+<p><img src="/images/digitalhealthconf/wardle-digital-health.018.jpeg" alt="Wardle Digital Health.018" /></p>
 
 <p>These would form a bare-bones set of services that could be used by a new generation of applications providing the right information for users at the right time, whether professional, citizen or their delegate. In line with an evolutionary approach, we need to recognise the challenges ahead including:</p>
 
