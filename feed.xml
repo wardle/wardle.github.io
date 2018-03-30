@@ -1,5 +1,78 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-03-04T08:47:55+00:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
-</subtitle><entry><title type="html">An open digital health platform: what we need to do next</title><link href="https://www.wardle.org/digital-platform/2018/03/03/platform-wales-3.html" rel="alternate" type="text/html" title="An open digital health platform: what we need to do next" /><published>2018-03-03T03:03:03+00:00</published><updated>2018-03-03T03:03:03+00:00</updated><id>https://www.wardle.org/digital-platform/2018/03/03/platform-wales-3</id><content type="html" xml:base="https://www.wardle.org/digital-platform/2018/03/03/platform-wales-3.html">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-03-30T22:56:15+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</subtitle><entry><title type="html">Where is the value?</title><link href="https://www.wardle.org/digital-platform/2018/03/30/where-is-the-value.html" rel="alternate" type="text/html" title="Where is the value?" /><published>2018-03-30T13:12:12+01:00</published><updated>2018-03-30T13:12:12+01:00</updated><id>https://www.wardle.org/digital-platform/2018/03/30/where-is-the-value</id><content type="html" xml:base="https://www.wardle.org/digital-platform/2018/03/30/where-is-the-value.html">&lt;p&gt;Why is digital technology so important for the future of our healthcare services?&lt;/p&gt;
+
+&lt;p&gt;When we consider how we can most effectively use digital technology in healthcare, It is easy to fall into a trap and simply support existing models and processes of care. Instead, we must raise our ambitions and look to digital technology to enable new ways to transform our health services.&lt;/p&gt;
+
+&lt;p&gt;But we mustn’t only limit our transformation agenda to only using digital channels to enable new ways of delivering care either. Fundamentally, we should be looking to digital tools to improve healthcare to provide &lt;em&gt;better outcomes for the populations that we serve&lt;/em&gt;. It is easy to lose sight of this ultimate aim: &lt;em&gt;outcomes&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;As a result, we need to embed &lt;em&gt;digital thinking&lt;/em&gt; across all facets of our health services; digital is more than simply using technology but broad-based fundamental change which, at its core, means we focus on the data to become &lt;em&gt;data-driven&lt;/em&gt;, and what are we driven to do? We must be driven to improve outcomes.&lt;/p&gt;
+
+&lt;p&gt;That means we need to create structured, meaningful data that will provide the foundation on which we create added value. Meaningful data means data that can be used for making decisions, reducing the uncertainty inherent in any decision. That decision may be whether to recommend a particular treatment for a specific patient, it might decide where your emergency medical team needs to intervene with a deteriorating patient on a ward in a hospital but it might also be used to inform us how and why we need to reconfigure or restructure our health services.&lt;/p&gt;
+
+&lt;p&gt;As a result, our healthcare digital transformation agenda must, like many other enterprises, invest in data analytical capability and, consequently, in computing power to help us store, retrieve and make sense of burgeoning amounts of data. We must make data the bedrock of our health enterprise.&lt;/p&gt;
+
+&lt;p&gt;Of course, healthcare has always used data to inform practice. This is the basis of evidence-based medicine, but the cycle of clinical research from data collection, analysis, intervention and assessment can be too slow and usually, data collection has been designed specifically for that trial in a carefully selected population of patients. We use a similar approach with service transformation and quality improvement but fully embracing digital should mean that we improve the efficiency and effectiveness of our quality improvement interventions and embed those process in day-to-day care; the important difference is the use of systematically and routinely collected real-life data on process and outcomes.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/cis_design/dmaic.png&quot; alt=&quot;Quality improvement lifecycle - define, measure, analyse, improve, control&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Indeed, such analytics should run in real-time, providing us continuously updated information about the patients and services for whom we care. The logical conclusion is that we will see a convergence of ‘business analytics’ with our electronic health records built on a single source of “truth”: meaningful data.&lt;/p&gt;
+
+&lt;p&gt;So how do we enable data-driven digital transformation? In my view, it is with open data standards, open application programming interfaces and citizen engagement with transparency and control over the use of data. Together, those pieces fit together to form a ‘platform’ onto which other valuable services and applications can be built.&lt;/p&gt;
+
+&lt;p&gt;Open data standards, open protocols and open application programming interfaces are powerful disruptive technological advances which cause creative disruptive and commodification in an industry. We are about to see the result of this in healthcare. But what is creative destruction?&lt;/p&gt;
+
+&lt;h1 id=&quot;creative-destruction&quot;&gt;Creative destruction&lt;/h1&gt;
+
+&lt;p&gt;It is useful to examine how ‘value’ in technological terms evolves over the years as it helps to understand and perhaps predict what might happen in the coming years. To do so, we must look at how new technology has evolved and disrupted the technological advances of the previous generation as part of a continuous cycle of &lt;em&gt;creative destruction&lt;/em&gt; and commodification.&lt;/p&gt;
+
+&lt;p&gt;A commodity refers to goods or services which have value but are &lt;em&gt;fungible&lt;/em&gt;; that is, it doesn’t really matter who produces or provides that commodity, essentially they are interchangeable.&lt;/p&gt;
+
+&lt;p&gt;In software, the creative destruction cycle can result in the commodification of technology. For example, historically, computing networking protocols were proprietary resulting in networking that was both expensive and incompatible with other proprietary network systems. The open networking protocol (TCP/IP) has disrupted the marketplace for proprietary networking; we now regard networking as a commodity on which most of our modern information technology solutions are built. Networking itself has permitted worldwide communication and collaboration permitting new ways of working, new approaches to distributed software development and ‘open source’ technology.&lt;/p&gt;
+
+&lt;p&gt;Some of the world’s most valuable companies have arisen due to near ubiquitous personal networking; commoditisation can create a new market far larger than that achieved than when the same technology was proprietary.&lt;/p&gt;
+
+&lt;p&gt;Current software technology such as cloud computing, in which applications and services can be provisioned and scaled on demand by a hosting provider, are the end result of this continuous cycle of innovation and commoditisation. Indeed, with container and serverless technology, we see the hosting providers becoming increasingly fungible. But what do these providers gain from making their services a commodity?&lt;/p&gt;
+
+&lt;h1 id=&quot;so-where-is-the-value&quot;&gt;So where is the ‘value’?&lt;/h1&gt;
+
+&lt;p&gt;The &lt;em&gt;value&lt;/em&gt; in creative destruction and commoditisation derives from building valuable innovative products in the new markets created by those processes.&lt;/p&gt;
+
+&lt;p&gt;As cloud computing becomes more ubiquitous, healthcare enterprises will increasingly switch away from purchasing and installed software locally and instead make use of software-as-a-service. We can see the beginnings of this in non-health markets already with the advent of marketplaces like &lt;a href=&quot;https://aws.amazon.com/serverless/serverlessrepo/&quot;&gt;Amazon’s Serverless Application Repository&lt;/a&gt; and the &lt;a href=&quot;https://aws.amazon.com/blogs/compute/monetize-your-apis-in-aws-marketplace-using-api-gateway/&quot;&gt;AWS Marketplace / API gateway&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;What does this mean for healthcare information technology? What will happen if as we build open systems, open standards and open application programming interfaces creating an &lt;em&gt;open platform&lt;/em&gt;?&lt;/p&gt;
+
+&lt;p&gt;We will see a commodification of that platform and we will enable an ecosystem of innovation products that can use that platform to add value.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Interestingly, another definition of a “platform” is a set of services that bring together users and providers to form a multisided market. Is it possible then to take our “open platform” and start to think of a future in which we have products and services that actually do enable a re-imagining of healthcare provision to bring together patients, carers, health professionals, commissioners, analytics, researchers and all other stakeholders in a safe and secure manner?&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;/clinical-informatics/2017/08/20/disruptive-influences-future.html&quot;&gt;Disruptive influences, the future.&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I think it likely that the technology giants, such as Amazon, Apple, Google and Microsoft, already recognise the value in creating a new multi-sided marketplace for healthcare by the use of open standards and commodification of a platform. We already see how Apple has worked to permit patient access to &lt;a href=&quot;https://www.apple.com/newsroom/2018/03/doctors-put-patients-in-charge-with-apples-health-records-feature/&quot;&gt;medical records via the use of HL7 FHIR&lt;/a&gt;, Google has &lt;a href=&quot;https://healthitanalytics.com/news/google-using-fhir-deep-learning-for-healthcare-predictive-analytics&quot;&gt;embraced HL7 FHIR for predictive analytics and machine learning&lt;/a&gt; and launched a new &lt;a href=&quot;https://www.digitalhealth.net/2018/03/google-launches-cloud-healthcare-api/&quot;&gt;cloud application programming interface to manage DICOM and HL7 FHIR data&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Google Cloud’s goal for healthcare is very much a reflection of Google’s overall mission: to organize the world’s information and make it universally accessible and useful. Applying this mission to healthcare means using open standards to help enable data sharing and interactive collaboration, while also providing a secure platform. Just imagine if all healthcare providers could easily, securely and instantaneously collaborate while caring for you. Ultimately, we hope that better flow of data will inspire new discoveries with artificial intelligence (AI) and machine learning (ML), leading to insights that improve patient outcomes.”&lt;/p&gt;
+
+  &lt;p&gt;Google Cloud blog, 
+&lt;a href=&quot;https://blog.google/topics/google-cloud/google-cloud-healthcare-new-apis-customers-partners-and-security-updates/&quot;&gt;https://blog.google/topics/google-cloud/google-cloud-healthcare-new-apis-customers-partners-and-security-updates/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;We must recognise that unlocking healthcare data opens up extraordinary potential advances and that, the use of open standards will enable a new generation of value-added data-driven services and applications.&lt;/p&gt;
+
+&lt;p&gt;My personal goal is to create the next generation of electronic patient record systems with the aim to improve outcomes, but I recognise that to do that, we must strive for a open, dynamic data-driven healthcare environment onto which we can build innovation and build value. And that doesn’t yet exist.&lt;/p&gt;
+
+&lt;p&gt;With ubiquitous computing power available on demand, we should be planning now on how we will build and evaluate and then deploy automated tools to triage, risk assess, interpret investigation, and support diagnosis and management as well as making use of new technology to aid redesigning our healthcare systems around patients and not organisations to, most importantly, improve outcomes.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;I want to see a future in which the platform becomes an interchangeable commodity with innovation and differentiation occurring at a higher conceptual level of support for medical practice. Rather than simple data collection, our mission must be to imagine a future in which medical practice, which at its most fundamental is about clinical decision making, is supported by the most sophisticated tools possible to improve patient care.&lt;/p&gt;
+
+  &lt;p&gt;This mission’s greatest risk is in the continued creation of data silos in which health information is locked away in proprietary systems. The answer is to create an open, extensible platform on which innovation can thrive.&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;/clinical-informatics/2017/06/15/embedding-data.html&quot;&gt;Embedding data in routine clinical practice, June 2017&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Why is digital technology so important for the future of our healthcare services?</summary></entry><entry><title type="html">An open digital health platform: what we need to do next</title><link href="https://www.wardle.org/digital-platform/2018/03/03/platform-wales-3.html" rel="alternate" type="text/html" title="An open digital health platform: what we need to do next" /><published>2018-03-03T03:03:03+00:00</published><updated>2018-03-03T03:03:03+00:00</updated><id>https://www.wardle.org/digital-platform/2018/03/03/platform-wales-3</id><content type="html" xml:base="https://www.wardle.org/digital-platform/2018/03/03/platform-wales-3.html">&lt;blockquote&gt;
   &lt;p&gt;This is part three of a three-part series on why and how we should be building an open digital health platform in Wales.&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;/digital-platform/2018/03/03/platform-wales-1.html&quot;&gt;Part one&lt;/a&gt; was a high-level overview of how standards and interoperability are critical in building a digital ecosystem. &lt;a href=&quot;/digital-platform/2018/03/03/platform-wales-1.html&quot;&gt;Part two&lt;/a&gt; assessed our current messaging-based architecture and highlighted the benefits of an API-first enterprise architecture together with the new technologies that have facilitated the move to cloud computing in other industries. This part ties together these strands into a manifesto for phase 1 of building our open platform.&lt;/p&gt;
@@ -1277,24 +1350,4 @@ The key to controlling complexity is a good domain model, a model that goes beyo
   &lt;li&gt;&lt;a href=&quot;http://wardle.org/clinical-design/2017/03/23/scope-framing-clinical-design.html&quot;&gt;Scope and framing in clinical information system design&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://wardle.org/clinical-informatics/2017/04/04/test-requesting.html&quot;&gt;Test requesting design: building an open API-based architecture&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://wardle.org/clinical-informatics/2017/10/19/data-driven.html&quot;&gt;Data driven healthcare information technology&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">My writing on domain-driven design arose because of my own experience building an electronic patient record system:</summary></entry><entry><title type="html">The paradox of ambition</title><link href="https://www.wardle.org/clinical-informatics/2017/12/06/paradox-of-ambition.html" rel="alternate" type="text/html" title="The paradox of ambition" /><published>2017-12-06T10:39:39+00:00</published><updated>2017-12-06T10:39:39+00:00</updated><id>https://www.wardle.org/clinical-informatics/2017/12/06/paradox-of-ambition</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2017/12/06/paradox-of-ambition.html">&lt;h1 id=&quot;the-paradox-of-ambition&quot;&gt;The paradox of ambition&lt;/h1&gt;
-
-&lt;p&gt;We have information technology projects in healthcare which are hugely ambitious in their scope - for example, the nursing documentation project in Wales - in which there are many requirements, interactions, dependencies and fundamentally so many issues of change management required across multiple organisations, that it is hugely ambitious as a result of it being really very difficult. That worries me, because ambition to solve something that is extremely difficult is misplaced ambition.&lt;/p&gt;
-
-&lt;iframe src=&quot;http://player.nafw.cloud.vualto.com/Player/Index/f81e649d-044a-40b0-8f42-8d6017d78557?autostart=False&amp;amp;captionsOn=False&quot; name=&quot;NAFW Player&quot; seamless=&quot;seamless&quot; frameborder=&quot;0&quot; width=&quot;640&quot; height=&quot;360&quot;&gt;
-&lt;/iframe&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.senedd.tv/Meeting/Index/f81e649d-044a-40b0-8f42-8d6017d78557&quot;&gt;Welsh Senedd meeting on nursing documentation project&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;The right kind of ambition is ambition to make a difference and deliver value at pace.&lt;/p&gt;
-
-&lt;p&gt;So when we talk about nursing documentation, it is ambitious because I think, the project, as currently designed, will just not work. The approach is just wrong; it needs to be something driven from the bottom-up and not the top-down. What the top-down should be doing is setting the direction of travel, setting the rulebook, giving the users and the people who work on their behalf the tools to solve their problems. You need to get software in the hands of users as soon as possible in order to more fully understand the problems you are trying to solve; a more agile approach is required.&lt;/p&gt;
-
-&lt;p&gt;The right kind of ambition is to deliver. So what I mean by ambition is that I want to have my consultations recorded and my dictation to order blood investigations automatically. Who will be the first to deploy “Amazon Echo” or “Google Home” in the clinic to support my outpatient consultations? How can we enable that innovative future? We do it by creating an appropriate open services-based architecture and allow multiple applications to use those services.&lt;/p&gt;
-
-&lt;p&gt;So sure, build test requesting into a portal but don’t build the whole stack of functionality into that single codebase so it is inaccessible to any other application. Likewise, don’t build a service that only one application can use. Break it up, make test requesting a service. Make the applications, such as Welsh Clinical Portal, use that service. Don’t make any single application mandating for use.&lt;/p&gt;
-
-&lt;p&gt;So then if we come along and want to get Amazon or Apple or Google to listen to our speech in clinic, to turn that speech into text and make a range of test requests based on that text, then don’t stop us doing that. Create something that enables that. Enable innovation and don’t suffocate it.&lt;/p&gt;
-
-&lt;p&gt;There is another paradox here in that I keep repeating in this forum and others, that we don’t know all the stuff we need to solve. We need to look really hard at people who think that they have all of the answers, because they don’t. Getting everyone in a room, and listing the requirements, building a technical specification and building it like it was a bridge, is not the way to build software.&lt;/p&gt;
-
-&lt;p&gt;Be ambitious, be realistic. Have a vision and plan to deliver that vision incrementally at pace.&lt;/p&gt;</content><author><name></name></author><summary type="html">The paradox of ambition</summary></entry></feed>
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">My writing on domain-driven design arose because of my own experience building an electronic patient record system:</summary></entry></feed>
