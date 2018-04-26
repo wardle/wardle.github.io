@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Lean healthcare</title>
+  <meta name="description" content="In this blog post, I want to talk about transforming our health services using technology.">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://www.wardle.org/clinical-informatics/2018/04/26/lean-healthcare-devops.html">
+  <link rel="alternate" type="application/rss+xml" title="Health informatics and information technology" href="/feed.xml">
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-97389603-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="/">Health informatics and information technology</a>
+  
+  
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+           <a class="page-link" href="/">All posts</a>
+          
+            
+            
+            <a class="page-link" href="/projects/">Projects</a>
+            
+          
+            
+            
+            <a class="page-link" href="/about/">About</a>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Lean healthcare</h1>
+    <p class="post-meta">
+      <time datetime="2018-04-26T07:06:06+01:00" itemprop="datePublished">
+        
+        26 April 2018
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>In this blog post, I want to talk about transforming our health services using technology.</p>
+
+<p>There are four core messages:</p>
+
+<ol>
+  <li>
+    <p>Most of us working in healthcare are already familiar with a range of quality improvement methodologies -  we see them at work when we discuss our healthcare services - and yet we frequently fail to use those same improvement techniques in our information technology projects.</p>
+  </li>
+  <li>
+    <p>We can learn from how technology companies have adopted similar quality improvement methodologies (<em>lean</em> and <em>agile</em>) in their efforts to develop new technology, and use the same approaches to both develop and manage healthcare information technology.</p>
+  </li>
+  <li>
+    <p>That small, cross-functional teams can be given responsibility for delivering discrete functional components of a wider software architecture, bringing together development, testing and deployment as part of a wider “DevOps” strategy. Increasing adoption of ‘serverless’ technologies is a logical result of this strategy.</p>
+  </li>
+  <li>
+    <p>That these same approaches can be extended to include our existing quality improvement and research methodologies so that we accelerate the adoption of data-driven value-based healthcare in a virtuous cycle of improvement. We use technology to re-imagine how we deliver healthcare to our citizens, with information technology an enabler of transformation; <em>ownership</em> is key here with IT and quality improvement going hand-in-hand.</p>
+  </li>
+</ol>
+
+<p>I’ve included some links to resources for further reading at the end.</p>
+
+<h1 id="healthcare-transformation">Healthcare transformation</h1>
+
+<p>We need to consider <em>how</em> we most effectively use information technology in healthcare so that we do more than simply replace our paper records with electronic equivalents.</p>
+
+<p>We must think deeply about how we can use technology to <em>transform</em> how we deliver healthcare to our citizens. We must be ambitious and yet plan to deliver those ambitions incrementally, safely, carefully and within the constraints within which we work.</p>
+
+<blockquote>
+  <p>Every industry that is not bringing software to the core of their business will be disrupted.</p>
+
+  <p>Jeffrey Immelt, CEO and Chairman, General Electric, 2001-2017</p>
+</blockquote>
+
+<p>Fundamentally, we need to re-imagine a new technical architecture - an <em>open platform</em> at its core - built on standards and interoperability. But, we must also go much further than simply talk about technical architectures and drive a change in culture and trust.</p>
+
+<p>In essence, to deliver IT-enabled healthcare transformation, we need the right:</p>
+
+<ol>
+  <li>open architecture</li>
+  <li>cultural ‘norms’</li>
+  <li>technical and information standards</li>
+</ol>
+
+<p>These should underpin our software development and technical operations.<sup><a href="#wtsb">a</a></sup></p>
+
+<h1 id="a-cohesive-strategy">A cohesive strategy</h1>
+
+<p>Information technology projects must be ‘owned’ by the organisations delivering care with a focus on quality improvement.</p>
+
+<blockquote>
+  <p>“The key to creating a lean enterprise is to enable those doing the work to solve their customers’ problems in a way that is aligned with the strategy of the wider organization. To achieve this, we rely on people being able to make local decisions that are sound at a strategic level—which, in turn, relies critically on the flow of information, including feedback loops.”</p>
+
+  <p><a href="https://www.amazon.co.uk/Lean-Enterprise-Performance-Organizations-Innovate/dp/1449368425">Lean Enterprise, 2015, Jez Humble, Joanne Molesky, and Barry O’Reilly</a></p>
+</blockquote>
+
+<p>It is difficult to defend organisational structures in which ownership of information technology projects is outsourced to an external agency. Such issues of ownership are a fundamental problem when something goes wrong<sup><a href="#ptsafety">b</a></sup>;  a safer approach is to make the ownership explicit with a clear purchaser/commissional-provider split in which lines of responsibility are explicit. The health organisation as a whole  must “own” the information technology solutions and take responsibility for any consequences of failure.</p>
+
+<p>Similarly, given that all organisations and businesses are now, in effect, information technology companies (including healthcare organisations), information technology should not be the responsibility of a single department but cut across all internal departments. What changes can be made to the way we deliver healthcare that doesn’t have some need for information technology change?</p>
+
+<blockquote>
+  <p>“Historically, the adoption and management of health care IT has been left to an organization’s chief information officer and other technical personnel. This is a mistake. … health care IT is effective only when all members of an organization work to unlock its potential.”</p>
+
+  <p>“… many health care organizations use IT as a tool to monitor current processes and protocols; what only a small number have done is leverage those same IT systems to see if those processes and protocols can be improved—and if so, to act accordingly.”</p>
+
+  <p>“… [we need to] embrace [IT] as an instrument to help transform the way they deliver medical care. This will entail prioritizing quality improvement over cost cutting, making data collection easier and better, turning the data into actionable information for clinicians, and forging new operating and business models. We have found that while numerous health care organizations are moving in this direction, the majority are not making the holistic changes needed for transformation.”</p>
+
+  <p><a href="https://hbr.org/2017/11/the-it-transformation-health-care-needs">Harvard Business Review (HBR) The IT Transformation Health Care Needs, Dec 2017</a></p>
+</blockquote>
+
+<h1 id="so-what-are-our-goals">So what are our goals?</h1>
+
+<p>How can we make the right decisions about architecture, culture and standards to enable us to use information technology effectively to monitor, improve and transform our health services?</p>
+
+<p>What are our goals, given we work in complex, heterogeneous, ever-changing adaptive systems, with a high degree of uncertainty?</p>
+
+<p>At our foundation, we need a high-trust collaborative cross-organisational culture. What culture do you have in your own organisation, or across multiple organisations in your wider health economy? We need a ‘generative’ culture:</p>
+
+<blockquote>
+  <p>Pathological organizations are characterized by large amounts of fear and threat. People often hoard information or withhold it for political reasons, or distort it to make themselves look better.</p>
+
+  <p>Bureaucratic organizations protect departments. Those in the department want to maintain their “turf,” insist on their own rules, and generally do things by the book—their book.</p>
+
+  <p>Generative organizations focus on the mission. How do we accomplish our goal? Everything is subordinated to good performance, to doing what we are supposed to do.</p>
+
+  <p><a href="https://www.amazon.co.uk/Lean-Enterprise-Performance-Organizations-Innovate/dp/1449368425">Lean Enterprise, 2015, Jez Humble, Joanne Molesky, and Barry O’Reilly</a></p>
+</blockquote>
+
+<p>As part of that culture, we must recognise that we do not have all of the answers and that we must be able to adapt to change.</p>
+
+<p>It is easy to fall into a trap of thinking the best way of dealing with uncertainty is building “command-and-control” like structures in which we analyse the work to be done and deliver it by breaking it up into components or projects. It is, unfortunately, naive to think that centralised command-and-control reduces risk in delivering valuable information technology.</p>
+
+<p>Instead, we must focus our efforts around high-level strategic objectives and then create small cross-functional teams empowered to deliver components of that vision.</p>
+
+<blockquote>
+  <p>“According to the Principle of Mission, we create alignment not by making a detailed plan of how we achieve our objective but by describing the intent of our mission and communicating why we are undertaking it.The key to the Principle of Mission is to create alignment and enable autonomy by setting out clear, high-level target conditions with an agreed time frame—which gets smaller under conditions of greater uncertainty—and then leaving the details of how to achieve the conditions to teams.”</p>
+
+  <p>Lean Enterprise, 2015 quoting “The Principles of Product Development Flow” by Donald Reinertsen</p>
+</blockquote>
+
+<p>As I wrote in “The paradox of control”:</p>
+
+<blockquote>
+  <p>“There is an important paradox in many health services, including Wales, is that there is a tendency to centralise the day-to-day management and delivery of individual products and yet high-level strategic and prioritisation decisions are decentralised, haphazard and dependant on capital funding with little or no consideration or control as to how those projects will fit into a wider technical healthcare enterprise architecture.”</p>
+
+  <p><a href="/clinical-informatics/2017/12/05/enabling-innovation.html">“A paradox of control”</a></p>
+</blockquote>
+
+<h1 id="balancing-inherent-conflicts">Balancing inherent conflicts</h1>
+
+<p>We need to explicitly create a) an architecture, b) a culture and c) appropriate standards that result in overall solutions that are safe and secure and yet at the same time enable innovation.</p>
+
+<p>It is easy to see how such goals can be in conflict, unless we explicitly mitigate that conflict in how we design and manage that architecture, that culture and those technical standards.</p>
+
+<p>Here are just three examples of what appear to such conflicts:</p>
+
+<ul>
+  <li>
+    <p>we need software to respond to our changing needs and provide ever increasing value via automation (IT “developments”) while at the same time, we need to provide stable, reliable and secure services (IT “operations”)</p>
+  </li>
+  <li>
+    <p>we need local innovation and local decision making but ensure that local developments are not orthogonal to the wider strategic roadmap.</p>
+  </li>
+  <li>
+    <p>we need to adopt technical and information standards and yet support innovation and flexibility in approach.</p>
+  </li>
+</ul>
+
+<p>Such conflicts are magnified if we have the wrong architecture, culture and standards. Similarly, the right architecture, culture and standards can minimise or entirely mitigate these apparently intractable conflicts.</p>
+
+<p>We need to adopt “DevOps”, agility and lean thinking.</p>
+
+<h1 id="devops">DevOps</h1>
+
+<p>“DevOps” refers to creating cross-functional teams who break-down the traditional barriers between IT developments and operations.</p>
+
+<p>Modern technology companies have seen huge productivity gains from creating small teams to quickly and independently develop, test and deploy software and therefore deliver value at pace. They minimise risk by breaking down work into smaller, less risky units that can evolve independently with only loose-coupling with other components. They combine the development of new functionality with highly automated testing and deployment, often building in “feature switches” which optionally turn specific new functionality on or off depending on runtime configuration for testing in limited real-life environments before more widespread use is permitted. Such teams may deploy multiple versions per day, each deployment small and low risk, dependent on successfully passing automated testing and easily rolled back in the event of problems.</p>
+
+<p>The key is that developers can deploy into potentially multiple production-like test environments with little or no manual effort. Deployment is automated from a technical point-of-view, and, <em>codified</em>. As a result, testing and deployment are both designed and executed using code or configuration files and is therefore <em>automated</em>. It is entirely reasonable to delay actual deployment into production until other requirements are met, but that is simply migrating provenly reliable code from</p>
+
+<p>Such an approach is very different to what usually happens in healthcare IT. Those of you who work within the NHS will be familiar with long development cycles, entirely separate teams running the different stages of development, testing, deployment, and maintaining services. The process for creating and deploying new functionality typically requires long test-cycles, user-acceptance tests and then, at some indeterminate time in the future, features are rolled into a high-risk big-bang deployment.</p>
+
+<p>The <a href="http://amzn.eu/ekRxYte">DevOps Handbook</a> talks about a “downward spiral” in three acts, in which components of a wider architecture become fragile and increasingly difficult to change, building an increasing “technical debt”, of attempting to make changes by cutting corners and never really having time to fix the underlying issues and so adding to that “debt”, and resulting in a situation in which:</p>
+
+<blockquote>
+  <p>“everything becomes just a little more difficult, bit by bit— everybody gets a little busier, work takes a little more time, communications become a little slower, and work queues get a little longer.</p>
+
+  <p>“Our work becomes more tightly-coupled, smaller actions cause bigger failures, and we become more fearful and less tolerant of making changes.”</p>
+
+  <p>“Work requires more communication, coordination, and approvals; teams must wait just a little longer for their dependent work to get done; and our quality keeps getting worse. The wheels begin grinding slower and require more effort to keep turning.”</p>
+
+  <p><a href="http://amzn.eu/ekRxYte">The DevOps Handbook: How to Create World-Class Agility, Reliability, and Security in Technology Organizations</a></p>
+</blockquote>
+
+<p>The natural conclusion is that we should aim for <em>continuous integration</em> (CI) and <em>continuous deployment</em> (CD), with a focus on splitting up what we need to deliver into manageable chunks to be worked upon semi-autonomously by small, independent, cross-functional teams themselves releasing software frequently and often with the confidence of automated toolchains to support extensive unit, integration and security testing with deployment into production-like environments.</p>
+
+<p>The advent of “serverless” technologies supports and extends “DevOps” principles:</p>
+
+<blockquote>
+  <p>Serverless computing allows users to run code without provisioning or managing any underlying system or application infrastructure, and they automatically scale to support increasing or decreasing loads. 
+<a href="https://blogs.gartner.com/andrew-lerner/2017/07/21/serverless-is-not-networkless/">https://blogs.gartner.com/andrew-lerner/2017/07/21/serverless-is-not-networkless/</a></p>
+</blockquote>
+
+<p>With “serverless” computing, we no longer need to manage our own infrastructure but instead make use of commodity cloud computing providers who take our code and run, monitor and scale to meet demand automatically. Our IT “operations” work is still needed however, but almost by default, software development is immediately deployable into production-like environments. Operations are still needed in order to orchestrate multiple semi-independent services but technologies such as API gateways can act to provide a unified single point of access to multiple services.</p>
+
+<h1 id="agile">Agile</h1>
+
+<p>The <a href="Agile Manifesto">“Agile” manifesto</a> was released in 2001; the key points for the purposes of this post are:</p>
+
+<ul>
+  <li>continuous delivery of quality software</li>
+  <li>delivering working software frequently</li>
+  <li>harnessing change</li>
+</ul>
+
+<p>It is easy to see that “agile” is about culture change and that the consequences of a change in culture are a set of technical solutions such as DevOps and Serverless. Agile is, in effect an enabler of “DevOps”.</p>
+
+<blockquote>
+  <p>“Instead of large batches of work being processed sequentially through the design/ development value stream and then through the test/ operations value stream (such as when we have a large batch waterfall process or long-lived feature branches), our goal is to have testing and operations happening simultaneously with design/ development, enabling fast flow and high quality. This method succeeds when we work in small batches and build quality into every part of our value stream.”</p>
+
+  <p>The DevOps Handbook</p>
+</blockquote>
+
+<h1 id="lean-principles-and-six-sigma">Lean principles and Six Sigma</h1>
+
+<p>While “Lean” was originally created by Toyota to improve productivity and quality, the principles are much more widely applicable to other industries.</p>
+
+<p>The five <a href="https://www.asme.org/engineering-topics/articles/manufacturing-design/5-lean-principles-every-should-know">Lean principles are</a>:</p>
+
+<ol>
+  <li>Value: what we want to do or deliver</li>
+  <li>Value stream: the steps and processes needed to deliver the ‘value’, removing steps that do not add value</li>
+  <li>Flow: ensuring that the steps and processes that contribute to ‘value’ flow smoothly with no interruptions, delays or bottlenecks.</li>
+  <li>Pull: delivery of value as required ‘just-in-time’</li>
+  <li>Perfection: making lean thinking and process improvement part of the culture</li>
+</ol>
+
+<p>Similarly, many readers might be more familiar with the Six Sigma methodology, now widely used within healthcare. Six Sigma focuses more on variation and design than flow and waste, but clearly these approaches are complementary and indeed, many now combine the two as “Lean Six Sigma”.</p>
+
+<p>I have discussed the Six Sigma DMAIC cycle previously when discussing <a href="/cis-design/2017/05/01/medical-record.html">“The Medical Record”</a> and the importance of a data-driven approach to quality improvement.</p>
+
+<p><img src="/images/cis_design/dmaic.png" alt="Dmaic" /></p>
+
+<h1 id="application-to-healthcare">Application to healthcare</h1>
+
+<p>So we have a convergence that, at its core, is focused on delivering <em>value</em>. Information technology is critical in our healthcare quality improvement endeavours and we can apply those same endeavours to <em>how we build</em> our information technology tools.</p>
+
+<p>It is my view that quality improvement, in all its forms (e.g. our <a href="http://www.1000livesplus.wales.nhs.uk/home">1000 lives campaign in Wales</a>), and information technology are inextricably linked and mutually beneficial. Quality improvement benefits from good information technology as the latter is fundamental in performance of the “measure”, “analyse” and “improve” steps of a typical DMAIC cycle. Similarly, information technology benefits from applying those same quality improvement methodologies.</p>
+
+<p>We need a “reset” in NHS Wales when it comes to information technology and I suspect this applies to other health economies as well.</p>
+
+<p>We need to embed quality improvement at the heart of our information technology and information technology at the heart of our healthcare, adopt a generative culture and deliver at pace.</p>
+
+<p>We need less command-and-control and more trust and collaboration, with decision-making, clinical and design, based on <em>meaningful data</em>.</p>
+
+<blockquote>
+  <p>“Scott Cook, the founder of Intuit, has long advocated building a culture of innovation, encouraging teams to take an experimental approach to product development and exhorting leadership to support them. As he said, “Instead of focusing on the boss’s vote… the emphasis is on getting real people to really behave in real experiments, and basing your decisions on that.” This is the epitome of a scientific approach to product development.”</p>
+
+  <p>The DevOps Handbook.</p>
+</blockquote>
+
+<h1 id="questions-to-ask">Questions to ask</h1>
+
+<p>If you are working in healthcare information technology, particularly if you’re in Wales, ask yourself these questions:</p>
+
+<ol>
+  <li>Do you have a clear view of your “mission” and yet have sufficient autonomy to create teams to get things done?</li>
+  <li>Do you have “can-do” ethos and a culture of trust and collaboration?</li>
+  <li>Do you have a track record of delivering valuable products consistently, to time and within budget?</li>
+  <li>What is the time interval between development and deployment? Is it measured in hours, days, weeks or months?</li>
+  <li>Similarly, do you have ready access to production-like test environments to prove, via high-levels of automation, that changes in one system have no untoward effects in another? (Ask questions about test environments and automated checks that our systems are deterministic, both when running independently and when integrated with other systems).</li>
+  <li>Does your team view deployment in the same way as committing code instead of with trepidation, planning and prolonged downtime?</li>
+  <li>Do you have robust investigation of failures, with a learning culture and codified tests to ensure such failures are prevented in the future?</li>
+  <li>Do you have objective measures of quality improvement, do you routinely collect metrics on user satisfaction, performance, downtime or whatever else needs to improve? Have you adopted a <a href="/clinical-informatics/2017/10/19/data-driven.html">data-driven approach</a> to informatics and quality improvement?</li>
+  <li>Do you have a cadre of professional user-interface designers working across teams to focus on improving your user’s experience in using your software?</li>
+</ol>
+
+<p>Because, if you can answer yes to these questions, you are much more likely to be able to…</p>
+
+<p>Move fast and <del>break</del> fix healthcare…</p>
+
+<p>Do you want to join me?</p>
+
+<p><em>Mark</em></p>
+
+<h1 id="footnotes">Footnotes</h1>
+
+<p><a name="wtsb">a</a>:That’s why I was delighted to be asked to chair the new Welsh Technical Standards Board (WTSB), a new group that will work in partnership with the Welsh Information Standards Board (WISB).</p>
+
+<p><a name="ptsafety">b</a>: 3079 “parked” electronic referrals unintentionally unsent by general practitioners in Wales to secondary care services were deemed a “process issue” and not an “IT failure” and resulting investigation was “difficult due to lack of engagement from health boards” as the software supplier “owned” the project to digitise the referral pathways and not the organisations that owned the care pathways involved.</p>
+
+<h1 id="see-also">See also</h1>
+
+<p><a href="http://amzn.eu/6F2n4Te"><img src="/images/lean_enterprise.jpg" alt="Lean Enterprise" /></a>
+<a href="http://amzn.eu/4YoMrUS"><img src="/images/devops-handbook.jpg" alt="Devops Handbook" /></a></p>
+
+  </div>
+
+  
+</article>
+        
+      </div>
+    </main>
+    
+    
+    
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Health informatics and information technology</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Health informatics and information technology
+            
+            </li>
+            
+            <li><a href="mailto:mark@wardle.org">mark@wardle.org</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/wardle"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">wardle</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/mwardle"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">mwardle</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
