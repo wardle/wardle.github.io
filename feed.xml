@@ -1,5 +1,30 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-04-26T07:41:14+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
-</subtitle><entry><title type="html">Lean healthcare</title><link href="https://www.wardle.org/clinical-informatics/2018/04/26/lean-healthcare-devops.html" rel="alternate" type="text/html" title="Lean healthcare" /><published>2018-04-26T07:06:06+01:00</published><updated>2018-04-26T07:06:06+01:00</updated><id>https://www.wardle.org/clinical-informatics/2018/04/26/lean-healthcare-devops</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2018/04/26/lean-healthcare-devops.html">&lt;p&gt;In this blog post, I want to talk about transforming our health services using technology.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-05-06T10:53:46+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</subtitle><entry><title type="html">Next generation electronic health records</title><link href="https://www.wardle.org/clinical-informatics/2018/05/06/cloud-ehr.html" rel="alternate" type="text/html" title="Next generation electronic health records" /><published>2018-05-06T10:09:09+01:00</published><updated>2018-05-06T10:09:09+01:00</updated><id>https://www.wardle.org/clinical-informatics/2018/05/06/cloud-ehr</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2018/05/06/cloud-ehr.html">&lt;p&gt;In &lt;a href=&quot;/digital-platform/2018/03/30/where-is-the-value.html&quot;&gt;“Where is the value?”&lt;/a&gt;, I talked about market disruption by the cycle of commoditisation and creative destruction.&lt;/p&gt;
+
+&lt;p&gt;Soon, there will be a period of creative destruction for the healthcare information technology industry resulting from four important drivers:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The recognition that software and data are critical enablers of clinical quality improvement and service transformation.&lt;/li&gt;
+  &lt;li&gt;That to support quality improvement, we will adopt practices used in the most highly productive technology companies to permit the supporting software to be developed, tested and deployed rapidly, iteratively, safely and securely. At the same time, we will increasingly see the benefits from building smaller self-contained components via small cross-functional teams with bounded contexts and loose coupling with other components. In essence, we will adopt software quality improvement methodologies in our development processes to drive clinical quality improvement. Adoption of these approaches will result in changes to our culture, our enterprise architecture and drive the use of standards.&lt;/li&gt;
+  &lt;li&gt;That complex, adaptive environments such as healthcare benefit from a domain-driven approach and separation of the storage / transmission of data from software functions that operate upon those data. Our adoption of shared data standards is critical to this; essentially this means a shared language used within bounded but shared interdisciplinary contexts. Separation of software functionality from the way those data are persisted is essential in building software systems for cultures that recognise our work will never be complete and we will always strive to improve.&lt;/li&gt;
+  &lt;li&gt;That software-as-a-service is becoming commonplace; as a result, we will increasingly blend functionality from in-house teams with that provided by multiple other service providers. In essence, many computing functions will become commoditised and others will become specialist and pay-per-use; almost all will be provided by commodity cloud providers and infrastructure-as-a-service. As a result, we will adopt an ecosystem of compute functions operating upon data stored or transmitted independently; monolithic applications will be quickly overtaken by blended applications stitching together software functionality from multiple vendors to create increasing value for end-users.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;My next blog post(s) will take each of these in turn and explore the best way for us all, whether health providers or software companies, to take advantage of the changes that new technology can bring. I truly believe that this must inform how we build the next generation of electronic health record software: distributed, cloud-based and centred on the patient and not the organisation.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/tech-qual-research.png&quot; alt=&quot;The overlap between our efforts in service transformation and quality improvement, research and advancing our knowledge and technology&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We need to recognise the overlap and mutually dependent relationships between:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;our efforts in healthcare service transformation and quality improvement&lt;/li&gt;
+  &lt;li&gt;research and advancing our knowledge&lt;/li&gt;
+  &lt;li&gt;technology and digital tools&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Understanding these relationships, and the fact that software is truly a transformative force for good, is critical for those of us who want to support healthcare with technology. Part two coming soon.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">In “Where is the value?”, I talked about market disruption by the cycle of commoditisation and creative destruction.</summary></entry><entry><title type="html">Lean healthcare</title><link href="https://www.wardle.org/clinical-informatics/2018/04/26/lean-healthcare-devops.html" rel="alternate" type="text/html" title="Lean healthcare" /><published>2018-04-26T07:06:06+01:00</published><updated>2018-04-26T07:06:06+01:00</updated><id>https://www.wardle.org/clinical-informatics/2018/04/26/lean-healthcare-devops</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2018/04/26/lean-healthcare-devops.html">&lt;p&gt;In this blog post, I want to talk about transforming our health services using technology.&lt;/p&gt;
 
 &lt;p&gt;There are four core messages:&lt;/p&gt;
 
@@ -136,7 +161,7 @@
 
 &lt;p&gt;Modern technology companies have seen huge productivity gains from creating small teams to quickly and independently develop, test and deploy software and therefore deliver value at pace. They minimise risk by breaking down work into smaller, less risky units that can evolve independently with only loose-coupling with other components. They combine the development of new functionality with highly automated testing and deployment, often building in “feature switches” which optionally turn specific new functionality on or off depending on runtime configuration for testing in limited real-life environments before more widespread use is permitted. Such teams may deploy multiple versions per day, each deployment small and low risk, dependent on successfully passing automated testing and easily rolled back in the event of problems.&lt;/p&gt;
 
-&lt;p&gt;The key is that developers can deploy into potentially multiple production-like test environments with little or no manual effort. Deployment is automated from a technical point-of-view, and, &lt;em&gt;codified&lt;/em&gt;. As a result, testing and deployment are both designed and executed using code or configuration files and is therefore &lt;em&gt;automated&lt;/em&gt;. It is entirely reasonable to delay actual deployment into production until other requirements are met, but that is simply migrating provenly reliable code from&lt;/p&gt;
+&lt;p&gt;The key is that developers can deploy into potentially multiple production-like test environments with little or no manual effort. Deployment is automated from a technical point-of-view, and, &lt;em&gt;codified&lt;/em&gt;. As a result, testing and deployment are both designed and executed using code or configuration files and is therefore &lt;em&gt;automated&lt;/em&gt;. It is entirely reasonable to delay actual deployment into production until other requirements are met, but that process becomes one of simply migrating provenly reliable code.&lt;/p&gt;
 
 &lt;p&gt;Such an approach is very different to what usually happens in healthcare IT. Those of you who work within the NHS will be familiar with long development cycles, entirely separate teams running the different stages of development, testing, deployment, and maintaining services. The process for creating and deploying new functionality typically requires long test-cycles, user-acceptance tests and then, at some indeterminate time in the future, features are rolled into a high-risk big-bang deployment.&lt;/p&gt;
 
@@ -386,11 +411,11 @@
   &lt;li&gt;Heart valve stenosis (44241007)&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;A simple subsumption test would indicate that myocardial infarction could be any of the three latter categories, so what result do we get?&lt;/p&gt;
+&lt;p&gt;A simple subsumption test would indicate that myocardial infarction could be either (2) or (3), so what result do we get?&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/snomed/mi-to-category.jpeg&quot; alt=&quot;Mi To Category&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Appropriately, the service maps to ischaemic heart disease as the closest best match of the four categories available.&lt;/p&gt;
+&lt;p&gt;Appropriately, the service maps to “ischaemic heart disease” as the closest best match of the four categories available as it is more specific than the more general term “heart disease”, which subsumes it.&lt;/p&gt;
 
 &lt;p&gt;Similarly, aortic stenosis is appropriately mapped to a type of heart valve stenosis.&lt;/p&gt;
 
@@ -444,7 +469,7 @@
 
 &lt;p&gt;The &lt;em&gt;value&lt;/em&gt; in creative destruction and commoditisation derives from building valuable innovative products in the new markets created by those processes.&lt;/p&gt;
 
-&lt;p&gt;As cloud computing becomes more ubiquitous, healthcare enterprises will increasingly switch away from purchasing and installed software locally and instead make use of software-as-a-service. We can see the beginnings of this in non-health markets already with the advent of marketplaces like &lt;a href=&quot;https://aws.amazon.com/serverless/serverlessrepo/&quot;&gt;Amazon’s Serverless Application Repository&lt;/a&gt; and the &lt;a href=&quot;https://aws.amazon.com/blogs/compute/monetize-your-apis-in-aws-marketplace-using-api-gateway/&quot;&gt;AWS Marketplace / API gateway&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;As cloud computing becomes more ubiquitous, healthcare enterprises will increasingly switch away from purchasing and installing software locally and instead make use of software-as-a-service. We can see the beginnings of this in non-health markets already with the advent of marketplaces like &lt;a href=&quot;https://aws.amazon.com/serverless/serverlessrepo/&quot;&gt;Amazon’s Serverless Application Repository&lt;/a&gt; and the &lt;a href=&quot;https://aws.amazon.com/blogs/compute/monetize-your-apis-in-aws-marketplace-using-api-gateway/&quot;&gt;AWS Marketplace / API gateway&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;What does this mean for healthcare information technology? What will happen if as we build open systems, open standards and open application programming interfaces creating an &lt;em&gt;open platform&lt;/em&gt;?&lt;/p&gt;
 
@@ -1197,67 +1222,4 @@ operator intervention.&lt;/p&gt;
   &lt;li&gt;
     &lt;p&gt;Part 3 : &lt;a href=&quot;/clinical-informatics/2018/01/19/focus-solutions.html&quot;&gt;Pragmatic solutions to those challenges&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">In part one of this series, I introduced the “Informed health and care – A digital health and social care strategy for Wales” and talked in broad terms about the importance of a coherent strategy - a specific action-focused plan - to deliver that vision.</summary></entry><entry><title type="html">Focus focus focus</title><link href="https://www.wardle.org/clinical-informatics/2018/01/19/focus-focus-focus.html" rel="alternate" type="text/html" title="Focus focus focus" /><published>2018-01-19T14:44:44+00:00</published><updated>2018-01-19T14:44:44+00:00</updated><id>https://www.wardle.org/clinical-informatics/2018/01/19/focus-focus-focus</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2018/01/19/focus-focus-focus.html">&lt;p&gt;&lt;a href=&quot;http://gov.wales/topics/health/nhswales/about/e-health/?lang=en&quot;&gt;“Informed health and care – A digital health and social care strategy for Wales”&lt;/a&gt; sets out a clear vision for the use of information technology to support the provision of healthcare for citizens within Wales.&lt;/p&gt;
-
-&lt;p&gt;This vision is split into four key themes:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;“Information for You”&lt;/li&gt;
-  &lt;li&gt;“Supporting professionals”&lt;/li&gt;
-  &lt;li&gt;“Improvement and innovation”&lt;/li&gt;
-  &lt;li&gt;“A Planned future”.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“We want a future where staff, service users, patients and carers are empowered and better informed, where organisational boundaries are not a barrier to effective care, as information is available electronically and joined-up, and where innovation and improvement can flourish built on a solid technical infrastructure and a safe environment for those who work in or are served by health and care services in Wales.”&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The key question for us to answer is, what are the challenges that must be overcome to deliver this vision? As part of that process, we must identify current and future impediments to successful delivery. It is easy to fall into a trap of thinking of the “Informed Health and Care” strategy as an finished product instead of what it is, a set of high level goals which requires us to build a tangible and specific roadmap bringing together multiple strands of work into a truly cohesive vision.&lt;/p&gt;
-
-&lt;p&gt;Likewise, we must be honest about the economical and political environment in which we work, acknowledging the limitations in resources. We face a multitude of potentially conflicting demands and interests; as such, delivering the “Informed Health and Care Strategy” requires us to not only understand what we must do to achieve those goals but critically to understand what we must stop doing.&lt;/p&gt;
-
-&lt;p&gt;So, what is our strategy to deliver the vision?&lt;/p&gt;
-
-&lt;h4 id=&quot;difficult-choices--we-cannot-do-it-all&quot;&gt;Difficult choices : we cannot do it all&lt;/h4&gt;
-
-&lt;p&gt;NHS Wales must face some difficult choices.  For too long, external factors have resulted in incoherent and inconsistent delivery or projects, frequency orthogonal to delivery of the wider vision; in many cases it has been driven by the budgeting process and the availability of funds in any single financial year.&lt;/p&gt;
-
-&lt;p&gt;A coherent plan to deliver the strategy needs more than a list of disconnected and incompatible goals but instead a clear understanding of what needs to be done and what doesn’t need to be done; we must know when to say “no”. Instead, we focus our limited resources on specific tangible actions and make some difficult decisions to prune areas of work that do not support delivery of the wider vision.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;… you should have a very short list of the most important things for the company to do. Then you will have a basis for moving forward.&lt;/p&gt;
-
-  &lt;p&gt;from &lt;a href=&quot;https://www.amazon.co.uk/Good-Strategy-Bad-Difference-Matters/dp/1846684811&quot;&gt;“Good Strategy Bad Strategy”, 2011 by Richard Rumelt&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;As such, we need a coordinated all-Wales approach that permits all stakeholders to work cooperatively and collaboratively with clear lines of responsibility and governance. We need to re-organise our approach to healthcare information technology taking into account the steps needed to deliver the vision, the principles of enterprise architectural design, modern information standards and interoperability, modern quality improvement methodology and user-centred design.&lt;/p&gt;
-
-&lt;p&gt;I believe that the only logical response to the &lt;a href=&quot;https://www.wao.gov.uk/publication/informatics-systems-nhs-wales&quot;&gt;Welsh Audit Office report&lt;/a&gt; is to re-imagine the relationship between the NHS Wales Informatics Service (NWIS) and the health boards. Such a re-imagining requires us to stop ignoring the, in my view, currently incoherent set of responsibilities and divisions of labour that exist within Wales.&lt;/p&gt;
-
-&lt;p&gt;For example, is NWIS a standards and governance body, a consultancy, a software development house, a provider of a computing platform, a user experience and design shop, a procurement specialist, a business intelligence and analytics service or a provider of information technology infrastructure? Who is responsible? Who takes the credit for successful delivery and who takes the blame when something is not delivered? If we cannot answer such questions, we have to question our governance and organisational structures.&lt;/p&gt;
-
-&lt;p&gt;In addition, while it makes sense that the “Informed Health and Care” strategy is divided into four workstreams, I believe it is incorrect to assume that the safe and efficient delivery of those objectives is necessarily delineated into separate workstreams. Such separation works only if work may continue semi-independently without consideration to other projects. There are, in my opinion, too many common goals and solutions to solve those goals that cross-cut those workstreams to consider them independently.&lt;/p&gt;
-
-&lt;p&gt;Instead, we must consider a “target architecture”, an enterprise master-plan which lays out an overall set of systems and functions that will support delivery of our shared vision. For example, understanding the similarities and differences between providing information for patients or professionals provides important insight into the shared data and software components that must serve both sets of requirements. For example, patients and health professionals need to see past and prior appointments and entries on waiting lists; there is no doubt that there are shared needs that cut across those workstreams.&lt;/p&gt;
-
-&lt;p&gt;Similarly, transformational change, enabled by technology, must be driven from the bottom-up, from those who deliver healthcare permitting incremental development and innovation while at the same time lowering risk. When a project is small and developed incrementally in an agile-way, our risk of failure is minimised. Likewise, don’t we all know that we must have top-down governance to ensure that solutions are standards-compliant, fit-for-purpose and safe as well as checking that developments are not orthogonal to the overall strategic vision so eloquently described in four workstreams of the Informed Health and Care Strategy?&lt;/p&gt;
-
-&lt;p&gt;As such, we need an all-Wales plan to deliver the vision that balances the need for centralised planning and yet enables local innovation. The paradox, put simply, is that currently we appear to have centralised the day-to-day management and delivery of individual projects and yet high-level strategic and prioritisation decisions are decentralised, haphazard and dependant on capital funding with little or no consideration or control as to how those projects will fit into a wider technical all-Wales architecture. We have, in essence, failed to create a plan to delivery the strategy.&lt;/p&gt;
-
-&lt;p&gt;In &lt;a href=&quot;/clinical-informatics/2018/01/19/focus-challenges.html&quot;&gt;part 2 of this series, I discuss the challenges that we face in NHS Wales in delivering the vision in our strategy&lt;/a&gt;.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Other posts in this series:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Part 1 : &lt;a href=&quot;/clinical-informatics/2018/01/19/focus-focus-focus.html&quot;&gt;The importance of strategy : focus&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Part 2 : &lt;a href=&quot;/clinical-informatics/2018/01/19/focus-challenges.html&quot;&gt;The challenges we face in delivering the vision&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Part 3 : &lt;a href=&quot;/clinical-informatics/2018/01/19/focus-solutions.html&quot;&gt;Pragmatic solutions to those challenges&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">“Informed health and care – A digital health and social care strategy for Wales” sets out a clear vision for the use of information technology to support the provision of healthcare for citizens within Wales.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">In part one of this series, I introduced the “Informed health and care – A digital health and social care strategy for Wales” and talked in broad terms about the importance of a coherent strategy - a specific action-focused plan - to deliver that vision.</summary></entry></feed>
