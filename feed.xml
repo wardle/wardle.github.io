@@ -1,16 +1,83 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-05-06T10:53:46+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
-</subtitle><entry><title type="html">Next generation electronic health records</title><link href="https://www.wardle.org/clinical-informatics/2018/05/06/cloud-ehr.html" rel="alternate" type="text/html" title="Next generation electronic health records" /><published>2018-05-06T10:09:09+01:00</published><updated>2018-05-06T10:09:09+01:00</updated><id>https://www.wardle.org/clinical-informatics/2018/05/06/cloud-ehr</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2018/05/06/cloud-ehr.html">&lt;p&gt;In &lt;a href=&quot;/digital-platform/2018/03/30/where-is-the-value.html&quot;&gt;“Where is the value?”&lt;/a&gt;, I talked about market disruption by the cycle of commoditisation and creative destruction.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-05-07T22:19:39+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</subtitle><entry><title type="html">Creative 2/3: The value of software for healthcare</title><link href="https://www.wardle.org/clinical-informatics/2018/05/06/clinical-software-quality.html" rel="alternate" type="text/html" title="Creative 2/3: The value of software for healthcare" /><published>2018-05-06T10:09:09+01:00</published><updated>2018-05-06T10:09:09+01:00</updated><id>https://www.wardle.org/clinical-informatics/2018/05/06/clinical-software-quality</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2018/05/06/clinical-software-quality.html">&lt;p&gt;In &lt;a href=&quot;/clinical-informatics/2018/05/06/clinical-software-quality.html&quot;&gt;part one, I highlighted four drivers that will result in creative destruction&lt;/a&gt; in the healthcare IT industry:&lt;/p&gt;
+
+&lt;p&gt;The first was the recognition that software and data are critical enablers of clinical quality improvement, service transformation and advancing our knowledge (research).&lt;/p&gt;
+
+&lt;p&gt;The second was that the best way to build healthcare software is to adopt the behaviours, processes and culture from the most highly productive technology companies. This means adopting quality improvement and research methodologies to develop, test and deploy the software that use to improve our clinical quality, service and research endeavours.&lt;/p&gt;
+
+&lt;p&gt;The third was the importance of separating data storage and transmission from the software operating on those data, with a shared domain language uniting multi-disciplinary cross-functional, semi-autonomous teams creating discrete, carefully bounded components with loose coupling with other components.&lt;/p&gt;
+
+&lt;p&gt;The fourth was the recognition of a transformation in software engineering practices with the increasing adoption of cloud and serverless technologies, permitting the development and commodification of components of what will become, a distributed and patient-centred logical electronic health record. The end result? A variety of interoperable applications, both clinical and administrative indeed, focused on workflow and usually task-orientated, making use of that shared health platform.&lt;/p&gt;
+
+&lt;h1 id=&quot;software-and-healthcare&quot;&gt;Software and healthcare&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Software is eating the world.”&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;https://www.wsj.com/articles/SB10001424053111903480904576512250915629460&quot;&gt;Marc Andreeson&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Every industry that is not bringing software to the core of their business will be disrupted.&lt;/p&gt;
+
+  &lt;p&gt;Jeffrey Immelt, CEO and Chairman, General Electric, 2001-2017&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I truly believe that software is critical to the future of healthcare, in supporting both patients and health professionals in their respective roles. Current software usually does little but replace existing paper processes but we should be aiming to use software to transform our health services.&lt;/p&gt;
+
+&lt;p&gt;Our clinical quality improvement and service transformation endeavours must be supported by new technology, by software and data, to support our efforts to effect change and measure the outcomes of that change in a virtuous cycle of continuous improvement.&lt;/p&gt;
+
+&lt;p&gt;Such continuous improvement requires us to be able to rapidly develop, test, integrate and deploy software. That software could be hand-coded or be the product of machine learning; whatever the case, it needs to be developed, tested, integrated and deployed continuously monitored to ensure it works safely and reliably.&lt;/p&gt;
+
+&lt;p&gt;Are we confident that we have the right culture and architecture in order to do that, because if we don’t, won’t we need to transform our organisations, our culture and our technical architecture to support those needs?&lt;/p&gt;
+
+&lt;p&gt;In essence, we must recognise that our technology, quality improvement and research endeavours are best considered as related and mutually supportive:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/tech-qual-research.png&quot; alt=&quot;The relationship between technology, quality improvement and research&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Quality improvement relies on measurement, analysis and action and therefore most effectively supported by the provision of digital tools to those who wish to transform their services.&lt;/p&gt;
+
+&lt;p&gt;Likewise, development and deployment of technology should, itself, be subject to the same approach to quality improvement so that we develop, test, measure, analyse and deploy in the same virtuous cycle of &lt;em&gt;continuous&lt;/em&gt; improvement.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/devops-qi.png&quot; alt=&quot;Devops Qi&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Similarly, &lt;em&gt;research&lt;/em&gt;, a process to advance our knowledge, requires very similar but more robust and formal protocols and oversight. But technology can help us here, supporting our decision making when in situations of genuine equipoise by providing transformative technology supporting identification, recruitment and randomisation of patients into complex, multi-arm trials currently require manual labour-intensive work.&lt;/p&gt;
+
+&lt;h1 id=&quot;metrics-of-success&quot;&gt;Metrics of success&lt;/h1&gt;
+
+&lt;p&gt;We must admit that our work will &lt;em&gt;never be complete&lt;/em&gt;. As a result, whether we are talking about our clinical services, our technology or our research, we should never use metrics that simply talk about &lt;em&gt;deployment&lt;/em&gt;, but instead consider &lt;em&gt;outcomes&lt;/em&gt; and our efforts should be focused on improving those &lt;em&gt;outcomes&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Like many others, NHS Wales currently uses deployment as a metric for success, but we need to change the conversation to &lt;em&gt;value&lt;/em&gt; and &lt;em&gt;outcome&lt;/em&gt; and shift to adopting the best industry practices for creating safe, reliable and valuable clinical software &lt;em&gt;at pace&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;In part three, I will talk about the importance of technical and information standards, standardised application programming interfaces and frameworks to create &lt;em&gt;ecosystems&lt;/em&gt; of interoperating smaller, well-defined contextually domain bound components sharing the same platform.&lt;/p&gt;
+
+&lt;h4 id=&quot;posts-in-this-series&quot;&gt;Posts in this series&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/05/06/clinical-software-quality.html&quot;&gt;Part one: creative destruction&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/05/06/clinical-software-quality.html&quot;&gt;Part two: clinical quality, software quality&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;further-reading&quot;&gt;Further reading&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/04/26/lean-healthcare-devops.html&quot;&gt;“Lean healthcare” &lt;/a&gt;: Value stream: transforming health and care technology implementations using lean, agile, “DevOps” and serverless with small, cross-functional teams.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/digital-platform/2018/03/30/where-is-the-value.html&quot;&gt;“Where is the value?”&lt;/a&gt;: Creative destruction and ecosystems&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h4&gt;
+
+&lt;p&gt;&lt;a name=&quot;single-patient-record&quot;&gt;a&lt;/a&gt;:The single patient record is a good idea - a logical single source-of-truth that is the canonical repository of information. Except, i) there is no truth in healthcare so you are better with models of uncertainty and ii) a medical record must be faceted so that it is possible to regulate access to different categories of information such as source (e.g. provider) and type (e.g. sexual or reproductive health matters, mental health, genetics, general medical etc). But, for now, “single patient record” is a useful pragmatic label.&lt;/p&gt;</content><author><name></name></author><summary type="html">In part one, I highlighted four drivers that will result in creative destruction in the healthcare IT industry:</summary></entry><entry><title type="html">Creative 1/3: Next generation electronic health records</title><link href="https://www.wardle.org/clinical-informatics/2018/05/06/cloud-ehr.html" rel="alternate" type="text/html" title="Creative 1/3: Next generation electronic health records" /><published>2018-05-06T10:09:09+01:00</published><updated>2018-05-06T10:09:09+01:00</updated><id>https://www.wardle.org/clinical-informatics/2018/05/06/cloud-ehr</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2018/05/06/cloud-ehr.html">&lt;p&gt;In &lt;a href=&quot;/digital-platform/2018/03/30/where-is-the-value.html&quot;&gt;“Where is the value?”&lt;/a&gt;, I talked about market disruption by the cycle of commoditisation and creative destruction.&lt;/p&gt;
 
 &lt;p&gt;Soon, there will be a period of creative destruction for the healthcare information technology industry resulting from four important drivers:&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;The recognition that software and data are critical enablers of clinical quality improvement and service transformation.&lt;/li&gt;
+  &lt;li&gt;The recognition that software and data are critical enablers of clinical quality improvement, service transformation and advancing our knowledge.&lt;/li&gt;
   &lt;li&gt;That to support quality improvement, we will adopt practices used in the most highly productive technology companies to permit the supporting software to be developed, tested and deployed rapidly, iteratively, safely and securely. At the same time, we will increasingly see the benefits from building smaller self-contained components via small cross-functional teams with bounded contexts and loose coupling with other components. In essence, we will adopt software quality improvement methodologies in our development processes to drive clinical quality improvement. Adoption of these approaches will result in changes to our culture, our enterprise architecture and drive the use of standards.&lt;/li&gt;
   &lt;li&gt;That complex, adaptive environments such as healthcare benefit from a domain-driven approach and separation of the storage / transmission of data from software functions that operate upon those data. Our adoption of shared data standards is critical to this; essentially this means a shared language used within bounded but shared interdisciplinary contexts. Separation of software functionality from the way those data are persisted is essential in building software systems for cultures that recognise our work will never be complete and we will always strive to improve.&lt;/li&gt;
   &lt;li&gt;That software-as-a-service is becoming commonplace; as a result, we will increasingly blend functionality from in-house teams with that provided by multiple other service providers. In essence, many computing functions will become commoditised and others will become specialist and pay-per-use; almost all will be provided by commodity cloud providers and infrastructure-as-a-service. As a result, we will adopt an ecosystem of compute functions operating upon data stored or transmitted independently; monolithic applications will be quickly overtaken by blended applications stitching together software functionality from multiple vendors to create increasing value for end-users.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;My next blog post(s) will take each of these in turn and explore the best way for us all, whether health providers or software companies, to take advantage of the changes that new technology can bring. I truly believe that this must inform how we build the next generation of electronic health record software: distributed, cloud-based and centred on the patient and not the organisation.&lt;/p&gt;
+&lt;p&gt;My next blog posts will take each of these in turn and explore the best way for us all, whether health providers or software companies, to take advantage of the changes that new technology can bring. I truly believe that this must inform how we build the next generation of electronic health record software: distributed, cloud-based and centred on the patient and not the organisation.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/tech-qual-research.png&quot; alt=&quot;The overlap between our efforts in service transformation and quality improvement, research and advancing our knowledge and technology&quot; /&gt;&lt;/p&gt;
 
@@ -22,9 +89,23 @@
   &lt;li&gt;technology and digital tools&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Understanding these relationships, and the fact that software is truly a transformative force for good, is critical for those of us who want to support healthcare with technology. Part two coming soon.&lt;/p&gt;
+&lt;p&gt;Understanding these relationships, and the fact that software is truly a transformative force for good, is critical for those of us who want to support healthcare with technology.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">In “Where is the value?”, I talked about market disruption by the cycle of commoditisation and creative destruction.</summary></entry><entry><title type="html">Lean healthcare</title><link href="https://www.wardle.org/clinical-informatics/2018/04/26/lean-healthcare-devops.html" rel="alternate" type="text/html" title="Lean healthcare" /><published>2018-04-26T07:06:06+01:00</published><updated>2018-04-26T07:06:06+01:00</updated><id>https://www.wardle.org/clinical-informatics/2018/04/26/lean-healthcare-devops</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2018/04/26/lean-healthcare-devops.html">&lt;p&gt;In this blog post, I want to talk about transforming our health services using technology.&lt;/p&gt;
+&lt;p&gt;Continue reading… &lt;a href=&quot;/clinical-informatics/2018/05/06/clinical-software-quality.html&quot;&gt;part two covers the importance of software in our efforts to transform clinical services and improve quality.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;posts-in-this-series&quot;&gt;Posts in this series&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/05/06/clinical-software-quality.html&quot;&gt;Part one: creative destruction&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/05/06/clinical-software-quality.html&quot;&gt;Part two: clinical quality, software quality&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;further-reading&quot;&gt;Further reading&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/digital-platform/2018/03/30/where-is-the-value.html&quot;&gt;“Where is the value?”&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/04/26/lean-healthcare-devops.html&quot;&gt;Lean healthcare&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">In “Where is the value?”, I talked about market disruption by the cycle of commoditisation and creative destruction.</summary></entry><entry><title type="html">Lean healthcare</title><link href="https://www.wardle.org/clinical-informatics/2018/04/26/lean-healthcare-devops.html" rel="alternate" type="text/html" title="Lean healthcare" /><published>2018-04-26T07:06:06+01:00</published><updated>2018-04-26T07:06:06+01:00</updated><id>https://www.wardle.org/clinical-informatics/2018/04/26/lean-healthcare-devops</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2018/04/26/lean-healthcare-devops.html">&lt;p&gt;In this blog post, I want to talk about transforming our health services using technology.&lt;/p&gt;
 
 &lt;p&gt;There are four core messages:&lt;/p&gt;
 
@@ -1125,101 +1206,4 @@ operator intervention.&lt;/p&gt;
   &lt;li&gt;
     &lt;p&gt;Part 3 : &lt;a href=&quot;/clinical-informatics/2018/01/19/focus-solutions.html&quot;&gt;Pragmatic solutions to those challenges&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">In part one of this series, I introduced the “Informed health and care – A digital health and social care strategy for Wales” and talked in broad terms about the importance of a coherent strategy to deliver that vision.</summary></entry><entry><title type="html">Focus: the challenges</title><link href="https://www.wardle.org/clinical-informatics/2018/01/19/focus-challenges.html" rel="alternate" type="text/html" title="Focus: the challenges" /><published>2018-01-19T14:45:45+00:00</published><updated>2018-01-19T14:45:45+00:00</updated><id>https://www.wardle.org/clinical-informatics/2018/01/19/focus-challenges</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2018/01/19/focus-challenges.html">&lt;p&gt;In &lt;a href=&quot;/clinical-informatics/2018/01/19/focus-focus-focus.html&quot;&gt;part one of this series&lt;/a&gt;, I introduced the &lt;a href=&quot;http://gov.wales/topics/health/nhswales/about/e-health/?lang=en&quot;&gt;“Informed health and care – A digital health and social care strategy for Wales”&lt;/a&gt; and talked in broad terms about the importance of a coherent strategy - a specific action-focused plan -  to deliver that vision.&lt;/p&gt;
-
-&lt;p&gt;In this part, I try to articulate the importance challenges we face in delivering the vision, concluding that essentially, we need to balance centralised planning and control with support for innovation and change, particularly given the new technologies on the horizon which offer the potential to transform how we configure and deliver care to our citizens.&lt;/p&gt;
-
-&lt;p&gt;We need a coherent plan to deliver our vision. In &lt;a href=&quot;/clinical-informatics/2018/01/19/focus-solutions.html&quot;&gt;part 3, I discuss the best way to meet those challenges.&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;what-are-the-challenges-we-face&quot;&gt;What are the challenges we face?&lt;/h1&gt;
-
-&lt;p&gt;So what are our challenges in delivering the vision today?  We can look to the recent &lt;a href=&quot;https://www.wao.gov.uk/publication/informatics-systems-nhs-wales&quot;&gt;Welsh Audit Office report&lt;/a&gt;; this has raised important concerns about healthcare information technology in Wales including:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Highlighting the inherent complexity of deploying information technology across a large complex system, spread across multiple organisations, with staff operating out of hospitals, GP practices and in the community.&lt;/li&gt;
-  &lt;li&gt;Significant delays in delivery of projects&lt;/li&gt;
-  &lt;li&gt;Lack of strategic prioritisation&lt;/li&gt;
-  &lt;li&gt;Disagreements between some NHS bodies and NWIS in relation to delivery and the meaning of “Once for Wales”&lt;/li&gt;
-  &lt;li&gt;A need to strengthen leadership&lt;/li&gt;
-  &lt;li&gt;Weakness in governance arrangements, lack of independent scrutiny and unbalanced reporting of progress&lt;/li&gt;
-  &lt;li&gt;Inadequate funding&lt;/li&gt;
-  &lt;li&gt;Inconsistent planning with a need to aligning plans across organisations&lt;/li&gt;
-  &lt;li&gt;Issues of information technology staff capacity.&lt;/li&gt;
-  &lt;li&gt;Issues of clinical engagement and dissatisfaction.&lt;/li&gt;
-  &lt;li&gt;Concerns about the quality and functionality of many national systems&lt;/li&gt;
-  &lt;li&gt;Unclear lines of responsibility in relation to delivering and monitoring the benefits of projects.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Similarly, we must also consider what challenges our services will face in the future. Healthcare is ever-changing and there are a number of transformative and disruptive influences in health that, together with new technology, are driving and will continue to drive new ways of working. I wrote about these in my &lt;a href=&quot;/clinical-informatics/2017/07/07/disruptive-influences-health.html&quot;&gt;disruptive challenges series of blog posts&lt;/a&gt;. Are we confident that we have an environment in Wales that is primed to take advantage of current and future technologies?&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Changes in model of care:
-    &lt;ul&gt;
-      &lt;li&gt;Management of multiple long-term health conditions, cross-disciplinary teamwork, non-health partnerships including social care and third-sector&lt;/li&gt;
-      &lt;li&gt;Shared care and shared records&lt;/li&gt;
-      &lt;li&gt;Remote monitoring using modern technology including wearables and the “Internet of things”.&lt;/li&gt;
-      &lt;li&gt;Focus on health outcomes and prudent healthcare, a need to support big data and real-time analytics and embed artificial intelligence into management and clinical practice.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Patients as active participants:
-    &lt;ul&gt;
-      &lt;li&gt;View and contribute to their own records, recording their own aims and objectives and target outcomes&lt;/li&gt;
-      &lt;li&gt;Communication with the healthcare team&lt;/li&gt;
-      &lt;li&gt;Control the sharing of their information for direct care, for service evaluation and for research via consent and robust citizen identity services&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Hospitals without walls:
-    &lt;ul&gt;
-      &lt;li&gt;Increasing availability of personal mobile devices, wearables and smart home monitoring&lt;/li&gt;
-      &lt;li&gt;New commercial models of care and software provision&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The &lt;a href=&quot;http://gov.wales/docs/dhss/publications/180116reviewen.pdf&quot;&gt;Parliamentary Review of Health and Social Care report&lt;/a&gt;, published in January 2018 highlights the need for a seamless health and care system in Wales, centred around the citizen irrespective of where they live with the avoidance of creating artificial barriers between services and organisations.&lt;/p&gt;
-
-&lt;p&gt;It highlights that service redesign can be enabled by the appropriate use of digital technology. In addition, it explains how frontline innovation across different parts of Wales has already emerged and the importance of being able to disseminate good practice once proven stressing the importance of adopting continuous quality improvement methodologies to create a learning health and care system. Similarly, it recognises that different localities across Wales do not need to operate in the same way or that services must be identical.&lt;/p&gt;
-
-&lt;p&gt;In that report, similar concerns to that from the WAO were raised :&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Simply put, activity is just too dispersed and stretched, and lacks overall commitment around a unified vision and set of priorities.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;At the same time, the report draws out the seemingly conflicting goals between local variation and harmonisation and standardisation. We want to support innovation, appropriate variation in services and the delivery of a thriving digital ecosystem supporting local industry and at the same time reduce needless variation, share good practice and harmonise across systems?&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;I do not, for example, want patients to be disadvantaged because the technology used in one health board is different to another and the information available is incomplete and the pathway of care disrupted. This is why Wales has committed to working together to adopt common information services and I expect all parts of the NHS in Wales, supported by the Informatics Service, to adopt them&lt;/p&gt;
-
-  &lt;p&gt;Dr Andrew Goodall,  Chief Executive, NHS Wales.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;How can we deliver these two seemingly mutually exclusive goals?&lt;/p&gt;
-
-&lt;p&gt;The answer, of course, is to understand that coordination and central control can be applied differently depending on what is being discussed.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Thus we should seek coordinated policies only when the gains are very large. There will be costs to demanding coordination, because it will ride roughshod over economies of specialization and more nuanced local responses. The brilliance of good organization is not in making sure that everything is connected to everything else. How that road lies a frozen maladaptive stasis. Good strategy and good organization lie in specializing on the right activities and imposing only the essential amount of coordination.&lt;/p&gt;
-
-  &lt;p&gt;from “Good Strategy Bad Strategy”, 2011 by Richard Rumelt&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Our strategy must therefore take into account a need for national coordination for some areas of our work and yet enable innovation and variation in others.&lt;/p&gt;
-
-&lt;p&gt;We need a coherent plan to deliver our vision. In &lt;a href=&quot;/clinical-informatics/2018/01/19/focus-solutions.html&quot;&gt;part 3, I discuss the best way to meet these challenges.&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Other posts in this series:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Part 1 : &lt;a href=&quot;/clinical-informatics/2018/01/19/focus-focus-focus.html&quot;&gt;The importance of strategy : focus&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Part 2 : &lt;a href=&quot;/clinical-informatics/2018/01/19/focus-challenges.html&quot;&gt;The challenges we face in delivering the vision&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Part 3 : &lt;a href=&quot;/clinical-informatics/2018/01/19/focus-solutions.html&quot;&gt;Pragmatic solutions to those challenges&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">In part one of this series, I introduced the “Informed health and care – A digital health and social care strategy for Wales” and talked in broad terms about the importance of a coherent strategy - a specific action-focused plan - to deliver that vision.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">In part one of this series, I introduced the “Informed health and care – A digital health and social care strategy for Wales” and talked in broad terms about the importance of a coherent strategy to deliver that vision.</summary></entry></feed>
