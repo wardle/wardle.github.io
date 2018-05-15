@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-05-15T08:38:38+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-05-15T15:58:16+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
 </subtitle><entry><title type="html">Welsh Technical Standards Board</title><link href="https://www.wardle.org/wales/2018/05/06/wtsb.html" rel="alternate" type="text/html" title="Welsh Technical Standards Board" /><published>2018-05-06T10:09:09+01:00</published><updated>2018-05-06T10:09:09+01:00</updated><id>https://www.wardle.org/wales/2018/05/06/wtsb</id><content type="html" xml:base="https://www.wardle.org/wales/2018/05/06/wtsb.html">&lt;p&gt;I am delighted to announce that I have been asked to chair the new Welsh Technical Standards Board (WTSB) for NHS Wales. We will support the creation and maintenance of a catalogue of standards and requirements to enable integration and interoperability across all health and care systems in a consistent and secure manner, and to support local innovation and the use of third party delivery partners.&lt;/p&gt;
 
 &lt;p&gt;The scope of this Board covers:&lt;/p&gt;
@@ -48,27 +48,37 @@
 
 &lt;h1 id=&quot;agenda-22nd-may-2018&quot;&gt;Agenda 22nd May 2018&lt;/h1&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;Welcome and introductions&lt;/li&gt;
-  &lt;li&gt;Terms of reference and discussion of membership. See &lt;a href=&quot;https://drive.google.com/file/d/1jMLpNP5w6-SvO9ChUPGjqGU-1_HHo0T7/view?usp=sharing&quot;&gt;Document 1&lt;/a&gt;.
-    &lt;ul&gt;
-      &lt;li&gt;Is it right. Are we missing important people? e.g. What about security input?&lt;/li&gt;
-      &lt;li&gt;Is it appropriate to bring in expertise on an ad-hoc basis, particularly when considering working groups?&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;In relation to how the board will function, (see &lt;a href=&quot;https://drive.google.com/file/d/16J7BRN7-WfgH2Rh1B0v6pO867CuvjpB7/view?usp=sharing&quot;&gt;Document 2&lt;/a&gt;), do you agree that we need:
-    &lt;ul&gt;
-      &lt;li&gt;A catalogue of existing system services and functions within the national architecture&lt;/li&gt;
-      &lt;li&gt;A corresponding record of the standards used already&lt;/li&gt;
-      &lt;li&gt;A roadmap to identify services and functions that would benefit from the adoption of standards&lt;/li&gt;
-      &lt;li&gt;To register https://api.wales.nhs.uk with three consumers in mind, NWIS, health boards and third-parties via the digital ecosystem, and as such, encourage open collaboration and trust by sharing documentation publicly?&lt;/li&gt;
-      &lt;li&gt;To invite external speakers with specific industry knowledge to inform our working such as&lt;/li&gt;
-    &lt;/ul&gt;
+&lt;h4 id=&quot;welcome-and-introductions&quot;&gt;Welcome and introductions&lt;/h4&gt;
+
+&lt;h4 id=&quot;terms-of-reference-and-discussion-of-membership&quot;&gt;Terms of reference and discussion of membership&lt;/h4&gt;
+
+&lt;p&gt;See &lt;a href=&quot;https://drive.google.com/file/d/1jMLpNP5w6-SvO9ChUPGjqGU-1_HHo0T7/view?usp=sharing&quot;&gt;Document 1&lt;/a&gt;,&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Is it right. Are we missing important people? e.g. What about security input?&lt;/li&gt;
+  &lt;li&gt;Is it appropriate to bring in expertise on an ad-hoc basis, particularly when considering working groups?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;in-relation-to-how-the-board-will-function&quot;&gt;In relation to how the board will function&lt;/h4&gt;
+
+&lt;p&gt;See &lt;a href=&quot;https://drive.google.com/file/d/16J7BRN7-WfgH2Rh1B0v6pO867CuvjpB7/view?usp=sharing&quot;&gt;Document 2&lt;/a&gt;, do you agree that we need:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A catalogue of existing system services and functions within the national architecture&lt;/li&gt;
+  &lt;li&gt;A corresponding record of the standards used already&lt;/li&gt;
+  &lt;li&gt;A roadmap to identify services and functions that would benefit from the adoption of standards&lt;/li&gt;
+  &lt;li&gt;To register https://api.wales.nhs.uk with three consumers in mind, NWIS, health boards and third-parties via the digital ecosystem, and as such, encourage open collaboration and trust by sharing documentation publicly?&lt;/li&gt;
+  &lt;li&gt;To invite external speakers with specific industry knowledge to inform our working such as
     &lt;ol&gt;
       &lt;li&gt;Open source and collaboration experts to talk about openness and transparency, about shared working. (e.g. what can we learn from methods used by open source collaborative groups such as the Apache Software Foundation?)&lt;/li&gt;
-      &lt;li&gt;Best practices for software development methodologies, including agile, DevOps, infrastructure-as-code, production-like test environments&lt;/li&gt;
-      &lt;li&gt;Industry representatives e.g. commercial suppliers, integration and interoperability experts - 
-     * That we will need five broad categories of interoperability standards, relating to:&lt;/li&gt;
+      &lt;li&gt;Experts on best practices for software development methodologies, including agile, DevOps, infrastructure-as-code, production-like test environments&lt;/li&gt;
+      &lt;li&gt;Industry representatives e.g. commercial suppliers, integration and interoperability experts -&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;That we will need five broad categories of interoperability standards, relating to:&lt;/p&gt;
+
+    &lt;ol&gt;
       &lt;li&gt;Security, staff identity management and logging. We will need to identify expertise in federated security models such as OAUTH2.&lt;/li&gt;
       &lt;li&gt;Demographics and citizen identity&lt;/li&gt;
       &lt;li&gt;Diagnostic test standards (e.g. laboratory and radiology standards) relating to the requesting, reporting and viewing of diagnostic testing&lt;/li&gt;
@@ -76,20 +86,27 @@
       &lt;li&gt;Clinical data standards relating to the recording of structured clinical information such as diagnoses, treatments and procedures as part of the wider logical single patient record.&lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
-  &lt;li&gt;Proposed technical standards for consideration:
-    &lt;ul&gt;
-      &lt;li&gt;API specifications for services supporting the storage and retrieval of e-Observations data such as temperature, pulse rate, respiratory rate, level of consciousness, weight and height.&lt;/li&gt;
-      &lt;li&gt;API specifications for services supporting the storage and retrieval of clinical documents and their associated metadata&lt;/li&gt;
-    &lt;/ul&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;proposed-technical-standards-for-consideration&quot;&gt;Proposed technical standards for consideration:&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;API specifications for services supporting the storage and retrieval of e-Observations data such as temperature, pulse rate, respiratory rate, level of consciousness, weight and height.&lt;/li&gt;
+  &lt;li&gt;API specifications for services supporting the storage and retrieval of clinical documents and their associated metadata&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;links-with-other-groups&quot;&gt;Links with other groups&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Do you agree that we need to ensure communication with other groups across the UK and Internationally, to ensure that there is harmonisation of technical standards, where possible?&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;Links with other groups
-    &lt;ul&gt;
-      &lt;li&gt;Do you agree that we need to ensure communication with other groups across the UK and Internationally, to ensure that there is harmonisation of technical standards, where possible?&lt;/li&gt;
-      &lt;li&gt;If so, to which groups do we already have links and to which groups must we approach to ensure representation for Wales?&lt;/li&gt;
-    &lt;/ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;If so, to which groups do we already have links and to which groups must we approach to ensure representation for Wales?&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;Any other business?&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;any-other-business&quot;&gt;Any other business?&lt;/h4&gt;
 
 &lt;p&gt;If you have comments on any of these agenda items, then please contact me. As this will be our inaugural meeting, the best way to feed back your comments is directly to me, at mark@wardle.org&lt;/p&gt;
 
