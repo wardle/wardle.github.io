@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Creative 2/3: The value of software for healthcare</title>
+  <title>Creative 3/3: Ecosystems and the platform</title>
   <meta name="description" content="In part one, I highlighted four drivers that will result in creative destruction in the healthcare IT industry:">
 
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="https://www.wardle.org/clinical-informatics/2018/05/06/clinical-software-quality.html">
+  <link rel="canonical" href="https://www.wardle.org/clinical-informatics/2018/05/08/ecosystems.html">
   <link rel="alternate" type="application/rss+xml" title="Health informatics and information technology" href="/feed.xml">
   
   <script>
@@ -83,11 +83,11 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Creative 2/3: The value of software for healthcare</h1>
+    <h1 class="post-title" itemprop="name headline">Creative 3/3: Ecosystems and the platform</h1>
     <p class="post-meta">
-      <time datetime="2018-05-06T10:09:09+01:00" itemprop="datePublished">
+      <time datetime="2018-05-08T09:08:08+01:00" itemprop="datePublished">
         
-        6 May 2018
+        8 May 2018
       </time>
       </p>
   </header>
@@ -99,53 +99,86 @@
 
 <p>The second was that the best way to build healthcare software is to adopt the behaviours, processes and culture from the most highly productive technology companies. This means adopting quality improvement and research methodologies to develop, test and deploy the software that use to improve our clinical quality, service and research endeavours.</p>
 
+<p>I covered these two first points in more detail in <a href="/clinical-informatics/2018/05/06/clinical-software-quality.html">part two</a>.</p>
+
 <p>The third was the importance of separating data storage and transmission from the software operating on those data, with a shared domain language uniting multi-disciplinary cross-functional, semi-autonomous teams creating discrete, carefully bounded components with loose coupling with other components.</p>
 
 <p>The fourth was the recognition of a transformation in software engineering practices with the increasing adoption of cloud and serverless technologies, permitting the development and commodification of components of what will become, a distributed and patient-centred logical electronic health record. The end result? A variety of interoperable applications, both clinical and administrative indeed, focused on workflow and usually task-orientated, making use of that shared health platform.</p>
 
-<p>In [, part two covers the importance of software in our efforts to transform clinical services and improve quality.]</p>
+<p>In this post, I delve into the importance of software architecture and the use of standards in designing healthcare software systems fit for the 21st Century.</p>
 
-<h1 id="software-and-healthcare">Software and healthcare</h1>
+<h1 id="architecture-and-standards">Architecture and standards</h1>
+
+<p>As our efforts to transform health services are critically dependent on technology, we need to change our approach to health information technology projects to maximise safety, quality, productivity and pace using the best evidence-based practices. This means building in continuous improvement methodologies to ensure we keep on improving our approach.</p>
+
+<p>So, how can create an environment which makes it easy and safe to develop, test, evaluate and deploy software for use in healthcare?</p>
+
+<p>In <a href="/clinical-informatics/2018/04/26/lean-healthcare-devops.html">“Lean Healthcare”</a>, I talked about the quality improvement methodologies and process changes that can be used to develop software faster and more effectively.</p>
+
+<p>One of the important conclusions is the benefit of small cross-functional teams. Such teams must be able to work independently, aligned to a wider strategy, given the right tools and responsibility to get their work done and most importantly, work on discrete components by breaking down work into smaller, less risky units that can evolve independently with only loose-coupling with other components. We <em>modularise</em> our work and limit the interactions between those modules to well-defined publicly documented contracts. It is reported that Jeff Bezos, founder and CEO of Amazon said:</p>
 
 <blockquote>
-  <p>“Software is eating the world.”</p>
+  <p>“All service interfaces, without exception, must be designed from the ground up to be externalizable. That is to say, the team must plan and design to be able to expose the interface to developers in the outside world. No exceptions”</p>
 
-  <p><a href="https://www.wsj.com/articles/SB10001424053111903480904576512250915629460">Marc Andreeson</a>.</p>
+  <p>Jeff Bezos quoted <a href="https://plus.google.com/+RipRowan/posts/eVeouesvaVX">here</a></p>
 </blockquote>
+
+<p>Setting this kind of <em>broad architectural principle</em> means a lot and when you write down this and other guiding principles, and they are actionable and meaningful, they drive a change in behaviour and <em>change your culture</em>.</p>
 
 <blockquote>
-  <p>Every industry that is not bringing software to the core of their business will be disrupted.</p>
-
-  <p>Jeffrey Immelt, CEO and Chairman, General Electric, 2001-2017</p>
+  <p>Action 1: We need to be explicit in the broad principles we will use in our architecture and culture in Wales.</p>
 </blockquote>
 
-<p>I truly believe that software is critical to the future of healthcare, in supporting both patients and health professionals in their respective roles. Current software usually does little but replace existing paper processes but we should be aiming to use software to transform our health services.</p>
+<h4 id="cross-functional-teams-and-delivery">Cross-functional teams and delivery</h4>
 
-<p>Our clinical quality improvement and service transformation endeavours must be supported by new technology, by software and data, to support our efforts to effect change and measure the outcomes of that change in a virtuous cycle of continuous improvement.</p>
+<p>What do I mean by a cross-functional team? A cross-functional team brings together people with different expertise to work together towards a common goal. I want to convince you that we need to modularise our technical architecture in Wales and as a result, we need to <em>modularise our teams</em>.</p>
 
-<p>Such continuous improvement requires us to be able to rapidly develop, test, integrate and deploy software. That software could be hand-coded or be the product of machine learning; whatever the case, it needs to be developed, tested, integrated and deployed continuously monitored to ensure it works safely and reliably.</p>
+<p>Usually, it is easy to see software development as a process of generating value akin to a factory assembly line, in which a clinical system is designed, built, tested and then deployed to the end-customer. This is what is called a “value stream”.</p>
 
-<p>Are we confident that we have the right culture and architecture in order to do that, because if we don’t, won’t we need to transform our organisations, our culture and our technical architecture to support those needs?</p>
+<p>It is easy to fall into the trap, usually brought about by naivety mixed with arrogance, that we can define the specifications of what is needed from our software, build it, and then deploy into clinical environments and immediately realise that value, sitting back to announce “our work is done”. As a result, you will have a design team, a development team, a testing team and a deployment (operations) team, and at each step, the “work” is passed from one team to another. When an incident occurs, and they do, perhaps a patient safety team will swing into action.</p>
 
-<p>In essence, we must recognise that our technology, quality improvement and research endeavours are best considered as related and mutually supportive:</p>
+<p>Is that the right way to structure and operate your organisation?</p>
 
-<p><img src="/images/tech-qual-research.png" alt="The relationship between technology, quality improvement and research" /></p>
+<p>A cross-functional team brings together those experts into the right sized teams, in which communication between members is easy, there is a shared goal, usually focused on <em>delivery</em>. Members of different functional teams are brought together, for possibly a fixed duration, in order to deliver a goal bringing together design, development, testing, evaluation and deployment and speeding up the lifecycle between these processes so that we aim for <em>continuous integration</em> and <em>continuous delivery</em>.</p>
 
-<p>Quality improvement relies on measurement, analysis and action and therefore most effectively supported by the provision of digital tools to those who wish to transform their services.</p>
+<blockquote>
+  <p>Action 2: We need to modularise our architecture and modularise our teams, creating cross-functional teams whose task is to <em>deliver</em> discrete components of our architecture which are loosely-coupled from one another, with a focus on automated unit and end-to-end integration testing and continuous delivery.</p>
+</blockquote>
 
-<p>Likewise, development and deployment of technology should, itself, be subject to the same approach to quality improvement so that we develop, test, measure, analyse and deploy in the same virtuous cycle of <em>continuous</em> improvement.</p>
+<h1 id="creative-destruction--ecosystems-thinking">Creative destruction &amp; ecosystems-thinking</h1>
 
-<p><img src="/images/devops-qi.png" alt="Devops Qi" /></p>
+<p>So we want to develop a distributed, standards-driven platform that provides the building blocks with which to build the next generation of electronic health applications?</p>
 
-<p>Similarly, <em>research</em>, a process to advance our knowledge, requires very similar but more robust and formal protocols and oversight. But technology can help us here, supporting our decision making when in situations of genuine equipoise by providing transformative technology supporting identification, recruitment and randomisation of patients into complex, multi-arm trials currently require manual labour-intensive work.</p>
+<p>Notice I don’t say “electronic health record”, because I want to convince you that:</p>
 
-<h1 id="metrics-of-success">Metrics of success</h1>
+<ol>
+  <li>
+    <p>Data persistence and transfer <em>must</em> be considered separately to the applications and software services that operate upon those data.</p>
+  </li>
+  <li>
+    <p>We need multiple applications giving different views and bespoke utility using the same data. A single logical record of patient information.<sup><a href="#single-patient-record">a</a></sup></p>
+  </li>
+</ol>
 
-<p>We must admit that our work will <em>never be complete</em>. As a result, whether we are talking about our clinical services, our technology or our research, we should never use metrics that simply talk about <em>deployment</em>, but instead consider <em>outcomes</em> and our efforts should be focused on improving those <em>outcomes</em>.</p>
+<p>The benefits of an open ecosystem extend beyond only a new marketplace for health applications.</p>
 
-<p>Like many others, NHS Wales currently uses deployment as a metric for success, but we need to change the conversation to <em>value</em> and <em>outcome</em> and shift to adopting the best industry practices for creating safe, reliable and valuable clinical software <em>at pace</em>.</p>
+<blockquote>
+  <p>Interestingly, another definition of a “platform” is a set of services that bring together users and providers to form a multisided market. Is it possible then to take our “open platform” and start to think of a future in which we have products and services that actually do enable a re-imagining of healthcare provision to bring together patients, carers, health professionals, commissioners, analytics, researchers and all other stakeholders in a safe and secure manner?</p>
 
-<p>In <a href="/clinical-informatics/2018/05/08/ecosystems.html">part three</a>, I talk about the importance of technical and information standards, standardised application programming interfaces and frameworks to create <em>ecosystems</em> of interoperating smaller, well-defined contextually domain bound components sharing the same platform. <a href="(/clinical-informatics/2018/05/08/ecosystems.html)">Continue reading…</a></p>
+  <p>My <a href="/clinical-informatics/2017/08/20/disruptive-influences-future.html">disruptive influences in healthcare blog post</a></p>
+</blockquote>
+
+<p>Indeed, a new ecosystem permits us to step-back and re-imagine our healthcare services. When you have physical notes, the team looking after your chronic health conditions or your primary care physician need to be physically located near those notes and near to you.</p>
+
+<p>It used to be the same with online banking in which your local branch held your account. We see the artefact of this configuration even today with account numbers and sort-codes tracking the bank and branch at which your bank account is held. Digital technology was an important tool in re-imagining how we interact with our banks; for them, digital is now <em>the</em> way of doing business.</p>
+
+<p>Can we do the same for healthcare?</p>
+
+<blockquote>
+  <p>Action 3: We need to think ‘open’ and build software services and data repositories that are usable by both internal and external developers to create value and innovation; ecosystems-thinking. We need to <a href="https://en.wikipedia.org/wiki/Eating_your_own_dog_food">“eat our own dog food”</a> and ensure external developers are treated the same as internal development teams.</p>
+</blockquote>
+
+<p><em>Mark</em></p>
 
 <h4 id="posts-in-this-series">Posts in this series</h4>
 <ul>
@@ -160,10 +193,6 @@
   <li><a href="/clinical-informatics/2018/04/26/lean-healthcare-devops.html">“Lean healthcare” </a>: Value stream: transforming health and care technology implementations using lean, agile, “DevOps” and serverless with small, cross-functional teams.</li>
   <li><a href="/digital-platform/2018/03/30/where-is-the-value.html">“Where is the value?”</a>: Creative destruction and ecosystems</li>
 </ul>
-
-<h4 id="footnotes">Footnotes</h4>
-
-<p><a name="single-patient-record">a</a>:The single patient record is a good idea - a logical single source-of-truth that is the canonical repository of information. Except, i) there is no truth in healthcare so you are better with models of uncertainty and ii) a medical record must be faceted so that it is possible to regulate access to different categories of information such as source (e.g. provider) and type (e.g. sexual or reproductive health matters, mental health, genetics, general medical etc). But, for now, “single patient record” is a useful pragmatic label.</p>
 
   </div>
 

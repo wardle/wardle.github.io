@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-05-15T16:09:44+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
-</subtitle><entry><title type="html">Welsh Technical Standards Board</title><link href="https://www.wardle.org/wales/2018/05/06/wtsb.html" rel="alternate" type="text/html" title="Welsh Technical Standards Board" /><published>2018-05-06T10:09:09+01:00</published><updated>2018-05-06T10:09:09+01:00</updated><id>https://www.wardle.org/wales/2018/05/06/wtsb</id><content type="html" xml:base="https://www.wardle.org/wales/2018/05/06/wtsb.html">&lt;p&gt;I am delighted to announce that I have been asked to chair the new Welsh Technical Standards Board (WTSB) for NHS Wales. We will support the creation and maintenance of a catalogue of standards and requirements to enable integration and interoperability across all health and care systems in a consistent and secure manner, and to support local innovation and the use of third party delivery partners.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-05-26T08:09:47+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</subtitle><entry><title type="html">Welsh Technical Standards Board</title><link href="https://www.wardle.org/wales/2018/05/15/wtsb.html" rel="alternate" type="text/html" title="Welsh Technical Standards Board" /><published>2018-05-15T10:09:09+01:00</published><updated>2018-05-15T10:09:09+01:00</updated><id>https://www.wardle.org/wales/2018/05/15/wtsb</id><content type="html" xml:base="https://www.wardle.org/wales/2018/05/15/wtsb.html">&lt;p&gt;I am delighted to announce that I have been asked to chair the new Welsh Technical Standards Board (WTSB) for NHS Wales. We will support the creation and maintenance of a catalogue of standards and requirements to enable integration and interoperability across all health and care systems in a consistent and secure manner, and to support local innovation and the use of third party delivery partners.&lt;/p&gt;
 
 &lt;p&gt;The scope of this Board covers:&lt;/p&gt;
 
@@ -110,7 +110,106 @@
 
 &lt;p&gt;If you have comments on any of these agenda items, then please contact me. As this will be our inaugural meeting, the best way to feed back your comments is directly to me, at mark@wardle.org&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">I am delighted to announce that I have been asked to chair the new Welsh Technical Standards Board (WTSB) for NHS Wales. We will support the creation and maintenance of a catalogue of standards and requirements to enable integration and interoperability across all health and care systems in a consistent and secure manner, and to support local innovation and the use of third party delivery partners.</summary></entry><entry><title type="html">Creative 2/3: The value of software for healthcare</title><link href="https://www.wardle.org/clinical-informatics/2018/05/06/clinical-software-quality.html" rel="alternate" type="text/html" title="Creative 2/3: The value of software for healthcare" /><published>2018-05-06T10:09:09+01:00</published><updated>2018-05-06T10:09:09+01:00</updated><id>https://www.wardle.org/clinical-informatics/2018/05/06/clinical-software-quality</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2018/05/06/clinical-software-quality.html">&lt;p&gt;In &lt;a href=&quot;/clinical-informatics/2018/05/06/clinical-software-quality.html&quot;&gt;part one, I highlighted four drivers that will result in creative destruction&lt;/a&gt; in the healthcare IT industry:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">I am delighted to announce that I have been asked to chair the new Welsh Technical Standards Board (WTSB) for NHS Wales. We will support the creation and maintenance of a catalogue of standards and requirements to enable integration and interoperability across all health and care systems in a consistent and secure manner, and to support local innovation and the use of third party delivery partners.</summary></entry><entry><title type="html">Creative 3/3: Ecosystems and the platform</title><link href="https://www.wardle.org/clinical-informatics/2018/05/08/ecosystems.html" rel="alternate" type="text/html" title="Creative 3/3: Ecosystems and the platform" /><published>2018-05-08T09:08:08+01:00</published><updated>2018-05-08T09:08:08+01:00</updated><id>https://www.wardle.org/clinical-informatics/2018/05/08/ecosystems</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2018/05/08/ecosystems.html">&lt;p&gt;In &lt;a href=&quot;/clinical-informatics/2018/05/06/clinical-software-quality.html&quot;&gt;part one, I highlighted four drivers that will result in creative destruction&lt;/a&gt; in the healthcare IT industry:&lt;/p&gt;
+
+&lt;p&gt;The first was the recognition that software and data are critical enablers of clinical quality improvement, service transformation and advancing our knowledge (research).&lt;/p&gt;
+
+&lt;p&gt;The second was that the best way to build healthcare software is to adopt the behaviours, processes and culture from the most highly productive technology companies. This means adopting quality improvement and research methodologies to develop, test and deploy the software that use to improve our clinical quality, service and research endeavours.&lt;/p&gt;
+
+&lt;p&gt;I covered these two first points in more detail in &lt;a href=&quot;/clinical-informatics/2018/05/06/clinical-software-quality.html&quot;&gt;part two&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The third was the importance of separating data storage and transmission from the software operating on those data, with a shared domain language uniting multi-disciplinary cross-functional, semi-autonomous teams creating discrete, carefully bounded components with loose coupling with other components.&lt;/p&gt;
+
+&lt;p&gt;The fourth was the recognition of a transformation in software engineering practices with the increasing adoption of cloud and serverless technologies, permitting the development and commodification of components of what will become, a distributed and patient-centred logical electronic health record. The end result? A variety of interoperable applications, both clinical and administrative indeed, focused on workflow and usually task-orientated, making use of that shared health platform.&lt;/p&gt;
+
+&lt;p&gt;In this post, I delve into the importance of software architecture and the use of standards in designing healthcare software systems fit for the 21st Century.&lt;/p&gt;
+
+&lt;h1 id=&quot;architecture-and-standards&quot;&gt;Architecture and standards&lt;/h1&gt;
+
+&lt;p&gt;As our efforts to transform health services are critically dependent on technology, we need to change our approach to health information technology projects to maximise safety, quality, productivity and pace using the best evidence-based practices. This means building in continuous improvement methodologies to ensure we keep on improving our approach.&lt;/p&gt;
+
+&lt;p&gt;So, how can create an environment which makes it easy and safe to develop, test, evaluate and deploy software for use in healthcare?&lt;/p&gt;
+
+&lt;p&gt;In &lt;a href=&quot;/clinical-informatics/2018/04/26/lean-healthcare-devops.html&quot;&gt;“Lean Healthcare”&lt;/a&gt;, I talked about the quality improvement methodologies and process changes that can be used to develop software faster and more effectively.&lt;/p&gt;
+
+&lt;p&gt;One of the important conclusions is the benefit of small cross-functional teams. Such teams must be able to work independently, aligned to a wider strategy, given the right tools and responsibility to get their work done and most importantly, work on discrete components by breaking down work into smaller, less risky units that can evolve independently with only loose-coupling with other components. We &lt;em&gt;modularise&lt;/em&gt; our work and limit the interactions between those modules to well-defined publicly documented contracts. It is reported that Jeff Bezos, founder and CEO of Amazon said:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“All service interfaces, without exception, must be designed from the ground up to be externalizable. That is to say, the team must plan and design to be able to expose the interface to developers in the outside world. No exceptions”&lt;/p&gt;
+
+  &lt;p&gt;Jeff Bezos quoted &lt;a href=&quot;https://plus.google.com/+RipRowan/posts/eVeouesvaVX&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Setting this kind of &lt;em&gt;broad architectural principle&lt;/em&gt; means a lot and when you write down this and other guiding principles, and they are actionable and meaningful, they drive a change in behaviour and &lt;em&gt;change your culture&lt;/em&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Action 1: We need to be explicit in the broad principles we will use in our architecture and culture in Wales.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;cross-functional-teams-and-delivery&quot;&gt;Cross-functional teams and delivery&lt;/h4&gt;
+
+&lt;p&gt;What do I mean by a cross-functional team? A cross-functional team brings together people with different expertise to work together towards a common goal. I want to convince you that we need to modularise our technical architecture in Wales and as a result, we need to &lt;em&gt;modularise our teams&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Usually, it is easy to see software development as a process of generating value akin to a factory assembly line, in which a clinical system is designed, built, tested and then deployed to the end-customer. This is what is called a “value stream”.&lt;/p&gt;
+
+&lt;p&gt;It is easy to fall into the trap, usually brought about by naivety mixed with arrogance, that we can define the specifications of what is needed from our software, build it, and then deploy into clinical environments and immediately realise that value, sitting back to announce “our work is done”. As a result, you will have a design team, a development team, a testing team and a deployment (operations) team, and at each step, the “work” is passed from one team to another. When an incident occurs, and they do, perhaps a patient safety team will swing into action.&lt;/p&gt;
+
+&lt;p&gt;Is that the right way to structure and operate your organisation?&lt;/p&gt;
+
+&lt;p&gt;A cross-functional team brings together those experts into the right sized teams, in which communication between members is easy, there is a shared goal, usually focused on &lt;em&gt;delivery&lt;/em&gt;. Members of different functional teams are brought together, for possibly a fixed duration, in order to deliver a goal bringing together design, development, testing, evaluation and deployment and speeding up the lifecycle between these processes so that we aim for &lt;em&gt;continuous integration&lt;/em&gt; and &lt;em&gt;continuous delivery&lt;/em&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Action 2: We need to modularise our architecture and modularise our teams, creating cross-functional teams whose task is to &lt;em&gt;deliver&lt;/em&gt; discrete components of our architecture which are loosely-coupled from one another, with a focus on automated unit and end-to-end integration testing and continuous delivery.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;creative-destruction--ecosystems-thinking&quot;&gt;Creative destruction &amp;amp; ecosystems-thinking&lt;/h1&gt;
+
+&lt;p&gt;So we want to develop a distributed, standards-driven platform that provides the building blocks with which to build the next generation of electronic health applications?&lt;/p&gt;
+
+&lt;p&gt;Notice I don’t say “electronic health record”, because I want to convince you that:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Data persistence and transfer &lt;em&gt;must&lt;/em&gt; be considered separately to the applications and software services that operate upon those data.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;We need multiple applications giving different views and bespoke utility using the same data. A single logical record of patient information.&lt;sup&gt;&lt;a href=&quot;#single-patient-record&quot;&gt;a&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The benefits of an open ecosystem extend beyond only a new marketplace for health applications.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Interestingly, another definition of a “platform” is a set of services that bring together users and providers to form a multisided market. Is it possible then to take our “open platform” and start to think of a future in which we have products and services that actually do enable a re-imagining of healthcare provision to bring together patients, carers, health professionals, commissioners, analytics, researchers and all other stakeholders in a safe and secure manner?&lt;/p&gt;
+
+  &lt;p&gt;My &lt;a href=&quot;/clinical-informatics/2017/08/20/disruptive-influences-future.html&quot;&gt;disruptive influences in healthcare blog post&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Indeed, a new ecosystem permits us to step-back and re-imagine our healthcare services. When you have physical notes, the team looking after your chronic health conditions or your primary care physician need to be physically located near those notes and near to you.&lt;/p&gt;
+
+&lt;p&gt;It used to be the same with online banking in which your local branch held your account. We see the artefact of this configuration even today with account numbers and sort-codes tracking the bank and branch at which your bank account is held. Digital technology was an important tool in re-imagining how we interact with our banks; for them, digital is now &lt;em&gt;the&lt;/em&gt; way of doing business.&lt;/p&gt;
+
+&lt;p&gt;Can we do the same for healthcare?&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Action 3: We need to think ‘open’ and build software services and data repositories that are usable by both internal and external developers to create value and innovation; ecosystems-thinking. We need to &lt;a href=&quot;https://en.wikipedia.org/wiki/Eating_your_own_dog_food&quot;&gt;“eat our own dog food”&lt;/a&gt; and ensure external developers are treated the same as internal development teams.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;posts-in-this-series&quot;&gt;Posts in this series&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/05/06/cloud-ehr.html&quot;&gt;Part one: creative destruction&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/05/06/clinical-software-quality.html&quot;&gt;Part two: the value of software for healthcare&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/05/08/ecosystems.html&quot;&gt;Part three: ecosystems and the platform&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;further-reading&quot;&gt;Further reading&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/04/26/lean-healthcare-devops.html&quot;&gt;“Lean healthcare” &lt;/a&gt;: Value stream: transforming health and care technology implementations using lean, agile, “DevOps” and serverless with small, cross-functional teams.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/digital-platform/2018/03/30/where-is-the-value.html&quot;&gt;“Where is the value?”&lt;/a&gt;: Creative destruction and ecosystems&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">In part one, I highlighted four drivers that will result in creative destruction in the healthcare IT industry:</summary></entry><entry><title type="html">Creative 2/3: The value of software for healthcare</title><link href="https://www.wardle.org/clinical-informatics/2018/05/06/clinical-software-quality.html" rel="alternate" type="text/html" title="Creative 2/3: The value of software for healthcare" /><published>2018-05-06T10:09:09+01:00</published><updated>2018-05-06T10:09:09+01:00</updated><id>https://www.wardle.org/clinical-informatics/2018/05/06/clinical-software-quality</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2018/05/06/clinical-software-quality.html">&lt;p&gt;In &lt;a href=&quot;/clinical-informatics/2018/05/06/clinical-software-quality.html&quot;&gt;part one, I highlighted four drivers that will result in creative destruction&lt;/a&gt; in the healthcare IT industry:&lt;/p&gt;
 
 &lt;p&gt;The first was the recognition that software and data are critical enablers of clinical quality improvement, service transformation and advancing our knowledge (research).&lt;/p&gt;
 
@@ -119,6 +218,8 @@
 &lt;p&gt;The third was the importance of separating data storage and transmission from the software operating on those data, with a shared domain language uniting multi-disciplinary cross-functional, semi-autonomous teams creating discrete, carefully bounded components with loose coupling with other components.&lt;/p&gt;
 
 &lt;p&gt;The fourth was the recognition of a transformation in software engineering practices with the increasing adoption of cloud and serverless technologies, permitting the development and commodification of components of what will become, a distributed and patient-centred logical electronic health record. The end result? A variety of interoperable applications, both clinical and administrative indeed, focused on workflow and usually task-orientated, making use of that shared health platform.&lt;/p&gt;
+
+&lt;p&gt;In [, part two covers the importance of software in our efforts to transform clinical services and improve quality.]&lt;/p&gt;
 
 &lt;h1 id=&quot;software-and-healthcare&quot;&gt;Software and healthcare&lt;/h1&gt;
 
@@ -160,12 +261,13 @@
 
 &lt;p&gt;Like many others, NHS Wales currently uses deployment as a metric for success, but we need to change the conversation to &lt;em&gt;value&lt;/em&gt; and &lt;em&gt;outcome&lt;/em&gt; and shift to adopting the best industry practices for creating safe, reliable and valuable clinical software &lt;em&gt;at pace&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;In part three, I will talk about the importance of technical and information standards, standardised application programming interfaces and frameworks to create &lt;em&gt;ecosystems&lt;/em&gt; of interoperating smaller, well-defined contextually domain bound components sharing the same platform.&lt;/p&gt;
+&lt;p&gt;In &lt;a href=&quot;/clinical-informatics/2018/05/08/ecosystems.html&quot;&gt;part three&lt;/a&gt;, I talk about the importance of technical and information standards, standardised application programming interfaces and frameworks to create &lt;em&gt;ecosystems&lt;/em&gt; of interoperating smaller, well-defined contextually domain bound components sharing the same platform. &lt;a href=&quot;(/clinical-informatics/2018/05/08/ecosystems.html)&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;posts-in-this-series&quot;&gt;Posts in this series&lt;/h4&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/05/06/cloud-ehr.html&quot;&gt;Part one: creative destruction&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/05/06/clinical-software-quality.html&quot;&gt;Part two: the value of software for healthcare&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/05/08/ecosystems.html&quot;&gt;Part three: ecosystems and the platform&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;further-reading&quot;&gt;Further reading&lt;/h4&gt;
@@ -210,6 +312,7 @@
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/05/06/cloud-ehr.html&quot;&gt;Part one: creative destruction&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/05/06/clinical-software-quality.html&quot;&gt;Part two: the value of software for healthcare&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/05/08/ecosystems.html&quot;&gt;Part three: ecosystems and the platform&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;further-reading&quot;&gt;Further reading&lt;/h4&gt;
@@ -1021,139 +1124,4 @@ operator intervention.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;a href=&quot;/digital-platform/2018/03/03/platform-wales-2.html&quot;&gt;Part two&lt;/a&gt; assesses our current messaging-based architecture and highlights the benefits of an API-first enterprise architecture together with the new technologies that have facilitated the move to cloud computing in other industries. &lt;a href=&quot;/digital-platform/2018/03/03/platform-wales-3.html&quot;&gt;Part three&lt;/a&gt; ties together these strands into a manifesto for phase 1 of building our open platform.&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><summary type="html">This is part one of a three-part series on why and how we should be building an open digital health platform in Wales. This part is a high-level overview of how standards and interoperability are critical in building a digital ecosystem. Part two assesses our current messaging-based architecture and highlights the benefits of an API-first enterprise architecture together with the new technologies that have facilitated the move to cloud computing in other industries. Part three ties together these strands into a manifesto for phase 1 of building our open platform.</summary></entry><entry><title type="html">So I built an electronic patient record system in my spare time…</title><link href="https://www.wardle.org/patientcare/2018/02/19/so-I-built-an-EPR.html" rel="alternate" type="text/html" title="So I built an electronic patient record system in my spare time..." /><published>2018-02-19T19:19:19+00:00</published><updated>2018-02-19T19:19:19+00:00</updated><id>https://www.wardle.org/patientcare/2018/02/19/so-I-built-an-EPR</id><content type="html" xml:base="https://www.wardle.org/patientcare/2018/02/19/so-I-built-an-EPR.html">&lt;p&gt;This blog post is based on a series of threads I posted on Twitter, which I have refined and expanded for this post.&lt;/p&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/1zZtnV44vgU&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;My electronic patient record system uses SNOMED-CT as its lingua-franca. Notice in the video how it maps free text into the UK dm+d (dictionary of medicines and devices), parsing dose route and directions and handling units and equivalence. It suggests a correction when I mistype salbutamol. There is a lot going on under the surface!&lt;/p&gt;
-
-&lt;p&gt;Similarly, the entered term acetaminophen is switched to the preferred term, paracetamol. Doctors of a certain age will recognise that bendrofluazide was the term for the drug now known as bendroflumethiazide. Likewise, the doses, frequencies and routes are parsed from free-text into structured, coded, SNOMED-CT data:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/so-i-wrote/medication-mapped.jpeg&quot; alt=&quot;Medication Mapped&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Using that information, the software generates a permanent artefact of the consultation, combining human-viewable PDF with structured semantically-useful information for machines.&lt;/p&gt;
-
-&lt;p&gt;It calculates in real-time what medications have started, have stopped, are unchanged or have had a change made. If you start doing that, you can track medication changes over a long period of time and show them graphically. The software can calculate the total daily dose, understanding the dose, units and frequencies.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/so-i-wrote/medication-graphed.jpeg&quot; alt=&quot;Medication Graphed&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Notice how we can see how the doses have changed or started or stopped over time. For our patients with long-term health conditions, this is very helpful.&lt;/p&gt;
-
-&lt;h1 id=&quot;structured-documents&quot;&gt;Structured documents&lt;/h1&gt;
-
-&lt;p&gt;I don’t understand how some folk think about structured documents as simply documents with the same types of headings. To me, clinical documents should be structured so that they are useful to humans but also useful to machines. The headings and the information models needed are related but different. We have to make medical data understandable by both humans and machines.&lt;/p&gt;
-
-&lt;p&gt;For too long we have created documents from which we hope to derive data. Why not create documents from our data, instead?&lt;/p&gt;
-
-&lt;p&gt;So here we record what botulinum toxin injections we have used and generate a letter that goes into the organisation’s document repository…. but we keep the data in a useful and structured format.&lt;/p&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/3ekeblq9YEg&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;Likewise, if I record a patient’s specialist walking assessment then we can use SNOMED-CT as a useful, intermediary structure to allow semantic interoperability. Semantic interoperability means that software written by other people can derive meaning from the data that I exchange with it. Users don’t need to see this, but computers do.&lt;/p&gt;
-
-&lt;p&gt;This form, viewable by the professional in the EPR, was populated by the patient entering their information into their iPad.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/so-i-wrote/edss.jpeg&quot; alt=&quot;Edss&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;So for interoperability, behind-the-scenes, other software can understand what we’ve done, without necessarily having to understand the Kurtzke EDSS scale. They can, in essence, answer the question “Can this patient walk?” without difficulty.&lt;/p&gt;
-
-&lt;p&gt;Here is a simple flat representation of the information from this encounter, recording diagnoses, treatments and outcomes. Even a flat representation allows us to later perform sophisticated searches such as, which patients are currently taking methotrexate. Similarly, I have exposed internal data as HL7 FHIR endpoints using the HAPI libraries.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/so-i-wrote/snomed-intermediary.jpeg&quot; alt=&quot;Snomed Intermediary&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;My document therefore consists of a PDF for human consumption and large amounts of structured and semantically useful data that can be processed for that individual or for a whole cohort of patients.&lt;/p&gt;
-
-&lt;h1 id=&quot;cohorts&quot;&gt;Cohorts&lt;/h1&gt;
-
-&lt;p&gt;Defining cohorts is important to me, based on service, diagnosis, problem, treatment, intervention or any arbitrary combination thereof. Understanding cohorts is a pre-requisite for understanding outcomes and value. See my previous blog post on the &lt;a href=&quot;https://t.co/8MCOn73pCZ&quot;&gt;importance of cohorts&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Most users have no idea that they are using SNOMED, if you do this right. Here we are entering country of birth, ethnicity and occupation.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/so-i-wrote/background.jpg&quot; alt=&quot;Background&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Notice how the countries are grouped as American, Asian and European. This isn’t hard-coded but instead I have set a single property to categorise each country-of-birth term by region in the SNOMED-CT hierarchy.&lt;/p&gt;
-
-&lt;p&gt;Internally, I have built a range of different UI components that are configured declaratively to allow choice of SNOMED concept from different subsets or parts of the hierarchy. Here are the rules defining the country of birth pop-up.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/so-i-wrote/rule-engine.jpeg&quot; alt=&quot;Rule Engine&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Declarative architectures are extremely powerful and support building systems responsive to need. I can change most of the application’s behaviour at runtime by using an administrative portal and the rule engine. Most data collection forms are automatically generated from the underlying data model without any additional work for me.&lt;/p&gt;
-
-&lt;p&gt;Entering terms should be quicker than using free text. Try entering “MI” into my basic demonstration application - &lt;a href=&quot;https://msdata.org.uk/apps/WebObjects/SnomedBrowser.woa/&quot;&gt;https://msdata.org.uk/apps/WebObjects/SnomedBrowser.woa/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/so-i-wrote/snomed-search.jpeg&quot; alt=&quot;Snomed Search&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;If you give tools to professionals that make it easier to enter coded structured information than free-text, they will do so. Coding diagnoses, procedures and background information is critical in understanding outcome data; they are a foundation on which more complex and sophisticated analytics can be built.&lt;/p&gt;
-
-&lt;h1 id=&quot;patients&quot;&gt;Patients&lt;/h1&gt;
-
-&lt;p&gt;Since 2015, I have been trialling the use of iPads to allow patients to directly contribute to their records. The obvious next step is to roll this out more fully and permit patients to use their own devices, rather than devices we lend them in the clinic.&lt;/p&gt;
-
-&lt;p&gt;First, a member of the clinic staff logs in and chooses a patient from the clinic list for the day. This is fetched by the iPad via the EPR to one of two PAS in Wales to which I have interfaced, depending on clinic context. For demonstration purposes, I have built a fake PAS so I don’t inadvertently share patient-identifiable information for these videos:&lt;/p&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/NGbQIT5uFQ4&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;The iPad is handed to the patient for them to complete. As the experience is locked to that patient, they cannot “go back” and look at the list of patients or see any information that they shouldn’t be able to see.&lt;/p&gt;
-
-&lt;p&gt;I can configure what to show dynamically based on diagnosis, context and previous responses. I want to start showing the complete patient record at some point.&lt;/p&gt;
-
-&lt;p&gt;So here is it running in “Parkinson’s clinic” mode, showing different questionnaires adaptively. The important feature is that patient data is available immediately for the consultation for clinical care.&lt;/p&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/pAmaUXMu_bk&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;In fact, most of the useful data goes into the automatically generated letter and is obviously available to be charted over time for that single patient, or aggregated later on for audit and research.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/so-i-wrote/m4-epr-results.jpeg&quot; alt=&quot;M4 Epr Results&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The patient is asked whether they wish to take part in research and then shown research projects and consent forms suitable to them, by virtue of applied inclusion and exclusion criteria, mainly using SNOMED-CT subsumption.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/so-i-wrote/m2-research-registration.jpeg&quot; alt=&quot;M2 Research Registration&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;This is all configured at runtime obviously using my administrative portal. Here I edit the consent form interactively.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/so-i-wrote/m5-epr-consent.jpeg&quot; alt=&quot;M5 Epr Consent&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/so-i-wrote/m5-epr-edit-consent.jpeg&quot; alt=&quot;M5 Epr Edit Consent&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;And once I sign off that consent form, it is used immediately by all iPads.&lt;/p&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/KBLDA42TwzU&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;h1 id=&quot;technical-architecture&quot;&gt;Technical architecture&lt;/h1&gt;
-
-&lt;p&gt;I have built it slowly and incrementally using PostgreSQL and java for the web-based application. This exposes an interface for humans via a web front-end and a range of &lt;a href=&quot;https://en.wikipedia.org/wiki/Representational_state_transfer&quot;&gt;RESTful services&lt;/a&gt; for use by machines. I built the iOS applications in objective-C originally and then migrated to Swift for the current versions. These talk to the main EPR via HTTPS. The iOS applications use &lt;a href=&quot;http://researchkit.org/&quot;&gt;Apple’s ResearchKit framework&lt;/a&gt; to implement dynamic questionnaires and active tasks such as a finger tapping test.&lt;/p&gt;
-
-&lt;p&gt;One of the most important facets is the abstraction of multiple other external services, such as services provided by a hospital PAS (patient administrative system) and document repositories. While my software could be used standalone, it isn’t really designed to work like that and instead wants to interoperate with a broad set of external services. It wants to talk and exchange structured codified clinically-driven data with other systems.&lt;/p&gt;
-
-&lt;p&gt;So much software is focused on a single organisation, but our multidisciplinary teams cross both disciplinary and organisation divides! Therefore, my application can be configured to interact with multiple external software systems to make the user experience more seamless.&lt;/p&gt;
-
-&lt;h1 id=&quot;what-has-this-taught-me&quot;&gt;What has this taught me?&lt;/h1&gt;
-
-&lt;p&gt;The benefits of:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Technical and semantic interoperability with the use of standards&lt;/li&gt;
-  &lt;li&gt;Encapsulation and substitutability&lt;/li&gt;
-  &lt;li&gt;Decoupling&lt;/li&gt;
-  &lt;li&gt;Coherent architectural design&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Much of the hard work has been in getting permission and then implementing technical interfaces to other systems. It would have been much easier for me to create valuable software if I had a set of tools and frameworks on which to build. This is reason why I am a advocate for an open platform approach in healthcare information technology so that we can build a stable infrastructure and yet still enable transformative innovation and embrace new digital technologies such as machine learning. I shouldn’t be wasting my time building the foundations of applications, but instead I should be able to leverage a suite of frameworks and tools on which hitherto unconsidered new and exciting functionality can be built.&lt;/p&gt;
-
-&lt;p&gt;When any of us build an application for iOS or Android, we don’t start with nothing but have a suite of frameworks and tools to enable drag-and-drop user interface design, data persistence and cloud synchronisation. Why don’t we have the same for healthcare yet?&lt;/p&gt;
-
-&lt;p&gt;My future plans are to break-up the application into a suite of interoperating microservices. I have already done that for my SNOMED-CT terminology engine, first of all as a java-based microservice and now one built using golang. As I do this, I rewrite my original application to make use of the standalone service.&lt;/p&gt;
-
-&lt;p&gt;I have written about the potential benefits of &lt;a href=&quot;/clinical-informatics/2017/12/04/serverless.html&quot;&gt;microservices and serverless architectures in healthcare previously&lt;/a&gt;), including the declarative nature of combining those services together by carefully considering how data flows between them in order to deliver value.&lt;/p&gt;
-
-&lt;p&gt;We need open architectures that interoperate, are standards-compliant and multi-layered. Foundational services, such as data persistence and core services like terminology should be used by more specialist and increasingly high-value functionality such as read-time analytics and aggregators.&lt;/p&gt;
-
-&lt;p&gt;I see a future in which those foundational services are provided via open-source tools and new commercial models evolve selling advanced services on a pay-as-you-go model. For example, would any of you want to take advantage of a disease-modifying treatment service that monitors your patients on drugs like methotrexate and orders blood tests when needed and lets you know when their blood counts drop?&lt;/p&gt;
-
-&lt;p&gt;We need to define a standards-based framework which means that we can not only deploy such innovative technology, but enable their assessment and evaluation in a safe way. One of the ways of enabling that are the principles of decoupling, encapsulation and substitutability, in which we can safely replace a modular component without other modules being aware. Only then can we enable safe technological-focused quality improvement and research, by running A-B testing in which different algorithms can be tested in isolation.&lt;/p&gt;
-
-&lt;p&gt;Such aspirations require a renewed focus on consent and in particular, making it possible to seek explicit opt-in consent in an easy way from citizens. Why not use technology to show informative video, interactive consent tools and start to recruit the majority of our patients into many different types of research project, obtaining robust and useful data on the effects of interventions, including the applied use of machine learning and algorithms, across our health systems?&lt;/p&gt;
-
-&lt;p&gt;We can no longer think in terms of monolithic applications and think of interoperability as something to tack on after those applications are finished. Instead, we should focus on how we build an open platform to enable distributed applications and services and permit innovators to stitch together that functionality in novel ways to support and improve and re-imagine our healthcare services.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">This blog post is based on a series of threads I posted on Twitter, which I have refined and expanded for this post.</summary></entry></feed>
+&lt;/blockquote&gt;</content><author><name></name></author><summary type="html">This is part one of a three-part series on why and how we should be building an open digital health platform in Wales. This part is a high-level overview of how standards and interoperability are critical in building a digital ecosystem. Part two assesses our current messaging-based architecture and highlights the benefits of an API-first enterprise architecture together with the new technologies that have facilitated the move to cloud computing in other industries. Part three ties together these strands into a manifesto for phase 1 of building our open platform.</summary></entry></feed>
