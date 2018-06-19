@@ -1,5 +1,148 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-05-27T22:29:03+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
-</subtitle><entry><title type="html">Informed Health and Care: Delivery</title><link href="https://www.wardle.org/wales/2018/05/27/delivery.html" rel="alternate" type="text/html" title="Informed Health and Care: Delivery" /><published>2018-05-27T21:20:20+01:00</published><updated>2018-05-27T21:20:20+01:00</updated><id>https://www.wardle.org/wales/2018/05/27/delivery</id><content type="html" xml:base="https://www.wardle.org/wales/2018/05/27/delivery.html">&lt;p&gt;&lt;a href=&quot;http://gov.wales/topics/health/nhswales/about/e-health/?lang=en&quot;&gt;“Informed health and care – A digital health and social care strategy for Wales”&lt;/a&gt; sets out a clear vision for the use of information technology to support the provision of healthcare for citizens within Wales.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-06-19T15:57:12+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</subtitle><entry><title type="html">WTSB 19th June 2018</title><link href="https://www.wardle.org/wales/2018/06/19/wtsb.html" rel="alternate" type="text/html" title="WTSB 19th June 2018" /><published>2018-06-19T15:14:14+01:00</published><updated>2018-06-19T15:14:14+01:00</updated><id>https://www.wardle.org/wales/2018/06/19/wtsb</id><content type="html" xml:base="https://www.wardle.org/wales/2018/06/19/wtsb.html">&lt;p&gt;We held the second meeting of the Welsh Technical Standards Board (WTSB) today and I am delighted to announce that we have formally adopted the &lt;a href=&quot;https://www.gov.uk/guidance/government-design-principles&quot;&gt;GDS Design Principles&lt;/a&gt; for use by NHS Wales. These are:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Start with user needs&lt;/li&gt;
+  &lt;li&gt;Do less&lt;/li&gt;
+  &lt;li&gt;Design with data&lt;/li&gt;
+  &lt;li&gt;Do the hard work to make it simple&lt;/li&gt;
+  &lt;li&gt;Iterate. Then iterate again&lt;/li&gt;
+  &lt;li&gt;This is for everyone&lt;/li&gt;
+  &lt;li&gt;Understand context&lt;/li&gt;
+  &lt;li&gt;Build digital services, not websites&lt;/li&gt;
+  &lt;li&gt;Be consistent, not uniform&lt;/li&gt;
+  &lt;li&gt;Make things open: it makes things better&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;In addition, we have agreed to adopt the Welsh Government Digital Service Standard:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Undertake research of who the service users are, to understand user needs.&lt;/li&gt;
+  &lt;li&gt;Have a plan in place for ongoing user research and usability testing.&lt;/li&gt;
+  &lt;li&gt;Have a multidisciplinary team.&lt;/li&gt;
+  &lt;li&gt;Build your service using agile iterative and user-centred methods.&lt;/li&gt;
+  &lt;li&gt;Build a service that can be iterated and improved on a frequent basis and make sure you have the capacity, resources and technical flexibility to do so.&lt;/li&gt;
+  &lt;li&gt;Evaluate what tools and systems will be used to build, host, operate and measure the service, and how to procure them.&lt;/li&gt;
+  &lt;li&gt;Understand security and privacy issues.&lt;/li&gt;
+  &lt;li&gt;Consider making source code open and reusable, and, if appropriate, publish it under relevant licenses.&lt;/li&gt;
+  &lt;li&gt;Use open standards and common platforms where available.&lt;/li&gt;
+  &lt;li&gt;Test the end-to-end service.&lt;/li&gt;
+  &lt;li&gt;Make a plan for being offline.&lt;/li&gt;
+  &lt;li&gt;Create a service that’s simple and intuitive that users succeed first time.&lt;/li&gt;
+  &lt;li&gt;Make the user experience consistent with the rest of Welsh Government.&lt;/li&gt;
+  &lt;li&gt;Encourage everyone to use the digital service with assisted digital support if required.&lt;/li&gt;
+  &lt;li&gt;Identify your baseline information to measure performance&lt;/li&gt;
+  &lt;li&gt;Collect that performance information regularly&lt;/li&gt;
+  &lt;li&gt;Report on that performance data.&lt;/li&gt;
+  &lt;li&gt;Test your service from beginning to end [with your minister]&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Implicit in adopting these standards is a focus on the citizen as the user of services and that digital transformation is better thought of as &lt;em&gt;service transformation&lt;/em&gt;. We need to provide tools so that our services can be transformed to provide modern, efficient and safe healthcare.&lt;/p&gt;
+
+&lt;p&gt;To that end, we are starting a transformation journey, with collaboration, cooperation and openness the key enablers for us to &lt;em&gt;make things better&lt;/em&gt;. In essence, we need to balance top-down standards with creating a culture of openness and transparency to enable safe innovation.&lt;/p&gt;
+
+&lt;p&gt;Our remit, as a board, is to define the technical principles and standards supporting:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;integration&lt;/li&gt;
+  &lt;li&gt;interoperability&lt;/li&gt;
+  &lt;li&gt;software development&lt;/li&gt;
+  &lt;li&gt;infrastructure&lt;/li&gt;
+  &lt;li&gt;security&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We are accountable to the National Informatics Management Board (NIMB).&lt;/p&gt;
+
+&lt;h1 id=&quot;making-things-better-for-users&quot;&gt;Making things better for users&lt;/h1&gt;
+
+&lt;p&gt;Not only should NHS Wales work to GDS principles, but we as a board should too. To that end, we must ask&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;As a technical standards board, who are &lt;em&gt;our&lt;/em&gt; users?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I see &lt;em&gt;developers&lt;/em&gt;, together with the teams in which they work, as the prime user for our technical standards because they are the ones who will make things better for the real users, patients and professionals.&lt;/p&gt;
+
+&lt;p&gt;And what do developers need? Can we apply the GDS principles in our task to maintain a catalogue of principles and standards?&lt;/p&gt;
+
+&lt;p&gt;In essence, our standards will specify the structure and function of our national architecture and documentation of those standards should, if we take an open-approach, foster a change in culture towards collaboration and cooperation and trust.&lt;/p&gt;
+
+&lt;p&gt;We will, in essence, define the specifications for an open platform onto which we can build innovation and enable true service transformation.&lt;/p&gt;
+
+&lt;h1 id=&quot;so-what-next&quot;&gt;So what next?&lt;/h1&gt;
+
+&lt;p&gt;There are some logical consequences to this approach:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;We must open up our documentation relating to services and their standards and develop a roadmap to assess and set new standards and decommission old ones.&lt;/li&gt;
+  &lt;li&gt;We must move to creating cross-functional teams that combine developers, project management, user researchers, UX designers with testing, safety and deployment experts to deliver modular, domain-constrained functionality that can be developed and improved in isolation to other components. Such components should, in essence, be loosely-coupling with technical and human contracts defining interactions between teams. For Wales, we should encourage teams that combine members that span organisational boundaries&lt;/li&gt;
+  &lt;li&gt;A focus on automated end-to-end testing and scalability with testing in production-like environments available on-demand.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For the rest of this post, I want to talk about &lt;em&gt;documentation&lt;/em&gt; as it is a key enabler for building collaboration, cooperation and trust in Wales.&lt;/p&gt;
+
+&lt;h1 id=&quot;documentation&quot;&gt;Documentation&lt;/h1&gt;
+
+&lt;p&gt;What do other developer-focused digital companies do when they want to create an open platform? They create a developer-friendly set of documentation with application programming interface (API) specifications together with how-to and getting started guides.&lt;/p&gt;
+
+&lt;p&gt;Imagine you are a developer wishing to build software using the NHS Wales open platform. You might work for the NHS Wales Informatics Service (NWIS), one of the health boards or a commercial or academic partner  What do you need to get your work done?&lt;/p&gt;
+
+&lt;p&gt;Let’s look at how others have done this…&lt;/p&gt;
+
+&lt;p&gt;This is the current landing page of &lt;a href=&quot;https://docs.microsoft.com&quot;&gt;https://docs.microsoft.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wtsb-opendocs/wtsb-2018-06-19.003.jpeg&quot; alt=&quot;Wtsb 2018 06 19.003&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here there are links to documentation covering the range of Microsoft platforms, including Azure, their cloud platform. Let’s explore…&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wtsb-opendocs/wtsb-2018-06-19.004.jpeg&quot; alt=&quot;Wtsb 2018 06 19.004&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We can read broad overviews of the architecture, and see links to more detailed specifications in the API reference:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wtsb-opendocs/wtsb-2018-06-19.005.jpeg&quot; alt=&quot;Wtsb 2018 06 19.005&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Similarly, the documentation is interspersed with example code and links to frameworks that make it easy to make use of the software services provided by the platform.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wtsb-opendocs/wtsb-2018-06-19.006.jpeg&quot; alt=&quot;Wtsb 2018 06 19.006&quot; /&gt;
+&lt;img src=&quot;/images/wtsb-opendocs/wtsb-2018-06-19.007.jpeg&quot; alt=&quot;Wtsb 2018 06 19.007&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;But how do Microsoft keep their work updated? The source code for their documentation is either automatically generated from their code, or maintained itself as an open-source repository on github - see &lt;a href=&quot;https://github.com/MicrosoftDocs&quot;&gt;https://github.com/MicrosoftDocs&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wtsb-opendocs/wtsb-2018-06-19.008.jpeg&quot; alt=&quot;Wtsb 2018 06 19.008&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This fosters collaboration. Internal users can contribute to changes and have them accepted by the project team, but so can external users. I could make my own local copy of this document repository, make my changes and submit them for review as a “pull-request”.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wtsb-opendocs/wtsb-2018-06-19.009.jpeg&quot; alt=&quot;Wtsb 2018 06 19.009&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We can edit the original source to the documentation, here in Markdown format, a simple-to-use and process text markup language. Microsoft maintains control of the source, but permits open access and review and collaboration. Have a look at &lt;a href=&quot;https://github.com/MicrosoftDocs/azure-docs&quot;&gt;https://github.com/MicrosoftDocs/azure-docs&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wtsb-opendocs/wtsb-2018-06-19.010.jpeg&quot; alt=&quot;Wtsb 2018 06 19.010&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And from these source files, Microsoft generate their website:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wtsb-opendocs/wtsb-2018-06-19.011.jpeg&quot; alt=&quot;Wtsb 2018 06 19.011&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Amazon Web Services (AWS) have adopted the same approach:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wtsb-opendocs/wtsb-2018-06-19.014.jpeg&quot; alt=&quot;Wtsb 2018 06 19.014&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here we have their landing page, linking to lots of different resources, including guides, lists of API specifications etc. And here are the github pages containing the source for those documents.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wtsb-opendocs/wtsb-2018-06-19.015.jpeg&quot; alt=&quot;Wtsb 2018 06 19.015&quot; /&gt;
+&lt;img src=&quot;/images/wtsb-opendocs/wtsb-2018-06-19.016.jpeg&quot; alt=&quot;Wtsb 2018 06 19.016&quot; /&gt;
+&lt;img src=&quot;/images/wtsb-opendocs/wtsb-2018-06-19.017.jpeg&quot; alt=&quot;Wtsb 2018 06 19.017&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And in the same way as for Microsoft, developers can flag omissions or errors and contribute. This user is submitting a patch to add a link to another resource. Other users might simply create an “issue” to be examined and possibly fixed by the project team.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wtsb-opendocs/wtsb-2018-06-19.023.jpeg&quot; alt=&quot;Wtsb 2018 06 19.023&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;So today we agreed that, in line with our remit, we must start work on building an online catalogue of existing services and the standards that are used, and, by adopting GDS-principles ourselves, do this in the open and in small incremental steps. As such, we are going to pick a current service and see how we can take some tentative first steps in publishing that documentation as well as making use of tools to support cooperation and collaboration.&lt;/p&gt;
+
+&lt;p&gt;If you have any comments or thoughts, let me know. I promise to tell you how we get on, and share the learning, the results (good or bad) with you.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">We held the second meeting of the Welsh Technical Standards Board (WTSB) today and I am delighted to announce that we have formally adopted the GDS Design Principles for use by NHS Wales. These are:</summary></entry><entry><title type="html">Informed Health and Care: Delivery</title><link href="https://www.wardle.org/wales/2018/05/27/delivery.html" rel="alternate" type="text/html" title="Informed Health and Care: Delivery" /><published>2018-05-27T21:20:20+01:00</published><updated>2018-05-27T21:20:20+01:00</updated><id>https://www.wardle.org/wales/2018/05/27/delivery</id><content type="html" xml:base="https://www.wardle.org/wales/2018/05/27/delivery.html">&lt;p&gt;&lt;a href=&quot;http://gov.wales/topics/health/nhswales/about/e-health/?lang=en&quot;&gt;“Informed health and care – A digital health and social care strategy for Wales”&lt;/a&gt; sets out a clear vision for the use of information technology to support the provision of healthcare for citizens within Wales.&lt;/p&gt;
 
 &lt;p&gt;This vision is split into four key themes:&lt;/p&gt;
 
@@ -1093,86 +1236,4 @@ As such, we need a coordinated all-Wales approach that permits all stakeholders 
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">This is part three of a three-part series on why and how we should be building an open digital health platform in Wales. Part one was a high-level overview of how standards and interoperability are critical in building a digital ecosystem. Part two assessed our current messaging-based architecture and highlighted the benefits of an API-first enterprise architecture together with the new technologies that have facilitated the move to cloud computing in other industries. This part ties together these strands into a manifesto for phase 1 of building our open platform.</summary></entry><entry><title type="html">An open digital health platform: an API-first approach</title><link href="https://www.wardle.org/digital-platform/2018/03/03/platform-wales-2.html" rel="alternate" type="text/html" title="An open digital health platform: an API-first approach" /><published>2018-03-03T03:03:03+00:00</published><updated>2018-03-03T03:03:03+00:00</updated><id>https://www.wardle.org/digital-platform/2018/03/03/platform-wales-2</id><content type="html" xml:base="https://www.wardle.org/digital-platform/2018/03/03/platform-wales-2.html">&lt;blockquote&gt;
-  &lt;p&gt;This is part two of a three-part series on why and how we should be building an open digital health platform in Wales.&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;/digital-platform/2018/03/03/platform-wales-1.html&quot;&gt;Part one&lt;/a&gt; was a high-level overview of how standards and interoperability are critical in building a digital ecosystem. This part assesses our current messaging-based architecture and highlights the benefits of an API-first enterprise architecture together with the new technologies that have facilitated the move to cloud computing in other industries. &lt;a href=&quot;/digital-platform/2018/03/03/platform-wales-3.html&quot;&gt;Part three&lt;/a&gt; ties together these strands into a manifesto for phase 1 of building our open platform.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;So, what is the most effective overall enterprise architecture that facilitates modern interoperability and an ecosystem, as described in &lt;a href=&quot;/digital-platform/2018/03/03/platform-wales-1.html&quot;&gt;part one&lt;/a&gt;?&lt;/p&gt;
-
-&lt;p&gt;Any answer to that question must consider legacy systems already supporting clinical care within and between our organisations. There are many such services, such as patient administrative systems (eg HL7v2), laboratory information management systems, user identity and authentication and in Wales, we have an enterprise service bus (ESB)-based messaging architecture linking them together. In addition, there are sometimes explicit, often implicit reference data and rules and heuristics built into each application and service.&lt;/p&gt;
-
-&lt;p&gt;The first consideration is whether those services and applications currently deployed can support both robust interoperability and our ecosystem project. The second consideration is, if they cannot, how can we most effectively use what we have to do so?&lt;/p&gt;
-
-&lt;h1 id=&quot;can-our-current-architecture-support-interoperability-and-an-ecosystem&quot;&gt;Can our current architecture support interoperability and an ecosystem?&lt;/h1&gt;
-
-&lt;p&gt;An ESB-architecture is one example of an event-driven architecture connecting disparate software without tight-coupling. An ESB is the typical technology used in Service Orientated Architectures (SOA) most popular several years ago. For example, there are a set of services and applications already in Wales supporting the care of patients on dialysis units across Wales. These take a live real-time feed of messages of laboratory results and persisting those data into a repository for the care of those patients.&lt;/p&gt;
-
-&lt;p&gt;The ESB has supported integration, but it has required work &lt;em&gt;for all parties&lt;/em&gt;, internal and external, to perform that integration. Normally, an ESB will adopt a standards-based messaging protocol and so data are sent within a data “envelope”, usually SOAP, reflecting the technology of the time. This solves interoperability from a technical standpoint, but semantic and legal interoperability are out-of-scope. The ESB is therefore a component of an event-driven SOA.&lt;/p&gt;
-
-&lt;p&gt;As an event-driven architecture, it can be difficult to handle long-running business processes and orchestrate workflow across services. In addition, while applications and services are disconnected, separated by the ESB, the overall architecture is much like a monolith, but with the added complexity of a distributed system with every component part of a larger stream of messages.&lt;/p&gt;
-
-&lt;p&gt;This makes testing individual components difficult with changes in one system resulting in difficult to predict consequences on other systems. A test environment might need to replicate the entire ecosystem making it more difficult to automate and have confidence that any component or the whole ‘system’ is deterministic.&lt;/p&gt;
-
-&lt;p&gt;In short, an ESB is an &lt;em&gt;internal&lt;/em&gt; solution to enterprise architecture integration. It is poorly suited to creating a truly open platform, although of course, can remain an important constituent part. We need to look elsewhere to see how technological trends could transform the way we build healthcare platforms.&lt;/p&gt;
-
-&lt;h1 id=&quot;what-can-we-learn-from-cloud-computing-and-modern-architectural-design&quot;&gt;What can we learn from cloud computing and modern architectural design?&lt;/h1&gt;
-
-&lt;p&gt;We have seen a revolution in both how data can be stored and how we can write software that operates on those data; we have &lt;em&gt;cloud computing&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Cloud computing brings together on-demand scalability and efficiency allowing organisations to consume storage and computing power to meet demand. Instead of running your own database in your own data centre, you can delegate its operation, backup and replication to a commercial supplier, normally on a pay-as-you-go basis. Example providers include Amazon AWS, Microsoft Azure and Google Cloud.&lt;/p&gt;
-
-&lt;p&gt;The move to a cloud-based architecture has been predicated upon technological advances and new approaches to the design, creation, testing and deployment of modern applications. However, these advances are not necessarily limited to deployment to the cloud. Technologies such as “containers” can be used in local data centres as well. As such, software code can be built as lightweight portable services deployed in-house or to an external hosting provider anywhere. Indeed, this vendor-neutrality means that in essence we are moving to a future in which hosting data and software services is a commodity. As a result of this flexibility, many enterprises adopt a hybrid approach in which their existing infrastructure continues to run on private networks hosted in private data centres but these are supplemented with new services provided using containers, deployed either in-house or by a cloud provider or in combination.&lt;/p&gt;
-
-&lt;p&gt;Modern application development and operations (such as testing and deployment into live environments) are called “DevOps” and support greater degrees of agility in all steps of the software lifecycle so that development becomes more modular, modules become more isolated and independently test-able, and changes to those modules can be committed, tested and even deployed with little or no manual intervention. We know that modern technology companies like Google deploy billions of containers per week across their cloud infrastructure; to do so requires automation in deployment and scaling to meet their ever-increasing demands for computing power.&lt;/p&gt;
-
-&lt;p&gt;A new type of cloud-based architecture - Serverless - is increasingly popular, recognising that application developers wish to focus on their core business of creating value via writing software and not be concerned about the infrastructure that is needed to run that software. Serverless allows developers to write a function, which could perform any imagined well-defined computing task, and deploy it easily. Such a function can be used by other software components but the provider is responsible for automatically scaling the service to meet demand, expanding or contracting the resources required to computing power responsive to user need.&lt;/p&gt;
-
-&lt;p&gt;We are now seeing a new market for software code, in which re-usable independent modules of code, deployed as containers as “microservices” or as “serverless” functions, can be knitted together to create functionality for end-users.  These modules might look simple on the surface but hide (abstract) a great deal of complexity to deliver their results. Have a look at the speech recognition services now available from &lt;a href=&quot;https://aws.amazon.com/transcribe/?hp=tile&amp;amp;so-exp=below&quot;&gt;Amazon&lt;/a&gt; and &lt;a href=&quot;https://cloud.google.com/speech/&quot;&gt;Google&lt;/a&gt;. Developers using those services simply send an audio file and receive back a text file containing the transcribed text.&lt;/p&gt;
-
-&lt;p&gt;It is easy to see that such an architecture permits vendor-neutrality, in which we could substitute one service for another based on quality and price, with our changes limited to changing how we locate the resources used to knit together an end-to-end solution for our users. Substitutability is an important architectural principle for future-proofing and requires us to adopt standardised and open application programming interfaces (APIs).&lt;/p&gt;
-
-&lt;p&gt;I am convinced that we will see an increasingly sophisticated marketplace providing on-demand computing services in the next five years; for example, see the new &lt;a href=&quot;https://aws.amazon.com/serverless/serverlessrepo/&quot;&gt;Amazon Serverless Application Repository&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;As such, we should recognise that cloud computing should inform our architectural designs for healthcare:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Virtually unlimited computing power on an as-required, scalable basis&lt;/li&gt;
-  &lt;li&gt;Openness, modularisation and abstraction of software to appropriately ‘decouple’ software and thus facilitating evolutionary change.&lt;/li&gt;
-  &lt;li&gt;Sophisticated support for “DevOps” in the develop-test-deploy software lifecycle with a focus on automation and rapid ‘agile’ development.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;an-api-first-approach-for-an-open-architecture&quot;&gt;An API-first approach for an open architecture&lt;/h1&gt;
-
-&lt;p&gt;It is not difficult to see how healthcare has lagged behind other industries in adopting a more “open” approach to information technology. Most healthcare software has traditionally been dominated by vendors who supply whole-organisation scale software products that are usually ‘closed’ systems.&lt;/p&gt;
-
-&lt;p&gt;Open systems provide interoperability so that different components from different vendors can communicate and exchange meaningful information. In addition, open systems support &lt;em&gt;portability&lt;/em&gt; of applications and services. Portability means that software can be written once and deployed without change irrespective of the environment in which it is deployed. Portability requires standardisation and usually some form of runtime configuration and resource location. For example, to use a health example, if an application expects to use HL7 FHIR to fetch blood results and perform analytics, it should be possible to deploy that application within any ecosystem that provides those HL7 FHIR endpoints. These endpoints are what we mean by an standard “API”.&lt;/p&gt;
-
-&lt;p&gt;So what is an “API”? An API is an &lt;em&gt;application programming interface&lt;/em&gt;. Crudely, it is a set of usually related software functions that, for our purposes, can be called by one system to execute software functionality in another. Essentially, an API is an abstraction, a way of decoupling how a software service is used from its implementation. In the example above, you do not need to know how Amazon or Google have implemented their speech transcription service, you send the text file and get back text. For all you know, they have thousands of transcriptionists sitting at computers listening with headphones and typing! In addition, you do not really care whether they change how they implement the transcription service, so long as you get back the results you expect. They could switch over to a new implementation and you wouldn’t know. The use of APIs has meant you have isolated different modules of software from each other and permitted work to continue independently.&lt;/p&gt;
-
-&lt;p&gt;For example, we might expect to be able to make use of a module to identify acute kidney injury (AKI). Currently, this could simply implement the &lt;a href=&quot;https://www.england.nhs.uk/akiprogramme/aki-algorithm/&quot;&gt;national AKI algorithm&lt;/a&gt; but, could &lt;em&gt;also&lt;/em&gt; be used to inform and develop the next-generation of algorithm that could perhaps identify patients &lt;em&gt;before&lt;/em&gt; there is kidney injury and be &lt;em&gt;then&lt;/em&gt; replaced with more sophisticated algorithms with different and hopefully improved receiver-operator curves for the patient group at hand.&lt;/p&gt;
-
-&lt;p&gt;Not all APIs are “standard”. Proprietary APIs might allow interoperability but at the expense of new work, perhaps on both sides, to perform integration. Similarly, proprietary interfaces usually expose implementation details so that rather than being appropriately decoupled, the two separate software systems become entwined and dependent -  much like a limpet clinging to a rock than flexible and interchangeable plugs and sockets we all use for our electrical devices in the home!&lt;/p&gt;
-
-&lt;p&gt;A focus on open and standard APIs is key to creating a powerful ecosystem so that both internal and external developers can contribute and work independently. Our ecosystem project in Wales must not simply cater to external users but &lt;em&gt;be&lt;/em&gt; the platform on which new innovation can occur both internally and in partnership with others. This is a paradigm shift from the closed approach we have seen in healthcare in the past and treats external developers as first-class citizens in our digital health ecosystem.&lt;/p&gt;
-
-&lt;p&gt;Our efforts in Wales on standards, interoperability and the digital ecosystem must therefore build a ‘connected business platform’ usable by developers, internal and external, on behalf of users, across health and care and most importantly the patient and their delegates, to support a transformation in how we deliver healthcare.&lt;/p&gt;
-
-&lt;h1 id=&quot;privacy-and-trust&quot;&gt;Privacy and trust&lt;/h1&gt;
-
-&lt;p&gt;It is important not to confuse “openness” with a lack of data security. Openness, at a principle in software architecture, relates to interoperability.  For example, TCP/IP, the technical underpinnings of the Internet, is an open protocol but that does not stop it being used by your bank to offer online banking to authorise and execute financial transactions.&lt;/p&gt;
-
-&lt;p&gt;An open architecture does not mean that confidential patient information is made accessible to all. Any design for a target architecture for Wales must take into account the need for authentication (‘you are you say are’), authorisation (‘you are allowed to do what you are asking to do’) and verifiable logging (‘we are watching what you do’) as well as need to handle different levels of sensitive information. For example, it would be expected that sexual health, genomic, mental health and social care data might be treated differently to general health data.&lt;/p&gt;
-
-&lt;p&gt;Similarly, not only might accessibility depend on the type of data, but the intended use of those data. For example, so that data made available for direct patient care might depend on the direct care relationship between citizen and professional while aggregated data for a clinical service or organisation used for planning and performance management and data made available to researchers would be handled quite differently.&lt;/p&gt;
-
-&lt;p&gt;It is difficult to ensure privacy and trust when one uses as ‘push’ based messaging fabric like an ESB because data are sent to services who consume or decide to discard those messages. An API-based approach is usually a ‘pull’ service, in which a client requests something from a service and so a service can decide whether to satisfy that request by virtue of authentication and authorisation and can log such access via a logging service. Of course, an API-based approach can adapt to a ‘push’ model usually via ‘publish-and-subscribe’ in which interested clients subscribe to notifications from a service.&lt;/p&gt;
-
-&lt;h1 id=&quot;so-what-next&quot;&gt;So what next?&lt;/h1&gt;
-
-&lt;p&gt;The next question to ask is, what are the next steps that we need to take to build an open platform in Wales using these architectural design principles? I have tried to answer this in my &lt;a href=&quot;/digital-platform/2018/03/03/platform-wales-3.html&quot;&gt;next post&lt;/a&gt;.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;a href=&quot;/digital-platform/2018/03/03/platform-wales-3.html&quot;&gt;Part three&lt;/a&gt; ties together these strands into a manifesto for phase 1 of building our open platform.&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><summary type="html">This is part two of a three-part series on why and how we should be building an open digital health platform in Wales. Part one was a high-level overview of how standards and interoperability are critical in building a digital ecosystem. This part assesses our current messaging-based architecture and highlights the benefits of an API-first enterprise architecture together with the new technologies that have facilitated the move to cloud computing in other industries. Part three ties together these strands into a manifesto for phase 1 of building our open platform.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">This is part three of a three-part series on why and how we should be building an open digital health platform in Wales. Part one was a high-level overview of how standards and interoperability are critical in building a digital ecosystem. Part two assessed our current messaging-based architecture and highlighted the benefits of an API-first enterprise architecture together with the new technologies that have facilitated the move to cloud computing in other industries. This part ties together these strands into a manifesto for phase 1 of building our open platform.</summary></entry></feed>
