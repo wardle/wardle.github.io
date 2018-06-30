@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-06-30T22:00:08+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-06-30T22:04:26+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
 </subtitle><entry><title type="html">User need! Agile! Platform!</title><link href="https://www.wardle.org/platform/2018/06/30/user-need-agile-platform.html" rel="alternate" type="text/html" title="User need! Agile! Platform!" /><published>2018-06-30T08:14:28+01:00</published><updated>2018-06-30T08:14:28+01:00</updated><id>https://www.wardle.org/platform/2018/06/30/user-need-agile-platform</id><content type="html" xml:base="https://www.wardle.org/platform/2018/06/30/user-need-agile-platform.html">&lt;p&gt;We need some substantial changes in the way we think about healthcare information technology in Wales.&lt;/p&gt;
 
 &lt;p&gt;I believe that we need to, figuratively speaking, pull the &lt;a href=&quot;https://itrevolution.com/kata/&quot;&gt;Andon cord&lt;/a&gt; and call a stop to the status quo, to stop building significant &lt;a href=&quot;https://en.wikipedia.org/wiki/Technical_debt&quot;&gt;technical debt&lt;/a&gt; and move away from long procurement cycles and success judged by the deployment of different products from different vendors in different organisations.&lt;/p&gt;
@@ -18,14 +18,14 @@
 &lt;ol&gt;
   &lt;li&gt;perhaps not all recognise that there are problems&lt;/li&gt;
   &lt;li&gt;that there is a lack of ambition to enable transformational change using digital technology&lt;/li&gt;
-  &lt;li&gt;there is a lack of strategic leadership who prioritise delivery of benefit and understand how to do that effectively.&lt;/li&gt;
+  &lt;li&gt;there is a lack of priority on the delivery of benefit and understanding of how to do that effectively.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;I think the solution will, given the NHS is a complex and adaptive environment with lots of moving parts, lots of variation and significant complexity, to look at improving things both from the top-down and the bottom-up.&lt;/p&gt;
 
 &lt;h1 id=&quot;top-down--cohesion-credible-principles-and-plans&quot;&gt;Top-down : cohesion, credible principles and plans&lt;/h1&gt;
 
-&lt;p&gt;While we have the “Informed Health and Care” strategy, it is only a &lt;em&gt;vision&lt;/em&gt; of what is needed and we must ask, where is the the specific executable plan to deliver that vision. There are those of us who are now trying to draft that, but where has it been up until now?&lt;/p&gt;
+&lt;p&gt;While we have the &lt;a href=&quot;https://gov.wales/topics/health/nhswales/about/e-health/?lang=en&quot;&gt;“Informed Health and Care” strategy&lt;/a&gt;, it is only a &lt;em&gt;vision&lt;/em&gt; of what is needed and we must ask, where is the the specific executable plan to deliver that vision. There are those of us who are now trying to draft that, but where has it been up until now?&lt;/p&gt;
 
 &lt;p&gt;This needs to be a thoughtful and informed piece of work, noting the successes and failures in a non-judgmental way and highlighting the areas of priority, as well as reflections and robust options-appraisals of different options. If it can’t do that, then the top-down delivery plan must create a tangible plan to understand those options to inform the balancing judgement.&lt;/p&gt;
 
@@ -33,7 +33,7 @@
 
 &lt;p&gt;What must follow from this is the need for an overarching strategic group who is tasked with setting broad directions as well as the principles and standards to be used by any team working to deliver functionality for users across Wales, including professionals and patients. Overarching principles and technical approach includes a credible plan for a cohesive architecture, making the best use of existing infrastructure and yet creating something to allow us to deliver solutions to our problems, both now and in the future.&lt;/p&gt;
 
-&lt;p&gt;We must change from command-and-control with centralised project management to instead clearly defining our end goals together with the broad principles and standards to be used.&lt;/p&gt;
+&lt;p&gt;We must change from command-and-control with centralised project management to instead clearly defining our end goals together with the broad principles and standards to be used. Decision making should be open and transparent.&lt;/p&gt;
 
 &lt;h1 id=&quot;bottom-up-empowerment-cooperation-and-trust&quot;&gt;Bottom-up: empowerment, cooperation and trust&lt;/h1&gt;
 
@@ -41,17 +41,38 @@
 
 &lt;p&gt;We need a shared platform of discrete modular loosely-coupled components available to use for both internal and external teams.&lt;/p&gt;
 
-&lt;p&gt;We need to build trust between organisations, but fundamentally, information technology needs to be &lt;em&gt;owned&lt;/em&gt; by the service working collaboratively and in partnership, and bringing in commercial expertise and solutions when necessary. Most businesses recognise that IT does not simply support their business, but it &lt;em&gt;is&lt;/em&gt; the way that they do business and we need to do that for health. Such recognition has meant that digital leaders are at board level and that information technology should not be considered a separate department. In Wales, IT is outsourced to a separate poorly governed organisation!&lt;/p&gt;
+&lt;p&gt;We need to build trust between organisations, but fundamentally, information technology needs to be &lt;em&gt;owned&lt;/em&gt; by the service working collaboratively and in partnership, and bringing in commercial expertise and solutions when necessary. Most businesses recognise that IT does not simply support their business, but it &lt;em&gt;is&lt;/em&gt; the way that they do business and we need to do that for health. Such recognition has meant that digital leaders are at board level and that information technology should not be considered a separate department. In Wales, much IT is outsourced to a separate &lt;a href=&quot;http://www.audit.wales/publication/informatics-systems-nhs-wales&quot;&gt;poorly governed&lt;/a&gt; organisation!&lt;/p&gt;
 
-&lt;p&gt;What therefore must follow from this is the need for a &lt;em&gt;national platforms group&lt;/em&gt;, made up of cross-functional teams bringing together expertise from different specialties such as management, development, testing, quality assurance, safety and operations. These individual teams must be given responsibility to deliver discrete components of a modular, loosely-coupled architecture.&lt;/p&gt;
+&lt;p&gt;What therefore must follow from this is the need for a &lt;em&gt;national platform delivery group&lt;/em&gt;, made up of cross-functional teams bringing together expertise from different specialties such as management, development, testing, quality assurance, safety and operations. These individual teams must be given responsibility to deliver discrete components of a modular, loosely-coupled architecture. For example, these services underpin important outcomes in many different workstreams - citizen identity clear underpins both “Information for you” and “Supporting professionals”, the workstreams supporting patients and professionals respectively.&lt;/p&gt;
 
-&lt;p&gt;In parallel, we should plan robust API management lifecycle to build APIs with a focus on ease of use for application developers (whether internal or external), consistent security policies, automated testing and deployment, documentation and analytics to gain better insights into API usage and performance.&lt;/p&gt;
+&lt;p&gt;Our open platform needs robust API lifecycle management to build APIs with a focus on ease of use for application developers (whether internal or external), consistent security policies, automated testing and deployment, documentation and analytics to gain better insights into API usage and performance. Those APIs need to be used by both internal and external developers alike.&lt;/p&gt;
 
 &lt;h1 id=&quot;striking-a-balance&quot;&gt;Striking a balance&lt;/h1&gt;
 
-&lt;p&gt;There is, of course, a balance and none of what we need to do is particularly easy, but I struggle with the paradox of Wales attempting to run hugely ambitious, top-down, multi-million pound IT projects given both local and international experience of the likelihood of failure vs a genuine lack of ambition to use digital tools to transform how we care for our population and enable an ecosystem of innovation.&lt;/p&gt;
+&lt;p&gt;There is, of course, a balance and none of what we need to do is particularly easy, but I struggle with the paradox of Wales attempting to run hugely ambitious, top-down, multi-million pound IT projects given both local and international experience of the likelihood of failure vs a genuine lack of ambition to use digital tools to transform how we care for our population and enable an ecosystem of innovation. I personally find decision-making to be opaque and rarely find published appraisals of different options explaining the advantages and disadvantages of any particular option.&lt;/p&gt;
+
+&lt;p&gt;It is quite easy to make excuses and blame lack of delivery on how difficult it is to effect change, but I would argue that our culture, our governance and our technical architecture conspire to make our work even more difficult. We should be aiming to stack the odds in our favour!&lt;/p&gt;
 
 &lt;p&gt;There are people around who want to make a difference and recognise the need for change. There are pockets of good work at all levels, including government, NWIS and the health boards. I think for many of us it feels as if we are swimming against the current however. It is also important to recognise that there has been historic under-funding compared to peers in England, but it is difficult to justify more expenditure when there has been a consistent historic failure to prioritise and to deliver using the resources we have had.&lt;/p&gt;
+
+&lt;h1 id=&quot;next-steps&quot;&gt;Next steps&lt;/h1&gt;
+
+&lt;p&gt;I would suggest that we need to:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Perform a national architecture review to help define a modern, standards-based loosely-coupled evolutionary adaptive architecture.&lt;/li&gt;
+  &lt;li&gt;Change our metrics so that we focus on user need and delivery of benefit, rather than deployment of a specific product.&lt;/li&gt;
+  &lt;li&gt;Change governance and ownership. Give the health boards ownership and control, ask them to form a partnership with each other and government tasked to set top-down principles and technical and information standards and provide expertise and oversight to define a national open platform.&lt;/li&gt;
+  &lt;li&gt;Change delivery - by empowering developer teams whether national, local or commercial to use that open platform to solve problems, and ensure that those solutions can be built collaboratively and shared and scaled when shown to be safe and successful.&lt;/li&gt;
+  &lt;li&gt;Change development practices - with real agile working, cross-functional empowered teams made up of different specialists working together to deliver.&lt;/li&gt;
+  &lt;li&gt;Change our behaviour and culture - become open by default, make Wales a beacon of safe, secure healthcare informatics underpinning service transformation and improvement - and teach everyone else how we did it, the difficulties we faced and the strategies we used to overcome those difficulties.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It is possible to have a single organisation acting as both overseer, strategist and software supplier, but that needs a change in behaviour towards transparency so that decision-making is open, subject to external scrutiny and there are clear appraisals of different options. In my view, the NHS Wales Informatics Service fails to behave in this way. My preference is to change the behaviour, but if that is not possible, then we must surely consider re-organisation instead.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;further-reading&quot;&gt;Further reading&lt;/h4&gt;
 
 &lt;p&gt;I have written on my blog on aspects of this. These are the most important bits I guess:&lt;/p&gt;
 
@@ -75,19 +96,7 @@
   &lt;li&gt;&lt;a href=&quot;http://wardle.org/digital-platform/2018/03/03/platform-wales-1.html&quot;&gt;Platforms #1&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://wardle.org/digital-platform/2018/03/03/platform-wales-2.html&quot;&gt;Platforms #2&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://wardle.org/digital-platform/2018/03/03/platform-wales-3.html&quot;&gt;Platforms #2&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;next-steps&quot;&gt;Next steps&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;We need to a national architecture review to help define a modern, standards-based loosely-coupled evolutionary adaptive architecture.&lt;/li&gt;
-  &lt;li&gt;Change our metrics so that we focus on user need and delivery of benefit, rather than deployment of a specific product.&lt;/li&gt;
-  &lt;li&gt;Change governance and ownership. Give the health boards ownership and control, ask them to form a partnership with each other and government tasked to set top-down principles and technical and information standards and provide expertise and oversight to define a national open platform.&lt;/li&gt;
-  &lt;li&gt;Change delivery - by empowering developer teams whether national, local or commercial to use that open platform to solve problems, and ensure that those solutions can be built collaboratively and shared and scaled when shown to be safe and successful.&lt;/li&gt;
-  &lt;li&gt;Change our culture - become open by default, make Wales a beacon of safe, secure healthcare informatics underpinning service transformation and improvement - and teach everyone else how we did it, the difficulties we faced and the strategies we used to overcome those difficulties.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;It is possible to have a single organisation acting as both overseer, strategist and software supplier, but that needs a change in behaviour towards transparency so that decision-making is open, subject to external scrutiny and there are clear appraisals of different options. In my view, the NHS Wales Informatics Service fails to behave in this way. My preference is to change the behaviour, but if that is not possible, then we must surely consider re-organisation instead.&lt;/p&gt;</content><author><name></name></author><summary type="html">We need some substantial changes in the way we think about healthcare information technology in Wales.</summary></entry><entry><title type="html">WTSB 19th June 2018</title><link href="https://www.wardle.org/wales/2018/06/19/wtsb.html" rel="alternate" type="text/html" title="WTSB 19th June 2018" /><published>2018-06-19T15:14:14+01:00</published><updated>2018-06-19T15:14:14+01:00</updated><id>https://www.wardle.org/wales/2018/06/19/wtsb</id><content type="html" xml:base="https://www.wardle.org/wales/2018/06/19/wtsb.html">&lt;p&gt;We held the second meeting of the Welsh Technical Standards Board (WTSB) today and I am delighted to announce that we have formally adopted the &lt;a href=&quot;https://www.gov.uk/guidance/government-design-principles&quot;&gt;GDS Design Principles&lt;/a&gt; for use by NHS Wales. These are:&lt;/p&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">We need some substantial changes in the way we think about healthcare information technology in Wales.</summary></entry><entry><title type="html">WTSB 19th June 2018</title><link href="https://www.wardle.org/wales/2018/06/19/wtsb.html" rel="alternate" type="text/html" title="WTSB 19th June 2018" /><published>2018-06-19T15:14:14+01:00</published><updated>2018-06-19T15:14:14+01:00</updated><id>https://www.wardle.org/wales/2018/06/19/wtsb</id><content type="html" xml:base="https://www.wardle.org/wales/2018/06/19/wtsb.html">&lt;p&gt;We held the second meeting of the Welsh Technical Standards Board (WTSB) today and I am delighted to announce that we have formally adopted the &lt;a href=&quot;https://www.gov.uk/guidance/government-design-principles&quot;&gt;GDS Design Principles&lt;/a&gt; for use by NHS Wales. These are:&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Start with user needs&lt;/li&gt;
