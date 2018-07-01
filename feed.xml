@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-07-01T08:17:10+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-07-01T08:18:13+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
 </subtitle><entry><title type="html">Pulling the Andon cord for healthcare IT in Wales</title><link href="https://www.wardle.org/platform/2018/06/30/user-need-agile-platform.html" rel="alternate" type="text/html" title="Pulling the Andon cord for healthcare IT in Wales" /><published>2018-06-30T08:14:28+01:00</published><updated>2018-06-30T08:14:28+01:00</updated><id>https://www.wardle.org/platform/2018/06/30/user-need-agile-platform</id><content type="html" xml:base="https://www.wardle.org/platform/2018/06/30/user-need-agile-platform.html">&lt;p&gt;We need some substantial changes in the way we think about healthcare information technology in Wales.&lt;/p&gt;
 
 &lt;p&gt;I believe that we need to, figuratively speaking, pull the &lt;a href=&quot;https://itrevolution.com/kata/&quot;&gt;Andon cord&lt;/a&gt; and call a stop to the status quo, to stop building significant &lt;a href=&quot;https://en.wikipedia.org/wiki/Technical_debt&quot;&gt;technical debt&lt;/a&gt; and move away from long procurement cycles and success judged by the deployment of different products from different vendors in different organisations.&lt;/p&gt;
@@ -23,7 +23,7 @@
 
 &lt;p&gt;I think the solution will, given the NHS is a complex and adaptive environment with lots of moving parts, lots of variation and significant complexity, to look at improving things both from the top-down and the bottom-up.&lt;/p&gt;
 
-&lt;h1 id=&quot;top-down--cohesion-credible-principles-and-plans&quot;&gt;Top-down : cohesion, credible principles and plans&lt;/h1&gt;
+&lt;h1 id=&quot;top-down--cohesive-principles-and-credible-plans&quot;&gt;Top-down : cohesive principles and credible plans&lt;/h1&gt;
 
 &lt;p&gt;From the top, we need cohesive, credible plans based on broad design and technology principles and standards.&lt;/p&gt;
 
