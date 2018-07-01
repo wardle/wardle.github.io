@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-07-01T08:06:13+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-07-01T08:09:11+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
 </subtitle><entry><title type="html">Pulling the Andon cord for healthcare IT in Wales</title><link href="https://www.wardle.org/platform/2018/06/30/user-need-agile-platform.html" rel="alternate" type="text/html" title="Pulling the Andon cord for healthcare IT in Wales" /><published>2018-06-30T08:14:28+01:00</published><updated>2018-06-30T08:14:28+01:00</updated><id>https://www.wardle.org/platform/2018/06/30/user-need-agile-platform</id><content type="html" xml:base="https://www.wardle.org/platform/2018/06/30/user-need-agile-platform.html">&lt;p&gt;We need some substantial changes in the way we think about healthcare information technology in Wales.&lt;/p&gt;
 
 &lt;p&gt;I believe that we need to, figuratively speaking, pull the &lt;a href=&quot;https://itrevolution.com/kata/&quot;&gt;Andon cord&lt;/a&gt; and call a stop to the status quo, to stop building significant &lt;a href=&quot;https://en.wikipedia.org/wiki/Technical_debt&quot;&gt;technical debt&lt;/a&gt; and move away from long procurement cycles and success judged by the deployment of different products from different vendors in different organisations.&lt;/p&gt;
@@ -80,23 +80,23 @@
 
 &lt;h4 id=&quot;further-reading&quot;&gt;Further reading&lt;/h4&gt;
 
-&lt;p&gt;I have written on my blog on aspects of this. These are the most important bits I guess:&lt;/p&gt;
+&lt;p&gt;I have written previously on many aspects of this. These are the most important bits:&lt;/p&gt;
 
-&lt;p&gt;I talk about open platforms in healthcare here:&lt;/p&gt;
+&lt;p&gt;On open platforms in healthcare here:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://wardle.org/clinical-informatics/2017/10/19/data-driven.html&quot;&gt;Data-driven healthcare: integration&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://wardle.org/clinical-informatics/2017/03/15/once-for-wales.html&quot;&gt;Once-for-Wales&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;I talk about governance and top-down vs bottom up here.&lt;/p&gt;
+&lt;p&gt;On governance and top-down vs bottom up here.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://wardle.org/clinical-informatics/2017/12/05/enabling-innovation.html&quot;&gt;Paradox of control&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://wardle.org/clinical-informatics/2017/12/06/paradox-of-ambition.html&quot;&gt;Paradox of ambition&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;More stuff on platforms here…&lt;/p&gt;
+&lt;p&gt;On platforms here…&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://wardle.org/digital-platform/2018/03/03/platform-wales-1.html&quot;&gt;Platforms #1&lt;/a&gt;&lt;/li&gt;
