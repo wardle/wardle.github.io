@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-07-03T21:09:53+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-07-03T22:38:51+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
 </subtitle><entry><title type="html">Cancer informatics</title><link href="https://www.wardle.org/platform/2018/07/03/cancer-informatics.html" rel="alternate" type="text/html" title="Cancer informatics" /><published>2018-07-03T17:16:16+01:00</published><updated>2018-07-03T17:16:16+01:00</updated><id>https://www.wardle.org/platform/2018/07/03/cancer-informatics</id><content type="html" xml:base="https://www.wardle.org/platform/2018/07/03/cancer-informatics.html">&lt;p&gt;The Public Accounts Committee (PAC) of the National Assembly for Wales heard evidence yesterday from Velindre NHS Trust on cancer informatics. You can see more &lt;a href=&quot;http://senedd.assembly.wales/ieListDocuments.aspx?CId=441&amp;amp;MId=4751&amp;amp;Ver=4&quot;&gt;here&lt;/a&gt; including the video. The minutes will appear soon.&lt;/p&gt;
 
 &lt;p&gt;The important messages were&lt;/p&gt;
@@ -103,6 +103,12 @@
   &lt;p&gt;It is almost always the case that when building complex solutions to real-life problems, no-one person can conceive of all of the problems in one go. The natural solution to such complexity is to break-down a problem into manageable chunks. These chunks, much like “lego bricks”, can be joined together to form something greater than the sum of the parts. Importantly, it is more likely that we can vouch that a system is deterministic.&lt;/p&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;As a result, I believe that we need to move away from products, from projects and towards modular &lt;em&gt;services&lt;/em&gt;, that together create an open platform. I have written extensively about this in my blog including the &lt;a href=&quot;http://wardle.org/clinical-informatics/2017/10/19/data-driven.html&quot;&gt;talk I gave at the inaugural Welsh Digital Health and Care Conference in 2017.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.016.jpeg&quot; alt=&quot;Wardle Digital Health.016&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.018.jpeg&quot; alt=&quot;Wardle Digital Health.018&quot; /&gt;&lt;/p&gt;
+
 &lt;h1 id=&quot;on-services&quot;&gt;On services&lt;/h1&gt;
 
 &lt;p&gt;When I say we should focus on “services”, I mean two different things:&lt;/p&gt;
@@ -135,14 +141,19 @@
 
 &lt;p&gt;The eForms project is meant to flexibly add data collection forms into WCP but at the time of writing, the lung cancer ETTF project has stalled and the diabetes project delayed. Change requests to electronic test requesting have been parked for many months in preparation for a new eForm based solution which has not yet been deployed. I am not aware that any decision has been made as to &lt;em&gt;where&lt;/em&gt; data recorded in an eForm is actually persisted.&lt;/p&gt;
 
+&lt;p&gt;I find it difficult to understand how these solutions will solve even the simple requirements I’ve listed above.&lt;/p&gt;
+
 &lt;h1 id=&quot;conclusions&quot;&gt;Conclusions&lt;/h1&gt;
 
 &lt;p&gt;I am therefore concerned that:&lt;/p&gt;
 
 &lt;ol&gt;
+  &lt;li&gt;We have not fully understood the wider requirements underpinning a modern cancer information system, to solve our current and future problems. It is likely that, fundamentally, the requirements of cancer services are likely to be more widely applicable to a range of specialties and services.&lt;/li&gt;
   &lt;li&gt;We have not adequately performed a open transparent appraisal of the options in relation to cancer informatics.&lt;/li&gt;
   &lt;li&gt;That the combination of Welsh PAS and WCP must be regarded as a significant &lt;em&gt;risk&lt;/em&gt; both in terms of delivery to the timescales and functionality, given the gaps between what is currently possible in “Welsh PAS” in WCP at the current time and what will be needed to support improvement and transformation in cancer informatics.&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;p&gt;Instead, I would argue that we should be focusing our efforts on building a generic open standards-based healthcare platform.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;
 
