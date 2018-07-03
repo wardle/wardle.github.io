@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-07-03T18:31:38+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-07-03T21:09:53+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
 </subtitle><entry><title type="html">Cancer informatics</title><link href="https://www.wardle.org/platform/2018/07/03/cancer-informatics.html" rel="alternate" type="text/html" title="Cancer informatics" /><published>2018-07-03T17:16:16+01:00</published><updated>2018-07-03T17:16:16+01:00</updated><id>https://www.wardle.org/platform/2018/07/03/cancer-informatics</id><content type="html" xml:base="https://www.wardle.org/platform/2018/07/03/cancer-informatics.html">&lt;p&gt;The Public Accounts Committee (PAC) of the National Assembly for Wales heard evidence yesterday from Velindre NHS Trust on cancer informatics. You can see more &lt;a href=&quot;http://senedd.assembly.wales/ieListDocuments.aspx?CId=441&amp;amp;MId=4751&amp;amp;Ver=4&quot;&gt;here&lt;/a&gt; including the video. The minutes will appear soon.&lt;/p&gt;
 
 &lt;p&gt;The important messages were&lt;/p&gt;
@@ -125,7 +125,7 @@
   &lt;p&gt;Where can I find an analysis of the different options available in order to fix this mess?&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Surely we need to step back and appraise a range of options, bringing together the advantages and disadvantages of any specific option in order to weight up and decide on the right choice. Given that this decision appears to be made by an organisation who is also acting as the supplier of said software seems to me, an important conflict of interest. To mitigate that, such decision-making should be published openly and transparently with the justifications and arguments in favour of this important decision for our cancer services.&lt;/p&gt;
+&lt;p&gt;Surely we need to step back and cost and appraise a range of options, bringing together the advantages and disadvantages of any specific option in order to weight up and decide on the right choice. Given that this decision appears to be made by an organisation who is also acting as the supplier of said software seems to me, an important conflict of interest. To mitigate that, such decision-making should be published openly and transparently with the justifications and arguments in favour of this important decision for our cancer services. If these options analyses exist, then they should be published as with any other “procurement”.&lt;/p&gt;
 
 &lt;p&gt;Certainly I can make some comments about the proposed solution:&lt;/p&gt;
 
@@ -145,6 +145,62 @@
 &lt;/ol&gt;
 
 &lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;further-reading&quot;&gt;Further reading&lt;/h1&gt;
+
+&lt;h4 id=&quot;on-needing-to-stop-and-review-our-strategy&quot;&gt;On needing to stop and review our strategy&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/platform/2018/06/30/user-need-agile-platform.html&quot;&gt;Pulling the “Andon Cord”&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;on-once-for-wales&quot;&gt;On “Once for Wales”&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/03/15/once-for-wales.html&quot;&gt;Once for Wales : a debate&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;on-trust-and-innovation&quot;&gt;On trust and innovation&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/12/06/paradox-of-ambition.html&quot;&gt;The paradox of ambition&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/12/05/enabling-innovation.html&quot;&gt;The paradox of control&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/12/06/5os-health.html&quot;&gt;The 5 Os of healthcare IT - objectives, ownership, openness, optimise, organic&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;on-platforms&quot;&gt;On platforms:&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;/clinical-informatics/2017/10/19/data-driven.html&quot;&gt;Data-driven healthcare&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/digital-platform/2018/03/03/platform-wales-1.html&quot;&gt;Platforms 1/3. Standards and interoperability&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/digital-platform/2018/03/03/platform-wales-2.html&quot;&gt;Platforms 2/3. An API-first approach&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/digital-platform/2018/03/03/platform-wales-3.html&quot;&gt;Platforms 3/3. What we need to do next&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;on-focus&quot;&gt;On focus:&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/01/19/focus-focus-focus.html&quot;&gt;Focus 1/3. The importance of strategy : focus&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/01/19/focus-challenges.html&quot;&gt;Focus 2/3. The challenges we face in delivering the vision&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/01/19/focus-solutions.html&quot;&gt;Focus 3/3. Pragmatic solutions to those challenges&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;on-data-1&quot;&gt;On data:&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/08/22/health-data.html&quot;&gt;Health data - start with a problem&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/10/19/data-driven.html&quot;&gt;Data-driven healthcare&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;on-development-standards-and-ecosystems&quot;&gt;On development standards and ecosystems&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/05/06/cloud-ehr.html&quot;&gt;Creative 1/3: creative destruction in health IT&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/05/06/clinical-software-quality.html&quot;&gt;Creative 2/3: the value of software for healthcare: quality improvement and service transformation underpinned by software, and software underpinning by quality improvement&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/05/08/ecosystems.html&quot;&gt;Creative 3/3: ecosystems and the platform&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h4 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h4&gt;
 
