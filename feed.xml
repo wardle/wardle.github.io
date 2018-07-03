@@ -1,5 +1,156 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-07-01T08:18:13+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
-</subtitle><entry><title type="html">Pulling the Andon cord for healthcare IT in Wales</title><link href="https://www.wardle.org/platform/2018/06/30/user-need-agile-platform.html" rel="alternate" type="text/html" title="Pulling the Andon cord for healthcare IT in Wales" /><published>2018-06-30T08:14:28+01:00</published><updated>2018-06-30T08:14:28+01:00</updated><id>https://www.wardle.org/platform/2018/06/30/user-need-agile-platform</id><content type="html" xml:base="https://www.wardle.org/platform/2018/06/30/user-need-agile-platform.html">&lt;p&gt;We need some substantial changes in the way we think about healthcare information technology in Wales.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-07-03T18:31:38+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</subtitle><entry><title type="html">Cancer informatics</title><link href="https://www.wardle.org/platform/2018/07/03/cancer-informatics.html" rel="alternate" type="text/html" title="Cancer informatics" /><published>2018-07-03T17:16:16+01:00</published><updated>2018-07-03T17:16:16+01:00</updated><id>https://www.wardle.org/platform/2018/07/03/cancer-informatics</id><content type="html" xml:base="https://www.wardle.org/platform/2018/07/03/cancer-informatics.html">&lt;p&gt;The Public Accounts Committee (PAC) of the National Assembly for Wales heard evidence yesterday from Velindre NHS Trust on cancer informatics. You can see more &lt;a href=&quot;http://senedd.assembly.wales/ieListDocuments.aspx?CId=441&amp;amp;MId=4751&amp;amp;Ver=4&quot;&gt;here&lt;/a&gt; including the video. The minutes will appear soon.&lt;/p&gt;
+
+&lt;p&gt;The important messages were&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;CANISC, the Cancer Network Information System Cymru, has been running for over 20 years and is dependent on a now unsupported software platform. This has important security and reliability risks.&lt;/li&gt;
+  &lt;li&gt;There have been a significant number of reliability issues resulting in service disruption and impact on patient care. There was no single reason for the multiple system failures.&lt;/li&gt;
+  &lt;li&gt;That there are mitigations planned so that a PDF of the important information will be published into the Welsh Care Records Service and so be visible via Welsh Clinical Portal (WCP). WCP is currently mainly a read-only web portal but also has electronic test requesting and discharge summary functions.&lt;/li&gt;
+  &lt;li&gt;That a replacement is planned using two products: adoption of “Welsh PAS” a homegrown patient administrative system that is deployed in most other health organisations in Wales for administration, and WCP to be modified to create an electronic patient record system. This work is estimated to take 2 years.&lt;sup&gt;&lt;a href=&quot;#migration-pd&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I’d like to reflect on these issues in this post.&lt;/p&gt;
+
+&lt;h1 id=&quot;our-role-as-informaticians&quot;&gt;Our role as informaticians&lt;/h1&gt;
+
+&lt;p&gt;There are lots of definitions of what we do in clinical informatics, but this is a good one:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“The overall aim of work in Clinical Informatics is to use modern technologies to advance our ability understand health and health problems, support translational research, develop effective interventions for healthcare delivery, and improve our ability to provide cutting-edge healthcare in the safest, most timely way possible.”&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://www.clinicalinformatics.group.cam.ac.uk/about-us/introduction-to-clinical-informatics/&quot;&gt;http://www.clinicalinformatics.group.cam.ac.uk/about-us/introduction-to-clinical-informatics/&lt;/a&gt;&lt;/p&gt;
+
+  &lt;p&gt;accessed on 3rd July 2018&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Fundamentally, in order to be an effective clinical informatician, we need to deeply understand the problems we are trying to solve while at the same time applying our knowledge of best practices in information technology. We need to be cognisant on how teams can work effectively at scale and pace with a focus on delivery. Likewise, we need to bring together our understanding of user need with the very best in software development practices, understand the wider context and foster the adoption of technical and information standards to support semantic interoperability and use the principles outlined in domain-driven design to build data models and a shared vocabulary to bridge the gaps between users and developers. At the same time, we need to apply evidence-based best practice in development, testing, safety, security and deployment.&lt;/p&gt;
+
+&lt;h1 id=&quot;a-crisis-always-an-opportunity-to-reflect&quot;&gt;A crisis: always an opportunity to reflect&lt;/h1&gt;
+
+&lt;p&gt;A crisis is usually a good time to step back and take stock of our current state, to appraise ourselves of the options and really understand the problems we are trying to solve.&lt;/p&gt;
+
+&lt;p&gt;It’s useful to structure our approach to how we understand need along the lines of the &lt;a href=&quot;http://gov.wales/docs/dhss/publications/151211reporten.pdf&quot;&gt;Informed Health and Care Strategy, 2015&lt;/a&gt; which sets out a clear vision for Wales to use digital technology and online services to support and enable care. The strategy is divided into four workstreams:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Information for you&lt;/li&gt;
+  &lt;li&gt;Supporting Professionals&lt;/li&gt;
+  &lt;li&gt;Improvement and Innovation&lt;/li&gt;
+  &lt;li&gt;A Planned Future&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.003.jpeg&quot; alt=&quot;Informed Health and Care&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;What kinds of requirements might arise from a deep-dive with our users? What kind of functionality do they need, noting that our “users” are not only professionals, but the citizen or their delegated representative?&lt;/p&gt;
+
+&lt;p&gt;It’s not hard to start brainstorming and that’s a critical first step in solving our problems. So we might end up with a list that looks a bit like this:&lt;/p&gt;
+
+&lt;p&gt;Patients:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Patients to see their whole journey including forthcoming scheduled appointments&lt;/li&gt;
+  &lt;li&gt;Patients to be able to communicate securely with their healthcare team, at whichever point of the pathway they currently sit.&lt;/li&gt;
+  &lt;li&gt;Patients to be given tools to help them understand their condition, their prognosis and treatment options, perhaps with outcome data stratified according to their characteristics.&lt;/li&gt;
+  &lt;li&gt;Patients to see their own results.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Professionals:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Professionals to understand how many patients sit at each stage of the pathway and track progress and ongoing outcomes.&lt;/li&gt;
+  &lt;li&gt;Professionals to have access to the right information at the right time. This means diagnostics from anywhere, including outside of Wales, as well as multidisciplinary meetings, histopathology, staging, previous treatments and interventions.&lt;/li&gt;
+  &lt;li&gt;Professionals to be able to communicate as a team, and have those interactions recorded as a narrative, irrespective of their organisation, specialty or profession.&lt;/li&gt;
+  &lt;li&gt;Professionals to be given tools to aid shared decision-making, understanding outcomes for an individual patient compared to peers.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Improvement and Innovation:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;To support quality improvement methodologies by tracking measures of process &lt;em&gt;and&lt;/em&gt; outcome using meaningful measures&lt;/li&gt;
+  &lt;li&gt;To support the advancement of knowledge by offering support for identification, recruitment and randomisation into potentially complex, multi-phase clinical trials of new treatments.&lt;/li&gt;
+  &lt;li&gt;To capture aggregate data stratified by baseline characteristics to permit benchmarking.&lt;/li&gt;
+  &lt;li&gt;To ensure digital inclusion with multiple channels so that patients have choice and multiple opportunities to contribute information in methods of their choosing.&lt;/li&gt;
+  &lt;li&gt;To permit innovative models of care, capture outcomes relating to those innovations and ensure that they are fit-for-purpose and not exclusionary to any group of individuals based on access to technology, age, socioeconomic class etc.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In my experience however, users, whether professionals or patients, need help in understanding and articulating their need and once we’ve done that, we can frequently boil down requirements into their &lt;em&gt;essence&lt;/em&gt;. I love being able to solve a specific requirement by solving it in a generic way that helps not only that individual, but everyone else as well. Generic solutions are usually more robust and future-proof compared to solutions that simply solve a specific problem.&lt;/p&gt;
+
+&lt;p&gt;One of the most generic problem-solving techniques is to become &lt;em&gt;data-driven&lt;/em&gt;. Almost every single post on my blog relates to this fundamental approach in which one thinks deeply about data, the structure of those data and how best to make use of those data in order to inform our clinical practice, whether at an individual patient level, at the service level, at a cohort level or by helping to advance our knowledge as part of research.&lt;/p&gt;
+
+&lt;p&gt;Now I have just jotted those few down over 10 minutes. We need to sit down with colleagues across Wales and empower them to think big with data. My belief is that, when one sees a list of requirements as I have written above, the &lt;em&gt;only&lt;/em&gt; way to deliver that type of functionality is to &lt;a href=&quot;/clinical-informatics/2017/08/22/health-data.html&quot;&gt;start with data&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Importantly, I believe that most of the requirements relating to cancer and cancer pathways are just as important to other non-cancer specialities. We must stop thinking about projects and products, and start thinking about &lt;em&gt;services&lt;/em&gt; and the data the underpin those services.&lt;/p&gt;
+
+&lt;h1 id=&quot;on-data&quot;&gt;On data&lt;/h1&gt;
+
+&lt;p&gt;Larry Weed opined:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“You’re a victim of it or a triumph because of it. The human mind simply cannot carry all the information without error so the record becomes part of your practice.”&lt;/p&gt;
+
+  &lt;p&gt;Dr Larry Weed, Internal Medicine Grand Rounds, 1971&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Here he makes the critical point that the medical record is the foundation on which our clinical practice occurs and understanding this is critical for those of us interested in improving healthcare by the use of information technology.&lt;/p&gt;
+
+&lt;p&gt;I strongly believe that healthcare data should be stored in a persistent record as a model of the real-world and its storage should be &lt;em&gt;separate&lt;/em&gt; from the applications and logic which act upon it.&lt;/p&gt;
+
+&lt;p&gt;This simple separation is a terrifically powerful paradigm because it means that others can use those data in ways that I might not even imagine at this point in time. What it means is that I have to think clearly, not about how an application might look or work, but how my data is structured to be meaningful, both now and in the future.&lt;/p&gt;
+
+&lt;p&gt;As I wrote in my &lt;a href=&quot;/clinical-informatics/2017/03/15/once-for-wales.html&quot;&gt;“Once for Wales” speech&lt;/a&gt; in which I pitched for interoperability and data standards for NHS Wales:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;It is almost always the case that when building complex solutions to real-life problems, no-one person can conceive of all of the problems in one go. The natural solution to such complexity is to break-down a problem into manageable chunks. These chunks, much like “lego bricks”, can be joined together to form something greater than the sum of the parts. Importantly, it is more likely that we can vouch that a system is deterministic.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;on-services&quot;&gt;On services&lt;/h1&gt;
+
+&lt;p&gt;When I say we should focus on “services”, I mean two different things:&lt;/p&gt;
+
+&lt;p&gt;Firstly, I think about computing &lt;em&gt;services&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;I am a proponent of a data-driven open platform, built from open standards and with a focus on providing a common set of modular, loosely-coupled computing services supporting citizen and professional identity, data and document repositories and other clinical information like laboratory, radiology and other investigation results. These services, abstracting complexity and possibly federating data from multiple providers,&lt;sup&gt;&lt;a href=&quot;#federation&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;, should be focused on building sane, cohesive application programming interfaces (API) suitable for both internal and external developers.&lt;/p&gt;
+
+&lt;p&gt;Secondly, I think about healthcare &lt;em&gt;services&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;I believe in digital transformation, in the use of technology to improve and transform our services. This cannot be led by an information technology department, or for that matter, an external agency acting independently from health services, but instead must be led and &lt;em&gt;owned&lt;/em&gt; by the service. There is, of course, need for expert digital teams to help &lt;em&gt;support&lt;/em&gt; those transformation efforts.&lt;/p&gt;
+
+&lt;h1 id=&quot;the-future-welsh-pas-and-wcp&quot;&gt;The future: “Welsh PAS” and WCP?&lt;/h1&gt;
+
+&lt;p&gt;So now I come to the crux of the problem. We are told that the combination of “Welsh PAS” and WCP will solve my cancer colleagues’ problems.&lt;/p&gt;
+
+&lt;p&gt;The current crisis with CANISC was foreseeable and clearly we, in Wales, must take action. I have one question:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Where can I find an analysis of the different options available in order to fix this mess?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Surely we need to step back and appraise a range of options, bringing together the advantages and disadvantages of any specific option in order to weight up and decide on the right choice. Given that this decision appears to be made by an organisation who is also acting as the supplier of said software seems to me, an important conflict of interest. To mitigate that, such decision-making should be published openly and transparently with the justifications and arguments in favour of this important decision for our cancer services.&lt;/p&gt;
+
+&lt;p&gt;Certainly I can make some comments about the proposed solution:&lt;/p&gt;
+
+&lt;p&gt;Welsh PAS is actually a misnomer as actually there are multiple instances of the software package running, all configured differently to different standards and Cardiff and Vale uses its own in-house administrative system. At the time of writing, as far as I know, there is no easy way of tracking a pathway between health boards, meaning that a patient starting their cancer journey in one health board and managed in another will not share the same national pathway identifier.&lt;/p&gt;
+
+&lt;p&gt;WCP mainly stores documents as blobs of data with a proprietary and very limited metadata model. Some documents are in XML format and are rendered to PDF on-the-fly during viewing. If we view a document in a different health board, at the time of writing, it currently renders using the wrong stylesheet and so it appears as if was written by our own health board. Data within documents can be accessed by parsing the data from the XML, but there is currently &lt;em&gt;no&lt;/em&gt; data persistence layer; indeed there is no single instance of WCP, so users have to login to their local, organisation-specific instance of WCP which is currently tightly integrated with whatever patient administrative system is running in that organisation. That means that a patient can appear alive in one instance of WCP but is shown as dead in another.&lt;/p&gt;
+
+&lt;p&gt;The eForms project is meant to flexibly add data collection forms into WCP but at the time of writing, the lung cancer ETTF project has stalled and the diabetes project delayed. Change requests to electronic test requesting have been parked for many months in preparation for a new eForm based solution which has not yet been deployed. I am not aware that any decision has been made as to &lt;em&gt;where&lt;/em&gt; data recorded in an eForm is actually persisted.&lt;/p&gt;
+
+&lt;h1 id=&quot;conclusions&quot;&gt;Conclusions&lt;/h1&gt;
+
+&lt;p&gt;I am therefore concerned that:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;We have not adequately performed a open transparent appraisal of the options in relation to cancer informatics.&lt;/li&gt;
+  &lt;li&gt;That the combination of Welsh PAS and WCP must be regarded as a significant &lt;em&gt;risk&lt;/em&gt; both in terms of delivery to the timescales and functionality, given the gaps between what is currently possible in “Welsh PAS” in WCP at the current time and what will be needed to support improvement and transformation in cancer informatics.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h4&gt;
+
+&lt;p&gt;&lt;a name=&quot;migration-pd&quot;&gt;1&lt;/a&gt;: Few people are aware, but a few years ago, I migrated both Cardiff and Vale and Bridgend Parkinson’s services from CANISC to a new electronic patient record system, complete with demographics, diagnostic information, all encounters, clinic annotations and measurement data as well as drugs used past and present. Oh, and mapped all diagnoses and medications to SNOMED-CT at the same time. I did this over a few weekends and did the big migration over a single weekend. It was a hobby project but based on the fact that CANISC was end-of-life and we needed to do something. The database schema was a bit odd, but it wasn’t actually particularly difficult. We now track diagnoses and outcomes on a modern web-based platform across Wales that I built in my spare time.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;federation&quot;&gt;2&lt;/a&gt;: Federation means encapsulating or abstracted multiple services under one, simple to use service. You might, for example, track professional identity by delegating authentication to social care or health care authentication services, and federate based on a namespace.&lt;/p&gt;</content><author><name></name></author><summary type="html">The Public Accounts Committee (PAC) of the National Assembly for Wales heard evidence yesterday from Velindre NHS Trust on cancer informatics. You can see more here including the video. The minutes will appear soon.</summary></entry><entry><title type="html">Pulling the Andon cord for healthcare IT in Wales</title><link href="https://www.wardle.org/platform/2018/06/30/user-need-agile-platform.html" rel="alternate" type="text/html" title="Pulling the Andon cord for healthcare IT in Wales" /><published>2018-06-30T08:14:28+01:00</published><updated>2018-06-30T08:14:28+01:00</updated><id>https://www.wardle.org/platform/2018/06/30/user-need-agile-platform</id><content type="html" xml:base="https://www.wardle.org/platform/2018/06/30/user-need-agile-platform.html">&lt;p&gt;We need some substantial changes in the way we think about healthcare information technology in Wales.&lt;/p&gt;
 
 &lt;p&gt;I believe that we need to, figuratively speaking, pull the &lt;a href=&quot;https://itrevolution.com/kata/&quot;&gt;Andon cord&lt;/a&gt; and call a stop to the status quo, to stop building significant &lt;a href=&quot;https://en.wikipedia.org/wiki/Technical_debt&quot;&gt;technical debt&lt;/a&gt; and move away from long procurement cycles and success judged by the deployment of different products from different vendors in different organisations.&lt;/p&gt;
 
@@ -1085,79 +1236,4 @@
 
 &lt;p&gt;To this end, I hope to continue to build these open-source tools to support complex data transformation and simplification and would be keen to get collaborators who wish to do the same. Much of the go-terminology tool is to support the work I outlined in &lt;a href=&quot;/machine-learning/2017/12/17/diagnostic-inference.html&quot;&gt;my diagnostic inference blog post&lt;/a&gt;), particularly the need for dimensionality reduction in machine learning. Let me know if you want to help.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Introduction</summary></entry><entry><title type="html">Where is the value?</title><link href="https://www.wardle.org/digital-platform/2018/03/30/where-is-the-value.html" rel="alternate" type="text/html" title="Where is the value?" /><published>2018-03-30T13:12:12+01:00</published><updated>2018-03-30T13:12:12+01:00</updated><id>https://www.wardle.org/digital-platform/2018/03/30/where-is-the-value</id><content type="html" xml:base="https://www.wardle.org/digital-platform/2018/03/30/where-is-the-value.html">&lt;p&gt;Why is digital technology so important for the future of our healthcare services?&lt;/p&gt;
-
-&lt;p&gt;When we consider how we can most effectively use digital technology in healthcare, It is easy to fall into a trap and simply support existing models and processes of care. Instead, we must raise our ambitions and look to digital technology to enable new ways to transform our health services.&lt;/p&gt;
-
-&lt;p&gt;But we mustn’t only limit our transformation agenda to only using digital channels to enable new ways of delivering care either. Fundamentally, we should be looking to digital tools to improve healthcare to provide &lt;em&gt;better outcomes for the populations that we serve&lt;/em&gt;. It is easy to lose sight of this ultimate aim: &lt;em&gt;outcomes&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;As a result, we need to embed &lt;em&gt;digital thinking&lt;/em&gt; across all facets of our health services; digital is more than simply using technology but broad-based fundamental change which, at its core, means we focus on the data to become &lt;em&gt;data-driven&lt;/em&gt;, and what are we driven to do? We must be driven to improve outcomes.&lt;/p&gt;
-
-&lt;p&gt;That means we need to create structured, meaningful data that will provide the foundation on which we create added value. Meaningful data means data that can be used for making decisions, reducing the uncertainty inherent in any decision. That decision may be whether to recommend a particular treatment for a specific patient, it might decide where your emergency medical team needs to intervene with a deteriorating patient on a ward in a hospital but it might also be used to inform us how and why we need to reconfigure or restructure our health services.&lt;/p&gt;
-
-&lt;p&gt;As a result, our healthcare digital transformation agenda must, like many other enterprises, invest in data analytical capability and, consequently, in computing power to help us store, retrieve and make sense of burgeoning amounts of data. We must make data the bedrock of our health enterprise.&lt;/p&gt;
-
-&lt;p&gt;Of course, healthcare has always used data to inform practice. This is the basis of evidence-based medicine, but the cycle of clinical research from data collection, analysis, intervention and assessment can be too slow and usually, data collection has been designed specifically for that trial in a carefully selected population of patients. We use a similar approach with service transformation and quality improvement but fully embracing digital should mean that we improve the efficiency and effectiveness of our quality improvement interventions and embed those process in day-to-day care; the important difference is the use of systematically and routinely collected real-life data on process and outcomes.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/cis_design/dmaic.png&quot; alt=&quot;Quality improvement lifecycle - define, measure, analyse, improve, control&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Indeed, such analytics should run in real-time, providing us continuously updated information about the patients and services for whom we care. The logical conclusion is that we will see a convergence of ‘business analytics’ with our electronic health records built on a single source of “truth”: meaningful data.&lt;/p&gt;
-
-&lt;p&gt;So how do we enable data-driven digital transformation? In my view, it is with open data standards, open application programming interfaces and citizen engagement with transparency and control over the use of data. Together, those pieces fit together to form a ‘platform’ onto which other valuable services and applications can be built.&lt;/p&gt;
-
-&lt;p&gt;Open data standards, open protocols and open application programming interfaces are powerful disruptive technological advances which cause creative disruptive and commodification in an industry. We are about to see the result of this in healthcare. But what is creative destruction?&lt;/p&gt;
-
-&lt;h1 id=&quot;creative-destruction&quot;&gt;Creative destruction&lt;/h1&gt;
-
-&lt;p&gt;It is useful to examine how ‘value’ in technological terms evolves over the years as it helps to understand and perhaps predict what might happen in the coming years. To do so, we must look at how new technology has evolved and disrupted the technological advances of the previous generation as part of a continuous cycle of &lt;em&gt;creative destruction&lt;/em&gt; and commodification.&lt;/p&gt;
-
-&lt;p&gt;A commodity refers to goods or services which have value but are &lt;em&gt;fungible&lt;/em&gt;; that is, it doesn’t really matter who produces or provides that commodity, essentially they are interchangeable.&lt;/p&gt;
-
-&lt;p&gt;In software, the creative destruction cycle can result in the commodification of technology. For example, historically, computing networking protocols were proprietary resulting in networking that was both expensive and incompatible with other proprietary network systems. The open networking protocol (TCP/IP) has disrupted the marketplace for proprietary networking; we now regard networking as a commodity on which most of our modern information technology solutions are built. Networking itself has permitted worldwide communication and collaboration permitting new ways of working, new approaches to distributed software development and ‘open source’ technology.&lt;/p&gt;
-
-&lt;p&gt;Some of the world’s most valuable companies have arisen due to near ubiquitous personal networking; commoditisation can create a new market far larger than that achieved than when the same technology was proprietary.&lt;/p&gt;
-
-&lt;p&gt;Current software technology such as cloud computing, in which applications and services can be provisioned and scaled on demand by a hosting provider, are the end result of this continuous cycle of innovation and commoditisation. Indeed, with container and serverless technology, we see the hosting providers becoming increasingly fungible. But what do these providers gain from making their services a commodity?&lt;/p&gt;
-
-&lt;h1 id=&quot;so-where-is-the-value&quot;&gt;So where is the ‘value’?&lt;/h1&gt;
-
-&lt;p&gt;The &lt;em&gt;value&lt;/em&gt; in creative destruction and commoditisation derives from building valuable innovative products in the new markets created by those processes.&lt;/p&gt;
-
-&lt;p&gt;As cloud computing becomes more ubiquitous, healthcare enterprises will increasingly switch away from purchasing and installing software locally and instead make use of software-as-a-service. We can see the beginnings of this in non-health markets already with the advent of marketplaces like &lt;a href=&quot;https://aws.amazon.com/serverless/serverlessrepo/&quot;&gt;Amazon’s Serverless Application Repository&lt;/a&gt; and the &lt;a href=&quot;https://aws.amazon.com/blogs/compute/monetize-your-apis-in-aws-marketplace-using-api-gateway/&quot;&gt;AWS Marketplace / API gateway&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;What does this mean for healthcare information technology? What will happen if as we build open systems, open standards and open application programming interfaces creating an &lt;em&gt;open platform&lt;/em&gt;?&lt;/p&gt;
-
-&lt;p&gt;We will see a commodification of that platform and we will enable an ecosystem of innovation products that can use that platform to add value.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Interestingly, another definition of a “platform” is a set of services that bring together users and providers to form a multisided market. Is it possible then to take our “open platform” and start to think of a future in which we have products and services that actually do enable a re-imagining of healthcare provision to bring together patients, carers, health professionals, commissioners, analytics, researchers and all other stakeholders in a safe and secure manner?&lt;/p&gt;
-
-  &lt;p&gt;My blog post: &lt;a href=&quot;/clinical-informatics/2017/08/20/disruptive-influences-future.html&quot;&gt;Disruptive influences, the future. August 2017&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;I think it likely that the technology giants, such as Amazon, Apple, Google and Microsoft, already recognise the value in creating a new multi-sided marketplace for healthcare by the use of open standards and commodification of a platform. We already see how Apple has worked to permit patient access to &lt;a href=&quot;https://www.apple.com/newsroom/2018/03/doctors-put-patients-in-charge-with-apples-health-records-feature/&quot;&gt;medical records via the use of HL7 FHIR&lt;/a&gt;, Google has &lt;a href=&quot;https://healthitanalytics.com/news/google-using-fhir-deep-learning-for-healthcare-predictive-analytics&quot;&gt;embraced HL7 FHIR for predictive analytics and machine learning&lt;/a&gt; and launched a new &lt;a href=&quot;https://www.digitalhealth.net/2018/03/google-launches-cloud-healthcare-api/&quot;&gt;cloud application programming interface to manage DICOM and HL7 FHIR data&lt;/a&gt;:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“Google Cloud’s goal for healthcare is very much a reflection of Google’s overall mission: to organize the world’s information and make it universally accessible and useful. Applying this mission to healthcare means using open standards to help enable data sharing and interactive collaboration, while also providing a secure platform. Just imagine if all healthcare providers could easily, securely and instantaneously collaborate while caring for you. Ultimately, we hope that better flow of data will inspire new discoveries with artificial intelligence (AI) and machine learning (ML), leading to insights that improve patient outcomes.”&lt;/p&gt;
-
-  &lt;p&gt;Google Cloud blog, 
-&lt;a href=&quot;https://blog.google/topics/google-cloud/google-cloud-healthcare-new-apis-customers-partners-and-security-updates/&quot;&gt;https://blog.google/topics/google-cloud/google-cloud-healthcare-new-apis-customers-partners-and-security-updates/&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;We must recognise that unlocking healthcare data opens up extraordinary potential advances and that, the use of open standards will enable a new generation of value-added data-driven services and applications.&lt;/p&gt;
-
-&lt;p&gt;My personal goal is to create the next generation of electronic patient record systems with the aim to improve outcomes, but I recognise that to do that, we must strive for a open, dynamic data-driven healthcare environment onto which we can build innovation and build value. And that doesn’t yet exist.&lt;/p&gt;
-
-&lt;p&gt;With ubiquitous computing power available on demand, we should be planning now on how we will build and evaluate and then deploy automated tools to add value in healthcare. Such tools might triage, risk assess, interpret investigation results and support diagnosis and management, but we should aspire also to build tools, built on a foundation of meaningful data, to aid redesigning our healthcare systems around patients and not organisations and to, most importantly, improve outcomes.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;I want to see a future in which the platform becomes an interchangeable commodity with innovation and differentiation occurring at a higher conceptual level of support for medical practice. Rather than simple data collection, our mission must be to imagine a future in which medical practice, which at its most fundamental is about clinical decision making, is supported by the most sophisticated tools possible to improve patient care.&lt;/p&gt;
-
-  &lt;p&gt;This mission’s greatest risk is in the continued creation of data silos in which health information is locked away in proprietary systems. The answer is to create an open, extensible platform on which innovation can thrive.&lt;/p&gt;
-
-  &lt;p&gt;My blog post: &lt;a href=&quot;/clinical-informatics/2017/06/15/embedding-data.html&quot;&gt;Embedding data in routine clinical practice, June 2017&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The EPR is dead, long live the EPR!&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Why is digital technology so important for the future of our healthcare services?</summary></entry></feed>
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Introduction</summary></entry></feed>

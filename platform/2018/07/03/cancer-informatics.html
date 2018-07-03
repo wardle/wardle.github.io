@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Cancer informatics</title>
+  <meta name="description" content="The Public Accounts Committee (PAC) of the National Assembly for Wales heard evidence yesterday from Velindre NHS Trust on cancer informatics. You can see mo...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://www.wardle.org/platform/2018/07/03/cancer-informatics.html">
+  <link rel="alternate" type="application/rss+xml" title="Health informatics and information technology" href="/feed.xml">
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-97389603-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="/">Health informatics and information technology</a>
+  
+  
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+           <a class="page-link" href="/">All posts</a>
+          
+            
+            
+            <a class="page-link" href="/projects/">Projects</a>
+            
+          
+            
+            
+            <a class="page-link" href="/about/">About</a>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Cancer informatics</h1>
+    <p class="post-meta">
+      <time datetime="2018-07-03T17:16:16+01:00" itemprop="datePublished">
+        
+        3 July 2018
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>The Public Accounts Committee (PAC) of the National Assembly for Wales heard evidence yesterday from Velindre NHS Trust on cancer informatics. You can see more <a href="http://senedd.assembly.wales/ieListDocuments.aspx?CId=441&amp;MId=4751&amp;Ver=4">here</a> including the video. The minutes will appear soon.</p>
+
+<p>The important messages were</p>
+
+<ul>
+  <li>CANISC, the Cancer Network Information System Cymru, has been running for over 20 years and is dependent on a now unsupported software platform. This has important security and reliability risks.</li>
+  <li>There have been a significant number of reliability issues resulting in service disruption and impact on patient care. There was no single reason for the multiple system failures.</li>
+  <li>That there are mitigations planned so that a PDF of the important information will be published into the Welsh Care Records Service and so be visible via Welsh Clinical Portal (WCP). WCP is currently mainly a read-only web portal but also has electronic test requesting and discharge summary functions.</li>
+  <li>That a replacement is planned using two products: adoption of “Welsh PAS” a homegrown patient administrative system that is deployed in most other health organisations in Wales for administration, and WCP to be modified to create an electronic patient record system. This work is estimated to take 2 years.<sup><a href="#migration-pd">1</a></sup></li>
+</ul>
+
+<p>I’d like to reflect on these issues in this post.</p>
+
+<h1 id="our-role-as-informaticians">Our role as informaticians</h1>
+
+<p>There are lots of definitions of what we do in clinical informatics, but this is a good one:</p>
+
+<blockquote>
+  <p>“The overall aim of work in Clinical Informatics is to use modern technologies to advance our ability understand health and health problems, support translational research, develop effective interventions for healthcare delivery, and improve our ability to provide cutting-edge healthcare in the safest, most timely way possible.”</p>
+
+  <p><a href="http://www.clinicalinformatics.group.cam.ac.uk/about-us/introduction-to-clinical-informatics/">http://www.clinicalinformatics.group.cam.ac.uk/about-us/introduction-to-clinical-informatics/</a></p>
+
+  <p>accessed on 3rd July 2018</p>
+</blockquote>
+
+<p>Fundamentally, in order to be an effective clinical informatician, we need to deeply understand the problems we are trying to solve while at the same time applying our knowledge of best practices in information technology. We need to be cognisant on how teams can work effectively at scale and pace with a focus on delivery. Likewise, we need to bring together our understanding of user need with the very best in software development practices, understand the wider context and foster the adoption of technical and information standards to support semantic interoperability and use the principles outlined in domain-driven design to build data models and a shared vocabulary to bridge the gaps between users and developers. At the same time, we need to apply evidence-based best practice in development, testing, safety, security and deployment.</p>
+
+<h1 id="a-crisis-always-an-opportunity-to-reflect">A crisis: always an opportunity to reflect</h1>
+
+<p>A crisis is usually a good time to step back and take stock of our current state, to appraise ourselves of the options and really understand the problems we are trying to solve.</p>
+
+<p>It’s useful to structure our approach to how we understand need along the lines of the <a href="http://gov.wales/docs/dhss/publications/151211reporten.pdf">Informed Health and Care Strategy, 2015</a> which sets out a clear vision for Wales to use digital technology and online services to support and enable care. The strategy is divided into four workstreams:</p>
+
+<ol>
+  <li>Information for you</li>
+  <li>Supporting Professionals</li>
+  <li>Improvement and Innovation</li>
+  <li>A Planned Future</li>
+</ol>
+
+<p><img src="/images/digitalhealthconf/wardle-digital-health.003.jpeg" alt="Informed Health and Care" /></p>
+
+<p>What kinds of requirements might arise from a deep-dive with our users? What kind of functionality do they need, noting that our “users” are not only professionals, but the citizen or their delegated representative?</p>
+
+<p>It’s not hard to start brainstorming and that’s a critical first step in solving our problems. So we might end up with a list that looks a bit like this:</p>
+
+<p>Patients:</p>
+
+<ul>
+  <li>Patients to see their whole journey including forthcoming scheduled appointments</li>
+  <li>Patients to be able to communicate securely with their healthcare team, at whichever point of the pathway they currently sit.</li>
+  <li>Patients to be given tools to help them understand their condition, their prognosis and treatment options, perhaps with outcome data stratified according to their characteristics.</li>
+  <li>Patients to see their own results.</li>
+</ul>
+
+<p>Professionals:</p>
+
+<ul>
+  <li>Professionals to understand how many patients sit at each stage of the pathway and track progress and ongoing outcomes.</li>
+  <li>Professionals to have access to the right information at the right time. This means diagnostics from anywhere, including outside of Wales, as well as multidisciplinary meetings, histopathology, staging, previous treatments and interventions.</li>
+  <li>Professionals to be able to communicate as a team, and have those interactions recorded as a narrative, irrespective of their organisation, specialty or profession.</li>
+  <li>Professionals to be given tools to aid shared decision-making, understanding outcomes for an individual patient compared to peers.</li>
+</ul>
+
+<p>Improvement and Innovation:</p>
+
+<ul>
+  <li>To support quality improvement methodologies by tracking measures of process <em>and</em> outcome using meaningful measures</li>
+  <li>To support the advancement of knowledge by offering support for identification, recruitment and randomisation into potentially complex, multi-phase clinical trials of new treatments.</li>
+  <li>To capture aggregate data stratified by baseline characteristics to permit benchmarking.</li>
+  <li>To ensure digital inclusion with multiple channels so that patients have choice and multiple opportunities to contribute information in methods of their choosing.</li>
+  <li>To permit innovative models of care, capture outcomes relating to those innovations and ensure that they are fit-for-purpose and not exclusionary to any group of individuals based on access to technology, age, socioeconomic class etc.</li>
+</ul>
+
+<p>In my experience however, users, whether professionals or patients, need help in understanding and articulating their need and once we’ve done that, we can frequently boil down requirements into their <em>essence</em>. I love being able to solve a specific requirement by solving it in a generic way that helps not only that individual, but everyone else as well. Generic solutions are usually more robust and future-proof compared to solutions that simply solve a specific problem.</p>
+
+<p>One of the most generic problem-solving techniques is to become <em>data-driven</em>. Almost every single post on my blog relates to this fundamental approach in which one thinks deeply about data, the structure of those data and how best to make use of those data in order to inform our clinical practice, whether at an individual patient level, at the service level, at a cohort level or by helping to advance our knowledge as part of research.</p>
+
+<p>Now I have just jotted those few down over 10 minutes. We need to sit down with colleagues across Wales and empower them to think big with data. My belief is that, when one sees a list of requirements as I have written above, the <em>only</em> way to deliver that type of functionality is to <a href="/clinical-informatics/2017/08/22/health-data.html">start with data</a></p>
+
+<p>Importantly, I believe that most of the requirements relating to cancer and cancer pathways are just as important to other non-cancer specialities. We must stop thinking about projects and products, and start thinking about <em>services</em> and the data the underpin those services.</p>
+
+<h1 id="on-data">On data</h1>
+
+<p>Larry Weed opined:</p>
+
+<blockquote>
+  <p>“You’re a victim of it or a triumph because of it. The human mind simply cannot carry all the information without error so the record becomes part of your practice.”</p>
+
+  <p>Dr Larry Weed, Internal Medicine Grand Rounds, 1971</p>
+</blockquote>
+
+<p>Here he makes the critical point that the medical record is the foundation on which our clinical practice occurs and understanding this is critical for those of us interested in improving healthcare by the use of information technology.</p>
+
+<p>I strongly believe that healthcare data should be stored in a persistent record as a model of the real-world and its storage should be <em>separate</em> from the applications and logic which act upon it.</p>
+
+<p>This simple separation is a terrifically powerful paradigm because it means that others can use those data in ways that I might not even imagine at this point in time. What it means is that I have to think clearly, not about how an application might look or work, but how my data is structured to be meaningful, both now and in the future.</p>
+
+<p>As I wrote in my <a href="/clinical-informatics/2017/03/15/once-for-wales.html">“Once for Wales” speech</a> in which I pitched for interoperability and data standards for NHS Wales:</p>
+
+<blockquote>
+  <p>It is almost always the case that when building complex solutions to real-life problems, no-one person can conceive of all of the problems in one go. The natural solution to such complexity is to break-down a problem into manageable chunks. These chunks, much like “lego bricks”, can be joined together to form something greater than the sum of the parts. Importantly, it is more likely that we can vouch that a system is deterministic.</p>
+</blockquote>
+
+<h1 id="on-services">On services</h1>
+
+<p>When I say we should focus on “services”, I mean two different things:</p>
+
+<p>Firstly, I think about computing <em>services</em>.</p>
+
+<p>I am a proponent of a data-driven open platform, built from open standards and with a focus on providing a common set of modular, loosely-coupled computing services supporting citizen and professional identity, data and document repositories and other clinical information like laboratory, radiology and other investigation results. These services, abstracting complexity and possibly federating data from multiple providers,<sup><a href="#federation">2</a></sup>, should be focused on building sane, cohesive application programming interfaces (API) suitable for both internal and external developers.</p>
+
+<p>Secondly, I think about healthcare <em>services</em>.</p>
+
+<p>I believe in digital transformation, in the use of technology to improve and transform our services. This cannot be led by an information technology department, or for that matter, an external agency acting independently from health services, but instead must be led and <em>owned</em> by the service. There is, of course, need for expert digital teams to help <em>support</em> those transformation efforts.</p>
+
+<h1 id="the-future-welsh-pas-and-wcp">The future: “Welsh PAS” and WCP?</h1>
+
+<p>So now I come to the crux of the problem. We are told that the combination of “Welsh PAS” and WCP will solve my cancer colleagues’ problems.</p>
+
+<p>The current crisis with CANISC was foreseeable and clearly we, in Wales, must take action. I have one question:</p>
+
+<blockquote>
+  <p>Where can I find an analysis of the different options available in order to fix this mess?</p>
+</blockquote>
+
+<p>Surely we need to step back and appraise a range of options, bringing together the advantages and disadvantages of any specific option in order to weight up and decide on the right choice. Given that this decision appears to be made by an organisation who is also acting as the supplier of said software seems to me, an important conflict of interest. To mitigate that, such decision-making should be published openly and transparently with the justifications and arguments in favour of this important decision for our cancer services.</p>
+
+<p>Certainly I can make some comments about the proposed solution:</p>
+
+<p>Welsh PAS is actually a misnomer as actually there are multiple instances of the software package running, all configured differently to different standards and Cardiff and Vale uses its own in-house administrative system. At the time of writing, as far as I know, there is no easy way of tracking a pathway between health boards, meaning that a patient starting their cancer journey in one health board and managed in another will not share the same national pathway identifier.</p>
+
+<p>WCP mainly stores documents as blobs of data with a proprietary and very limited metadata model. Some documents are in XML format and are rendered to PDF on-the-fly during viewing. If we view a document in a different health board, at the time of writing, it currently renders using the wrong stylesheet and so it appears as if was written by our own health board. Data within documents can be accessed by parsing the data from the XML, but there is currently <em>no</em> data persistence layer; indeed there is no single instance of WCP, so users have to login to their local, organisation-specific instance of WCP which is currently tightly integrated with whatever patient administrative system is running in that organisation. That means that a patient can appear alive in one instance of WCP but is shown as dead in another.</p>
+
+<p>The eForms project is meant to flexibly add data collection forms into WCP but at the time of writing, the lung cancer ETTF project has stalled and the diabetes project delayed. Change requests to electronic test requesting have been parked for many months in preparation for a new eForm based solution which has not yet been deployed. I am not aware that any decision has been made as to <em>where</em> data recorded in an eForm is actually persisted.</p>
+
+<h1 id="conclusions">Conclusions</h1>
+
+<p>I am therefore concerned that:</p>
+
+<ol>
+  <li>We have not adequately performed a open transparent appraisal of the options in relation to cancer informatics.</li>
+  <li>That the combination of Welsh PAS and WCP must be regarded as a significant <em>risk</em> both in terms of delivery to the timescales and functionality, given the gaps between what is currently possible in “Welsh PAS” in WCP at the current time and what will be needed to support improvement and transformation in cancer informatics.</li>
+</ol>
+
+<p><em>Mark</em></p>
+
+<h4 id="footnotes">Footnotes</h4>
+
+<p><a name="migration-pd">1</a>: Few people are aware, but a few years ago, I migrated both Cardiff and Vale and Bridgend Parkinson’s services from CANISC to a new electronic patient record system, complete with demographics, diagnostic information, all encounters, clinic annotations and measurement data as well as drugs used past and present. Oh, and mapped all diagnoses and medications to SNOMED-CT at the same time. I did this over a few weekends and did the big migration over a single weekend. It was a hobby project but based on the fact that CANISC was end-of-life and we needed to do something. The database schema was a bit odd, but it wasn’t actually particularly difficult. We now track diagnoses and outcomes on a modern web-based platform across Wales that I built in my spare time.</p>
+
+<p><a name="federation">2</a>: Federation means encapsulating or abstracted multiple services under one, simple to use service. You might, for example, track professional identity by delegating authentication to social care or health care authentication services, and federate based on a namespace.</p>
+
+
+  </div>
+
+  
+</article>
+        
+      </div>
+    </main>
+    
+    
+    
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Health informatics and information technology</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Health informatics and information technology
+            
+            </li>
+            
+            <li><a href="mailto:mark@wardle.org">mark@wardle.org</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/wardle"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">wardle</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/mwardle"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">mwardle</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
