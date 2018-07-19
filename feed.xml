@@ -1,5 +1,182 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-07-03T22:38:51+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
-</subtitle><entry><title type="html">Cancer informatics</title><link href="https://www.wardle.org/platform/2018/07/03/cancer-informatics.html" rel="alternate" type="text/html" title="Cancer informatics" /><published>2018-07-03T17:16:16+01:00</published><updated>2018-07-03T17:16:16+01:00</updated><id>https://www.wardle.org/platform/2018/07/03/cancer-informatics</id><content type="html" xml:base="https://www.wardle.org/platform/2018/07/03/cancer-informatics.html">&lt;p&gt;The Public Accounts Committee (PAC) of the National Assembly for Wales heard evidence yesterday from Velindre NHS Trust on cancer informatics. You can see more &lt;a href=&quot;http://senedd.assembly.wales/ieListDocuments.aspx?CId=441&amp;amp;MId=4751&amp;amp;Ver=4&quot;&gt;here&lt;/a&gt; including the video. The minutes will appear soon.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-07-19T22:32:04+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</subtitle><entry><title type="html">Healthcare information technology strategy</title><link href="https://www.wardle.org/strategy/2018/07/19/mapping.html" rel="alternate" type="text/html" title="Healthcare information technology strategy" /><published>2018-07-19T20:19:19+01:00</published><updated>2018-07-19T20:19:19+01:00</updated><id>https://www.wardle.org/strategy/2018/07/19/mapping</id><content type="html" xml:base="https://www.wardle.org/strategy/2018/07/19/mapping.html">&lt;p&gt;How can we make best use of technology to support healthcare?&lt;/p&gt;
+
+&lt;p&gt;How can we plan a coherent strategy that delivers, with pace, safety and reliability, solutions to the problems we face now while being adaptable enough to adapt to what is likely to come in the future?&lt;/p&gt;
+
+&lt;p&gt;I want to discuss &lt;em&gt;strategy&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;While written for NHS Wales, I hope this has a broader appeal.&lt;/p&gt;
+
+&lt;h1 id=&quot;1-we-need-information-technology-for-health-and-care&quot;&gt;1. We need information technology for health and care&lt;/h1&gt;
+
+&lt;p&gt;Health and social care are complex adaptive environments made up of many interdependent parts. They are usually the responsibility of multiple different organisations but ideally, they should all work in a &lt;em&gt;coordinated&lt;/em&gt; way to support us all, the citizen in our health and care.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;I truly believe that software is critical to the future of healthcare, in supporting both patients and health professionals in their respective roles. Current software usually does little but replace existing paper processes but we should be aiming to use software to transform our health services.&lt;/p&gt;
+
+  &lt;p&gt;My blog post, May 2018 &lt;a href=&quot;/clinical-informatics/2018/05/06/clinical-software-quality.html&quot;&gt;The value of software for healthcare&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Information technology should be the foundation on which our health and care services run. We need to apply deep knowledge of the data, the systems and processes that are involved in those services in order to effectively design and build information technology services to underpin our efforts to support and improve health and social care.&lt;/p&gt;
+
+&lt;p&gt;So much of the routine and systematic processes of care, quality improvement and research could be enhanced by the appropriate use of technology.&lt;/p&gt;
+
+&lt;p&gt;For many industries, digital &lt;em&gt;is&lt;/em&gt; the way that they now conduct their business. Digital technology offers scope to transform our services by making them safer, more efficient and better &lt;em&gt;learning systems&lt;/em&gt; by making our work &lt;em&gt;data-driven&lt;/em&gt;, whether for direct care of an individual patient, caring for groups of patients or working to research better ways of providing care.&lt;/p&gt;
+
+&lt;p&gt;We must stop thinking of information technology as a goal in itself and instead see it as a &lt;em&gt;tool&lt;/em&gt; to support our wider ambitions.&lt;/p&gt;
+
+&lt;h1 id=&quot;2-we-need-a-cohesive-strategy&quot;&gt;2. We need a cohesive strategy&lt;/h1&gt;
+
+&lt;p&gt;According to Richard Rumelt, a strategy has three core parts that he calls the “kernel”:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;we must define the challenge&lt;/li&gt;
+  &lt;li&gt;we must have a guiding policy&lt;/li&gt;
+  &lt;li&gt;we must have coherent action&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The decisions we make are about &lt;em&gt;what&lt;/em&gt; to do, the broad principles as to &lt;em&gt;how&lt;/em&gt; to do them and then ruthlessly acting to &lt;em&gt;deliver&lt;/em&gt;, each action coordinated and building upon others iteratively.&lt;/p&gt;
+
+&lt;p&gt;We must delicately balance top-down centralisation and standardisation with bottom-up local need and innovation. As such, we must define a set of enduring broad guiding principles about &lt;em&gt;how&lt;/em&gt; we will solve problems, likely mandated or recommended across our enterprise while permitting adaptable coherent action at a more local level to solve local problems while not running counter to the overall direction. A guiding policy “directs and constrains action without fully defining its content.”&lt;/p&gt;
+
+&lt;p&gt;We need to stubbornly defend and enforce our guiding policies but be flexible and adaptable on the actions that we take to meet our challenges. This is why my first action, as chair of the NHS Wales Technical Standards Board was to propose to our group that we adopt the GDS design principles; we agreed this in our June 2018 meeting.&lt;/p&gt;
+
+&lt;h1 id=&quot;3-components-and-modularisation&quot;&gt;3. Components and modularisation&lt;/h1&gt;
+
+&lt;p&gt;We must recognise that different parts of our enterprise are not all the same and so it helps to break up our problems into smaller problems which can be solved independently from the whole. Likewise, and that can change at different rates depending on user needs.&lt;/p&gt;
+
+&lt;p&gt;Breaking up monolithic architectures and applications into components requires skill and experience but is an important part of improving reliability, testability and delivery across an enterprise. When components are tightly coupled then it becomes increasingly difficult to make changes, not only because changes have unforseen side-effects but because teams need to constantly check with others in order to make progress. I have given a specific example in the footnotes.&lt;sup&gt;&lt;a href=&quot;#wcrs&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;When you break up our healthcare enterprise in Wales, we can see three broad categories of component:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;some have already well-established solutions and need to focus on operational efficiency, metrics and analytics&lt;/li&gt;
+  &lt;li&gt;some have to take what has been proven to work and improve and scale those solutions in order to deliver working products that are safe and reliable&lt;/li&gt;
+  &lt;li&gt;some have to take user need and experiment and explore the best way of solving those needs.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You will recognise these three categories as Simon Wardley’s “Town planners”, “Settlers” and “Pioneers”.&lt;/p&gt;
+
+&lt;p&gt;Our healthcare information technology strategy must explicitly recognise &lt;em&gt;change&lt;/em&gt; and adaptability. One insight, from a healthcare perspective, is that different things change at different speeds and that, given the legal and regulatory aspects of our work in healthcare, data, structured and meaningful, are the bedrock from which we can build. We should regard the tools (applications) with which we interact with those data as much more ephemeral and driven by clinical and business workflow.&lt;/p&gt;
+
+&lt;p&gt;A portal-centric approach has, in my opinion, created years of technical debt. We must work immediately to stop this approach and instead build an &lt;em&gt;open, standards-based platform&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;4-lets-map&quot;&gt;4. Let’s map&lt;/h1&gt;
+
+&lt;p&gt;The &lt;em&gt;value-stream&lt;/em&gt; is a flow-chart helpful in illustrating, analysing and improving our &lt;em&gt;delivery&lt;/em&gt; of solutions to problems.&lt;/p&gt;
+
+&lt;p&gt;This is what we have in Wales:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/mapping/maps-system-current-value-chain.png&quot; alt=&quot;Maps System Current Value Chain&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The vertical axis gives a broad indication of &lt;em&gt;visibility&lt;/em&gt;, reflecting that users have needs and that they are supported by visible components of our architecture which themselves are supported by less visible pieces of infrastructure.&lt;/p&gt;
+
+&lt;p&gt;It looks a bit complicated doesn’t it?&lt;/p&gt;
+
+&lt;p&gt;At the top of the value chain, we have our users and some of their needs. The important points are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Patients and caregivers are considered as well as professionals, reflecting our focus on the citizen and their interactions with health services. We should see digital as a way of transforming health services.&lt;/li&gt;
+  &lt;li&gt;The list of user needs is incomplete but I hope illustrative and useful as-is.&lt;/li&gt;
+  &lt;li&gt;There are already items of user need from this limited list not met by the architecture as-is, particularly in relation to patients and their caregivers.&lt;/li&gt;
+  &lt;li&gt;Trying to integrate multiple applications each with their own storage and structure of data is &lt;em&gt;really&lt;/em&gt; complicated and the complexity increases exponentially when we want to add new functionality.&lt;/li&gt;
+  &lt;li&gt;I have omitted many important projects such as the Welsh Cancer system, CANISC.&lt;/li&gt;
+  &lt;li&gt;I haven’t even included newer projects like e-Observations and flow, recording pulse, blood pressure etc. on mobile devices to identify the deteriorating patient - functionality of high benefit to patients and professionals.&lt;/li&gt;
+  &lt;li&gt;I haven’t included the interoperability need with other enterprises, such as cross-border transfers of care with England (particularly important for North Wales and specialist services) or social care.&lt;/li&gt;
+  &lt;li&gt;Patients and caregivers have extremely limited functionality presently; they can use a product called “My Health Online” which has failed to gain traction and there is pilot of &lt;a href=&quot;http://www.patientsknowbest.com/&quot;&gt;PatientsKnowBest&lt;/a&gt; in Abertawe Bro Morgannwg. Renal patients can also see their own results via &lt;a href=&quot;https://www.patientview.org/#/&quot;&gt;PatientView&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Much of the complexity seems inherent in healthcare, in which there has traditionally been a cycle of procurement of “systems” or “products” which must be integrated into the wider enterprise. Fortunately, we can make decisions now that can mitigate this complexity. We should always aim for simplicity.&lt;/p&gt;
+
+&lt;p&gt;We have multiple local health boards, multiple patient administrative systems (PAS), most of which use the same product but are configured differently and do not support cross-PAS workflows, and multiple instances of a single “portal” (WCP) which are linked to the local PAS so show administrative data only from that health board. This means it is possible for me to login to WCP, a national product, in Cardiff and see that a patient is alive, and at the same time login to the same application in Cwm Taf and see that a patient has died. Similarly, as I sat in clinic yesterday, I could see a list of upcoming appointments for Cwm Taf only, and not for any other health board. We &lt;em&gt;do not&lt;/em&gt; have a single patient record but instead multiple instances of multiple applications giving different views of different data. In short, we have a problem.&lt;/p&gt;
+
+&lt;h1 id=&quot;5-evolution&quot;&gt;5. Evolution&lt;/h1&gt;
+
+&lt;p&gt;We can help ourselves understand our architecture by adding an “evolution” dimension to our value chain:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/mapping/maps-system-current-map.png&quot; alt=&quot;Maps System Current Map&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The horizontal axis is a broad indication of the level of &lt;em&gt;evolution&lt;/em&gt; of a component. If you are unfamiliar with Wardley mapping, then I suggest you read &lt;a href=&quot;https://medium.com/wardleymaps&quot;&gt;Simon Wardley’s mapping book&lt;/a&gt;. I am a novice at this - these are my first maps and would value your comments. Power is a commodity; it is fungible - it doesn’t matter &lt;em&gt;who&lt;/em&gt; provides electricity. The laboratory information management software (LIMS) from Intersystems is a product, bought off-the-shelf and integrated with the wider enterprise via another off-the-shelf product, the enterprise service bus providing a messaging fabric. Custom-built software and components such as our data centres&lt;/p&gt;
+
+&lt;p&gt;We now see that we are using several off-the-shelf components - such as GP systems, emergency unit systems, laboratory systems etc. in conjunction with several custom-built applications and services.&lt;/p&gt;
+
+&lt;p&gt;The benefit of this type of map is that it helps us understand the options available to us. It also forces us to reconsider our architectural decisions and start to think about whether we have actually made the right decisions about the type of components we use. I think it is obvious from this map that focusing on products and projects is creating technical debt and making it more difficult to deliver solutions to end-users.&lt;/p&gt;
+
+&lt;p&gt;Likewise, we see that we are building in-house some components that, with a basic knowledge of the commercial market, we could instead buy off-the-shelf. Can we justify, for example, running two data centres and building custom software that is already available elsewhere?&lt;/p&gt;
+
+&lt;p&gt;There are some in Wales who think that it is right to adopt a “portal” based approach, but this map clearly shows how that approach is wrong.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The map shows how professionals already use multiple software applications; we know the current  portal cannot replace that functionality in any timely fashion.&lt;/li&gt;
+  &lt;li&gt;The map shows the difficulties inherent in trying to integrate multiple applications without an underlying &lt;em&gt;single patient record&lt;/em&gt;. Many of the reliability and data inconsistency problems result from a lack of focus on that record&lt;/li&gt;
+  &lt;li&gt;There has been a historic focus on bespoke point-to-point integration with proprietary APIs that then become difficult to manage and impossible to change for fear of breaking another integration somewhere else.&lt;/li&gt;
+  &lt;li&gt;We are spending time and resources on developing the things that others can do, and failing to build the things only Wales can build.&lt;/li&gt;
+  &lt;li&gt;Our portal is a single code-base providing user-facing functionality (user interface), business logic and tightly-coupled bespoke interfaces to services that are usually not made available to any other application. This fails to recognise that different components can be developed at different speeds with different methodologies.&lt;/li&gt;
+  &lt;li&gt;Instead, we need to understand that different components are subject to different rules - so that components on the left of our diagram should be built in an agile-way, with rapid iterations and significant user engagement. Components to the right are commodities or components with well developed solutions that can be bought or rented. When a component can be provided as a commodity, we should &lt;em&gt;not&lt;/em&gt; be developing it in-house without very good reason. Our architecture needs to reflect these differences. As such, it makes more sense to create a portal using components of a wider platform than a monolithic application.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;adapting-to-change&quot;&gt;Adapting to change&lt;/h4&gt;
+
+&lt;p&gt;These maps also help us to understand how we are positioned to take advantage of new innovation and changing need. For example, we increasingly see adoption of cloud-computing, in which data centres become a commodity onto which computing power can be provided. We see an increasing marketplace of cloud-based functions, software code run on demand usually on a pay-as-you-go model, providing both core and specialist computing functionality such as data storage, speech-to-text and text-to-speech services, translation services etc.&lt;/p&gt;
+
+&lt;p&gt;I predict a marketplace of discrete computing services tailored for healthcare provision. Such services will make use of open industry standards to decouple code from the data on which they operate and offer increasingly valuable functionality such as clinical decision support.&lt;/p&gt;
+
+&lt;p&gt;Likewise, patients and caregivers now expect to be able to interact with their health and care services by using technology. Part of digital inclusion is ensuring that multiple channels of interaction are possible, designed to suit different people. We see &lt;a href=&quot;https://www.apple.com/newsroom/2018/01/apple-announces-effortless-solution-bringing-health-records-to-iPhone/&quot;&gt;Apple rapidly bringing clinical data&lt;/a&gt; from multiple hospital sites in the United States to patient’s own devices via their Health app and the use of HL7 FHIR standard.&lt;/p&gt;
+
+&lt;p&gt;In addition, we can see that we will be wanting to evaluate and make use of machine learning within our healthcare systems very soon. We need to build systems that permit the safe deployment and evaluation of such systems and a much of that work will involve plumbing together data pipelines safely and securely, subject to patient consent and an option to opt-out.&lt;/p&gt;
+
+&lt;p&gt;Can we add all of these to our map?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/mapping/maps-system-future-broken-map.png&quot; alt=&quot;Maps System Future Broken Map&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As you can see, the architecture lacks a cohesive design requiring multiple bespoke end-to-end integrations between systems.&lt;/p&gt;
+
+&lt;h4 id=&quot;think-of-functional-services-not-products&quot;&gt;Think of functional services not products&lt;/h4&gt;
+
+&lt;p&gt;We should instead be thinking of discrete, functional logical services which can be built and run independently or semi-independently that, together form part a &lt;em&gt;platform&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;One of our core design principles is to &lt;em&gt;do the hard work to make things easy&lt;/em&gt;. This means rethinking our map. It is still complicated, but our user-facing applications like mobile applications and a modern rewritten portal can be developed in an agile way while using platform components that are either a built in-house,  bought or rented or, over time, a commodity.&lt;/p&gt;
+
+&lt;p&gt;Importantly, we don’t expect client applications to understand the nuances of our local enterprise architecture, but instead provide a managed API gateway, offering simplifying access to a &lt;em&gt;logical single patient record&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/mapping/maps-system-future-logical-map.png&quot; alt=&quot;Maps System Future Logical Map&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Indeed, one can see that many of these components will increasingly become a commodity. I’ve shown this with the “data repositories” component, which spans the “product” and “commodity” evolutionary sectors.&lt;/p&gt;
+
+&lt;h1 id=&quot;6-delivery&quot;&gt;6. Delivery&lt;/h1&gt;
+
+&lt;p&gt;This work informs our work on the technical standards we need to prioritise in order to deliver a modern, open, standards-based platform for Wales providing a single patient record for use by a &lt;em&gt;variety&lt;/em&gt; of user-facing applications. Such applications may be a commodity or custom-built but are ephemeral and lightweight, with business logic delegated to the platform.&lt;/p&gt;
+
+&lt;p&gt;As such, we need to reconfigure the way we work in Wales and create:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;an applications group who have responsibility for delivering lightweight applications to solve user need. These teams should work in an agile-fashion and share code and frameworks, releasing their work as open-source, building libraries and components that, together with the open platform, provide a toolbox of functionality for building the next generation of healthcare applications.&lt;/li&gt;
+  &lt;li&gt;a platforms group made up of teams, each of which are responsible for developing, testing and deploying modular components of the wider platform according to our mandated technical standards and design principles. These teams should deliver components which are continuous deployed into multiple production-like test environments allowing automated testing of both operation and performance. Similarly, commodity computing power, such as that provided by commodity cloud providers like Amazon, Google and Microsoft, should be available on-demand with infrastructure-as-code, allowing teams to easily build, test and deploy without recourse to external teams. These principles underpin the “DevOps” movement.&lt;/li&gt;
+  &lt;li&gt;an architectural standards and strategy board, including both technical and information standards boards for operational and analytics use and defining the top-down broad principles for use across NHS Wales and its partners.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The Welsh digital ecosystem project is critically dependent on an open platform. We can build that  open platform using a lot of the good work already done in Wales. We have a terrific opportunity to create a health and care enterprise fit for the 21st Century for the citizens of Wales.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;acronyms--descriptions&quot;&gt;Acronyms / descriptions&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;API - application programming interface&lt;/li&gt;
+  &lt;li&gt;ESB - enterprise service bus. Messaging fabric carrying HL7 v2 messages between producers and listeners. Should allow decoupled development but caveat emptor! Continue to use for some uses but move to an API-based approach for most modern applications.&lt;/li&gt;
+  &lt;li&gt;NIIAS - “National Intelligent Integrated Audit Service” - currently used at the application-level. Needs to be embedded at the API-layer (platform) instead&lt;/li&gt;
+  &lt;li&gt;OAUTH2 - authentication framework&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h4&gt;
+
+&lt;p&gt;&lt;a name=&quot;wcrs&quot;&gt;1&lt;/a&gt;: Modularisation of architecture is important for reliability and pace of delivery. When components are loosely-coupled, the interactions between them are limited and it becomes possible to develop them independently, in parallel. A team can completely change the underlying implementation or even whether the service runs on-premises or in the cloud. Conversely, a tightly-coupled architecture makes change difficult.&lt;/p&gt;
+
+&lt;p&gt;An example in Wales is a service like the Welsh Care Records Service (WCRS) which provides a non-standard application programming interface to store and retrieve documents and the application Welsh Clinical Portal (WCP) uses that API, together with an associated instance of Apache Solr in order to provide search. In essence, these are tightly coupled because if the team working on WCRS wish to change the way the Solr index is built, they must link very closely with those building the user-facing application, WCP. It also means other parties cannot, independently, make use of WCRS to implement functionality in their systems at the application programming interface (API)-level.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/mapping/wcrs-architecture.png&quot; alt=&quot;Wcrs Architecture&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This is shown in this schematic, where “external” services such as document repositories in the health boards publish documents into WCRS but the &lt;em&gt;only&lt;/em&gt; way to view and search documents is via a portal application, WCP.  There are less than a handful of releases of WCP per year. Is it any wonder that users across Wales are dissatisfied with the pace of change?&lt;/p&gt;</content><author><name></name></author><summary type="html">How can we make best use of technology to support healthcare?</summary></entry><entry><title type="html">Cancer informatics</title><link href="https://www.wardle.org/platform/2018/07/03/cancer-informatics.html" rel="alternate" type="text/html" title="Cancer informatics" /><published>2018-07-03T17:16:16+01:00</published><updated>2018-07-03T17:16:16+01:00</updated><id>https://www.wardle.org/platform/2018/07/03/cancer-informatics</id><content type="html" xml:base="https://www.wardle.org/platform/2018/07/03/cancer-informatics.html">&lt;p&gt;The Public Accounts Committee (PAC) of the National Assembly for Wales heard evidence yesterday from Velindre NHS Trust on cancer informatics. You can see more &lt;a href=&quot;http://senedd.assembly.wales/ieListDocuments.aspx?CId=441&amp;amp;MId=4751&amp;amp;Ver=4&quot;&gt;here&lt;/a&gt; including the video. The minutes will appear soon.&lt;/p&gt;
 
 &lt;p&gt;The important messages were&lt;/p&gt;
 
@@ -1149,158 +1326,4 @@
 &lt;h1 id=&quot;see-also&quot;&gt;See also&lt;/h1&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://amzn.eu/6F2n4Te&quot;&gt;&lt;img src=&quot;/images/lean_enterprise.jpg&quot; alt=&quot;Lean Enterprise&quot; /&gt;&lt;/a&gt;
-&lt;a href=&quot;http://amzn.eu/4YoMrUS&quot;&gt;&lt;img src=&quot;/images/devops-handbook.jpg&quot; alt=&quot;Devops Handbook&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">In this blog post, I want to talk about transforming our health services using technology.</summary></entry><entry><title type="html">Practical considerations for using SNOMED CT for analytics and machine learning</title><link href="https://www.wardle.org/snomed/2018/04/16/snomed-understanding.html" rel="alternate" type="text/html" title="Practical considerations for using SNOMED CT for analytics and machine learning" /><published>2018-04-16T05:04:04+01:00</published><updated>2018-04-16T05:04:04+01:00</updated><id>https://www.wardle.org/snomed/2018/04/16/snomed-understanding</id><content type="html" xml:base="https://www.wardle.org/snomed/2018/04/16/snomed-understanding.html">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
-
-&lt;p&gt;Data-driven healthcare means using data to support and provide health services.&lt;/p&gt;
-
-&lt;p&gt;Personal medical data includes current and past medical problems, past and present treatments and interventions but we also increasingly recognise the value in data derived from personal devices and home monitoring. In addition, we need to take into account more generic medical information such as appropriate guidelines, literature and knowledge support.&lt;/p&gt;
-
-&lt;p&gt;We need to support both patients and professionals in finding and making sense of that information in order to support decision-making. Similarly, we need to use these data to care not only for an individual patient but to look across groups of patients to understand outcomes and the effects of our interventions at a population-level.&lt;/p&gt;
-
-&lt;p&gt;SNOMED CT is a comprehensive healthcare terminology; the UK distribution of SNOMED CT contains over 1,500,000 descriptions of over individual 500,000 concepts comprising problems, symptoms, signs, diagnoses, medications (&lt;a href=&quot;https://www.nhsbsa.nhs.uk/pharmacies-gp-practices-and-appliance-contractors/dictionary-medicines-and-devices-dmd&quot;&gt;dm+d&lt;/a&gt;) and procedures as well as supporting administrative concepts such as occupations, countries of birth and many others. SNOMED CT has been derived, in part, from the UK Read codes, widely used in general practice, but importantly, while Read codes provide only a single hierarchy, SNOMED CT supports the definition of multiple types of relationship between concepts. The most frequently used relationship, IS-A, provides a taxonomic hierarchy in which specific concepts, such as “myocardial infarction” are classified as a member of a higher class, such as “ischaemic heart disease” or “disorder of the heart”. As a result, SNOMED CT provides a medical ontology that is meaningful to professionals and is computable; I have previously demonstrated my own electronic patient record software that, using code, can systematically identify patients with a certain disease and highlight important outcome measures and compare disease progression with peers in conditions like motor neurone disease and multiple sclerosis (see &lt;a href=&quot;/patientcare/2018/02/19/so-I-built-an-EPR.html&quot;&gt;“so I built an EPR”&lt;/a&gt;).&lt;/p&gt;
-
-&lt;p&gt;While its size means that it is often very comprehensive, SNOMED CT can be difficult to implement technically and much effort is required to manage the quality of concepts and the relationships between them.&lt;/p&gt;
-
-&lt;p&gt;Traditionally, one of the ways of managing the complexity has been to set up a working group of interested clinicians in order to define a reference set of  curated terms in order to simplify the implementation for specific clinical workflows. Indeed, there are now over 250 reference sets in the UK distribution alone. Some of these, such as language reference sets, are now an essential part of the SNOMED CT model as they provide the data to support logic on which preferred synonym to use for a particular language or dialect. However, some simply provide a restricted list of concepts to aid implementation, user interface design and analysis for a specific clinical context or subspecialty. For instance, we now have a UK emergency care diagnosis reference set containing 770 clinical diagnoses that are thought to be useful in an emergency department.&lt;/p&gt;
-
-&lt;p&gt;I want to argue that,&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;we should be spending our time as a community improving the quality of the concepts and relationships in the core SNOMED CT model in preference to thinking we should start by creating a new reference set that will need ongoing maintenance and curation; why unnecessarily limit choice? We can permit access to end-users the whole of SNOMED CT by making use of the taxonomic hierarchy to limit choice in a specific context as long as you design an appropriate user interface; we can limit choice to types of “countries of birth” for a country of birth data entry field and “diagnoses” for a diagnosis data entry field but why constrain only to a subset of diagnoses? The only use of optional constraints is to make it easier for the user to enter commonly used terms, and there are probably better ways of learning those that starting a new committee, such as tracking terms automatically and learning on-the-fly.&lt;/li&gt;
-  &lt;li&gt;we can support analytics by using that taxonomic hierarchy to simplify and make sense of raw data; in essence, to reduce complex high-dimensionality data into something simpler and computable.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;My final point is:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;we need to build open-source tools to build an infrastructure that can act as a platform onto which more innovation, including the application of machine learning, can be built. We need to make this core functionality a commodity.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;using-snomed-ct-in-real-life&quot;&gt;Using SNOMED CT in real-life&lt;/h1&gt;
-
-&lt;p&gt;I embedded SNOMED-CT into an &lt;a href=&quot;http://m.futurehospital.rcpjournal.org/content/4/2/126.full.pdf&quot;&gt;electronic patient record system in 2009&lt;/a&gt; and have used it since as the lingua-franca in handling semantic interoperability and appropriate isolation between modules of the application. An article briefly describing its functionality is available &lt;a href=&quot;http://m.futurehospital.rcpjournal.org/content/4/2/126&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;There are three important learning points:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;it is possible to implement SNOMED CT and make it accessible to users&lt;/li&gt;
-  &lt;li&gt;in my experience, you know you have good user interface design when your users do not actually know that they are using SNOMED CT&lt;/li&gt;
-  &lt;li&gt;the use of SNOMED CT does not mean you enter terms only by direct user entry such as an autocomplete textfield  or drop-down selections. SNOMED terms can be imputed as a result of other processes and as such, it can be used as an intermediary structure onto which to build clinical decision support.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Here is a user entering a country of birth:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/so-i-wrote/background.jpg&quot; alt=&quot;Background&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;In this diagram, the user has no idea that they are entering SNOMED CT concepts, but their choice is constrained appropriately so that they cannot enter a diagnosis in a country of birth field and we can understand that being born in France means that a patient was born in Europe. I’ve obviously not hard-coded this logic, I’ve simply configured my user interface control to allow:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;selection of a commonly selected concept in this specific context, such as a particular type of clinical setting&lt;/li&gt;
-  &lt;li&gt;an ability to search for less frequently used concepts with a simple autocomplete search - the “Other…” link opens this link when the user wishes to select a term not in the most-frequently used pop-up.&lt;/li&gt;
-  &lt;li&gt;constraint of both to the appropriate context, in this case, countries of birth&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Here I type MI and can readily select the diagnosis I wanted, in this case “myocardial infarction”. This is from a simple demo application rather than a proper electronic health record:
-&lt;img src=&quot;/images/so-i-wrote/snomed-search.jpeg&quot; alt=&quot;Snomed Search&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I use the same approach to simplify building clinical forms for data entry, with SNOMED CT terms either entered by the user:&lt;/p&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/Cppjedy-hMo?rel=0&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;or imputed based on logic from other data entered, such as “able to walk” based on entry of a disease-specific structured disability rating scale. Other modules do not need to ‘understand’ the disease-specific scale but use the intermediary SNOMED based data structures to make appropriate inferences.&lt;/p&gt;
-
-&lt;p&gt;If you give tools to professionals that make it easier to enter coded structured information than free-text, they will do so. Coding diagnoses, procedures and background information is critical in understanding outcome data; they are a foundation on which more complex and sophisticated analytics can be built, particularly if you ensure that those analytics are immediately available to support clinical decision making.&lt;/p&gt;
-
-&lt;h1 id=&quot;analytics&quot;&gt;Analytics&lt;/h1&gt;
-
-&lt;p&gt;What is the point of collecting data if we don’t use them to support our clinical care? We must make data that is &lt;em&gt;computable&lt;/em&gt;, that is, to be processed and analysed so it is useful for decision making.&lt;/p&gt;
-
-&lt;p&gt;Computer-intensive analytics, just like more conventional statistic approaches, can struggle with high-dimensional data. Much of our work in data analytics is cleaning data in order to make it computable. In conventional linear modelling for example, we might hypothesise that a range of covariates, a range of factors, might influence an outcome measurement and so we might estimate that we will need a sample size of 3-20x the number of variables. However, determination of sample size is much more complex than that, needing to take into account effect size and degrees of freedom for each covariate in our regression.&lt;/p&gt;
-
-&lt;p&gt;What are our options here?&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Let me enter free-text&lt;/li&gt;
-  &lt;li&gt;Ask me to record, manually, a general categorical data-entry instead of a specific concept.&lt;/li&gt;
-  &lt;li&gt;Let me choose from a limited number of “choice” options.&lt;/li&gt;
-  &lt;li&gt;Record the best, most specific concept at the time of data-entry that matches what I’m thinking&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;For example, we might have a referral pathway that  uses free-text which makes it possible for human consumption when processing individual referrals but difficult to compute, aggregate or make sense when examining many thousands of referrals to understand demands on our services.&lt;/p&gt;
-
-&lt;p&gt;Instead, we could ask the referring professional to simply choose a type of referral, such as “ischaemic heart disease” or “valvular heart disease” so that the referral can be redirected to the appropriate subspecialty cardiac service. This limits what we collect so that it becomes easier to process, both for human consumption and for analytic purposes.&lt;/p&gt;
-
-&lt;p&gt;There are problems with this approach:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Categorisation needs to be done prospectively.&lt;/li&gt;
-  &lt;li&gt;We deliberately lose specific information in favour of recording a general category only.&lt;/li&gt;
-  &lt;li&gt;It adds an additional step for users.&lt;/li&gt;
-  &lt;li&gt;If we change our categorisation because of changes in our service, we have to change what the users have to choose and subsequently deal with handling analytics before and after the change.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I believe the best approach is to preserve the granularity, the specificity, of the clinical concept(s) chosen at source and permit arbitrary categorisation at a later date, depending on need.&lt;/p&gt;
-
-&lt;h1 id=&quot;open-source-tooling&quot;&gt;Open source tooling&lt;/h1&gt;
-
-&lt;p&gt;I have released two open-source SNOMED CT terminology servers which support both the fast free-text search of SNOMED CT concepts as well as support for analytics and generalisation of specific SNOMED concepts into more general broad diagnoses or categories:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/wardle/rsterminology&quot;&gt;rsterminology&lt;/a&gt; has its roots in 2007-2008 and used to be a module within a larger application; it is now a java microservice built using &lt;a href=&quot;Apache Cayenne&quot;&gt;Apache Cayenne&lt;/a&gt;, &lt;a href=&quot;https://bootique.io/&quot;&gt;Bootique&lt;/a&gt; and &lt;a href=&quot;http://linkrest.io/&quot;&gt;LinkRest&lt;/a&gt;. It supports SNOMED distributions in the RF1 release format, which is now deprecated.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/wardle/go-terminology&quot;&gt;go-terminology&lt;/a&gt; is a new golang command-line tool and microservice whose main focus is in supporting analytics. It supports SNOMED RF2, the current release format. It is a work-in-progress but usable now. It is my first golang application.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;obtaining-simple-information-about-a-concept&quot;&gt;Obtaining simple information about a concept&lt;/h4&gt;
-
-&lt;p&gt;Using either web service, we can readily obtain information about a concept, including the preferred synonym for a particular locale, here British English, and simplified subsumption testing, showing all of the IS-A relationships for this concept walking all of the possible paths up to root.&lt;/p&gt;
-
-&lt;p&gt;In this example, we see that multiple sclerosis (24700007) is a type of demyelinating central nervous system disease (6118003) and a type of neurological disease (118940003)&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/snomed/ms-concept.jpeg&quot; alt=&quot;Ms Concept&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;genericise-a-concept&quot;&gt;Genericise a concept&lt;/h4&gt;
-
-&lt;p&gt;Genericising a concept finds the best equivalent match for a specified concept either from a manually chosen list of categories or from an existing refset. This requires the new &lt;a href=&quot;https://github.com/wardle/go-terminology&quot;&gt;go-terminology service&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;For example, here we take a chosen concept, multiple sclerosis, and map it to the curated UK emergency care diagnosis reference set (991411000000109):&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/snomed/ms-to-eu-refset.jpeg&quot; alt=&quot;Ms To Eu Refset&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;As you might expect, multiple sclerosis is in that refset, so the service simply returns it.&lt;/p&gt;
-
-&lt;p&gt;However, a rare disorder like acute disseminated encephalomyelitis (ADEM - 83942000) is not a member of the UK emergency diagnosis reference set. Can we genericise this to make it useful for our analytics? Indeed we can, and using the SNOMED hierarchy, we can determine that ADEM is a type of encephalitis and automatically return that.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/snomed/adem-to-eu.jpeg&quot; alt=&quot;Adem To Eu&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;It is important to note that adequate genericisation needs to identify the &lt;em&gt;best&lt;/em&gt; match and not just any match as otherwise, ADEM might simply be classified as a neurological disorder; while true, a more specific match exists in that reference set.&lt;/p&gt;
-
-&lt;p&gt;For example, here we ask to genericise “myocardial infarction” (22298006) to one of four broad categories:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Neurological disorder (118940003)&lt;/li&gt;
-  &lt;li&gt;Heart disease (56265001)&lt;/li&gt;
-  &lt;li&gt;Ischaemic heart disease (414545008)&lt;/li&gt;
-  &lt;li&gt;Heart valve stenosis (44241007)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;A simple subsumption test would indicate that myocardial infarction could be either (2) or (3), so what result do we get?&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/snomed/mi-to-category.jpeg&quot; alt=&quot;Mi To Category&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Appropriately, the service maps to “ischaemic heart disease” as the closest best match of the four categories available as it is more specific than the more general term “heart disease”, which subsumes it.&lt;/p&gt;
-
-&lt;p&gt;Similarly, aortic stenosis is appropriately mapped to a type of heart valve stenosis.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/snomed/as-to-category.jpeg&quot; alt=&quot;As To Category&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;conclusions&quot;&gt;Conclusions&lt;/h1&gt;
-
-&lt;p&gt;I have successfully deployed SNOMED CT in real-life clinical environments since 2009, with almost all users entirely unaware that they were using SNOMED CT. I would argue that it is possible to safely permit access to all concepts with limits only on the basis of the taxonomic hierarchy and not on the basis of reference sets. I do limit the initial pop-up list to concepts most frequently used in a specific clinical context and might consider using an existing reference set as a starting list for those. While reference sets are now vital for some functionality, such as supporting localisation, I am sometimes disapppointed by what appears to be the default initial thoughts of working groups and committees, on starting to consider SNOMED CT implementation, to think about defining a new reference set for their purposes. Instead, we should improve the quality of the overall product.&lt;/p&gt;
-
-&lt;p&gt;For decision support, analytics and benchmarking our services to others, we can use the taxonomic hierarchy to “understand” the specific concepts entered by our users, mapping them to higher level, broad concepts; we need simple tools to process and simplify structured clinical information, made available to multiple data processing pipelines.&lt;/p&gt;
-
-&lt;p&gt;We need to create an open-source foundation of services with which to build the next generation of advanced and valuable clinical information systems. We need to make an open and free infrastructure on which we create value, adopting open-source and building communities in order to create a &lt;em&gt;commodity platform&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;To this end, I hope to continue to build these open-source tools to support complex data transformation and simplification and would be keen to get collaborators who wish to do the same. Much of the go-terminology tool is to support the work I outlined in &lt;a href=&quot;/machine-learning/2017/12/17/diagnostic-inference.html&quot;&gt;my diagnostic inference blog post&lt;/a&gt;), particularly the need for dimensionality reduction in machine learning. Let me know if you want to help.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Introduction</summary></entry></feed>
+&lt;a href=&quot;http://amzn.eu/4YoMrUS&quot;&gt;&lt;img src=&quot;/images/devops-handbook.jpg&quot; alt=&quot;Devops Handbook&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">In this blog post, I want to talk about transforming our health services using technology.</summary></entry></feed>
