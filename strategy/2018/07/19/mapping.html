@@ -137,9 +137,9 @@
 
 <h1 id="3-components-and-modularisation">3. Components and modularisation</h1>
 
-<p>We must recognise that different parts of our enterprise are not all the same and so it helps to break up our problems into smaller problems which can be solved independently from the whole. Likewise, and that can change at different rates depending on user needs.</p>
+<p>We must recognise that different parts of our enterprise are not all the same and so it helps to break up our problems into smaller problems which can be solved independently from the whole. Likewise, we can see that those components can change at different rates depending on user needs.</p>
 
-<p>Breaking up monolithic architectures and applications into components requires skill and experience but is an important part of improving reliability, testability and delivery across an enterprise. When components are tightly coupled then it becomes increasingly difficult to make changes, not only because changes have unforseen side-effects but because teams need to constantly check with others in order to make progress. I have given a specific example in the footnotes.<sup><a href="#wcrs">1</a></sup></p>
+<p>Breaking up monolithic architectures and applications into components requires skill and experience but is an important part of improving reliability, testability and delivery across an enterprise. When components are tightly coupled then it becomes increasingly difficult to make changes, not only because changes have unpredictable side-effects but because teams need to constantly check with others in order to make progress. I have given a specific example in the footnotes.<sup><a href="#wcrs">1</a></sup></p>
 
 <p>When you break up our healthcare enterprise in Wales, we can see three broad categories of component:</p>
 
@@ -151,7 +151,7 @@
 
 <p>You will recognise these three categories as Simon Wardley’s “Town planners”, “Settlers” and “Pioneers”.</p>
 
-<p>Our healthcare information technology strategy must explicitly recognise <em>change</em> and adaptability. One insight, from a healthcare perspective, is that different things change at different speeds and that, given the legal and regulatory aspects of our work in healthcare, data, structured and meaningful, are the bedrock from which we can build. We should regard the tools (applications) with which we interact with those data as much more ephemeral and driven by clinical and business workflow.</p>
+<p>Our healthcare information technology strategy must explicitly recognise <em>change</em> and adaptability. One insight, from a healthcare perspective, is that different things change at different speeds and that, given the legal and regulatory aspects of our work in healthcare, data are the bedrock from which we can build. Those data should be structured and clinically meaningful. Conversely, we should regard the tools (applications) with which we interact with those data as much more ephemeral and driven by clinical and business workflow.</p>
 
 <p>A portal-centric approach has, in my opinion, created years of technical debt. We must work immediately to stop this approach and instead build an <em>open, standards-based platform</em>.</p>
 
@@ -251,6 +251,10 @@
 
 <p>The Welsh digital ecosystem project is critically dependent on an open platform. We can build that  open platform using a lot of the good work already done in Wales. We have a terrific opportunity to create a health and care enterprise fit for the 21st Century for the citizens of Wales.</p>
 
+<p>And what might our map look like in the future? Here the platform and its components are evolving to become a commodity, but we can see that our work will be in developing the best user-facing components, focused on solving workflow and user need while taking advantage of new advances in machine learning, artificial intelligence and decision support. Who thinks we’ll be running our own data centres then?</p>
+
+<p><img src="/images/mapping/maps-system-future-future-logical-map.png" alt="Maps System Future Future Logical Map" /></p>
+
 <p><em>Mark</em></p>
 
 <h4 id="acronyms--descriptions">Acronyms / descriptions</h4>
@@ -258,6 +262,7 @@
 <ul>
   <li>API - application programming interface</li>
   <li>ESB - enterprise service bus. Messaging fabric carrying HL7 v2 messages between producers and listeners. Should allow decoupled development but caveat emptor! Continue to use for some uses but move to an API-based approach for most modern applications.</li>
+  <li>ESR - electronic staff record</li>
   <li>NIIAS - “National Intelligent Integrated Audit Service” - currently used at the application-level. Needs to be embedded at the API-layer (platform) instead</li>
   <li>OAUTH2 - authentication framework</li>
   <li>PAS - patient administration systems</li>

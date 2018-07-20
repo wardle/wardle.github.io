@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-07-19T22:54:00+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-07-20T06:57:47+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
 </subtitle><entry><title type="html">Healthcare information technology strategy</title><link href="https://www.wardle.org/strategy/2018/07/19/mapping.html" rel="alternate" type="text/html" title="Healthcare information technology strategy" /><published>2018-07-19T20:19:19+01:00</published><updated>2018-07-19T20:19:19+01:00</updated><id>https://www.wardle.org/strategy/2018/07/19/mapping</id><content type="html" xml:base="https://www.wardle.org/strategy/2018/07/19/mapping.html">&lt;p&gt;How can we make best use of technology to support healthcare?&lt;/p&gt;
 
 &lt;p&gt;How can we plan a coherent strategy that delivers, with pace, safety and reliability, solutions to the problems we face now while being adaptable enough to adapt to what is likely to come in the future?&lt;/p&gt;
@@ -43,9 +43,9 @@
 
 &lt;h1 id=&quot;3-components-and-modularisation&quot;&gt;3. Components and modularisation&lt;/h1&gt;
 
-&lt;p&gt;We must recognise that different parts of our enterprise are not all the same and so it helps to break up our problems into smaller problems which can be solved independently from the whole. Likewise, and that can change at different rates depending on user needs.&lt;/p&gt;
+&lt;p&gt;We must recognise that different parts of our enterprise are not all the same and so it helps to break up our problems into smaller problems which can be solved independently from the whole. Likewise, we can see that those components can change at different rates depending on user needs.&lt;/p&gt;
 
-&lt;p&gt;Breaking up monolithic architectures and applications into components requires skill and experience but is an important part of improving reliability, testability and delivery across an enterprise. When components are tightly coupled then it becomes increasingly difficult to make changes, not only because changes have unforseen side-effects but because teams need to constantly check with others in order to make progress. I have given a specific example in the footnotes.&lt;sup&gt;&lt;a href=&quot;#wcrs&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;Breaking up monolithic architectures and applications into components requires skill and experience but is an important part of improving reliability, testability and delivery across an enterprise. When components are tightly coupled then it becomes increasingly difficult to make changes, not only because changes have unpredictable side-effects but because teams need to constantly check with others in order to make progress. I have given a specific example in the footnotes.&lt;sup&gt;&lt;a href=&quot;#wcrs&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
 &lt;p&gt;When you break up our healthcare enterprise in Wales, we can see three broad categories of component:&lt;/p&gt;
 
@@ -57,7 +57,7 @@
 
 &lt;p&gt;You will recognise these three categories as Simon Wardley’s “Town planners”, “Settlers” and “Pioneers”.&lt;/p&gt;
 
-&lt;p&gt;Our healthcare information technology strategy must explicitly recognise &lt;em&gt;change&lt;/em&gt; and adaptability. One insight, from a healthcare perspective, is that different things change at different speeds and that, given the legal and regulatory aspects of our work in healthcare, data, structured and meaningful, are the bedrock from which we can build. We should regard the tools (applications) with which we interact with those data as much more ephemeral and driven by clinical and business workflow.&lt;/p&gt;
+&lt;p&gt;Our healthcare information technology strategy must explicitly recognise &lt;em&gt;change&lt;/em&gt; and adaptability. One insight, from a healthcare perspective, is that different things change at different speeds and that, given the legal and regulatory aspects of our work in healthcare, data are the bedrock from which we can build. Those data should be structured and clinically meaningful. Conversely, we should regard the tools (applications) with which we interact with those data as much more ephemeral and driven by clinical and business workflow.&lt;/p&gt;
 
 &lt;p&gt;A portal-centric approach has, in my opinion, created years of technical debt. We must work immediately to stop this approach and instead build an &lt;em&gt;open, standards-based platform&lt;/em&gt;.&lt;/p&gt;
 
@@ -157,6 +157,10 @@
 
 &lt;p&gt;The Welsh digital ecosystem project is critically dependent on an open platform. We can build that  open platform using a lot of the good work already done in Wales. We have a terrific opportunity to create a health and care enterprise fit for the 21st Century for the citizens of Wales.&lt;/p&gt;
 
+&lt;p&gt;And what might our map look like in the future? Here the platform and its components are evolving to become a commodity, but we can see that our work will be in developing the best user-facing components, focused on solving workflow and user need while taking advantage of new advances in machine learning, artificial intelligence and decision support. Who thinks we’ll be running our own data centres then?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/mapping/maps-system-future-future-logical-map.png&quot; alt=&quot;Maps System Future Future Logical Map&quot; /&gt;&lt;/p&gt;
+
 &lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;acronyms--descriptions&quot;&gt;Acronyms / descriptions&lt;/h4&gt;
@@ -164,6 +168,7 @@
 &lt;ul&gt;
   &lt;li&gt;API - application programming interface&lt;/li&gt;
   &lt;li&gt;ESB - enterprise service bus. Messaging fabric carrying HL7 v2 messages between producers and listeners. Should allow decoupled development but caveat emptor! Continue to use for some uses but move to an API-based approach for most modern applications.&lt;/li&gt;
+  &lt;li&gt;ESR - electronic staff record&lt;/li&gt;
   &lt;li&gt;NIIAS - “National Intelligent Integrated Audit Service” - currently used at the application-level. Needs to be embedded at the API-layer (platform) instead&lt;/li&gt;
   &lt;li&gt;OAUTH2 - authentication framework&lt;/li&gt;
   &lt;li&gt;PAS - patient administration systems&lt;/li&gt;
