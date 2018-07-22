@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-07-20T06:57:47+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-07-22T10:50:21+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
 </subtitle><entry><title type="html">Healthcare information technology strategy</title><link href="https://www.wardle.org/strategy/2018/07/19/mapping.html" rel="alternate" type="text/html" title="Healthcare information technology strategy" /><published>2018-07-19T20:19:19+01:00</published><updated>2018-07-19T20:19:19+01:00</updated><id>https://www.wardle.org/strategy/2018/07/19/mapping</id><content type="html" xml:base="https://www.wardle.org/strategy/2018/07/19/mapping.html">&lt;p&gt;How can we make best use of technology to support healthcare?&lt;/p&gt;
 
 &lt;p&gt;How can we plan a coherent strategy that delivers, with pace, safety and reliability, solutions to the problems we face now while being adaptable enough to adapt to what is likely to come in the future?&lt;/p&gt;
@@ -159,7 +159,7 @@
 
 &lt;p&gt;And what might our map look like in the future? Here the platform and its components are evolving to become a commodity, but we can see that our work will be in developing the best user-facing components, focused on solving workflow and user need while taking advantage of new advances in machine learning, artificial intelligence and decision support. Who thinks we’ll be running our own data centres then?&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/mapping/maps-system-future-future-logical-map.png&quot; alt=&quot;Maps System Future Future Logical Map&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/mapping/maps-system-future-future-simple-map.png&quot; alt=&quot;Maps System Future Future Simple Map&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;
 
