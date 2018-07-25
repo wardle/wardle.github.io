@@ -1,5 +1,114 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-07-24T14:02:56+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
-</subtitle><entry><title type="html">Healthcare information technology strategy</title><link href="https://www.wardle.org/strategy/2018/07/19/mapping.html" rel="alternate" type="text/html" title="Healthcare information technology strategy" /><published>2018-07-19T20:19:19+01:00</published><updated>2018-07-19T20:19:19+01:00</updated><id>https://www.wardle.org/strategy/2018/07/19/mapping</id><content type="html" xml:base="https://www.wardle.org/strategy/2018/07/19/mapping.html">&lt;p&gt;How can we make best use of technology to support healthcare?&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-07-25T22:40:48+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</subtitle><entry><title type="html">Consent-driven distributed master patient index 1/2</title><link href="https://www.wardle.org/strategy/2018/07/25/empi-internet.html" rel="alternate" type="text/html" title="Consent-driven distributed master patient index 1/2" /><published>2018-07-25T22:21:21+01:00</published><updated>2018-07-25T22:21:21+01:00</updated><id>https://www.wardle.org/strategy/2018/07/25/empi-internet</id><content type="html" xml:base="https://www.wardle.org/strategy/2018/07/25/empi-internet.html">&lt;p&gt;I would like to introduce the concept of a consent-driven distributed master patient index.&lt;/p&gt;
+
+&lt;p&gt;Many healthcare organisations already use  master patient index  software in order to try to integrate multiple disparate applications but my suggestion is that we update this concept for the Internet-era.&lt;/p&gt;
+
+&lt;p&gt;In essence, we need to build a distributed and open system in order to provide resource location and authorisation services, driven by consent:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Existing enterprise master patient indices (EMPIs) provide matching and linkage across systems within an enterprise.&lt;/li&gt;
+  &lt;li&gt;We are already seeing a move to open platforms underpinned by modern information and technical standards.&lt;/li&gt;
+  &lt;li&gt;We will need to federate data from multiple providers to create a consolidated health record for an individual citizen.&lt;/li&gt;
+  &lt;li&gt;Such federation across platforms will require functionality to support resource location, so that the consolidated view includes information from any healthcare providers involved in that citizen’s care&lt;/li&gt;
+  &lt;li&gt;That consolidated view may not need to contain personally-identifiable information for many purposes but even when de-identified or aggregated, it is possible to re-identity individuals. There is a identifiability continuum with re-identification risk proportionate to the number of different types of health and care data that form the consolidated view.&lt;/li&gt;
+  &lt;li&gt;Citizens need appropriate tools and support in order to make their data sharing wishes clear and will need to be able to make their preferences clear for a range of different purposes.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;To solve this, I suggest that we need a &lt;em&gt;consent-driven distributed master patient index&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;1-the-enterprise-master-patient-index-empi&quot;&gt;1. The enterprise master patient index (EMPI)&lt;/h1&gt;
+
+&lt;p&gt;An enterprise master patient index (EMPI) acts as a consistent up-to-date registry of patient information across multiple systems, allowing matching and linkage across those systems.&lt;/p&gt;
+
+&lt;p&gt;The design of such a system derives from a historic use of individual healthcare applications that maintain their own patient indexes and need to be integrated with others. Those applications would usually store their own indexes in their own closed, proprietary backend storing the individual patient data against a local case record number.&lt;/p&gt;
+
+&lt;p&gt;An EMPI acts to link these disparate applications by matching patient demographics and as a result, can  derive a list of identifiers for any given patient in any of the applications across an enterprise. EMPI products, such as IBM’s Initiate, generally use HL7 v2 messaging in order to provide lookup and matching services.&lt;/p&gt;
+
+&lt;h1 id=&quot;2-platforms-and-commoditisation&quot;&gt;2. Platforms and commoditisation&lt;/h1&gt;
+
+&lt;p&gt;I truly believe that we are at the cusp of a revolution in healthcare information technology in which we will adopt Internet-era thinking and technology to support the transformation of healthcare. This transformation will permit a renewed focus on the needs of individual citizens and their caregivers, and how our services are designed to meet those needs.&lt;/p&gt;
+
+&lt;p&gt;One of the biggest changes will be the spread of open platforms providing multiple components with standards-based application programming interfaces. Initially, these components will be part of a wider organisation-centric electronic health record system (e.g. &lt;a href=&quot;https://code.cerner.com/&quot;&gt;https://code.cerner.com/&lt;/a&gt;), but, we will quickly see many components becoming commoditised and provided via cloud-based platforms (e.g. &lt;a href=&quot;https://cloud.google.com/genomics/&quot;&gt;https://cloud.google.com/genomics/&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;This scenario playing out is shown in this Wardley map:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/mapping/maps-system-future-future-simple-map.png&quot; alt=&quot;Maps System Future Future Simple Map&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We must recognise that several components of this architecture already have well-established solutions and are best bought or rented but that other components are, as yet, unknown and need more work in order to understand the best way to design, build and deploy.&lt;/p&gt;
+
+&lt;p&gt;For example, we still have procured and installed locally software like radiology systems (Picture Archiving and Communication System - PACS) but even some of those could be provided as a service instead. For example, in Aneurin Bevan Health Board, they are using &lt;a href=&quot;https://www.drdoctor.co.uk/&quot;&gt;DrDoctor services&lt;/a&gt; for patient communication prior to outpatient clinic visits.&lt;/p&gt;
+
+&lt;p&gt;In parallel with this modularisation will be the move towards separating application code and logic from the data and its representations. As a result, we will have a new marketplace of new components will appear providing discrete computing services on-demand, making use of open data standards and readily available open-source tools to implement those standards. For example, could discrete computing functionality be provided to perform monitoring for acute kidney injury (AKI), currently using the state-of-the-art national AKI guidance? Similarly, could such an architecture permit the parallel testing and evaluation of &lt;em&gt;new&lt;/em&gt; implementations of AKI detection before more widespread adoption?&lt;/p&gt;
+
+&lt;p&gt;As such, it is likely that the data and the application code (logic) will separate and themselves distributed as a &lt;em&gt;modular&lt;/em&gt; architecture founded on open standards.&lt;/p&gt;
+
+&lt;h1 id=&quot;3-federation-and-caching&quot;&gt;3. Federation and caching&lt;/h1&gt;
+
+&lt;p&gt;Federation is the process in which we can build a unified single view of data from across multiple distributed information systems.&lt;/p&gt;
+
+&lt;p&gt;For example, a federation service might take a request for information about a patient, decompose that query across multiple source systems and return a unified composite view. Federation may combine the same or different types of data from multiple systems.&lt;/p&gt;
+
+&lt;p&gt;Federation might simply directly pass on a query to multiple source systems at the time of the request; such an approach might be fine if each source system has predictably high levels of performance. Alternatively, it may instead implement a vendor-neutral archive updated from multiple source systems as they themselves are updated, providing a performant cache of information updated from source systems. Indeed, one might implement federation as a combination of both; in essence, federation provides a consolidated view across multiple systems.&lt;/p&gt;
+
+&lt;h1 id=&quot;4-resource-location&quot;&gt;4. Resource location&lt;/h1&gt;
+
+&lt;p&gt;Federation is dependent on appropriately locating resources for patients across a range of providers.&lt;/p&gt;
+
+&lt;p&gt;Apple have &lt;a href=&quot;https://www.apple.com/newsroom/2018/01/apple-announces-effortless-solution-bringing-health-records-to-iPhone/&quot;&gt;built a federated health records service&lt;/a&gt; to iOS via the Health app and associated &lt;a href=&quot;https://developer.apple.com/documentation/healthkit/health_and_fitness_samples/accessing_health_records&quot;&gt;application programming interfaces&lt;/a&gt;. This now provides a consolidated view of data from multiple healthcare providers in the United States, making use of the increasing available of data via &lt;a href=&quot;https://www.hl7.org/fhir/&quot;&gt;HL7 FHIR&lt;/a&gt;. To do this, health providers must specifically &lt;a href=&quot;https://www.apple.com/healthcare/&quot;&gt;link with Apple&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Google DeepMind built a &lt;a href=&quot;https://deepmind.com/applied/deepmind-health/working-partners/how-were-helping-today/&quot;&gt;federated records service&lt;/a&gt; to support their Streams app, providing a consolidated view of legacy data held within one organisation but across multiple sites and multiple software products. Those data populated, via &lt;a href=&quot;http://www.hl7.org/implement/standards/product_brief.cfm?product_id=185&quot;&gt;HL7 V2&lt;/a&gt;, are stored in a modern archive for performance reasons and made available via HL7 FHIR.&lt;/p&gt;
+
+&lt;p&gt;In both, I understand that resource location is centrally managed, requiring registration or bespoke integration.&lt;/p&gt;
+
+&lt;p&gt;Any distributed system needs to be able to offer accurate and performant resource location, much as the domain name service (DNS) for the internet provides distributed conversion of user friendly domain names into numeric addresses.&lt;/p&gt;
+
+&lt;h1 id=&quot;5-privacy-and-identifiable-data&quot;&gt;5. Privacy and identifiable data&lt;/h1&gt;
+
+&lt;p&gt;In many situations, such as providing direct-care such as an outpatient clinic, professionals benefit from being able to access identifiable up-to-date information. In other situations, such as when we are planning services to meet the needs of a population, it is sufficient to simply process de-identified information. Using the least identifiable information for any given given purpose is a core principle of sound data governance.&lt;/p&gt;
+
+&lt;p&gt;However, there is a &lt;a href=&quot;https://understandingpatientdata.org.uk/sites/default/files/2017-07/Identifiability%20briefing%205%20April.pdf&quot;&gt;spectrum of identifiability&lt;/a&gt; with fully identifiable data at one extreme and aggregated statistics about a populations of patients at the other. With aggregate statistics, re-identification is much more difficult, but is possible when numbers of individuals with a set of characteristics are small. With de-identified patient-level data, re-identification is possible and becomes increasingly possible proportional to the quantity of linked data.&lt;/p&gt;
+
+&lt;p&gt;For example, you could not re-identify an individual if all you knew was that they were a &lt;em&gt;neurologist&lt;/em&gt;. If you knew they lived in &lt;em&gt;Wales&lt;/em&gt;, then you can narrow down the possibilities. A neurologist, from Wales interested in &lt;em&gt;information technology&lt;/em&gt;. You’ve re-identified me. Probably.&lt;/p&gt;
+
+&lt;p&gt;One way of trying to de-identify information is to simply replace all personally-identifiable information with a pseudonym, a random identifier. However, if all data on an individual is given the same identifier, the re-identification risk is higher than if only a single type of data is available. As such, we can augment de-identification by splitting data and giving each split a different identifier and permitting the creation of a dynamic consolidated view of data across multiple systems using multiple identifiers by virtue of a variable degree of linkage.&lt;/p&gt;
+
+&lt;p&gt;For example, Google Maps will track route journeys for traffic analysis, but reduces the privacy impact by splitting up the journey into smaller sections, each with a different identifier. Your progress during those sections is recorded to help others, but no-one is able to recombine those data to find out from where you travelled. Anonymisation occurs because there is no linkage from your identifiable information (your account details) and the traffic identifiers. If Google kept a record of your account and the identifiers used to track your journeys, then conceivably your journey could be recreated and your data has only be de-identified.&lt;/p&gt;
+
+&lt;p&gt;In addition, it is possible to further limit the risk of re-identification by deliberately adding &lt;em&gt;noise&lt;/em&gt; into datasets so that aggregate statistical analyses give the same results as the original source data; such an approach is called &lt;em&gt;differential privacy&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;As such, we can work to protect privacy by both controlling the &lt;em&gt;linkage&lt;/em&gt; of data from different sources as well as deliberately adding &lt;em&gt;noise&lt;/em&gt; into data when aggregated and shared.&lt;/p&gt;
+
+&lt;h1 id=&quot;6-consent-and-health-data&quot;&gt;6. Consent and health data&lt;/h1&gt;
+
+&lt;p&gt;Health data have three broad purposes:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;for direct care of an individual patient&lt;/li&gt;
+  &lt;li&gt;for supporting and running services by aggregating individual-level data at the level of an organisation, service or cohort in order to monitor and improve services for those patients&lt;/li&gt;
+  &lt;li&gt;for supporting research&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There are more detailed examples at &lt;a href=&quot;https://understandingpatientdata.org.uk/why&quot;&gt;https://understandingpatientdata.org.uk/why&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Not all health data are the same. For example, information relating to sexual health, termination of pregnancy, genetics, mental health, substance abuse, employment issues and stigmatising social data may, at the discretion of an individual, be considered quite differently from other health data.&lt;/p&gt;
+
+&lt;p&gt;Pharmaceutical companies and clinicians are interested in assessing the real-world outcomes of their treatments and projects like the &lt;a href=&quot;https://www.herc.ox.ac.uk/downloads/health_datasets/browse-data-sets/general-practice-research-database-gprd&quot;&gt;Clinical Practice Research Datalink (CPRD)&lt;/a&gt; demonstrate the usefulness of this post-marketing surveillance.&lt;/p&gt;
+
+&lt;p&gt;Consent may be opt-in or opt-out and given implicitly or explicitly. When you sign up to a clinical research project, you must opt-in. When you don’t want your health data shared for secondary uses in NHS England, you can opt-out. When you attend a hospital and extend your arm in order to let someone take your blood, you have given &lt;em&gt;implicit&lt;/em&gt; consent. When you sign a consent form for your appendicectomy, you give &lt;em&gt;explicit&lt;/em&gt; consent. When you attend hospital unconscious and we work to treat you, we are working in your &lt;em&gt;best interests&lt;/em&gt;. When your advance decision to refuse treatment (ADRT) states that you do not want cardiopulmonary resuscitation, to perform that act would be an act of assault.&lt;/p&gt;
+
+&lt;p&gt;The NHS England care.data project was &lt;a href=&quot;https://www.bmj.com/content/354/bmj.i3907&quot;&gt;halted in the face of widespread public criticism and loss of trust&lt;/a&gt;, despite the &lt;a href=&quot;https://www.bmj.com/content/354/bmj.i3852&quot;&gt;potential benefits&lt;/a&gt; for population health and clinical research.&lt;/p&gt;
+
+&lt;p&gt;One of the outcomes of the debacle was a renewed focus on &lt;em&gt;building trust&lt;/em&gt; and obtaining &lt;em&gt;consent&lt;/em&gt;. As a result, we must work to ensure that we organise health information to make it accessible subject to &lt;em&gt;consent&lt;/em&gt; and &lt;em&gt;control&lt;/em&gt; by the individual or their representative.&lt;/p&gt;
+
+&lt;h1 id=&quot;so-what-follows&quot;&gt;So what follows?&lt;/h1&gt;
+
+&lt;p&gt;In essence, I have argued that we need a distributed equivalent of a master patient index designed for the Internet-era and driven by consent.&lt;/p&gt;
+
+&lt;p&gt;This index needs, itself, to be distributed and federated, and yet designed to protect privacy. My next blog post in this series touches on some of the potential technical standards and services required to support such a system.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;PS My previous posts on &lt;a href=&quot;/information-governance/2017/04/08/pseudonymous-consent.html&quot;&gt;pseudonymous consent&lt;/a&gt; and associated code were an experiment solving some of the issues that I’ve finally got around to documenting here.&lt;/p&gt;</content><author><name></name></author><summary type="html">I would like to introduce the concept of a consent-driven distributed master patient index.</summary></entry><entry><title type="html">Healthcare information technology strategy</title><link href="https://www.wardle.org/strategy/2018/07/19/mapping.html" rel="alternate" type="text/html" title="Healthcare information technology strategy" /><published>2018-07-19T20:19:19+01:00</published><updated>2018-07-19T20:19:19+01:00</updated><id>https://www.wardle.org/strategy/2018/07/19/mapping</id><content type="html" xml:base="https://www.wardle.org/strategy/2018/07/19/mapping.html">&lt;p&gt;How can we make best use of technology to support healthcare?&lt;/p&gt;
 
 &lt;p&gt;How can we plan a coherent strategy that delivers, with pace, safety and reliability, solutions to the problems we face now while being adaptable enough to adapt to what is likely to come in the future?&lt;/p&gt;
 
@@ -1081,257 +1190,4 @@
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;/digital-platform/2018/03/30/where-is-the-value.html&quot;&gt;“Where is the value?”&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/04/26/lean-healthcare-devops.html&quot;&gt;Lean healthcare&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">In “Where is the value?”, I talked about market disruption by the cycle of commoditisation and creative destruction.</summary></entry><entry><title type="html">Lean healthcare</title><link href="https://www.wardle.org/clinical-informatics/2018/04/26/lean-healthcare-devops.html" rel="alternate" type="text/html" title="Lean healthcare" /><published>2018-04-26T07:06:06+01:00</published><updated>2018-04-26T07:06:06+01:00</updated><id>https://www.wardle.org/clinical-informatics/2018/04/26/lean-healthcare-devops</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2018/04/26/lean-healthcare-devops.html">&lt;p&gt;In this blog post, I want to talk about transforming our health services using technology.&lt;/p&gt;
-
-&lt;p&gt;There are four core messages:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Most of us working in healthcare are already familiar with a range of quality improvement methodologies -  we see them at work when we discuss our healthcare services - and yet we frequently fail to use those same improvement techniques in our information technology projects.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;We can learn from how technology companies have adopted similar quality improvement methodologies (&lt;em&gt;lean&lt;/em&gt; and &lt;em&gt;agile&lt;/em&gt;) in their efforts to develop new technology, and use the same approaches to both develop and manage healthcare information technology.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;That small, cross-functional teams can be given responsibility for delivering discrete functional components of a wider software architecture, bringing together development, testing and deployment as part of a wider “DevOps” strategy. Increasing adoption of ‘serverless’ technologies is a logical result of this strategy.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;That these same approaches can be extended to include our existing quality improvement and research methodologies so that we accelerate the adoption of data-driven value-based healthcare in a virtuous cycle of improvement. We use technology to re-imagine how we deliver healthcare to our citizens, with information technology an enabler of transformation; &lt;em&gt;ownership&lt;/em&gt; is key here with IT and quality improvement going hand-in-hand.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;I’ve included some links to resources for further reading at the end.&lt;/p&gt;
-
-&lt;h1 id=&quot;healthcare-transformation&quot;&gt;Healthcare transformation&lt;/h1&gt;
-
-&lt;p&gt;We need to consider &lt;em&gt;how&lt;/em&gt; we most effectively use information technology in healthcare so that we do more than simply replace our paper records with electronic equivalents.&lt;/p&gt;
-
-&lt;p&gt;We must think deeply about how we can use technology to &lt;em&gt;transform&lt;/em&gt; how we deliver healthcare to our citizens. We must be ambitious and yet plan to deliver those ambitions incrementally, safely, carefully and within the constraints within which we work.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Every industry that is not bringing software to the core of their business will be disrupted.&lt;/p&gt;
-
-  &lt;p&gt;Jeffrey Immelt, CEO and Chairman, General Electric, 2001-2017&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Fundamentally, we need to re-imagine a new technical architecture - an &lt;em&gt;open platform&lt;/em&gt; at its core - built on standards and interoperability. But, we must also go much further than simply talk about technical architectures and drive a change in culture and trust.&lt;/p&gt;
-
-&lt;p&gt;In essence, to deliver IT-enabled healthcare transformation, we need the right:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;open architecture&lt;/li&gt;
-  &lt;li&gt;cultural ‘norms’&lt;/li&gt;
-  &lt;li&gt;technical and information standards&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;These should underpin our software development and technical operations.&lt;sup&gt;&lt;a href=&quot;#wtsb&quot;&gt;a&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;a-cohesive-strategy&quot;&gt;A cohesive strategy&lt;/h1&gt;
-
-&lt;p&gt;Information technology projects must be ‘owned’ by the organisations delivering care with a focus on quality improvement.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“The key to creating a lean enterprise is to enable those doing the work to solve their customers’ problems in a way that is aligned with the strategy of the wider organization. To achieve this, we rely on people being able to make local decisions that are sound at a strategic level—which, in turn, relies critically on the flow of information, including feedback loops.”&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;https://www.amazon.co.uk/Lean-Enterprise-Performance-Organizations-Innovate/dp/1449368425&quot;&gt;Lean Enterprise, 2015, Jez Humble, Joanne Molesky, and Barry O’Reilly&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;It is difficult to defend organisational structures in which ownership of information technology projects is outsourced to an external agency. Such issues of ownership are a fundamental problem when something goes wrong&lt;sup&gt;&lt;a href=&quot;#ptsafety&quot;&gt;b&lt;/a&gt;&lt;/sup&gt;;  a safer approach is to make the ownership explicit with a clear purchaser/commissional-provider split in which lines of responsibility are explicit. The health organisation as a whole  must “own” the information technology solutions and take responsibility for any consequences of failure.&lt;/p&gt;
-
-&lt;p&gt;Similarly, given that all organisations and businesses are now, in effect, information technology companies (including healthcare organisations), information technology should not be the responsibility of a single department but cut across all internal departments. What changes can be made to the way we deliver healthcare that doesn’t have some need for information technology change?&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“Historically, the adoption and management of health care IT has been left to an organization’s chief information officer and other technical personnel. This is a mistake. … health care IT is effective only when all members of an organization work to unlock its potential.”&lt;/p&gt;
-
-  &lt;p&gt;“… many health care organizations use IT as a tool to monitor current processes and protocols; what only a small number have done is leverage those same IT systems to see if those processes and protocols can be improved—and if so, to act accordingly.”&lt;/p&gt;
-
-  &lt;p&gt;“… [we need to] embrace [IT] as an instrument to help transform the way they deliver medical care. This will entail prioritizing quality improvement over cost cutting, making data collection easier and better, turning the data into actionable information for clinicians, and forging new operating and business models. We have found that while numerous health care organizations are moving in this direction, the majority are not making the holistic changes needed for transformation.”&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;https://hbr.org/2017/11/the-it-transformation-health-care-needs&quot;&gt;Harvard Business Review (HBR) The IT Transformation Health Care Needs, Dec 2017&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&quot;so-what-are-our-goals&quot;&gt;So what are our goals?&lt;/h1&gt;
-
-&lt;p&gt;How can we make the right decisions about architecture, culture and standards to enable us to use information technology effectively to monitor, improve and transform our health services?&lt;/p&gt;
-
-&lt;p&gt;What are our goals, given we work in complex, heterogeneous, ever-changing adaptive systems, with a high degree of uncertainty?&lt;/p&gt;
-
-&lt;p&gt;At our foundation, we need a high-trust collaborative cross-organisational culture. What culture do you have in your own organisation, or across multiple organisations in your wider health economy? We need a ‘generative’ culture:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Pathological organizations are characterized by large amounts of fear and threat. People often hoard information or withhold it for political reasons, or distort it to make themselves look better.&lt;/p&gt;
-
-  &lt;p&gt;Bureaucratic organizations protect departments. Those in the department want to maintain their “turf,” insist on their own rules, and generally do things by the book—their book.&lt;/p&gt;
-
-  &lt;p&gt;Generative organizations focus on the mission. How do we accomplish our goal? Everything is subordinated to good performance, to doing what we are supposed to do.&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;https://www.amazon.co.uk/Lean-Enterprise-Performance-Organizations-Innovate/dp/1449368425&quot;&gt;Lean Enterprise, 2015, Jez Humble, Joanne Molesky, and Barry O’Reilly&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;As part of that culture, we must recognise that we do not have all of the answers and that we must be able to adapt to change.&lt;/p&gt;
-
-&lt;p&gt;It is easy to fall into a trap of thinking the best way of dealing with uncertainty is building “command-and-control” like structures in which we analyse the work to be done and deliver it by breaking it up into components or projects. It is, unfortunately, naive to think that centralised command-and-control reduces risk in delivering valuable information technology.&lt;/p&gt;
-
-&lt;p&gt;Instead, we must focus our efforts around high-level strategic objectives and then create small cross-functional teams empowered to deliver components of that vision.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“According to the Principle of Mission, we create alignment not by making a detailed plan of how we achieve our objective but by describing the intent of our mission and communicating why we are undertaking it.The key to the Principle of Mission is to create alignment and enable autonomy by setting out clear, high-level target conditions with an agreed time frame—which gets smaller under conditions of greater uncertainty—and then leaving the details of how to achieve the conditions to teams.”&lt;/p&gt;
-
-  &lt;p&gt;Lean Enterprise, 2015 quoting “The Principles of Product Development Flow” by Donald Reinertsen&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;As I wrote in “The paradox of control”:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“There is an important paradox in many health services, including Wales, is that there is a tendency to centralise the day-to-day management and delivery of individual products and yet high-level strategic and prioritisation decisions are decentralised, haphazard and dependant on capital funding with little or no consideration or control as to how those projects will fit into a wider technical healthcare enterprise architecture.”&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;/clinical-informatics/2017/12/05/enabling-innovation.html&quot;&gt;“A paradox of control”&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&quot;balancing-inherent-conflicts&quot;&gt;Balancing inherent conflicts&lt;/h1&gt;
-
-&lt;p&gt;We need to explicitly create a) an architecture, b) a culture and c) appropriate standards that result in overall solutions that are safe and secure and yet at the same time enable innovation.&lt;/p&gt;
-
-&lt;p&gt;It is easy to see how such goals can be in conflict, unless we explicitly mitigate that conflict in how we design and manage that architecture, that culture and those technical standards.&lt;/p&gt;
-
-&lt;p&gt;Here are just three examples of what appear to such conflicts:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;we need software to respond to our changing needs and provide ever increasing value via automation (IT “developments”) while at the same time, we need to provide stable, reliable and secure services (IT “operations”)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;we need local innovation and local decision making but ensure that local developments are not orthogonal to the wider strategic roadmap.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;we need to adopt technical and information standards and yet support innovation and flexibility in approach.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Such conflicts are magnified if we have the wrong architecture, culture and standards. Similarly, the right architecture, culture and standards can minimise or entirely mitigate these apparently intractable conflicts.&lt;/p&gt;
-
-&lt;p&gt;We need to adopt “DevOps”, agility and lean thinking.&lt;/p&gt;
-
-&lt;h1 id=&quot;devops&quot;&gt;DevOps&lt;/h1&gt;
-
-&lt;p&gt;“DevOps” refers to creating cross-functional teams who break-down the traditional barriers between IT developments and operations.&lt;/p&gt;
-
-&lt;p&gt;Modern technology companies have seen huge productivity gains from creating small teams to quickly and independently develop, test and deploy software and therefore deliver value at pace. They minimise risk by breaking down work into smaller, less risky units that can evolve independently with only loose-coupling with other components. They combine the development of new functionality with highly automated testing and deployment, often building in “feature switches” which optionally turn specific new functionality on or off depending on runtime configuration for testing in limited real-life environments before more widespread use is permitted. Such teams may deploy multiple versions per day, each deployment small and low risk, dependent on successfully passing automated testing and easily rolled back in the event of problems.&lt;/p&gt;
-
-&lt;p&gt;The key is that developers can deploy into potentially multiple production-like test environments with little or no manual effort. Deployment is automated from a technical point-of-view, and, &lt;em&gt;codified&lt;/em&gt;. As a result, testing and deployment are both designed and executed using code or configuration files and is therefore &lt;em&gt;automated&lt;/em&gt;. It is entirely reasonable to delay actual deployment into production until other requirements are met, but that process becomes one of simply migrating provenly reliable code.&lt;/p&gt;
-
-&lt;p&gt;Such an approach is very different to what usually happens in healthcare IT. Those of you who work within the NHS will be familiar with long development cycles, entirely separate teams running the different stages of development, testing, deployment, and maintaining services. The process for creating and deploying new functionality typically requires long test-cycles, user-acceptance tests and then, at some indeterminate time in the future, features are rolled into a high-risk big-bang deployment.&lt;/p&gt;
-
-&lt;p&gt;The &lt;a href=&quot;http://amzn.eu/ekRxYte&quot;&gt;DevOps Handbook&lt;/a&gt; talks about a “downward spiral” in three acts, in which components of a wider architecture become fragile and increasingly difficult to change, building an increasing “technical debt”, of attempting to make changes by cutting corners and never really having time to fix the underlying issues and so adding to that “debt”, and resulting in a situation in which:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“everything becomes just a little more difficult, bit by bit— everybody gets a little busier, work takes a little more time, communications become a little slower, and work queues get a little longer.&lt;/p&gt;
-
-  &lt;p&gt;“Our work becomes more tightly-coupled, smaller actions cause bigger failures, and we become more fearful and less tolerant of making changes.”&lt;/p&gt;
-
-  &lt;p&gt;“Work requires more communication, coordination, and approvals; teams must wait just a little longer for their dependent work to get done; and our quality keeps getting worse. The wheels begin grinding slower and require more effort to keep turning.”&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;http://amzn.eu/ekRxYte&quot;&gt;The DevOps Handbook: How to Create World-Class Agility, Reliability, and Security in Technology Organizations&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The natural conclusion is that we should aim for &lt;em&gt;continuous integration&lt;/em&gt; (CI) and &lt;em&gt;continuous deployment&lt;/em&gt; (CD), with a focus on splitting up what we need to deliver into manageable chunks to be worked upon semi-autonomously by small, independent, cross-functional teams themselves releasing software frequently and often with the confidence of automated toolchains to support extensive unit, integration and security testing with deployment into production-like environments.&lt;/p&gt;
-
-&lt;p&gt;The advent of “serverless” technologies supports and extends “DevOps” principles:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Serverless computing allows users to run code without provisioning or managing any underlying system or application infrastructure, and they automatically scale to support increasing or decreasing loads. 
-&lt;a href=&quot;https://blogs.gartner.com/andrew-lerner/2017/07/21/serverless-is-not-networkless/&quot;&gt;https://blogs.gartner.com/andrew-lerner/2017/07/21/serverless-is-not-networkless/&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;With “serverless” computing, we no longer need to manage our own infrastructure but instead make use of commodity cloud computing providers who take our code and run, monitor and scale to meet demand automatically. Our IT “operations” work is still needed however, but almost by default, software development is immediately deployable into production-like environments. Operations are still needed in order to orchestrate multiple semi-independent services but technologies such as API gateways can act to provide a unified single point of access to multiple services.&lt;/p&gt;
-
-&lt;h1 id=&quot;agile&quot;&gt;Agile&lt;/h1&gt;
-
-&lt;p&gt;The &lt;a href=&quot;Agile Manifesto&quot;&gt;“Agile” manifesto&lt;/a&gt; was released in 2001; the key points for the purposes of this post are:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;continuous delivery of quality software&lt;/li&gt;
-  &lt;li&gt;delivering working software frequently&lt;/li&gt;
-  &lt;li&gt;harnessing change&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;It is easy to see that “agile” is about culture change and that the consequences of a change in culture are a set of technical solutions such as DevOps and Serverless. Agile is, in effect an enabler of “DevOps”.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“Instead of large batches of work being processed sequentially through the design/ development value stream and then through the test/ operations value stream (such as when we have a large batch waterfall process or long-lived feature branches), our goal is to have testing and operations happening simultaneously with design/ development, enabling fast flow and high quality. This method succeeds when we work in small batches and build quality into every part of our value stream.”&lt;/p&gt;
-
-  &lt;p&gt;The DevOps Handbook&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&quot;lean-principles-and-six-sigma&quot;&gt;Lean principles and Six Sigma&lt;/h1&gt;
-
-&lt;p&gt;While “Lean” was originally created by Toyota to improve productivity and quality, the principles are much more widely applicable to other industries.&lt;/p&gt;
-
-&lt;p&gt;The five &lt;a href=&quot;https://www.asme.org/engineering-topics/articles/manufacturing-design/5-lean-principles-every-should-know&quot;&gt;Lean principles are&lt;/a&gt;:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Value: what we want to do or deliver&lt;/li&gt;
-  &lt;li&gt;Value stream: the steps and processes needed to deliver the ‘value’, removing steps that do not add value&lt;/li&gt;
-  &lt;li&gt;Flow: ensuring that the steps and processes that contribute to ‘value’ flow smoothly with no interruptions, delays or bottlenecks.&lt;/li&gt;
-  &lt;li&gt;Pull: delivery of value as required ‘just-in-time’&lt;/li&gt;
-  &lt;li&gt;Perfection: making lean thinking and process improvement part of the culture&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Similarly, many readers might be more familiar with the Six Sigma methodology, now widely used within healthcare. Six Sigma focuses more on variation and design than flow and waste, but clearly these approaches are complementary and indeed, many now combine the two as “Lean Six Sigma”.&lt;/p&gt;
-
-&lt;p&gt;I have discussed the Six Sigma DMAIC cycle previously when discussing &lt;a href=&quot;/cis-design/2017/05/01/medical-record.html&quot;&gt;“The Medical Record”&lt;/a&gt; and the importance of a data-driven approach to quality improvement.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/cis_design/dmaic.png&quot; alt=&quot;Dmaic&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;application-to-healthcare&quot;&gt;Application to healthcare&lt;/h1&gt;
-
-&lt;p&gt;So we have a convergence that, at its core, is focused on delivering &lt;em&gt;value&lt;/em&gt;. Information technology is critical in our healthcare quality improvement endeavours and we can apply those same endeavours to &lt;em&gt;how we build&lt;/em&gt; our information technology tools.&lt;/p&gt;
-
-&lt;p&gt;It is my view that quality improvement, in all its forms (e.g. our &lt;a href=&quot;http://www.1000livesplus.wales.nhs.uk/home&quot;&gt;1000 lives campaign in Wales&lt;/a&gt;), and information technology are inextricably linked and mutually beneficial. Quality improvement benefits from good information technology as the latter is fundamental in performance of the “measure”, “analyse” and “improve” steps of a typical DMAIC cycle. Similarly, information technology benefits from applying those same quality improvement methodologies.&lt;/p&gt;
-
-&lt;p&gt;We need a “reset” in NHS Wales when it comes to information technology and I suspect this applies to other health economies as well.&lt;/p&gt;
-
-&lt;p&gt;We need to embed quality improvement at the heart of our information technology and information technology at the heart of our healthcare, adopt a generative culture and deliver at pace.&lt;/p&gt;
-
-&lt;p&gt;We need less command-and-control and more trust and collaboration, with decision-making, clinical and design, based on &lt;em&gt;meaningful data&lt;/em&gt;.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“Scott Cook, the founder of Intuit, has long advocated building a culture of innovation, encouraging teams to take an experimental approach to product development and exhorting leadership to support them. As he said, “Instead of focusing on the boss’s vote… the emphasis is on getting real people to really behave in real experiments, and basing your decisions on that.” This is the epitome of a scientific approach to product development.”&lt;/p&gt;
-
-  &lt;p&gt;The DevOps Handbook.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&quot;questions-to-ask&quot;&gt;Questions to ask&lt;/h1&gt;
-
-&lt;p&gt;If you are working in healthcare information technology, particularly if you’re in Wales, ask yourself these questions:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Do you have a clear view of your “mission” and yet have sufficient autonomy to create teams to get things done?&lt;/li&gt;
-  &lt;li&gt;Do you have “can-do” ethos and a culture of trust and collaboration?&lt;/li&gt;
-  &lt;li&gt;Do you have a track record of delivering valuable products consistently, to time and within budget?&lt;/li&gt;
-  &lt;li&gt;What is the time interval between development and deployment? Is it measured in hours, days, weeks or months?&lt;/li&gt;
-  &lt;li&gt;Similarly, do you have ready access to production-like test environments to prove, via high-levels of automation, that changes in one system have no untoward effects in another? (Ask questions about test environments and automated checks that our systems are deterministic, both when running independently and when integrated with other systems).&lt;/li&gt;
-  &lt;li&gt;Does your team view deployment in the same way as committing code instead of with trepidation, planning and prolonged downtime?&lt;/li&gt;
-  &lt;li&gt;Do you have robust investigation of failures, with a learning culture and codified tests to ensure such failures are prevented in the future?&lt;/li&gt;
-  &lt;li&gt;Do you have objective measures of quality improvement, do you routinely collect metrics on user satisfaction, performance, downtime or whatever else needs to improve? Have you adopted a &lt;a href=&quot;/clinical-informatics/2017/10/19/data-driven.html&quot;&gt;data-driven approach&lt;/a&gt; to informatics and quality improvement?&lt;/li&gt;
-  &lt;li&gt;Do you have a cadre of professional user-interface designers working across teams to focus on improving your user’s experience in using your software?&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Because, if you can answer yes to these questions, you are much more likely to be able to…&lt;/p&gt;
-
-&lt;p&gt;Move fast and &lt;del&gt;break&lt;/del&gt; fix healthcare…&lt;/p&gt;
-
-&lt;p&gt;Do you want to join me?&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h1&gt;
-
-&lt;p&gt;&lt;a name=&quot;wtsb&quot;&gt;a&lt;/a&gt;:That’s why I was delighted to be asked to chair the new Welsh Technical Standards Board (WTSB), a new group that will work in partnership with the Welsh Information Standards Board (WISB).&lt;/p&gt;
-
-&lt;p&gt;&lt;a name=&quot;ptsafety&quot;&gt;b&lt;/a&gt;: 3079 “parked” electronic referrals unintentionally unsent by general practitioners in Wales to secondary care services were deemed a “process issue” and not an “IT failure” and resulting investigation was “difficult due to lack of engagement from health boards” as the software supplier “owned” the project to digitise the referral pathways and not the organisations that owned the care pathways involved.&lt;/p&gt;
-
-&lt;h1 id=&quot;see-also&quot;&gt;See also&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://amzn.eu/6F2n4Te&quot;&gt;&lt;img src=&quot;/images/lean_enterprise.jpg&quot; alt=&quot;Lean Enterprise&quot; /&gt;&lt;/a&gt;
-&lt;a href=&quot;http://amzn.eu/4YoMrUS&quot;&gt;&lt;img src=&quot;/images/devops-handbook.jpg&quot; alt=&quot;Devops Handbook&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">In this blog post, I want to talk about transforming our health services using technology.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">In “Where is the value?”, I talked about market disruption by the cycle of commoditisation and creative destruction.</summary></entry></feed>
