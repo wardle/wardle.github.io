@@ -1,5 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-09-06T17:49:28+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
-</subtitle><entry><title type="html">Using algorithms in healthcare</title><link href="https://www.wardle.org/strategy/2018/08/30/algorithm-strategy.html" rel="alternate" type="text/html" title="Using algorithms in healthcare" /><published>2018-08-30T10:09:09+01:00</published><updated>2018-08-30T10:09:09+01:00</updated><id>https://www.wardle.org/strategy/2018/08/30/algorithm-strategy</id><content type="html" xml:base="https://www.wardle.org/strategy/2018/08/30/algorithm-strategy.html">&lt;p&gt;I want to convince you that our use of machine learning in healthcare, building algorithms that learn for themselves, depends on:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-09-23T12:05:27+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</subtitle><entry><title type="html">10 design principles for building electronic patient record systems</title><link href="https://www.wardle.org/strategy/2018/09/23/10-steps-epr.html" rel="alternate" type="text/html" title="10 design principles for building electronic patient record systems" /><published>2018-09-23T10:09:09+01:00</published><updated>2018-09-23T10:09:09+01:00</updated><id>https://www.wardle.org/strategy/2018/09/23/10-steps-epr</id><content type="html" xml:base="https://www.wardle.org/strategy/2018/09/23/10-steps-epr.html">&lt;p&gt;Here are my suggested 10 broad principles for building the next generation of electronic health record systems:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Separate application code from data.&lt;/li&gt;
+  &lt;li&gt;Data, as in the patient record, must be longitudinal, immutable, federated, structured and meaningful, with a focus on the patient.&lt;/li&gt;
+  &lt;li&gt;User-facing applications should be lightweight and ephemeral, with a focus on process and workflow. Ideally build your applications out of re-usable components. Applications should almost always be stateless because state should be a function of your data and process models.&lt;/li&gt;
+  &lt;li&gt;Focus on user need. It subsumes everything else. That means helping professionals and patients to understand and refine their needs, as well as needing to create a culture of continuous improvement. Remember our work will never be complete.&lt;/li&gt;
+  &lt;li&gt;Build trust. Teams need to trust one another.&lt;/li&gt;
+  &lt;li&gt;Build platforms, even if you think only one user-facing application will make use of it. But, understand you are wrong, on multiple levels, to think one user-facing application will be sufficient for our needs.&lt;/li&gt;
+  &lt;li&gt;Modularisation is key; limit the surface area of interactions. Allow parallel independent development. That means understanding bounded contexts and two pizza rules. Think contracts: technical (API), performance, reliability, legal, regulatory and cultural. The more people who need to be involved in a decision, the slower you will deliver; your architecture and organisational structures should be designed to streamline that decision making.&lt;/li&gt;
+  &lt;li&gt;Understand that reliability and risk are not homogeneous across our enterprises. One size does not fit all. Remember that adding more process or checks, particularly if it requires manual checks from multiple stakeholders, can have a paradoxical effect on making systems &lt;em&gt;less&lt;/em&gt; safe. Also never forget the frequently forgotten consequences of failure to deliver.&lt;/li&gt;
+  &lt;li&gt;Adopt a mobile first strategy; always consider multiple channels of interaction for your users and give due regard to digital inclusion. How are our tools going to support different types of users with different needs?&lt;/li&gt;
+  &lt;li&gt;Focus on developer velocity. The consequences of this is automating end-to-test testing and safety assurance, as well as doubling-down efforts to modularise services. We are not building something that will ever be complete so embrace and design for change.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Let me know what you think.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Here are my suggested 10 broad principles for building the next generation of electronic health record systems:</summary></entry><entry><title type="html">Using algorithms in healthcare</title><link href="https://www.wardle.org/strategy/2018/08/30/algorithm-strategy.html" rel="alternate" type="text/html" title="Using algorithms in healthcare" /><published>2018-08-30T10:09:09+01:00</published><updated>2018-08-30T10:09:09+01:00</updated><id>https://www.wardle.org/strategy/2018/08/30/algorithm-strategy</id><content type="html" xml:base="https://www.wardle.org/strategy/2018/08/30/algorithm-strategy.html">&lt;p&gt;I want to convince you that our use of machine learning in healthcare, building algorithms that learn for themselves, depends on:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;developing expertise in data analytics and machine learning,&lt;/li&gt;
@@ -861,7 +878,7 @@
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://wardle.org/digital-platform/2018/03/03/platform-wales-1.html&quot;&gt;Platforms #1&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://wardle.org/digital-platform/2018/03/03/platform-wales-2.html&quot;&gt;Platforms #2&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://wardle.org/digital-platform/2018/03/03/platform-wales-3.html&quot;&gt;Platforms #2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://wardle.org/digital-platform/2018/03/03/platform-wales-3.html&quot;&gt;Platforms #3&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name></name></author><summary type="html">We need some substantial changes in the way we think about healthcare information technology in Wales.</summary></entry><entry><title type="html">WTSB 19th June 2018</title><link href="https://www.wardle.org/wales/2018/06/19/wtsb.html" rel="alternate" type="text/html" title="WTSB 19th June 2018" /><published>2018-06-19T15:14:14+01:00</published><updated>2018-06-19T15:14:14+01:00</updated><id>https://www.wardle.org/wales/2018/06/19/wtsb</id><content type="html" xml:base="https://www.wardle.org/wales/2018/06/19/wtsb.html">&lt;p&gt;We held the second meeting of the Welsh Technical Standards Board (WTSB) today and I am delighted to announce that we have formally adopted the &lt;a href=&quot;https://www.gov.uk/guidance/government-design-principles&quot;&gt;GDS Design Principles&lt;/a&gt; for use by NHS Wales. These are:&lt;/p&gt;
 
 &lt;ol&gt;
@@ -1328,74 +1345,4 @@
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/04/26/lean-healthcare-devops.html&quot;&gt;“Lean healthcare” &lt;/a&gt;: Value stream: transforming health and care technology implementations using lean, agile, “DevOps” and serverless with small, cross-functional teams.&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;/digital-platform/2018/03/30/where-is-the-value.html&quot;&gt;“Where is the value?”&lt;/a&gt;: Creative destruction and ecosystems&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">In part one, I highlighted four drivers that will result in creative destruction in the healthcare IT industry:</summary></entry><entry><title type="html">Creative 2/3: The value of software for healthcare</title><link href="https://www.wardle.org/clinical-informatics/2018/05/06/clinical-software-quality.html" rel="alternate" type="text/html" title="Creative 2/3: The value of software for healthcare" /><published>2018-05-06T10:09:09+01:00</published><updated>2018-05-06T10:09:09+01:00</updated><id>https://www.wardle.org/clinical-informatics/2018/05/06/clinical-software-quality</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2018/05/06/clinical-software-quality.html">&lt;p&gt;In &lt;a href=&quot;/clinical-informatics/2018/05/06/clinical-software-quality.html&quot;&gt;part one, I highlighted four drivers that will result in creative destruction&lt;/a&gt; in the healthcare IT industry:&lt;/p&gt;
-
-&lt;p&gt;The first was the recognition that software and data are critical enablers of clinical quality improvement, service transformation and advancing our knowledge (research).&lt;/p&gt;
-
-&lt;p&gt;The second was that the best way to build healthcare software is to adopt the behaviours, processes and culture from the most highly productive technology companies. This means adopting quality improvement and research methodologies to develop, test and deploy the software that use to improve our clinical quality, service and research endeavours.&lt;/p&gt;
-
-&lt;p&gt;The third was the importance of separating data storage and transmission from the software operating on those data, with a shared domain language uniting multi-disciplinary cross-functional, semi-autonomous teams creating discrete, carefully bounded components with loose coupling with other components.&lt;/p&gt;
-
-&lt;p&gt;The fourth was the recognition of a transformation in software engineering practices with the increasing adoption of cloud and serverless technologies, permitting the development and commodification of components of what will become, a distributed and patient-centred logical electronic health record. The end result? A variety of interoperable applications, both clinical and administrative indeed, focused on workflow and usually task-orientated, making use of that shared health platform.&lt;/p&gt;
-
-&lt;p&gt;In [, part two covers the importance of software in our efforts to transform clinical services and improve quality.]&lt;/p&gt;
-
-&lt;h1 id=&quot;software-and-healthcare&quot;&gt;Software and healthcare&lt;/h1&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“Software is eating the world.”&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;https://www.wsj.com/articles/SB10001424053111903480904576512250915629460&quot;&gt;Marc Andreeson&lt;/a&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Every industry that is not bringing software to the core of their business will be disrupted.&lt;/p&gt;
-
-  &lt;p&gt;Jeffrey Immelt, CEO and Chairman, General Electric, 2001-2017&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;I truly believe that software is critical to the future of healthcare, in supporting both patients and health professionals in their respective roles. Current software usually does little but replace existing paper processes but we should be aiming to use software to transform our health services.&lt;/p&gt;
-
-&lt;p&gt;Our clinical quality improvement and service transformation endeavours must be supported by new technology, by software and data, to support our efforts to effect change and measure the outcomes of that change in a virtuous cycle of continuous improvement.&lt;/p&gt;
-
-&lt;p&gt;Such continuous improvement requires us to be able to rapidly develop, test, integrate and deploy software. That software could be hand-coded or be the product of machine learning; whatever the case, it needs to be developed, tested, integrated and deployed continuously monitored to ensure it works safely and reliably.&lt;/p&gt;
-
-&lt;p&gt;Are we confident that we have the right culture and architecture in order to do that, because if we don’t, won’t we need to transform our organisations, our culture and our technical architecture to support those needs?&lt;/p&gt;
-
-&lt;p&gt;In essence, we must recognise that our technology, quality improvement and research endeavours are best considered as related and mutually supportive:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/tech-qual-research.png&quot; alt=&quot;The relationship between technology, quality improvement and research&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Quality improvement relies on measurement, analysis and action and therefore most effectively supported by the provision of digital tools to those who wish to transform their services.&lt;/p&gt;
-
-&lt;p&gt;Likewise, development and deployment of technology should, itself, be subject to the same approach to quality improvement so that we develop, test, measure, analyse and deploy in the same virtuous cycle of &lt;em&gt;continuous&lt;/em&gt; improvement.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/devops-qi.png&quot; alt=&quot;Devops Qi&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Similarly, &lt;em&gt;research&lt;/em&gt;, a process to advance our knowledge, requires very similar but more robust and formal protocols and oversight. But technology can help us here, supporting our decision making when in situations of genuine equipoise by providing transformative technology supporting identification, recruitment and randomisation of patients into complex, multi-arm trials currently require manual labour-intensive work.&lt;/p&gt;
-
-&lt;h1 id=&quot;metrics-of-success&quot;&gt;Metrics of success&lt;/h1&gt;
-
-&lt;p&gt;We must admit that our work will &lt;em&gt;never be complete&lt;/em&gt;. As a result, whether we are talking about our clinical services, our technology or our research, we should never use metrics that simply talk about &lt;em&gt;deployment&lt;/em&gt;, but instead consider &lt;em&gt;outcomes&lt;/em&gt; and our efforts should be focused on improving those &lt;em&gt;outcomes&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Like many others, NHS Wales currently uses deployment as a metric for success, but we need to change the conversation to &lt;em&gt;value&lt;/em&gt; and &lt;em&gt;outcome&lt;/em&gt; and shift to adopting the best industry practices for creating safe, reliable and valuable clinical software &lt;em&gt;at pace&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;In &lt;a href=&quot;/clinical-informatics/2018/05/08/ecosystems.html&quot;&gt;part three&lt;/a&gt;, I talk about the importance of technical and information standards, standardised application programming interfaces and frameworks to create &lt;em&gt;ecosystems&lt;/em&gt; of interoperating smaller, well-defined contextually domain bound components sharing the same platform. &lt;a href=&quot;(/clinical-informatics/2018/05/08/ecosystems.html)&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;posts-in-this-series&quot;&gt;Posts in this series&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/05/06/cloud-ehr.html&quot;&gt;Part one: creative destruction&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/05/06/clinical-software-quality.html&quot;&gt;Part two: the value of software for healthcare&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/05/08/ecosystems.html&quot;&gt;Part three: ecosystems and the platform&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;further-reading&quot;&gt;Further reading&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/04/26/lean-healthcare-devops.html&quot;&gt;“Lean healthcare” &lt;/a&gt;: Value stream: transforming health and care technology implementations using lean, agile, “DevOps” and serverless with small, cross-functional teams.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/digital-platform/2018/03/30/where-is-the-value.html&quot;&gt;“Where is the value?”&lt;/a&gt;: Creative destruction and ecosystems&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h4&gt;
-
-&lt;p&gt;&lt;a name=&quot;single-patient-record&quot;&gt;a&lt;/a&gt;:The single patient record is a good idea - a logical single source-of-truth that is the canonical repository of information. Except, i) there is no truth in healthcare so you are better with models of uncertainty and ii) a medical record must be faceted so that it is possible to regulate access to different categories of information such as source (e.g. provider) and type (e.g. sexual or reproductive health matters, mental health, genetics, general medical etc). But, for now, “single patient record” is a useful pragmatic label.&lt;/p&gt;</content><author><name></name></author><summary type="html">In part one, I highlighted four drivers that will result in creative destruction in the healthcare IT industry:</summary></entry></feed>
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">In part one, I highlighted four drivers that will result in creative destruction in the healthcare IT industry:</summary></entry></feed>
