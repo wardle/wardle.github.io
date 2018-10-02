@@ -1,5 +1,121 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-09-23T22:28:59+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
-</subtitle><entry><title type="html">10 design principles for building electronic patient record systems</title><link href="https://www.wardle.org/strategy/2018/09/23/10-steps-epr.html" rel="alternate" type="text/html" title="10 design principles for building electronic patient record systems" /><published>2018-09-23T10:09:09+01:00</published><updated>2018-09-23T10:09:09+01:00</updated><id>https://www.wardle.org/strategy/2018/09/23/10-steps-epr</id><content type="html" xml:base="https://www.wardle.org/strategy/2018/09/23/10-steps-epr.html">&lt;p&gt;Here are my suggested 10 broad principles for building the next generation of electronic health record systems:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-10-02T17:25:42+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</subtitle><entry><title type="html">Building an open health and care platform for Wales</title><link href="https://www.wardle.org/strategy/2018/10/02/open-platform-wales.html" rel="alternate" type="text/html" title="Building an open health and care platform for Wales" /><published>2018-10-02T16:15:15+01:00</published><updated>2018-10-02T16:15:15+01:00</updated><id>https://www.wardle.org/strategy/2018/10/02/open-platform-wales</id><content type="html" xml:base="https://www.wardle.org/strategy/2018/10/02/open-platform-wales.html">&lt;p&gt;We should use information technology to better deliver our broad health and care objectives.&lt;/p&gt;
+
+&lt;p&gt;That means using information technology to support, improve, transform and re-imagine the delivery of health care; that means we must move away from delegating information technology to a separate department or even, as we do in Wales, a separate organisation.&lt;/p&gt;
+
+&lt;p&gt;Instead, most modern enterprises have recognised the integral role information technology plays in operating their business. A failure in technology is a failure of business. That means services that have responsibility for delivering health and care objectives need to be responsible for the acquisition and development of technology used to support their work in delivering and improving care.&lt;/p&gt;
+
+&lt;p&gt;Alignment of information technology with business objectives requires a careful balance between top-down standardisation and enabling local, ‘bottom-up’ innovation. Standardisation, executed badly, creates fragility and inertia but when done well it creates an environment in which we can deliver technology at pace because we can decouple our developer teams and let them work independently. We know that pace of work is inversely proportional to the number of people who need to be involved in decisions.&lt;/p&gt;
+
+&lt;p&gt;We need to re-imagine our organisational structures, governance and architecture to reflect modern information technology best practice. This means understanding the challenges we face:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;we work in complex, constantly changing, heterogeneous clinical environments across Wales&lt;/li&gt;
+  &lt;li&gt;we need a single patient record with all of our user-facing applications giving a view on the same information.&lt;/li&gt;
+  &lt;li&gt;we need to improve productivity; that means delivering technology at pace to meet the demands of the service&lt;/li&gt;
+  &lt;li&gt;we need to be able to make changes while adhering to legal, regulatory, safety and ethical standards&lt;/li&gt;
+  &lt;li&gt;we need to share common national services avoiding wasteful duplication&lt;/li&gt;
+  &lt;li&gt;we need to permit local innovation and learning, particularly when we recognise that there is no already established &lt;em&gt;best&lt;/em&gt; way of delivering business value, and rapidly scale success across organisations in Wales&lt;/li&gt;
+  &lt;li&gt;we need to understand that we have existing applications hosted nationally and locally, with health boards all at different levels of maturity, we want to harmonise but not suffocate.&lt;/li&gt;
+  &lt;li&gt;both healthcare, and the design of software to support healthcare, must be data-driven.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We know that we are not meeting these challenges in Wales; the Welsh Audit Office report is damning in the failure of delivery.&lt;/p&gt;
+
+&lt;h1 id=&quot;what-are-our-options&quot;&gt;What are our options?&lt;/h1&gt;
+
+&lt;p&gt;There are three potential options for us:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Continue the status quo.&lt;/li&gt;
+  &lt;li&gt;Buy an off-the-shelf electronic health record “mega-suite” from a large vendor and deploy across Wales, e.g. Cerner Millennium or Epic.&lt;/li&gt;
+  &lt;li&gt;Change our strategy, creating an open health and care platform&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I believe that there are substantial problems with information technology in healthcare in Wales including issues of governance, leadership, organisational structure and architecture. Is there anyone who thinks we can continue the status quo?&lt;/p&gt;
+
+&lt;p&gt;My favoured approach is to recognise that our technical architecture determines our organisational and governance structures in Wales, and that architecture needs to be designed for&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;improving developer productivity&lt;/li&gt;
+  &lt;li&gt;supporting extremely high reliability as well as enabling testability, safety and performance&lt;/li&gt;
+  &lt;li&gt;permitting the use of structured, meaningful clinical data for direct care, service management, quality improvement as well as clinical research&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Fortunately, we can look at how other technology companies have achieved these goals.&lt;/p&gt;
+
+&lt;h1 id=&quot;an-evolutionary-architecture&quot;&gt;An evolutionary architecture&lt;/h1&gt;
+
+&lt;p&gt;An evolutionary architecture is one that can adapt to change. We must understand that our work in technology will never be complete and we will need to continually improve, adapting to changing clinical need and new technological advances.&lt;/p&gt;
+
+&lt;p&gt;One of the recognised characteristics of an evolutionary architecture is &lt;em&gt;modularity&lt;/em&gt;, in which we break-up our enterprise into modules, each with a well defined and usually constrained purpose. Modern architecture usually focuses on modularity at the domain-level while more old-fashioned service-orientated architectures are partitioned at a technical-level.&lt;/p&gt;
+
+&lt;p&gt;NHS Wales currently uses the latter which means that end-to-end testing is very difficult and, in effect, one ends up with a distributed monolith and paradoxically makes change more difficult, the whole system less predictable and resilient. It might takes weeks to create developer or test environments that replicate live and it becomes difficult to keep those different environments synchronised.&lt;/p&gt;
+
+&lt;p&gt;Instead, domain-driven design recognises the need to modularise and align modules to meaningful constructs in the business domain; we recognise inherent partitions in functionality and then tightly define the interactions between those modules. In essence, we need a microservice based architecture.&lt;/p&gt;
+
+&lt;p&gt;Example platform services needed to support a modern electronic health record might be:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Patient demographic services, providing a single authoritative snapshot of demographic information about a single patient.&lt;/li&gt;
+  &lt;li&gt;Scheduling services, providing an aggregated view across multiple administrative systems to provide scheduling across multiple organisations.&lt;/li&gt;
+  &lt;li&gt;Staff identity services, providing canonical staff information, bringing together information information from the electronic staff record and national active directory&lt;/li&gt;
+  &lt;li&gt;Clinical document repository, storing clinical documents and associated metadata&lt;/li&gt;
+  &lt;li&gt;Results repository, storing laboratory and radiology results&lt;/li&gt;
+  &lt;li&gt;Test requesting concierge service&lt;/li&gt;
+  &lt;li&gt;Security (authentication/authorisation) and logging services&lt;/li&gt;
+  &lt;li&gt;Clinical data repository&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Scheduling services are a great example because they are needed to satisfy the vision from multiple workstreams of the Informed Health and Care strategy; patients and professionals need to be able to see and schedule appointments in order to deliver care more efficiently and more safely. At the moment, I login to Welsh Clinical Portal in Cwm Taf and see only Cwm Taf appointments, and login to Welsh Clinical Portal in Cardiff and see only Cardiff appointments. We have something wrong with our current architecture.&lt;/p&gt;
+
+&lt;p&gt;However, there has been much good work in Wales on some of these core services, but these services need to be resourced appropriately and recognised as key enablers for building the next generation of user-facing applications. That means prioritising the deliver of these discrete services. Importantly, those services need to adopt open standards and be well-defined, loosely-coupled, documented and permit federation. As discrete modules, it becomes possible for use to run automated tests so that we know how our computing services provide accurate results and perform under pressure.&lt;/p&gt;
+
+&lt;h1 id=&quot;contracts-abstract-computing-services&quot;&gt;Contracts: abstract computing services&lt;/h1&gt;
+
+&lt;p&gt;One of the fundamental characteristics of an evolutionary architecture is that developers are able to work independently from one another, as long as they work within the defined contracts that document the functionality needed and how that module will interact with others.&lt;/p&gt;
+
+&lt;p&gt;Fundamentally, our modules create an &lt;em&gt;abstractions&lt;/em&gt; of a computing service.&lt;/p&gt;
+
+&lt;p&gt;Abstraction is an important software engineering principle which means that developers do not need to be concerned with how a service or application is implemented, only that it meets the agreed contracts. This is powerful because it acts to &lt;em&gt;decouple&lt;/em&gt; components meaning that they can be developed independently and in parallel, as long as they each work to the contracts specified.&lt;/p&gt;
+
+&lt;p&gt;In essence, the processes of simplification and abstraction mean reduce the interactions between discrete components within an architecture to a well-defined, constrained set of agreed contracts between parties.&lt;/p&gt;
+
+&lt;p&gt;Those contracts may be technical, defining &lt;em&gt;how&lt;/em&gt; to interact at a technical level with the underlying services providing using that platform. Technical contracts usually define an &lt;em&gt;application programming interface&lt;/em&gt; (API), but those must be supplemented by a range of legal and regulatory contracts defining how those services may be used and for what purposes. In addition, those contracts can define how the different teams might work with one another and provide assurances regarding performance and reliability. In essence, the contracts document obligations for all parties.&lt;/p&gt;
+
+&lt;p&gt;It is possible to ensure that parties are working appropriately to those contracts by the use of automated tests and &lt;em&gt;fitness functions&lt;/em&gt;. Such an approach means that changes that break an agreed contract are recognised early in the development pipeline, rather than at a late stage. We should aim for an efficient flow of work from conception, development, testing, assurance to deployment, and we should question any step that delays or reverses that flow of work.&lt;/p&gt;
+
+&lt;p&gt;For example, in our scheduling example, the developer team simply needs to deliver an API, probably based on the &lt;a href=&quot;https://www.hl7.org/fhir/appointment.html&quot;&gt;HL7 FHIR Appointment resource&lt;/a&gt;. Our initial version could simply provide a read-only view and satisfy the request by sending out its own request to all of the multiple patient administrative systems in Wales, collect and aggregate the results and return a unified view. That might work, but we would ensure fitness functions would assess not only the data returned but the performance metrics. We might expect to get results within 100 milliseconds, and so the team might instead create a vendor-neutral scheduling repository which takes a feed of data from each patient administrative system and, essentially, caches the results for performance.&lt;/p&gt;
+
+&lt;p&gt;The important thing is that, from an architectural point of view, we don’t care. We set the specifications for that service and trust our team to work out how to deliver what we need, bringing together expertise from across organisations in Wales in order to safely deliver a service that meets our requirements. If the team improve the implementation, or create a new implementation, our client applications do not ever need to know.&lt;/p&gt;
+
+&lt;h1 id=&quot;multiple-services-create-a-platform&quot;&gt;Multiple services create a platform&lt;/h1&gt;
+
+&lt;p&gt;A computing platform is the environment in which a piece of software is executed; they provide a range of software and data services that make it easier to develop applications.&lt;/p&gt;
+
+&lt;p&gt;For example, the Apple developer platform provides a range of sophisticated building blocks that permit developers to create applications for mobile devices. Similarly, there are core services and frameworks that developers can use for common operations such as data storage or processing. This means developers can focus on delivering value to their end-users, building on a foundation of different building blocks that factor out some of the complexity.&lt;/p&gt;
+
+&lt;p&gt;This approach means that applications become lightweight and often ephemeral, simply stitching together functionality from the underlying platform. A proprietary platform can lock developers into that platform, while open platforms, build using open standards can commoditise core computing functionality, foster innovation and create new marketplaces and ecosystems.&lt;/p&gt;
+
+&lt;p&gt;So we need to design our modules to work together to provide the building blocks of the next-generation of electronic health records, recognising that, when combined, those modules will provide a cohesive platform. That platform encwhile developed independently, those modules must be designed to work together to provide a platform&lt;/p&gt;
+
+&lt;p&gt;It is not difficult to see the range of discrete computing services that are needed to create a functional health and care platform, but this model needs a change in culture and change in the way that we think about information technology, moving away from purchasing applications towards a separation of data from the software that acts upon those data.&lt;/p&gt;
+
+&lt;p&gt;There has been some fantastic work in NHS Wales and there is a real appetite for cooperation and collaboration; we now need to work out how to take the next steps and build an open, standards-based computing platform for NHS Wales.&lt;/p&gt;
+
+&lt;h1 id=&quot;so-whats-next&quot;&gt;So what’s next?&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;We need a national platform group that will define the platform and the contractual obligations for each service, documenting the technical (API) interactions and other dependencies. This architectural design group will need to work closely with the technical and information standards boards.&lt;/li&gt;
+  &lt;li&gt;We need multiple independent cross-functional teams each tasked with delivering discrete modular computing services that meet the standards defined by the national platform group. Those teams need to bring together developers with members of other teams, including security, operations, patient safety and assurance.&lt;/li&gt;
+  &lt;li&gt;We need a national applications group that to build example national applications, like a national modular portal, that can be used by all but, importantly, permit the different modules to be stitched together by developers irrespective of their location.&lt;/li&gt;
+  &lt;li&gt;We need to recognise that our platform services three categories of developer: those working for NHS Wales developing national applications, those working for NHS Wales developing local applications (that might end up being scaled out if successful), and those working for academia and commercial organisations as part of our ecosystem. All three should be treated equally, using the same APIs. We cannot have a situation where internal and external developers are treated differently, or that successful local innovation cannot be easily scaled to other regions.&lt;/li&gt;
+  &lt;li&gt;Our organisational and governance structures need to reflect these changes and we need to adequately resource, on a recurring basis, the ongoing development and improvement of these core national services.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;We do need a national portal. It makes little sense to duplicate that functionality in different places, but each organisation needs a realistic convergence strategy that permits delivery at pace and we need to ensure that our portal gives an accurate view of the single patient record; our focus must be on data. That means we must move towards modularisation and embrace the idea that we will stitch together components of the national platform to meet our user needs. I believe that, given the right architecture, we will see a natural convergence as it will be possible to rapidly scale solutions developed locally to other organisations, as those new developments should use those standardised APIs. We should aim for true application portability, collaboration and cooperation.&lt;/p&gt;
+
+&lt;p&gt;Mark&lt;/p&gt;</content><author><name></name></author><summary type="html">We should use information technology to better deliver our broad health and care objectives.</summary></entry><entry><title type="html">10 design principles for building electronic patient record systems</title><link href="https://www.wardle.org/strategy/2018/09/23/10-steps-epr.html" rel="alternate" type="text/html" title="10 design principles for building electronic patient record systems" /><published>2018-09-23T10:09:09+01:00</published><updated>2018-09-23T10:09:09+01:00</updated><id>https://www.wardle.org/strategy/2018/09/23/10-steps-epr</id><content type="html" xml:base="https://www.wardle.org/strategy/2018/09/23/10-steps-epr.html">&lt;p&gt;Here are my suggested 10 broad principles for building the next generation of electronic health record systems:&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Separate application code from data.&lt;/li&gt;
@@ -1246,103 +1362,4 @@
 
 &lt;p&gt;If you have comments on any of these agenda items, then please contact me. As this will be our inaugural meeting, the best way to feed back your comments is directly to me, at mark@wardle.org&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">I am delighted to announce that I have been asked to chair the new Welsh Technical Standards Board (WTSB) for NHS Wales. We will support the creation and maintenance of a catalogue of standards and requirements to enable integration and interoperability across all health and care systems in a consistent and secure manner, and to support local innovation and the use of third party delivery partners.</summary></entry><entry><title type="html">Creative 3/3: Ecosystems and the platform</title><link href="https://www.wardle.org/clinical-informatics/2018/05/08/ecosystems.html" rel="alternate" type="text/html" title="Creative 3/3: Ecosystems and the platform" /><published>2018-05-08T09:08:08+01:00</published><updated>2018-05-08T09:08:08+01:00</updated><id>https://www.wardle.org/clinical-informatics/2018/05/08/ecosystems</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2018/05/08/ecosystems.html">&lt;p&gt;In &lt;a href=&quot;/clinical-informatics/2018/05/06/clinical-software-quality.html&quot;&gt;part one, I highlighted four drivers that will result in creative destruction&lt;/a&gt; in the healthcare IT industry:&lt;/p&gt;
-
-&lt;p&gt;The first was the recognition that software and data are critical enablers of clinical quality improvement, service transformation and advancing our knowledge (research).&lt;/p&gt;
-
-&lt;p&gt;The second was that the best way to build healthcare software is to adopt the behaviours, processes and culture from the most highly productive technology companies. This means adopting quality improvement and research methodologies to develop, test and deploy the software that use to improve our clinical quality, service and research endeavours.&lt;/p&gt;
-
-&lt;p&gt;I covered these two first points in more detail in &lt;a href=&quot;/clinical-informatics/2018/05/06/clinical-software-quality.html&quot;&gt;part two&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The third was the importance of separating data storage and transmission from the software operating on those data, with a shared domain language uniting multi-disciplinary cross-functional, semi-autonomous teams creating discrete, carefully bounded components with loose coupling with other components.&lt;/p&gt;
-
-&lt;p&gt;The fourth was the recognition of a transformation in software engineering practices with the increasing adoption of cloud and serverless technologies, permitting the development and commodification of components of what will become, a distributed and patient-centred logical electronic health record. The end result? A variety of interoperable applications, both clinical and administrative indeed, focused on workflow and usually task-orientated, making use of that shared health platform.&lt;/p&gt;
-
-&lt;p&gt;In this post, I delve into the importance of software architecture and the use of standards in designing healthcare software systems fit for the 21st Century.&lt;/p&gt;
-
-&lt;h1 id=&quot;architecture-and-standards&quot;&gt;Architecture and standards&lt;/h1&gt;
-
-&lt;p&gt;As our efforts to transform health services are critically dependent on technology, we need to change our approach to health information technology projects to maximise safety, quality, productivity and pace using the best evidence-based practices. This means building in continuous improvement methodologies to ensure we keep on improving our approach.&lt;/p&gt;
-
-&lt;p&gt;So, how can create an environment which makes it easy and safe to develop, test, evaluate and deploy software for use in healthcare?&lt;/p&gt;
-
-&lt;p&gt;In &lt;a href=&quot;/clinical-informatics/2018/04/26/lean-healthcare-devops.html&quot;&gt;“Lean Healthcare”&lt;/a&gt;, I talked about the quality improvement methodologies and process changes that can be used to develop software faster and more effectively.&lt;/p&gt;
-
-&lt;p&gt;One of the important conclusions is the benefit of small cross-functional teams. Such teams must be able to work independently, aligned to a wider strategy, given the right tools and responsibility to get their work done and most importantly, work on discrete components by breaking down work into smaller, less risky units that can evolve independently with only loose-coupling with other components. We &lt;em&gt;modularise&lt;/em&gt; our work and limit the interactions between those modules to well-defined publicly documented contracts. It is reported that Jeff Bezos, founder and CEO of Amazon said:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“All service interfaces, without exception, must be designed from the ground up to be externalizable. That is to say, the team must plan and design to be able to expose the interface to developers in the outside world. No exceptions”&lt;/p&gt;
-
-  &lt;p&gt;Jeff Bezos quoted &lt;a href=&quot;https://plus.google.com/+RipRowan/posts/eVeouesvaVX&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Setting this kind of &lt;em&gt;broad architectural principle&lt;/em&gt; means a lot and when you write down this and other guiding principles, and they are actionable and meaningful, they drive a change in behaviour and &lt;em&gt;change your culture&lt;/em&gt;.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Action 1: We need to be explicit in the broad principles we will use in our architecture and culture in Wales.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h4 id=&quot;cross-functional-teams-and-delivery&quot;&gt;Cross-functional teams and delivery&lt;/h4&gt;
-
-&lt;p&gt;What do I mean by a cross-functional team? A cross-functional team brings together people with different expertise to work together towards a common goal. I want to convince you that we need to modularise our technical architecture in Wales and as a result, we need to &lt;em&gt;modularise our teams&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Usually, it is easy to see software development as a process of generating value akin to a factory assembly line, in which a clinical system is designed, built, tested and then deployed to the end-customer. This is what is called a “value stream”.&lt;/p&gt;
-
-&lt;p&gt;It is easy to fall into the trap, usually brought about by naivety mixed with arrogance, that we can define the specifications of what is needed from our software, build it, and then deploy into clinical environments and immediately realise that value, sitting back to announce “our work is done”. As a result, you will have a design team, a development team, a testing team and a deployment (operations) team, and at each step, the “work” is passed from one team to another. When an incident occurs, and they do, perhaps a patient safety team will swing into action.&lt;/p&gt;
-
-&lt;p&gt;Is that the right way to structure and operate your organisation?&lt;/p&gt;
-
-&lt;p&gt;A cross-functional team brings together those experts into the right sized teams, in which communication between members is easy, there is a shared goal, usually focused on &lt;em&gt;delivery&lt;/em&gt;. Members of different functional teams are brought together, for possibly a fixed duration, in order to deliver a goal bringing together design, development, testing, evaluation and deployment and speeding up the lifecycle between these processes so that we aim for &lt;em&gt;continuous integration&lt;/em&gt; and &lt;em&gt;continuous delivery&lt;/em&gt;.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Action 2: We need to modularise our architecture and modularise our teams, creating cross-functional teams whose task is to &lt;em&gt;deliver&lt;/em&gt; discrete components of our architecture which are loosely-coupled from one another, with a focus on automated unit and end-to-end integration testing and continuous delivery.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&quot;creative-destruction--ecosystems-thinking&quot;&gt;Creative destruction &amp;amp; ecosystems-thinking&lt;/h1&gt;
-
-&lt;p&gt;So we want to develop a distributed, standards-driven platform that provides the building blocks with which to build the next generation of electronic health applications?&lt;/p&gt;
-
-&lt;p&gt;Notice I don’t say “electronic health record software”, because I want to convince you that:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Data persistence and transfer &lt;em&gt;must&lt;/em&gt; be considered separately to the applications and software services that operate upon those data.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;We need multiple applications giving different views and bespoke utility using the same data. A single logical record of patient information.&lt;sup&gt;&lt;a href=&quot;#single-patient-record&quot;&gt;a&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;The benefits of an open ecosystem extend beyond only a new marketplace for health applications.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Interestingly, another definition of a “platform” is a set of services that bring together users and providers to form a multisided market. Is it possible then to take our “open platform” and start to think of a future in which we have products and services that actually do enable a re-imagining of healthcare provision to bring together patients, carers, health professionals, commissioners, analytics, researchers and all other stakeholders in a safe and secure manner?&lt;/p&gt;
-
-  &lt;p&gt;My &lt;a href=&quot;/clinical-informatics/2017/08/20/disruptive-influences-future.html&quot;&gt;disruptive influences in healthcare blog post&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Indeed, a new ecosystem permits us to step-back and re-imagine our healthcare services. When you have physical notes, the team looking after your chronic health conditions or your primary care physician need to be physically located near those notes and near to you.&lt;/p&gt;
-
-&lt;p&gt;It used to be the same with online banking in which your local branch held your account. We see the artefact of this configuration even today with account numbers and sort-codes tracking the bank and branch at which your bank account is held. Digital technology was an important tool in re-imagining how we interact with our banks; for them, digital is now &lt;em&gt;the&lt;/em&gt; way of doing business.&lt;/p&gt;
-
-&lt;p&gt;Can we do the same for healthcare?&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Action 3: We need to think ‘open’ and build software services and data repositories that are usable by both internal and external developers to create value and innovation; ecosystems-thinking. We need to &lt;a href=&quot;https://en.wikipedia.org/wiki/Eating_your_own_dog_food&quot;&gt;“eat our own dog food”&lt;/a&gt; and ensure external developers are treated the same as internal development teams.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;posts-in-this-series&quot;&gt;Posts in this series&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/05/06/cloud-ehr.html&quot;&gt;Part one: creative destruction&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/05/06/clinical-software-quality.html&quot;&gt;Part two: the value of software for healthcare&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/05/08/ecosystems.html&quot;&gt;Part three: ecosystems and the platform&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;further-reading&quot;&gt;Further reading&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/04/26/lean-healthcare-devops.html&quot;&gt;“Lean healthcare” &lt;/a&gt;: Value stream: transforming health and care technology implementations using lean, agile, “DevOps” and serverless with small, cross-functional teams.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/digital-platform/2018/03/30/where-is-the-value.html&quot;&gt;“Where is the value?”&lt;/a&gt;: Creative destruction and ecosystems&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">In part one, I highlighted four drivers that will result in creative destruction in the healthcare IT industry:</summary></entry></feed>
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">I am delighted to announce that I have been asked to chair the new Welsh Technical Standards Board (WTSB) for NHS Wales. We will support the creation and maintenance of a catalogue of standards and requirements to enable integration and interoperability across all health and care systems in a consistent and secure manner, and to support local innovation and the use of third party delivery partners.</summary></entry></feed>
