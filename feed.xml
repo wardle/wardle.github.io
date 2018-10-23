@@ -1,5 +1,164 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-10-02T21:24:13+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
-</subtitle><entry><title type="html">Building an open health and care platform for Wales</title><link href="https://www.wardle.org/strategy/2018/10/02/open-platform-wales.html" rel="alternate" type="text/html" title="Building an open health and care platform for Wales" /><published>2018-10-02T16:15:15+01:00</published><updated>2018-10-02T16:15:15+01:00</updated><id>https://www.wardle.org/strategy/2018/10/02/open-platform-wales</id><content type="html" xml:base="https://www.wardle.org/strategy/2018/10/02/open-platform-wales.html">&lt;p&gt;We should use information technology to better deliver our broad health and care objectives.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-10-23T22:41:41+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</subtitle><entry><title type="html">Digital transformation in healthcare</title><link href="https://www.wardle.org/digital/2018/10/23/on-digital.html" rel="alternate" type="text/html" title="Digital transformation in healthcare" /><published>2018-10-23T22:21:21+01:00</published><updated>2018-10-23T22:21:21+01:00</updated><id>https://www.wardle.org/digital/2018/10/23/on-digital</id><content type="html" xml:base="https://www.wardle.org/digital/2018/10/23/on-digital.html">&lt;p&gt;“We’re at the beginning of the digital revolution” wrote Bill Gates in his foreword to Satya Nadella’s book “Hit Refresh”, published not, as you might initially guess, twenty years ago, but in 2017.&lt;/p&gt;
+
+&lt;p&gt;This explicitly recognises that, while we have already seen remarkable changes to our lives, our societies and our cultures as a result of software and the microprocessors, on which they rely, we are actually only at the beginning of our journey.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://a16z.com/2016/08/20/why-software-is-eating-the-world/&quot;&gt;“Software is eating the World”&lt;/a&gt; said Marc Andreessen, referring to the fact that in every aspect of our lives, software has disrupted the status quo and has revolutionised industries, sometimes quietly, and sometimes by storm. Commercially, we have seen businesses that have put software at the heart of their business overtaking incumbents slower to adopt technology and slower to realise the role of technology as an intrinsic foundation of all they do.&lt;/p&gt;
+
+&lt;p&gt;I work as a full-time consultant neurologist caring for patients with a range of neurological illnesses. Like most senior clinical staff, have a range of academic and leadership roles in addition to my clinical practice; in all of these roles, I see, first-hand, how the right technology could help my work and, most importantly, help the patients I directly care as well as the populations I serve.&lt;/p&gt;
+
+&lt;p&gt;But what do we mean by nebulous terms such as ‘digital’ and ‘technology’ and are we right to think about a digital ‘revolution’, particularly in my own field, healthcare? After all, the technologies at our disposal continuously change improve and we have ever more computing power at our fingertips. The word ‘revolution’ suggests a fundamental and relatively sudden change and while it is true, the maturity of our digital tools sometimes advances quickly, such as near ubiquity of smart phones in the developed world, would we not be better to talk about the “digital era”?&lt;/p&gt;
+
+&lt;p&gt;But whether we talk about a “digital revolution” or the start of a journey into a new “digital era”, what do we actually mean by “digital”?&lt;/p&gt;
+
+&lt;p&gt;I would argue that the starting point in trying to understand the implications of true digital thinking, in any industry,  is our ability to:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;transfer and process information to make it accessible and useful&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;rapid-and-sophisticated-processing--faster-learning&quot;&gt;Rapid and sophisticated processing = faster learning&lt;/h1&gt;
+
+&lt;p&gt;But weren’t we were able to transfer and process information before we had digital tools?&lt;/p&gt;
+
+&lt;p&gt;For example, most of us in healthcare still rely on paper notes but that doesn’t stop our teams collecting piles of them to audit an important quality measure of our work.  So perhaps we need to refine our understanding of the “digital revolution”, to explicitly recognise the importance of &lt;em&gt;speed, accuracy and sophistication of our processing&lt;/em&gt; enabling us to make our information ever more useful.&lt;/p&gt;
+
+&lt;p&gt;The transition from film to digital cameras is a useful example of how digital technology has impacted our lives. The digital camera speeds up processing; you no longer wait weeks to see the pictures you have taken but instead see your pictures immediately, but digital tools do more than simply improve the speed of feedback, I can now also crop my images and share with friends and family.&lt;/p&gt;
+
+&lt;p&gt;So when we talk about “accessible and useful”, aren’t we actually talking about &lt;em&gt;creating value&lt;/em&gt; and &lt;em&gt;improving outcomes&lt;/em&gt;?&lt;/p&gt;
+
+&lt;p&gt;The outcomes in photography that are important to me are recording a cherished memory and sharing with those closest to me, and digital tools support these outcomes in a way that was not as easy with traditional film.&lt;/p&gt;
+
+&lt;p&gt;And the benefit of digital technologies over paper-based processes is that the feedback loops between our decision, in this case to take a photograph, and the outcome, can be made so much more quickly. With the right digital tools, my understanding of the best aperture and shutter speed to use in those conditions and in that situation improves; I learn.&lt;/p&gt;
+
+&lt;p&gt;Getting the right information at the right time, synthesised appropriately to make it useful, informs our learning and therefore our ability to make decisions.&lt;/p&gt;
+
+&lt;p&gt;And digital is, quite simply, the best way to enable a learning culture.&lt;/p&gt;
+
+&lt;h1 id=&quot;a-continuous-learning-system&quot;&gt;A continuous learning system&lt;/h1&gt;
+
+&lt;p&gt;And that is why we are at the cusp of a true transformational change, because so many of our procedures and policies, our structures and services and even our budgets and planning, in so many industries, are rooted in the pre-digital era. That means our purchasing or budgeting decisions for solutions to problems are made on a cycle involving years. We plan projects because the pre-digital era required us to meticulous plan our work, deliver what was needed and then evaluate what we did.&lt;/p&gt;
+
+&lt;p&gt;Instead, digital is an important enabler of changing our mindset in all areas of our work, in healthcare and in other industries, mainly as a result of the speed and acuity of the feedback we can create by the right use of technology.&lt;/p&gt;
+
+&lt;p&gt;Lean methodologies teach us to defer decisions to the last &lt;em&gt;responsible&lt;/em&gt; moment, understanding that there is always uncertainty and delaying decisions permits time to gain more information and reduce that uncertainty. Agile methodologies teach us that we should be iterative in our work, breaking it up into small chunks and gaining constant feedback to guide continuous improvement. We should be adopting these principles not only in our work to develop healthcare software, but to manage and improve our services. Digital is a vital ingredient to support those methodologies.&lt;/p&gt;
+
+&lt;p&gt;As a result, digital, and being data-driven, means our planning cycles should become shorter and shorter, because we’re using small focused interventions and data to constantly evaluate our hypotheses and build a continuously learning healthcare system.&lt;/p&gt;
+
+&lt;p&gt;That means changing the way we think about budgets and financing our work.  Similarly, our real-life prospectively recorded outcome data should be used to inform our clinical practice; we have small examples of how this can already be done but the potential of the digital era is to make such an approach ubiquitous by understanding the importance of routinely collected meaningful data and how it can be used to support decision making by patients and professionals.&lt;/p&gt;
+
+&lt;p&gt;True digital transformation isn’t simply digitising our existing processes and replacing paper with a digital equivalent but instead, it is a complete change in mindset. We need to re-imagine our healthcare services with the benefit of the digital tools we have available to us and realise the value and improved outcomes that we can build on this data-driven foundation.&lt;/p&gt;
+
+&lt;h1 id=&quot;software-is-like-magic&quot;&gt;Software is like magic&lt;/h1&gt;
+
+&lt;p&gt;Software is like magic, automating and systematising even complex tasks. My mission is to make the most effective use of software in healthcare, and I think we’ve barely even started that journey yet.&lt;/p&gt;
+
+&lt;p&gt;We have a new and vast array of technologies available to us, from enormous quantities of data to real-time analytics, machine learning and applied artificial intelligence, with computing power and different sources of data all growing exponentially. None of us know what the future holds, and none of us have all of the answers, so whether we are talking about ambient sensors or interacting with software using our voice, the essence of our digital work is not just the technology, but instead our ability to make use of data to learn and to inform our decision making. And that means learning how to build software that supports that goal.&lt;/p&gt;
+
+&lt;p&gt;When we bring digital technologies into play, we speed up feedback on our actions and can perform complex processing tasks to make sense of burgeoning quantities of information and so “digital”, to me, is inextricably linked to becoming data-driven, because digital tools are the best way to combine and process information. That means understanding the best, evidence-based ways of creating and delivering safe, secure and valuable software code to end-users. And the best ways to deliver software like that is to use those same data-driven methodologies and build our software incrementally in small chunks with constant feedback to guide continuous improvement.&lt;/p&gt;
+
+&lt;h1 id=&quot;so-what-next&quot;&gt;So what next?&lt;/h1&gt;
+
+&lt;p&gt;In my view, our biggest risk is to think that we have all of the answers. Instead, we can set the broad principles to which we must work but build trusted teams to deliver against the outcomes we set, whether that be our healthcare services or the software that supports and enables transformation of those services.&lt;/p&gt;
+
+&lt;p&gt;The true digital revolution will come when we focus on generating meaningful data and use appropriate tools to make sense of that data, to drive our decision making, to use those data to reduce our uncertainty about our decisions, so that, we, in whatever role we have, are supported to make the right judgments at the right time.&lt;/p&gt;
+
+&lt;p&gt;We need to &lt;em&gt;learn&lt;/em&gt;, and digital technology is an essential part of building a continuously learning culture, in whatever industry you work. And that is the essence of digital transformation.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">“We’re at the beginning of the digital revolution” wrote Bill Gates in his foreword to Satya Nadella’s book “Hit Refresh”, published not, as you might initially guess, twenty years ago, but in 2017.</summary></entry><entry><title type="html">WTSB 27th September 2018</title><link href="https://www.wardle.org/wales/2018/10/07/wtsb.html" rel="alternate" type="text/html" title="WTSB 27th September 2018" /><published>2018-10-07T08:07:07+01:00</published><updated>2018-10-07T08:07:07+01:00</updated><id>https://www.wardle.org/wales/2018/10/07/wtsb</id><content type="html" xml:base="https://www.wardle.org/wales/2018/10/07/wtsb.html">&lt;p&gt;Our September NHS Wales Technical Standards Board was held on the 27th September.&lt;/p&gt;
+
+&lt;p&gt;We have been asked to identify, assess, set and assure technical principles and standards in NHS Wales. That means we need to build a catalogue of standards, including standards that are already in use, and standards that should be used for new developments. We recognise a need for pragmatism, so a catalogue must include not only information about that technical standard but how it should be implemented and used.&lt;/p&gt;
+
+&lt;p&gt;In this meeting, we discussed how to build safe, reliable, functioning processes to assess a technical standard for use within NHS Wales. It is important to recognise that this blog post is a snapshot of my reflections. As a board with an explicit adopted principle to be open and transparent and adopt an iterative approach to our work, so that we foster a culture of continuous improvement, these notes are simply that: notes and a work-in-progress.&lt;/p&gt;
+
+&lt;p&gt;With that caveat, what broad range of issues did we discuss?&lt;/p&gt;
+
+&lt;h1 id=&quot;things-to-consider&quot;&gt;Things to consider&lt;/h1&gt;
+
+&lt;p&gt;For any standard, we discussed a range of factors that might need to be teased out during any open, transparent process we designed:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;what is the user need? what are the use-cases?&lt;/li&gt;
+  &lt;li&gt;is the standard already used?&lt;/li&gt;
+  &lt;li&gt;is the standard already deprecated?&lt;/li&gt;
+  &lt;li&gt;are others using, working on or interested in this standard already?&lt;/li&gt;
+  &lt;li&gt;what can we learn from others using or working in domain in which the standard operates, and how do we engage with others who are using, working on or interested in this domain?&lt;/li&gt;
+  &lt;li&gt;is the scope of the functional requirements correct, or does it need to be broadened or made more specific?&lt;/li&gt;
+  &lt;li&gt;is the standard supported or due to be supported by the market? do we need to explore the market?&lt;/li&gt;
+  &lt;li&gt;what scoring mechanisms (e.g. procurement) can we use to discourage the use of standards at their end-of-life, and likewise, what can we do to drive market adoption?&lt;/li&gt;
+  &lt;li&gt;what are the false barriers to entry?&lt;/li&gt;
+  &lt;li&gt;what are the lifecycle issues to consider? (draft, draft-for-use, standard, deprecated but still in use, deprecated and not for use, planned?)&lt;/li&gt;
+  &lt;li&gt;how does one identify or drive traction of a standard?&lt;/li&gt;
+  &lt;li&gt;how do we judge the need and the content of a standard, particularly for new developments?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;architecture-and-interoperability&quot;&gt;Architecture and interoperability&lt;/h1&gt;
+
+&lt;p&gt;When we think of technical standards, we thought it helpful to consider the different places in which those standards might be used for interoperability. Interoperability is how we make make computer systems or software exchange information. Most of us recognise that simply exchanging information is insufficient but instead we must aim for meaningful (semantic) interoperability in which systems exchange information and make use of that information.&lt;/p&gt;
+
+&lt;p&gt;Almost all computer systems try to break down complex problems into discrete modular components, each of which do a limited set of things very well and traditional applications stitches these together into what appears to be a cohesive whole. Modularity means that teams can work semi-independently of one another and so long as they interact appropriately (at technical, legal and human levels).&lt;/p&gt;
+
+&lt;p&gt;Interoperability is usually used to define the interactions between distributed systems and software. This enables technologies such as the World Wide Web, in which your computer has no difficulty in interacting with software running on a completely different computer somewhere else in the world to show you a web page.&lt;/p&gt;
+
+&lt;p&gt;We already use interoperability in healthcare as almost all health enterprises use a range of computer systems that need to be made to work together. A common, if old-fashioned example, is the use of HL7v2 to send messages regarding &lt;a href=&quot;http://healthstandards.com/blog/2006/10/05/what-is-an-adt-message/&quot;&gt;admissions, discharges and transfers&lt;/a&gt;. As a source system notifies dependent systems about a change by sending a message, we call this approach &lt;em&gt;push messaging&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Push messaging is well established within health enterprises and most have adopted a messaging fabric that acts as a safe bus to transport messages across systems with high levels of scalability, monitoring and queuing as well as often providing assertions as to reliability and performance. But there are problems with it. Dependent systems need to potentially deal with a constant influx of messages being sent to them and managing security is difficult. A source system sends out messages and therefore controlling which subscribed systems should be notified can prove challenging; many push enterprises adopt a patient-of-interest list that defines a subset of patients for whom a target system should receive messages. Inherent in this architectural design, is the concept that each application maintains its own state, with messages being used to keep disparate disconnected systems consistent.&lt;/p&gt;
+
+&lt;p&gt;Instead, modern enterprises have moved towards a model of “pull messaging”, in which a system retrieves data from another. This means that security checks become much easier because we can understand, at the time of the request to retrieve that data, which application is making the request on behalf of which user.&lt;/p&gt;
+
+&lt;p&gt;I sketched a version of this schematic in order to try to understand the use cases and the difference between a “pull” and “push” approach.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/open-platform/wtsb-architecture-standard.png&quot; alt=&quot;Wtsb Architecture Standard&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;For example, a laboratory test result is pushed from a laboratory information management service (LIMS) and is stored in a vendor-neutral archive. In Wales, we call this the Welsh Results Reporting Service (WRRS). We could expose that archive as a FHIR diagnostic report &lt;a href=&quot;https://www.hl7.org/fhir/diagnosticreport.html&quot;&gt;https://www.hl7.org/fhir/diagnosticreport.html&lt;/a&gt; as a microservice. Multiple independent services like that are blended together into a cohesive whole to create what appears to be an enterprise-wide cohesive API acting as a gateway and hiding (abstracting) the underlying implementation. Importantly, if we wanted to show laboratory results from other centres, we could either use one of two approaches to provide a unified view:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;a federate/delegate/aggregate model, in which a service accepts a request for data, sends that request to multiple other private services, collects the responses to create a unified view&lt;/li&gt;
+  &lt;li&gt;a shared repository model, in which all centres push data into a shared repository via health information exchange.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This approach to architecture means that, while we have a LIMS that does not support HL7 FHIR and appropriate UK-wide shared profiles, we can still expose our laboratory data via HL7 FHIR. Once LIMS is replaced by a version that natively supports the more modern technical standards, we can deploy and existing modern applications &lt;em&gt;do not need to be modified in order to continue to run&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;The important considerations are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;use of vendor neutral data repositories&lt;/li&gt;
+  &lt;li&gt;move towards an application programming interface (API) approach built on open standards&lt;/li&gt;
+  &lt;li&gt;understand that need to liberate data from legacy applications and make use of existing infrastructure&lt;/li&gt;
+  &lt;li&gt;existing legacy includes tightly-coupled bespoke integrations that do not fit into this schematic. Such an approach needs to be deprecated in favour of a more modular loosely coupled architecture&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;As such, we surely need to consider technical standards at multiple levels of our architecture, taking into account existing infrastructure and a clear future direction. This is shown graphically with the arrows.&lt;/p&gt;
+
+&lt;p&gt;I believe that the future of electronic health records is based on:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;open standards&lt;/li&gt;
+  &lt;li&gt;distributed systems&lt;/li&gt;
+  &lt;li&gt;lightweight applications&lt;/li&gt;
+  &lt;li&gt;shared common services for data and logic&lt;/li&gt;
+  &lt;li&gt;domain-driven modelling for clinical and administrative data, as well as clinical workflow&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;process&quot;&gt;Process&lt;/h1&gt;
+
+&lt;p&gt;So given these considerations, how can we define a process that we can use in order to make rapid, pragmatic process while keeping within the broad principles and cohesive, credible technical architecture for our health and care data?&lt;/p&gt;
+
+&lt;p&gt;We worked through an example request for a standard - one of our colleagues from Aneurin Bevan submitted a request for a “Technical standard to support exchange of eObservations information using HL7 version 2 (HL7v2) messages”.&lt;/p&gt;
+
+&lt;p&gt;This was a really useful example, and it led to a draft standards assessment process which I have drawn out here:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/open-platform/wtsb-process.png&quot; alt=&quot;Wtsb Process&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;One of the important considerations is to ensure the scope is defined, particularly in relation to high level clinical requirements - &lt;em&gt;user need&lt;/em&gt;. Understanding the alignment between information technology and our wider strategic objectives is critical. For this technical standard, we need to understand &lt;em&gt;why&lt;/em&gt; we are being asked to help with eObservations and put that in context of our wider architectural and technical infrastructure plans.&lt;/p&gt;
+
+&lt;p&gt;It was immediately clear that there was uncertainty about the scope of this request, as it specifically requested an NHS Wales standard on the format of HL7 v2 messages. In my view, we must broaden the scope to understand the wider clinical need, perhaps in terms of user stories, to see that what we are trying to solve is not simply exchanging HL7v2 messages but providing a wider framework for handling and making use of eObservation data. As a result, this request could be broadened to include technical standards for HL7 FHIR resources representing those data as well as HL7v2 messages that are sent by applications and services that do not, as yet, support HL7 FHIR.&lt;/p&gt;
+
+&lt;p&gt;Our plan now is to draft a more broad eObservations technical standards paper to include some of the factors outlined in my process diagram to see whether the process works and is helpful. I will write another blog post when we have learnt more about this!&lt;/p&gt;
+
+&lt;p&gt;Finally, I would like to re-iterate the importance of a learning culture in our work: we adopted the GDS design principles. One of those is the use of iteration and incremental improvement. While you might consider such an agile approach for our software development processes, I would argue that we also need to approach our wider technological leadership and management approaches in an agile way; that means we test our assumptions and make incremental improvements to the way we work. This post is my attempt to embrace that approach. Let me know what you think.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Our September NHS Wales Technical Standards Board was held on the 27th September.</summary></entry><entry><title type="html">Building an open health and care platform for Wales</title><link href="https://www.wardle.org/strategy/2018/10/02/open-platform-wales.html" rel="alternate" type="text/html" title="Building an open health and care platform for Wales" /><published>2018-10-02T16:15:15+01:00</published><updated>2018-10-02T16:15:15+01:00</updated><id>https://www.wardle.org/strategy/2018/10/02/open-platform-wales</id><content type="html" xml:base="https://www.wardle.org/strategy/2018/10/02/open-platform-wales.html">&lt;p&gt;We should use information technology to better deliver our broad health and care objectives.&lt;/p&gt;
 
 &lt;p&gt;That means using information technology to support, improve, transform and re-imagine the delivery of health care; that means we must move away from delegating information technology to a separate department or even, as we do in Wales, a separate organisation.&lt;/p&gt;
 
@@ -1148,228 +1307,4 @@
 
 &lt;p&gt;If you have any comments or thoughts, let me know. I promise to tell you how we get on, and share the learning, the results (good or bad) with you.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">We held the second meeting of the Welsh Technical Standards Board (WTSB) today and I am delighted to announce that we have formally adopted the GDS Design Principles for use by NHS Wales. These are:</summary></entry><entry><title type="html">Informed Health and Care: Delivery</title><link href="https://www.wardle.org/wales/2018/05/27/delivery.html" rel="alternate" type="text/html" title="Informed Health and Care: Delivery" /><published>2018-05-27T21:20:20+01:00</published><updated>2018-05-27T21:20:20+01:00</updated><id>https://www.wardle.org/wales/2018/05/27/delivery</id><content type="html" xml:base="https://www.wardle.org/wales/2018/05/27/delivery.html">&lt;p&gt;&lt;a href=&quot;http://gov.wales/topics/health/nhswales/about/e-health/?lang=en&quot;&gt;“Informed health and care – A digital health and social care strategy for Wales”&lt;/a&gt; sets out a clear vision for the use of information technology to support the provision of healthcare for citizens within Wales.&lt;/p&gt;
-
-&lt;p&gt;This vision is split into four key themes:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;“Information for You”&lt;/li&gt;
-  &lt;li&gt;“Supporting professionals”&lt;/li&gt;
-  &lt;li&gt;“Improvement and innovation”&lt;/li&gt;
-  &lt;li&gt;“A Planned future”.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“We want a future where staff, service users, patients and carers are empowered and better informed, where organisational boundaries are not a barrier to effective care, as information is available electronically and joined-up, and where innovation and improvement can flourish built on a solid technical infrastructure and a safe environment for those who work in or are served by health and care services in Wales.”&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The key question for us to answer is, what are the challenges that must be overcome to deliver this vision? As part of that process, we must identify current and future impediments to successful delivery and look to changing how we work to meet those challenges.&lt;/p&gt;
-
-&lt;h1 id=&quot;a-partnership-for-delivery&quot;&gt;A partnership for delivery&lt;/h1&gt;
-
-&lt;p&gt;Here is my five-step plan to deliver the strategy:&lt;/p&gt;
-
-&lt;h4 id=&quot;1-change-our-metrics&quot;&gt;1. Change our metrics&lt;/h4&gt;
-
-&lt;p&gt;Metrics, quantifiable measures of progress, are important indicators of what we want to achieve and so must represent those ambitions. Our National Informatics Management Board (NIMB) in Wales uses delivery of certain products into different health boards as a measure of success, but is that appropriate? We need to focus instead on &lt;em&gt;value&lt;/em&gt; and &lt;em&gt;outcomes&lt;/em&gt; for our population, and therefore change our metrics to represent &lt;em&gt;solving problems&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;This approach forces us to step back and focus on the problems we are solving with information technology and ensures that we don’t become blinkered into adopting a certain approach that will delay realising value for patients and professionals.&lt;/p&gt;
-
-&lt;h4 id=&quot;2-change-our-governance-and-ownership&quot;&gt;2. Change our governance and ownership&lt;/h4&gt;
-
-&lt;p&gt;We have health boards working to deliver care for their citizens but a separate organisation, the NHS Wales Informatics Service (NWIS) acting in multiple, potentially conflicting, roles as a source of IT expertise for the service, as a source oversight and assurance, as a supplier of software and supplier of infrastructure. The &lt;a href=&quot;https://www.audit.wales/system/files/publications/NHS_-Informatics-2018%20-%20English.pdf&quot;&gt;Welsh Audit Office (WAO) report&lt;/a&gt; strongly criticises the governance arrangements and the imbalanced reporting of success and progress.&lt;/p&gt;
-
-&lt;p&gt;Don’t we need to consider instead, a partnership, owned by the health service for the health service working to increase cooperation and collaboration providing top-down governance and assurance separate from an any organisation with supplier status? Surely we need a strategic assurance group able to set broad principles and define, maintain and assure technical and information standards for use across NHS Wales and its partners?&lt;/p&gt;
-
-&lt;p&gt;We must  encourage trust, collaboration and cooperation to encourage bottom-up working to solve real-life local problems and share good practice among peers. This means getting the right balance between governance and delivery, whether those projects are delivered in-house, by collaborative working groups working across and for NHS organisations or by third-parties.&lt;/p&gt;
-
-&lt;h4 id=&quot;3-change-our-architecture-and-our-team-structures&quot;&gt;3. Change our architecture and our team structures&lt;/h4&gt;
-
-&lt;p&gt;The current architecture in NHS Wales is built from an enterprise service bus (ESB) messaging service but much of our software integration is bespoke and point-to-point and there is a lack of robust automated unit and integration test environments offering end-to-end assurance of proper functionality. There are significant delays between design and getting software to end-users, limiting feedback on quality, performance and failing to identify user need by iterative ongoing continuous improvement and iteration.&lt;/p&gt;
-
-&lt;p&gt;We need to modularise our architecture and realise the productivity and safety benefits from combining development, testing and operations into cross-functional teams with shared common goals to deliver discrete modules of functionality that can be independently developed and improved with loose-coupling with other components.  A change in architecture should prompt us to create task-driven teams bringing together expertise from our existing functional units with a single goal: delivery of quality software to solve our problems, create value and as a result, improve the outcomes for our population. We need to see information technology as a tool for continuous improvement and service transformation and we need to speed up and isolate modules of our information technology work in order to delivery and improve.&lt;/p&gt;
-
-&lt;p&gt;Such an approach builds on our existing work to adopt a standards-based approach to our healthcare enterprise architecture.&lt;/p&gt;
-
-&lt;h4 id=&quot;4-change-our-culture&quot;&gt;4. Change our culture&lt;/h4&gt;
-
-&lt;p&gt;We need to adopt the &lt;a href=&quot;https://www.gov.uk/guidance/government-design-principles&quot;&gt;UK Government Digital Service (GDS) design principles&lt;/a&gt; and focus on openness and transparency in our work.&lt;/p&gt;
-
-&lt;p&gt;Healthcare information technology is hard, and we need to be able to step back and re-evaluate our progress and our plan for delivery, bring in outside expertise when needed and justify our decisions with a clear and informed appraisal of our options, without conflicts of interest. This relates, of course, to the changes we need in governance; an organisation who runs two data centres itself is unlikely to be able to make the difficult decisions to switch to using commodity cloud providers or to judge itself against agreed service level agreements.&lt;/p&gt;
-
-&lt;p&gt;For example, I was asked to take “down this blog” as my posts on strategy and technical architecture were perceived as criticism and this was “particularly difficult” to tolerate as I was working (at the time) for the NHS Wales Informatics Service. How can that be right? We must encourage and foster debate, be transparent in our decision making, which, after all, will always be a compromise and balance between advantages and disadvantages, and recognise that we should bring in expert help when appropriate in order for us to make the right decisions for Wales.&lt;/p&gt;
-
-&lt;h4 id=&quot;5-change-our-focus&quot;&gt;5. Change our focus&lt;/h4&gt;
-
-&lt;p&gt;NHS Wales must face some difficult choices.  For too long, external factors have resulted in incoherent and inconsistent delivery or projects, frequency orthogonal to delivery of the wider vision; in many cases it has been driven by the budgeting process and the availability of funds in any single financial year.&lt;/p&gt;
-
-&lt;p&gt;A coherent plan to deliver the strategy needs more than a list of disconnected and incompatible goals but instead a clear understanding of what needs to be done and what doesn’t need to be done; we must know when to say “no”. Instead, we focus our limited resources on specific tangible actions and make some difficult decisions to prune areas of work that do not support delivery of the wider vision, or those areas of work that can be easily provided by third-parties. We need to prioritise our work and focus on delivery of value and improved outcomes. We must focus on user need.&lt;/p&gt;
-
-&lt;p&gt;We must recognise that technology evolves quickly and so we must build culture and architecture to encourage and enable innovation and partnership working recognising that our population can benefit from a digital-first approach to healthcare, whether directly in their interactions with out services or indirectly as a result of better planning, scheduling and clinical decision support. Our ecosystem should be focused on building tools and frameworks to make the work of both internal and external developers, safe, productive and efficient.&lt;/p&gt;
-
-&lt;p&gt;Similarly, we must raise our focus away from only healthcare in Wales and recognise that we must exchange meaningful information with partner organisations in other regions and in other disciplines.&lt;/p&gt;
-
-&lt;p&gt;Finally, we must become focused on being &lt;em&gt;data-driven&lt;/em&gt;, so that we focus firstly on the capture and analysis of clinically meaningful structured and semantically interoperable data, and use those data to shape and improve our services. Similarly, our information technology developments should, themselves, be driven by data, by usage and by metrics of performance, stability and security. The data driving our work should be meaningful and standards-based.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;further-reading&quot;&gt;Further reading&lt;/h1&gt;
-
-&lt;h4 id=&quot;on-once-for-wales&quot;&gt;On “Once for Wales”&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/03/15/once-for-wales.html&quot;&gt;Once for Wales : a debate&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;on-trust-and-innovation&quot;&gt;On trust and innovation&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/12/06/paradox-of-ambition.html&quot;&gt;The paradox of ambition&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/12/05/enabling-innovation.html&quot;&gt;The paradox of control&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/12/06/5os-health.html&quot;&gt;The 5 Os of healthcare IT - objectives, ownership, openness, optimise, organic&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;on-platforms&quot;&gt;On platforms:&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;/clinical-informatics/2017/10/19/data-driven.html&quot;&gt;Data-driven healthcare&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/digital-platform/2018/03/03/platform-wales-1.html&quot;&gt;Platforms 1/3. Standards and interoperability&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/digital-platform/2018/03/03/platform-wales-2.html&quot;&gt;Platforms 2/3. An API-first approach&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/digital-platform/2018/03/03/platform-wales-3.html&quot;&gt;Platforms 3/3. What we need to do next&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;on-focus&quot;&gt;On focus:&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/01/19/focus-focus-focus.html&quot;&gt;Focus 1/3. The importance of strategy : focus&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/01/19/focus-challenges.html&quot;&gt;Focus 2/3. The challenges we face in delivering the vision&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/01/19/focus-solutions.html&quot;&gt;Focus 3/3. Pragmatic solutions to those challenges&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;on-data&quot;&gt;On data:&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/08/22/health-data.html&quot;&gt;Health data - start with a problem&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/10/19/data-driven.html&quot;&gt;Data-driven healthcare&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;on-development-standards-and-ecosystems&quot;&gt;On development standards and ecosystems&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/05/06/cloud-ehr.html&quot;&gt;Creative 1/3: creative destruction in health IT&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/05/06/clinical-software-quality.html&quot;&gt;Creative 2/3: the value of software for healthcare: quality improvement and service transformation underpinned by software, and software underpinning by quality improvement&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/05/08/ecosystems.html&quot;&gt;Creative 3/3: ecosystems and the platform&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">“Informed health and care – A digital health and social care strategy for Wales” sets out a clear vision for the use of information technology to support the provision of healthcare for citizens within Wales.</summary></entry><entry><title type="html">Welsh Technical Standards Board</title><link href="https://www.wardle.org/wales/2018/05/15/wtsb.html" rel="alternate" type="text/html" title="Welsh Technical Standards Board" /><published>2018-05-15T10:09:09+01:00</published><updated>2018-05-15T10:09:09+01:00</updated><id>https://www.wardle.org/wales/2018/05/15/wtsb</id><content type="html" xml:base="https://www.wardle.org/wales/2018/05/15/wtsb.html">&lt;p&gt;I am delighted to announce that I have been asked to chair the new Welsh Technical Standards Board (WTSB) for NHS Wales. We will support the creation and maintenance of a catalogue of standards and requirements to enable integration and interoperability across all health and care systems in a consistent and secure manner, and to support local innovation and the use of third party delivery partners.&lt;/p&gt;
-
-&lt;p&gt;The scope of this Board covers:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Integration standards&lt;/li&gt;
-  &lt;li&gt;Software development standards&lt;/li&gt;
-  &lt;li&gt;Infrastructure standards&lt;/li&gt;
-  &lt;li&gt;Cyber security standards&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Our responsibilities will be:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;the identification, assessment and setting of standards and for assuring the application of agreed standards across the national architecture.&lt;/li&gt;
-  &lt;li&gt;The ongoing maintenance of the catalogue of standards, including:&lt;/li&gt;
-  &lt;li&gt;establishing a road map to support the implementation of agreed standards, including how each standard should be implemented and used&lt;/li&gt;
-  &lt;li&gt;periodically assessing agreed standards to ensure they remain relevant and appropriate&lt;/li&gt;
-  &lt;li&gt;establishing a road map to support the decommissioning of standards&lt;/li&gt;
-  &lt;li&gt;identifying opportunities locally, regionally and nationally to adopt standards providing quick wins, case studies and learning to inform the road map.&lt;/li&gt;
-  &lt;li&gt;embedding an interoperability framework within NHS procurement at a local and national level to ensure that procurements are appropriately scored as to their level of interoperability.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Our inaugural meeting will be the 22nd May 2018.&lt;/p&gt;
-
-&lt;h1 id=&quot;openness-transparency-and-public-working&quot;&gt;Openness, transparency and public working&lt;/h1&gt;
-
-&lt;p&gt;One of my ambitions is to make the WTSB open and transparent; to this end, one of our first agenda items is to determine the best way to ensure that our work and the results of our work, are fully open. In addition, can’t we take this approach further? While we can ensure that our work is visible to any member of the public, I aspire to encourage active participation, recognising that we work for many stakeholders. That means not only will our catalogue of standards be publicly available, but the day-to-day working of our group will, by default, be similarly available.&lt;/p&gt;
-
-&lt;p&gt;Similarly, our remit is broad and we will need to look to bring in outside expertise as and when required to support different streams of work. With such a broad remit, we will need to break down our goals into smaller chunks via more specialised work groups.&lt;/p&gt;
-
-&lt;h1 id=&quot;who-do-we-work-for&quot;&gt;Who do we work for?&lt;/h1&gt;
-
-&lt;p&gt;In my view, we work for patients, to define standards in an attempt to improve patient care, by supporting the development, testing, evaluation and deployment of valuable healthcare software for citizens in Wales.&lt;/p&gt;
-
-&lt;p&gt;However, our immediate audience comprises three core groups:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;The NHS Wales Informatics Service (NWIS) who are responsible for delivering “shared for Wales” services underpinning the &lt;em&gt;single patient record&lt;/em&gt;.&lt;/li&gt;
-  &lt;li&gt;Health organisations in Wales, who have a statutory responsibility to deliver healthcare to citizens and need to procure or develop local software to meet local needs.&lt;/li&gt;
-  &lt;li&gt;External partners including the third sector and commercial entities in order to permit a digital ecosystem and ensure innovation.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;In my view, we should treat these three audiences with the same importance.&lt;/p&gt;
-
-&lt;p&gt;My key aim is to foster cooperation and collaboration and encourage the adoption best practices. We should aim to have software code and documentation publicly available, and encourage contributions from stakeholders, from developers, across all interested groups.&lt;/p&gt;
-
-&lt;h1 id=&quot;agenda-22nd-may-2018&quot;&gt;Agenda 22nd May 2018&lt;/h1&gt;
-
-&lt;h4 id=&quot;1-welcome-and-introductions&quot;&gt;1. Welcome and introductions&lt;/h4&gt;
-
-&lt;h4 id=&quot;2-terms-of-reference-and-discussion-of-membership&quot;&gt;2. Terms of reference and discussion of membership&lt;/h4&gt;
-
-&lt;p&gt;See &lt;a href=&quot;https://drive.google.com/file/d/1jMLpNP5w6-SvO9ChUPGjqGU-1_HHo0T7/view?usp=sharing&quot;&gt;Document 1&lt;/a&gt;,&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Is it right. Are we missing important people? e.g. What about security input?&lt;/li&gt;
-  &lt;li&gt;Is it appropriate to bring in expertise on an ad-hoc basis, particularly when considering working groups?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;3-in-relation-to-how-the-board-will-function&quot;&gt;3. In relation to how the board will function&lt;/h4&gt;
-
-&lt;p&gt;See &lt;a href=&quot;https://drive.google.com/file/d/16J7BRN7-WfgH2Rh1B0v6pO867CuvjpB7/view?usp=sharing&quot;&gt;Document 2&lt;/a&gt;, do you agree that we need:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;A catalogue of existing system services and functions within the national architecture&lt;/li&gt;
-  &lt;li&gt;A corresponding record of the standards used already&lt;/li&gt;
-  &lt;li&gt;A roadmap to identify services and functions that would benefit from the adoption of standards&lt;/li&gt;
-  &lt;li&gt;To register https://api.wales.nhs.uk with three consumers in mind, NWIS, health boards and third-parties via the digital ecosystem, and as such, encourage open collaboration and trust by sharing documentation publicly?&lt;/li&gt;
-  &lt;li&gt;To invite external speakers with specific industry knowledge to inform our working such as
-    &lt;ol&gt;
-      &lt;li&gt;Open source and collaboration experts to talk about openness and transparency, about shared working. (e.g. what can we learn from methods used by open source collaborative groups such as the Apache Software Foundation?)&lt;/li&gt;
-      &lt;li&gt;Experts on best practices for software development methodologies, including agile, DevOps, infrastructure-as-code, production-like test environments&lt;/li&gt;
-      &lt;li&gt;Industry representatives e.g. commercial suppliers, integration and interoperability experts -&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;That we will need five broad categories of interoperability standards, relating to:&lt;/p&gt;
-
-    &lt;ol&gt;
-      &lt;li&gt;Security, staff identity management and logging. We will need to identify expertise in federated security models such as OAUTH2.&lt;/li&gt;
-      &lt;li&gt;Demographics and citizen identity&lt;/li&gt;
-      &lt;li&gt;Diagnostic test standards (e.g. laboratory and radiology standards) relating to the requesting, reporting and viewing of diagnostic testing&lt;/li&gt;
-      &lt;li&gt;Clinical Document standards relating to the creation, storage and transmission of clinical documents&lt;/li&gt;
-      &lt;li&gt;Clinical data standards relating to the recording of structured clinical information such as diagnoses, treatments and procedures as part of the wider logical single patient record.&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;4-proposed-technical-standards-for-consideration&quot;&gt;4. Proposed technical standards for consideration:&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;API specifications for services supporting the storage and retrieval of e-Observations data such as temperature, pulse rate, respiratory rate, level of consciousness, weight and height.&lt;/li&gt;
-  &lt;li&gt;API specifications for services supporting the storage and retrieval of clinical documents and their associated metadata&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;5-links-with-other-groups&quot;&gt;5. Links with other groups&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Do you agree that we need to ensure communication with other groups across the UK and Internationally, to ensure that there is harmonisation of technical standards, where possible?&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;If so, to which groups do we already have links and to which groups must we approach to ensure representation for Wales?&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;6-any-other-business&quot;&gt;6. Any other business?&lt;/h4&gt;
-
-&lt;p&gt;If you have comments on any of these agenda items, then please contact me. As this will be our inaugural meeting, the best way to feed back your comments is directly to me, at mark@wardle.org&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">I am delighted to announce that I have been asked to chair the new Welsh Technical Standards Board (WTSB) for NHS Wales. We will support the creation and maintenance of a catalogue of standards and requirements to enable integration and interoperability across all health and care systems in a consistent and secure manner, and to support local innovation and the use of third party delivery partners.</summary></entry></feed>
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">We held the second meeting of the Welsh Technical Standards Board (WTSB) today and I am delighted to announce that we have formally adopted the GDS Design Principles for use by NHS Wales. These are:</summary></entry></feed>
