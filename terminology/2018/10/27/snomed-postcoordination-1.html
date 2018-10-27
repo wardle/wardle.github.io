@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Semantic interoperability: SNOMED CT, post-coordination and the model</title>
+  <meta name="description" content="One of our goals in healthcare information technology is to enable the meaningful exchange of information between distributed systems in the support of three...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://www.wardle.org/terminology/2018/10/27/snomed-postcoordination-1.html">
+  <link rel="alternate" type="application/rss+xml" title="Health informatics and information technology" href="/feed.xml">
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-97389603-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="/">Health informatics and information technology</a>
+  
+  
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+           <a class="page-link" href="/">All posts</a>
+          
+            
+            
+            <a class="page-link" href="/projects/">Projects</a>
+            
+          
+            
+            
+            <a class="page-link" href="/about/">About</a>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Semantic interoperability: SNOMED CT, post-coordination and the model</h1>
+    <p class="post-meta">
+      <time datetime="2018-10-27T20:10:19+01:00" itemprop="datePublished">
+        
+        27 October 2018
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>One of our goals in healthcare information technology is to enable the meaningful exchange of information between distributed systems in the support of three broad purposes:</p>
+
+<ul>
+  <li>direct care,</li>
+  <li>management and quality improvement</li>
+  <li>clinical research.</li>
+</ul>
+
+<p>However, it is insufficient to simply exchange information at a technical level, but we must aim for <em>semantic</em> interoperability so that we exchange <em>meaningful data</em>.</p>
+
+<p>When I say meaningful data, I mean data that has meaning and can be used for decisions, in order to reduce uncertainty about those decisions. Those decisions may be made by a professional, by a patient or carer, or much more likely, shared decisions among groups of those individuals. Those decisions may be clinical, such as should we start anticoagulation to prevent a stroke, or administrative, such as how many patients should we book into that clinic?</p>
+
+<p>But when I use the term meaningful data, I also  include the ability to use software to process that information; it is computable. It is important to understanding the benefits of computable information, because computer software is quite simply the best way to make sense of large amounts of information. Making data computable means our clinical work can become <em>data-driven</em>.</p>
+
+<p>Making our data computable means that machines can help in processing and understanding, and with the advent of machine learning, even make or suggest decisions based on information. But this post isn’t about machine learning, although it is, I believe, a foundational step for the appropriate and meaningful development and application of machine learning in healthcare.</p>
+
+<p>So this blog post is about how we can record information in a way that is useful to both humans and machines. For humans it should mean data can be entered more quickly and for machines, it permits better processing so that they can support us humans!</p>
+
+<h1 id="how-to-be-data-driven">How to be data-driven</h1>
+
+<p>SNOMED CT is a comprehensive terminology and ontology for use in healthcare and it forms an important component of the solution to semantic interoperability. I implemented SNOMED CT in a electronic patient record system and it has been live and running for clinical use in the UK since 2009.</p>
+
+<p>The SNOMED CT model consists of three core entities:</p>
+
+<ul>
+  <li>concepts, represents a unique concept</li>
+  <li>descriptions, represents synonyms for a concept</li>
+  <li>relationships, represents relationships between concepts</li>
+</ul>
+
+<p>I’ve written extensively about SNOMED-CT on this blog; the best way of understanding the ontology is to browse using an <a href="https://termbrowser.nhs.uk">online browser</a> but SNOMED International provide <a href="https://confluence.ihtsdotools.org/display/DOCSTART/1.+Introduction">a useful introductory guide</a></p>
+
+<h1 id="concepts">Concepts</h1>
+
+<p>Many concepts represent a single independent concept, but many are actually <em>compound</em>, representing a number of concepts combined into a meaningful whole.</p>
+
+<p>For example, <code class="highlighter-rouge">cholecystectomy</code> (<a href="https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=38102005">38102005</a>) is a single concept representing removal of the gallbladder. <code class="highlighter-rouge">Laparoscopic cholecystectomy</code> is single concept representing removal of the gallbladder with a laparoscope (<a href="https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=45595009">45595009</a>).</p>
+
+<p>A SNOMED CT <em>expression</em> combines concepts without needing every possible combination of concepts to be created within the terminology. For example,</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>80146002|appendectomy|
+   :260870009|priority|=25876001|emergency|,
+   425391005|using access device|=86174004|laparoscope|
+</code></pre>
+</div>
+
+<p>represents performing an appendicectomy as an emergency using an laparoscope. We could add this as a distinct single concept into SNOMED CT but that would result in a combinatorial explosion; that means we’d have to have single concepts representing all possible permutations which is simply not practical. However, mainly for historical reasons or to ease implementation, SNOMED CT does already contains many single concepts that combines multiple concepts into one.</p>
+
+<p>However, SNOMED CT expressions are a powerful way of refining a concept with additional information, creating, in effect, a clinical phrase. This technique is called <em>post-coordination</em>.</p>
+
+<h1 id="why-not-use-post-coordination">Why not use post-coordination?</h1>
+
+<p>I have usually advocated keeping the implementation of SNOMED CT simple by using only pre-coordinated concepts. My concerns about using post-coordination have been that:</p>
+
+<ol>
+  <li>it added complexity to end-users in terms of selection and display of terms,</li>
+  <li>it made data storage more difficult, and would break referential integrity in my own system.</li>
+  <li>it would complicate using those terms at a computational level e.g. in automated decision support.</li>
+  <li>we gain significant value simply from recording pre-coordinated concepts</li>
+</ol>
+
+<p>It is (1) and (3) that concerned me most.</p>
+
+<p>For example, in my own electronic health record software, users don’t know that they are selecting SNOMED terms; they start typing and it autocompletes or simply choose an option using a pop-up, choose a part of the anatomy from a picture or a term is imputed on the basis of other data entered. Adding complexity in adding refinements or qualifiers or embedding expressions worried me. I wanted to make SNOMED CT invisible to end-users and yet enable new decision support and analytics capabilities, hitherto not possible using unstructured free-text.</p>
+
+<p>I hadn’t conceived of a simple way to make using SNOMED invisible if I created functionality to build expressions; I now think differently.</p>
+
+<h1 id="information-models">Information models</h1>
+
+<p>However, in the majority of cases, I think many uses of post-coordination such as qualification or refinement or additional information should instead be a function of the wider information model in which the SNOMED CT concept is recorded.</p>
+
+<p>For example, the FHIR definition of a <a href="https://www.hl7.org/fhir/condition.html">Condition</a>, which includes metadata about the problem/diagnosis concept is shown here:
+<img src="/images/snomed-postcoord/fhir-condition.jpeg" alt="Fhir Condition" /></p>
+
+<p>It includes information relating to status (active/inactive etc), verification (provisional, differential) and severity (severe, moderate, mild), as well as information about the condition’s onset and abatement (remission/resolution).</p>
+
+<p>If we use post-coordination without carefully considering the consequences and their mitigation, given that there is an overlap between information recorded within an expression and the wider information model, we risk duplication, complexity and inconsistency.</p>
+
+<h1 id="computing-attributes">Computing attributes</h1>
+
+<p>But there are clearly situations where refining a concept with additional information would be helpful. For example, we really wanted to be able to add a more specific anatomical location when we recorded that a patient had a brain abscess.</p>
+
+<p>The SNOMED-CT ontology helps us, at the computational level, determine <em>how</em> “cerebral abscess” can be refined:</p>
+
+<p>A <a href="https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=60404007"><code class="highlighter-rouge">cerebral abscess</code> (60404007)</a> is an abscess in the brain.</p>
+
+<p>Firstly, we can determine a way to <em>refine</em> this concept using post-coordination to specifically give the location. The ontology provides, as part of its model, attribute relationships for this concept, at a computational level:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code> Is a (attribute)                   -&gt; Abscess of brain (disorder)	
+ Associated morphology (attribute)  -&gt; Abscess (morphologic abnormality)
+ Finding site (attribute)           -&gt; Cerebral structure (body structure)
+</code></pre>
+</div>
+
+<p>For example, we can see that we can refine the concept <code class="highlighter-rouge">cerebral abscess</code> with a finding site that is a child of the concept <code class="highlighter-rouge">Cerebral structure (body structure)</code> (<a href="https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=83678007">83678007</a>).</p>
+
+<p>As a result, computationally, we can offer a choice to the end-user to refine this concept with any finding site, such as <code class="highlighter-rouge">Structure of parahippocampal gyrus</code> (<a href="https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=13989007">13989007</a>)</p>
+
+<p>Secondly, we can add refinements as a result of our concept being in one of the nine main SNOMED CT hierarchies. The attributes appropriate for each hierarchy are listed <a href="https://confluence.ihtsdotools.org/display/DOCSTART/6.+SNOMED+CT+Concept+Model">on the SNOMED International concept model documentation</a>. For example, a clinical finding can be qualified by adding concepts representing a <code class="highlighter-rouge">Finding Site</code>, a <code class="highlighter-rouge">Causative Agent</code>, or <code class="highlighter-rouge">Severity</code> among others.</p>
+
+<p>Thirdly, we can add refinements because of the existence of our concept within a certain reference set. For example, there is a <a href="https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=723264001">laterality reference set</a> that tells us which concepts can be lateralised.</p>
+
+<p>It is therefore straightforward to imagine that, if a cerebral abscess is entered by a user as a diagnostic concept, we might configure our user interface or natural language parser to look for and refine that diagnostic concept with additional information relating to finding site, appropriately limited to the brain using subsumption, given that we have entered cerebral abscess, and offering a choice of laterality.</p>
+
+<p>So we can see that location, laterality and causative agents <em>might</em> be very appropriate options for refinement, but should we let users post-coordinate diagnostic concepts with a type of ```Severity’’’? This matters because we need to think about how we write software to process these terms.</p>
+
+<h1 id="equivalence-and-the-importance-of-meaning">Equivalence and the importance of meaning</h1>
+
+<p>The key issue with processing SNOMED CT, either as pre-coordinated terms or as expressions, is to ensure that we can process <em>meaning</em>.</p>
+
+<p>That means that, in any implementation of SNOMED CT, whether using only pre-coordinated terms or post-coordination to create an expression, we need to handle equivalence at not just the level of SNOMED, but also take into account the wider information model, providing the context in which that concept or expression sits.</p>
+
+<p>For example, a HL7 FHIR representation of a condition looks like this:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"resourceType"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Condition"</span><span class="p">,</span><span class="w">
+  </span><span class="err">//</span><span class="w"> </span><span class="err">from</span><span class="w"> </span><span class="err">Resource</span><span class="p">:</span><span class="w"> </span><span class="err">id</span><span class="p">,</span><span class="w"> </span><span class="err">meta,</span><span class="w"> </span><span class="err">implicitRules,</span><span class="w"> </span><span class="err">and</span><span class="w"> </span><span class="err">language</span><span class="w">
+  </span><span class="err">//</span><span class="w"> </span><span class="err">from</span><span class="w"> </span><span class="err">DomainResource</span><span class="p">:</span><span class="w"> </span><span class="err">text</span><span class="p">,</span><span class="w"> </span><span class="err">contained,</span><span class="w"> </span><span class="err">extension,</span><span class="w"> </span><span class="err">and</span><span class="w"> </span><span class="err">modifierExtension</span><span class="w">
+  </span><span class="nt">"identifier"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="err">Identifier</span><span class="w"> </span><span class="p">}],</span><span class="w"> </span><span class="err">//</span><span class="w"> </span><span class="err">External</span><span class="w"> </span><span class="err">Ids</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">this</span><span class="w"> </span><span class="err">condition</span><span class="w">
+  </span><span class="nt">"clinicalStatus"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;code&gt;"</span><span class="p">,</span><span class="w"> </span><span class="err">//</span><span class="w"> </span><span class="err">C?</span><span class="w"> </span><span class="err">active</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">recurrence</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">inactive</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">remission</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">resolved</span><span class="w">
+  </span><span class="nt">"verificationStatus"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;code&gt;"</span><span class="p">,</span><span class="w"> </span><span class="err">//</span><span class="w"> </span><span class="err">C?</span><span class="w"> </span><span class="err">provisional</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">differential</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">confirmed</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">refuted</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">entered-in-error</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">unknown</span><span class="w">
+  </span><span class="nt">"category"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="err">CodeableConcept</span><span class="w"> </span><span class="p">}],</span><span class="w"> </span><span class="err">//</span><span class="w"> </span><span class="err">problem-list-item</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">encounter-diagnosis</span><span class="w">
+  </span><span class="nt">"severity"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">CodeableConcept</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="err">//</span><span class="w"> </span><span class="err">Subjective</span><span class="w"> </span><span class="err">severity</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">condition</span><span class="w">
+  </span><span class="nt">"code"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">CodeableConcept</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="err">//</span><span class="w"> </span><span class="err">Identification</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">condition,</span><span class="w"> </span><span class="err">problem</span><span class="w"> </span><span class="err">or</span><span class="w"> </span><span class="err">diagnosis</span><span class="w">
+  </span><span class="nt">"bodySite"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="err">CodeableConcept</span><span class="w"> </span><span class="p">}],</span><span class="w"> </span><span class="err">//</span><span class="w"> </span><span class="err">Anatomical</span><span class="w"> </span><span class="err">location,</span><span class="w"> </span><span class="err">if</span><span class="w"> </span><span class="err">relevant</span><span class="w">
+  </span><span class="nt">"subject"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">Reference(Patient|Group)</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="err">//</span><span class="w"> </span><span class="err">R!</span><span class="w">  </span><span class="err">Who</span><span class="w"> </span><span class="err">has</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">condition?</span><span class="w">
+  </span><span class="nt">"context"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">Reference(Encounter|EpisodeOfCare)</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="err">//</span><span class="w"> </span><span class="err">Encounter</span><span class="w"> </span><span class="err">or</span><span class="w"> </span><span class="err">episode</span><span class="w"> </span><span class="err">when</span><span class="w"> </span><span class="err">condition</span><span class="w"> </span><span class="err">first</span><span class="w"> </span><span class="err">...</span><span class="w">
+</span><span class="err">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<p>A <a href="https://www.hl7.org/fhir/datatypes.html#codeableconcept">CodeableConcept</a> is a complex HL7 FHIR type that provides a reference to an arbitrary terminology.</p>
+
+<p><img src="/images/snomed-postcoord/codeable-concept.jpeg" alt="Codeable Concept" /></p>
+
+<p>What happens if we put a concept representing “SEVERE” as the severity in the FHIR model but record a post-coordinated SNOMED CT expression of “MILD” as a qualifier of our diagnostic concept?</p>
+
+<h1 id="meaningful-data-in-context">Meaningful data, in context</h1>
+
+<p>That means our analytics, for direct individual care, processing data as part of an electronic health record in real-time, or for quality improvement, service management or research use, must interpret the meaning of SNOMED CT concepts and expressions <em>within</em> the wider information model.</p>
+
+<p>So what do we need from our software?</p>
+
+<ol>
+  <li>
+    <p>We need to be able to process an arbitrary SNOMED concepts, provide the standard attribute relationships to client software so that those developers can easily understand how to refine, for example, a diagnostic term. This should include the value sets or necessary search constraints so that only appropriate values can be used for any specific attribute (e.g. if you are refining an anatomical location in the central nervous system, your values should only be anatomical locations within the central nervous system!)</p>
+  </li>
+  <li>
+    <p>We need a set of tools that can parse SNOMED expressions into a useful internal representation and vice versa, so that expressions can be persisted and exchanged as well as permitting the information to be used effectively by humans and machines.</p>
+  </li>
+  <li>
+    <p>We need to be able to process an arbitrary SNOMED concept or expression and normalise it into a canonical expression so that it can be used for analytics.</p>
+  </li>
+  <li>
+    <p>We need tools to be able to offer additional refinement of SNOMED concepts and expressions by virtue of the wider information model in which they sit. For example, normalisation of a concept within a FHIR condition model could be automatically refined by the appropriate attributes from the wider model, such as severity.</p>
+  </li>
+</ol>
+
+<p>As a result, I have been working on a set of open-source tools that not only support deriving understanding of meaning from pre-coordinated single terms in isolation, but from SNOMED expressions and those terms <em>in their wider context</em>.</p>
+
+<p>As part of this work, I have made use of the Google HL7 FHIR protobuf definitions, which can be found <a href="https://github.com/google/fhir">here</a> and are now vendored in the go-terminology code repository.</p>
+
+<p>My next blog post in this series will cover the details of a practical implementation. Like all standards, it is only with the development and availability of quality (open-source) implementations that a standard can truly become valuable.</p>
+
+<p><em>Mark</em></p>
+
+  </div>
+
+  
+</article>
+        
+      </div>
+    </main>
+    
+    
+    
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Health informatics and information technology</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Health informatics and information technology
+            
+            </li>
+            
+            <li><a href="mailto:mark@wardle.org">mark@wardle.org</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/wardle"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">wardle</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/mwardle"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">mwardle</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
