@@ -1,5 +1,223 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-10-23T23:10:13+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
-</subtitle><entry><title type="html">Digital transformation in healthcare</title><link href="https://www.wardle.org/digital/2018/10/23/on-digital.html" rel="alternate" type="text/html" title="Digital transformation in healthcare" /><published>2018-10-23T22:21:21+01:00</published><updated>2018-10-23T22:21:21+01:00</updated><id>https://www.wardle.org/digital/2018/10/23/on-digital</id><content type="html" xml:base="https://www.wardle.org/digital/2018/10/23/on-digital.html">&lt;p&gt;“We’re at the beginning of the digital revolution” wrote Bill Gates in his foreword to Satya Nadella’s book “Hit Refresh”, published not, as you might initially guess, twenty years ago, but in 2017.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-11-12T22:27:13+00:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</subtitle><entry><title type="html">A manifesto for digital transformation in healthcare in Wales</title><link href="https://www.wardle.org/strategy/2018/11/12/manifesto-wales.html" rel="alternate" type="text/html" title="A manifesto for digital transformation in healthcare in Wales" /><published>2018-11-12T12:12:12+00:00</published><updated>2018-11-12T12:12:12+00:00</updated><id>https://www.wardle.org/strategy/2018/11/12/manifesto-wales</id><content type="html" xml:base="https://www.wardle.org/strategy/2018/11/12/manifesto-wales.html">&lt;p&gt;We have an extraordinary opportunity to transform the way we think about the use of digital technology in healthcare in Wales.&lt;/p&gt;
+
+&lt;p&gt;My manifesto has five core principles:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;We don’t have all of the answers.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The only constant is change.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;We should work in the open; we must be transparent and foster rigorous debate.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;We set broad top-down principles and standards, but empower trusted teams who have freedom to deliver but also take responsibility for their work.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;We must deliver, deliver and then deliver again; we iterate, we improve and we continuously learn.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Technology is a tool; our work in developing and deploying technology is not an end in itself but instead, its use should help us to deliver our wider strategic aims.&lt;/p&gt;
+
+&lt;p&gt;It therefore follows that our goals must be to deliver technology as quickly and as safely as possible. Some argue that those goals are contradictory, but evidence from the highest performing technology teams shows that adding more processes and procedures designed to add safety has the paradoxical effect of worsening safety. As such, we need to rethink our approach to project management.&lt;/p&gt;
+
+&lt;p&gt;Our culture must be open so that we are transparent about our success and our failures. We must foster constructive debate. Challenge me to defend this approach and let’s all learn from it!&lt;/p&gt;
+
+&lt;p&gt;It is seductive to think that, as a small nation, we should centralise. It is similarly seductive to think that we lower risk by centralisation. Neither are true. Getting more and more engagement to understand requirements up front &lt;em&gt;does not work&lt;/em&gt;. The best approach is to deliver functioning technology and then improve it based on rapid and continuous feedback.&lt;/p&gt;
+
+&lt;p&gt;As none of us have all of the answers and we work in a complex and highly adaptive group of organisations, we must recognise that any credible plan must, itself, be adaptive and capable of evolutionary change.&lt;/p&gt;
+
+&lt;p&gt;Likewise, we must recognise that one size truly does not fit all. While Wales is of similar size to a strategic health authority in England, our structures and existing technological investments are much more complex. One of our goals must be to safely reduce needless variation, and yet at the same time foster innovation, permitting that new work to scale across all of our services when it is proven.&lt;/p&gt;
+
+&lt;p&gt;But not one approach solves everything we face; instead we should buy products that are an established solution to a problem and focus our in-house work on solving problems that only the public sector can do. That means blending different approaches and being transparent about the decisions we make.&lt;/p&gt;
+
+&lt;p&gt;The steps we need to take are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;focus on our customers; that means professionals &lt;em&gt;and&lt;/em&gt; patients. We align our information technology work with our wider service goals.&lt;/li&gt;
+  &lt;li&gt;modularisation, so we break apart our architecture into smaller, discrete components that can be developed independently of the whole.&lt;/li&gt;
+  &lt;li&gt;create small, cross-functional teams who are tasked with delivering those modules, iteratively, building in quality and safety from the onset.&lt;/li&gt;
+  &lt;li&gt;adopt open standards, so that we standardise the interactions between our modules speeding up delivery by permitting parallel developments and limiting the number of people from different teams who need to be involved in any decision.&lt;/li&gt;
+  &lt;li&gt;become open by default; for example, one of our first debates must be whether it makes any sense to run two data centres in Wales. Let’s debate!&lt;/li&gt;
+  &lt;li&gt;focus on developer productivity, let’s copy the architectural and cultural practices from the most productive technology teams.&lt;/li&gt;
+  &lt;li&gt;we should consider developers in three broad categories, and treat them equally with the same tools, frameworks and documentation available, those providing shared national services and components, those working in and across health boards developing solutions using the national toolbox of services and those outside of the NHS in a thriving commercial and academic ecosystem.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I truly believe that Wales could have the best health information technology in the World. We are small, we have a unique and special health service that could be transformed by the safe and efficient deployment of technology.&lt;/p&gt;
+
+&lt;p&gt;But we need to do things differently to what has been tried in the past. Almost all of my blog posts explore these issues in more detail.&lt;/p&gt;
+
+&lt;p&gt;Tell me what you think, let’s debate… and &lt;em&gt;learn&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">We have an extraordinary opportunity to transform the way we think about the use of digital technology in healthcare in Wales.</summary></entry><entry><title type="html">Semantic interoperability: SNOMED CT, post-coordination and the model</title><link href="https://www.wardle.org/terminology/2018/10/27/snomed-postcoordination-1.html" rel="alternate" type="text/html" title="Semantic interoperability: SNOMED CT, post-coordination and the model" /><published>2018-10-27T20:10:19+01:00</published><updated>2018-10-27T20:10:19+01:00</updated><id>https://www.wardle.org/terminology/2018/10/27/snomed-postcoordination-1</id><content type="html" xml:base="https://www.wardle.org/terminology/2018/10/27/snomed-postcoordination-1.html">&lt;p&gt;One of our goals in healthcare information technology is to enable the meaningful exchange of information between distributed systems in the support of three broad purposes:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;direct care,&lt;/li&gt;
+  &lt;li&gt;management and quality improvement&lt;/li&gt;
+  &lt;li&gt;clinical research.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;However, it is insufficient to simply exchange information at a technical level, but we must aim for &lt;em&gt;semantic&lt;/em&gt; interoperability so that we exchange &lt;em&gt;meaningful data&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;When I say meaningful data, I mean data that has meaning and can be used for decisions, in order to reduce uncertainty about those decisions. Those decisions may be made by a professional, by a patient or carer, or much more likely, shared decisions among groups of those individuals. Those decisions may be clinical, such as should we start anticoagulation to prevent a stroke, or administrative, such as how many patients should we book into that clinic?&lt;/p&gt;
+
+&lt;p&gt;But when I use the term meaningful data, I also  include the ability to use software to process that information; it is computable. It is important to understanding the benefits of computable information, because computer software is quite simply the best way to make sense of large amounts of information. Making data computable means our clinical work can become &lt;em&gt;data-driven&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Making our data computable means that machines can help in processing and understanding, and with the advent of machine learning, even make or suggest decisions based on information. But this post isn’t about machine learning, although it is, I believe, a foundational step for the appropriate and meaningful development and application of machine learning in healthcare.&lt;/p&gt;
+
+&lt;p&gt;So this blog post is about how we can record information in a way that is useful to both humans and machines. For humans it should mean data can be entered more quickly and for machines, it permits better processing so that they can support us humans!&lt;/p&gt;
+
+&lt;h1 id=&quot;how-to-be-data-driven&quot;&gt;How to be data-driven&lt;/h1&gt;
+
+&lt;p&gt;SNOMED CT is a comprehensive terminology and ontology for use in healthcare and it forms an important component of the solution to semantic interoperability. I implemented SNOMED CT in a electronic patient record system and it has been live and running for clinical use in the UK since 2009.&lt;/p&gt;
+
+&lt;p&gt;The SNOMED CT model consists of three core entities:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;concepts, represents a unique concept&lt;/li&gt;
+  &lt;li&gt;descriptions, represents synonyms for a concept&lt;/li&gt;
+  &lt;li&gt;relationships, represents relationships between concepts&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I’ve written extensively about SNOMED-CT on this blog; the best way of understanding the ontology is to browse using an &lt;a href=&quot;https://termbrowser.nhs.uk&quot;&gt;online browser&lt;/a&gt; but SNOMED International provide &lt;a href=&quot;https://confluence.ihtsdotools.org/display/DOCSTART/1.+Introduction&quot;&gt;a useful introductory guide&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;concepts&quot;&gt;Concepts&lt;/h1&gt;
+
+&lt;p&gt;Many concepts represent a single independent concept, but many are actually &lt;em&gt;compound&lt;/em&gt;, representing a number of concepts combined into a meaningful whole.&lt;/p&gt;
+
+&lt;p&gt;For example, &lt;code class=&quot;highlighter-rouge&quot;&gt;cholecystectomy&lt;/code&gt; (&lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;amp;conceptId1=38102005&quot;&gt;38102005&lt;/a&gt;) is a single concept representing removal of the gallbladder. &lt;code class=&quot;highlighter-rouge&quot;&gt;Laparoscopic cholecystectomy&lt;/code&gt; is single concept representing removal of the gallbladder with a laparoscope (&lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;amp;conceptId1=45595009&quot;&gt;45595009&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;A SNOMED CT &lt;em&gt;expression&lt;/em&gt; combines concepts without needing every possible combination of concepts to be created within the terminology. For example,&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;80146002|appendectomy|
+   :260870009|priority|=25876001|emergency|,
+   425391005|using access device|=86174004|laparoscope|
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;represents performing an appendicectomy as an emergency using an laparoscope. We could add this as a distinct single concept into SNOMED CT but that would result in a combinatorial explosion; that means we’d have to have single concepts representing all possible permutations which is simply not practical. However, mainly for historical reasons or to ease implementation, SNOMED CT does already contains many single concepts that combines multiple concepts into one.&lt;/p&gt;
+
+&lt;p&gt;However, SNOMED CT expressions are a powerful way of refining a concept with additional information, creating, in effect, a clinical phrase. This technique is called &lt;em&gt;post-coordination&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;why-not-use-post-coordination&quot;&gt;Why not use post-coordination?&lt;/h1&gt;
+
+&lt;p&gt;I have usually advocated keeping the implementation of SNOMED CT simple by using only pre-coordinated concepts. My concerns about using post-coordination have been that:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;it added complexity to end-users in terms of selection and display of terms,&lt;/li&gt;
+  &lt;li&gt;it made data storage more difficult, and would break referential integrity in my own system.&lt;/li&gt;
+  &lt;li&gt;it would complicate using those terms at a computational level e.g. in automated decision support.&lt;/li&gt;
+  &lt;li&gt;we gain significant value simply from recording pre-coordinated concepts&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;It is (1) and (3) that concerned me most.&lt;/p&gt;
+
+&lt;p&gt;For example, in my own electronic health record software, users don’t know that they are selecting SNOMED terms; they start typing and it autocompletes or simply choose an option using a pop-up, choose a part of the anatomy from a picture or a term is imputed on the basis of other data entered. Adding complexity in adding refinements or qualifiers or embedding expressions worried me. I wanted to make SNOMED CT invisible to end-users and yet enable new decision support and analytics capabilities, hitherto not possible using unstructured free-text.&lt;/p&gt;
+
+&lt;p&gt;I hadn’t conceived of a simple way to make using SNOMED invisible if I created functionality to build expressions; I now think differently.&lt;/p&gt;
+
+&lt;h1 id=&quot;information-models&quot;&gt;Information models&lt;/h1&gt;
+
+&lt;p&gt;However, in the majority of cases, I think many uses of post-coordination such as qualification or refinement or additional information should instead be a function of the wider information model in which the SNOMED CT concept is recorded.&lt;/p&gt;
+
+&lt;p&gt;For example, the FHIR definition of a &lt;a href=&quot;https://www.hl7.org/fhir/condition.html&quot;&gt;Condition&lt;/a&gt;, which includes metadata about the problem/diagnosis concept is shown here:
+&lt;img src=&quot;/images/snomed-postcoord/fhir-condition.jpeg&quot; alt=&quot;Fhir Condition&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It includes information relating to status (active/inactive etc), verification (provisional, differential) and severity (severe, moderate, mild), as well as information about the condition’s onset and abatement (remission/resolution).&lt;/p&gt;
+
+&lt;p&gt;If we use post-coordination without carefully considering the consequences and their mitigation, given that there is an overlap between information recorded within an expression and the wider information model, we risk duplication, complexity and inconsistency.&lt;/p&gt;
+
+&lt;h1 id=&quot;computing-attributes&quot;&gt;Computing attributes&lt;/h1&gt;
+
+&lt;p&gt;But there are clearly situations where refining a concept with additional information would be helpful. For example, we really wanted to be able to add a more specific anatomical location when we recorded that a patient had a brain abscess.&lt;/p&gt;
+
+&lt;p&gt;The SNOMED-CT ontology helps us, at the computational level, determine &lt;em&gt;how&lt;/em&gt; “cerebral abscess” can be refined:&lt;/p&gt;
+
+&lt;p&gt;A &lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;amp;conceptId1=60404007&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cerebral abscess&lt;/code&gt; (60404007)&lt;/a&gt; is an abscess in the brain.&lt;/p&gt;
+
+&lt;p&gt;Firstly, we can determine a way to &lt;em&gt;refine&lt;/em&gt; this concept using post-coordination to specifically give the location. The ontology provides, as part of its model, attribute relationships for this concept, at a computational level:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; Is a (attribute)                   -&amp;gt; Abscess of brain (disorder)	
+ Associated morphology (attribute)  -&amp;gt; Abscess (morphologic abnormality)
+ Finding site (attribute)           -&amp;gt; Cerebral structure (body structure)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;For example, we can see that we can refine the concept &lt;code class=&quot;highlighter-rouge&quot;&gt;cerebral abscess&lt;/code&gt; with a finding site that is a child of the concept &lt;code class=&quot;highlighter-rouge&quot;&gt;Cerebral structure (body structure)&lt;/code&gt; (&lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;amp;conceptId1=83678007&quot;&gt;83678007&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;As a result, computationally, we can offer a choice to the end-user to refine this concept with any finding site, such as &lt;code class=&quot;highlighter-rouge&quot;&gt;Structure of parahippocampal gyrus&lt;/code&gt; (&lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;amp;conceptId1=13989007&quot;&gt;13989007&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;Secondly, we can add refinements as a result of our concept being in one of the nine main SNOMED CT hierarchies. The attributes appropriate for each hierarchy are listed &lt;a href=&quot;https://confluence.ihtsdotools.org/display/DOCSTART/6.+SNOMED+CT+Concept+Model&quot;&gt;on the SNOMED International concept model documentation&lt;/a&gt;. For example, a clinical finding can be qualified by adding concepts representing a &lt;code class=&quot;highlighter-rouge&quot;&gt;Finding Site&lt;/code&gt;, a &lt;code class=&quot;highlighter-rouge&quot;&gt;Causative Agent&lt;/code&gt;, or &lt;code class=&quot;highlighter-rouge&quot;&gt;Severity&lt;/code&gt; among others.&lt;/p&gt;
+
+&lt;p&gt;Thirdly, we can add refinements because of the existence of our concept within a certain reference set. For example, there is a &lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;amp;conceptId1=723264001&quot;&gt;laterality reference set&lt;/a&gt; that tells us which concepts can be lateralised.&lt;/p&gt;
+
+&lt;p&gt;It is therefore straightforward to imagine that, if a cerebral abscess is entered by a user as a diagnostic concept, we might configure our user interface or natural language parser to look for and refine that diagnostic concept with additional information relating to finding site, appropriately limited to the brain using subsumption, given that we have entered cerebral abscess, and offering a choice of laterality.&lt;/p&gt;
+
+&lt;p&gt;So we can see that location, laterality and causative agents &lt;em&gt;might&lt;/em&gt; be very appropriate options for refinement, but should we let users post-coordinate diagnostic concepts with a type of ```Severity’’’? This matters because we need to think about how we write software to process these terms.&lt;/p&gt;
+
+&lt;h1 id=&quot;equivalence-and-the-importance-of-meaning&quot;&gt;Equivalence and the importance of meaning&lt;/h1&gt;
+
+&lt;p&gt;The key issue with processing SNOMED CT, either as pre-coordinated terms or as expressions, is to ensure that we can process &lt;em&gt;meaning&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;That means that, in any implementation of SNOMED CT, whether using only pre-coordinated terms or post-coordination to create an expression, we need to handle equivalence at not just the level of SNOMED, but also take into account the wider information model, providing the context in which that concept or expression sits.&lt;/p&gt;
+
+&lt;p&gt;For example, a HL7 FHIR representation of a condition looks like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;resourceType&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Condition&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Resource&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;meta,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;implicitRules,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;and&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;language&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;DomainResource&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;contained,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;extension,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;and&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;modifierExtension&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;identifier&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Identifier&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;External&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Ids&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;condition&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;clinicalStatus&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;code&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;C?&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;active&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;recurrence&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;inactive&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;remission&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;resolved&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;verificationStatus&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;code&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;C?&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;provisional&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;differential&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;confirmed&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;refuted&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;entered-in-error&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;unknown&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;category&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;CodeableConcept&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;problem-list-item&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;encounter-diagnosis&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;severity&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;CodeableConcept&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Subjective&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;severity&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;condition&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;code&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;CodeableConcept&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Identification&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;the&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;condition,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;problem&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;or&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;diagnosis&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;bodySite&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;CodeableConcept&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Anatomical&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;location,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;relevant&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;subject&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Reference(Patient|Group)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;R!&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Who&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;has&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;the&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;condition?&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;context&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Reference(Encounter|EpisodeOfCare)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Encounter&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;or&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;episode&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;when&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;condition&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;A &lt;a href=&quot;https://www.hl7.org/fhir/datatypes.html#codeableconcept&quot;&gt;CodeableConcept&lt;/a&gt; is a complex HL7 FHIR type that provides a reference to an arbitrary terminology.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/snomed-postcoord/codeable-concept.jpeg&quot; alt=&quot;Codeable Concept&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;What happens if we put a concept representing “SEVERE” as the severity in the FHIR model but record a post-coordinated SNOMED CT expression of “MILD” as a qualifier of our diagnostic concept?&lt;/p&gt;
+
+&lt;h1 id=&quot;meaningful-data-in-context&quot;&gt;Meaningful data, in context&lt;/h1&gt;
+
+&lt;p&gt;That means our analytics, for direct individual care, processing data as part of an electronic health record in real-time, or for quality improvement, service management or research use, must interpret the meaning of SNOMED CT concepts and expressions &lt;em&gt;within&lt;/em&gt; the wider information model.&lt;/p&gt;
+
+&lt;p&gt;So what do we need from our software?&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;We need to be able to process an arbitrary SNOMED concepts, provide the standard attribute relationships to client software so that those developers can easily understand how to refine, for example, a diagnostic term. This should include the value sets or necessary search constraints so that only appropriate values can be used for any specific attribute (e.g. if you are refining an anatomical location in the central nervous system, your values should only be anatomical locations within the central nervous system!)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;We need a set of tools that can parse SNOMED expressions into a useful internal representation and vice versa, so that expressions can be persisted and exchanged as well as permitting the information to be used effectively by humans and machines.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;We need to be able to process an arbitrary SNOMED concept or expression and normalise it into a canonical expression so that it can be used for analytics.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;We need tools to be able to offer additional refinement of SNOMED concepts and expressions by virtue of the wider information model in which they sit. For example, normalisation of a concept within a FHIR condition model could be automatically refined by the appropriate attributes from the wider model, such as severity.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;As a result, I have been working on a set of open-source tools that not only support deriving understanding of meaning from pre-coordinated single terms in isolation, but from SNOMED expressions and those terms &lt;em&gt;in their wider context&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;As part of this work, I have made use of the Google HL7 FHIR protobuf definitions, which can be found &lt;a href=&quot;https://github.com/google/fhir&quot;&gt;here&lt;/a&gt; and are now vendored in the go-terminology code repository.&lt;/p&gt;
+
+&lt;p&gt;My next blog post in this series will cover the details of a practical implementation. Like all standards, it is only with the development and availability of quality (open-source) implementations that a standard can truly become valuable.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">One of our goals in healthcare information technology is to enable the meaningful exchange of information between distributed systems in the support of three broad purposes:</summary></entry><entry><title type="html">Digital transformation in healthcare</title><link href="https://www.wardle.org/digital/2018/10/23/on-digital.html" rel="alternate" type="text/html" title="Digital transformation in healthcare" /><published>2018-10-23T22:21:21+01:00</published><updated>2018-10-23T22:21:21+01:00</updated><id>https://www.wardle.org/digital/2018/10/23/on-digital</id><content type="html" xml:base="https://www.wardle.org/digital/2018/10/23/on-digital.html">&lt;p&gt;“We’re at the beginning of the digital revolution” wrote Bill Gates in his foreword to Satya Nadella’s book “Hit Refresh”, published not, as you might initially guess, twenty years ago, but in 2017.&lt;/p&gt;
 
 &lt;p&gt;This explicitly recognises that, while we have already seen remarkable changes to our lives, our societies and our cultures as a result of software, and the microprocessors on which they rely, we are actually only at the beginning of our journey.&lt;/p&gt;
 
@@ -67,15 +285,15 @@
 
 &lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">“We’re at the beginning of the digital revolution” wrote Bill Gates in his foreword to Satya Nadella’s book “Hit Refresh”, published not, as you might initially guess, twenty years ago, but in 2017.</summary></entry><entry><title type="html">WTSB 27th September 2018</title><link href="https://www.wardle.org/wales/2018/10/07/wtsb.html" rel="alternate" type="text/html" title="WTSB 27th September 2018" /><published>2018-10-07T08:07:07+01:00</published><updated>2018-10-07T08:07:07+01:00</updated><id>https://www.wardle.org/wales/2018/10/07/wtsb</id><content type="html" xml:base="https://www.wardle.org/wales/2018/10/07/wtsb.html">&lt;p&gt;Our September NHS Wales Technical Standards Board was held on the 27th September.&lt;/p&gt;
 
-&lt;p&gt;We have been asked to identify, assess, set and assure technical principles and standards in NHS Wales. That means we need to build a catalogue of standards, including standards that are already in use, and standards that should be used for new developments. We recognise a need for pragmatism, so a catalogue must include not only information about that technical standard but how it should be implemented and used.&lt;/p&gt;
+&lt;p&gt;We have been asked to identify, assess, set and assure technical principles and standards in NHS Wales. That means we need to build a catalogue of standards, including standards that are already in use as well as standards that should be used for new developments. We must recognise a need for pragmatism, so a catalogue must include not only information about that technical standard but how it should be implemented and used.&lt;/p&gt;
 
-&lt;p&gt;In this meeting, we discussed how to build safe, reliable, functioning processes to assess a technical standard for use within NHS Wales. It is important to recognise that this blog post is a snapshot of my reflections. As a board with an explicit adopted principle to be open and transparent and adopt an iterative approach to our work, so that we foster a culture of continuous improvement, these notes are simply that: notes and a work-in-progress.&lt;/p&gt;
+&lt;p&gt;In this meeting, we discussed how to build safe, reliable, functioning processes to assess a technical standard for use within NHS Wales. It is important to recognise that this blog post is a snapshot of my reflections. As a board with an explicit adopted principle to be open and transparent and adopt an iterative approach to our work, fostering a culture of continuous improvement, these notes are simply that: notes and a work-in-progress.&lt;/p&gt;
 
 &lt;p&gt;With that caveat, what broad range of issues did we discuss?&lt;/p&gt;
 
 &lt;h1 id=&quot;things-to-consider&quot;&gt;Things to consider&lt;/h1&gt;
 
-&lt;p&gt;For any standard, we discussed a range of factors that might need to be teased out during any open, transparent process we designed:&lt;/p&gt;
+&lt;p&gt;For any standard, we discussed a range of factors that might need to be teased out during any open, transparent process we wanted to design:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;what is the user need? what are the use-cases?&lt;/li&gt;
@@ -104,7 +322,7 @@
 
 &lt;p&gt;Push messaging is well established within health enterprises and most have adopted a messaging fabric that acts as a safe bus to transport messages across systems with high levels of scalability, monitoring and queuing as well as often providing assertions as to reliability and performance. But there are problems with it. Dependent systems need to potentially deal with a constant influx of messages being sent to them and managing security is difficult. A source system sends out messages and therefore controlling which subscribed systems should be notified can prove challenging; many push enterprises adopt a patient-of-interest list that defines a subset of patients for whom a target system should receive messages. Inherent in this architectural design, is the concept that each application maintains its own state, with messages being used to keep disparate disconnected systems consistent.&lt;/p&gt;
 
-&lt;p&gt;Instead, modern enterprises have moved towards a model of “pull messaging”, in which a system retrieves data from another. This means that security checks become much easier because we can understand, at the time of the request to retrieve that data, which application is making the request on behalf of which user.&lt;/p&gt;
+&lt;p&gt;Instead, modern enterprises have moved towards a model of “pull messaging”, in which a system retrieves data from another and we decouple software logic from data so that many applications and services become stateless. This means that security checks become much easier because we can understand, at the time of the request to retrieve that data, which application is making the request on behalf of which user.&lt;/p&gt;
 
 &lt;p&gt;I sketched a version of this schematic in order to try to understand the use cases and the difference between a “pull” and “push” approach.&lt;/p&gt;
 
@@ -146,9 +364,9 @@
 
 &lt;p&gt;We worked through an example request for a standard - one of our colleagues from Aneurin Bevan submitted a request for a “Technical standard to support exchange of eObservations information using HL7 version 2 (HL7v2) messages”.&lt;/p&gt;
 
-&lt;p&gt;This was a really useful example, and it led to a draft standards assessment process which I have drawn out here:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/open-platform/wtsb-process.png&quot; alt=&quot;Wtsb Process&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;This was a really useful example, and it led to a draft standards assessment process which I have drawn out here: 
+notes
+&lt;img src=&quot;/images/open-platform/wtsb-process.png&quot; alt=&quot;Wtsb Process&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;One of the important considerations is to ensure the scope is defined, particularly in relation to high level clinical requirements - &lt;em&gt;user need&lt;/em&gt;. Understanding the alignment between information technology and our wider strategic objectives is critical. For this technical standard, we need to understand &lt;em&gt;why&lt;/em&gt; we are being asked to help with eObservations and put that in context of our wider architectural and technical infrastructure plans.&lt;/p&gt;
 
@@ -1061,250 +1279,4 @@
 
 &lt;p&gt;&lt;a name=&quot;migration-pd&quot;&gt;1&lt;/a&gt;: Few people are aware, but a few years ago, I migrated both Cardiff and Vale and Bridgend Parkinson’s services from CANISC to a new electronic patient record system, complete with demographics, diagnostic information, all encounters, clinic annotations and measurement data as well as drugs used past and present. Oh, and mapped all diagnoses and medications to SNOMED-CT at the same time. I did this over a few weekends and did the big migration over a single weekend. It was a hobby project but based on the fact that CANISC was end-of-life and we needed to do something. The database schema was a bit odd, but it wasn’t actually particularly difficult. We now track diagnoses and outcomes on a modern web-based platform across Wales that I built in my spare time.&lt;/p&gt;
 
-&lt;p&gt;&lt;a name=&quot;federation&quot;&gt;2&lt;/a&gt;: Federation means encapsulating or abstracted multiple services under one, simple to use service. You might, for example, track professional identity by delegating authentication to social care or health care authentication services, and federate based on a namespace.&lt;/p&gt;</content><author><name></name></author><summary type="html">The Public Accounts Committee (PAC) of the National Assembly for Wales heard evidence yesterday from Velindre NHS Trust on cancer informatics. You can see more here including the video. The minutes will appear soon.</summary></entry><entry><title type="html">Pulling the Andon cord for healthcare IT in Wales</title><link href="https://www.wardle.org/platform/2018/06/30/user-need-agile-platform.html" rel="alternate" type="text/html" title="Pulling the Andon cord for healthcare IT in Wales" /><published>2018-06-30T08:14:28+01:00</published><updated>2018-06-30T08:14:28+01:00</updated><id>https://www.wardle.org/platform/2018/06/30/user-need-agile-platform</id><content type="html" xml:base="https://www.wardle.org/platform/2018/06/30/user-need-agile-platform.html">&lt;p&gt;We need some substantial changes in the way we think about healthcare information technology in Wales.&lt;/p&gt;
-
-&lt;p&gt;I believe that we need to, figuratively speaking, pull the &lt;a href=&quot;https://itrevolution.com/kata/&quot;&gt;Andon cord&lt;/a&gt; and call a stop to the status quo, to stop building significant &lt;a href=&quot;https://en.wikipedia.org/wiki/Technical_debt&quot;&gt;technical debt&lt;/a&gt; and move away from long procurement cycles and success judged by the deployment of different products from different vendors in different organisations.&lt;/p&gt;
-
-&lt;p&gt;The &lt;a href=&quot;https://www.audit.wales/system/files/publications/NHS_-Informatics-2018%20-%20English.pdf&quot;&gt;Welsh Audit Office (WAO) report&lt;/a&gt; strongly criticises the governance arrangements and the imbalanced reporting of success and progress. Our architecture is becoming ever more tightly coupled with, mostly bespoke, point-to-point integration. With each expansion or integration, the whole enterprise from end-to-end becomes ever more brittle and less predictable. We have increasing problems with reliability in critical national systems.&lt;/p&gt;
-
-&lt;p&gt;Paradoxically of course, this is itself extremely predictable.&lt;/p&gt;
-
-&lt;h1 id=&quot;a-simple-single-answer&quot;&gt;A simple single answer?&lt;/h1&gt;
-
-&lt;p&gt;Unfortunately, there is no simple single answer to our problems.&lt;/p&gt;
-
-&lt;p&gt;The fundamental steps now are to recognise that there are problems and that we need to improve and to be open and transparent about the issues we face.&lt;/p&gt;
-
-&lt;p&gt;Unfortunately, the responses at the recent public accounts committee meetings suggest that&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;perhaps not all recognise that there are problems&lt;/li&gt;
-  &lt;li&gt;that there is a lack of ambition to enable transformational change using digital technology&lt;/li&gt;
-  &lt;li&gt;there is a lack of priority on the delivery of benefit and understanding of how to do that effectively.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;I think the solution will, given the NHS is a complex and adaptive environment with lots of moving parts, lots of variation and significant complexity, to look at improving things both from the top-down and the bottom-up.&lt;/p&gt;
-
-&lt;h1 id=&quot;top-down--cohesive-principles-and-credible-plans&quot;&gt;Top-down : cohesive principles and credible plans&lt;/h1&gt;
-
-&lt;p&gt;From the top, we need cohesive, credible plans based on broad design and technology principles and standards.&lt;/p&gt;
-
-&lt;p&gt;While we have the &lt;a href=&quot;https://gov.wales/topics/health/nhswales/about/e-health/?lang=en&quot;&gt;“Informed Health and Care” strategy&lt;/a&gt;, it is only a &lt;em&gt;vision&lt;/em&gt; of what is needed and we must ask, where is the the specific executable plan to deliver that vision? There are those of us who are now trying to draft that, but where has it been up until now?&lt;/p&gt;
-
-&lt;p&gt;This needs to be a thoughtful and informed piece of work, noting the successes and failures in a non-judgmental way and highlighting the areas of priority, as well as reflections and robust options-appraisals of different options. If it can’t do that, then the top-down delivery plan must create a tangible plan to understand those options to inform the balancing judgement.&lt;/p&gt;
-
-&lt;p&gt;It necessarily follows that this work must adopt the broad principles of &lt;em&gt;openness&lt;/em&gt; and &lt;em&gt;transparency&lt;/em&gt; in which our work as a service is open to inspection and evaluation. As a result, adopting the &lt;a href=&quot;https://www.gov.uk/guidance/government-design-principles&quot;&gt;GDS design principles&lt;/a&gt; (&lt;a href=&quot;https://www.gov.uk/guidance/government-design-principles&quot;&gt;https://www.gov.uk/guidance/government-design-principles&lt;/a&gt;) has been a good first step, acknowledging that we do not have all of the answers is the second, understanding that we can already define some good broad principles that will enable us to deliver the third, and being open to outside help the fourth! For the latter, we need to bring in expertise on digital transformation and adopt agile methodologies and user interface and needs expertise.&lt;/p&gt;
-
-&lt;p&gt;What must follow from this is the creation of an overarching strategic group who is tasked with setting broad directions as well as the principles and standards to be used by any team working to deliver functionality for users across Wales, including professionals and patients. Those overarching principles and technical approach must include a credible plan for a cohesive architecture, making the best use of existing infrastructure and yet permitting delivery of solutions to both our immediate  problems, and not limiting our ability to solve tasks we must face in the future.&lt;/p&gt;
-
-&lt;h1 id=&quot;bottom-up-empowerment-cooperation-and-trust&quot;&gt;Bottom-up: empowerment, cooperation and trust&lt;/h1&gt;
-
-&lt;p&gt;For improvements from the bottom-up, we need to change the narrative and, most importantly the culture, from command-and-control to collaboration and cooperation. We need to focus our resources on that work only the public sector can do and make information technology the enabler for change by the service itself. This means that we provide a toolbox of data and computing services and applications from which the service can stitch together solutions to their problems at a local level and share those solutions between organisations when they are successful. This means that we aim towards an &lt;em&gt;open platform&lt;/em&gt; approach in which data is the key and application programming interfaces provide access to important shared software services.&lt;/p&gt;
-
-&lt;p&gt;In essence, our platform becomes the &lt;em&gt;servant&lt;/em&gt; of the health service so it can work more effectively.&lt;/p&gt;
-
-&lt;p&gt;As such, we need a shared platform of discrete modular loosely-coupled components available to use for both internal and external teams. Those components might include citizen and professional identity services, laboratory, radiology and other investigation services, document repositories and a messaging fabric, but critically, they must be open, documented, standards-based and secured with appropriate authentication, authorisation and verifiable logging at the service (API) level. Loose-coupling means that interactions between services and the teams that work on those services are limited, documented and form essentially a service contract. Importantly, this approach means the different components of the architecture can be improved and developed independently; critical in speeding up delivery.&lt;/p&gt;
-
-&lt;p&gt;What therefore must follow from this is the need for a &lt;em&gt;national platform delivery group&lt;/em&gt;, made up of cross-functional teams bringing together expertise from different specialties such as management, development, testing, quality assurance, safety and operations. These individual teams must be given responsibility to deliver discrete components of a modular, loosely-coupled architecture. For example, these services underpin important outcomes in many different workstreams - citizen identity clear underpins both “Information for you” and “Supporting professionals”, the workstreams supporting patients and professionals respectively.&lt;/p&gt;
-
-&lt;p&gt;Our open platform needs robust API lifecycle management to build APIs with a focus on ease of use for application developers (whether internal or external), consistent security policies, automated testing and deployment, documentation and analytics to gain better insights into API usage and performance. Those APIs need to be used by both internal and external developers alike.&lt;/p&gt;
-
-&lt;p&gt;Together with these technical changes, we need to build trust and collaboration between organisations. This means shared source code, teams made up of individuals from across Wales, irrespective of their organisations, focused on delivering their specific goals.&lt;/p&gt;
-
-&lt;p&gt;In essence, information technology needs to be &lt;em&gt;owned&lt;/em&gt; by the service working collaboratively and in partnership, and bringing in commercial expertise and solutions when necessary.&lt;/p&gt;
-
-&lt;p&gt;Most businesses recognise that IT does not simply support their business, but it &lt;em&gt;is&lt;/em&gt; the way that they do business and we need to do that for health. Such recognition has meant that digital leaders are at board level and that information technology should not be considered a separate department. In Wales, much IT is outsourced to a separate &lt;a href=&quot;http://www.audit.wales/publication/informatics-systems-nhs-wales&quot;&gt;poorly governed&lt;/a&gt; organisation.&lt;/p&gt;
-
-&lt;h1 id=&quot;striking-a-balance&quot;&gt;Striking a balance&lt;/h1&gt;
-
-&lt;p&gt;There is, of course, a balance and none of what we need to do is particularly easy, but I struggle with the paradox of Wales attempting to run hugely ambitious, top-down, multi-million pound IT projects given both local and international experience of the likelihood of failure vs a genuine lack of ambition to use digital tools to transform how we care for our population and enable an ecosystem of innovation. I personally find decision-making to be opaque and rarely find published appraisals of different options explaining the advantages and disadvantages of any particular option.&lt;/p&gt;
-
-&lt;p&gt;It is quite easy to make excuses and blame lack of delivery on how difficult it is to effect change, but I would argue that our culture, our governance and our technical architecture conspire to make our work even more difficult. We should be aiming to stack the odds in our favour!&lt;/p&gt;
-
-&lt;p&gt;There are people around who want to make a difference and recognise the need for change. There are pockets of good work at all levels, including government, NWIS and the health boards. I think for many of us it feels as if we are swimming against the current however. It is also important to recognise that there has been historic under-funding compared to peers in England, but it is difficult to justify more expenditure when there has been a consistent historic failure to prioritise and to deliver using the resources we have had.&lt;/p&gt;
-
-&lt;h1 id=&quot;next-steps&quot;&gt;Next steps&lt;/h1&gt;
-
-&lt;p&gt;I would suggest that we need to:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Perform a national architecture review to help define a modern, standards-based loosely-coupled evolutionary adaptive architecture.&lt;/li&gt;
-  &lt;li&gt;Change our metrics so that we focus on user need and delivery of benefit, rather than deployment of a specific product. Our metrics should reflect our focus: user need.&lt;/li&gt;
-  &lt;li&gt;Change governance and ownership. Give the health boards ownership and control, ask them to form a partnership with each other and government tasked to set top-down principles and technical and information standards and provide expertise and oversight to define a national open platform.&lt;/li&gt;
-  &lt;li&gt;Change delivery - by empowering developer teams whether national, local or commercial to use that open platform to solve problems, and ensure that those solutions can be built collaboratively and shared and scaled when shown to be safe and successful.&lt;/li&gt;
-  &lt;li&gt;Change development practices - with real agile working, cross-functional empowered teams made up of different specialists working together to deliver.&lt;/li&gt;
-  &lt;li&gt;Change our behaviour and culture - become open by default, make Wales a beacon of safe, secure healthcare informatics underpinning service transformation and improvement - and teach everyone else how we did it, the difficulties we faced and the strategies we used to overcome those difficulties.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;It is possible to have a single organisation acting as both overseer, strategist and software supplier, but that needs a change in behaviour towards transparency so that decision-making is open, subject to external scrutiny and there are clear appraisals of different options. In my view, the NHS Wales Informatics Service fails to behave in this way. My preference is to change the behaviour, but if that is not possible, then we must surely consider re-organisation instead.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;further-reading&quot;&gt;Further reading&lt;/h4&gt;
-
-&lt;p&gt;I have written previously on many aspects of this. These are the most important bits:&lt;/p&gt;
-
-&lt;p&gt;On open platforms in healthcare here:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://wardle.org/clinical-informatics/2017/10/19/data-driven.html&quot;&gt;Data-driven healthcare: integration&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://wardle.org/clinical-informatics/2017/03/15/once-for-wales.html&quot;&gt;Once-for-Wales&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;On governance and top-down vs bottom up here.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://wardle.org/clinical-informatics/2017/12/05/enabling-innovation.html&quot;&gt;Paradox of control&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://wardle.org/clinical-informatics/2017/12/06/paradox-of-ambition.html&quot;&gt;Paradox of ambition&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;On platforms here…&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://wardle.org/digital-platform/2018/03/03/platform-wales-1.html&quot;&gt;Platforms #1&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://wardle.org/digital-platform/2018/03/03/platform-wales-2.html&quot;&gt;Platforms #2&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://wardle.org/digital-platform/2018/03/03/platform-wales-3.html&quot;&gt;Platforms #3&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">We need some substantial changes in the way we think about healthcare information technology in Wales.</summary></entry><entry><title type="html">WTSB 19th June 2018</title><link href="https://www.wardle.org/wales/2018/06/19/wtsb.html" rel="alternate" type="text/html" title="WTSB 19th June 2018" /><published>2018-06-19T15:14:14+01:00</published><updated>2018-06-19T15:14:14+01:00</updated><id>https://www.wardle.org/wales/2018/06/19/wtsb</id><content type="html" xml:base="https://www.wardle.org/wales/2018/06/19/wtsb.html">&lt;p&gt;We held the second meeting of the Welsh Technical Standards Board (WTSB) today and I am delighted to announce that we have formally adopted the &lt;a href=&quot;https://www.gov.uk/guidance/government-design-principles&quot;&gt;GDS Design Principles&lt;/a&gt; for use by NHS Wales. These are:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Start with user needs&lt;/li&gt;
-  &lt;li&gt;Do less&lt;/li&gt;
-  &lt;li&gt;Design with data&lt;/li&gt;
-  &lt;li&gt;Do the hard work to make it simple&lt;/li&gt;
-  &lt;li&gt;Iterate. Then iterate again&lt;/li&gt;
-  &lt;li&gt;This is for everyone&lt;/li&gt;
-  &lt;li&gt;Understand context&lt;/li&gt;
-  &lt;li&gt;Build digital services, not websites&lt;/li&gt;
-  &lt;li&gt;Be consistent, not uniform&lt;/li&gt;
-  &lt;li&gt;Make things open: it makes things better&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;In addition, we have agreed to adopt the Welsh Government Digital Service Standard:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Undertake research of who the service users are, to understand user needs.&lt;/li&gt;
-  &lt;li&gt;Have a plan in place for ongoing user research and usability testing.&lt;/li&gt;
-  &lt;li&gt;Have a multidisciplinary team.&lt;/li&gt;
-  &lt;li&gt;Build your service using agile iterative and user-centred methods.&lt;/li&gt;
-  &lt;li&gt;Build a service that can be iterated and improved on a frequent basis and make sure you have the capacity, resources and technical flexibility to do so.&lt;/li&gt;
-  &lt;li&gt;Evaluate what tools and systems will be used to build, host, operate and measure the service, and how to procure them.&lt;/li&gt;
-  &lt;li&gt;Understand security and privacy issues.&lt;/li&gt;
-  &lt;li&gt;Consider making source code open and reusable, and, if appropriate, publish it under relevant licenses.&lt;/li&gt;
-  &lt;li&gt;Use open standards and common platforms where available.&lt;/li&gt;
-  &lt;li&gt;Test the end-to-end service.&lt;/li&gt;
-  &lt;li&gt;Make a plan for being offline.&lt;/li&gt;
-  &lt;li&gt;Create a service that’s simple and intuitive that users succeed first time.&lt;/li&gt;
-  &lt;li&gt;Make the user experience consistent with the rest of Welsh Government.&lt;/li&gt;
-  &lt;li&gt;Encourage everyone to use the digital service with assisted digital support if required.&lt;/li&gt;
-  &lt;li&gt;Identify your baseline information to measure performance&lt;/li&gt;
-  &lt;li&gt;Collect that performance information regularly&lt;/li&gt;
-  &lt;li&gt;Report on that performance data.&lt;/li&gt;
-  &lt;li&gt;Test your service from beginning to end [with your minister]&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Implicit in adopting these standards is a focus on the citizen as the user of services and that digital transformation is better thought of as &lt;em&gt;service transformation&lt;/em&gt;. We need to provide tools so that our services can be transformed to provide modern, efficient and safe healthcare.&lt;/p&gt;
-
-&lt;p&gt;To that end, we are starting a transformation journey, with collaboration, cooperation and openness the key enablers for us to &lt;em&gt;make things better&lt;/em&gt;. In essence, we need to balance top-down standards with creating a culture of openness and transparency to enable safe innovation.&lt;/p&gt;
-
-&lt;p&gt;Our remit, as a board, is to define the technical principles and standards supporting:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;integration&lt;/li&gt;
-  &lt;li&gt;interoperability&lt;/li&gt;
-  &lt;li&gt;software development&lt;/li&gt;
-  &lt;li&gt;infrastructure&lt;/li&gt;
-  &lt;li&gt;security&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;We are accountable to the National Informatics Management Board (NIMB).&lt;/p&gt;
-
-&lt;h1 id=&quot;making-things-better-for-users&quot;&gt;Making things better for users&lt;/h1&gt;
-
-&lt;p&gt;Not only should NHS Wales work to GDS principles, but we as a board should too. To that end, we must ask&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;As a technical standards board, who are &lt;em&gt;our&lt;/em&gt; users?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;I see &lt;em&gt;developers&lt;/em&gt;, together with the teams in which they work, as the prime user for our technical standards because they are the ones who will make things better for the real users, patients and professionals.&lt;/p&gt;
-
-&lt;p&gt;And what do developers need? Can we apply the GDS principles in our task to maintain a catalogue of principles and standards?&lt;/p&gt;
-
-&lt;p&gt;In essence, our standards will specify the structure and function of our national architecture and documentation of those standards should, if we take an open-approach, foster a change in culture towards collaboration and cooperation and trust.&lt;/p&gt;
-
-&lt;p&gt;We will, in essence, define the specifications for an open platform onto which we can build innovation and enable true service transformation.&lt;/p&gt;
-
-&lt;h1 id=&quot;so-what-next&quot;&gt;So what next?&lt;/h1&gt;
-
-&lt;p&gt;There are some logical consequences to this approach:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;We must open up our documentation relating to services and their standards and develop a roadmap to assess and set new standards and decommission old ones.&lt;/li&gt;
-  &lt;li&gt;We must move to creating cross-functional teams that combine developers, project management, user researchers, UX designers with testing, safety and deployment experts to deliver modular, domain-constrained functionality that can be developed and improved in isolation to other components. Such components should, in essence, be loosely-coupling with technical and human contracts defining interactions between teams. For Wales, we should encourage teams that combine members that span organisational boundaries&lt;/li&gt;
-  &lt;li&gt;A focus on automated end-to-end testing and scalability with testing in production-like environments available on-demand.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;For the rest of this post, I want to talk about &lt;em&gt;documentation&lt;/em&gt; as it is a key enabler for building collaboration, cooperation and trust in Wales.&lt;/p&gt;
-
-&lt;h1 id=&quot;documentation&quot;&gt;Documentation&lt;/h1&gt;
-
-&lt;p&gt;What do other developer-focused digital companies do when they want to create an open platform? They create a developer-friendly set of documentation with application programming interface (API) specifications together with how-to and getting started guides.&lt;/p&gt;
-
-&lt;p&gt;Imagine you are a developer wishing to build software using the NHS Wales open platform. You might work for the NHS Wales Informatics Service (NWIS), one of the health boards or a commercial or academic partner  What do you need to get your work done?&lt;/p&gt;
-
-&lt;p&gt;Let’s look at how others have done this…&lt;/p&gt;
-
-&lt;p&gt;This is the current landing page of &lt;a href=&quot;https://docs.microsoft.com&quot;&gt;https://docs.microsoft.com&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/wtsb-opendocs/wtsb-2018-06-19.003.jpeg&quot; alt=&quot;Wtsb 2018 06 19.003&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Here there are links to documentation covering the range of Microsoft platforms, including Azure, their cloud platform. Let’s explore…&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/wtsb-opendocs/wtsb-2018-06-19.004.jpeg&quot; alt=&quot;Wtsb 2018 06 19.004&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;We can read broad overviews of the architecture, and see links to more detailed specifications in the API reference:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/wtsb-opendocs/wtsb-2018-06-19.005.jpeg&quot; alt=&quot;Wtsb 2018 06 19.005&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Similarly, the documentation is interspersed with example code and links to frameworks that make it easy to make use of the software services provided by the platform.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/wtsb-opendocs/wtsb-2018-06-19.006.jpeg&quot; alt=&quot;Wtsb 2018 06 19.006&quot; /&gt;
-&lt;img src=&quot;/images/wtsb-opendocs/wtsb-2018-06-19.007.jpeg&quot; alt=&quot;Wtsb 2018 06 19.007&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;But how do Microsoft keep their work updated? The source code for their documentation is either automatically generated from their code, or maintained itself as an open-source repository on github - see &lt;a href=&quot;https://github.com/MicrosoftDocs&quot;&gt;https://github.com/MicrosoftDocs&lt;/a&gt;:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/wtsb-opendocs/wtsb-2018-06-19.008.jpeg&quot; alt=&quot;Wtsb 2018 06 19.008&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;This fosters collaboration. Internal users can contribute to changes and have them accepted by the project team, but so can external users. I could make my own local copy of this document repository, make my changes and submit them for review as a “pull-request”.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/wtsb-opendocs/wtsb-2018-06-19.009.jpeg&quot; alt=&quot;Wtsb 2018 06 19.009&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;We can edit the original source to the documentation, here in Markdown format, a simple-to-use and process text markup language. Microsoft maintains control of the source, but permits open access and review and collaboration. Have a look at &lt;a href=&quot;https://github.com/MicrosoftDocs/azure-docs&quot;&gt;https://github.com/MicrosoftDocs/azure-docs&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/wtsb-opendocs/wtsb-2018-06-19.010.jpeg&quot; alt=&quot;Wtsb 2018 06 19.010&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;And from these source files, Microsoft generate their website:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/wtsb-opendocs/wtsb-2018-06-19.011.jpeg&quot; alt=&quot;Wtsb 2018 06 19.011&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Amazon Web Services (AWS) have adopted the same approach:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/wtsb-opendocs/wtsb-2018-06-19.014.jpeg&quot; alt=&quot;Wtsb 2018 06 19.014&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Here we have their landing page, linking to lots of different resources, including guides, lists of API specifications etc. And here are the github pages containing the source for those documents.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/wtsb-opendocs/wtsb-2018-06-19.015.jpeg&quot; alt=&quot;Wtsb 2018 06 19.015&quot; /&gt;
-&lt;img src=&quot;/images/wtsb-opendocs/wtsb-2018-06-19.016.jpeg&quot; alt=&quot;Wtsb 2018 06 19.016&quot; /&gt;
-&lt;img src=&quot;/images/wtsb-opendocs/wtsb-2018-06-19.017.jpeg&quot; alt=&quot;Wtsb 2018 06 19.017&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;And in the same way as for Microsoft, developers can flag omissions or errors and contribute. This user is submitting a patch to add a link to another resource. Other users might simply create an “issue” to be examined and possibly fixed by the project team.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/wtsb-opendocs/wtsb-2018-06-19.023.jpeg&quot; alt=&quot;Wtsb 2018 06 19.023&quot; /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;So today we agreed that, in line with our remit, we must start work on building an online catalogue of existing services and the standards that are used, and, by adopting GDS-principles ourselves, do this in the open and in small incremental steps. As such, we are going to pick a current service and see how we can take some tentative first steps in publishing that documentation as well as making use of tools to support cooperation and collaboration.&lt;/p&gt;
-
-&lt;p&gt;If you have any comments or thoughts, let me know. I promise to tell you how we get on, and share the learning, the results (good or bad) with you.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">We held the second meeting of the Welsh Technical Standards Board (WTSB) today and I am delighted to announce that we have formally adopted the GDS Design Principles for use by NHS Wales. These are:</summary></entry></feed>
+&lt;p&gt;&lt;a name=&quot;federation&quot;&gt;2&lt;/a&gt;: Federation means encapsulating or abstracted multiple services under one, simple to use service. You might, for example, track professional identity by delegating authentication to social care or health care authentication services, and federate based on a namespace.&lt;/p&gt;</content><author><name></name></author><summary type="html">The Public Accounts Committee (PAC) of the National Assembly for Wales heard evidence yesterday from Velindre NHS Trust on cancer informatics. You can see more here including the video. The minutes will appear soon.</summary></entry></feed>
