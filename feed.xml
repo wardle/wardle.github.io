@@ -1,5 +1,59 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2018-11-12T22:35:00+00:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
-</subtitle><entry><title type="html">A manifesto for digital transformation in healthcare in Wales</title><link href="https://www.wardle.org/strategy/2018/11/12/manifesto-wales.html" rel="alternate" type="text/html" title="A manifesto for digital transformation in healthcare in Wales" /><published>2018-11-12T12:12:12+00:00</published><updated>2018-11-12T12:12:12+00:00</updated><id>https://www.wardle.org/strategy/2018/11/12/manifesto-wales</id><content type="html" xml:base="https://www.wardle.org/strategy/2018/11/12/manifesto-wales.html">&lt;p&gt;We have an extraordinary opportunity to transform the way we think about the use of digital technology in healthcare in Wales.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2019-05-16T12:00:08+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</subtitle><entry><title type="html">Reading list</title><link href="https://www.wardle.org/strategy/2019/05/16/reading-list.html" rel="alternate" type="text/html" title="Reading list" /><published>2019-05-16T11:05:05+01:00</published><updated>2019-05-16T11:05:05+01:00</updated><id>https://www.wardle.org/strategy/2019/05/16/reading-list</id><content type="html" xml:base="https://www.wardle.org/strategy/2019/05/16/reading-list.html">&lt;p&gt;These are books that I have enjoyed and found useful. I recommend them!&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.amazon.com/War-Peace-Business-Leadership-Technology/dp/1942788711&quot;&gt;War and Peace and IT: Business Leadership, Technology, and Success in the Digital Age&lt;/a&gt; by Mark Schwartz&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.amazon.co.uk/Accelerate-Building-Performing-Technology-Organizations/dp/B07BLYJ4HR&quot;&gt;Accelerate: Building and Scaling High Performing Technology Organizations&lt;/a&gt; by Nicole Forsgren,  Jez Humble, Gene Kim&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=1&amp;amp;ved=2ahUKEwjMmIPN7Z_iAhXiTxUIHfBRDjQQFjAAegQIBRAB&amp;amp;url=https%3A%2F%2Fwww.amazon.co.uk%2FPhoenix-Project-Helping-Business-Anniversary%2Fdp%2FB00VBEBRK6&amp;amp;usg=AOvVaw2Vpyz5uZj3Dekuv3QbZSGa&quot;&gt;The Phoenix Project: A Novel about IT, DevOps, and Helping Your Business Win&lt;/a&gt; by Gene Kim, Kevin Behr, George Spafford&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=1&amp;amp;ved=2ahUKEwj935rb7Z_iAhU8SRUIHUf7AVoQFjAAegQIAxAB&amp;amp;url=https%3A%2F%2Fwww.amazon.co.uk%2FThinking-Fast-Slow-Daniel-Kahneman%2Fdp%2F0141033576&amp;amp;usg=AOvVaw2DrhLGTE9IzK9ZIN1G4wVt&quot;&gt;Thinking, Fast and Slow&lt;/a&gt; by Daniel Kahneman&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.amazon.co.uk/Hit-Refresh-Rediscover-Microsofts-Everyone-ebook/dp/B01HOT5SQA&quot;&gt;Hit Refresh&lt;/a&gt; by Satya Nadella&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=4&amp;amp;ved=2ahUKEwjzlMv07Z_iAhWKRhUIHVoQANYQFjADegQIARAB&amp;amp;url=https%3A%2F%2Fwww.amazon.co.uk%2FDevops-Handbook-World-Class-Reliability-Organizations%2Fdp%2F1942788002&amp;amp;usg=AOvVaw2KNX9830TcnjCmlLxp53PR&quot;&gt;The DevOps Handbook: How to Create World-Class Agility, Reliability, and Security in Technology Organizations&lt;/a&gt; by Gene Kim,Patrick Debois, John Willis, Jez Humble&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.amazon.co.uk/Startup-Way-Entrepreneurial-Management-Transforms/dp/0241197260&quot;&gt;The Startup Way: How Entrepreneurial Management Transforms Culture and Drives Growth&lt;/a&gt; by Eric Ries&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.amazon.co.uk/Lean-Startup-Innovation-Successful-Businesses/dp/0670921602/ref=pd_lpo_sbs_14_t_0?_encoding=UTF8&amp;amp;psc=1&amp;amp;refRID=1K8FBPY06VDPM15DQNF7&quot;&gt;The Lean Startup: How Constant Innovation Creates Radically Successful Businesses&lt;/a&gt; by Eric Ries&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.amazon.co.uk/How-Measure-Anything-Intangibles-Business/dp/1452654204&quot;&gt;How to Measure Anything: Finding the Value of ‘Intangibles’ in Business&lt;/a&gt; by Douglas W. Hubbard&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.amazon.co.uk/Black-Box-Thinking-Surprising-Success/dp/1473613779&quot;&gt;Black Box Thinking: The Surprising Truth About Success&lt;/a&gt; by Matthew Syed&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.amazon.co.uk/Work-Rules-Insights-Inside-Transform/dp/1444792369&quot;&gt;Work Rules!: Insights From Inside GoogleThat Will Transform How You Live and Lead&lt;/a&gt; by Laszlo Bock&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=1&amp;amp;ved=2ahUKEwil-vr375_iAhVQUhUIHTotCSUQFjAAegQIABAB&amp;amp;url=https%3A%2F%2Fwww.amazon.co.uk%2FDigital-Doctor-Hope-Medicines-Computer%2Fdp%2F0071849467&amp;amp;usg=AOvVaw0ckCrG86Z0pK8FTaDNNDGI&quot;&gt;The Digital Doctor: Hope, Hype, and Harm at the Dawn of Medicine’s Computer Age&lt;/a&gt; by Robert Wachter&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.amazon.co.uk/Hard-Thing-About-Things-Building/dp/0062273205&quot;&gt;The Hard Thing About Hard Things: Building a Business When There Are No Easy Answers&lt;/a&gt; by Ben Horowitz&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=1&amp;amp;ved=2ahUKEwjcxL6N8J_iAhWCUBUIHYcABDQQFjAAegQIAhAB&amp;amp;url=https%3A%2F%2Fwww.amazon.co.uk%2FGood-Strategy-Bad-Difference-Matters%2Fdp%2F1846684811&amp;amp;usg=AOvVaw0hTYQmAhteo5bg90onBbVT&quot;&gt;Good Strategy/Bad Strategy: The Difference and Why It Matters&lt;/a&gt; by Richard P. Rumelt&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.amazon.co.uk/Tribes-We-need-you-lead/dp/0749939753&quot;&gt;Tribes: We Need You to Lead Us&lt;/a&gt; by Seth Godin&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.google.com/aclk?sa=L&amp;amp;ai=DChcSEwi0-NCg8J_iAhWuu-0KHbGxAFoYABABGgJkZw&amp;amp;sig=AOD64_1sx_nZ7mLepXsbjc8y41NJ5xO1OQ&amp;amp;ctype=5&amp;amp;q=&amp;amp;ved=0ahUKEwiq68Wg8J_iAhXbSBUIHYdxBOwQ9aACCDY&amp;amp;adurl=&quot;&gt;The Lean Startup: How Today’s Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses&lt;/a&gt; by Eric Ries&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=3&amp;amp;ved=2ahUKEwiig4it8J_iAhW3SBUIHe-nC6YQFjACegQIERAK&amp;amp;url=https%3A%2F%2Fwww.amazon.com%2FStart-Why-Leaders-Inspire-Everyone%2Fdp%2F1591846447&amp;amp;usg=AOvVaw2dceDsbE2RA1TaPcqip1mL&quot;&gt;Start with Why: How Great Leaders Inspire Everyone to Take Action&lt;/a&gt; by Simon Sinek&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">These are books that I have enjoyed and found useful. I recommend them!</summary></entry><entry><title type="html">A manifesto for digital transformation in healthcare in Wales</title><link href="https://www.wardle.org/strategy/2018/11/12/manifesto-wales.html" rel="alternate" type="text/html" title="A manifesto for digital transformation in healthcare in Wales" /><published>2018-11-12T12:12:12+00:00</published><updated>2018-11-12T12:12:12+00:00</updated><id>https://www.wardle.org/strategy/2018/11/12/manifesto-wales</id><content type="html" xml:base="https://www.wardle.org/strategy/2018/11/12/manifesto-wales.html">&lt;p&gt;We have an extraordinary opportunity to transform the way we think about the use of digital technology in healthcare in Wales.&lt;/p&gt;
 
 &lt;p&gt;My manifesto has five core principles:&lt;/p&gt;
 
@@ -1062,222 +1116,4 @@ notes
 
 &lt;p&gt;&lt;img src=&quot;/images/mapping/wcrs-architecture.png&quot; alt=&quot;Wcrs Architecture&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;This is shown in this schematic, where “external” services such as document repositories in the health boards publish documents into WCRS but the &lt;em&gt;only&lt;/em&gt; way to view and search documents is via a portal application, WCP.  There are less than a handful of releases of WCP per year. Is it any wonder that users across Wales are dissatisfied with the pace of change?&lt;/p&gt;</content><author><name></name></author><summary type="html">How can we make best use of technology to support healthcare?</summary></entry><entry><title type="html">Cancer informatics</title><link href="https://www.wardle.org/platform/2018/07/03/cancer-informatics.html" rel="alternate" type="text/html" title="Cancer informatics" /><published>2018-07-03T17:16:16+01:00</published><updated>2018-07-03T17:16:16+01:00</updated><id>https://www.wardle.org/platform/2018/07/03/cancer-informatics</id><content type="html" xml:base="https://www.wardle.org/platform/2018/07/03/cancer-informatics.html">&lt;p&gt;The Public Accounts Committee (PAC) of the National Assembly for Wales heard evidence yesterday from Velindre NHS Trust on cancer informatics. You can see more &lt;a href=&quot;http://senedd.assembly.wales/ieListDocuments.aspx?CId=441&amp;amp;MId=4751&amp;amp;Ver=4&quot;&gt;here&lt;/a&gt; including the video. The minutes will appear soon.&lt;/p&gt;
-
-&lt;p&gt;The important messages were&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;CANISC, the Cancer Network Information System Cymru, has been running for over 20 years and is dependent on a now unsupported software platform. This has important security and reliability risks.&lt;/li&gt;
-  &lt;li&gt;There have been a significant number of reliability issues resulting in service disruption and impact on patient care. There was no single reason for the multiple system failures.&lt;/li&gt;
-  &lt;li&gt;That there are mitigations planned so that a PDF of the important information will be published into the Welsh Care Records Service and so be visible via Welsh Clinical Portal (WCP). WCP is currently mainly a read-only web portal but also has electronic test requesting and discharge summary functions.&lt;/li&gt;
-  &lt;li&gt;That a replacement is planned using two products: adoption of “Welsh PAS” a homegrown patient administrative system that is deployed in most other health organisations in Wales for administration, and WCP to be modified to create an electronic patient record system. This work is estimated to take 2 years.&lt;sup&gt;&lt;a href=&quot;#migration-pd&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I’d like to reflect on these issues in this post.&lt;/p&gt;
-
-&lt;h1 id=&quot;our-role-as-informaticians&quot;&gt;Our role as informaticians&lt;/h1&gt;
-
-&lt;p&gt;There are lots of definitions of what we do in clinical informatics, but this is a good one:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“The overall aim of work in Clinical Informatics is to use modern technologies to advance our ability understand health and health problems, support translational research, develop effective interventions for healthcare delivery, and improve our ability to provide cutting-edge healthcare in the safest, most timely way possible.”&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;http://www.clinicalinformatics.group.cam.ac.uk/about-us/introduction-to-clinical-informatics/&quot;&gt;http://www.clinicalinformatics.group.cam.ac.uk/about-us/introduction-to-clinical-informatics/&lt;/a&gt;&lt;/p&gt;
-
-  &lt;p&gt;accessed on 3rd July 2018&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Fundamentally, in order to be an effective clinical informatician, we need to deeply understand the problems we are trying to solve while at the same time applying our knowledge of best practices in information technology. We need to be cognisant on how teams can work effectively at scale and pace with a focus on delivery. Likewise, we need to bring together our understanding of user need with the very best in software development practices, understand the wider context and foster the adoption of technical and information standards to support semantic interoperability and use the principles outlined in domain-driven design to build data models and a shared vocabulary to bridge the gaps between users and developers. At the same time, we need to apply evidence-based best practice in development, testing, safety, security and deployment.&lt;/p&gt;
-
-&lt;h1 id=&quot;a-crisis-always-an-opportunity-to-reflect&quot;&gt;A crisis: always an opportunity to reflect&lt;/h1&gt;
-
-&lt;p&gt;A crisis is usually a good time to step back and take stock of our current state, to appraise ourselves of the options and really understand the problems we are trying to solve.&lt;/p&gt;
-
-&lt;p&gt;It’s useful to structure our approach to how we understand need along the lines of the &lt;a href=&quot;http://gov.wales/docs/dhss/publications/151211reporten.pdf&quot;&gt;Informed Health and Care Strategy, 2015&lt;/a&gt; which sets out a clear vision for Wales to use digital technology and online services to support and enable care. The strategy is divided into four workstreams:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Information for you&lt;/li&gt;
-  &lt;li&gt;Supporting Professionals&lt;/li&gt;
-  &lt;li&gt;Improvement and Innovation&lt;/li&gt;
-  &lt;li&gt;A Planned Future&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.003.jpeg&quot; alt=&quot;Informed Health and Care&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;What kinds of requirements might arise from a deep-dive with our users? What kind of functionality do they need, noting that our “users” are not only professionals, but the citizen or their delegated representative?&lt;/p&gt;
-
-&lt;p&gt;It’s not hard to start brainstorming and that’s a critical first step in solving our problems. So we might end up with a list that looks a bit like this:&lt;/p&gt;
-
-&lt;p&gt;Patients:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Patients to see their whole journey including forthcoming scheduled appointments&lt;/li&gt;
-  &lt;li&gt;Patients to be able to communicate securely with their healthcare team, at whichever point of the pathway they currently sit.&lt;/li&gt;
-  &lt;li&gt;Patients to be given tools to help them understand their condition, their prognosis and treatment options, perhaps with outcome data stratified according to their characteristics.&lt;/li&gt;
-  &lt;li&gt;Patients to see their own results.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Professionals:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Professionals to understand how many patients sit at each stage of the pathway and track progress and ongoing outcomes.&lt;/li&gt;
-  &lt;li&gt;Professionals to have access to the right information at the right time. This means diagnostics from anywhere, including outside of Wales, as well as multidisciplinary meetings, histopathology, staging, previous treatments and interventions.&lt;/li&gt;
-  &lt;li&gt;Professionals to be able to communicate as a team, and have those interactions recorded as a narrative, irrespective of their organisation, specialty or profession.&lt;/li&gt;
-  &lt;li&gt;Professionals to be given tools to aid shared decision-making, understanding outcomes for an individual patient compared to peers.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Improvement and Innovation:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;To support quality improvement methodologies by tracking measures of process &lt;em&gt;and&lt;/em&gt; outcome using meaningful measures&lt;/li&gt;
-  &lt;li&gt;To support the advancement of knowledge by offering support for identification, recruitment and randomisation into potentially complex, multi-phase clinical trials of new treatments.&lt;/li&gt;
-  &lt;li&gt;To capture aggregate data stratified by baseline characteristics to permit benchmarking.&lt;/li&gt;
-  &lt;li&gt;To ensure digital inclusion with multiple channels so that patients have choice and multiple opportunities to contribute information in methods of their choosing.&lt;/li&gt;
-  &lt;li&gt;To permit innovative models of care, capture outcomes relating to those innovations and ensure that they are fit-for-purpose and not exclusionary to any group of individuals based on access to technology, age, socioeconomic class etc.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;In my experience however, users, whether professionals or patients, need help in understanding and articulating their need and once we’ve done that, we can frequently boil down requirements into their &lt;em&gt;essence&lt;/em&gt;. I love being able to solve a specific requirement by solving it in a generic way that helps not only that individual, but everyone else as well. Generic solutions are usually more robust and future-proof compared to solutions that simply solve a specific problem.&lt;/p&gt;
-
-&lt;p&gt;One of the most generic problem-solving techniques is to become &lt;em&gt;data-driven&lt;/em&gt;. Almost every single post on my blog relates to this fundamental approach in which one thinks deeply about data, the structure of those data and how best to make use of those data in order to inform our clinical practice, whether at an individual patient level, at the service level, at a cohort level or by helping to advance our knowledge as part of research.&lt;/p&gt;
-
-&lt;p&gt;Now I have just jotted those few down over 10 minutes. We need to sit down with colleagues across Wales and empower them to think big with data. My belief is that, when one sees a list of requirements as I have written above, the &lt;em&gt;only&lt;/em&gt; way to deliver that type of functionality is to &lt;a href=&quot;/clinical-informatics/2017/08/22/health-data.html&quot;&gt;start with data&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Importantly, I believe that most of the requirements relating to cancer and cancer pathways are just as important to other non-cancer specialities. We must stop thinking about projects and products, and start thinking about &lt;em&gt;services&lt;/em&gt; and the data the underpin those services.&lt;/p&gt;
-
-&lt;h1 id=&quot;on-data&quot;&gt;On data&lt;/h1&gt;
-
-&lt;p&gt;Larry Weed opined:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“You’re a victim of it or a triumph because of it. The human mind simply cannot carry all the information without error so the record becomes part of your practice.”&lt;/p&gt;
-
-  &lt;p&gt;Dr Larry Weed, Internal Medicine Grand Rounds, 1971&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Here he makes the critical point that the medical record is the foundation on which our clinical practice occurs and understanding this is critical for those of us interested in improving healthcare by the use of information technology.&lt;/p&gt;
-
-&lt;p&gt;I strongly believe that healthcare data should be stored in a persistent record as a model of the real-world and its storage should be &lt;em&gt;separate&lt;/em&gt; from the applications and logic which act upon it.&lt;/p&gt;
-
-&lt;p&gt;This simple separation is a terrifically powerful paradigm because it means that others can use those data in ways that I might not even imagine at this point in time. What it means is that I have to think clearly, not about how an application might look or work, but how my data is structured to be meaningful, both now and in the future.&lt;/p&gt;
-
-&lt;p&gt;As I wrote in my &lt;a href=&quot;/clinical-informatics/2017/03/15/once-for-wales.html&quot;&gt;“Once for Wales” speech&lt;/a&gt; in which I pitched for interoperability and data standards for NHS Wales:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;It is almost always the case that when building complex solutions to real-life problems, no-one person can conceive of all of the problems in one go. The natural solution to such complexity is to break-down a problem into manageable chunks. These chunks, much like “lego bricks”, can be joined together to form something greater than the sum of the parts. Importantly, it is more likely that we can vouch that a system is deterministic.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;As a result, I believe that we need to move away from products, from projects and towards modular &lt;em&gt;services&lt;/em&gt;, that together create an open platform. I have written extensively about this in my blog including the &lt;a href=&quot;http://wardle.org/clinical-informatics/2017/10/19/data-driven.html&quot;&gt;talk I gave at the inaugural Welsh Digital Health and Care Conference in 2017.&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.016.jpeg&quot; alt=&quot;Wardle Digital Health.016&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.018.jpeg&quot; alt=&quot;Wardle Digital Health.018&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;on-services&quot;&gt;On services&lt;/h1&gt;
-
-&lt;p&gt;When I say we should focus on “services”, I mean two different things:&lt;/p&gt;
-
-&lt;p&gt;Firstly, I think about computing &lt;em&gt;services&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;I am a proponent of a data-driven open platform, built from open standards and with a focus on providing a common set of modular, loosely-coupled computing services supporting citizen and professional identity, data and document repositories and other clinical information like laboratory, radiology and other investigation results. These services, abstracting complexity and possibly federating data from multiple providers,&lt;sup&gt;&lt;a href=&quot;#federation&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;, should be focused on building sane, cohesive application programming interfaces (API) suitable for both internal and external developers.&lt;/p&gt;
-
-&lt;p&gt;Secondly, I think about healthcare &lt;em&gt;services&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;I believe in digital transformation, in the use of technology to improve and transform our services. This cannot be led by an information technology department, or for that matter, an external agency acting independently from health services, but instead must be led and &lt;em&gt;owned&lt;/em&gt; by the service. There is, of course, need for expert digital teams to help &lt;em&gt;support&lt;/em&gt; those transformation efforts.&lt;/p&gt;
-
-&lt;h1 id=&quot;the-future-welsh-pas-and-wcp&quot;&gt;The future: “Welsh PAS” and WCP?&lt;/h1&gt;
-
-&lt;p&gt;So now I come to the crux of the problem. We are told that the combination of “Welsh PAS” and WCP will solve my cancer colleagues’ problems.&lt;/p&gt;
-
-&lt;p&gt;The current crisis with CANISC was foreseeable and clearly we, in Wales, must take action. I have one question:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Where can I find an analysis of the different options available in order to fix this mess?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Surely we need to step back and cost and appraise a range of options, bringing together the advantages and disadvantages of any specific option in order to weight up and decide on the right choice. Given that this decision appears to be made by an organisation who is also acting as the supplier of said software seems to me, an important conflict of interest. To mitigate that, such decision-making should be published openly and transparently with the justifications and arguments in favour of this important decision for our cancer services. If these options analyses exist, then they should be published as with any other “procurement”.&lt;/p&gt;
-
-&lt;p&gt;Certainly I can make some comments about the proposed solution:&lt;/p&gt;
-
-&lt;p&gt;Welsh PAS is actually a misnomer as actually there are multiple instances of the software package running, all configured differently to different standards and Cardiff and Vale uses its own in-house administrative system. At the time of writing, as far as I know, there is no easy way of tracking a pathway between health boards, meaning that a patient starting their cancer journey in one health board and managed in another will not share the same national pathway identifier.&lt;/p&gt;
-
-&lt;p&gt;WCP mainly stores documents as blobs of data with a proprietary and very limited metadata model. Some documents are in XML format and are rendered to PDF on-the-fly during viewing. If we view a document in a different health board, at the time of writing, it currently renders using the wrong stylesheet and so it appears as if was written by our own health board. Data within documents can be accessed by parsing the data from the XML, but there is currently &lt;em&gt;no&lt;/em&gt; data persistence layer; indeed there is no single instance of WCP, so users have to login to their local, organisation-specific instance of WCP which is currently tightly integrated with whatever patient administrative system is running in that organisation. That means that a patient can appear alive in one instance of WCP but is shown as dead in another.&lt;/p&gt;
-
-&lt;p&gt;The eForms project is meant to flexibly add data collection forms into WCP but at the time of writing, the lung cancer ETTF project has stalled and the diabetes project delayed. Change requests to electronic test requesting have been parked for many months in preparation for a new eForm based solution which has not yet been deployed. I am not aware that any decision has been made as to &lt;em&gt;where&lt;/em&gt; data recorded in an eForm is actually persisted.&lt;/p&gt;
-
-&lt;p&gt;I find it difficult to understand how these solutions will solve even the simple requirements I’ve listed above.&lt;/p&gt;
-
-&lt;h1 id=&quot;conclusions&quot;&gt;Conclusions&lt;/h1&gt;
-
-&lt;p&gt;I am therefore concerned that:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;We have not fully understood the wider requirements underpinning a modern cancer information system, to solve our current and future problems. It is likely that, fundamentally, the requirements of cancer services are likely to be more widely applicable to a range of specialties and services.&lt;/li&gt;
-  &lt;li&gt;We have not adequately performed a open transparent appraisal of the options in relation to cancer informatics.&lt;/li&gt;
-  &lt;li&gt;That the combination of Welsh PAS and WCP must be regarded as a significant &lt;em&gt;risk&lt;/em&gt; both in terms of delivery to the timescales and functionality, given the gaps between what is currently possible in “Welsh PAS” in WCP at the current time and what will be needed to support improvement and transformation in cancer informatics.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Instead, I would argue that we should be focusing our efforts on building a generic open standards-based healthcare platform.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;further-reading&quot;&gt;Further reading&lt;/h1&gt;
-
-&lt;h4 id=&quot;on-needing-to-stop-and-review-our-strategy&quot;&gt;On needing to stop and review our strategy&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/platform/2018/06/30/user-need-agile-platform.html&quot;&gt;Pulling the “Andon Cord”&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;on-once-for-wales&quot;&gt;On “Once for Wales”&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/03/15/once-for-wales.html&quot;&gt;Once for Wales : a debate&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;on-trust-and-innovation&quot;&gt;On trust and innovation&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/12/06/paradox-of-ambition.html&quot;&gt;The paradox of ambition&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/12/05/enabling-innovation.html&quot;&gt;The paradox of control&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/12/06/5os-health.html&quot;&gt;The 5 Os of healthcare IT - objectives, ownership, openness, optimise, organic&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;on-platforms&quot;&gt;On platforms:&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;/clinical-informatics/2017/10/19/data-driven.html&quot;&gt;Data-driven healthcare&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/digital-platform/2018/03/03/platform-wales-1.html&quot;&gt;Platforms 1/3. Standards and interoperability&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/digital-platform/2018/03/03/platform-wales-2.html&quot;&gt;Platforms 2/3. An API-first approach&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/digital-platform/2018/03/03/platform-wales-3.html&quot;&gt;Platforms 3/3. What we need to do next&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;on-focus&quot;&gt;On focus:&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/01/19/focus-focus-focus.html&quot;&gt;Focus 1/3. The importance of strategy : focus&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/01/19/focus-challenges.html&quot;&gt;Focus 2/3. The challenges we face in delivering the vision&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/01/19/focus-solutions.html&quot;&gt;Focus 3/3. Pragmatic solutions to those challenges&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;on-data-1&quot;&gt;On data:&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/08/22/health-data.html&quot;&gt;Health data - start with a problem&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/10/19/data-driven.html&quot;&gt;Data-driven healthcare&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;on-development-standards-and-ecosystems&quot;&gt;On development standards and ecosystems&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/05/06/cloud-ehr.html&quot;&gt;Creative 1/3: creative destruction in health IT&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/05/06/clinical-software-quality.html&quot;&gt;Creative 2/3: the value of software for healthcare: quality improvement and service transformation underpinned by software, and software underpinning by quality improvement&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/05/08/ecosystems.html&quot;&gt;Creative 3/3: ecosystems and the platform&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h4&gt;
-
-&lt;p&gt;&lt;a name=&quot;migration-pd&quot;&gt;1&lt;/a&gt;: Few people are aware, but a few years ago, I migrated both Cardiff and Vale and Bridgend Parkinson’s services from CANISC to a new electronic patient record system, complete with demographics, diagnostic information, all encounters, clinic annotations and measurement data as well as drugs used past and present. Oh, and mapped all diagnoses and medications to SNOMED-CT at the same time. I did this over a few weekends and did the big migration over a single weekend. It was a hobby project but based on the fact that CANISC was end-of-life and we needed to do something. The database schema was a bit odd, but it wasn’t actually particularly difficult. We now track diagnoses and outcomes on a modern web-based platform across Wales that I built in my spare time.&lt;/p&gt;
-
-&lt;p&gt;&lt;a name=&quot;federation&quot;&gt;2&lt;/a&gt;: Federation means encapsulating or abstracted multiple services under one, simple to use service. You might, for example, track professional identity by delegating authentication to social care or health care authentication services, and federate based on a namespace.&lt;/p&gt;</content><author><name></name></author><summary type="html">The Public Accounts Committee (PAC) of the National Assembly for Wales heard evidence yesterday from Velindre NHS Trust on cancer informatics. You can see more here including the video. The minutes will appear soon.</summary></entry></feed>
+&lt;p&gt;This is shown in this schematic, where “external” services such as document repositories in the health boards publish documents into WCRS but the &lt;em&gt;only&lt;/em&gt; way to view and search documents is via a portal application, WCP.  There are less than a handful of releases of WCP per year. Is it any wonder that users across Wales are dissatisfied with the pace of change?&lt;/p&gt;</content><author><name></name></author><summary type="html">How can we make best use of technology to support healthcare?</summary></entry></feed>
