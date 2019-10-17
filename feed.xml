@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2019-10-17T11:48:29+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2019-10-17T16:58:10+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
 </subtitle><entry><title type="html">An open letter to the new chief digital officer for health and care in Wales</title><link href="https://www.wardle.org/strategy/2019/10/06/an-open-letter-to-the-cdo.html" rel="alternate" type="text/html" title="An open letter to the new chief digital officer for health and care in Wales" /><published>2019-10-06T10:09:09+01:00</published><updated>2019-10-06T10:09:09+01:00</updated><id>https://www.wardle.org/strategy/2019/10/06/an-open-letter-to-the-cdo</id><content type="html" xml:base="https://www.wardle.org/strategy/2019/10/06/an-open-letter-to-the-cdo.html">&lt;p&gt;This post is an open letter to whoever will become the new chief digital officer for health and care in Wales, prompted by this exciting announcement by the Health and Social Services Minister on 30th September 2019.&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -259,6 +259,7 @@ from my &lt;a href=&quot;https://standards.cymru/posts/2019-04-24-standards-cult
 &lt;ol&gt;
   &lt;li&gt;Demographics programme&lt;/li&gt;
   &lt;li&gt;Appointments and scheduling programme&lt;/li&gt;
+  &lt;li&gt;API management/authentication/authorisation logging.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;Demographics are an essential core requirement for a single patient record, and this programme might focus on coordinating the following products:&lt;/p&gt;
