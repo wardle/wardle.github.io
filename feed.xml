@@ -1,5 +1,86 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2019-10-18T11:29:32+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
-</subtitle><entry><title type="html">An open letter to the new chief digital officer for health and care in Wales</title><link href="https://www.wardle.org/strategy/2019/10/06/an-open-letter-to-the-cdo.html" rel="alternate" type="text/html" title="An open letter to the new chief digital officer for health and care in Wales" /><published>2019-10-06T10:09:09+01:00</published><updated>2019-10-06T10:09:09+01:00</updated><id>https://www.wardle.org/strategy/2019/10/06/an-open-letter-to-the-cdo</id><content type="html" xml:base="https://www.wardle.org/strategy/2019/10/06/an-open-letter-to-the-cdo.html">&lt;p&gt;This post is an open letter to whoever will become the new chief digital officer for health and care in Wales, prompted by this exciting announcement by the Health and Social Services Minister on 30th September 2019.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2019-10-18T14:13:22+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</subtitle><entry><title type="html">Demographics and identity: A fundamental service in a health and care platform</title><link href="https://www.wardle.org/platform/2019/10/18/demographics-patient-identity.html" rel="alternate" type="text/html" title="Demographics and identity: A fundamental service in a health and care platform" /><published>2019-10-18T11:10:10+01:00</published><updated>2019-10-18T11:10:10+01:00</updated><id>https://www.wardle.org/platform/2019/10/18/demographics-patient-identity</id><content type="html" xml:base="https://www.wardle.org/platform/2019/10/18/demographics-patient-identity.html">&lt;p&gt;This blog post is a slightly expanded version of a recent &lt;a href=&quot;https://twitter.com/mwardle/status/1184578331041247233?s=21&quot;&gt;Twitter thread&lt;/a&gt; that I live tweeted during the creation of a Wardley map looking at health and care architecture in relation to identity services and specifically, how we manage patient demographic information.  You can read more about Wardley mapping from &lt;a href=&quot;https://medium.com/wardleymaps&quot;&gt;Simon Wardley’s own blog&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;So I’ve been practicing my @swardley mapping to try to look at one facet of our health and care architecture and ecosystem: patient demographics. Wardley maps use a value chain to show user need and their dependencies running from top to bottom.&lt;/p&gt;
+
+&lt;p&gt;Understanding patient identity is pretty much essential to all that we do in health and care. One of major problems in health is that legacy applications have tended to be “full stack”, containing different components that are user-facing, do business logic and that do data.&lt;/p&gt;
+
+&lt;p&gt;This approach is shown in this schematic:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/demographics-mapping/Value%20chain%200.png&quot; alt=&quot;Value Chain 0&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The application is dependent on components that support user-facing logic, components that handle business logic, and components that provide data storage. All are dependent on computing power and computing power is dependent on power (electricity).&lt;/p&gt;
+
+&lt;p&gt;The historic approach to health and care software is the procurement of multiple ‘full-stack’ applications and consequently we, within health and care, have to consider how to integrate these applications in order to ensure information is available at the right time across different systems. In general, however, we have seen multiple applications in silos, resulting in patients being surprised that updating their address at their general practitioner might not be propagated to, for example, the radiology booking office.&lt;/p&gt;
+
+&lt;p&gt;We realised that running multiple health and care applications each with their own idea of patient demographics was a &lt;em&gt;BAD IDEA&lt;/em&gt;. Many applications switched to using demographic information from the local (organisation-bound) “patient administrative system” (PAS).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/demographics-mapping/Value%20chain%201.png&quot; alt=&quot;Value Chain 1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As a result, the user facing application becomes dependent on local (organisation) patient administrative system. However, that might work in one organisation, with the PAS acting as an authoritative source of patient identity (demographic) information,  but we have multiple organisations! So what happened? We ended up with multiple applications and multiple organisations, all in silos:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/demographics-mapping/Value%20chain%202.png&quot; alt=&quot;Value Chain 2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And now we have a problem. How do we share information about patients if we can’t match identities between organisations? How can we track the progress of a pathway of care across organisational boundaries without this? Patients don’t experience a “single seamless system” but the fractured, silo approach is evident for all to see - they update their telephone number with their general practitioner and are surprised when the hospital doesn’t know about the change.&lt;/p&gt;
+
+&lt;p&gt;Enter the EMPI, or “enterprise master patient index”.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/demographics-mapping/Value%20chain%203.png&quot; alt=&quot;Value Chain 3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;But, you will also see that we need a new national identifier service, the WDS, that can reach out to NHS England who provides NHS number generation. This is getting complicated. How do we write applications that can deal with this? And what if the patient wants to get involved?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/demographics-mapping/Value%20chain%204.png&quot; alt=&quot;Value Chain 4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Are we now expecting applications to handle understanding demographics across multiple PAS, and to manage the ongoing updates and calls to the NHS Number Tracing Service?&lt;/p&gt;
+
+&lt;p&gt;Surely we want a “one system” approach in Wales, centred on the patient and not the organisation?&lt;/p&gt;
+
+&lt;p&gt;And hold on. We need to start running analytics across our whole enterprise, seeing how patients fare in the course of their care. How do we track them in our analytics software? We’re going to take A&amp;amp;E attendance data from a PAS and then, how do we match up information?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/demographics-mapping/Value%20chain%205.png&quot; alt=&quot;Value Chain 5&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In Wales, there is an enterprise service bus (ESB) which securely carries HL7 V2 messages to request, update and merge demographic information. This approach means that your application will need to plug-in to what is essentially a firehose and deal with filtering and managing these messages to track changes over time.&lt;/p&gt;
+
+&lt;h1 id=&quot;mapping&quot;&gt;Mapping&lt;/h1&gt;
+
+&lt;p&gt;Mapping allows us to add another axis - the maturity of our components - from components that are brand new and being developed, to those that are custom-built, to those we can buy, to those that are a commodity (readily interchangeable alternatives exist). Let’s do that:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/demographics-mapping/Map%201.png&quot; alt=&quot;Map 1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We have a problem and the map demonstrates it for us. The map allows us to start to test our models &amp;amp; starts our discussions. Are we really expecting each of our user facing applications &amp;amp; analytics to try to deal with this mess? Instead, surely we need a single authoritative source of identity?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/demographics-mapping/Map%202.png&quot; alt=&quot;Map 2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And that means we can break apart the tight (organisationally-centric) coupling between our applications &amp;amp; individual PAS Instead, we do the hard work to hide the complexity inherent in what is a complex adaptive enterprise containing multiple sources of demographic information.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/demographics-mapping/Map%203.png&quot; alt=&quot;Map 3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We can see that our single authoritative source, abstracting (hiding) the complexity of our legacy problems with patient identity, will itself evolve towards being a commodity over time as we switch to using it. The red arrow shows the movement over time, as we first build and then deploy this service, and applications move from directly integrating with local administrative systems to a new shared national service.&lt;/p&gt;
+
+&lt;p&gt;So how to permit such an evolution? Such a switch will be best driven by adoption of robust open technical standards that make it easy for applications to consume and process patient identity information using this service. That means making it easier for applications to use our new service rather than directly integrating with proprietary lower level systems. To enable that transformation, we must recognise the value of open standards. So that means we must add standards and the supporting processes for their adoption to our map:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/demographics-mapping/Map%204.png&quot; alt=&quot;Map 4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The final step is that this new service encapsulates and hides underlying platform implementation details. It is conceivable that, over time, that underlying implementation can be changed, simplified and &lt;em&gt;removed&lt;/em&gt; without changing client application code, because we’ve ensured loose coupling via the use of open standards and APIs.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/demographics-mapping/Map%205.png&quot; alt=&quot;Map 5&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;conclusions&quot;&gt;Conclusions&lt;/h1&gt;
+
+&lt;p&gt;So I think this demonstrates that:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;We need a single authoritative source of patient identity information&lt;/li&gt;
+  &lt;li&gt;Applications should delegate identity services to that module rather than trying to manage demographics themselves …&lt;/li&gt;
+  &lt;li&gt;We need to adopt robust open technical standards (e.g. HL7 FHIR Patient)&lt;/li&gt;
+  &lt;li&gt;We need to support the ongoing processes to curate, manage and adopt technical standards to drive the commoditisation of a new “one system” approach to demographic, patient identity services.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Demographics is but one foundational service that are needed to build a modern open platform for health and care. I discuss the wider issues on the next steps in building an &lt;a href=&quot;/strategy/2019/09/22/health-technology.html&quot;&gt;open platform in different blog post&lt;/a&gt;, including the importance of demographics and appointments/scheduling as good examples of programmes of work, focused on implementing &lt;em&gt;products&lt;/em&gt; not projects, that will give us valuable learning for our next steps.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Mark Wardle&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">This blog post is a slightly expanded version of a recent Twitter thread that I live tweeted during the creation of a Wardley map looking at health and care architecture in relation to identity services and specifically, how we manage patient demographic information. You can read more about Wardley mapping from Simon Wardley’s own blog.</summary></entry><entry><title type="html">An open letter to the new chief digital officer for health and care in Wales</title><link href="https://www.wardle.org/strategy/2019/10/06/an-open-letter-to-the-cdo.html" rel="alternate" type="text/html" title="An open letter to the new chief digital officer for health and care in Wales" /><published>2019-10-06T10:09:09+01:00</published><updated>2019-10-06T10:09:09+01:00</updated><id>https://www.wardle.org/strategy/2019/10/06/an-open-letter-to-the-cdo</id><content type="html" xml:base="https://www.wardle.org/strategy/2019/10/06/an-open-letter-to-the-cdo.html">&lt;p&gt;This post is an open letter to whoever will become the new chief digital officer for health and care in Wales, prompted by this exciting announcement by the Health and Social Services Minister on 30th September 2019.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;£50 million and new body to transform digital health and care services in Wales
@@ -978,252 +1059,4 @@ notes
 
 &lt;p&gt;Let me know what you think.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Here are my suggested 10 broad principles for building the next generation of electronic health record systems:</summary></entry><entry><title type="html">Using algorithms in healthcare</title><link href="https://www.wardle.org/strategy/2018/08/30/algorithm-strategy.html" rel="alternate" type="text/html" title="Using algorithms in healthcare" /><published>2018-08-30T10:09:09+01:00</published><updated>2018-08-30T10:09:09+01:00</updated><id>https://www.wardle.org/strategy/2018/08/30/algorithm-strategy</id><content type="html" xml:base="https://www.wardle.org/strategy/2018/08/30/algorithm-strategy.html">&lt;p&gt;I want to convince you that our use of machine learning in healthcare, building algorithms that learn for themselves, depends on:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;developing expertise in data analytics and machine learning,&lt;/li&gt;
-  &lt;li&gt;structuring, generating and aggregating clinically meaningful clinical data, and,&lt;/li&gt;
-  &lt;li&gt;building robust evaluation processes using a combination of synthetic, randomised controlled and real-life implementation phases.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;An algorithm is simply a list of rules to follow in order to solve a problem.&lt;/p&gt;
-
-&lt;h1 id=&quot;machine-learning&quot;&gt;Machine learning&lt;/h1&gt;
-
-&lt;p&gt;Machine learning uses statistical methods to allow computers to learn from data; in effect, an algorithm is generated by a computer based on data.  Modern advances in computationally-intensive methods, such as deep learning, enabled by advances in computing power, have resulted in widespread recent adoption in many domains such as image and speech recognition and excitement about its potential use in healthcare.&lt;/p&gt;
-
-&lt;p&gt;Machine learning is already being used in fields outside of image and speech recognition. For example, in 2016, Google DeepMind built a automated recommendation algorithm to improve the energy efficiency of Google’s data centres; the algorithm analyses data from thousands of sensors and is optimised to minimise energy consumption. After two years, with the benefit of real-world experience as well as a range of additional safety measures, the teams took the &lt;a href=&quot;https://deepmind.com/blog/safety-first-ai-autonomous-data-centre-cooling-and-industrial-control/&quot;&gt;decision to make the system directly implement its recommendations&lt;/a&gt;. As an adaptive algorithm tasked with optimising energy efficiency, the teams have demonstrated an improvement with performance improves over time, as a result of more data being available.&lt;/p&gt;
-
-&lt;p&gt;Google DeepMind’s AlphaGo &lt;a href=&quot;https://deepmind.com/blog/exploring-mysteries-alphago/&quot;&gt;took on and defeated one of the World champions of the game Go&lt;/a&gt;. Rather than simply applying a brute force, combinatorial approach to generate the best moves from a finite set of possible moves, the team used deep learning to create a continuously-learning algorithm that improved over time; such learning provided human players with new insights into tactics and strategy as the algorithm used &lt;a href=&quot;https://deepmind.com/blog/innovations-alphago/&quot;&gt;unconventional and unintuitive moves&lt;/a&gt; during its play. Their later AlphaGo Zero algorithm, while not needing bootstrapping with even the rules of the game, or from records of previous games, benefitted from a novel approach to reinforcement learning in which it learnt outcomes from games it played against itself, generating data about outcomes in a feedback loop.&lt;/p&gt;
-
-&lt;p&gt;But what about machine learning and healthcare?&lt;/p&gt;
-
-&lt;p&gt;IBM announced that they would build Watson for Health in 2013, launching services for cancer care that could recommend treatment regimens based on individual patient data and the latest research. During development, IBM acquired a number of companies possessing large amounts of health data, but within four years, the project had been &lt;a href=&quot;https://www.technologyreview.com/s/607965/a-reality-check-for-ibms-ai-ambitions/&quot;&gt;shut down at the M.D. Cancer Centre, in Houston, USA&lt;/a&gt; and this year, it was reported that internal IBM reports documented &lt;a href=&quot;https://www.statnews.com/2018/07/25/ibm-watson-recommended-unsafe-incorrect-treatments/&quot;&gt;that unsafe and incorrect cancer treatments were being recommended&lt;/a&gt;. In writing this blog post, I’ve found conflicting anecdotal reports of its success so it is difficult to conclude anything definitively at present.&lt;/p&gt;
-
-&lt;p&gt;Despite such controversies, there have been some successes; Google DeepMind, in a collaboration with Moorfields Eye Hospital, have created an algorithm to interpret optical coherence tomography (OCT) scans, used to examine the structures of the retina in great detail, in order to &lt;a href=&quot;https://deepmind.com/documents/239/De%20Fauw%20et.%20al%20Nature%20Medicine%202018%20.pdf&quot;&gt;triage patients by identifying pathology requiring referral&lt;/a&gt;. In that paper, the authors compare performance of their algorithm with humans, identifying risks of over- and under-diagnosis.&lt;/p&gt;
-
-&lt;p&gt;As such:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;advances in machine learning have created powerful, adaptive, learning algorithms that can outperform humans in niche areas.&lt;/li&gt;
-  &lt;li&gt;we need need labelled data, including outcome data, in order to teach an algorithm effectively.&lt;/li&gt;
-  &lt;li&gt;performance of machine learning in healthcare has been subject to hype and relatively few proven success stories&lt;/li&gt;
-  &lt;li&gt;progress in healthcare, so far, has been associated with taking decisions that have tightly defined scope and that are made in specific clinical contexts.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;algorithms-in-healthcare&quot;&gt;Algorithms in healthcare&lt;/h1&gt;
-
-&lt;p&gt;Algorithms are already widely used in medicine, formally and informally.&lt;/p&gt;
-
-&lt;p&gt;For example, if you have atrial fibrillation, we can use the &lt;a href=&quot;https://www.chadsvasc.org/&quot;&gt;CHADS-VASC atrial fibrillation risk score calculator&lt;/a&gt; to estimate your risk of developing a stroke and therefore guide preventative treatment; should you be given anticoagulation, or not?&lt;/p&gt;
-
-&lt;p&gt;How has such a scoring system been accepted and adopted in healthcare?&lt;/p&gt;
-
-&lt;p&gt;This score has been in development over many years, with multiple iterations. Initial calculators such as &lt;a href=&quot;https://jamanetwork.com/journals/jama/fullarticle/193912&quot;&gt;CHADS2 being published back in 2001&lt;/a&gt; were created by pooling data from 1733 patients with a total of 2121 patient-years of follow-up and have subsequent been refined and validated in different cohorts of patients and adapted as a result of new advances such as the availability of novel anticoagulants that do not need close monitoring. An example of how iterative changes were made in this particular risk algorithm has been documented by &lt;a href=&quot;https://academic.oup.com/eurheartj/advance-article-pdf/doi/10.1093/eurheartj/ehv431/10800295/ehv431.pdf&quot;&gt;Professor Lip from the University of Birmingham&lt;/a&gt;, emphasising the importance of ongoing validation and improvement with larger data sets and more representative population samples.&lt;/p&gt;
-
-&lt;p&gt;This type of risk score can be generated by examining baseline characteristics and building a statistical model, such as Cox proportional hazards, to identify whether each characteristic has an effect on the outcome measure; such models also tell us the magnitude of that effect. Typically in conventional statistical methodology, the choice of which characteristics to examine is made by the investigators based on existing knowledge about the outcome in question; the approach is hypothesis-driven.&lt;/p&gt;
-
-&lt;p&gt;We use the magnitude of effect on outcome to generate a meaningful scoring system which can subsequently be validated as a prediction tool in a particular population. In essence, we predict an endpoint, in this case an outcome, with the presence or absence of characteristics, with information, known at the time of a decision in that population; validation in one population does not mean that an algorithm is appropriate in another. This prediction will itself be uncertain, with the model able to provide prediction of outcome with some degree of confidence; a 95% confidence interval means that we can be 95% certain that our prediction is within the range specified.&lt;/p&gt;
-
-&lt;p&gt;Adoption of clinical decision tools therefore result from rigorous process of academic work and &lt;em&gt;ongoing&lt;/em&gt; development and validation but is anything more needed?&lt;/p&gt;
-
-&lt;p&gt;In fact, adoption of clinical algorithms is also the consequence of a more informal set of processes and cultures that influence whether a tool gains sufficient traction within the wider community. Similarly, even if a tool is widely adopted, the use of the algorithm and any decision made as a result of that algorithm, in any individual clinical scenario, is usually at the discretion of the professional at the time; if it is used then it is used to attempt to reduce the uncertainty about a clinical decision.&lt;/p&gt;
-
-&lt;p&gt;As such:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;we already use algorithms&lt;/li&gt;
-  &lt;li&gt;algorithms become part of clinical practice after going through a set of formal and informal processes, with use dependent on culture, values and perceptions.&lt;/li&gt;
-  &lt;li&gt;ongoing monitoring and validation is required in order to safely apply an algorithm in a specific population.&lt;/li&gt;
-  &lt;li&gt;validation of algorithms is currently time-consuming and usually a once-off project, sometimes repeated at intervals. For example, in validating techniques to prevent stroke, there has been dedicated data collection of outcome data, such as whether the patient has had a stroke or not, usually as part of a registry study, because such data is not collected in a meaningful fashion in routine clinical practice.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;heuristics-in-healthcare&quot;&gt;Heuristics in healthcare&lt;/h1&gt;
-
-&lt;p&gt;We also use a range of heuristics, sets of informal rules, in our day-to-day clinical work.&lt;/p&gt;
-
-&lt;p&gt;When I started as a pre-registration house officer on the neurology ward in 1999, I quickly learned that patients with neuropathy almost certainly have a condition called chronic inflammatory demyelinating polyneuropathy (CIDP), based on my “experience”. Almost every patient I saw with those symptoms had this condition, and my diagnostic sleuthing was calibrated based on this experience. I had quickly and unconsciously developed a heuristic.&lt;/p&gt;
-
-&lt;p&gt;Except I was wrong; my calibration was broken because patients with CIDP were the ones who were brought to the ward for their intravenous immunoglobulins and so they were the only patients with neuropathy I saw!&lt;/p&gt;
-
-&lt;p&gt;That’s not to say that heuristics are not useful; indeed, heuristics are short-cuts that permit decision making at times of extreme uncertainty, frequently learnt by formal and informal teaching together with experience. For example, a heuristic might be used to take the right action if a life-threatening illness is simply a possibility, even if improbable. In many situations, we chain heuristics together, so that we don’t aim to make a diagnosis in a single cognitive step but instead using a chain of multiple, adaptive heuristics.&lt;/p&gt;
-
-&lt;p&gt;For example, I might think you have migraine, but you are 65 years old and your headaches are waking you at night and I proceed to arrange a brain scan. From a purely Bayesian point-of-view, the probability of you having a brain tumour is low; this &lt;em&gt;a priori&lt;/em&gt; probability is a consequence of dealing with rarer disorders. My use of &lt;em&gt;red flags&lt;/em&gt;, a set of heuristics that, we hope, prompt me to arrange an investigation to reduce the uncertainty in diagnosis in any individual patient, will result in lots of normal scans in the patients that I see. I accept a high rate of negative scans to increase my own sensitivity in identifying a patient with a serious underlying neurological disease; missing such a diagnosis has grave implications for the patient and I endeavour to calibrate my assessment to minimise the possibility, for that specific issue in that specific context.&lt;/p&gt;
-
-&lt;p&gt;You might think that heuristics used in clinical practice have been validated in the same way as any other decision aid, but frequently, there is very little data on the positive or negative predictive value of such tools. In addition, humans are subject to a range of &lt;a href=&quot;https://en.wikipedia.org/wiki/Cognitive_bias&quot;&gt;cognitive biases&lt;/a&gt; (see &lt;a href=&quot;https://www.amazon.co.uk/Thinking-Fast-Slow-Daniel-Kahneman/dp/0141033576/ref=sr_1_2?ie=UTF8&amp;amp;qid=1513438649&amp;amp;sr=8-2&amp;amp;keywords=cognitive+biases&quot;&gt;“Thinking fast and slow” by Prof. Daniel Kahneman&lt;/a&gt;) which results in failures of our heuristics. For example, in confirmation bias, we may place greater emphasis on new information if it confirms a pre-existing belief or conclusion.&lt;/p&gt;
-
-&lt;p&gt;&lt;a title=&quot;By Jm3 (Own work) [CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)], via Wikimedia Commons&quot; href=&quot;https://commons.wikimedia.org/wiki/File%3AThe_Cognitive_Bias_Codex_-_180%2B_biases%2C_designed_by_John_Manoogian_III_(jm3).png&quot;&gt;&lt;img width=&quot;512&quot; alt=&quot;The Cognitive Bias Codex - 180+ biases, designed by John Manoogian III (jm3)&quot; src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/The_Cognitive_Bias_Codex_-_180%2B_biases%2C_designed_by_John_Manoogian_III_%28jm3%29.png/512px-The_Cognitive_Bias_Codex_-_180%2B_biases%2C_designed_by_John_Manoogian_III_%28jm3%29.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;As such:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;humans use heuristics to help them make decisions, particularly at times of high uncertainty&lt;/li&gt;
-  &lt;li&gt;humans are prone to a range of biases which result in mistaken decisions&lt;/li&gt;
-  &lt;li&gt;we will benefit from understanding more about our own decision-making and improving the heuristics we use in daily clinical work; many of our own heuristics would benefit from further evaluation&lt;/li&gt;
-  &lt;li&gt;specific heuristics are useful, even if of low predictive value, if they increase sensitivity to identify life-threatening illness, in specific clinical contexts.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;becoming-data-driven&quot;&gt;Becoming data-driven&lt;/h1&gt;
-
-&lt;p&gt;Decision-making in healthcare, whether by human or machine, whether for making a decision or evaluating a prior decision, needs clinically meaningful &lt;em&gt;data&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;What kinds of health data do we have?&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;data used for administration, e.g. hospital administrative data&lt;/li&gt;
-  &lt;li&gt;data for individual clinical care (traditionally paper based), e.g. medical records&lt;/li&gt;
-  &lt;li&gt;data used for quality improvement and assessment of interventions in real-life environments, e.g. data acquired during specific clinical audit or service improvement projects&lt;/li&gt;
-  &lt;li&gt;data used for for specific clinical research&lt;/li&gt;
-  &lt;li&gt;data from the patient, either directly or via their own smart devices&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;These data are usually separated in silos. It is uncommon for research studies to make use of real-life clinical data and similarly, research data is not usually made available for routine direct care purposes. Similarly, how can we evaluate quality-of-life data without understanding a patient’s long-term health conditions or surgical procedures?&lt;/p&gt;
-
-&lt;p&gt;In addition, each type of data is, itself, highly fragmented. For example, data from one research project are held separately to those from another, and even data for direct clinical care usually collected and stored on a per-organisation basis, shared in only a limited fashion, if at all, between organisations providing care for a single patient.&lt;/p&gt;
-
-&lt;p&gt;The problems are compounded by the fact that data relating to direct care is frequently paper-based. That’s why most hospitals cannot tell you how many patients with, for example, motor neurone disease , their teams look after or indeed their outcomes, without a project to specifically look at answering those questions for a set period of time.&lt;/p&gt;
-
-&lt;p&gt;Even when healthcare professionals use electronic means of capturing information, such as electronic health record software, much of that information is not recorded in a way that makes it easily usable, neither by human nor machine, because it is unstructured or, at best, semi-structured.&lt;/p&gt;
-
-&lt;p&gt;For many users, those electronic health record systems are essentially monolithic so that user interface code, business logic and backend data storage is proprietary and must be integrated with other systems to achieve interoperability. When such systems need to be replaced, data must be migrated from the old to the new. We now recognise the benefits of separating data and its structure from the software code that operates upon that data; in healthcare, our data and its structure should be domain-driven given the complex, adaptive environment in which we work and our code can be stateless and often lightweight and ephemeral, particularly those components which are user-facing and most subject to change.&lt;/p&gt;
-
-&lt;p&gt;As such:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;we need clinically meaningful data to be recorded and used to support a range of purposes, including: clinical decision making for the care of individual patients, managing our services, quality improvement and clinical research.&lt;/li&gt;
-  &lt;li&gt;as we capture clinically meaningful data during many different processes and for many different purposes, we must routinely aggregate information of different types, from different sources.&lt;/li&gt;
-  &lt;li&gt;we need open data standards to build a complete holistic, aggregated &lt;em&gt;view&lt;/em&gt; of an individual patient or service; much information is not interpretable without understanding information from elsewhere or from different processes.&lt;/li&gt;
-  &lt;li&gt;we need semantic interoperability so that we can exchange and combine information from multiple sources.&lt;/li&gt;
-  &lt;li&gt;we need to move away from procuring ‘full-stack’ applications that combine user interface code, business logic and data storage and move to lightweight, ephemeral user-facing applications each providing different perspectives on the same logical, structured healthcare record.&lt;/li&gt;
-  &lt;li&gt;as a result, we need to consider the benefit of an open platform, made up of open-source implementations of open standards.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;evaluation-and-closed-feedback-loops&quot;&gt;Evaluation and closed feedback loops&lt;/h1&gt;
-
-&lt;p&gt;We need to consider multiple ways to evaluate our decisions, whether those decisions were made by human or machine.&lt;/p&gt;
-
-&lt;p&gt;For human students, we now use simulation at medical schools to help perform and learn in a safe, controlled environment; our human students are exposed to synthetic and real data in order to learn. In my role in assessments for the undergraduate medical course in Cardiff, I helped build a large multiple choice question bank so that we could implement continuous assessment, guiding learning through assessments and feedback on performance at multiple times during the academic year. Our human education has focused on creating a feedback loop in order to help learners improve. Contrived data are useful in testing that a clinician is &lt;em&gt;safe&lt;/em&gt;; we might issue a “yellow card” to a student missing a classic presentation of septicaemia in an examination and that student might fail, even if their overall score is in the pass range.&lt;/p&gt;
-
-&lt;p&gt;In pharmaceutical drug development, sequential processes are used ranging from drug discovery, preclinical and clinical research, review and post-marketing surveillance. Each step examines the potential or actual efficacy of a drug; initially in models, then in control subjects, then in selected patients and then in real-life clinical environments. Each step makes use of different approaches and provides different insights into the performance of that drug.&lt;/p&gt;
-
-&lt;p&gt;In clinical research, such as a &lt;em&gt;randomised controlled trial&lt;/em&gt;, we attempt to avoid biases; for example, if we only evaluate an intervention, such as a new drug, in real-life clinical practice, we would fail to control for clinicians inadvertently giving a new treatment only to a most healthy subset of patients. A controlled trial means that we control for spurious differences between a population that receives an intervention and a population that doesn’t, and ensure we remove as many biases as possible in our assessment of that intervention.&lt;/p&gt;
-
-&lt;p&gt;The results of randomised controlled trials are usually considered highly generalisable to other populations; however we recognise that this is often not the case when trials exclude patients with, for example, multiple co-morbidities or have failed to recruit patients at the extremes of age.&lt;/p&gt;
-
-&lt;p&gt;On the other hand, changes in the way that we deliver care are difficult to evaluate as part of a randomised controlled trial; instead we might adopt an approach of &lt;em&gt;quality improvement&lt;/em&gt;. We use these type of methodologies when what we are studying is subject to considerable local variation such as differing local organisational structures; our learning may not necessarily be as generalisable as a randomised controlled trial.  Conversely this type of study may provide valuable information about how an intervention performs in the real world.&lt;/p&gt;
-
-&lt;p&gt;There are a range of quality improvement methodologies that act to iteratively define, measure, analyse, improve and control; a common feature of all is a cycle of measurement and intervention to examine and improve process and outcome.&lt;/p&gt;
-
-&lt;p&gt;Healthcare, as yet, has failed to use technology to transform the way randomised trials and quality improvement are delivered. In modern technology companies, thousands of small randomised trials can be performed every day with closed feedback loops providing rapid assessment of outcome. For example, Google have embedded randomised trials into their software development pipeline, making it possible to run simple trials to assess the effect of changing, for example, font colour, on click-through rates by users.&lt;/p&gt;
-
-&lt;p&gt;Routinely collected health data and randomised trials are dependent on a high-quality infrastructure which can collect clinically meaningful data and help to randomise, at any point of clinical equipoise, an individual into a trial of one intervention over another as well as streamlining the process of trial design and ethical approval.&lt;/p&gt;
-
-&lt;p&gt;As such:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;underpinning all approaches to evaluation is the collection and analysis of meaningful data, linking eventual outcome to the data known at the time of a decision; in essence, evaluation of any decision is predicated on a closed feedback loop.&lt;/li&gt;
-  &lt;li&gt;synthetic data is valuable in many circumstances, particularly for beginners.&lt;/li&gt;
-  &lt;li&gt;randomised controlled trials assess an intervention in a defined group, such as a specific cohort of patients and attempts to control for biases; they may be controlled with a placebo or the best current intervention. Modern trials are frequently complex, expensive and time-consuming and are difficult to run for any complex intervention and usually have very limited follow-up.&lt;/li&gt;
-  &lt;li&gt;quality improvement approaches assess interventions in real-life contexts but are subject to inherent biases.&lt;/li&gt;
-  &lt;li&gt;we currently lack a cohesive technical infrastructure that supports the definition, collection and analysis of meaningful, structured clinical data. Likewise, we lack tools to streamline and support the processes needed to undertake randomised trials in humans including design, ethical approval and the day-to-day identification, recruitment, consent and randomisation.&lt;/li&gt;
-  &lt;li&gt;all clinicians will tell you that we face thousands of situations of clinical equipoise every day, a decision needs to be made in which one choice is no known to be better than another; we must endeavour to build an infrastructure that supports the systematic recruitment of patients into clinical trials as a matter of routine. We are seeing the start of this in oncology.&lt;/li&gt;
-  &lt;li&gt;such an infrastructure would support our current need for quality improvement and research, but also would support the use of systematic algorithmic decision support in clinical care to shape its development, its evaluation and ongoing post-marketing surveillance of safety.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;and-so-what&quot;&gt;And so what?&lt;/h1&gt;
-
-&lt;p&gt;I truly believe that software and data are of vital importance to the future of healthcare.&lt;/p&gt;
-
-&lt;p&gt;We need, as professionals and as patients, to have the right information at the right time, in order for us to develop a shared understanding and make the right decisions in any given context. We use data to reduce the uncertainty about our decisions and we need the right tools to create and make sense of those data.&lt;/p&gt;
-
-&lt;p&gt;Machine learning is an exciting and continuously-evolving field. I would argue that many of the changes we need to make in order to support the routine development, deployment, evaluation and monitoring of advanced algorithms in healthcare are the same ones that we need to use, right now, for our routine clinical practice. Whether our decisions are made by human or machine, or more likely a combination of both, whether those decisions are for an individual patient and for whole groups of our patients as part of developing our health services, understanding and assessing those decisions by the routine and systematic collection of meaningful data is vital.&lt;/p&gt;
-
-&lt;p&gt;We can start to understand what we need to do to achieve this by creating a &lt;a href=&quot;https://medium.com/wardleymaps&quot;&gt;Wardley map&lt;/a&gt;. We can start to build a map by thinking about a &lt;em&gt;value chain&lt;/em&gt;, in which we start with user need and try to understand the dependencies:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/ai-healthcare/ai-healthcare--part1.png&quot; alt=&quot;AI Healthcare value chain&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;We see that, to provide algorithmic decision support for patients and professionals, we need to consider&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;machine learning expertise&lt;/li&gt;
-  &lt;li&gt;clinically meaningful data&lt;/li&gt;
-  &lt;li&gt;trust - by the public and professionals.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I have, for each of those, shown what I consider to be the dependencies.&lt;/p&gt;
-
-&lt;p&gt;We can plot our value chain on a map, with the horizontal axis giving an indication as to whether that dependency is already available as a commodity, as a product to be bought or rented, as something we are developing or as something that is in its infancy:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/ai-healthcare/ai-healthcare--part2.png&quot; alt=&quot;Ai Healthcare  Part2&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;For example, here we see that public and professional trust is dependent on professional and public engagement as well as an evaluation pipeline that creates a continuously monitored feedback loop driven by data. Their location on the map shows that we are only just starting to work on engaging the public on the use of data, while adopting randomised trials and quality improvement such as six sigma in healthcare is more mature but not yet a commodity.&lt;/p&gt;
-
-&lt;p&gt;We can add more information. Here, I’ve highlighted whether healthcare organisations or technology companies can provide one of the dependencies:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/ai-healthcare/ai-healthcare--part3.png&quot; alt=&quot;Ai Healthcare  Part3&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Now we see that machine learning expertise from technology companies must be combined with data expertise from healthcare organisations in order to successfully deliver algorithmic decision support in healthcare.&lt;/p&gt;
-
-&lt;p&gt;Finally, we can use our map to work out what we need to do in order to deliver the vision, incorporating an indication of evolution over time:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/ai-healthcare/ai-healthcare.png&quot; alt=&quot;Ai Healthcare&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;We can conclude from our map that:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;clinically meaningful data is dependent on ongoing work to adopt open standards, and those standards are themselves dependent on an open-source toolchain that makes it easy to implement those open standards.&lt;/li&gt;
-  &lt;li&gt;aggregation of data from multiple sources is dependent on a scheme of data control and consent, so that citizens can opt-out and opt-in to share data for different purposes. This control and consent, I would argue, is also dependent on readily-available open source solutions.&lt;/li&gt;
-  &lt;li&gt;continued professional and public engagement will result in an increasing recognition of the value of data&lt;/li&gt;
-  &lt;li&gt;semantic interoperability, itself dependent on open standards, will result in the creation of routinely aggregated interoperable health records&lt;/li&gt;
-  &lt;li&gt;trust is dependent on engagement and building an evaluation pipeline supporting development, testing, deployment and real-life evaluation using a variety of processes, themselves supported by an enabling infrastructure&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;As such, if we want to revolutionise the use of technology in healthcare, we must become data-driven, and to do that, we need to create a suite of, likely open-source, tools that support the implementation of open standards, of consent and of quality improvement/research within day-to-day clinical practice.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;further-reading&quot;&gt;Further reading&lt;/h1&gt;
-
-&lt;p&gt;I’ve written quite a few posts looking at the benefit of meaningful data in healthcare, the importance of the medical record, diagnostic inference, SNOMED CT and healthcare IT strategy. Here are a few links:&lt;/p&gt;
-
-&lt;h4 id=&quot;on-data&quot;&gt;On data:&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/08/22/health-data.html&quot;&gt;Health data - start with a problem&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/10/19/data-driven.html&quot;&gt;Data-driven healthcare&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;on-creating-a-next-generation-cloud-health-record&quot;&gt;On creating a next generation cloud health record&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/05/06/cloud-ehr.html&quot;&gt;Part one: creative destruction&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/05/06/clinical-software-quality.html&quot;&gt;Part two: the value of software for healthcare&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/05/08/ecosystems.html&quot;&gt;Part three: ecosystems and the platform&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;on-platforms&quot;&gt;On platforms:&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;/clinical-informatics/2017/10/19/data-driven.html&quot;&gt;Data-driven healthcare&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/digital-platform/2018/03/03/platform-wales-1.html&quot;&gt;Platforms 1/3. Standards and interoperability&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/digital-platform/2018/03/03/platform-wales-2.html&quot;&gt;Platforms 2/3. An API-first approach&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/digital-platform/2018/03/03/platform-wales-3.html&quot;&gt;Platforms 3/3. What we need to do next&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;on-trust-and-innovation&quot;&gt;On trust and innovation&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/12/06/paradox-of-ambition.html&quot;&gt;The paradox of ambition&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/12/05/enabling-innovation.html&quot;&gt;The paradox of control&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/12/06/5os-health.html&quot;&gt;The 5 Os of healthcare IT - objectives, ownership, openness, optimise, organic&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;on-focus&quot;&gt;On focus:&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/01/19/focus-focus-focus.html&quot;&gt;Focus 1/3. The importance of strategy : focus&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/01/19/focus-challenges.html&quot;&gt;Focus 2/3. The challenges we face in delivering the vision&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/01/19/focus-solutions.html&quot;&gt;Focus 3/3. Pragmatic solutions to those challenges&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">I want to convince you that our use of machine learning in healthcare, building algorithms that learn for themselves, depends on:</summary></entry></feed>
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Here are my suggested 10 broad principles for building the next generation of electronic health record systems:</summary></entry></feed>
