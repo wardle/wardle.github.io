@@ -1,28 +1,28 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2019-10-19T08:05:54+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2019-10-19T12:48:41+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
 </subtitle><entry><title type="html">Appointments and scheduling: a programme of work for an open platform in NHS Wales</title><link href="https://www.wardle.org/platform/2019/10/18/appointments-scheduling.html" rel="alternate" type="text/html" title="Appointments and scheduling: a programme of work for an open platform in NHS Wales" /><published>2019-10-18T19:18:18+01:00</published><updated>2019-10-18T19:18:18+01:00</updated><id>https://www.wardle.org/platform/2019/10/18/appointments-scheduling</id><content type="html" xml:base="https://www.wardle.org/platform/2019/10/18/appointments-scheduling.html">&lt;p&gt;I propose a programme of work to demonstrate a new collaborative approach to technology across health and care in Wales, that recognises the fundamental, foundational requirement to understand a patient’s clinical encounters across disparate health and care services to create a “seamless” service via distributed modern technology.&lt;/p&gt;
 
 &lt;p&gt;While this is principally focused at health and care services in Wales, the design patterns have broad applicability, I hope.&lt;/p&gt;
 
-&lt;p&gt;One of the important principles is to plan a piece of work that &lt;em&gt;helps us learn&lt;/em&gt;, rather than planning as if we have the answers. This is in line with our &lt;a href=&quot;https://standards.cymru/posts/2018-12-01-wtsb/&quot;&gt;broad design principles&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;One of the important principles is to sketch out a piece of work that &lt;em&gt;helps us learn&lt;/em&gt;, rather than planning as if we have the answers. This is in line with our &lt;a href=&quot;https://standards.cymru/posts/2018-12-01-wtsb/&quot;&gt;broad design principles&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h1 id=&quot;background&quot;&gt;Background&lt;/h1&gt;
 
-&lt;p&gt;This is a programme of work that cuts across multiple workstreams of the &lt;a href=&quot;https://gov.wales/sites/default/files/publications/2019-03/informed-health-and-care-a-digital-health-and-social-care-strategy-for-wales.pdf&quot;&gt;Informed Health and Care strategy&lt;/a&gt; and most importantly, it is work that teaches us valuable lessons on how to work together to improve our health and care system.&lt;/p&gt;
-
-&lt;p&gt;These work-streams are:&lt;/p&gt;
+&lt;p&gt;This is a programme of work that cuts across multiple workstreams of the &lt;a href=&quot;https://gov.wales/sites/default/files/publications/2019-03/informed-health-and-care-a-digital-health-and-social-care-strategy-for-wales.pdf&quot;&gt;Informed Health and Care strategy&lt;/a&gt;. These workstreams are:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Information for you&lt;/li&gt;
-  &lt;li&gt;Supporting professionals&lt;/li&gt;
-  &lt;li&gt;Improvement and innovation&lt;/li&gt;
-  &lt;li&gt;A planned future&lt;/li&gt;
+  &lt;li&gt;“Information for you”&lt;/li&gt;
+  &lt;li&gt;“Supporting professionals”&lt;/li&gt;
+  &lt;li&gt;“Improvement and innovation”&lt;/li&gt;
+  &lt;li&gt;“A planned future”&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;This isn’t a bad way of thinking about the challenges we face; it provides some scaffolding on which we can think about user needs. This is from &lt;a href=&quot;/clinical-informatics/2017/10/19/data-driven.html&quot;&gt;my talk in 2017 at the inaugural Digital Health and Care Conference in Wales&lt;/a&gt;:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.003.jpeg&quot; alt=&quot;Wardle Digital Health.003&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;However, this isn’t the right way to structure the architecture, governance or programmes of work, because it is self-evident that there are important common software or data components that underpin delivery of the goals from more than one work-stream. It’s helpful to assess user needs and delivery via the prisms of these workstreams, but there’s something wrong in technological programmes of work all being under the responsibility of one of them.&lt;/p&gt;
+&lt;p&gt;This isn’t a bad way of thinking about the challenges we face; for example, it provides some structure on which we can think about user needs. This is from &lt;a href=&quot;/clinical-informatics/2017/10/19/data-driven.html&quot;&gt;my talk in 2017 at the inaugural Digital Health and Care Conference in Wales&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/digitalhealthconf/wardle-digital-health.007.jpeg&quot; alt=&quot;Wardle Digital Health.007&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;However, these workstreams aren’t the right way to structure the architecture, governance or programmes of work, because it is self-evident that there are important common software or data components that underpin delivery of the goals from more than one work-stream. It’s helpful to assess user needs and delivery via the prisms of these workstreams, but there’s something wrong in technological programmes of work all being under the responsibility of one of them.&lt;/p&gt;
 
 &lt;h1 id=&quot;a-single-seamless-system&quot;&gt;A single seamless “system”&lt;/h1&gt;
 
