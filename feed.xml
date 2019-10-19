@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2019-10-18T20:05:21+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2019-10-19T08:01:52+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
 </subtitle><entry><title type="html">Appointments and scheduling: a programme of work for an open platform in NHS Wales</title><link href="https://www.wardle.org/platform/2019/10/18/appointments-scheduling.html" rel="alternate" type="text/html" title="Appointments and scheduling: a programme of work for an open platform in NHS Wales" /><published>2019-10-18T19:18:18+01:00</published><updated>2019-10-18T19:18:18+01:00</updated><id>https://www.wardle.org/platform/2019/10/18/appointments-scheduling</id><content type="html" xml:base="https://www.wardle.org/platform/2019/10/18/appointments-scheduling.html">&lt;p&gt;I propose a programme of work to demonstrate a new collaborative approach to technology across health and care in Wales, that recognises the fundamental, foundational requirement to understand a patient’s clinical encounters across disparate health and care services to create a “seamless” service via distributed modern technology.&lt;/p&gt;
 
 &lt;p&gt;While this is principally focused at health and care services in Wales, the design patterns have broad applicability, I hope.&lt;/p&gt;
@@ -8,6 +8,23 @@
 &lt;h1 id=&quot;background&quot;&gt;Background&lt;/h1&gt;
 
 &lt;p&gt;This is a programme of work that cuts across multiple workstreams of the &lt;a href=&quot;https://gov.wales/sites/default/files/publications/2019-03/informed-health-and-care-a-digital-health-and-social-care-strategy-for-wales.pdf&quot;&gt;Informed Health and Care strategy&lt;/a&gt; and most importantly, it is work that teaches us valuable lessons on how to work together to improve our health and care system.&lt;/p&gt;
+
+&lt;p&gt;These work-streams are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Information for you&lt;/li&gt;
+  &lt;li&gt;Supporting professionals&lt;/li&gt;
+  &lt;li&gt;Improvement and innovation&lt;/li&gt;
+  &lt;li&gt;A planned future&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This isn’t a bad way of thinking about the challenges we face; it provides some scaffolding on which we can think about user needs. This is from &lt;a href=&quot;/clinical-informatics/2017/10/19/data-driven.html&quot;&gt;my talk in 2017 at the inaugural Digital Health and Care Conference in Wales&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/digitalhealthconf/wardle-digital-health.003.jpeg&quot; alt=&quot;Wardle Digital Health.003&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;However, this isn’t the right way to structure the architecture, governance or programmes of work, because it is self-evident that there are important common software or data components that underpin delivery of the goals from more than one work-stream.&lt;/p&gt;
+
+&lt;h1 id=&quot;a-single-seamless-system&quot;&gt;A single seamless “system”&lt;/h1&gt;
 
 &lt;p&gt;Our patients, their families and carers want our health services in Wales to work as a single seamless system, and the professionals that look after them, want to collaborate and work together to deliver that seamless care. This ‘single system’ approach aligns with the outcomes in “A Healthier Wales.”&lt;/p&gt;
 
@@ -33,7 +50,7 @@
 
 &lt;p&gt;Such an ABB would be used by multiple applications across multiple workstreams:&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Workstream 1&lt;/em&gt; - this component would allow patients to see their appointments across primary, community and  secondary care, including radiology.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Workstream 1&lt;/em&gt; - this component would be an important enabler to allow patients to see their appointments across primary, community and  secondary care, including radiology.&lt;/p&gt;
 
 &lt;p&gt;We could provide a rudimentary patient portal, but also make those same data available via PKB and DrDoctor, and even via a demonstrator mobile application for NHS Wales, similar to that created by NHS Digital (The “NHS App”).  If booking functionality is not provided by an underlying system (for example radiology), we could fake this functionality by providing a concierge service in which humans deal with requests and cancellations made via the service. This supports the identified “challenge project” within the recent architecture review of systems in NHS Wales.&lt;/p&gt;
 
@@ -41,9 +58,11 @@
 
 &lt;p&gt;This work would teach us a lot about APIs and application lifecycle management, logging, and access control, and would fit with need to modularise WCP as outlined in the architecture review, making it less tightly integrated - making it loosely-coupled - with the local PAS and instead providing a true national view of a single patient record. It also fits with the strategic theme, because booking staff could be alerted to clashes in booking; patients receiving appointments from different NHS and care organisations for the same date and time are not experiencing a seamless service.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Workstream 3&lt;/em&gt; - we could feed scheduling information into a data warehouse and analytics pipeline in order to understand our health and care demands across organisational boundaries in Wales, providing valuable learning to aid our “national data repository” work in an iterative, incremental way.&lt;/p&gt;
+&lt;p&gt;A service does not feel seamless if you receive an appointment in one department or organisation that clashes with another.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Workstream 4&lt;/em&gt; - this work, and particularly our use of open technical standards to drive interoperability, will teach us how we can deliver valuable software quickly and require collaboration across multiple teams.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Workstream 3&lt;/em&gt; - we could feed scheduling information into a data warehouse and real-time analytics pipeline in order to understand our health and care demands across organisational boundaries in Wales, providing valuable learning to aid our “national data repository” work in an iterative, incremental way. This would teach us how to start to become &lt;em&gt;data-driven&lt;/em&gt;, and use novel computationally intensive techniques to analyse streaming data in real-time.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Workstream 4&lt;/em&gt; - this work, and particularly our use of open technical standards to drive interoperability, will teach us how we can deliver valuable software quickly and require collaboration across multiple teams. It will teach us whether we can do this work collaboratively in the ways I have outlined in this blog.&lt;/p&gt;
 
 &lt;h4 id=&quot;alternative-approaches&quot;&gt;Alternative approaches?&lt;/h4&gt;
 
@@ -53,12 +72,14 @@
 
 &lt;p&gt;The goal must be to have cohesive high-level strategic alignment of multiple, seemingly independent, products.  For example, in this approach, work to identify patients who are likely to not attend for their appointments can be developed, tested and subsequently scaled out with ongoing evaluation and continuous improvement, without needing changes within other systems and across a complex, heterogeneous enterprise. That’s the power of adopting robust open technical standards and strategic planning.&lt;/p&gt;
 
+&lt;h4 id=&quot;synergies&quot;&gt;Synergies&lt;/h4&gt;
+
 &lt;p&gt;There are synergies with the following other programmes:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Value-based healthcare / patient reported outcomes - appointments/scheduling form the foundation on which interventions and outcomes depend, and appointment data and scheduling functions would support patient-facing applications.&lt;/li&gt;
   &lt;li&gt;Modular WCP - to show a coherent national view (“single patient record”) in patient portals, including WCP but also in ABHB’s CWS.&lt;/li&gt;
-  &lt;li&gt;NDR - appointments and scheduling are a clearly defined domain which will provide valuable learning and permit an iterative, agile approach to development with early delivery of benefits.&lt;/li&gt;
+  &lt;li&gt;NDR - national data resource - as part of workstream 3 - appointments and scheduling are a clearly defined domain which will provide valuable learning and permit an iterative, agile approach to development with early delivery of benefits.&lt;/li&gt;
   &lt;li&gt;Phased planning with metered funding&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -95,17 +116,25 @@
 
 &lt;h1 id=&quot;next-steps&quot;&gt;Next steps&lt;/h1&gt;
 
-&lt;p&gt;This is not a project but instead we are building and delivering services and products. We can be clear about our overall direction; we are opening up our architecture, building a data-driven learning health and care system that appears, to patients and professionals, as increasing seamless. However, we will find hurdles and difficulties not yet imagined, and defer decisions until the last possible moment so that we minimise risk. We do not minimise risk by planning and developing long lists of requirements by stakeholders, but instead delivering software again and again and getting fast feedback.&lt;/p&gt;
+&lt;p&gt;This is not a project but instead we are building and delivering services and products. We can be clear about our overall direction; we are opening up our architecture, building a data-driven learning health and care system that appears, to patients and professionals, as increasing seamless. However, we will find hurdles and difficulties not yet imagined, and so we must look to defer decisions until the last possible moment so that we minimise risk. We do not minimise risk by planning and developing long lists of requirements by stakeholders, but instead delivering software again and again and getting fast feedback.&lt;/p&gt;
 
-&lt;p&gt;The next steps must be broad-brush - focused on building capacity and capability - and identifying the obvious challenges - and then building teams, made up of different specialisms, working collaboratively, empowered and trusted, to deliver solutions to those challenges and teach the wider programme what worked and what didn’t.&lt;/p&gt;
+&lt;p&gt;The next steps must be focused on building capacity and capability - and identifying the obvious challenges - and then building teams, made up of different specialisms, working collaboratively, empowered and trusted, to deliver solutions to those challenges and teach the wider programme what worked and what didn’t.&lt;/p&gt;
 
-&lt;h1 id=&quot;what-press-releases-might-come-about-from-this-programme&quot;&gt;What press releases might come about from this programme?&lt;/h1&gt;
+&lt;p&gt;We don’t have all of the answers. Let’s create work that teaches us.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;addendum&quot;&gt;Addendum&lt;/h1&gt;
+
+&lt;h4 id=&quot;what-press-releases-might-come-about-from-this-programme&quot;&gt;What press releases might come about from this programme?&lt;/h4&gt;
 
 &lt;p&gt;Thinking about press release content is an interesting way to ensure we are aligning our technology programmes and the products/services that will be built to our wider health and care strategic goals. We can write a short press release, either for a programme or a specific service. This is something that organisations such as Amazon use in order to work out whether something is valuable.&lt;/p&gt;
 
 &lt;p&gt;We challenge ourselves: &lt;em&gt;are we doing something valuable here?&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Outcomes in digital / technology &lt;em&gt;are&lt;/em&gt; health and care outcomes. We need to stop thinking of digital (and IT) as a separate department or organisation, but instead focus on benefits for patients, carers and professionals. Digital technology is the enabler.&lt;/p&gt;
+&lt;p&gt;I’ve never tried this before, and I’m not a public relations expert, so these are simply a way of &lt;em&gt;thinking&lt;/em&gt; about a problem, not an actual press release!&lt;/p&gt;
+
+&lt;p&gt;But, outcomes in digital / technology &lt;em&gt;are&lt;/em&gt; health and care outcomes. We need to stop thinking of digital (and IT) as a separate department or organisation, but instead focus on benefits for patients, carers and professionals. Digital technology is the enabler.&lt;/p&gt;
 
 &lt;p&gt;So here are two example press releases to illustrate the importance of this work.&lt;/p&gt;
 
