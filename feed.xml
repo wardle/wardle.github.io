@@ -1,5 +1,373 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2019-10-19T12:48:41+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
-</subtitle><entry><title type="html">Appointments and scheduling: a programme of work for an open platform in NHS Wales</title><link href="https://www.wardle.org/platform/2019/10/18/appointments-scheduling.html" rel="alternate" type="text/html" title="Appointments and scheduling: a programme of work for an open platform in NHS Wales" /><published>2019-10-18T19:18:18+01:00</published><updated>2019-10-18T19:18:18+01:00</updated><id>https://www.wardle.org/platform/2019/10/18/appointments-scheduling</id><content type="html" xml:base="https://www.wardle.org/platform/2019/10/18/appointments-scheduling.html">&lt;p&gt;I propose a programme of work to demonstrate a new collaborative approach to technology across health and care in Wales, that recognises the fundamental, foundational requirement to understand a patient’s clinical encounters across disparate health and care services to create a “seamless” service via distributed modern technology.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2019-11-10T17:53:33+00:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</subtitle><entry><title type="html">Learning from building an electronic health record: a journey through data</title><link href="https://www.wardle.org/ehr/2019/11/08/learning-from-creating-an-ehr.html" rel="alternate" type="text/html" title="Learning from building an electronic health record: a journey through data" /><published>2019-11-08T08:08:08+00:00</published><updated>2019-11-08T08:08:08+00:00</updated><id>https://www.wardle.org/ehr/2019/11/08/learning-from-creating-an-ehr</id><content type="html" xml:base="https://www.wardle.org/ehr/2019/11/08/learning-from-creating-an-ehr.html">&lt;p&gt;This blog post is based on a presentation given to the Welsh Medical Committee on 8th November 2019.&lt;/p&gt;
+
+&lt;p&gt;Many of the posts on this blog have focused on how we, as a clinical community in Wales, can use digital technology to drive improvements in our health and care services. The approach I have advocated, built on a foundation of open standards, interoperability with the provision of an open platform of data and computing services, has focused on the steps we need to take to improve the way we deliver technology in health and care.&lt;/p&gt;
+
+&lt;p&gt;Instead, this post is rather self-indulgent; it documents my own journey through health data science and the lessons I’ve learned, in building my own software systems.&lt;/p&gt;
+
+&lt;p&gt;The lessons are:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The importance of data in everything we do: whether that be in the direct care of individual patients, management of services and quality improvement and clinical research&lt;/li&gt;
+  &lt;li&gt;That software and data services are best delivered by breaking up bigger problems into smaller ones, and understanding that components used like this are &lt;em&gt;fractal&lt;/em&gt;, in which more complex, sophisticated problems can be solved by stitching together smaller components.&lt;/li&gt;
+  &lt;li&gt;That the boundaries between direct care, service management and research are not the right boundaries to use when building software for health and care; instead model the legal and regulatory differences and modularise using domain-driven design principles.&lt;/li&gt;
+  &lt;li&gt;That our health and care teams across Wales are excited and enthused by technology, and want to improve; technology leaders should not be seeking to command-and-control this work, but provide toolboxes of computing and data services that can be used to solve problems. We should be setting the standards and principles and empowering teams to deliver.&lt;/li&gt;
+  &lt;li&gt;User problems (and needs) in health and care are usually about workflow and process, so once we have mechanisms for handling &lt;em&gt;data&lt;/em&gt; and the way it is modelled, we can build software that works in different contexts. Think: not single applications giving views of different data (like we have now) but multiple applications giving views of the same data. This doesn’t mean you can’t have a style guide and user interface consistency via standards, and modular user-facing components so that users benefit from a toolbox of nationally-provided building blocks stitched together in different ways to suit their processes and workflows.&lt;/li&gt;
+  &lt;li&gt;Software is our best way of acquiring, processing and making sense of data; that means being cognisant as to the architecture and governance that makes it possible for us to deliver safe, effective, high-quality software to users: that means needing &lt;em&gt;agility&lt;/em&gt;, building mechanisms for rapid, automated testing and deployment of software at pace.&lt;/li&gt;
+  &lt;li&gt;We need to build capabilities across health and care in software and data.&lt;/li&gt;
+  &lt;li&gt;Purchase of a commercial electronic health record, such as Cerner or Epic, means you need &lt;em&gt;greater&lt;/em&gt; capabilities in software and data; e.g. at the Wirral, their in-house developer team got &lt;em&gt;larger&lt;/em&gt; after purchase of Cerner because of the need to integrate and customise - in essence these software products are themselves &lt;em&gt;platforms&lt;/em&gt;, on which further valuable functionality can be built using the building blocks provided by that platform.&lt;/li&gt;
+  &lt;li&gt;Many of the platform building blocks already exist in NHS Wales, and simply need modernisation. Platform components that don’t exist, such as off-the-shelf form designers, and components dealing with user interactions, can take advantage of modern generic technologic frameworks to build high-quality web-based and mobile-first applications.&lt;/li&gt;
+  &lt;li&gt;We don’t have all of the answers; either in technology or in healthcare - we need to build systems with fast-feedback so that we plan to continuously improve.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;1-i-built-a-disease-specific-research-database&quot;&gt;1. I built a disease-specific research database.&lt;/h1&gt;
+
+&lt;p&gt;My doctoral research, undertaken during my higher training in neurology, started in 2005 and was focused on understanding the clinical features and disease progression of a range of rare neurological disorders: the ataxias, and in some cases drawing phenotype-genotype correlations.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wmc-journey/wmc-journey.003.jpeg&quot; alt=&quot;Wmc Journey.003&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Such research requires bringing together disparate data for analysis. The graphs show the effect of genetic changes on the onset of disease of a rare disorder.  I built an analytics pipeline that would run analyses automatically so that graphs and statistical tests would update immediately as I entered new data; that meant I was validating both the data and the software almost continuously, because errors would be evident immediately.&lt;/p&gt;
+
+&lt;p&gt;But there are significant problems with a disease-specific database:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;it usually exists alone; it creates a silo&lt;/li&gt;
+  &lt;li&gt;it might help to solve a specific problem but it doesn’t usually scale to solve new ones; it’s too specific.&lt;/li&gt;
+  &lt;li&gt;we can’t easily make those data available to others; there were few governance or technical off-the-shelf solutions that make that possible. If we want data to be shared, we would need to rely on researchers to set-up mechanisms to do so.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;But amazingly, this is still the main way clinical research works - and single-disease charities continue to push “registries” as a solution in health and care. The typical approach for a registry is to build a web-based system that allows clinicians and researchers to submit data:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wmc-journey/wmc-journey.005.jpeg&quot; alt=&quot;Wmc Journey.005&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;That’s not to say a registry is a bad thing - but we need to recognise that the &lt;em&gt;actual&lt;/em&gt; user need is defining a population of patients by virtue of a characteristic - a &lt;em&gt;cohort&lt;/em&gt;, and that might be diagnosis, symptom, clinical sign, procedure or intervention, and then usually collecting some specific additional information.&lt;/p&gt;
+
+&lt;p&gt;We clearly need to be able to stratify patients like this, building systems that allow us to understand cohorts but the current approach to building registries is not the right approach and we need to ask charities to stop funding this broken model that ends up creating silos of data, and a workflow that isn’t embedded into clinical workflows. That means a registry of the make and model of breast implants is best delivered by ensuring data systems capture such information at the point-of-care, and instead we derive a “registry” at runtime based on shared characteristics.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wmc-journey/wmc-journey.006.jpeg&quot; alt=&quot;Wmc Journey.006&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;2-so-instead-i-built-a-generic-research-database&quot;&gt;2. So instead I built a generic research database&lt;/h1&gt;
+
+&lt;p&gt;I recognised that &lt;em&gt;defining cohorts&lt;/em&gt; was critical, and started making SNOMED CT the lingua franca of my next system: a generic research database that went operational in 2007 - as far as I know the first system in the UK to use SNOMED CT in clinical operational use - it could combine generic and disease-specific outcome measures and permit multiple different “virtual” registries, derived at runtime by virtue of structured clinical data:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wmc-journey/wmc-journey.008.jpeg&quot; alt=&quot;Wmc Journey.008&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here users can type in problems or diagnoses - each user interface control configured by a dynamic rules engine that is easy to change and modify. I can build forms dynamically without writing new code.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/BUYvsMy-2EI&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wmc-journey/wmc-journey.009.jpeg&quot; alt=&quot;Wmc Journey.009&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;SNOMED CT is an ontology: so that if a user enters, for example, a diagnostic term of “multiple sclerosis”, then computationally we know that it is a type of “demyelinating disease” and so we can derive cohorts of patients easily at any suitable level of granularity, either very specific or much more general. This works not only for diagnoses, but clinical characteristics, procedures interventions and even characteristics such as country of birth and ethnicity:&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/LMaOL8Q8bzk&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Notice how by virtue of SNOMED CT, the chosen list is grouped by region - “Born in China” is grouped under “Born in Asia” automatically.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/QcOoXOFJsBY&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wmc-journey/wmc-journey.010.jpeg&quot; alt=&quot;Wmc Journey.010&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In all cases, users don’t know that they are entering SNOMED CT; its use is invisible as terms are entered through drop-downs, autocompletion text fields and even clicking on anatomical diagrams.&lt;/p&gt;
+
+&lt;p&gt;This approach to data is an important foundation in permitting the derivation of multiple “virtual” cohorts and understanding the meaning of outcome measures. After all, how can we interpret outcome measures without understanding the baseline characteristics such as diagnoses, co-morbidities, etc?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wmc-journey/wmc-journey.012.jpeg&quot; alt=&quot;Wmc Journey.012&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So here we see the longitudinal outcome of two patients, shown by the red line on each of the charts, drawn in real-time, potentially using data entered only moments before, overlaid onto the longitudinal outcomes of thousands of other patients with the same diagnosis, again derived dynamically, at runtime. The median progress of the group is shown by the dotted green line together with lines representing centiles. EDSS is a scale from 0 to 10, in which 0 represents a patient without any clinical signs of disease, and 10 is death. We see one patient doing worse than expected, and another doing better. We can also see that the patient not deteriorating as expected received alemtuzumab therapy, shown graphically along with the outcome data.&lt;/p&gt;
+
+&lt;p&gt;This approach shows the value of fast-feedback - making data &lt;em&gt;valuable&lt;/em&gt; and useful in reducing the uncertainty around a clinical decision - patients and professionals, for example, can use these charts to support shared decision making as to whether to start a high-cost, high-risk, low frequency but highly aggressive new therapy. Users enter data when it is made useful to them, and that applies to both professionals and patients.&lt;/p&gt;
+
+&lt;p&gt;It is important to realise that we don’t yet know the best ways of presenting outcome data like this, either for professionals or patients,  to support such decision making - some of our work is to understand what is helpful and what is not - our mission is to make information available at the right time to the right people and we need to learn how to do this effectively for lots of different types of data. If we knew all of the answers, we could take a different approach to our digital technological endeavours.&lt;/p&gt;
+
+&lt;p&gt;Foundational software and data services, combined with an enthusiastic and high-performing team have advanced our understanding of, for example, multiple sclerosis. We gain insights through combining different types of data such as clinical outcomes, treatments and interventions with other data such as indices of socioeconomic deprivation; we build a more detailed understanding of individual patients and groups of patients through these different perspectives.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wmc-journey/wmc-journey.013.jpeg&quot; alt=&quot;Wmc Journey.013&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So I ended up with a system to track outcomes and cohorts:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wmc-journey/wmc-journey.014.jpeg&quot; alt=&quot;Wmc Journey.014&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;But such an approach, while clearly valuable, still risks being something outside of the routine day-to-day workflow of our services; how can we do this at scale, unless data - its acquisition, synthesis and use - is part of how we do our daily work?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wmc-journey/wmc-journey.015.jpeg&quot; alt=&quot;Wmc Journey.015&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In fact, general practitioners are years ahead of hospitals here: they’ve been collecting structured data and using that information to drive care; for instance, they have systems that ensure that patients with diabetes mellitus have an annual review.&lt;/p&gt;
+
+&lt;h1 id=&quot;3-so-i-worked-to-embed-data-in-workflows-it-became-an-electronic-health-record&quot;&gt;3. So, I worked to embed data in workflows; it became an electronic health record&lt;/h1&gt;
+
+&lt;p&gt;In moving from a generic research database to a system that supported the workflow and communication needs of our departments, I built an electronic health record. It now has over 50,000 patients and has tracked hundreds of thousands of patient contacts. It provides multiple interfaces: a web-based front-end, an iOS application and a FHIR based API.&lt;/p&gt;
+
+&lt;p&gt;But what do we mean by “health record”, and is this an opportunity to really start to think about what we mean by a health and care record?&lt;/p&gt;
+
+&lt;p&gt;This is Larry Weed in 1971:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wmc-journey/wmc-journey.018.jpeg&quot; alt=&quot;Wmc Journey.018&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Our health record supports our practice. “We’re a victim of it or a triumph because of it”. This record is not simply a way of documenting our work; it is inherently a tool with which we carry out the practise of health and care, and digital technologies should be transforming that, for both professional and patient, because so much more is possible when we shake off our assumptions made in the paper era.&lt;/p&gt;
+
+&lt;p&gt;Paper records are expensive, poorly maintained, poorly accessible, do not support team working; they contain lots of data but not in a useful format.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wmc-journey/wmc-journey.017.jpeg&quot; alt=&quot;Wmc Journey.017&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;How many of us have supervised or performed paper notes review for audit and quality improvement purposes? Collecting piles of notes and going through them, trying to find the information we need? Technology should be helping us build a system that can continuously improve, by virtue of making the information we already collect useful and &lt;em&gt;valuable&lt;/em&gt;, and teaching us the measures that reduce our uncertainty about decisions, whether that be for an individual patient or for groups of patients:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wmc-journey/wmc-journey.019.jpeg&quot; alt=&quot;Wmc Journey.019&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And surely we already have lots of valuable data in health and care? Not really. Hospital episode statistics and most centrally collected data are collected outside of the process of clinical care:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wmc-journey/wmc-journey.020.jpeg&quot; alt=&quot;Wmc Journey.020&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The issues are not new. The Bristol heart enquiry, in 2001, looked at the significant issues with data between 1984-1995. How many of us can say that much has changed since then?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wmc-journey/wmc-journey.021.jpeg&quot; alt=&quot;Wmc Journey.021&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Why do we have arbitrary boundaries between the data we collect for administrative purposes, in the running of our hospitals and services, the data used in direct clinical care, the data for management of services and research data?  There are legal and regulatory differences in how such data can be used, and those need to be modelled in our systems, but we need to step back and understand that meaningful, interpretable data is the core foundation of our services. That means modelling &lt;em&gt;consent&lt;/em&gt; and ensuring that data can only be processed in line with the legal, regulatory frameworks, as an inherent feature of our data “system”. Likewise, we must move from data being collecting primarily for secondary uses (e.g. governmental data returns) to secondary use data being derived from prospectively collected, clinically-meaningful data captured at the point-of-care.&lt;/p&gt;
+
+&lt;p&gt;One of the ways that we can make the acquisition, processing and use of data possible is to improve the software and data services that we use, at the point-of-care.&lt;/p&gt;
+
+&lt;p&gt;Here we capture the current medications in an outpatient clinic. Behind the scenes, the drugs are mapped to the NHS dictionary of medicines and devices (dm+d) and the dosages parsed, automatically roundtripping between product-based and dose-based prescribing and allowing graphical display of total daily drug doses:&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/yTiYz5ofKj0&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wmc-journey/wmc-journey.022.jpeg&quot; alt=&quot;Wmc Journey.022&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Such an approach makes one realise that we need living systems that work hand-in-hand with the processes and workflows of our services. Users now record over 5000 clinical encounters in my homegrown software:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wmc-journey/wmc-journey.023.jpeg&quot; alt=&quot;Wmc Journey.023&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And it quickly became apparent that users had other needs - users need to safely and securely communicate in order to orchestrate clinical care. So I added secure messaging so that users could easily send messages to one another, all linked to the electronic record, so any message sent about a patient appears in the record, as well as in the relevant users’ inbox/sent mail mailboxes:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wmc-journey/wmc-journey.024.jpeg&quot; alt=&quot;Wmc Journey.024&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Linking disparate data is powerful. How can we interpret step monitor counts, genomic data, patient-reported outcome measures, or anything else for that matter, without understanding the patient, their characteristics, their co-morbidities and the interventions they have received?&lt;/p&gt;
+
+&lt;p&gt;Rather than considering research and clinical data as separate, we should think of them as simply different levels of specificity and granularity - and model the legal and regulatory rules defining the purposes to which data may be used. Similarly, even in clinical services, we expect to have more phenotypic information on a patient about to undergo epilepsy surgery compared to a new patient with an idiopathic generalised epilepsy.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wmc-journey/wmc-journey.025.jpeg&quot; alt=&quot;Wmc Journey.025&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So the logical conclusion is that we must start to build a range of &lt;em&gt;data capabilities&lt;/em&gt;: and that means building &lt;em&gt;analytics and software expertise within health and care&lt;/em&gt;. We cannot afford to outsource this work. Our health and care systems must become data-driven, in partnership with academia, the third-sector and commercial partners, but we must ourselves, in health and care, truly make &lt;em&gt;digital the way we do business&lt;/em&gt;. We shouldn’t only be attempting to describe what is happening right now (although in most outpatient departments, we can tell you how many patients are seen, but have little insight into what they are seen for or indeed how they fare!) but move towards much more advanced data capabilities such as predictive analytics.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wmc-journey/wmc-journey.026.jpeg&quot; alt=&quot;Wmc Journey.026&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;4-a-more-integrated-approach---and-highlighting-the-need-for-a-platform&quot;&gt;4. A more integrated approach - and highlighting the need for a platform&lt;/h1&gt;
+
+&lt;p&gt;In order to really embed data acquisition and use in the workflows of our departments, across all organisations in Wales, I realised that my electronic health record could not live in isolation - instead it needed to integrate closely with other software and data systems within NHS Wales.&lt;/p&gt;
+
+&lt;p&gt;But this work was really difficult. In fact, this has been and continues to be the most challenging aspect. Bespoke, proprietary integrations with different systems in Wales, with no cohesive platform and no consistency in underlying data or its structure. I started doing this work back in 2008, and quickly found I had to somehow make decisions about the “source of truth”. For example, as a system used across different organisations in Wales, I built integrations with different patient administrative systems, attempting to provide a unified view. But I soon found that one system might record a patient as deceased while another would have the patient recorded as alive!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wmc-journey/wmc-journey.028.jpeg&quot; alt=&quot;Wmc Journey.028&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The even bigger problem was not even being able to get access to the data available for direct care, even when teams had built scalable national services such as repositories for laboratory and radiology data, there was seemingly no transparent process for gaining access.&lt;/p&gt;
+
+&lt;p&gt;Irrespective of these limitations, being able to pull out patient information, clinic lists and write data back into document repositories has been sufficient to enable multiple workflows and create, I hope, valuable software.&lt;/p&gt;
+
+&lt;p&gt;For example, this is from our botulinum toxin clinic. We knew how many patients attended, but didn’t know who received this costly treatment or indeed have any insight into their outcomes. We suspected that many patients were receiving treatment without benefit.&lt;/p&gt;
+
+&lt;p&gt;The easiest way to help solve this problem was to build a solution focused on clinical workflow that made it easier in clinic - but as a side-effect allowed us to track what was done, who it was done to and combine that with postcode data mapped to organisational boundaries and calculate drug dose uses per local health board:&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/IbjaiEsMW-Q&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Users see a list of the patients for the clinic, pulled from the local patient administrative system, record data and then create a structured document, coded with SNOMED-CT procedures, diagnoses and indications together with a PDF version - which is sent into local and national document repositories automatically:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wmc-journey/wmc-journey.029.jpeg&quot; alt=&quot;Wmc Journey.029&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Similarly in our motor neurone disease service, we need to be able to valuably support professionals in our multi-disciplinary teams. One aspect of this is tracking weight to identify patients in need of nutritional support. Of course, these data are already recorded in clinic by nursing staff, but usually on post-it notes or copied into paper records.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wmc-journey/wmc-journey.030.jpeg&quot; alt=&quot;Wmc Journey.030&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The solution to this was two-fold. First, ensure that we had a mechanism to record body weight in the electronic record, and second, to use SNOMED CT to identify the cohort of patients with motor neurone disease or any subtype, and then provide a summary page that picked out the relevant information from the wider record to help clinical care:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wmc-journey/wmc-journey.031.jpeg&quot; alt=&quot;Wmc Journey.031&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I’m pleased to say that we won an award at the NHS Wales 2019 awards for our work across South Wales for this type of work.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wmc-journey/wmc-journey.032.jpeg&quot; alt=&quot;Wmc Journey.032&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;While this looks simple, the software is determining baseline weight by determining the onset of the patient’s subtype of motor neurone disease and finding a recorded weight as close as possible to that date, and then calculating the percentage change for the most recently recorded weight: we usually need to have a conversation about intervention if you lose 10% of your baseline weight.&lt;/p&gt;
+
+&lt;p&gt;But integration remained &lt;em&gt;too&lt;/em&gt; difficult, and I looked in envy at how other non health and care “platforms” provided a credible and cohesive set of data and software services, often cloud-based, that could be stitched together to create innovative solutions to solve user needs, hitherto not considered by the original developers of that “platform”.&lt;/p&gt;
+
+&lt;p&gt;At the same time, I was spending more time looking at how others were solving these issues: megasuite EHR vendors such as Cerner and Epic were heavily customisable, and provided their own “platform” facilities which meant internal developer teams could leverage their common data and software services to solve workflow problems for their users. Indeed, we heard from one site that their in-house developer team had to &lt;em&gt;increase&lt;/em&gt; in size after the procurement of these products, highlighting the need for integration and customisation.&lt;/p&gt;
+
+&lt;h1 id=&quot;5-the-active-patient&quot;&gt;5. The active patient&lt;/h1&gt;
+
+&lt;p&gt;The next part of the journey was an increasing awareness of how we were missing the &lt;em&gt;patient&lt;/em&gt; in our work! Patients must not only have access to their records but also contribute. So in 2015, I released an iPad application, based on Apple’s ResearchKit framework, that my colleagues trialled in the Parkinson’s clinic. I am not aware of any other ResearchKit-based software deployed in the UK before this work:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wmc-journey/wmc-journey.034.jpeg&quot; alt=&quot;Wmc Journey.034&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/so-i-wrote/ipad.jpeg&quot; alt=&quot;Ipad&quot; /&gt;&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/oavWDjXkyic&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;The key was to ensure that the information was made available immediately for use in clinical care, but notice how the system can also ask the patient whether they are interested in research. In 2018, we successfully obtained ethical approval for a similar iPad application to be used to record consent, and so I can dynamically build consent forms in a web-based administrative interface and push it out to our iPads.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/so-i-wrote/m5-epr-consent.jpeg&quot; alt=&quot;M5 Epr Consent&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;6-strategy-and-complex-adaptive-systems&quot;&gt;6. Strategy and complex adaptive systems&lt;/h1&gt;
+
+&lt;p&gt;But I realised that this work, in isolation, could not have the impact that I wanted it to have.&lt;/p&gt;
+
+&lt;p&gt;I started to understand that I should try to spend more time influencing national and local information technology programmes within health and care in Wales, and start to advocate for a more modern approach to technology, trying to influence governance, team structures, architecture and encourage the adoption of open standards.&lt;/p&gt;
+
+&lt;p&gt;I started talking to people with experience from other public sector and commercial digital initiatives, such as GDS, and learned more about user needs, the value chain and the importance of &lt;em&gt;delivery&lt;/em&gt; with the agile approach of fast-feedback resonating with my own experience of building a minimal viable product and getting early valuable feedback and iterating; after all, it was the only way I had been able to work for all of those years!&lt;/p&gt;
+
+&lt;p&gt;I presented at the inaugural &lt;a href=&quot;/clinical-informatics/2017/10/19/data-driven.html&quot;&gt;Welsh digital health and care conference&lt;/a&gt; and pitched an approach based on user needs and an open technology platform made up of modular software and data services.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wmc-journey/wmc-journey.036.jpeg&quot; alt=&quot;Wmc Journey.036&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This is from the &lt;a href=&quot;https://gov.wales/sites/default/files/publications/2019-03/informed-health-and-care-a-digital-health-and-social-care-strategy-for-wales.pdf&quot;&gt;Informed Health and Care strategy&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wmc-journey/wmc-journey.037.jpeg&quot; alt=&quot;Wmc Journey.037&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This strategy is useful as a framework, useful to understand &lt;em&gt;needs&lt;/em&gt;, but not something to define governance or architecture, because it is self-evident that some core architectural building blocks are useful across multiple workstreams.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wmc-journey/wmc-journey.038.jpeg&quot; alt=&quot;Wmc Journey.038&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The idea of an open platform, in which there is separation of the data and the applications that process those data, is not new. Indeed, we know health and care &lt;em&gt;data&lt;/em&gt; will outlast the applications that operate upon them; applications are increasingly ephemeral and very easy to create if the hard work is performed by services &lt;em&gt;within&lt;/em&gt; the platform itself.&lt;/p&gt;
+
+&lt;p&gt;You almost certainly access your email using a variety of applications; web-based, multiple mobile applications and applications running on desktop computers - normally whatever suits your current context - your workflow might be that you respond with short replies using your mobile application but perhaps write longer messages on your desktop. The key is that you are viewing the same data through different prisms.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wmc-journey/wmc-journey.040.jpeg&quot; alt=&quot;Wmc Journey.040&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wmc-journey/wmc-journey.041.jpeg&quot; alt=&quot;Wmc Journey.041&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wmc-journey/wmc-journey.042.jpeg&quot; alt=&quot;Wmc Journey.042&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;There is danger in designing software through an application-centric perspective, because you make it much too easy to make the wrong design and architectural decisions and that builds technical debt.&lt;/p&gt;
+
+&lt;p&gt;This is what such a platform approach might look in NHS Wales:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wmc-journey/wmc-journey.043.jpeg&quot; alt=&quot;Wmc Journey.043&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;For example, we’ve been discussing how the real-time analytics / data pipeline might be implemented via &lt;a href=&quot;https://kafka.apache.org&quot;&gt;Apache Kafka&lt;/a&gt; or similar pub/sub streaming pathway, while more interactive applications principally use FHIR APIs to interact with software and data services built into the platform.&lt;/p&gt;
+
+&lt;p&gt;So that means that we can start to build partnerships and collaborations, not only within health and care services but with partners across academia, the third-sector and commercial entities; partners may provide some of the architectural building blocks for us, but such an approach, predicated upon the adoption of open technical standards, will allow us to build a thriving ecosystem, test innovation and scale solutions when proven, but taking steps to continuously evaluate and improve at a system-level.&lt;/p&gt;
+
+&lt;p&gt;We move from this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wmc-journey/wmc-journey.044.jpeg&quot; alt=&quot;Wmc Journey.044&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;to this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wmc-journey/wmc-journey.045.jpeg&quot; alt=&quot;Wmc Journey.045&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We simply do not need multiple portals but we must recognise that we have a complex suite of different software products in different organisations - rather than top-down diktat, we need a convergence strategy that means that working systems across Wales can incrementally adopt nationally provided modular building blocks of functionality and yet still also be able to access the meaningful structured data that sits behind any modular user interface component if needed to solve user problems.&lt;/p&gt;
+
+&lt;p&gt;Such an approach is simply good software engineering practice. The NHS Wales “WCP” product has “logging” built into the application so that all access to patient records is logged by the application itself. This should always have been something at the API level; we have too much business logic within this application and that simply makes ongoing work &lt;em&gt;more&lt;/em&gt; difficult.&lt;/p&gt;
+
+&lt;p&gt;The benefit of APIs is that they are an &lt;em&gt;abstraction&lt;/em&gt;. I don’t need to know how my car works; my interactions with my car are to use a key, steering-wheel and pedals. It’s the same in software - and that means we can provide a simple-to-use open standards-based “platform” of different APIs that hide the underlying complexity of our wider enterprise.&lt;/p&gt;
+
+&lt;p&gt;Vendors such as Cerner and Epic recognise the benefit of a platform approach: they each provide a set of FHIR APIs that mean that third-party applications can interact with the software and data services provided.&lt;/p&gt;
+
+&lt;p&gt;We have three options in Wales: the status quo, the purchase of a megasuite EPR or the development of our own “platform” using a lot of the good work already done within Wales, but simply not (yet) exposed as first-class API products.&lt;/p&gt;
+
+&lt;p&gt;Here’s how it could look for us:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wmc-journey/wmc-journey.046.jpeg&quot; alt=&quot;Wmc Journey.046&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;becoming-data-driven---building-capabilities&quot;&gt;Becoming data-driven - building capabilities&lt;/h1&gt;
+
+&lt;p&gt;In essence, our health and care services must become data-driven. Data are an essential ingredient of a prudent health and care service.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wmc-journey/wmc-journey.047.jpeg&quot; alt=&quot;Wmc Journey.047&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;But data aren’t only valuable in supporting our health and care services. We should be looking to use data to support our work in improving our software design, development, testing and deployment lifecycle, and we need to look at how the highest performing software teams develop safe and effective software in the modern age.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wmc-journey/wmc-journey.048.jpeg&quot; alt=&quot;Wmc Journey.048&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;That doesn’t only mean real-time dashboards of performance metrics, of live service status updates and numbers of mouse clicks for a specific process, but changing the way we design and build software systems in a much more agile and responsive way - with fast-feedback and continuous improvement.&lt;/p&gt;
+
+&lt;p&gt;I was fortunate to work with Lee Waters and others on the &lt;a href=&quot;/images/systemreboot.pdf&quot;&gt;“System Reboot” report&lt;/a&gt; for Welsh Government, which identified some of the capabilities we need to develop across the public sector - and we need to work hard to share experiences and look at what platform components might be shared - much like the &lt;a href=&quot;https://www.notifications.service.gov.uk&quot;&gt;Gov.uk Notify service&lt;/a&gt; permits organisations to send notifications to users via email or SMS.&lt;/p&gt;
+
+&lt;p&gt;For example, my approach to SNOMED CT was to deliver the software and get fast-feedback on its utility and functionality and improve, building in processes to ensure clinical safety at the outset. I saw instead national programmes looking to get consultancy and spending time &lt;em&gt;planning&lt;/em&gt; instead of getting real-life feedback to shape progress. Fundamentally, we need to move away from thinking we can do &lt;a href=&quot;https://en.wikipedia.org/wiki/Waterfall_model&quot;&gt;waterfall planning&lt;/a&gt; and procurement for healthcare technology.&lt;/p&gt;
+
+&lt;h1 id=&quot;the-importance-of-expertise-in-data-and-software&quot;&gt;The importance of expertise in data and software&lt;/h1&gt;
+
+&lt;p&gt;Finally, we need to recognise that we cannot outsource data and software expertise, because we are still at the “beginning of the digital revolution” - this is what Bill Gates said in 2017!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wmc-journey/wmc-journey.049.jpeg&quot; alt=&quot;Wmc Journey.049&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Digital technology offers us the tools to transform our health and care services and design a more seamless, prudent, and continuously improving system for citizens.&lt;/p&gt;
+
+&lt;p&gt;We need to&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;be focused on solving problems&lt;/li&gt;
+  &lt;li&gt;encourage fast-feedback, for health and care services &lt;em&gt;and&lt;/em&gt; the software that supports those services&lt;/li&gt;
+  &lt;li&gt;become data-driven&lt;/li&gt;
+  &lt;li&gt;build partnerships and foster collaboration&lt;/li&gt;
+  &lt;li&gt;be open, transparent and honest about our successes and our failures;&lt;/li&gt;
+  &lt;li&gt;adopt open standards and encourage interoperability&lt;/li&gt;
+  &lt;li&gt;adopt approaches from outside of health and care&lt;/li&gt;
+  &lt;li&gt;inculcate an inquisitive, searching and curious &lt;em&gt;learning&lt;/em&gt; culture.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wmc-journey/wmc-journey.050.jpeg&quot; alt=&quot;Wmc Journey.050&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Thank you,&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Mark Wardle&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;further-reading&quot;&gt;Further reading&lt;/h1&gt;
+
+&lt;h4 id=&quot;on-health-technology-and-digital-transformation&quot;&gt;On health technology and digital transformation&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/strategy/2019/09/22/health-technology.html&quot;&gt;Digital transformation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/strategy/2018/11/12/manifesto-wales.html&quot;&gt;A manifesto for digital health in Wales&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;on-once-for-wales&quot;&gt;On “Once for Wales”&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/03/15/once-for-wales.html&quot;&gt;Once for Wales : a debate&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;on-trust-and-innovation&quot;&gt;On trust and innovation&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/12/06/paradox-of-ambition.html&quot;&gt;The paradox of ambition&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/12/05/enabling-innovation.html&quot;&gt;The paradox of control&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/12/06/5os-health.html&quot;&gt;The 5 Os of healthcare IT - objectives, ownership, openness, optimise, organic&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;on-platforms&quot;&gt;On platforms:&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;/strategy/2018/10/02/open-platform-wales.html&quot;&gt;An open platform for Wales&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;/clinical-informatics/2017/10/19/data-driven.html&quot;&gt;Data-driven healthcare&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/digital-platform/2018/03/03/platform-wales-1.html&quot;&gt;Platforms 1/3. Standards and interoperability&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/digital-platform/2018/03/03/platform-wales-2.html&quot;&gt;Platforms 2/3. An API-first approach&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/digital-platform/2018/03/03/platform-wales-3.html&quot;&gt;Platforms 3/3. What we need to do next&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;on-focus&quot;&gt;On focus:&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/01/19/focus-focus-focus.html&quot;&gt;Focus 1/3. The importance of strategy : focus&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/01/19/focus-challenges.html&quot;&gt;Focus 2/3. The challenges we face in delivering the vision&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/01/19/focus-solutions.html&quot;&gt;Focus 3/3. Pragmatic solutions to those challenges&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;on-data&quot;&gt;On data:&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/08/22/health-data.html&quot;&gt;Health data - start with a problem&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/10/19/data-driven.html&quot;&gt;Data-driven healthcare&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;on-development-standards-and-ecosystems&quot;&gt;On development standards and ecosystems&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/05/06/cloud-ehr.html&quot;&gt;Creative 1/3: creative destruction in health IT&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/05/06/clinical-software-quality.html&quot;&gt;Creative 2/3: the value of software for healthcare: quality improvement and service transformation underpinned by software, and software underpinning by quality improvement&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/05/08/ecosystems.html&quot;&gt;Creative 3/3: ecosystems and the platform&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">This blog post is based on a presentation given to the Welsh Medical Committee on 8th November 2019.</summary></entry><entry><title type="html">Appointments and scheduling: a programme of work for an open platform in NHS Wales</title><link href="https://www.wardle.org/platform/2019/10/18/appointments-scheduling.html" rel="alternate" type="text/html" title="Appointments and scheduling: a programme of work for an open platform in NHS Wales" /><published>2019-10-18T19:18:18+01:00</published><updated>2019-10-18T19:18:18+01:00</updated><id>https://www.wardle.org/platform/2019/10/18/appointments-scheduling</id><content type="html" xml:base="https://www.wardle.org/platform/2019/10/18/appointments-scheduling.html">&lt;p&gt;I propose a programme of work to demonstrate a new collaborative approach to technology across health and care in Wales, that recognises the fundamental, foundational requirement to understand a patient’s clinical encounters across disparate health and care services to create a “seamless” service via distributed modern technology.&lt;/p&gt;
 
 &lt;p&gt;While this is principally focused at health and care services in Wales, the design patterns have broad applicability, I hope.&lt;/p&gt;
 
@@ -1073,130 +1441,4 @@ notes
 
 &lt;p&gt;Finally, I would like to re-iterate the importance of a learning culture in our work: we adopted the GDS design principles. One of those is the use of iteration and incremental improvement. While you might consider such an agile approach for our software development processes, I would argue that we also need to approach our wider technological leadership and management approaches in an agile way; that means we test our assumptions and make incremental improvements to the way we work. This post is my attempt to embrace that approach. Let me know what you think.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Our September NHS Wales Technical Standards Board was held on the 27th September.</summary></entry><entry><title type="html">Building an open health and care platform for Wales</title><link href="https://www.wardle.org/strategy/2018/10/02/open-platform-wales.html" rel="alternate" type="text/html" title="Building an open health and care platform for Wales" /><published>2018-10-02T16:15:15+01:00</published><updated>2018-10-02T16:15:15+01:00</updated><id>https://www.wardle.org/strategy/2018/10/02/open-platform-wales</id><content type="html" xml:base="https://www.wardle.org/strategy/2018/10/02/open-platform-wales.html">&lt;p&gt;We should use information technology to better deliver our broad health and care objectives.&lt;/p&gt;
-
-&lt;p&gt;That means using information technology to support, improve, transform and re-imagine the delivery of health care; that means we must move away from delegating information technology to a separate department or even, as we do in Wales, a separate organisation.&lt;/p&gt;
-
-&lt;p&gt;Most modern enterprises have recognised the integral role information technology plays in operating their business. A failure in technology is a failure of business. That means services that have responsibility for delivering health and care objectives need to be responsible for the acquisition and development of technology used to support their work in delivering and improving care.&lt;/p&gt;
-
-&lt;p&gt;Alignment of information technology with business objectives requires a careful balance between top-down standardisation and enabling local, ‘bottom-up’ innovation. Standardisation, executed badly, creates fragility and inertia but when done well it creates an environment in which we can deliver technology at pace because we can decouple our developer teams and let them work independently. We know that pace of work is inversely proportional to the number of people who need to be involved in decisions.&lt;/p&gt;
-
-&lt;p&gt;We need to re-imagine our organisational structures, governance and architecture to reflect modern information technology best practice. This means understanding the challenges we face:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;we work in complex, constantly changing, heterogeneous clinical environments across Wales&lt;/li&gt;
-  &lt;li&gt;we need a single patient record with all of our user-facing applications giving a view on the same information.&lt;/li&gt;
-  &lt;li&gt;we need to improve productivity; that means delivering technology at pace to meet the demands of the service&lt;/li&gt;
-  &lt;li&gt;we need to be able to make changes while adhering to legal, regulatory, safety and ethical standards&lt;/li&gt;
-  &lt;li&gt;we need to share common national services avoiding wasteful duplication&lt;/li&gt;
-  &lt;li&gt;we need to permit local innovation and learning, particularly when we recognise that there is no already established &lt;em&gt;best&lt;/em&gt; way of delivering business value, and rapidly scale success across organisations in Wales&lt;/li&gt;
-  &lt;li&gt;we need to understand that we have existing applications hosted nationally and locally, with health boards all at different levels of maturity, we want to harmonise but not suffocate.&lt;/li&gt;
-  &lt;li&gt;both healthcare, and the design of software to support healthcare, must be data-driven.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;We know that we are not meeting these challenges in Wales; the Welsh Audit Office report is damning in the failure of delivery.&lt;/p&gt;
-
-&lt;h1 id=&quot;what-are-our-options&quot;&gt;What are our options?&lt;/h1&gt;
-
-&lt;p&gt;There are three potential options for us:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Continue the status quo.&lt;/li&gt;
-  &lt;li&gt;Buy an off-the-shelf electronic health record “mega-suite” from a large vendor and deploy across Wales, e.g. Cerner Millennium or Epic.&lt;/li&gt;
-  &lt;li&gt;Change our strategy, creating an open health and care platform&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;I believe that there are substantial problems with information technology in healthcare in Wales including issues of governance, leadership, organisational structure and architecture. Is there anyone who thinks we can continue the status quo?&lt;/p&gt;
-
-&lt;p&gt;My favoured approach is to recognise that our technical architecture determines our organisational and governance structures in Wales, and that architecture needs to be designed for&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;improving developer productivity&lt;/li&gt;
-  &lt;li&gt;supporting extremely high reliability as well as enabling testability, safety and performance&lt;/li&gt;
-  &lt;li&gt;permitting the use of structured, meaningful clinical data for direct care, service management, quality improvement as well as clinical research&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Fortunately, we can look at how other technology companies have achieved these goals.&lt;/p&gt;
-
-&lt;h1 id=&quot;an-evolutionary-architecture&quot;&gt;An evolutionary architecture&lt;/h1&gt;
-
-&lt;p&gt;An evolutionary architecture is one that can adapt to change. We must understand that our work in technology will never be complete and we will need to continually improve, adapting to changing clinical need and new technological advances.&lt;/p&gt;
-
-&lt;p&gt;One of the recognised characteristics of an evolutionary architecture is &lt;em&gt;modularity&lt;/em&gt;, in which we break-up our enterprise into modules, each with a well defined and usually constrained purpose. Modern architecture usually focuses on modularity at the domain-level while more old-fashioned service-orientated architectures are partitioned at a technical-level.&lt;/p&gt;
-
-&lt;p&gt;NHS Wales currently uses the latter which means that end-to-end testing is very difficult and, in effect, one ends up with a distributed monolith and paradoxically makes change more difficult, the whole system less predictable and resilient. It might takes weeks to create developer or test environments that replicate live and it becomes difficult to keep those different environments synchronised.&lt;/p&gt;
-
-&lt;p&gt;Instead, domain-driven design recognises the need to modularise and align modules to meaningful constructs in the business domain; we recognise inherent partitions in functionality and then tightly define the interactions between those modules. In essence, we need a microservice based architecture.&lt;/p&gt;
-
-&lt;p&gt;Example platform services needed to support a modern electronic health record might be:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Patient demographic services, providing a single authoritative snapshot of demographic information about a single patient.&lt;/li&gt;
-  &lt;li&gt;Scheduling services, providing an aggregated view across multiple administrative systems to provide scheduling across multiple organisations.&lt;/li&gt;
-  &lt;li&gt;Staff identity services, providing canonical staff information, bringing together information information from the electronic staff record and national active directory&lt;/li&gt;
-  &lt;li&gt;Clinical document repository, storing clinical documents and associated metadata&lt;/li&gt;
-  &lt;li&gt;Results repository, storing laboratory and radiology results&lt;/li&gt;
-  &lt;li&gt;Test requesting concierge service&lt;/li&gt;
-  &lt;li&gt;Security (authentication/authorisation) and logging services&lt;/li&gt;
-  &lt;li&gt;Clinical data repository&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Scheduling services are a great example because they are needed to satisfy the vision from multiple workstreams of the Informed Health and Care strategy; patients and professionals need to be able to see and schedule appointments in order to deliver care more efficiently and more safely. At the moment, I login to Welsh Clinical Portal in Cwm Taf and see only Cwm Taf appointments, and login to Welsh Clinical Portal in Cardiff and see only Cardiff appointments. We have something wrong with our current architecture.&lt;/p&gt;
-
-&lt;p&gt;However, there has been much good work in Wales on some of these core services, but these services need to be resourced appropriately and recognised as key enablers for building the next generation of user-facing applications. That means prioritising the deliver of these discrete services. Importantly, those services need to adopt open standards and be well-defined, loosely-coupled, documented and permit federation. As discrete modules, it becomes possible for use to run automated tests so that we know how our computing services provide accurate results and perform under pressure.&lt;/p&gt;
-
-&lt;h1 id=&quot;contracts-abstract-computing-services&quot;&gt;Contracts: abstract computing services&lt;/h1&gt;
-
-&lt;p&gt;One of the fundamental characteristics of an evolutionary architecture is that developers are able to work independently from one another, as long as they work within the defined contracts that document the functionality needed and how that module will interact with others.&lt;/p&gt;
-
-&lt;p&gt;Fundamentally, our modules create an &lt;em&gt;abstractions&lt;/em&gt; of a computing service.&lt;/p&gt;
-
-&lt;p&gt;Abstraction is an important software engineering principle which means that developers do not need to be concerned with how a service or application is implemented, only that it meets the agreed contracts. This is powerful because it acts to &lt;em&gt;decouple&lt;/em&gt; components meaning that they can be developed independently and in parallel, as long as they each work to the contracts specified.&lt;/p&gt;
-
-&lt;p&gt;In essence, the processes of simplification and abstraction mean reduce the interactions between discrete components within an architecture to a well-defined, constrained set of agreed contracts between parties.&lt;/p&gt;
-
-&lt;p&gt;Those contracts may be technical, defining &lt;em&gt;how&lt;/em&gt; to interact at a technical level with the underlying services providing using that platform. Technical contracts usually define an &lt;em&gt;application programming interface&lt;/em&gt; (API), but those must be supplemented by a range of legal and regulatory contracts defining how those services may be used and for what purposes. In addition, those contracts can define how the different teams might work with one another and provide assurances regarding performance and reliability. In essence, the contracts document obligations for all parties.&lt;/p&gt;
-
-&lt;p&gt;It is possible to ensure that parties are working appropriately to those contracts by the use of automated tests and &lt;em&gt;fitness functions&lt;/em&gt;. Such an approach means that changes that break an agreed contract are recognised early in the development pipeline, rather than at a late stage. We should aim for an efficient flow of work from conception, development, testing, assurance to deployment, and we should question any step that delays or reverses that flow of work.&lt;/p&gt;
-
-&lt;p&gt;For example, in our scheduling example, the developer team simply needs to deliver an API, probably based on the &lt;a href=&quot;https://www.hl7.org/fhir/appointment.html&quot;&gt;HL7 FHIR Appointment resource&lt;/a&gt;. Our initial version could simply provide a read-only view and satisfy the request by sending out its own request to all of the multiple patient administrative systems in Wales, collect and aggregate the results and return a unified view. That might work, but we would ensure fitness functions would assess not only the data returned but the performance metrics. We might expect to get results within 100 milliseconds, and so the team might instead create a vendor-neutral scheduling repository which takes a feed of data from each patient administrative system and, essentially, caches the results for performance.&lt;/p&gt;
-
-&lt;p&gt;The important thing is that, from an architectural point of view, we don’t care. We set the specifications for that service and trust our team to work out how to deliver what we need, bringing together expertise from across organisations in Wales in order to safely deliver a service that meets our requirements. If the team improve the implementation, or create a new implementation, our client applications do not ever need to know.&lt;/p&gt;
-
-&lt;h1 id=&quot;multiple-services-create-a-platform&quot;&gt;Multiple services create a platform&lt;/h1&gt;
-
-&lt;p&gt;A computing platform is the environment in which a piece of software is executed; they provide a range of software and data services that make it easier to develop applications.&lt;/p&gt;
-
-&lt;p&gt;For example, the Apple developer platform provides a range of sophisticated building blocks that permit developers to create applications for mobile devices. Similarly, there are core services and frameworks that developers can use for common operations such as data storage or processing. This means developers can focus on delivering value to their end-users, building on a foundation of different building blocks that factor out some of the complexity.&lt;/p&gt;
-
-&lt;p&gt;This approach means that applications become lightweight and often ephemeral, simply stitching together functionality from the underlying platform. A proprietary platform can lock developers into that platform, while open platforms, build using open standards can commoditise core computing functionality, foster innovation and create new marketplaces and ecosystems.&lt;/p&gt;
-
-&lt;p&gt;So we need to design our modules to work together to provide the building blocks of the next-generation of electronic health records, recognising that, when combined, those modules will provide a cohesive platform. That platform encwhile developed independently, those modules must be designed to work together to provide a platform&lt;/p&gt;
-
-&lt;p&gt;It is not difficult to see the range of discrete computing services that are needed to create a functional health and care platform, but this model needs a change in culture and change in the way that we think about information technology, moving away from purchasing applications towards a separation of data from the software that acts upon those data.&lt;/p&gt;
-
-&lt;p&gt;There has been some fantastic work in NHS Wales and there is a real appetite for cooperation and collaboration; we now need to work out how to take the next steps and build an open, standards-based computing platform for NHS Wales.&lt;/p&gt;
-
-&lt;h1 id=&quot;so-whats-next&quot;&gt;So what’s next?&lt;/h1&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;We need a national platform group that will define the platform and the contractual obligations for each service, documenting the technical (API) interactions and other dependencies. This architectural design group will need to work closely with the technical and information standards boards.&lt;/li&gt;
-  &lt;li&gt;We need multiple independent cross-functional teams each tasked with delivering discrete modular computing services that meet the standards defined by the national platform group. Those teams need to bring together developers with members of other teams, including security, operations, patient safety and assurance.&lt;/li&gt;
-  &lt;li&gt;We need a national applications group that to build example national applications, like a national modular portal, that can be used by all but, importantly, permit the different modules to be stitched together by developers irrespective of their location.&lt;/li&gt;
-  &lt;li&gt;We need to recognise that our platform services three categories of developer: those working for NHS Wales developing national applications, those working for NHS Wales developing local applications (that might end up being scaled out if successful), and those working for academia and commercial organisations as part of our ecosystem. All three should be treated equally, using the same APIs. We cannot have a situation where internal and external developers are treated differently, or that successful local innovation cannot be easily scaled to other regions.&lt;/li&gt;
-  &lt;li&gt;Our organisational and governance structures need to reflect these changes and we need to adequately resource, on a recurring basis, the ongoing development and improvement of these core national services.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&quot;and-what-about-a-portal&quot;&gt;And what about a portal?&lt;/h1&gt;
-
-&lt;p&gt;We do need a national portal. But our national strategy cannot be defined by a portal.&lt;/p&gt;
-
-&lt;p&gt;It makes little sense to duplicate portal functionality in different places, but each organisation needs a realistic convergence strategy that takes into account existing solutions and avoids long delays in providing functionality for our users. For example, we need to be able to embed portal functionality into emergency unit systems across Wales.&lt;/p&gt;
-
-&lt;p&gt;But we also need to ensure that our portal gives an accurate view of the single patient record; our focus must be on data. We cannot repeat the situation where different instances of portal provides the same view of different data. That means redesigning our national portal to be a lightweight, modular wrapper around national services; it too needs to use our national platform and provide common user-facing elements for use by all.&lt;/p&gt;
-
-&lt;p&gt;To move towards a modular portal, we will embrace the idea that we will stitch together components of the national platform, including components of that portal, to meet our user needs. I believe that, given the right architecture, we will see a natural convergence as it will be possible to rapidly scale solutions developed locally to other organisations, as those new developments should use those standardised APIs. We should aim for true application portability, collaboration and cooperation. At the moment, local developments are difficult to scale because there isn’t truly, an open standards-based platform.&lt;/p&gt;
-
-&lt;p&gt;If we cannot do this, then we should continue to consider procuring a mega-suite electronic health record system, because without change, we will be failing our staff and our patients in Wales.&lt;/p&gt;
-
-&lt;p&gt;Mark&lt;/p&gt;</content><author><name></name></author><summary type="html">We should use information technology to better deliver our broad health and care objectives.</summary></entry></feed>
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Our September NHS Wales Technical Standards Board was held on the 27th September.</summary></entry></feed>
