@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2020-06-14T21:55:59+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2020-06-14T22:00:14+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
 </subtitle><entry><title type="html">The semantic patient</title><link href="https://www.wardle.org/strategy/2020/06/03/ontological-medical-record.html" rel="alternate" type="text/html" title="The semantic patient" /><published>2020-06-03T10:00:00+01:00</published><updated>2020-06-03T10:00:00+01:00</updated><id>https://www.wardle.org/strategy/2020/06/03/ontological-medical-record</id><content type="html" xml:base="https://www.wardle.org/strategy/2020/06/03/ontological-medical-record.html">&lt;p&gt;I’ve been off work, off blogging and off Twitter due to COVID-19 but fortunately now back to full health and thought I’d write up some notes about what I’ve been doing in my spare time outside of my day job doing telephone clinics and COVID ward duties.&lt;/p&gt;
 
 &lt;h1 id=&quot;lightweight-applications&quot;&gt;Lightweight applications&lt;/h1&gt;
@@ -13,7 +13,7 @@
 
 &lt;p&gt;The &lt;a href=&quot;[https://github.com/wardle/patientcare-ward/blob/master/src/cljs/pc_ward/news_chart.cljs]&quot;&gt;source code is open&lt;/a&gt; as well.&lt;/p&gt;
 
-&lt;h1 id=&quot;data-and-ontologies-in-health-and-care&quot;&gt;Data and ontologies in health and care&lt;/h1&gt;
+&lt;h1 id=&quot;data-dynamism-and-ontologies-in-health-and-care&quot;&gt;Data, dynamism and ontologies in health and care&lt;/h1&gt;
 
 &lt;p&gt;But my main health informatics work has been about linked and self-describing data.&lt;/p&gt;
 
@@ -53,7 +53,7 @@
 
 &lt;p&gt;But such changes don’t only apply to medical knowledge, but also apply to the very organisations within which we work! I used to work for Cardiff and Vale NHS Trust, but that organisation no longer exists and instead I work for Cardiff and Vale University Local Health Board! A core trainee will be a consultant in a few years time. Change is constant.&lt;/p&gt;
 
-&lt;p&gt;Here is a screenshot from the NHS Wales’ national portal. It provides a faceted search across documents, by specialty, but because the team didn’t adopt any standard for the coding of specialty, “Neurology” is different to “NEUROLOGY” and “NEUROLOGY EPILEPSY” its own specialty but isn’t included in either of the other two.&lt;/p&gt;
+&lt;p&gt;Here is a screenshot from one of the NHS Wales’ national portal (there are multiple instances each which gives the same view of sometimes different data). It provides a faceted search across documents, by specialty, but because the team didn’t adopt any standard for the coding of specialty, “Neurology” is different to “NEUROLOGY” and “NEUROLOGY EPILEPSY” its own specialty but isn’t included in either of the other two.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/wcp-specialties.png&quot; alt=&quot;Wcp Specialties&quot; /&gt;&lt;/p&gt;
 
@@ -156,7 +156,7 @@
 
 &lt;p&gt;Both openEHR and HL7 FHIR use a class-orientated approach to most of their data.&lt;/p&gt;
 
-&lt;p&gt;It’s seductive, but it can be brittle. It is generally poorly extensible, poorly dynamic and struggles to adapt not only to changing circumstances but even to different applications across a wider health enterprise.&lt;/p&gt;
+&lt;p&gt;It’s seductive, but it can be brittle. It is generally poorly extensible, poorly dynamic and struggles to adapt not only to changing circumstances but even to different applications across a wider health enterprise, In some cases, these aggregates of attributes are grouped only for context and not for semantics.&lt;/p&gt;
 
 &lt;p&gt;HL7 FHIR adopts a modelling approach in which the basic class definitions aim for a common denominator of fields and permit “extensions” for local definitions while using profiling to make very general models more specific by, for example, defining what can be in a value set or which terminology should be used for a specific property.&lt;/p&gt;
 
@@ -190,7 +190,7 @@
   &lt;li&gt;Ontologies describing the relationships between properties, even between different ontologies.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Such an approach also means we can support interoperability between different information models in our software systems. In this world, we could make&lt;/p&gt;
+&lt;p&gt;Such an approach also means we can support interoperability between different information models in our software systems, and build automated tools that take data from different systems and generate context-appropriate semantic data. In this world, we could make&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;table&gt;
@@ -231,15 +231,15 @@
 
 &lt;p&gt;Unfortunately, the fact that the latter two are proprietary and need licensing is to our collective detriment, and many operational openEHR implementations are closed-source.&lt;/p&gt;
 
-&lt;p&gt;One can write software to process the fully open openEHR archetype definitions and bind properties to first-class namespaced attributes and many definitions already have bindings to other definitions in LOINC or SNOMED CT. Both the openEHR and HL7 FHIR communities have done some great modelling work.&lt;/p&gt;
+&lt;p&gt;One can write software to process the fully open openEHR archetype definitions and bind properties to first-class namespaced attributes and many definitions already have bindings to other definitions in LOINC or SNOMED CT. Both the openEHR and HL7 FHIR communities have done some great modelling work, including documenting the semantics of their types and attributes, and its possible to build tools to process those definitions.&lt;/p&gt;
 
 &lt;p&gt;But it is easy to see how a class-based model results in an explosion of classes. For example, it’s not difficult to see how the &lt;a href=&quot;http://www.hl7.org/fhir/datatypes-definitions.html#Address.line&quot;&gt;first line of an address in a FHIR address class&lt;/a&gt; is semantically the same in a &lt;a href=&quot;https://ckm.apperta.org/ckm/archetypes/1051.32.573&quot;&gt;“UK” address from openEHR&lt;/a&gt; which is the same as in a &lt;a href=&quot;https://ckm.apperta.org/ckm/archetypes/1051.32.203&quot;&gt;Scottish address from openEHR&lt;/a&gt; which is the same as in an ISO22220 based address (also from openEHR - &lt;a href=&quot;https://ckm.openehr.org/ckm/archetypes/1013.1.484&quot;&gt;https://ckm.openehr.org/ckm/archetypes/1013.1.484&lt;/a&gt; and all share the semantics of the &lt;a href=&quot;https://www.w3.org/TR/vcard-rdf/&quot;&gt;vCard ontology ‘address’&lt;/a&gt; even if the attributes might have different names.&lt;/p&gt;
 
-&lt;p&gt;Instead, of this duplication of classes, we can define ontologies that define the relationships between those first-class names and provide tools to arbitrarily resolve those identifiers. That means resolving “http://www.w3.org/2006/vcard/ns#street-address” can return the right semantic data irrespective of whether the source information is in HL7 v2, HL7 FHIR, or one of the many openEHR address archetypes.&lt;/p&gt;
+&lt;p&gt;Instead, of this duplication of classes, we can define ontologies that define the relationships between those first-class names and provide tools to arbitrarily resolve those identifiers. That means resolving “http://www.w3.org/2006/vcard/ns#street-address” can return the right semantic data irrespective of whether the source information is in HL7 v2, HL7 FHIR, or one of the many openEHR address archetypes. Ontologies can be used to federate attributes from different models.&lt;/p&gt;
 
 &lt;h1 id=&quot;grouping-first-class-attributes-into-semantically-meaningful-entities&quot;&gt;Grouping first-class attributes into semantically meaningful entities&lt;/h1&gt;
 
-&lt;p&gt;Just because we make attributes first-class in our models, it doesn’t mean that we can’t bundle them together into something that is itself meaningful. But rather than thinking in terms of classes, and the attributes are simply part of those classes, our attributes are first-class and might be arbitrarily grouped into what are essentially nested collections and be derived either directly from source information or derived by understanding how those properties relate to one another semantically.&lt;/p&gt;
+&lt;p&gt;Just because we make attributes first-class in our models, it doesn’t mean that we can’t bundle them together into something that is itself meaningful. But rather than thinking in terms of classes, and the attributes are simply part of those classes, our attributes are first-class and might be arbitrarily grouped into what are essentially nested collections and be derived either directly from source information or derived by understanding how those properties relate to one another semantically. Grouping is based on semantics and not necessarily only contextual differences.&lt;/p&gt;
 
 &lt;p&gt;In addition, our definitions of an attribute must be associated with a schema definition, so that we have information about the value type(s) permitted for that property. Other semantics might include cardinality and uniqueness, for example, depending on the property in question. But object-orientated approaches conflate the specifications of data with the data itself, while in reality these are orthogonal concepts.&lt;/p&gt;
 
@@ -265,11 +265,15 @@
 
 &lt;p&gt;Using first-class namespaced properties permits making health and care data more easily computable, because one might have multiple properties that use the same source data to derive a semantically different value. It permits create a facade of well-known properties in front of legacy data, or data in different formats.&lt;/p&gt;
 
+&lt;p&gt;As a result, we can define properties to be computed, binding the resolution of such properties at runtime and enabling powerful runtime polymorphism; this means our software can potentially. become capable of processing new types of information without needing to update the code.&lt;/p&gt;
+
 &lt;p&gt;For example, simple application might only want to examine a flat list of family history diagnoses and problems, while a more sophisticated application might want to drill-down into other attributes to understand, for example, whether there is a maternal history of a specific condition or not, if that data even existed. It means different namespace/value (ie attribute) resolvers can provide a different ‘view’ of the same underlying data. We move from an approach based on create/read/update/delete (CRUD) semantics to one that separates the reads and writes. We have different models for reads compared to writes, because they are semantically different.&lt;/p&gt;
 
 &lt;p&gt;For example, we might represent a current list of medications on the ward as a simple collection, containing entries each of which represents a medication. In each, there would be an encoding of the medication using a UK dm+d identifier as well as dosing information. We might write a resolver that provides a computed property that derives total daily dose from that entry to allow easy graphing of daily doses over time.&lt;/p&gt;
 
 &lt;p&gt;Current primary care systems use product-based prescribing and a textual description of dosing. Hospital based systems generally use dose-based prescribing. It is possible to map between these two systems, and so we might also permit resolution of a dose property for product-based prescriptions where possible. Such code can simply operate on pure data structures, is easily testable for safety, can work in isolation and demonstrates that we can add additional functionality to existing systems, and existing data, without needing to change the original.&lt;/p&gt;
+
+&lt;p&gt;In this way, health and care software could become entirely decoupled, with pure functions provided by external entities processing our semantically-encoded health and care information: testable, modular, decoupled and deterministic.&lt;/p&gt;
 
 &lt;p&gt;Likewise, we can see &lt;a href=&quot;https://ckm.openehr.org/ckm/archetypes/1013.1.499&quot;&gt;Address&lt;/a&gt; classes in openEHR defined for an organisation, with attributes representing properties not applicable to all countries such as a “Delivery point indicator”, which apparently is something important in Brazil. Because such attributes are not first-class, one ends up with multiple classes representing pretty much the same thing. You can easily end up with an explosion of classes, often in a rigid hierarchy.&lt;/p&gt;
 
@@ -308,7 +312,7 @@
 
 &lt;p&gt;I plan to federate information from ‘clods’ on hospital sites with that from individual patient administration systems to allow hopping from arbitrary sites down into individuals units, wards and individual beds. For the client application, they will simply walk a graph from an organisation to a site, to a unit, to a ward and to a bed, with first-class namespaced attributes providing an abstraction over the inherent complexity in providing access to these data, which are obviously sourced from multiple disparate systems each using different data structures and representations.&lt;/p&gt;
 
-&lt;p&gt;I’ve started work on a rule-based declarative system to resolve identifiers arbitrarily in the context of different information models, including making use of the existing and open-source openEHR archetype definitions, and linking those to HL7 FHIR and v2 messages when possible.&lt;/p&gt;
+&lt;p&gt;I’ve started work on a rule-based declarative system to resolve identifiers arbitrarily in the context of different information models, including making use of the existing and open-source openEHR archetype definitions, and linking those to HL7 FHIR and v2 messages when possible. Mostly those resolvers exist within the same application, at the moment, but there would be no different if those resolvers were provided from an external API, operating on pure data, in order to resolve the identifier in the context provided.&lt;/p&gt;
 
 &lt;p&gt;We need to reboot the work on linked data and ontologies and use that in health and care. All of this work should be open-source, because semantically-meaningful data and ontologies are the way we should be building health and care software fit for the 21st Century.&lt;/p&gt;
 
