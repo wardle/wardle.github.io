@@ -325,11 +325,11 @@
 
 <p>Unfortunately, the fact that the latter two are proprietary and need licensing is to our collective detriment, and many operational openEHR implementations are closed-source.</p>
 
-<p>One can write software to process the fully open openEHR archetype definitions and bind properties to first-class namespaced attributes and many definitions already have bindings to other definitions in LOINC or SNOMED CT. Both the openEHR and HL7 FHIR communities have done some great modelling work, including documenting the semantics of their types and attributes, and its possible to build tools to process those definitions.</p>
-
 <p>But it is easy to see how a class-based model results in an explosion of classes. For example, it’s not difficult to see how the <a href="http://www.hl7.org/fhir/datatypes-definitions.html#Address.line">first line of an address in a FHIR address class</a> is semantically the same in a <a href="https://ckm.apperta.org/ckm/archetypes/1051.32.573">“UK” address from openEHR</a> which is the same as in a <a href="https://ckm.apperta.org/ckm/archetypes/1051.32.203">Scottish address from openEHR</a> which is the same as in an ISO22220 based address (also from openEHR - <a href="https://ckm.openehr.org/ckm/archetypes/1013.1.484">https://ckm.openehr.org/ckm/archetypes/1013.1.484</a> and all share the semantics of the <a href="https://www.w3.org/TR/vcard-rdf/">vCard ontology ‘address’</a> even if the attributes might have different names.</p>
 
 <p>Instead, of this duplication of classes, we can define ontologies that define the relationships between those first-class names and provide tools to arbitrarily resolve those identifiers. That means resolving “http://www.w3.org/2006/vcard/ns#street-address” can return the right semantic data irrespective of whether the source information is in HL7 v2, HL7 FHIR, or one of the many openEHR address archetypes. Ontologies can be used to federate attributes from different models.</p>
+
+<p>One can write software to process the fully open openEHR archetype definitions and bind properties to first-class namespaced attributes and many definitions already have bindings to other definitions in LOINC or SNOMED CT. Both the openEHR and HL7 FHIR communities have done some great modelling work, including documenting the semantics of their types and attributes, and its possible to build tools to process those definitions.</p>
 
 <h1 id="grouping-first-class-attributes-into-semantically-meaningful-entities">Grouping first-class attributes into semantically meaningful entities</h1>
 
