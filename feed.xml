@@ -1,5 +1,318 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2019-12-21T09:42:22+00:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
-</subtitle><entry><title type="html">Coherence in governance</title><link href="https://www.wardle.org/strategy/2019/12/21/coherent-governance.html" rel="alternate" type="text/html" title="Coherence in governance" /><published>2019-12-21T09:00:00+00:00</published><updated>2019-12-21T09:00:00+00:00</updated><id>https://www.wardle.org/strategy/2019/12/21/coherent-governance</id><content type="html" xml:base="https://www.wardle.org/strategy/2019/12/21/coherent-governance.html">&lt;p&gt;Our ability to adopt, deploy and improve technology is fundamental in our mission to build a health and care system that works seamlessly, for patients, families and staff.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2020-06-14T21:55:59+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</subtitle><entry><title type="html">The semantic patient</title><link href="https://www.wardle.org/strategy/2020/06/03/ontological-medical-record.html" rel="alternate" type="text/html" title="The semantic patient" /><published>2020-06-03T10:00:00+01:00</published><updated>2020-06-03T10:00:00+01:00</updated><id>https://www.wardle.org/strategy/2020/06/03/ontological-medical-record</id><content type="html" xml:base="https://www.wardle.org/strategy/2020/06/03/ontological-medical-record.html">&lt;p&gt;I’ve been off work, off blogging and off Twitter due to COVID-19 but fortunately now back to full health and thought I’d write up some notes about what I’ve been doing in my spare time outside of my day job doing telephone clinics and COVID ward duties.&lt;/p&gt;
+
+&lt;h1 id=&quot;lightweight-applications&quot;&gt;Lightweight applications&lt;/h1&gt;
+
+&lt;p&gt;The first is experimenting with lightweight mobile and web-based applications that provide a compelling way for users to interact with health and care data. Separating applications from the data is important, and web-based technologies have matured sufficiently so that one can build a desktop-class user experience in the browser.&lt;/p&gt;
+
+&lt;p&gt;I built a proof-of-concept system to record and display electronic observations (pulse, blood pressure etc) and calculate national early warning scores for escalation. It integrates with existing NHS systems for user login and patient lookup and was about three days work I guess, but spread out over a few weeks. It dynamically generates an SVG NEWS chart, which looks pretty on iPads or on whiteboards and it was my first ever clojure application. It’s all dynamic and one can scroll to view results over time, and I’ve build SNOMED CT autocompletion widgets and am planning ward round problem lists and actions/ordering.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/news-chart.png&quot; alt=&quot;News Chart&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can also see a &lt;a href=&quot;https://www.youtube.com/watch?v=_2wRBr0r_wk&quot;&gt;video of the application&lt;/a&gt; running.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&quot;[https://github.com/wardle/patientcare-ward/blob/master/src/cljs/pc_ward/news_chart.cljs]&quot;&gt;source code is open&lt;/a&gt; as well.&lt;/p&gt;
+
+&lt;h1 id=&quot;data-and-ontologies-in-health-and-care&quot;&gt;Data and ontologies in health and care&lt;/h1&gt;
+
+&lt;p&gt;But my main health informatics work has been about linked and self-describing data.&lt;/p&gt;
+
+&lt;p&gt;Our ability to write software is critical in building a learning health system, but it is very easy to build rigid, hierarchical, poorly adaptable and brittle systems - and that is normally the result if one tries to solve problems through the lens of a single application or portal, instead of focusing on data and an architecture that enables the recording and processing of those data in order to inform care.&lt;/p&gt;
+
+&lt;p&gt;We must strive to build health and care systems without walls, and create effective tools for health and care organisations, and citizens, to manage, interact, plan and undertake care. Technology is critical in creating health services that work safely and effectively for patients and their carers. In banking we see technology companies entering the industry, and established banks trying to become technology companies; they have recognised the critical need to harness technology to improve their services.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Health and care needs to learn how to deliver software : reliably, safely, reproducibly, at scale and to ensure ongoing monitoring, evaluation and continuous improvement.”&lt;/p&gt;
+
+  &lt;p&gt;https://wardle.org/strategy/2019/09/22/health-technology.html&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;We should be building a technical architecture for health and care that is safe, responsive and effective. We must look at how we can stream data independent of individual applications and make use of real-time analytics and advances in technology to best inform and improve care, both for an individual and cohorts of citizens. We cannot achieve our goals unless we think about health and care as it truly is, a symphonic orchestra with many players, all needing the right information at the right time, and all working together in concert. They play different instruments, and have different roles, but they work &lt;em&gt;together&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;It is naive to think that we can have the same software running in critical care, on a patient’s own devices, in a nursing home, in the outpatient clinic, whether virtual or in-person, in the emergency department, in the GP surgery, in surgical theatres or on the ward. User-facing applications must be focused on improving process and workflow and so are absolutely dependent on the clinical context in which they will operate. There are commonalities, of course, but truing to make change using top-down, command and control management and multi-million pound programmes is not the way to improve the working of complex adaptive systems. We have only started the journey on how to make computers effective in medicine.&lt;/p&gt;
+
+&lt;p&gt;One of the best ways of making valuable software is to break-down the problems we are trying to solve into smaller problems, each of which one person, or one team can conceive of and solve in one go. It’s one of the reasons why I like domain-driven design and understanding the importance of scope, so that I can focus on the problem at hand, and decouple the component parts of the wider system.&lt;/p&gt;
+
+&lt;p&gt;A logical consequence of such an approach is of &lt;em&gt;abstraction&lt;/em&gt; so that the other parts with which we interact are abstract; I don’t need to know how you are storing that clinical document or exactly what happens after I send those data but I do need to have a set of contracts, covering the technical, legal and regulatory matters that define our interactions. In essence, those contracts, including the &lt;em&gt;technical standards&lt;/em&gt; that define how those interactions proceed, can be a powerful force for speeding up our developments which can now happen in parallel and limit the need for constant interaction between teams.&lt;/p&gt;
+
+&lt;p&gt;But abstraction also should extend to the &lt;em&gt;meaningful data&lt;/em&gt; that we so depend upon to care for individual patients, manage and improve our services, and continuously improve and learn.&lt;/p&gt;
+
+&lt;p&gt;Having meaningful data means that we can make sense of that data - we can derive its meaning. It therefore follows that not only do we need to be able to exchange information at a technical level, via technical interoperability, but we need shared understanding of &lt;em&gt;meaning&lt;/em&gt; via semantic interoperability.&lt;/p&gt;
+
+&lt;p&gt;That’s not to say exchanging unstructured documents isn’t valuable. It is, but it only goes so far. I can’t do much as much as I’d like with a binary PDF document.&lt;/p&gt;
+
+&lt;p&gt;The problem with health and care data is that is hard to interpret out of context. If your pulse is 150/minute, is that a problem? Yes if you are asleep but no if you are running or playing tennis!&lt;/p&gt;
+
+&lt;p&gt;And that’s why health and care data needs &lt;em&gt;context&lt;/em&gt; in order to make data meaningful. We need a shared understanding of a wider &lt;em&gt;information model&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Those measurements such as pulse, blood pressure and pain scores need to anchored within a context - my neurology clinic for that new patient appointment in that clinic suite, in that unit, in that site, for that organisation, as part of that clinical pathway.&lt;/p&gt;
+
+&lt;h2 id=&quot;meaningful-data-using-persistent-meaningful-identifiers&quot;&gt;Meaningful data, using persistent meaningful identifiers&lt;/h2&gt;
+
+&lt;p&gt;But how do we represent health and care data when it is complex and ever-changing? New diagnostic tests and new diagnostic entities are added to the corpus of our knowledge all of the time, and previously known “facts” have changed or replaced with our ever greater understanding?&lt;/p&gt;
+
+&lt;p&gt;But such changes don’t only apply to medical knowledge, but also apply to the very organisations within which we work! I used to work for Cardiff and Vale NHS Trust, but that organisation no longer exists and instead I work for Cardiff and Vale University Local Health Board! A core trainee will be a consultant in a few years time. Change is constant.&lt;/p&gt;
+
+&lt;p&gt;Here is a screenshot from the NHS Wales’ national portal. It provides a faceted search across documents, by specialty, but because the team didn’t adopt any standard for the coding of specialty, “Neurology” is different to “NEUROLOGY” and “NEUROLOGY EPILEPSY” its own specialty but isn’t included in either of the other two.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/wcp-specialties.png&quot; alt=&quot;Wcp Specialties&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;When I’m trying to care for a patient, I have to laboriously click on each in turn in order to find the information I want, simply because the designers of the service did not pick a useful vocabulary of terms to which documents could be tagged.&lt;/p&gt;
+
+&lt;p&gt;One of the ways we suggested avoiding this situation right at the beginning was to use an ontology to describe the specialty, such as SNOMED-CT, which provides a flexible, hierarchical and nested structure so that, for example, the epilepsy subspecialty is actually a subtype of the wider neurological subspecialty. That would have meant we could let users filter for “Neurology” and actually include subspecialties such as “paediatric neurology” without any great computational difficulty. I’m hoping this application will adopt this, although it seems to have taken many years and still it hasn’t changed as of today at least. I live in hope.&lt;/p&gt;
+
+&lt;p&gt;SNOMED CT, like many other ontologies, has multiple hierarchies, which means that it can model complex nesting, such as ‘bacterial meningitis’ being both a ‘neurological disease’ and an ‘infectious disease’. In addition, its identifiers are persistent. Even if ‘Wegener’s Granulomatosis’ is no longer the preferred label for that disease entity, the model &lt;em&gt;explicitly&lt;/em&gt; manages change over time. There are mechanisms for making change, although it is a great shame that the distribution is not published under an open licence.&lt;/p&gt;
+
+&lt;p&gt;This idea of persistent identifiers is not new but such an approach is essential when we are dealing with decentralised, decoupled systems in which we need to record a reference to information in another system. You can think of persistent identifiers as analogous to ‘foreign keys’ in a relational database table.&lt;/p&gt;
+
+&lt;p&gt;In ontologies, we can also relate one identifier with another as a ‘triple’. For example, in SNOMED CT, we have&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/snomed-relationship-structure.png&quot; alt=&quot;Snomed Relationship Structure&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We can see that these triples help us build a directed graph that we can navigate and answer questions like, “Is this disorder a neurological disorder?” without difficulty.&lt;/p&gt;
+
+&lt;p&gt;Commonly, we can use identifiers that are a tuple of a namespace and an identifier. For example, we can create a SNOMED CT expression using “http://snomed.info/sct” and “24700007”, which together represent the concept of ‘multiple sclerosis’ and can therefore be computed as such.&lt;/p&gt;
+
+&lt;p&gt;HL7 have been doing this for years, with “object identifiers” or OIDS. In fact, the HL7 UK OID for representing health and care organisations uses the OID “2.16.840.1.113883.2.1.3.2.4.18.48” and these OIDs are published via  &lt;a href=&quot;https://digital.nhs.uk/services/organisation-data-service/guidance-for-developers/organisation-endpoint&quot;&gt;Organisational Data Services (ODS) API endpoint&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Here is a data representation of the University Hospital of Wales: &lt;a href=&quot;https://directory.spineservices.nhs.uk/ORD/2-0-0/organisations/7A4BV&quot;&gt;https://directory.spineservices.nhs.uk/ORD/2-0-0/organisations/7A4BV&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;HL7 FHIR uses this identifier model extensively; &lt;a href=&quot;https://www.hl7.org/fhir/datatypes.html#Identifier&quot;&gt;its model&lt;/a&gt; contains a namespace and a value, together with some additional metadata, which in hindsight should be a function of the resolution of that identifier rather than in what is essentially a foreign key.&lt;/p&gt;
+
+&lt;p&gt;Namespaces can be arbitrary values such as an OID, or a &lt;a href=&quot;https://en.wikipedia.org/wiki/Uniform_Resource_Identifier&quot;&gt;URI (uniform resource identifier)&lt;/a&gt;, and while useful, much like an ISBN for a book, they do not actually provide a way to identify the location of the resource that they refer to. Resolution of the value within that namespace is left to you.&lt;/p&gt;
+
+&lt;p&gt;Namespaces can also be actual URLs and so can be resolved simply by accessing whatever information can be found at that web address, but this isn’t always the case!&lt;/p&gt;
+
+&lt;p&gt;Likewise, the same resource, such an organisation, might be represented by a number of different, and yet by definition, equivalent, identifiers.&lt;/p&gt;
+
+&lt;p&gt;For example, the University Hospital of Wales might be represented by&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;https://directory.spineservices.nhs.uk/ORD/2-0-0/organisations&lt;/td&gt;
+          &lt;td&gt;7A4BV&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;2.16.840.1.113883.2.1.3.2.4.18.48&lt;/td&gt;
+          &lt;td&gt;7A4BV&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;urn:oid:2.16.840.1.113883.2.1.3.2.4.18.48&lt;/td&gt;
+          &lt;td&gt;7A4BV&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Similarly, some identifiers in truly different namespaces actually point to the same ‘concept’, whether that be a diagnostic term (e.g. Read code for multiple sclerosis is, semantically, the same as a SNOMED CT code for multiple sclerosis) or a staff identifier should resolve, at some level, to the same ‘person’ as their GMC code.&lt;/p&gt;
+
+&lt;p&gt;Resolution, mapping and the testing of equivalence of identifiers is therefore a first-class problem in our domain, and should be modelled, and managed as such.&lt;/p&gt;
+
+&lt;h2 id=&quot;dynamic-and-federated-resolution-of-identifiers&quot;&gt;Dynamic and federated resolution of identifiers&lt;/h2&gt;
+
+&lt;p&gt;We can overcome the challenge of identifier resolution, mapping and equivalence by making identifier namespaces an ontology by providing open data and open tools in order to ‘make sense’ of arbitrary identifiers within our domain and providing dynamic, flexible and adaptable mechanisms to extend and federate. This is akin to the domain name service ‘DNS’ of the Internet, which maps arbitrary textual domain names to their IP addresses.&lt;/p&gt;
+
+&lt;p&gt;These ideas led to me to build &lt;em&gt;concierge&lt;/em&gt;, a set of simple ‘identifier resolvers’ that cover a set of practical examples - for my case, resolution of staff and patient identity, organisational data services and terminologies. The source code is available on github: &lt;a href=&quot;https://github.com/wardle/concierge&quot;&gt;https://github.com/wardle/concierge&lt;/a&gt;. I used it in my e-observation toy demonstration above for user login, fetching staff information (name, job title etc) and patient search/lookup. It is incomplete, but a useful exercise. I can now conceive of a single ‘Patient’ resource that uses information from multiple sources such as local patient administrative systems and the national enterprise master patient index to generate a unified contact telephone list, for example. I plan to abstract federation, so that client applications can start from an organisation, drill down to a site, and then drill down even further onto units, wards and even individual beds, with data derived from &lt;em&gt;different&lt;/em&gt; systems for the different levels of granularity, but that complexity is hidden from the client user, and client application acting on their behalf.&lt;/p&gt;
+
+&lt;p&gt;Similarly, it is easy to consider how a single “staff” search/identifier resolution service might work to federate and abstract information from multiple disparate sources ; the staff directory, the electronic staff record, the on-call rotas, team definitions etc. There are many different ways to federate; the focus is to abstract underlying complexity for clients of that service.&lt;/p&gt;
+
+&lt;h2 id=&quot;but-what-about-shared-models&quot;&gt;But what about shared models?&lt;/h2&gt;
+
+&lt;p&gt;So it’s easy to see how we might create a tidy facade to hide the underlying complexity of our existing health and care infrastructure using first-class identifiers for different resources. For example, we could resolve and reify a staff member and that data model could identifiers representing the organisations and the sites in which they work, or the clinics for which they are responsible, which themselves are linked to organisations and sites. Indeed, it’s easy to see those relationships as forming a graph, not only within a single ontology but between ontologies, which I’ll discuss shortly.&lt;/p&gt;
+
+&lt;p&gt;The problem is that not only do we need a shared understanding of identifiers, but we also need a shared understanding of the data models in which they are used. It is not sufficient to have a flat list of other identifiers within, say, a member of staff’s record because that would be &lt;em&gt;meaningless&lt;/em&gt;; we need more context about how one relates to another.&lt;/p&gt;
+
+&lt;p&gt;Answering the question “does this patient have a type of neurological disease?” and getting back an answer “yes” also means that we need to be able to resolve an identifier &lt;em&gt;in context&lt;/em&gt; in order to derive meaning, because that diagnosis of “Parkinson’s disease” might be listed as part of a family history and not in the patient’s personal problem list.&lt;/p&gt;
+
+&lt;p&gt;Others have solved this in different ways, and have even used different approaches within the same wider model. For example, the &lt;a href=&quot;https://www.hl7.org/fhir/patient.html&quot;&gt;HL7 FHIR “Patient”&lt;/a&gt; model defines a type of resource representing a patient, with attributes such as name, gender and birth date. HL7 uses a more flexible, dynamic system for other models based on identifiers such as that for observations. Here is an example for &lt;a href=&quot;https://www.hl7.org/fhir/observation-example-f001-glucose.json.html&quot;&gt;recording glucose&lt;/a&gt; which, rather than hard-coding the test and the value of the result, uses namespaced codes and flexible values with coding for units. We can see that in general, the class is given prominence (Patient class, Observation class) and the attributes serve that class.&lt;/p&gt;
+
+&lt;p&gt;Likewise, in openEHR, named archetypes such as &lt;a href=&quot;https://ckm.openehr.org/ckm/archetypes/1013.1.4295&quot;&gt;pulse&lt;/a&gt; and &lt;a href=&quot;https://ckm.openehr.org/ckm/archetypes/1013.1.3574&quot;&gt;blood pressure&lt;/a&gt; can be composed into wider models for operational use, and these archetypes fit into a wider and more fixed information model as part of two-level modelling. For example, the blood pressure archetype contains a value for systolic blood pressure and a value for diastolic blood pressure, together with some metadata.&lt;/p&gt;
+
+&lt;p&gt;Neither the HL7 FHIR or openEHR approaches avoid the need for close collaboration between disparate health economies because unless one is not planning on actually using the data stored within the models, at some point one needs to write code that can consume and process and extract meaning from those data. In general, software developers compile those data definitions into classes to permit that processing.&lt;/p&gt;
+
+&lt;p&gt;If you’re going to exchange medication data, at some point you need to come to a decision about a shared model for recording, storing and exchanging that information, whether that exchange is simply from a server to a client or between a critical care software system and the hospital pharmacy.&lt;/p&gt;
+
+&lt;h2 id=&quot;class-orientated-vs-attribute-orientated&quot;&gt;Class-orientated vs attribute-orientated&lt;/h2&gt;
+
+&lt;p&gt;In object-orientated software systems, data are usually coerced into objects of certain classes, and in most computer languages, those classes can be hierarchical so that for example a ‘Car’ ‘is-a’ type of ‘Vehicle’. There is usually a pattern of inheritance so that behaviour and sometimes data can be inherited from the parent class. For example, all vehicles might have a ‘colour’ property.&lt;/p&gt;
+
+&lt;p&gt;It’s a seductive approach, as one can build a model of reality and use it to solve problems by modelling data and behaviour as interactions between objects. You think in terms of objects, those objects may have properties, but you almost always have to define how those objects fit into your wider hierarchy when you create them. The hierarchies of your object classes are usually quite fixed.&lt;/p&gt;
+
+&lt;p&gt;Both openEHR and HL7 FHIR use a class-orientated approach to most of their data.&lt;/p&gt;
+
+&lt;p&gt;It’s seductive, but it can be brittle. It is generally poorly extensible, poorly dynamic and struggles to adapt not only to changing circumstances but even to different applications across a wider health enterprise.&lt;/p&gt;
+
+&lt;p&gt;HL7 FHIR adopts a modelling approach in which the basic class definitions aim for a common denominator of fields and permit “extensions” for local definitions while using profiling to make very general models more specific by, for example, defining what can be in a value set or which terminology should be used for a specific property.&lt;/p&gt;
+
+&lt;p&gt;openEHR adopts a different approach in which modellers attempt to define all of the possible attributes within the model, and use optionality extensively; for example it would be unusual to use all of the attributes in many models.&lt;/p&gt;
+
+&lt;p&gt;HL7 FHIR is therefore a ‘meta-standard’ and what really happens is that we as a community build multiple versions of the same ‘standard’ - see the &lt;a href=&quot;https://www.hl7.org/fhir/us/core/&quot;&gt;US CORE release&lt;/a&gt; and there is proliferation of just-slightly-different profiles for different scenarios within NHS England.&lt;/p&gt;
+
+&lt;h2 id=&quot;promoting-first-class-namespaced-attributes&quot;&gt;Promoting first-class, namespaced attributes&lt;/h2&gt;
+
+&lt;p&gt;But haven’t we been talking about ontologies in which we can associate arbitrary properties in triples, and change those over time? For example, work on the ‘semantic’ web led to the development of &lt;a href=&quot;https://www.w3.org/RDF/&quot;&gt;RDF (Resource Description Framework)&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“RDF is a standard model for data interchange on the Web. RDF has features that facilitate data merging even if the underlying schemas differ, and it specifically supports the evolution of schemas over time without requiring all the data consumers to be changed.”&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;https://www.w3.org/RDF/&quot;&gt;https://www.w3.org/RDF/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Now people have been talking about using RDF in healthcare for many years, but such an approach has not gained traction for a variety of reasons, including inadequate open-source tooling, little industry interest, perceived complexity, ownership of different ontologies by different groups, its design predating interest in graph databases, lack of definitions on value types and probably most importantly, a lack of temporal associations (timestamping) and change semantics.&lt;/p&gt;
+
+&lt;p&gt;But if we can solve those issues, it is quite easy to see how we can compose first-class attributes together into a semantic whole to represent health data in context. Just as in modern, more functional programming languages, elevating properties to first-class concepts within our models gives us powerful runtime polymorphism and permits independent extensions of types, protocols and implementations within and across health data.&lt;/p&gt;
+
+&lt;p&gt;But such an approach requires several important dependencies:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Robust shared tools for the resolution, mapping and logical comparison/equivalence testing of persistent identifiers&lt;/li&gt;
+  &lt;li&gt;A move away from CRUD (create-read-update-delete) semantics towards different semantics for write and read operations. This has important regulatory benefits as well.&lt;/li&gt;
+  &lt;li&gt;A move to architectural designs that focus on immutable data and &lt;em&gt;change&lt;/em&gt; as a first-class part of the model&lt;/li&gt;
+  &lt;li&gt;Denormalisation with snapshots of the dereferenced values and time as a first-class attribute, so that our software doesn’t show data recorded by me in 1999 using my current job title but my job title at that time.&lt;/li&gt;
+  &lt;li&gt;Clinical modelling using finely-grained archetypes representing a single attribute, properly namespaced and dynamically grouped into other less granular archetypes.&lt;/li&gt;
+  &lt;li&gt;Tools to provide automatic coercion of legacy “object-orientated” classes into bundles of first-class attributes.&lt;/li&gt;
+  &lt;li&gt;Ontologies describing the relationships between properties, even between different ontologies.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Such an approach also means we can support interoperability between different information models in our software systems. In this world, we could make&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;table&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;https://openehr.org/Id/observation/blood_pressure/v2&lt;/td&gt;
+        &lt;td&gt;systolic&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;equivalent to&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;table&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;http://snomed.info/sct&lt;/td&gt;
+        &lt;td&gt;271649006&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;and equivalent to&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;table&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;http://loinc.org&lt;/td&gt;
+        &lt;td&gt;8480-6&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Unfortunately, the fact that the latter two are proprietary and need licensing is to our collective detriment, and many operational openEHR implementations are closed-source.&lt;/p&gt;
+
+&lt;p&gt;One can write software to process the fully open openEHR archetype definitions and bind properties to first-class namespaced attributes and many definitions already have bindings to other definitions in LOINC or SNOMED CT. Both the openEHR and HL7 FHIR communities have done some great modelling work.&lt;/p&gt;
+
+&lt;p&gt;But it is easy to see how a class-based model results in an explosion of classes. For example, it’s not difficult to see how the &lt;a href=&quot;http://www.hl7.org/fhir/datatypes-definitions.html#Address.line&quot;&gt;first line of an address in a FHIR address class&lt;/a&gt; is semantically the same in a &lt;a href=&quot;https://ckm.apperta.org/ckm/archetypes/1051.32.573&quot;&gt;“UK” address from openEHR&lt;/a&gt; which is the same as in a &lt;a href=&quot;https://ckm.apperta.org/ckm/archetypes/1051.32.203&quot;&gt;Scottish address from openEHR&lt;/a&gt; which is the same as in an ISO22220 based address (also from openEHR - &lt;a href=&quot;https://ckm.openehr.org/ckm/archetypes/1013.1.484&quot;&gt;https://ckm.openehr.org/ckm/archetypes/1013.1.484&lt;/a&gt; and all share the semantics of the &lt;a href=&quot;https://www.w3.org/TR/vcard-rdf/&quot;&gt;vCard ontology ‘address’&lt;/a&gt; even if the attributes might have different names.&lt;/p&gt;
+
+&lt;p&gt;Instead, of this duplication of classes, we can define ontologies that define the relationships between those first-class names and provide tools to arbitrarily resolve those identifiers. That means resolving “http://www.w3.org/2006/vcard/ns#street-address” can return the right semantic data irrespective of whether the source information is in HL7 v2, HL7 FHIR, or one of the many openEHR address archetypes.&lt;/p&gt;
+
+&lt;h1 id=&quot;grouping-first-class-attributes-into-semantically-meaningful-entities&quot;&gt;Grouping first-class attributes into semantically meaningful entities&lt;/h1&gt;
+
+&lt;p&gt;Just because we make attributes first-class in our models, it doesn’t mean that we can’t bundle them together into something that is itself meaningful. But rather than thinking in terms of classes, and the attributes are simply part of those classes, our attributes are first-class and might be arbitrarily grouped into what are essentially nested collections and be derived either directly from source information or derived by understanding how those properties relate to one another semantically.&lt;/p&gt;
+
+&lt;p&gt;In addition, our definitions of an attribute must be associated with a schema definition, so that we have information about the value type(s) permitted for that property. Other semantics might include cardinality and uniqueness, for example, depending on the property in question. But object-orientated approaches conflate the specifications of data with the data itself, while in reality these are orthogonal concepts.&lt;/p&gt;
+
+&lt;p&gt;It’s fairly easy to see how schema definitions could themselves be defined ontologically, through entity/attribute/value (or subject/predicate/object triples in RDF parlance) and so permit runtime evolution of health data schemas and importantly, an ability to provide a unified view from data sourced from multiple disparate systems. It provides a true abstraction and could present data from HL7 FHIR, HL7v2 and openEHR in the same way and so permit computability across different systems, while also providing a persistence mechanism via an entity-attribute-value store for native applications and services, and a way of generating computable properties in a functional style.&lt;/p&gt;
+
+&lt;h2 id=&quot;hierarchical-databases-graphs-and-graph-queries&quot;&gt;Hierarchical databases, graphs and graph queries&lt;/h2&gt;
+
+&lt;p&gt;It is unsurprising that early medical databases, some still used today, model healthcare data in a hierarchy. What this means is that a single patient has multiple encounters, each encounter has multiple procedures etc. In relational database terms, each is a to-many relation.&lt;/p&gt;
+
+&lt;p&gt;However a simple hierarchy is insufficient for most health and care needs. For example, a clinical encounter might relate to multiple pathways of care, in a many-to-many relationship. Instead, we can picture the modern medical record as a graph of information with our ‘triples’ forming the nodes of that graph. Some nodes will be highly connected, others less so. Overall, the structure will be hierarchical.&lt;/p&gt;
+
+&lt;p&gt;In such model, it is entirely reasonable to treat a collection of ‘triples’ together, if they form a logical whole that is semantically useful. For example, we might have a first-class attribute that could be used in a clinical encounter to record “family history”. As a first-class property, it could also be used in other contexts, but we might expect that family history property to itself be made up of a collection of other properties, including a list of diagnoses.&lt;/p&gt;
+
+&lt;p&gt;Simplified, this might look like: (each entity is a tuple (namespace/value))&lt;/p&gt;
+
+&lt;p&gt;Encounter -&amp;gt; Has Family History -» [ Diabetes mellitus, Hypertension, Ischaemic Heart Disease]&lt;/p&gt;
+
+&lt;p&gt;If you are familiar with SNOMED CT, you will recognise these semantics are similar to the &lt;em&gt;normalised&lt;/em&gt; form of a concept. SNOMED CT has concepts which can themselves be decomposed into a normal form because they represent a complex concept, such as “Family history of diabetes”. It is not difficult to imagine that we can decompose and normalize arbitrary SNOMED concepts and indeed more complex expressions into the wider information model and even round-trip between decomposed and composed forms in order to arbitrarily fatten or flatten the tree.&lt;/p&gt;
+
+&lt;p&gt;Such an approach depends very much on having a set of sane clinically meaningful and ontologically correct relationships (attributes) defined for concepts, and an understanding that different attributes might provide a different “view” of the same information.&lt;/p&gt;
+
+&lt;h2 id=&quot;computable-and-declarative-properties&quot;&gt;Computable and declarative properties&lt;/h2&gt;
+
+&lt;p&gt;Using first-class namespaced properties permits making health and care data more easily computable, because one might have multiple properties that use the same source data to derive a semantically different value. It permits create a facade of well-known properties in front of legacy data, or data in different formats.&lt;/p&gt;
+
+&lt;p&gt;For example, simple application might only want to examine a flat list of family history diagnoses and problems, while a more sophisticated application might want to drill-down into other attributes to understand, for example, whether there is a maternal history of a specific condition or not, if that data even existed. It means different namespace/value (ie attribute) resolvers can provide a different ‘view’ of the same underlying data. We move from an approach based on create/read/update/delete (CRUD) semantics to one that separates the reads and writes. We have different models for reads compared to writes, because they are semantically different.&lt;/p&gt;
+
+&lt;p&gt;For example, we might represent a current list of medications on the ward as a simple collection, containing entries each of which represents a medication. In each, there would be an encoding of the medication using a UK dm+d identifier as well as dosing information. We might write a resolver that provides a computed property that derives total daily dose from that entry to allow easy graphing of daily doses over time.&lt;/p&gt;
+
+&lt;p&gt;Current primary care systems use product-based prescribing and a textual description of dosing. Hospital based systems generally use dose-based prescribing. It is possible to map between these two systems, and so we might also permit resolution of a dose property for product-based prescriptions where possible. Such code can simply operate on pure data structures, is easily testable for safety, can work in isolation and demonstrates that we can add additional functionality to existing systems, and existing data, without needing to change the original.&lt;/p&gt;
+
+&lt;p&gt;Likewise, we can see &lt;a href=&quot;https://ckm.openehr.org/ckm/archetypes/1013.1.499&quot;&gt;Address&lt;/a&gt; classes in openEHR defined for an organisation, with attributes representing properties not applicable to all countries such as a “Delivery point indicator”, which apparently is something important in Brazil. Because such attributes are not first-class, one ends up with multiple classes representing pretty much the same thing. You can easily end up with an explosion of classes, often in a rigid hierarchy.&lt;/p&gt;
+
+&lt;p&gt;Instead, certainly for the UK, it would be possible to register, and then resolve, for example, an LSOA identifier into and then from a variety of contexts including organisations and patients, by runtime polymorphism and runtime registration of resolvers of types, while not impacting on the use of other address attributes in other countries in which LSOA has no meaning.&lt;/p&gt;
+
+&lt;p&gt;For instance, we might try to resolve on a patient using a first-class name for that attribute such as “http://ons.gov.uk/Id/LSOA” and know that, given a date, we can use the address history and walk our graph to get the postcode and resolve the LSOA from there. We can have original data distributions that provide these data, such as the UK’s NHS postal code directory, and make use of those data to provide dynamic LSOA properties for the address history of an individual patient, and then link to indices of multiple deprivation, to resolve changes in deprivation over time or after a diagnosis.&lt;/p&gt;
+
+&lt;p&gt;First-class attributes means we focus on semantics. We should be able to resolve the value of a property such as http://www.w3.org/2004/02/skos/core#prefLabel and obtain the preferred label for that structure, such as an organisation, or person, or even diagnosis, without necessarily knowing about whether the source information is provided in a proprietary format, HL7 v2, HL7 FHIR, openEHR, UK NHS ODS or a social care system. We prioritise &lt;em&gt;meaning&lt;/em&gt; over classes and brittle inheritance patterns that are usually dependent on a specific system or programming language.&lt;/p&gt;
+
+&lt;p&gt;Similarly, different data collection “forms” can give the same semantic results, such as the “EDSS” scale for multiple sclerosis can be directly recorded or be part of an extended EDSS-FS scale. Instead of using static class hierarchies, we can define the same semantic property for the overall result and later support other scales that can provide the same semantic result, for example, when drawing a graph of results over time, or working out disease trajectory.&lt;/p&gt;
+
+&lt;p&gt;You might recognise the approach of an application walking a graph and requesting exactly the information it requires, as that of &lt;a href=&quot;https://graphql.org&quot;&gt;GraphQL&lt;/a&gt; or &lt;a href=&quot;https://github.com/wilkerlucio/pathom&quot;&gt;Pathom&lt;/a&gt;. Clients see the view of data that they request.&lt;/p&gt;
+
+&lt;p&gt;You might also recognise that approach of separating the semantics of reading (and making sense of the record) from the writing of information as that of CQRS (Command Query Responsibility Segregation). Managing medication is a good example, because actually health care data is actually better represented as a transactional log of &lt;em&gt;events&lt;/em&gt;. Do we really change that dose of medication in a database table or are the semantics better represented as a model of that change instead? Isn’t our current state simply a snapshot of all of the events processed sequentially?&lt;/p&gt;
+
+&lt;p&gt;The names and values of data are orthogonal to the specifications of that data, but most object-orientated specifications conflate the two concepts.&lt;/p&gt;
+
+&lt;h2 id=&quot;weeknotes&quot;&gt;Weeknotes&lt;/h2&gt;
+
+&lt;p&gt;So during my convalescence, I learnt &lt;a href=&quot;http://clojure.org&quot;&gt;Clojure&lt;/a&gt; and also either started or continued work on the following:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/wardle/concierge&quot;&gt;Concierge&lt;/a&gt;. This resolves identifiers using namespace value tuples to abstract away some of NHS Wales’ existing services. This was written in golang and returns HL7 FHIR like models for the resolved resources, providing mapping between different namespaces (e.g. Read codes to SNOMED CT). This work made me realise that first-class types were not as scalable as I’d like, and it would be difficult to provide the same semantics as standards such as HL7 FHIR and its extensions without first-class namespaced and specified attributes.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;e-Obs. A lightweight clojurescript single page application with desktop application responsiveness in the browser, dynamically generated SVG national early warning score charts on demand, and using concierge to handle user login, security token generation and refresh, and patient lookup. This uses an event-driven architecture. This taught me a lot about functional programming.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;clods. A clojure microservice providing a RESTful and graph API to UK health and care organisational services and postcodes. This led to me looking at how I might represent proprietary ODS schemas as both FHIR models and the W3C organisation schema, and how it would be so much easier if I used namespaced attributes instead.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;go-terminology. A very fast golang-based terminology server that provides SNOMED CT services via REST and gRPC APIs. SNOMED-CT is an ontology, and uses triples in the same way as RDF, but the learning here is the importance of mapping concrete values from one ontology to another.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I plan to federate information from ‘clods’ on hospital sites with that from individual patient administration systems to allow hopping from arbitrary sites down into individuals units, wards and individual beds. For the client application, they will simply walk a graph from an organisation to a site, to a unit, to a ward and to a bed, with first-class namespaced attributes providing an abstraction over the inherent complexity in providing access to these data, which are obviously sourced from multiple disparate systems each using different data structures and representations.&lt;/p&gt;
+
+&lt;p&gt;I’ve started work on a rule-based declarative system to resolve identifiers arbitrarily in the context of different information models, including making use of the existing and open-source openEHR archetype definitions, and linking those to HL7 FHIR and v2 messages when possible.&lt;/p&gt;
+
+&lt;p&gt;We need to reboot the work on linked data and ontologies and use that in health and care. All of this work should be open-source, because semantically-meaningful data and ontologies are the way we should be building health and care software fit for the 21st Century.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">I’ve been off work, off blogging and off Twitter due to COVID-19 but fortunately now back to full health and thought I’d write up some notes about what I’ve been doing in my spare time outside of my day job doing telephone clinics and COVID ward duties.</summary></entry><entry><title type="html">Coherence in governance</title><link href="https://www.wardle.org/strategy/2019/12/21/coherent-governance.html" rel="alternate" type="text/html" title="Coherence in governance" /><published>2019-12-21T09:00:00+00:00</published><updated>2019-12-21T09:00:00+00:00</updated><id>https://www.wardle.org/strategy/2019/12/21/coherent-governance</id><content type="html" xml:base="https://www.wardle.org/strategy/2019/12/21/coherent-governance.html">&lt;p&gt;Our ability to adopt, deploy and improve technology is fundamental in our mission to build a health and care system that works seamlessly, for patients, families and staff.&lt;/p&gt;
 
 &lt;p&gt;That means building services that span organisational, disciplinary, geographical and care boundaries so that, for example, as a patient, you don’t receive an appointment for clinic at the same time as your appointment for an x-ray.&lt;/p&gt;
 
@@ -97,7 +410,68 @@
 &lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h1&gt;
-&lt;p&gt;&lt;a name=&quot;results-requests&quot;&gt;1&lt;/a&gt;: We currently have an example in Wales in which a re-procurement of a laboratory management system is in one programme of work, and re-procurement of a radiology information system is in another. Both are considering including “test requesting” functionality and yet, for end-users, we want a seamless system that, in clinic or on the ward, allows us to request multiple &lt;em&gt;things&lt;/em&gt; including referrals, laboratory, radiology and other tests. We don’t want separate “systems” but instead what appears to be a streamlined “single system”. Therefore, programmes of work need to be framed with user need; one logical approach might be to consider “results and requests” as a business programme to manage a suite of products, that would include concierge services that take user requests and farm them to our different backend systems via APIs, as well as managing the re-procurement of laboratory and radiology services.&lt;/p&gt;</content><author><name></name></author><summary type="html">Our ability to adopt, deploy and improve technology is fundamental in our mission to build a health and care system that works seamlessly, for patients, families and staff.</summary></entry><entry><title type="html">Learning from building an electronic health record: a journey through data</title><link href="https://www.wardle.org/ehr/2019/11/08/learning-from-creating-an-ehr.html" rel="alternate" type="text/html" title="Learning from building an electronic health record: a journey through data" /><published>2019-11-08T08:08:08+00:00</published><updated>2019-11-08T08:08:08+00:00</updated><id>https://www.wardle.org/ehr/2019/11/08/learning-from-creating-an-ehr</id><content type="html" xml:base="https://www.wardle.org/ehr/2019/11/08/learning-from-creating-an-ehr.html">&lt;p&gt;This blog post is based on a presentation given to the Welsh Medical Committee on 8th November 2019.&lt;/p&gt;
+&lt;p&gt;&lt;a name=&quot;results-requests&quot;&gt;1&lt;/a&gt;: We currently have an example in Wales in which a re-procurement of a laboratory management system is in one programme of work, and re-procurement of a radiology information system is in another. Both are considering including “test requesting” functionality and yet, for end-users, we want a seamless system that, in clinic or on the ward, allows us to request multiple &lt;em&gt;things&lt;/em&gt; including referrals, laboratory, radiology and other tests. We don’t want separate “systems” but instead what appears to be a streamlined “single system”. Therefore, programmes of work need to be framed with user need; one logical approach might be to consider “results and requests” as a business programme to manage a suite of products, that would include concierge services that take user requests and farm them to our different backend systems via APIs, as well as managing the re-procurement of laboratory and radiology services.&lt;/p&gt;</content><author><name></name></author><summary type="html">Our ability to adopt, deploy and improve technology is fundamental in our mission to build a health and care system that works seamlessly, for patients, families and staff.</summary></entry><entry><title type="html">Next generation health and care technology</title><link href="https://www.wardle.org/ehr/2019/11/08/learning-from-ehr-next-steps.html" rel="alternate" type="text/html" title="Next generation health and care technology" /><published>2019-11-08T08:08:08+00:00</published><updated>2019-11-08T08:08:08+00:00</updated><id>https://www.wardle.org/ehr/2019/11/08/learning-from-ehr--next-steps</id><content type="html" xml:base="https://www.wardle.org/ehr/2019/11/08/learning-from-ehr-next-steps.html">&lt;p&gt;I &lt;a href=&quot;/ehr/2019/11/08/learning-from-creating-an-ehr.html&quot;&gt;built an electronic health record and along the way learnt a lot&lt;/a&gt; about how to think about the importance of medical records and &lt;em&gt;data&lt;/em&gt; in my day-to-day work as a practising clinician, manager and researcher.&lt;/p&gt;
+
+&lt;p&gt;At the end of that talk (and post), I touched on the importance of building &lt;em&gt;capability&lt;/em&gt; : in data and the software that use those data - to deliver the outcomes we want in health and care. But what does that mean? What are the capabilities that we need to build, specifically?&lt;/p&gt;
+
+&lt;p&gt;I would argue:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;our capabilities to record, view, manipulate and infer from &lt;em&gt;meaningful data&lt;/em&gt; - for direct care, for managing our services and for research.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;depend upon&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;our capabilities to continually deliver safe, sustainable and secure software at pace.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;and we can look to the characteristics of the highest-performing technology teams to understand that these depend upon:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;small, empowered, cross-functional (multi-disciplinary) teams&lt;/li&gt;
+  &lt;li&gt;appropriate modularisation, with well-defined contractual (standards-based) interfaces between those modules&lt;/li&gt;
+  &lt;li&gt;more sophisticated modules composing functionality provided by lower-level modules so managing complexity&lt;/li&gt;
+  &lt;li&gt;cohesive data and software services forming a &lt;em&gt;platform&lt;/em&gt; (long-lived) used by lightweight applications (ephemeral)&lt;/li&gt;
+  &lt;li&gt;fast feedback via automated testing and telemetry, monitoring and logging&lt;/li&gt;
+  &lt;li&gt;fast feedback from users with iterative, agile working&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;and understand, therefore, there is:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;mutual dependency between architecture, governance and standards&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;because our capabilities are determined by our teams and how they can work effectively, and that means building an architecture that breaks down our problems into solvable chunks, making sure that governance is streamlined and effective so that there are clear lines of responsibility and defining the interactions between teams and the products for which they are responsible via open published standards as one part of the contractual obligations between those teams and products.&lt;/p&gt;
+
+&lt;h1 id=&quot;building-products-delivering-outcomes--choose-team-first-boundaries&quot;&gt;Building products delivering outcomes : “Choose team-first boundaries”&lt;/h1&gt;
+
+&lt;p&gt;Truly, our architecture and governance are mutually-dependent with &lt;em&gt;technical standards&lt;/em&gt; as an integral part of the wider contracts between our modules and consequently, between our teams.&lt;/p&gt;
+
+&lt;p&gt;It makes little sense to govern programmes of work without respecting architectural boundaries; indeed, I would argue that many of the issues facing health and care services in Wales are as a result of ignoring this issue - such as thinking that it is appropriate to govern projects relating to patients and their interactions with services separately to projects relating to professionals, when in fact both &lt;em&gt;programmes&lt;/em&gt; of work share many core building blocks, such as citizen identity.&lt;/p&gt;
+
+&lt;p&gt;So instead need to recognise the importance of constructing &lt;em&gt;empowered teams&lt;/em&gt; to help us solve the problems we face and organise those teams into specific programmes of work.&lt;/p&gt;
+
+&lt;p&gt;The mantra must surely be:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;long-lived products within dynamic flexible programmes,&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Flow is difficult to achieve when each team depends on a complicated web of interactions with many other teams. For a fast flow of change to software systems, we need to remove hand-offs and align most teams to the main streams of change within the organization. However, many organizations experience huge problems with the responsibility boundaries assigned to teams. Typically, little thought is given to the viability of the boundaries for teams, resulting in a lack of ownership, disengagement, and a glacially slow rate of delivery.”&lt;/p&gt;
+
+  &lt;p&gt;Skelton, Matthew. Team Topologies (Kindle Locations 2147-2151). IT Revolution Press. Kindle Edition.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So how do we find the &lt;em&gt;fracture planes&lt;/em&gt; within our truly complex and heterogeneous systems?&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“A fracture plane is a natural seam in the software system that allows the system to be split easily into two or more parts. This splitting of software is particularly useful with monolithic software. The word monolith itself comes from Greek, meaning “single stone.” Traditional stonemasons hit stones at particular angles to split the rocks in clean segments, taking advantage of their natural fracture planes. We can look for similar fracture planes in software to find the natural split points that lead to software boundaries.”&lt;/p&gt;
+
+  &lt;p&gt;Skelton, Matthew. Team Topologies (Kindle Locations 2226-2227). IT Revolution Press. Kindle Edition.&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><summary type="html">I built an electronic health record and along the way learnt a lot about how to think about the importance of medical records and data in my day-to-day work as a practising clinician, manager and researcher.</summary></entry><entry><title type="html">Learning from building an electronic health record: a journey through data</title><link href="https://www.wardle.org/ehr/2019/11/08/learning-from-creating-an-ehr.html" rel="alternate" type="text/html" title="Learning from building an electronic health record: a journey through data" /><published>2019-11-08T08:08:08+00:00</published><updated>2019-11-08T08:08:08+00:00</updated><id>https://www.wardle.org/ehr/2019/11/08/learning-from-creating-an-ehr</id><content type="html" xml:base="https://www.wardle.org/ehr/2019/11/08/learning-from-creating-an-ehr.html">&lt;p&gt;This blog post is based on a presentation given to the Welsh Medical Committee on 8th November 2019.&lt;/p&gt;
 
 &lt;p&gt;Many of the posts on this blog have focused on how we, as a clinical community in Wales, can use digital technology to drive improvements in our health and care services. The approach I have advocated, built on a foundation of open standards, interoperability with the provision of an open platform of data and computing services, has focused on the steps we need to take to improve the way we deliver technology in health and care.&lt;/p&gt;
 
@@ -1216,234 +1590,4 @@ from my &lt;a href=&quot;https://standards.cymru/posts/2019-04-24-standards-cult
 
 &lt;p&gt;Tell me what you think, let’s debate… and &lt;em&gt;learn&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">We have an extraordinary opportunity to transform the way we think about the use of digital technology in healthcare in Wales.</summary></entry><entry><title type="html">Semantic interoperability: SNOMED CT, post-coordination and the model</title><link href="https://www.wardle.org/terminology/2018/10/27/snomed-postcoordination-1.html" rel="alternate" type="text/html" title="Semantic interoperability: SNOMED CT, post-coordination and the model" /><published>2018-10-27T20:10:19+01:00</published><updated>2018-10-27T20:10:19+01:00</updated><id>https://www.wardle.org/terminology/2018/10/27/snomed-postcoordination-1</id><content type="html" xml:base="https://www.wardle.org/terminology/2018/10/27/snomed-postcoordination-1.html">&lt;p&gt;One of our goals in healthcare information technology is to enable the meaningful exchange of information between distributed systems in the support of three broad purposes:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;direct care,&lt;/li&gt;
-  &lt;li&gt;management and quality improvement&lt;/li&gt;
-  &lt;li&gt;clinical research.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;However, it is insufficient to simply exchange information at a technical level, but we must aim for &lt;em&gt;semantic&lt;/em&gt; interoperability so that we exchange &lt;em&gt;meaningful data&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;When I say meaningful data, I mean data that has meaning and can be used for decisions, in order to reduce uncertainty about those decisions. Those decisions may be made by a professional, by a patient or carer, or much more likely, shared decisions among groups of those individuals. Those decisions may be clinical, such as should we start anticoagulation to prevent a stroke, or administrative, such as how many patients should we book into that clinic?&lt;/p&gt;
-
-&lt;p&gt;But when I use the term meaningful data, I also  include the ability to use software to process that information; it is computable. It is important to understanding the benefits of computable information, because computer software is quite simply the best way to make sense of large amounts of information. Making data computable means our clinical work can become &lt;em&gt;data-driven&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Making our data computable means that machines can help in processing and understanding, and with the advent of machine learning, even make or suggest decisions based on information. But this post isn’t about machine learning, although it is, I believe, a foundational step for the appropriate and meaningful development and application of machine learning in healthcare.&lt;/p&gt;
-
-&lt;p&gt;So this blog post is about how we can record information in a way that is useful to both humans and machines. For humans it should mean data can be entered more quickly and for machines, it permits better processing so that they can support us humans!&lt;/p&gt;
-
-&lt;h1 id=&quot;how-to-be-data-driven&quot;&gt;How to be data-driven&lt;/h1&gt;
-
-&lt;p&gt;SNOMED CT is a comprehensive terminology and ontology for use in healthcare and it forms an important component of the solution to semantic interoperability. I implemented SNOMED CT in a electronic patient record system and it has been live and running for clinical use in the UK since 2009.&lt;/p&gt;
-
-&lt;p&gt;The SNOMED CT model consists of three core entities:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;concepts, represents a unique concept&lt;/li&gt;
-  &lt;li&gt;descriptions, represents synonyms for a concept&lt;/li&gt;
-  &lt;li&gt;relationships, represents relationships between concepts&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I’ve written extensively about SNOMED-CT on this blog; the best way of understanding the ontology is to browse using an &lt;a href=&quot;https://termbrowser.nhs.uk&quot;&gt;online browser&lt;/a&gt; but SNOMED International provide &lt;a href=&quot;https://confluence.ihtsdotools.org/display/DOCSTART/1.+Introduction&quot;&gt;a useful introductory guide&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;concepts&quot;&gt;Concepts&lt;/h1&gt;
-
-&lt;p&gt;Many concepts represent a single independent concept, but many are actually &lt;em&gt;compound&lt;/em&gt;, representing a number of concepts combined into a meaningful whole.&lt;/p&gt;
-
-&lt;p&gt;For example, &lt;code class=&quot;highlighter-rouge&quot;&gt;cholecystectomy&lt;/code&gt; (&lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;amp;conceptId1=38102005&quot;&gt;38102005&lt;/a&gt;) is a single concept representing removal of the gallbladder. &lt;code class=&quot;highlighter-rouge&quot;&gt;Laparoscopic cholecystectomy&lt;/code&gt; is single concept representing removal of the gallbladder with a laparoscope (&lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;amp;conceptId1=45595009&quot;&gt;45595009&lt;/a&gt;).&lt;/p&gt;
-
-&lt;p&gt;A SNOMED CT &lt;em&gt;expression&lt;/em&gt; combines concepts without needing every possible combination of concepts to be created within the terminology. For example,&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;80146002|appendectomy|
-   :260870009|priority|=25876001|emergency|,
-   425391005|using access device|=86174004|laparoscope|
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;represents performing an appendicectomy as an emergency using an laparoscope. We could add this as a distinct single concept into SNOMED CT but that would result in a combinatorial explosion; that means we’d have to have single concepts representing all possible permutations which is simply not practical. However, mainly for historical reasons or to ease implementation, SNOMED CT does already contains many single concepts that combines multiple concepts into one.&lt;/p&gt;
-
-&lt;p&gt;However, SNOMED CT expressions are a powerful way of refining a concept with additional information, creating, in effect, a clinical phrase. This technique is called &lt;em&gt;post-coordination&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h1 id=&quot;why-not-use-post-coordination&quot;&gt;Why not use post-coordination?&lt;/h1&gt;
-
-&lt;p&gt;I have usually advocated keeping the implementation of SNOMED CT simple by using only pre-coordinated concepts. My concerns about using post-coordination have been that:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;it added complexity to end-users in terms of selection and display of terms,&lt;/li&gt;
-  &lt;li&gt;it made data storage more difficult, and would break referential integrity in my own system.&lt;/li&gt;
-  &lt;li&gt;it would complicate using those terms at a computational level e.g. in automated decision support.&lt;/li&gt;
-  &lt;li&gt;we gain significant value simply from recording pre-coordinated concepts&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;It is (1) and (3) that concerned me most.&lt;/p&gt;
-
-&lt;p&gt;For example, in my own electronic health record software, users don’t know that they are selecting SNOMED terms; they start typing and it autocompletes or simply choose an option using a pop-up, choose a part of the anatomy from a picture or a term is imputed on the basis of other data entered. Adding complexity in adding refinements or qualifiers or embedding expressions worried me. I wanted to make SNOMED CT invisible to end-users and yet enable new decision support and analytics capabilities, hitherto not possible using unstructured free-text.&lt;/p&gt;
-
-&lt;p&gt;I hadn’t conceived of a simple way to make using SNOMED invisible if I created functionality to build expressions; I now think differently.&lt;/p&gt;
-
-&lt;h1 id=&quot;information-models&quot;&gt;Information models&lt;/h1&gt;
-
-&lt;p&gt;However, in the majority of cases, I think many uses of post-coordination such as qualification or refinement or additional information should instead be a function of the wider information model in which the SNOMED CT concept is recorded.&lt;/p&gt;
-
-&lt;p&gt;For example, the FHIR definition of a &lt;a href=&quot;https://www.hl7.org/fhir/condition.html&quot;&gt;Condition&lt;/a&gt;, which includes metadata about the problem/diagnosis concept is shown here:
-&lt;img src=&quot;/images/snomed-postcoord/fhir-condition.jpeg&quot; alt=&quot;Fhir Condition&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;It includes information relating to status (active/inactive etc), verification (provisional, differential) and severity (severe, moderate, mild), as well as information about the condition’s onset and abatement (remission/resolution).&lt;/p&gt;
-
-&lt;p&gt;If we use post-coordination without carefully considering the consequences and their mitigation, given that there is an overlap between information recorded within an expression and the wider information model, we risk duplication, complexity and inconsistency.&lt;/p&gt;
-
-&lt;h1 id=&quot;computing-attributes&quot;&gt;Computing attributes&lt;/h1&gt;
-
-&lt;p&gt;But there are clearly situations where refining a concept with additional information would be helpful. For example, we really wanted to be able to add a more specific anatomical location when we recorded that a patient had a brain abscess.&lt;/p&gt;
-
-&lt;p&gt;The SNOMED-CT ontology helps us, at the computational level, determine &lt;em&gt;how&lt;/em&gt; “cerebral abscess” can be refined:&lt;/p&gt;
-
-&lt;p&gt;A &lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;amp;conceptId1=60404007&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cerebral abscess&lt;/code&gt; (60404007)&lt;/a&gt; is an abscess in the brain.&lt;/p&gt;
-
-&lt;p&gt;Firstly, we can determine a way to &lt;em&gt;refine&lt;/em&gt; this concept using post-coordination to specifically give the location. The ontology provides, as part of its model, attribute relationships for this concept, at a computational level:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; Is a (attribute)                   -&amp;gt; Abscess of brain (disorder)	
- Associated morphology (attribute)  -&amp;gt; Abscess (morphologic abnormality)
- Finding site (attribute)           -&amp;gt; Cerebral structure (body structure)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;For example, we can see that we can refine the concept &lt;code class=&quot;highlighter-rouge&quot;&gt;cerebral abscess&lt;/code&gt; with a finding site that is a child of the concept &lt;code class=&quot;highlighter-rouge&quot;&gt;Cerebral structure (body structure)&lt;/code&gt; (&lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;amp;conceptId1=83678007&quot;&gt;83678007&lt;/a&gt;).&lt;/p&gt;
-
-&lt;p&gt;As a result, computationally, we can offer a choice to the end-user to refine this concept with any finding site, such as &lt;code class=&quot;highlighter-rouge&quot;&gt;Structure of parahippocampal gyrus&lt;/code&gt; (&lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;amp;conceptId1=13989007&quot;&gt;13989007&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;Secondly, we can add refinements as a result of our concept being in one of the nine main SNOMED CT hierarchies. The attributes appropriate for each hierarchy are listed &lt;a href=&quot;https://confluence.ihtsdotools.org/display/DOCSTART/6.+SNOMED+CT+Concept+Model&quot;&gt;on the SNOMED International concept model documentation&lt;/a&gt;. For example, a clinical finding can be qualified by adding concepts representing a &lt;code class=&quot;highlighter-rouge&quot;&gt;Finding Site&lt;/code&gt;, a &lt;code class=&quot;highlighter-rouge&quot;&gt;Causative Agent&lt;/code&gt;, or &lt;code class=&quot;highlighter-rouge&quot;&gt;Severity&lt;/code&gt; among others.&lt;/p&gt;
-
-&lt;p&gt;Thirdly, we can add refinements because of the existence of our concept within a certain reference set. For example, there is a &lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;amp;conceptId1=723264001&quot;&gt;laterality reference set&lt;/a&gt; that tells us which concepts can be lateralised.&lt;/p&gt;
-
-&lt;p&gt;It is therefore straightforward to imagine that, if a cerebral abscess is entered by a user as a diagnostic concept, we might configure our user interface or natural language parser to look for and refine that diagnostic concept with additional information relating to finding site, appropriately limited to the brain using subsumption, given that we have entered cerebral abscess, and offering a choice of laterality.&lt;/p&gt;
-
-&lt;p&gt;So we can see that location, laterality and causative agents &lt;em&gt;might&lt;/em&gt; be very appropriate options for refinement, but should we let users post-coordinate diagnostic concepts with a type of ```Severity’’’? This matters because we need to think about how we write software to process these terms.&lt;/p&gt;
-
-&lt;h1 id=&quot;equivalence-and-the-importance-of-meaning&quot;&gt;Equivalence and the importance of meaning&lt;/h1&gt;
-
-&lt;p&gt;The key issue with processing SNOMED CT, either as pre-coordinated terms or as expressions, is to ensure that we can process &lt;em&gt;meaning&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;That means that, in any implementation of SNOMED CT, whether using only pre-coordinated terms or post-coordination to create an expression, we need to handle equivalence at not just the level of SNOMED, but also take into account the wider information model, providing the context in which that concept or expression sits.&lt;/p&gt;
-
-&lt;p&gt;For example, a HL7 FHIR representation of a condition looks like this:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;resourceType&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Condition&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Resource&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;meta,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;implicitRules,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;and&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;language&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;DomainResource&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;contained,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;extension,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;and&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;modifierExtension&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;identifier&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Identifier&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;External&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Ids&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;condition&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;clinicalStatus&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;code&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;C?&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;active&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;recurrence&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;inactive&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;remission&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;resolved&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;verificationStatus&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;code&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;C?&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;provisional&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;differential&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;confirmed&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;refuted&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;entered-in-error&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;unknown&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;category&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;CodeableConcept&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;problem-list-item&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;encounter-diagnosis&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;severity&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;CodeableConcept&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Subjective&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;severity&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;condition&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;code&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;CodeableConcept&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Identification&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;the&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;condition,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;problem&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;or&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;diagnosis&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;bodySite&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;CodeableConcept&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Anatomical&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;location,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;relevant&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;subject&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Reference(Patient|Group)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;R!&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Who&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;has&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;the&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;condition?&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;context&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Reference(Encounter|EpisodeOfCare)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Encounter&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;or&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;episode&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;when&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;condition&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;A &lt;a href=&quot;https://www.hl7.org/fhir/datatypes.html#codeableconcept&quot;&gt;CodeableConcept&lt;/a&gt; is a complex HL7 FHIR type that provides a reference to an arbitrary terminology.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/snomed-postcoord/codeable-concept.jpeg&quot; alt=&quot;Codeable Concept&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;What happens if we put a concept representing “SEVERE” as the severity in the FHIR model but record a post-coordinated SNOMED CT expression of “MILD” as a qualifier of our diagnostic concept?&lt;/p&gt;
-
-&lt;h1 id=&quot;meaningful-data-in-context&quot;&gt;Meaningful data, in context&lt;/h1&gt;
-
-&lt;p&gt;That means our analytics, for direct individual care, processing data as part of an electronic health record in real-time, or for quality improvement, service management or research use, must interpret the meaning of SNOMED CT concepts and expressions &lt;em&gt;within&lt;/em&gt; the wider information model.&lt;/p&gt;
-
-&lt;p&gt;So what do we need from our software?&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;We need to be able to process an arbitrary SNOMED concepts, provide the standard attribute relationships to client software so that those developers can easily understand how to refine, for example, a diagnostic term. This should include the value sets or necessary search constraints so that only appropriate values can be used for any specific attribute (e.g. if you are refining an anatomical location in the central nervous system, your values should only be anatomical locations within the central nervous system!)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;We need a set of tools that can parse SNOMED expressions into a useful internal representation and vice versa, so that expressions can be persisted and exchanged as well as permitting the information to be used effectively by humans and machines.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;We need to be able to process an arbitrary SNOMED concept or expression and normalise it into a canonical expression so that it can be used for analytics.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;We need tools to be able to offer additional refinement of SNOMED concepts and expressions by virtue of the wider information model in which they sit. For example, normalisation of a concept within a FHIR condition model could be automatically refined by the appropriate attributes from the wider model, such as severity.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;As a result, I have been working on a set of open-source tools that not only support deriving understanding of meaning from pre-coordinated single terms in isolation, but from SNOMED expressions and those terms &lt;em&gt;in their wider context&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;As part of this work, I have made use of the Google HL7 FHIR protobuf definitions, which can be found &lt;a href=&quot;https://github.com/google/fhir&quot;&gt;here&lt;/a&gt; and are now vendored in the go-terminology code repository.&lt;/p&gt;
-
-&lt;p&gt;My next blog post in this series will cover the details of a practical implementation. Like all standards, it is only with the development and availability of quality (open-source) implementations that a standard can truly become valuable.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">One of our goals in healthcare information technology is to enable the meaningful exchange of information between distributed systems in the support of three broad purposes:</summary></entry><entry><title type="html">Digital transformation in healthcare</title><link href="https://www.wardle.org/digital/2018/10/23/on-digital.html" rel="alternate" type="text/html" title="Digital transformation in healthcare" /><published>2018-10-23T22:21:21+01:00</published><updated>2018-10-23T22:21:21+01:00</updated><id>https://www.wardle.org/digital/2018/10/23/on-digital</id><content type="html" xml:base="https://www.wardle.org/digital/2018/10/23/on-digital.html">&lt;p&gt;“We’re at the beginning of the digital revolution” wrote Bill Gates in his foreword to Satya Nadella’s book “Hit Refresh”, published not, as you might initially guess, twenty years ago, but in 2017.&lt;/p&gt;
-
-&lt;p&gt;This explicitly recognises that, while we have already seen remarkable changes to our lives, our societies and our cultures as a result of software, and the microprocessors on which they rely, we are actually only at the beginning of our journey.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://a16z.com/2016/08/20/why-software-is-eating-the-world/&quot;&gt;“Software is eating the World”&lt;/a&gt; said Marc Andreessen, referring to the fact that in every aspect of our lives, software has disrupted the status quo and has revolutionised industries, sometimes quietly, and sometimes by storm. Commercially, we have seen businesses that have put software at the heart of their business overtaking incumbents slower to adopt technology and slower to realise the role of technology as an intrinsic foundation of all they do.&lt;/p&gt;
-
-&lt;p&gt;I work as a full-time consultant neurologist caring for patients with a range of neurological illnesses. Like most senior clinical staff, have a range of academic and leadership roles in addition to my clinical practice; in all of these roles, I see, first-hand, how the right technology could help my work and, most importantly, help the patients I directly care as well as the populations I serve.&lt;/p&gt;
-
-&lt;p&gt;But what do we mean by nebulous terms such as ‘digital’ and ‘technology’ and are we right to think about a digital ‘revolution’, particularly in my own field, healthcare? After all, the technologies at our disposal continuously change improve and we have ever more computing power at our fingertips. The word ‘revolution’ suggests a fundamental and relatively sudden change and while it is true, the maturity of our digital tools sometimes advances quickly, such as near ubiquity of smart phones in the developed world, would we not be better to talk about the “digital era”?&lt;/p&gt;
-
-&lt;p&gt;But whether we talk about a “digital revolution” or the start of a journey into a new “digital era”, what do we actually mean by “digital”?&lt;/p&gt;
-
-&lt;p&gt;I would argue that the starting point in trying to understand the implications of true digital thinking, in any industry,  is our ability to:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;em&gt;transfer and process information to make it accessible and useful&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&quot;rapid-and-sophisticated-processing--faster-learning&quot;&gt;Rapid and sophisticated processing = faster learning&lt;/h1&gt;
-
-&lt;p&gt;But weren’t we were able to transfer and process information before we had digital tools?&lt;/p&gt;
-
-&lt;p&gt;For example, most of us in healthcare still rely on paper notes but that doesn’t stop our teams collecting piles of them to audit an important quality measure of our work.  So perhaps we need to refine our understanding of the “digital revolution”, to explicitly recognise the importance of &lt;em&gt;speed, accuracy and sophistication of our processing&lt;/em&gt; enabling us to make our information ever more useful.&lt;/p&gt;
-
-&lt;p&gt;The transition from film to digital cameras is a useful example of how digital technology has impacted our lives. The digital camera speeds up processing; you no longer wait weeks to see the pictures you have taken but instead see your pictures immediately, but digital tools do more than simply improve the speed of feedback, I can now also crop my images and share with friends and family.&lt;/p&gt;
-
-&lt;p&gt;So when we talk about “accessible and useful”, aren’t we actually talking about &lt;em&gt;creating value&lt;/em&gt; and &lt;em&gt;improving outcomes&lt;/em&gt;?&lt;/p&gt;
-
-&lt;p&gt;The outcomes in photography that are important to me are recording a cherished memory and sharing with those closest to me, and digital tools support these outcomes in a way that was not as easy with traditional film.&lt;/p&gt;
-
-&lt;p&gt;And the benefit of digital technologies over paper-based processes is that the feedback loops between our decision, in this case to take a photograph, and the outcome, can be made so much more quickly. With the right digital tools, my understanding of the best aperture and shutter speed to use in those conditions and in that situation improves; I learn.&lt;/p&gt;
-
-&lt;p&gt;Getting the right information at the right time, synthesised appropriately to make it useful, informs our learning and therefore our ability to make decisions.&lt;/p&gt;
-
-&lt;p&gt;And digital is, quite simply, the best way to enable a learning culture.&lt;/p&gt;
-
-&lt;h1 id=&quot;a-continuous-learning-system&quot;&gt;A continuous learning system&lt;/h1&gt;
-
-&lt;p&gt;And that is why we are at the cusp of a true transformational change, because so many of our procedures and policies, our structures and services and even our budgets and planning, in so many industries, are rooted in the pre-digital era. That means our purchasing or budgeting decisions for solutions to problems are made on a cycle involving years. We plan projects because the pre-digital era required us to meticulous plan our work, deliver what was needed and then evaluate what we did.&lt;/p&gt;
-
-&lt;p&gt;Instead, digital is an important enabler of changing our mindset in all areas of our work, in healthcare and in other industries, mainly as a result of the speed and acuity of the feedback we can create by the right use of technology.&lt;/p&gt;
-
-&lt;p&gt;Lean methodologies teach us to defer decisions to the last &lt;em&gt;responsible&lt;/em&gt; moment, understanding that there is always uncertainty and delaying decisions permits time to gain more information and reduce that uncertainty. Agile methodologies teach us that we should be iterative in our work, breaking it up into small chunks and gaining constant feedback to guide continuous improvement. We should be adopting these principles not only in our work to develop healthcare software, but to manage and improve our services. Digital is a vital ingredient to support those methodologies.&lt;/p&gt;
-
-&lt;p&gt;As a result, digital, and being data-driven, means our planning cycles should become shorter and shorter, because we’re using small focused interventions and data to constantly evaluate our hypotheses and build a continuously learning healthcare system.&lt;/p&gt;
-
-&lt;p&gt;That means changing the way we think about budgets and financing our work.  Similarly, our real-life prospectively recorded outcome data should be used to inform our clinical practice; we have small examples of how this can already be done but the potential of the digital era is to make such an approach ubiquitous by understanding the importance of routinely collected meaningful data and how it can be used to support decision making by patients and professionals.&lt;/p&gt;
-
-&lt;p&gt;True digital transformation isn’t simply digitising our existing processes and replacing paper with a digital equivalent but instead, it is a complete change in mindset. We need to re-imagine our healthcare services with the benefit of the digital tools we have available to us and realise the value and improved outcomes that we can build on this data-driven foundation.&lt;/p&gt;
-
-&lt;h1 id=&quot;software-is-like-magic&quot;&gt;Software is like magic&lt;/h1&gt;
-
-&lt;p&gt;Software is like magic, automating and systematising even complex tasks. My mission is to make the most effective use of software in healthcare, and I think we’ve barely even started that journey yet.&lt;/p&gt;
-
-&lt;p&gt;We have a new and vast array of technologies available to us, from enormous quantities of data to real-time analytics, machine learning and applied artificial intelligence, with computing power and different sources of data all growing exponentially. None of us know what the future holds, and none of us have all of the answers, so whether we are talking about ambient sensors or interacting with software using our voice, the essence of our digital work is not just the technology, but instead our ability to make use of data to learn and to inform our decision making. And that means learning how to build software that supports that goal.&lt;/p&gt;
-
-&lt;p&gt;When we bring digital technologies into play, we speed up feedback on our actions and can perform complex processing tasks to make sense of burgeoning quantities of information and so “digital”, to me, is inextricably linked to becoming data-driven, because digital tools are the best way to combine and process information. That means understanding the best, evidence-based ways of creating and delivering safe, secure and valuable software code to end-users. And the best ways to deliver software like that is to use those same data-driven methodologies and build our software incrementally in small chunks with constant feedback to guide continuous improvement.&lt;/p&gt;
-
-&lt;h1 id=&quot;so-what-next&quot;&gt;So what next?&lt;/h1&gt;
-
-&lt;p&gt;In my view, our biggest risk is to think that we have all of the answers. Instead, we can set the broad principles to which we must work but build trusted teams to deliver against the outcomes we set, whether that be our healthcare services or the software that supports and enables transformation of those services.&lt;/p&gt;
-
-&lt;p&gt;The true digital revolution will come when we focus on generating meaningful data and use appropriate tools to make sense of that data, to drive our decision making, to use those data to reduce our uncertainty about our decisions, so that, we, in whatever role we have, are supported to make the right judgments at the right time.&lt;/p&gt;
-
-&lt;p&gt;We need to &lt;em&gt;learn&lt;/em&gt;, and digital technology is an essential part of building a continuously learning culture, in whatever industry you work. And that is the essence of digital transformation.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">“We’re at the beginning of the digital revolution” wrote Bill Gates in his foreword to Satya Nadella’s book “Hit Refresh”, published not, as you might initially guess, twenty years ago, but in 2017.</summary></entry></feed>
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">We have an extraordinary opportunity to transform the way we think about the use of digital technology in healthcare in Wales.</summary></entry></feed>

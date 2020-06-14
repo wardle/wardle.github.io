@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>The semantic patient</title>
+  <meta name="description" content="I’ve been off work, off blogging and off Twitter due to COVID-19 but fortunately now back to full health and thought I’d write up some notes about what I’ve ...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://www.wardle.org/strategy/2020/06/03/ontological-medical-record.html">
+  <link rel="alternate" type="application/rss+xml" title="Health informatics and information technology" href="/feed.xml">
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-97389603-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="/">Health informatics and information technology</a>
+  
+  
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+           <a class="page-link" href="/">All posts</a>
+          
+            
+            
+            <a class="page-link" href="/projects/">Projects</a>
+            
+          
+            
+            
+            <a class="page-link" href="/about/">About</a>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">The semantic patient</h1>
+    <p class="post-meta">
+      <time datetime="2020-06-03T10:00:00+01:00" itemprop="datePublished">
+        
+        3 June 2020
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>I’ve been off work, off blogging and off Twitter due to COVID-19 but fortunately now back to full health and thought I’d write up some notes about what I’ve been doing in my spare time outside of my day job doing telephone clinics and COVID ward duties.</p>
+
+<h1 id="lightweight-applications">Lightweight applications</h1>
+
+<p>The first is experimenting with lightweight mobile and web-based applications that provide a compelling way for users to interact with health and care data. Separating applications from the data is important, and web-based technologies have matured sufficiently so that one can build a desktop-class user experience in the browser.</p>
+
+<p>I built a proof-of-concept system to record and display electronic observations (pulse, blood pressure etc) and calculate national early warning scores for escalation. It integrates with existing NHS systems for user login and patient lookup and was about three days work I guess, but spread out over a few weeks. It dynamically generates an SVG NEWS chart, which looks pretty on iPads or on whiteboards and it was my first ever clojure application. It’s all dynamic and one can scroll to view results over time, and I’ve build SNOMED CT autocompletion widgets and am planning ward round problem lists and actions/ordering.</p>
+
+<p><img src="/images/news-chart.png" alt="News Chart" /></p>
+
+<p>You can also see a <a href="https://www.youtube.com/watch?v=_2wRBr0r_wk">video of the application</a> running.</p>
+
+<p>The <a href="[https://github.com/wardle/patientcare-ward/blob/master/src/cljs/pc_ward/news_chart.cljs]">source code is open</a> as well.</p>
+
+<h1 id="data-and-ontologies-in-health-and-care">Data and ontologies in health and care</h1>
+
+<p>But my main health informatics work has been about linked and self-describing data.</p>
+
+<p>Our ability to write software is critical in building a learning health system, but it is very easy to build rigid, hierarchical, poorly adaptable and brittle systems - and that is normally the result if one tries to solve problems through the lens of a single application or portal, instead of focusing on data and an architecture that enables the recording and processing of those data in order to inform care.</p>
+
+<p>We must strive to build health and care systems without walls, and create effective tools for health and care organisations, and citizens, to manage, interact, plan and undertake care. Technology is critical in creating health services that work safely and effectively for patients and their carers. In banking we see technology companies entering the industry, and established banks trying to become technology companies; they have recognised the critical need to harness technology to improve their services.</p>
+
+<blockquote>
+  <p>“Health and care needs to learn how to deliver software : reliably, safely, reproducibly, at scale and to ensure ongoing monitoring, evaluation and continuous improvement.”</p>
+
+  <p>https://wardle.org/strategy/2019/09/22/health-technology.html</p>
+</blockquote>
+
+<p>We should be building a technical architecture for health and care that is safe, responsive and effective. We must look at how we can stream data independent of individual applications and make use of real-time analytics and advances in technology to best inform and improve care, both for an individual and cohorts of citizens. We cannot achieve our goals unless we think about health and care as it truly is, a symphonic orchestra with many players, all needing the right information at the right time, and all working together in concert. They play different instruments, and have different roles, but they work <em>together</em>.</p>
+
+<p>It is naive to think that we can have the same software running in critical care, on a patient’s own devices, in a nursing home, in the outpatient clinic, whether virtual or in-person, in the emergency department, in the GP surgery, in surgical theatres or on the ward. User-facing applications must be focused on improving process and workflow and so are absolutely dependent on the clinical context in which they will operate. There are commonalities, of course, but truing to make change using top-down, command and control management and multi-million pound programmes is not the way to improve the working of complex adaptive systems. We have only started the journey on how to make computers effective in medicine.</p>
+
+<p>One of the best ways of making valuable software is to break-down the problems we are trying to solve into smaller problems, each of which one person, or one team can conceive of and solve in one go. It’s one of the reasons why I like domain-driven design and understanding the importance of scope, so that I can focus on the problem at hand, and decouple the component parts of the wider system.</p>
+
+<p>A logical consequence of such an approach is of <em>abstraction</em> so that the other parts with which we interact are abstract; I don’t need to know how you are storing that clinical document or exactly what happens after I send those data but I do need to have a set of contracts, covering the technical, legal and regulatory matters that define our interactions. In essence, those contracts, including the <em>technical standards</em> that define how those interactions proceed, can be a powerful force for speeding up our developments which can now happen in parallel and limit the need for constant interaction between teams.</p>
+
+<p>But abstraction also should extend to the <em>meaningful data</em> that we so depend upon to care for individual patients, manage and improve our services, and continuously improve and learn.</p>
+
+<p>Having meaningful data means that we can make sense of that data - we can derive its meaning. It therefore follows that not only do we need to be able to exchange information at a technical level, via technical interoperability, but we need shared understanding of <em>meaning</em> via semantic interoperability.</p>
+
+<p>That’s not to say exchanging unstructured documents isn’t valuable. It is, but it only goes so far. I can’t do much as much as I’d like with a binary PDF document.</p>
+
+<p>The problem with health and care data is that is hard to interpret out of context. If your pulse is 150/minute, is that a problem? Yes if you are asleep but no if you are running or playing tennis!</p>
+
+<p>And that’s why health and care data needs <em>context</em> in order to make data meaningful. We need a shared understanding of a wider <em>information model</em>.</p>
+
+<p>Those measurements such as pulse, blood pressure and pain scores need to anchored within a context - my neurology clinic for that new patient appointment in that clinic suite, in that unit, in that site, for that organisation, as part of that clinical pathway.</p>
+
+<h2 id="meaningful-data-using-persistent-meaningful-identifiers">Meaningful data, using persistent meaningful identifiers</h2>
+
+<p>But how do we represent health and care data when it is complex and ever-changing? New diagnostic tests and new diagnostic entities are added to the corpus of our knowledge all of the time, and previously known “facts” have changed or replaced with our ever greater understanding?</p>
+
+<p>But such changes don’t only apply to medical knowledge, but also apply to the very organisations within which we work! I used to work for Cardiff and Vale NHS Trust, but that organisation no longer exists and instead I work for Cardiff and Vale University Local Health Board! A core trainee will be a consultant in a few years time. Change is constant.</p>
+
+<p>Here is a screenshot from the NHS Wales’ national portal. It provides a faceted search across documents, by specialty, but because the team didn’t adopt any standard for the coding of specialty, “Neurology” is different to “NEUROLOGY” and “NEUROLOGY EPILEPSY” its own specialty but isn’t included in either of the other two.</p>
+
+<p><img src="/images/wcp-specialties.png" alt="Wcp Specialties" /></p>
+
+<p>When I’m trying to care for a patient, I have to laboriously click on each in turn in order to find the information I want, simply because the designers of the service did not pick a useful vocabulary of terms to which documents could be tagged.</p>
+
+<p>One of the ways we suggested avoiding this situation right at the beginning was to use an ontology to describe the specialty, such as SNOMED-CT, which provides a flexible, hierarchical and nested structure so that, for example, the epilepsy subspecialty is actually a subtype of the wider neurological subspecialty. That would have meant we could let users filter for “Neurology” and actually include subspecialties such as “paediatric neurology” without any great computational difficulty. I’m hoping this application will adopt this, although it seems to have taken many years and still it hasn’t changed as of today at least. I live in hope.</p>
+
+<p>SNOMED CT, like many other ontologies, has multiple hierarchies, which means that it can model complex nesting, such as ‘bacterial meningitis’ being both a ‘neurological disease’ and an ‘infectious disease’. In addition, its identifiers are persistent. Even if ‘Wegener’s Granulomatosis’ is no longer the preferred label for that disease entity, the model <em>explicitly</em> manages change over time. There are mechanisms for making change, although it is a great shame that the distribution is not published under an open licence.</p>
+
+<p>This idea of persistent identifiers is not new but such an approach is essential when we are dealing with decentralised, decoupled systems in which we need to record a reference to information in another system. You can think of persistent identifiers as analogous to ‘foreign keys’ in a relational database table.</p>
+
+<p>In ontologies, we can also relate one identifier with another as a ‘triple’. For example, in SNOMED CT, we have</p>
+
+<p><img src="/images/snomed-relationship-structure.png" alt="Snomed Relationship Structure" /></p>
+
+<p>We can see that these triples help us build a directed graph that we can navigate and answer questions like, “Is this disorder a neurological disorder?” without difficulty.</p>
+
+<p>Commonly, we can use identifiers that are a tuple of a namespace and an identifier. For example, we can create a SNOMED CT expression using “http://snomed.info/sct” and “24700007”, which together represent the concept of ‘multiple sclerosis’ and can therefore be computed as such.</p>
+
+<p>HL7 have been doing this for years, with “object identifiers” or OIDS. In fact, the HL7 UK OID for representing health and care organisations uses the OID “2.16.840.1.113883.2.1.3.2.4.18.48” and these OIDs are published via  <a href="https://digital.nhs.uk/services/organisation-data-service/guidance-for-developers/organisation-endpoint">Organisational Data Services (ODS) API endpoint</a>.</p>
+
+<p>Here is a data representation of the University Hospital of Wales: <a href="https://directory.spineservices.nhs.uk/ORD/2-0-0/organisations/7A4BV">https://directory.spineservices.nhs.uk/ORD/2-0-0/organisations/7A4BV</a></p>
+
+<p>HL7 FHIR uses this identifier model extensively; <a href="https://www.hl7.org/fhir/datatypes.html#Identifier">its model</a> contains a namespace and a value, together with some additional metadata, which in hindsight should be a function of the resolution of that identifier rather than in what is essentially a foreign key.</p>
+
+<p>Namespaces can be arbitrary values such as an OID, or a <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier">URI (uniform resource identifier)</a>, and while useful, much like an ISBN for a book, they do not actually provide a way to identify the location of the resource that they refer to. Resolution of the value within that namespace is left to you.</p>
+
+<p>Namespaces can also be actual URLs and so can be resolved simply by accessing whatever information can be found at that web address, but this isn’t always the case!</p>
+
+<p>Likewise, the same resource, such an organisation, might be represented by a number of different, and yet by definition, equivalent, identifiers.</p>
+
+<p>For example, the University Hospital of Wales might be represented by</p>
+
+<ul>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>https://directory.spineservices.nhs.uk/ORD/2-0-0/organisations</td>
+          <td>7A4BV</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>2.16.840.1.113883.2.1.3.2.4.18.48</td>
+          <td>7A4BV</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>urn:oid:2.16.840.1.113883.2.1.3.2.4.18.48</td>
+          <td>7A4BV</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>
+
+<p>Similarly, some identifiers in truly different namespaces actually point to the same ‘concept’, whether that be a diagnostic term (e.g. Read code for multiple sclerosis is, semantically, the same as a SNOMED CT code for multiple sclerosis) or a staff identifier should resolve, at some level, to the same ‘person’ as their GMC code.</p>
+
+<p>Resolution, mapping and the testing of equivalence of identifiers is therefore a first-class problem in our domain, and should be modelled, and managed as such.</p>
+
+<h2 id="dynamic-and-federated-resolution-of-identifiers">Dynamic and federated resolution of identifiers</h2>
+
+<p>We can overcome the challenge of identifier resolution, mapping and equivalence by making identifier namespaces an ontology by providing open data and open tools in order to ‘make sense’ of arbitrary identifiers within our domain and providing dynamic, flexible and adaptable mechanisms to extend and federate. This is akin to the domain name service ‘DNS’ of the Internet, which maps arbitrary textual domain names to their IP addresses.</p>
+
+<p>These ideas led to me to build <em>concierge</em>, a set of simple ‘identifier resolvers’ that cover a set of practical examples - for my case, resolution of staff and patient identity, organisational data services and terminologies. The source code is available on github: <a href="https://github.com/wardle/concierge">https://github.com/wardle/concierge</a>. I used it in my e-observation toy demonstration above for user login, fetching staff information (name, job title etc) and patient search/lookup. It is incomplete, but a useful exercise. I can now conceive of a single ‘Patient’ resource that uses information from multiple sources such as local patient administrative systems and the national enterprise master patient index to generate a unified contact telephone list, for example. I plan to abstract federation, so that client applications can start from an organisation, drill down to a site, and then drill down even further onto units, wards and even individual beds, with data derived from <em>different</em> systems for the different levels of granularity, but that complexity is hidden from the client user, and client application acting on their behalf.</p>
+
+<p>Similarly, it is easy to consider how a single “staff” search/identifier resolution service might work to federate and abstract information from multiple disparate sources ; the staff directory, the electronic staff record, the on-call rotas, team definitions etc. There are many different ways to federate; the focus is to abstract underlying complexity for clients of that service.</p>
+
+<h2 id="but-what-about-shared-models">But what about shared models?</h2>
+
+<p>So it’s easy to see how we might create a tidy facade to hide the underlying complexity of our existing health and care infrastructure using first-class identifiers for different resources. For example, we could resolve and reify a staff member and that data model could identifiers representing the organisations and the sites in which they work, or the clinics for which they are responsible, which themselves are linked to organisations and sites. Indeed, it’s easy to see those relationships as forming a graph, not only within a single ontology but between ontologies, which I’ll discuss shortly.</p>
+
+<p>The problem is that not only do we need a shared understanding of identifiers, but we also need a shared understanding of the data models in which they are used. It is not sufficient to have a flat list of other identifiers within, say, a member of staff’s record because that would be <em>meaningless</em>; we need more context about how one relates to another.</p>
+
+<p>Answering the question “does this patient have a type of neurological disease?” and getting back an answer “yes” also means that we need to be able to resolve an identifier <em>in context</em> in order to derive meaning, because that diagnosis of “Parkinson’s disease” might be listed as part of a family history and not in the patient’s personal problem list.</p>
+
+<p>Others have solved this in different ways, and have even used different approaches within the same wider model. For example, the <a href="https://www.hl7.org/fhir/patient.html">HL7 FHIR “Patient”</a> model defines a type of resource representing a patient, with attributes such as name, gender and birth date. HL7 uses a more flexible, dynamic system for other models based on identifiers such as that for observations. Here is an example for <a href="https://www.hl7.org/fhir/observation-example-f001-glucose.json.html">recording glucose</a> which, rather than hard-coding the test and the value of the result, uses namespaced codes and flexible values with coding for units. We can see that in general, the class is given prominence (Patient class, Observation class) and the attributes serve that class.</p>
+
+<p>Likewise, in openEHR, named archetypes such as <a href="https://ckm.openehr.org/ckm/archetypes/1013.1.4295">pulse</a> and <a href="https://ckm.openehr.org/ckm/archetypes/1013.1.3574">blood pressure</a> can be composed into wider models for operational use, and these archetypes fit into a wider and more fixed information model as part of two-level modelling. For example, the blood pressure archetype contains a value for systolic blood pressure and a value for diastolic blood pressure, together with some metadata.</p>
+
+<p>Neither the HL7 FHIR or openEHR approaches avoid the need for close collaboration between disparate health economies because unless one is not planning on actually using the data stored within the models, at some point one needs to write code that can consume and process and extract meaning from those data. In general, software developers compile those data definitions into classes to permit that processing.</p>
+
+<p>If you’re going to exchange medication data, at some point you need to come to a decision about a shared model for recording, storing and exchanging that information, whether that exchange is simply from a server to a client or between a critical care software system and the hospital pharmacy.</p>
+
+<h2 id="class-orientated-vs-attribute-orientated">Class-orientated vs attribute-orientated</h2>
+
+<p>In object-orientated software systems, data are usually coerced into objects of certain classes, and in most computer languages, those classes can be hierarchical so that for example a ‘Car’ ‘is-a’ type of ‘Vehicle’. There is usually a pattern of inheritance so that behaviour and sometimes data can be inherited from the parent class. For example, all vehicles might have a ‘colour’ property.</p>
+
+<p>It’s a seductive approach, as one can build a model of reality and use it to solve problems by modelling data and behaviour as interactions between objects. You think in terms of objects, those objects may have properties, but you almost always have to define how those objects fit into your wider hierarchy when you create them. The hierarchies of your object classes are usually quite fixed.</p>
+
+<p>Both openEHR and HL7 FHIR use a class-orientated approach to most of their data.</p>
+
+<p>It’s seductive, but it can be brittle. It is generally poorly extensible, poorly dynamic and struggles to adapt not only to changing circumstances but even to different applications across a wider health enterprise.</p>
+
+<p>HL7 FHIR adopts a modelling approach in which the basic class definitions aim for a common denominator of fields and permit “extensions” for local definitions while using profiling to make very general models more specific by, for example, defining what can be in a value set or which terminology should be used for a specific property.</p>
+
+<p>openEHR adopts a different approach in which modellers attempt to define all of the possible attributes within the model, and use optionality extensively; for example it would be unusual to use all of the attributes in many models.</p>
+
+<p>HL7 FHIR is therefore a ‘meta-standard’ and what really happens is that we as a community build multiple versions of the same ‘standard’ - see the <a href="https://www.hl7.org/fhir/us/core/">US CORE release</a> and there is proliferation of just-slightly-different profiles for different scenarios within NHS England.</p>
+
+<h2 id="promoting-first-class-namespaced-attributes">Promoting first-class, namespaced attributes</h2>
+
+<p>But haven’t we been talking about ontologies in which we can associate arbitrary properties in triples, and change those over time? For example, work on the ‘semantic’ web led to the development of <a href="https://www.w3.org/RDF/">RDF (Resource Description Framework)</a>:</p>
+
+<blockquote>
+  <p>“RDF is a standard model for data interchange on the Web. RDF has features that facilitate data merging even if the underlying schemas differ, and it specifically supports the evolution of schemas over time without requiring all the data consumers to be changed.”</p>
+
+  <p><a href="https://www.w3.org/RDF/">https://www.w3.org/RDF/</a></p>
+</blockquote>
+
+<p>Now people have been talking about using RDF in healthcare for many years, but such an approach has not gained traction for a variety of reasons, including inadequate open-source tooling, little industry interest, perceived complexity, ownership of different ontologies by different groups, its design predating interest in graph databases, lack of definitions on value types and probably most importantly, a lack of temporal associations (timestamping) and change semantics.</p>
+
+<p>But if we can solve those issues, it is quite easy to see how we can compose first-class attributes together into a semantic whole to represent health data in context. Just as in modern, more functional programming languages, elevating properties to first-class concepts within our models gives us powerful runtime polymorphism and permits independent extensions of types, protocols and implementations within and across health data.</p>
+
+<p>But such an approach requires several important dependencies:</p>
+
+<ul>
+  <li>Robust shared tools for the resolution, mapping and logical comparison/equivalence testing of persistent identifiers</li>
+  <li>A move away from CRUD (create-read-update-delete) semantics towards different semantics for write and read operations. This has important regulatory benefits as well.</li>
+  <li>A move to architectural designs that focus on immutable data and <em>change</em> as a first-class part of the model</li>
+  <li>Denormalisation with snapshots of the dereferenced values and time as a first-class attribute, so that our software doesn’t show data recorded by me in 1999 using my current job title but my job title at that time.</li>
+  <li>Clinical modelling using finely-grained archetypes representing a single attribute, properly namespaced and dynamically grouped into other less granular archetypes.</li>
+  <li>Tools to provide automatic coercion of legacy “object-orientated” classes into bundles of first-class attributes.</li>
+  <li>Ontologies describing the relationships between properties, even between different ontologies.</li>
+</ul>
+
+<p>Such an approach also means we can support interoperability between different information models in our software systems. In this world, we could make</p>
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td>https://openehr.org/Id/observation/blood_pressure/v2</td>
+        <td>systolic</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<p>equivalent to</p>
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td>http://snomed.info/sct</td>
+        <td>271649006</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<p>and equivalent to</p>
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td>http://loinc.org</td>
+        <td>8480-6</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<p>Unfortunately, the fact that the latter two are proprietary and need licensing is to our collective detriment, and many operational openEHR implementations are closed-source.</p>
+
+<p>One can write software to process the fully open openEHR archetype definitions and bind properties to first-class namespaced attributes and many definitions already have bindings to other definitions in LOINC or SNOMED CT. Both the openEHR and HL7 FHIR communities have done some great modelling work.</p>
+
+<p>But it is easy to see how a class-based model results in an explosion of classes. For example, it’s not difficult to see how the <a href="http://www.hl7.org/fhir/datatypes-definitions.html#Address.line">first line of an address in a FHIR address class</a> is semantically the same in a <a href="https://ckm.apperta.org/ckm/archetypes/1051.32.573">“UK” address from openEHR</a> which is the same as in a <a href="https://ckm.apperta.org/ckm/archetypes/1051.32.203">Scottish address from openEHR</a> which is the same as in an ISO22220 based address (also from openEHR - <a href="https://ckm.openehr.org/ckm/archetypes/1013.1.484">https://ckm.openehr.org/ckm/archetypes/1013.1.484</a> and all share the semantics of the <a href="https://www.w3.org/TR/vcard-rdf/">vCard ontology ‘address’</a> even if the attributes might have different names.</p>
+
+<p>Instead, of this duplication of classes, we can define ontologies that define the relationships between those first-class names and provide tools to arbitrarily resolve those identifiers. That means resolving “http://www.w3.org/2006/vcard/ns#street-address” can return the right semantic data irrespective of whether the source information is in HL7 v2, HL7 FHIR, or one of the many openEHR address archetypes.</p>
+
+<h1 id="grouping-first-class-attributes-into-semantically-meaningful-entities">Grouping first-class attributes into semantically meaningful entities</h1>
+
+<p>Just because we make attributes first-class in our models, it doesn’t mean that we can’t bundle them together into something that is itself meaningful. But rather than thinking in terms of classes, and the attributes are simply part of those classes, our attributes are first-class and might be arbitrarily grouped into what are essentially nested collections and be derived either directly from source information or derived by understanding how those properties relate to one another semantically.</p>
+
+<p>In addition, our definitions of an attribute must be associated with a schema definition, so that we have information about the value type(s) permitted for that property. Other semantics might include cardinality and uniqueness, for example, depending on the property in question. But object-orientated approaches conflate the specifications of data with the data itself, while in reality these are orthogonal concepts.</p>
+
+<p>It’s fairly easy to see how schema definitions could themselves be defined ontologically, through entity/attribute/value (or subject/predicate/object triples in RDF parlance) and so permit runtime evolution of health data schemas and importantly, an ability to provide a unified view from data sourced from multiple disparate systems. It provides a true abstraction and could present data from HL7 FHIR, HL7v2 and openEHR in the same way and so permit computability across different systems, while also providing a persistence mechanism via an entity-attribute-value store for native applications and services, and a way of generating computable properties in a functional style.</p>
+
+<h2 id="hierarchical-databases-graphs-and-graph-queries">Hierarchical databases, graphs and graph queries</h2>
+
+<p>It is unsurprising that early medical databases, some still used today, model healthcare data in a hierarchy. What this means is that a single patient has multiple encounters, each encounter has multiple procedures etc. In relational database terms, each is a to-many relation.</p>
+
+<p>However a simple hierarchy is insufficient for most health and care needs. For example, a clinical encounter might relate to multiple pathways of care, in a many-to-many relationship. Instead, we can picture the modern medical record as a graph of information with our ‘triples’ forming the nodes of that graph. Some nodes will be highly connected, others less so. Overall, the structure will be hierarchical.</p>
+
+<p>In such model, it is entirely reasonable to treat a collection of ‘triples’ together, if they form a logical whole that is semantically useful. For example, we might have a first-class attribute that could be used in a clinical encounter to record “family history”. As a first-class property, it could also be used in other contexts, but we might expect that family history property to itself be made up of a collection of other properties, including a list of diagnoses.</p>
+
+<p>Simplified, this might look like: (each entity is a tuple (namespace/value))</p>
+
+<p>Encounter -&gt; Has Family History -» [ Diabetes mellitus, Hypertension, Ischaemic Heart Disease]</p>
+
+<p>If you are familiar with SNOMED CT, you will recognise these semantics are similar to the <em>normalised</em> form of a concept. SNOMED CT has concepts which can themselves be decomposed into a normal form because they represent a complex concept, such as “Family history of diabetes”. It is not difficult to imagine that we can decompose and normalize arbitrary SNOMED concepts and indeed more complex expressions into the wider information model and even round-trip between decomposed and composed forms in order to arbitrarily fatten or flatten the tree.</p>
+
+<p>Such an approach depends very much on having a set of sane clinically meaningful and ontologically correct relationships (attributes) defined for concepts, and an understanding that different attributes might provide a different “view” of the same information.</p>
+
+<h2 id="computable-and-declarative-properties">Computable and declarative properties</h2>
+
+<p>Using first-class namespaced properties permits making health and care data more easily computable, because one might have multiple properties that use the same source data to derive a semantically different value. It permits create a facade of well-known properties in front of legacy data, or data in different formats.</p>
+
+<p>For example, simple application might only want to examine a flat list of family history diagnoses and problems, while a more sophisticated application might want to drill-down into other attributes to understand, for example, whether there is a maternal history of a specific condition or not, if that data even existed. It means different namespace/value (ie attribute) resolvers can provide a different ‘view’ of the same underlying data. We move from an approach based on create/read/update/delete (CRUD) semantics to one that separates the reads and writes. We have different models for reads compared to writes, because they are semantically different.</p>
+
+<p>For example, we might represent a current list of medications on the ward as a simple collection, containing entries each of which represents a medication. In each, there would be an encoding of the medication using a UK dm+d identifier as well as dosing information. We might write a resolver that provides a computed property that derives total daily dose from that entry to allow easy graphing of daily doses over time.</p>
+
+<p>Current primary care systems use product-based prescribing and a textual description of dosing. Hospital based systems generally use dose-based prescribing. It is possible to map between these two systems, and so we might also permit resolution of a dose property for product-based prescriptions where possible. Such code can simply operate on pure data structures, is easily testable for safety, can work in isolation and demonstrates that we can add additional functionality to existing systems, and existing data, without needing to change the original.</p>
+
+<p>Likewise, we can see <a href="https://ckm.openehr.org/ckm/archetypes/1013.1.499">Address</a> classes in openEHR defined for an organisation, with attributes representing properties not applicable to all countries such as a “Delivery point indicator”, which apparently is something important in Brazil. Because such attributes are not first-class, one ends up with multiple classes representing pretty much the same thing. You can easily end up with an explosion of classes, often in a rigid hierarchy.</p>
+
+<p>Instead, certainly for the UK, it would be possible to register, and then resolve, for example, an LSOA identifier into and then from a variety of contexts including organisations and patients, by runtime polymorphism and runtime registration of resolvers of types, while not impacting on the use of other address attributes in other countries in which LSOA has no meaning.</p>
+
+<p>For instance, we might try to resolve on a patient using a first-class name for that attribute such as “http://ons.gov.uk/Id/LSOA” and know that, given a date, we can use the address history and walk our graph to get the postcode and resolve the LSOA from there. We can have original data distributions that provide these data, such as the UK’s NHS postal code directory, and make use of those data to provide dynamic LSOA properties for the address history of an individual patient, and then link to indices of multiple deprivation, to resolve changes in deprivation over time or after a diagnosis.</p>
+
+<p>First-class attributes means we focus on semantics. We should be able to resolve the value of a property such as http://www.w3.org/2004/02/skos/core#prefLabel and obtain the preferred label for that structure, such as an organisation, or person, or even diagnosis, without necessarily knowing about whether the source information is provided in a proprietary format, HL7 v2, HL7 FHIR, openEHR, UK NHS ODS or a social care system. We prioritise <em>meaning</em> over classes and brittle inheritance patterns that are usually dependent on a specific system or programming language.</p>
+
+<p>Similarly, different data collection “forms” can give the same semantic results, such as the “EDSS” scale for multiple sclerosis can be directly recorded or be part of an extended EDSS-FS scale. Instead of using static class hierarchies, we can define the same semantic property for the overall result and later support other scales that can provide the same semantic result, for example, when drawing a graph of results over time, or working out disease trajectory.</p>
+
+<p>You might recognise the approach of an application walking a graph and requesting exactly the information it requires, as that of <a href="https://graphql.org">GraphQL</a> or <a href="https://github.com/wilkerlucio/pathom">Pathom</a>. Clients see the view of data that they request.</p>
+
+<p>You might also recognise that approach of separating the semantics of reading (and making sense of the record) from the writing of information as that of CQRS (Command Query Responsibility Segregation). Managing medication is a good example, because actually health care data is actually better represented as a transactional log of <em>events</em>. Do we really change that dose of medication in a database table or are the semantics better represented as a model of that change instead? Isn’t our current state simply a snapshot of all of the events processed sequentially?</p>
+
+<p>The names and values of data are orthogonal to the specifications of that data, but most object-orientated specifications conflate the two concepts.</p>
+
+<h2 id="weeknotes">Weeknotes</h2>
+
+<p>So during my convalescence, I learnt <a href="http://clojure.org">Clojure</a> and also either started or continued work on the following:</p>
+
+<ol>
+  <li>
+    <p><a href="https://github.com/wardle/concierge">Concierge</a>. This resolves identifiers using namespace value tuples to abstract away some of NHS Wales’ existing services. This was written in golang and returns HL7 FHIR like models for the resolved resources, providing mapping between different namespaces (e.g. Read codes to SNOMED CT). This work made me realise that first-class types were not as scalable as I’d like, and it would be difficult to provide the same semantics as standards such as HL7 FHIR and its extensions without first-class namespaced and specified attributes.</p>
+  </li>
+  <li>
+    <p>e-Obs. A lightweight clojurescript single page application with desktop application responsiveness in the browser, dynamically generated SVG national early warning score charts on demand, and using concierge to handle user login, security token generation and refresh, and patient lookup. This uses an event-driven architecture. This taught me a lot about functional programming.</p>
+  </li>
+  <li>
+    <p>clods. A clojure microservice providing a RESTful and graph API to UK health and care organisational services and postcodes. This led to me looking at how I might represent proprietary ODS schemas as both FHIR models and the W3C organisation schema, and how it would be so much easier if I used namespaced attributes instead.</p>
+  </li>
+  <li>
+    <p>go-terminology. A very fast golang-based terminology server that provides SNOMED CT services via REST and gRPC APIs. SNOMED-CT is an ontology, and uses triples in the same way as RDF, but the learning here is the importance of mapping concrete values from one ontology to another.</p>
+  </li>
+</ol>
+
+<p>I plan to federate information from ‘clods’ on hospital sites with that from individual patient administration systems to allow hopping from arbitrary sites down into individuals units, wards and individual beds. For the client application, they will simply walk a graph from an organisation to a site, to a unit, to a ward and to a bed, with first-class namespaced attributes providing an abstraction over the inherent complexity in providing access to these data, which are obviously sourced from multiple disparate systems each using different data structures and representations.</p>
+
+<p>I’ve started work on a rule-based declarative system to resolve identifiers arbitrarily in the context of different information models, including making use of the existing and open-source openEHR archetype definitions, and linking those to HL7 FHIR and v2 messages when possible.</p>
+
+<p>We need to reboot the work on linked data and ontologies and use that in health and care. All of this work should be open-source, because semantically-meaningful data and ontologies are the way we should be building health and care software fit for the 21st Century.</p>
+
+<p><em>Mark</em></p>
+
+
+  </div>
+
+  
+</article>
+        
+      </div>
+    </main>
+    
+    
+    
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Health informatics and information technology</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Health informatics and information technology
+            
+            </li>
+            
+            <li><a href="mailto:mark@wardle.org">mark@wardle.org</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/wardle"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">wardle</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/mwardle"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">mwardle</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
