@@ -99,7 +99,7 @@
 
 <p>The first is experimenting with lightweight mobile and web-based applications that provide a compelling way for users to interact with health and care data. Separating applications from the data is important, and web-based technologies have matured sufficiently so that one can build a desktop-class user experience in the browser.</p>
 
-<p>I built a proof-of-concept system to record and display electronic observations (pulse, blood pressure etc) and calculate national early warning scores for escalation. It integrates with existing NHS systems for user login and patient lookup and was about three days work I guess, but spread out over a few weeks. It dynamically generates an SVG NEWS chart, which looks pretty on iPads or on whiteboards and it was my first ever clojure application. It’s all dynamic and one can scroll to view results over time, and I’ve build SNOMED CT autocompletion widgets and am planning ward round problem lists and actions/ordering.</p>
+<p>I built a proof-of-concept system to record and display electronic observations (pulse, blood pressure etc) and calculate national early warning scores for escalation. It integrates with existing NHS systems for user login and patient lookup and was about three days work I guess, but spread out over a few weeks. It dynamically generates an SVG NEWS chart, which looks pretty on iPads or on whiteboards and it was my first ever clojure application. It’s all dynamic and one can scroll to view results over time, and I’ve built SNOMED CT autocompletion widgets and am planning ward round problem lists and actions/ordering.</p>
 
 <p><img src="/images/news-chart.png" alt="News Chart" /></p>
 
@@ -208,6 +208,16 @@
         <tr>
           <td>urn:oid:2.16.840.1.113883.2.1.3.2.4.18.48</td>
           <td>7A4BV</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>urn:oid:2.16.840.1.113883.2.1.3.2.4.18.48</td>
+          <td>RWMBV</td>
         </tr>
       </tbody>
     </table>
@@ -394,13 +404,13 @@
     <p><a href="https://github.com/wardle/concierge">Concierge</a>. This resolves identifiers using namespace value tuples to abstract away some of NHS Wales’ existing services. This was written in golang and returns HL7 FHIR like models for the resolved resources, providing mapping between different namespaces (e.g. Read codes to SNOMED CT). This work made me realise that first-class types were not as scalable as I’d like, and it would be difficult to provide the same semantics as standards such as HL7 FHIR and its extensions without first-class namespaced and specified attributes.</p>
   </li>
   <li>
-    <p>e-Obs. A lightweight clojurescript single page application with desktop application responsiveness in the browser, dynamically generated SVG national early warning score charts on demand, and using concierge to handle user login, security token generation and refresh, and patient lookup. This uses an event-driven architecture. This taught me a lot about functional programming.</p>
+    <p><a href="https://github.com/wardle/patientcare-ward">e-Obs</a>. A lightweight clojurescript single page application with desktop application responsiveness in the browser, dynamically generated SVG national early warning score charts on demand, and using concierge to handle user login, security token generation and refresh, and patient lookup. This uses an event-driven architecture. This taught me a lot about functional programming.</p>
   </li>
   <li>
-    <p>clods. A clojure microservice providing a RESTful and graph API to UK health and care organisational services and postcodes. This led to me looking at how I might represent proprietary ODS schemas as both FHIR models and the W3C organisation schema, and how it would be so much easier if I used namespaced attributes instead.</p>
+    <p><a href="https://github.com/wardle/clods">clods</a>. A clojure microservice providing a RESTful and graph API to UK health and care organisational services and postcodes. This led to me looking at how I might represent proprietary ODS schemas as both FHIR models and the W3C organisation schema, and how it would be so much easier if I used namespaced attributes instead.</p>
   </li>
   <li>
-    <p>go-terminology. A very fast golang-based terminology server that provides SNOMED CT services via REST and gRPC APIs. SNOMED-CT is an ontology, and uses triples in the same way as RDF, but the learning here is the importance of mapping concrete values from one ontology to another.</p>
+    <p><a href="https://github.com/wardle/go-terminology">go-terminology</a>. A very fast golang-based terminology server that provides SNOMED CT services via REST and gRPC APIs. SNOMED-CT is an ontology, and uses triples in the same way as RDF, but the learning here is the importance of mapping concrete values from one ontology to another.</p>
   </li>
 </ol>
 
