@@ -1,5 +1,98 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2020-06-15T08:19:04+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
-</subtitle><entry><title type="html">The semantic patient</title><link href="https://www.wardle.org/strategy/2020/06/03/ontological-medical-record.html" rel="alternate" type="text/html" title="The semantic patient" /><published>2020-06-03T10:00:00+01:00</published><updated>2020-06-03T10:00:00+01:00</updated><id>https://www.wardle.org/strategy/2020/06/03/ontological-medical-record</id><content type="html" xml:base="https://www.wardle.org/strategy/2020/06/03/ontological-medical-record.html">&lt;p&gt;I’ve been off work, off blogging and off Twitter due to COVID-19 but fortunately now back to full health and thought I’d write up some notes about what I’ve been doing in my spare time outside of my day job doing telephone clinics and COVID ward duties.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2020-06-21T23:19:49+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</subtitle><entry><title type="html">There’s more than one side to every story</title><link href="https://www.wardle.org/strategy/2020/06/21/more-than-one-side.html" rel="alternate" type="text/html" title="There’s more than one side to every story" /><published>2020-06-21T20:00:00+01:00</published><updated>2020-06-21T20:00:00+01:00</updated><id>https://www.wardle.org/strategy/2020/06/21/more-than-one-side</id><content type="html" xml:base="https://www.wardle.org/strategy/2020/06/21/more-than-one-side.html">&lt;p&gt;Historically, data capture in health and care has been driven by the requirements of central data returns, permitting management and government to examine and monitor a specific health policy area. Information standards are very important in ensuring organisations feed the right information back in the right format so that the data are interpretable.&lt;/p&gt;
+
+&lt;p&gt;An example of a data set is the emergency unit data set ( &lt;a href=&quot;https://digital.nhs.uk/data-and-information/data-collections-and-data-sets/data-sets/emergency-care-data-set-ecds&quot;&gt;NHS England&lt;/a&gt; and  &lt;a href=&quot;http://www.datadictionary.wales.nhs.uk/#!WordDocuments/emergencydepartmentdatasetedds.htm&quot;&gt;NHS Wales&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;All organisations are expected to return data on attendances at the emergency department including diagnostic category, level of triage (urgency) and onward destination.&lt;/p&gt;
+
+&lt;p&gt;There’s a similar requirement for &lt;a href=&quot;http://www.datadictionary.wales.nhs.uk/index.html#!WordDocuments/outpatientdatasetopds.htm&quot;&gt;outpatient clinics.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Knowing the format of the data to be returned, how it is to be coded and how and when to return data are all important but there are also rules and definitions which must be followed. That’s the job of information standards and therefore, historically, the principal customer of information standards has been central data reporting. Those users have requested standards, they’re discussed and then set, usually by publishing a &lt;a href=&quot;http://www.nwisinformationstandards.wales.nhs.uk/data-set-change-notices.&quot;&gt;‘data standards change notice’&lt;/a&gt;. A new government policy or a problem affecting policy teams results in a new requirement for data reporting with either a new information standard or an update to an existing standard.&lt;/p&gt;
+
+&lt;p&gt;It’s easy to see the consequences in clinical practice. There are byzantine rules relating to my outpatient clinics to which I am only dimly aware and forms to fill in that have little to do with the patient in front of me and everything to do with the requirements of the wider system. They’re important, but they’re but one facet of the clinical encounter.&lt;/p&gt;
+
+&lt;p&gt;For example, this is from the outpatient dataset definition:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“
+	An appointment cannot be counted unless the patient actually attends
+“
+&lt;a href=&quot;http://www.datadictionary.wales.nhs.uk/index.html#!WordDocuments/outpatientattendances.htm&quot;&gt;http://www.datadictionary.wales.nhs.uk/index.html#!WordDocuments/outpatientattendances.htm&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So what has happened to the telephone appointments I’ve done for years? Well, fortunately, an update has been made &lt;a href=&quot;http://www.nwisinformationstandards.wales.nhs.uk/sitesplus/documents/299/20200206%2DDSCN%202020%2001%2DOutpatient%20Virtual%20Activity%2DPhase%20One%2Dv1%2D1.pdf&quot;&gt;this year&lt;/a&gt; so that virtual reviews are now part of the submission, with three categories - ‘face-to-face’, ‘virtual with patient contact’, and ‘virtual with no patient contact’. Information technology teams will be adding these data fields to administrative systems so that these returns can be made in this altered form.&lt;/p&gt;
+
+&lt;p&gt;Central data requirements are important and valuable in running the wider health system but it is commonly the case that those requirements define the operational requirements and design of clinical systems instead of being recognised as simply another prism through which to view the patient record.&lt;/p&gt;
+
+&lt;p&gt;The the main issues with central data requirements as the basis to build clinical software are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;they tend to result in the use of classification systems, using taxonomies to make it easier to perform analysis but are a poor fit for the ambiguity and complexity of the real world&lt;/li&gt;
+  &lt;li&gt;they use bespoke, proprietary value-sets limiting semantic interoperability if they are used&lt;/li&gt;
+  &lt;li&gt;they can end up defining operational system data requirements&lt;/li&gt;
+  &lt;li&gt;they usually expect tabular data to make it easier to analyse but health and care data is rarely tabular. Patients have more than one diagnosis.&lt;/li&gt;
+  &lt;li&gt;the rules for central data propagate into clinical systems creating brittleness; it makes changing those rules difficult and skews our ability to use historic data acquired using different rules. How we analyse outpatient attendances over time will be difficult if telephone appointments were not returned before 2020?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The answers to these issues are simple:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;we need clinical data that is granular and specific and that models the real-world and adapts to how it changes.&lt;/li&gt;
+  &lt;li&gt;we should use ontologies and not taxonomies for data capture&lt;/li&gt;
+  &lt;li&gt;we need tools to turn granular, specific data into categorical, easy-to-process data for central returns, policy-makers and other analytics&lt;/li&gt;
+  &lt;li&gt;we should apply rules and delay losing granularity as late as possible in our analytics, and apply them dynamically and declaratively while categorising data flexibly in response to changing requirements.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;the-single-patient-record&quot;&gt;The single patient record.&lt;/h1&gt;
+
+&lt;p&gt;Our aspiration should be the single patient record, a multifaceted longitudinal structured record.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/prisms-record.png&quot; alt=&quot;Prisms Record&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We must be clear that such a record can be used for a variety of purposes such as direct care, service management and improvement as well as research with the appropriate consent. The best way to design such a record is using highly granular, clinically-meaningful approach to data modelling based on open standards.&lt;/p&gt;
+
+&lt;p&gt;But I think it’s a very good idea to imagine multiple prisms through which we can see and understand that record.&lt;/p&gt;
+
+&lt;p&gt;Those prisms are dependent on your processes, workflow and needs. A patient viewing their own record needs a different prism than a civil servant modelling future emergency unit attendances. We should be annotating the results of investigation or groups of investigations with our clinical interpretation in the context of the problem at hand, just like we do via a letter at the moment. That data will need to be prioritised within the patient prism.&lt;/p&gt;
+
+&lt;p&gt;Similarly, a radiographer about to perform an MRI scan needs a different prism than a neurologist in a video consultation with a patient and family members.&lt;/p&gt;
+
+&lt;p&gt;Same data, different prisms. Different focus.&lt;/p&gt;
+
+&lt;p&gt;In the future, I hope that adaptable focus will help me identify what’s important and what’s not, but for now, ask any professional and they’ll tell you what’s the critical information they need in a given context.&lt;/p&gt;
+
+&lt;p&gt;So there’s always more than one side to every story.&lt;/p&gt;
+
+&lt;h1 id=&quot;so-what&quot;&gt;So what?&lt;/h1&gt;
+
+&lt;p&gt;So that’s why we need data and tools that make it easy to:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Model the real world, capturing granular, specific, meaningful information&lt;/li&gt;
+  &lt;li&gt;Turn such granular information into categorical information for ease of analytics&lt;/li&gt;
+  &lt;li&gt;Resolve, infer meaning from and map identifiers between different systems, classifications and ontologies&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And that’s why I’ve been building open-source software to solve these problems:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/wardle/go-terminology&quot;&gt;go-terminology&lt;/a&gt; : If I make a diagnosis of acute disseminated encephalomyelitis (ADEM), I need my clinical system to record that specific granular diagnosis but I also need tools need to be able to categorise that diagnosis without manual intervention for service level analytics. go-terminology provides both of those capabilities using SNOMED-CT, an ontology.&lt;/li&gt;
+  &lt;li&gt;janus : a data-driven dynamic identifier resolution and mapping application programming interface / knowledge graph navigator.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/wardle/concierge&quot;&gt;concierge&lt;/a&gt; : a backend to identifier resolution and mapping services providing integration and abstractions with multiple NHS Wales services including multiple patient administrative systems, the national enterprise master patient index, the staff directory, staff authentication services and document repositories&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/wardle/clods&quot;&gt;clods&lt;/a&gt; : a backend identifier resolution/mapping service for UK NHS organisational data services and other reference data including the NHS postcode database and general practitioners across the UK&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Together, these services can dynamically resolve and map between different identifier systems helping software (and humans) ‘make sense’ of health and care data.&lt;/p&gt;
+
+&lt;p&gt;Mark&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Janus1.JPG/320px-Janus1.JPG&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;PS. Janus is the Roman god of beginnings, gates, transitions, time, duality, doorways, passages, and endings.&lt;/p&gt;
+
+&lt;p&gt;PPS. When will clinical systems build a source of open data relating to how users interact with their software in a given context in a given patient with the problems, past and scheduled events, medication known in order to learn the &lt;em&gt;information value&lt;/em&gt; of our health and care data for decision-making? That kind of learning is just another prism, of course.&lt;/p&gt;</content><author><name></name></author><summary type="html">Historically, data capture in health and care has been driven by the requirements of central data returns, permitting management and government to examine and monitor a specific health policy area. Information standards are very important in ensuring organisations feed the right information back in the right format so that the data are interpretable.</summary></entry><entry><title type="html">The semantic patient</title><link href="https://www.wardle.org/strategy/2020/06/03/ontological-medical-record.html" rel="alternate" type="text/html" title="The semantic patient" /><published>2020-06-03T10:00:00+01:00</published><updated>2020-06-03T10:00:00+01:00</updated><id>https://www.wardle.org/strategy/2020/06/03/ontological-medical-record</id><content type="html" xml:base="https://www.wardle.org/strategy/2020/06/03/ontological-medical-record.html">&lt;p&gt;I’ve been off work, off blogging and off Twitter due to COVID-19 but fortunately now back to full health and thought I’d write up some notes about what I’ve been doing in my spare time outside of my day job doing telephone clinics and COVID ward duties.&lt;/p&gt;
 
 &lt;h1 id=&quot;lightweight-applications&quot;&gt;Lightweight applications&lt;/h1&gt;
 
@@ -11,7 +104,7 @@
 
 &lt;p&gt;You can also see a &lt;a href=&quot;https://www.youtube.com/watch?v=_2wRBr0r_wk&quot;&gt;video of the application&lt;/a&gt; running.&lt;/p&gt;
 
-&lt;p&gt;The &lt;a href=&quot;[https://github.com/wardle/patientcare-ward/blob/master/src/cljs/pc_ward/news_chart.cljs]&quot;&gt;source code is open&lt;/a&gt; as well.&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&quot;https://github.com/wardle/patientcare-ward/blob/master/src/cljs/pc_ward/news_chart.cljs&quot;&gt;source code is open&lt;/a&gt; as well.&lt;/p&gt;
 
 &lt;h1 id=&quot;data-dynamism-and-ontologies-in-health-and-care&quot;&gt;Data, dynamism and ontologies in health and care&lt;/h1&gt;
 
@@ -251,7 +344,7 @@
 
 &lt;p&gt;Just because we make attributes first-class in our models, it doesn’t mean that we can’t bundle them together into something that is itself meaningful. But rather than thinking in terms of classes, and the attributes are simply part of those classes, our attributes are first-class and might be arbitrarily grouped into what are essentially nested collections and be derived either directly from source information or derived by understanding how those properties relate to one another semantically. Grouping is based on semantics and not necessarily only contextual differences.&lt;/p&gt;
 
-&lt;p&gt;In addition, our definitions of an attribute must be associated with a schema definition, so that we have information about the value type(s) permitted for that property. Other semantics might include cardinality and uniqueness, for example, depending on the property in question. But object-orientated approaches conflate the specifications of data with the data itself, while in reality these are orthogonal concepts.&lt;/p&gt;
+&lt;p&gt;In addition, our definitions of an attribute must be associated with a schema definition, so that we have information about the value type(s) permitted for that property. Other semantics might include cardinality and uniqueness, for example, depending on the property in question. But object-orientated approaches conflate the specifications of data with the data itself, while in reality these are orthogonal concepts. Those specifications define the overall “shape” of our data.&lt;/p&gt;
 
 &lt;p&gt;It’s fairly easy to see how schema definitions could themselves be defined ontologically, through entity/attribute/value (or subject/predicate/object triples in RDF parlance) and so permit runtime evolution of health data schemas and importantly, an ability to provide a unified view from data sourced from multiple disparate systems. It provides a true abstraction and could present data from HL7 FHIR, HL7v2 and openEHR in the same way and so permit computability across different systems, while also providing a persistence mechanism via an entity-attribute-value store for native applications and services, and a way of generating computable properties in a functional style.&lt;/p&gt;
 
@@ -1549,59 +1642,4 @@ from my &lt;a href=&quot;https://standards.cymru/posts/2019-04-24-standards-cult
 
 &lt;blockquote class=&quot;twitter-tweet&quot; data-conversation=&quot;none&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;I’d suggest Vaugh Vernon for Ddd Lots of lessons were learned whilst industry followed Evans, V.V gives you those, more solid examples and relevant practices too.&lt;/p&gt;&amp;mdash; Seref Arikan (@SerefArikan) &lt;a href=&quot;https://twitter.com/SerefArikan/status/1129075962329665536?ref_src=twsrc%5Etfw&quot;&gt;May 16, 2019&lt;/a&gt;&lt;/blockquote&gt;
 
-&lt;blockquote class=&quot;twitter-tweet&quot; data-conversation=&quot;none&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;I found Getting to Yes pretty useful when it comes to implementation.&lt;/p&gt;&amp;mdash; Steve Baguley (@stevebaguley) &lt;a href=&quot;https://twitter.com/stevebaguley/status/1129053887850270720?ref_src=twsrc%5Etfw&quot;&gt;May 16, 2019&lt;/a&gt;&lt;/blockquote&gt;</content><author><name></name></author><summary type="html">These are books that I have enjoyed and found useful. I recommend them!</summary></entry><entry><title type="html">A manifesto for digital transformation in healthcare in Wales</title><link href="https://www.wardle.org/strategy/2018/11/12/manifesto-wales.html" rel="alternate" type="text/html" title="A manifesto for digital transformation in healthcare in Wales" /><published>2018-11-12T12:12:12+00:00</published><updated>2018-11-12T12:12:12+00:00</updated><id>https://www.wardle.org/strategy/2018/11/12/manifesto-wales</id><content type="html" xml:base="https://www.wardle.org/strategy/2018/11/12/manifesto-wales.html">&lt;p&gt;We have an extraordinary opportunity to transform the way we think about the use of digital technology in healthcare in Wales.&lt;/p&gt;
-
-&lt;p&gt;My manifesto has five core principles:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;We don’t have all of the answers.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;The only constant is change.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;We should work in the open; we must be transparent and foster rigorous debate.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;We set broad top-down principles and standards, but empower trusted teams who have freedom to deliver but also take responsibility for their work.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;We must deliver, deliver and then deliver again; we iterate, we improve and we continuously learn.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Technology is a tool; our work in developing and deploying technology is not an end in itself but instead, its use should help us to deliver our wider strategic aims.&lt;/p&gt;
-
-&lt;p&gt;It therefore follows that our goals must be to deliver technology as quickly and as safely as possible. Some argue that those goals are contradictory, but evidence from the highest performing technology teams shows that adding more processes and procedures designed to add safety has the paradoxical effect of worsening safety. As such, we need to rethink our approach to project management.&lt;/p&gt;
-
-&lt;p&gt;Our culture must be open so that we are transparent about our success and our failures. We must foster constructive debate. Challenge me to defend this approach and let’s all learn from it!&lt;/p&gt;
-
-&lt;p&gt;It is seductive to think that, as a small nation, we should centralise. It is similarly seductive to think that we lower risk by centralisation. Neither are true. Getting more and more engagement to understand requirements up front &lt;em&gt;does not work&lt;/em&gt;. The best approach is to deliver functioning technology and then improve it based on rapid and continuous feedback.&lt;/p&gt;
-
-&lt;p&gt;As none of us have all of the answers and we work in a complex and highly adaptive group of organisations, we must recognise that any credible plan must, itself, be adaptive and capable of evolutionary change.&lt;/p&gt;
-
-&lt;p&gt;Likewise, we must recognise that one size truly does not fit all. While Wales is of similar size to a strategic health authority in England, our structures and existing technological investments are much more complex. One of our goals must be to safely reduce needless variation, and yet at the same time foster innovation, permitting that new work to scale across all of our services when it is proven.&lt;/p&gt;
-
-&lt;p&gt;But not one approach solves everything we face; instead we should buy products that are an established solution to a problem and focus our in-house work on solving problems that only the public sector can do. That means blending different approaches and being transparent about the decisions we make.&lt;/p&gt;
-
-&lt;p&gt;The steps we need to take are:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;focus on our customers; that means professionals &lt;em&gt;and&lt;/em&gt; patients. We align our information technology work with our wider service goals.&lt;/li&gt;
-  &lt;li&gt;modularisation, so we break apart our architecture into smaller, discrete components that can be developed independently of the whole.&lt;/li&gt;
-  &lt;li&gt;create small, cross-functional teams who are tasked with delivering those modules, iteratively, building in quality and safety from the onset.&lt;/li&gt;
-  &lt;li&gt;adopt open standards, so that we standardise the interactions between our modules speeding up delivery by permitting parallel developments and limiting the number of people from different teams who need to be involved in any decision.&lt;/li&gt;
-  &lt;li&gt;prioritise tools to acquire, store and make sense of meaningful clinical data.&lt;/li&gt;
-  &lt;li&gt;become open by default; for example, one of our first debates must be whether it makes any sense to run two data centres in Wales. Let’s debate!&lt;/li&gt;
-  &lt;li&gt;focus on developer productivity, let’s copy the architectural and cultural practices from the most productive technology teams.&lt;/li&gt;
-  &lt;li&gt;we should consider developers in three broad categories, and treat them equally with the same tools, frameworks and documentation available, those providing shared national services and components, those working in and across health boards developing solutions using the national toolbox of services and those outside of the NHS in a thriving commercial and academic ecosystem.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I truly believe that Wales could have the best health information technology in the World. We are small, we have a unique and special health service that could be transformed by the safe and efficient deployment of technology.&lt;/p&gt;
-
-&lt;p&gt;But we need to do things differently to what has been tried in the past. Almost all of my blog posts explore these issues in more detail.&lt;/p&gt;
-
-&lt;p&gt;Tell me what you think, let’s debate… and &lt;em&gt;learn&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">We have an extraordinary opportunity to transform the way we think about the use of digital technology in healthcare in Wales.</summary></entry></feed>
+&lt;blockquote class=&quot;twitter-tweet&quot; data-conversation=&quot;none&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;I found Getting to Yes pretty useful when it comes to implementation.&lt;/p&gt;&amp;mdash; Steve Baguley (@stevebaguley) &lt;a href=&quot;https://twitter.com/stevebaguley/status/1129053887850270720?ref_src=twsrc%5Etfw&quot;&gt;May 16, 2019&lt;/a&gt;&lt;/blockquote&gt;</content><author><name></name></author><summary type="html">These are books that I have enjoyed and found useful. I recommend them!</summary></entry></feed>
