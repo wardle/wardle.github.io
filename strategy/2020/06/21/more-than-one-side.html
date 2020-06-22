@@ -103,7 +103,7 @@
 
 <p>Knowing the format of the data to be returned, how it is to be coded and how and when to return data are all important but there are also rules and definitions which must be followed. That’s the job of information standards and therefore, historically, the principal customer of information standards has been central data reporting. Those users have requested standards, they’re discussed and then set, usually by publishing a <a href="http://www.nwisinformationstandards.wales.nhs.uk/data-set-change-notices.">‘data standards change notice’</a>. A new government policy or a problem affecting policy teams results in a new requirement for data reporting with either a new information standard or an update to an existing standard.</p>
 
-<p>It’s easy to see the consequences in clinical practice. There are byzantine rules relating to my outpatient clinics to which I am only dimly aware and forms to fill in that have little to do with the patient in front of me and everything to do with the requirements of the wider system. They’re important, but they’re but one facet of the clinical encounter.</p>
+<p>It’s easy to see the consequences in clinical practice. There are byzantine rules relating to my outpatient clinics to which I am only dimly aware and forms to fill in that have little to do with the patient in front of me and everything to do with the requirements of the wider system. They’re important, but they’re but one facet of the clinical encounter. In many situations there is considerable overlap with the needs of direct care and that of management, at least semantically, but sometimes the categories are simply too coarse or the rules don’t keep up with change.</p>
 
 <p>For example, this is from the outpatient dataset definition:</p>
 
@@ -114,9 +114,11 @@
 <a href="http://www.datadictionary.wales.nhs.uk/index.html#!WordDocuments/outpatientattendances.htm">http://www.datadictionary.wales.nhs.uk/index.html#!WordDocuments/outpatientattendances.htm</a></p>
 </blockquote>
 
-<p>So what has happened to the telephone appointments I’ve done for years? Well, fortunately, an update has been made <a href="http://www.nwisinformationstandards.wales.nhs.uk/sitesplus/documents/299/20200206%2DDSCN%202020%2001%2DOutpatient%20Virtual%20Activity%2DPhase%20One%2Dv1%2D1.pdf">this year</a> so that virtual reviews are now part of the submission, with three categories - ‘face-to-face’, ‘virtual with patient contact’, and ‘virtual with no patient contact’. Information technology teams will be adding these data fields to administrative systems so that these returns can be made in this altered form.</p>
+<p>So what has happened to the telephone appointments I’ve done for years?</p>
 
-<p>Central data requirements are important and valuable in running the wider health system but it is commonly the case that those requirements define the operational requirements and design of clinical systems instead of being recognised as simply another prism through which to view the patient record.</p>
+<p>Well, fortunately, an update has been made <a href="http://www.nwisinformationstandards.wales.nhs.uk/sitesplus/documents/299/20200206%2DDSCN%202020%2001%2DOutpatient%20Virtual%20Activity%2DPhase%20One%2Dv1%2D1.pdf">this year</a> so that virtual reviews are now part of the submission, with three categories - ‘face-to-face’, ‘virtual with patient contact’, and ‘virtual with no patient contact’. Information technology teams will be adding these data fields to administrative systems so that these returns can be made in this altered form.</p>
+
+<p>Central data requirements are important and valuable in running the wider health system but it is commonly the case that those requirements define the operational requirements and design of clinical systems instead of being recognised as simply another prism through which to view the patient record. It’s important when designing clinical systems to understand the uses of data, for all needs.</p>
 
 <p>The the main issues with central data requirements as the basis to build clinical software are:</p>
 
@@ -126,6 +128,7 @@
   <li>they can end up defining operational system data requirements</li>
   <li>they usually expect tabular data to make it easier to analyse but health and care data is rarely tabular. Patients have more than one diagnosis.</li>
   <li>the rules for central data propagate into clinical systems creating brittleness; it makes changing those rules difficult and skews our ability to use historic data acquired using different rules. How we analyse outpatient attendances over time will be difficult if telephone appointments were not returned before 2020?</li>
+  <li>the brittleness and lack of adaptability infects other systems that need to interoperate, because without ontological defined value lists, its very difficult indeed to consume data from other systems without constant discussion between the teams that run different systems, creating coupling and reducing our ability to develop software-at-pace in parallel.</li>
 </ul>
 
 <p>The answers to these issues are simple:</p>
@@ -136,6 +139,20 @@
   <li>we need tools to turn granular, specific data into categorical, easy-to-process data for central returns, policy-makers and other analytics</li>
   <li>we should apply rules and delay losing granularity as late as possible in our analytics, and apply them dynamically and declaratively while categorising data flexibly in response to changing requirements.</li>
 </ul>
+
+<h1 id="specialty-codes">Specialty codes</h1>
+
+<p>It has been suggested that a clinical system use a list of specialties using the “standard” as defined for reporting purposes, the <a href="http://www.datadictionary.wales.nhs.uk/index.html#!WordDocuments/mainspecialtyconsultant.htm">“main specialty” (it used to be called the ‘treatment function code’)</a>. That’s attractive, because that part of our data won’t need any transformation in order to submit those data.</p>
+
+<p>But what about our clinical users? We’d like to help them find the information that they want, at the right time, and that means providing them tools to search perhaps thousands of clinical documents. While coding specialty to the <em>reporting</em> standard is better than free text, we’re losing granularity.</p>
+
+<p>Instead, the use of an ontology, such as SNOMED CT, can solve our many needs.</p>
+
+<p>For clinical users, using an ontology means we can filter for ‘neurology’ and show ‘neurology’ letters and also ‘paediatric neurology’, while the latter will also show up in our ‘paediatric’ filter, because the ontology is more than a list of codes, as it represents the relationships between those codes.</p>
+
+<p>Likewise, we can exchange information with other systems that do not keep up with the DSCN and we don’t need to keep orchestrating updates to the ‘fixed’ specialty list across all components, whether developed in-house or provided by third-parties, because using an ontology provides dynamism and adaptability. I can write software now that can process specialty codes not defined at the time I wrote the code.  We create the right conditions to decouple our systems and create inherent flexibility and adaptability.</p>
+
+<p>Decoupling is important. It may be that a new departmental system already supports the DSCN; after all the list is defined legally by the General and Specialist Medical Practice (Education, Training and Qualifications) Order 2003 and European Primary and Specialist Dental Qualifications Regulations 1998, but if not, that commercial partner will need to implement those codes. It can make procurement more difficult and more costly and fossilises the interactions between systems.</p>
 
 <h1 id="the-single-patient-record">The single patient record.</h1>
 
@@ -177,6 +194,8 @@
 </ul>
 
 <p>Together, these services can dynamically resolve and map between different identifier systems helping software (and humans) ‘make sense’ of health and care data.</p>
+
+<p>It’s why I’ve been advocating this approach within health and care in Wales for a long time.</p>
 
 <p>Mark</p>
 
