@@ -123,7 +123,7 @@
 <p>The the main issues with central data requirements as the basis to build clinical software are:</p>
 
 <ul>
-  <li>they tend to result in the use of classification systems, using taxonomies to make it easier to perform analysis but are a poor fit for the ambiguity and complexity of the real world</li>
+  <li>they tend to result in the use of classification systems; using taxonomies makes it easier to perform analysis but they are a poor fit for the ambiguity and complexity of the real world</li>
   <li>they use bespoke, proprietary value-sets limiting semantic interoperability if they are used</li>
   <li>they can end up defining operational system data requirements</li>
   <li>they usually expect tabular data to make it easier to analyse but health and care data is rarely tabular. Patients have more than one diagnosis.</li>
@@ -148,7 +148,7 @@
 
 <p>Instead, the use of an ontology, such as SNOMED CT, can solve our many needs.</p>
 
-<p>For clinical users, using an ontology means we can filter for ‘neurology’ and show ‘neurology’ letters and also ‘paediatric neurology’, while the latter will also show up in our ‘paediatric’ filter, because the ontology is more than a list of codes, as it represents the relationships between those codes.</p>
+<p>For clinical users, using an ontology means we can filter for ‘neurology’ and show ‘neurology’ letters and also ‘paediatric neurology’, while the latter will also show up in our ‘paediatric’ filter, because the ontology is more than a list of codes, as it represents the <em>relationships</em> between those codes. Our software can use those declared relationships to extract meaning from codes, even for codes that didn’t exist when that software was written.</p>
 
 <p>Likewise, we can exchange information with other systems that do not keep up with the DSCN and we don’t need to keep orchestrating updates to the ‘fixed’ specialty list across all components, whether developed in-house or provided by third-parties, because using an ontology provides dynamism and adaptability. I can write software now that can process specialty codes not defined at the time I wrote the code.  We create the right conditions to decouple our systems and create inherent flexibility and adaptability.</p>
 
