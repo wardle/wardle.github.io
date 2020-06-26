@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2020-06-26T10:04:44+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2020-06-26T10:12:01+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
 </subtitle><entry><title type="html">PatientCare EPR</title><link href="https://www.wardle.org/patientcare/2020/06/26/patientcare-epr.html" rel="alternate" type="text/html" title="PatientCare EPR" /><published>2020-06-26T09:09:10+01:00</published><updated>2020-06-26T09:09:10+01:00</updated><id>https://www.wardle.org/patientcare/2020/06/26/patientcare-epr</id><content type="html" xml:base="https://www.wardle.org/patientcare/2020/06/26/patientcare-epr.html">&lt;p&gt;So I wrote an electronic health record, running live since 2009, and while it’s still not perfect, it’s had a lot of use and I’ve made a lot of changes.&lt;/p&gt;
 
 &lt;p&gt;I wrote it in my spare time.&lt;/p&gt;
@@ -18,6 +18,16 @@
 &lt;p&gt;Over 6000 clinical or research encounters are recorded each month.&lt;/p&gt;
 
 &lt;p&gt;Now I’m re-building it, there’s a lot I’m doing differently but the fundamentals stay the same.&lt;/p&gt;
+
+&lt;p&gt;The important things?&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Data data data&lt;/li&gt;
+  &lt;li&gt;Declarative programming with rule-engine&lt;/li&gt;
+  &lt;li&gt;Clean architecture&lt;/li&gt;
+  &lt;li&gt;Separation of concerns&lt;/li&gt;
+  &lt;li&gt;Decoupling&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">So I wrote an electronic health record, running live since 2009, and while it’s still not perfect, it’s had a lot of use and I’ve made a lot of changes.</summary></entry><entry><title type="html">‘Success’ in digital</title><link href="https://www.wardle.org/strategy/2020/06/23/success-in-digital.html" rel="alternate" type="text/html" title="'Success' in digital" /><published>2020-06-23T16:15:15+01:00</published><updated>2020-06-23T16:15:15+01:00</updated><id>https://www.wardle.org/strategy/2020/06/23/success-in-digital</id><content type="html" xml:base="https://www.wardle.org/strategy/2020/06/23/success-in-digital.html">&lt;p&gt;There has been some really good work in digital health and care in response to the COVID-19 crisis in Wales.&lt;/p&gt;
 
