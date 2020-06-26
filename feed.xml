@@ -1,5 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2020-06-23T17:12:05+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
-</subtitle><entry><title type="html">‘Success’ in digital</title><link href="https://www.wardle.org/strategy/2020/06/23/success-in-digital.html" rel="alternate" type="text/html" title="'Success' in digital" /><published>2020-06-23T16:15:15+01:00</published><updated>2020-06-23T16:15:15+01:00</updated><id>https://www.wardle.org/strategy/2020/06/23/success-in-digital</id><content type="html" xml:base="https://www.wardle.org/strategy/2020/06/23/success-in-digital.html">&lt;p&gt;There has been some really good work in digital health and care in response to the COVID-19 crisis in Wales.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2020-06-26T09:43:55+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</subtitle><entry><title type="html">PatientCare EPR</title><link href="https://www.wardle.org/patientcare/2020/06/23/patientcare-epr.html" rel="alternate" type="text/html" title="PatientCare EPR" /><published>2020-06-23T16:15:15+01:00</published><updated>2020-06-23T16:15:15+01:00</updated><id>https://www.wardle.org/patientcare/2020/06/23/patientcare-epr</id><content type="html" xml:base="https://www.wardle.org/patientcare/2020/06/23/patientcare-epr.html">&lt;p&gt;So I wrote an electronic health record, running live since 2009, and while it’s still not perfect, it’s had a lot of use and I’ve made a lot of changes.&lt;/p&gt;
+
+&lt;p&gt;I wrote it in my spare time.&lt;/p&gt;
+
+&lt;p&gt;Here are the statistics as of 24th June 2020:&lt;/p&gt;
+
+&lt;p&gt;There are 34,587 registered patients from across Wales, with 36% living Cardiff and Vale University Health Board, 15.9% Aneurin Bevan University Health Board, 11.3% Swansea Bay Health Board, 7.5% Cwm Taf University Health Board and the remaining distributed across Hywel Dda, Betsi Cadwaladr, Powys University Health Boards and NHS England sites.&lt;/p&gt;
+
+&lt;p&gt;There are 111 defined patient cohorts, with 78 NHS cohorts and 32 research cohorts and 577 health professionals registered to use the system including 81 specialist nurses, 78 administrators, 75 consultants, 63 physiotherapists, 52 doctors-in-training, 34 speech and language therapists, 30 occupational therapists, 25 dieticians and 10 psychologists, with the remaining comprising research associates, administrators and students.&lt;/p&gt;
+
+&lt;p&gt;There have been 436,145 clinical encounters recorded using the software with usage increasing during the COVID-19 crisis to record patient clinical and research contacts. Of these, there have been 175,144 telephone calls, 116,977 outpatient clinic assessments, 91,854 virtual encounters, 17,504 home visits,  11,234 inpatient encounters, 7639 multi-disciplinary team assessments and 5891 therapy group encounters. There are 4843 electronic consent forms recorded.&lt;/p&gt;
+
+&lt;p&gt;It integrates with the NHS Wales enterprise master patient index, the NHS Wales Care Record Service, the Cardiff and Vale document repository, the staff directory, multiple patient administrative systems and uses NHS systems for staff authentication.&lt;/p&gt;
+
+&lt;p&gt;It is founded on structured meaningful data. All patients have a list of addresses and each address is mapped to health organisation and LSOA and so from there, indices of deprivation. Each patient has a list of diagnoses and problems and treatments. Each patient is linked to multiple health boards but users don’t think in terms of organisations, only services, which can span multiple health and care organisations. At any time, we can view disease progression, by whatever outcome measure, against a cohort of patients with the same disease or defined by other shared characteristics such as age, gender, age at onset etc. It was easy to identify all of our patients with, for example, motor neurone disease, who might need to ‘shield’ from COVID-19; a three-click operation.&lt;/p&gt;
+
+&lt;p&gt;Over 6000 clinical or research encounters are recorded each month.&lt;/p&gt;
+
+&lt;p&gt;Now I’m re-building it, there’s a lot I’m doing differently but the fundamentals stay the same.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">So I wrote an electronic health record, running live since 2009, and while it’s still not perfect, it’s had a lot of use and I’ve made a lot of changes.</summary></entry><entry><title type="html">‘Success’ in digital</title><link href="https://www.wardle.org/strategy/2020/06/23/success-in-digital.html" rel="alternate" type="text/html" title="'Success' in digital" /><published>2020-06-23T16:15:15+01:00</published><updated>2020-06-23T16:15:15+01:00</updated><id>https://www.wardle.org/strategy/2020/06/23/success-in-digital</id><content type="html" xml:base="https://www.wardle.org/strategy/2020/06/23/success-in-digital.html">&lt;p&gt;There has been some really good work in digital health and care in response to the COVID-19 crisis in Wales.&lt;/p&gt;
 
 &lt;p&gt;What have been the characteristics of these successes? They have:&lt;/p&gt;
 
@@ -1261,130 +1281,4 @@
 
 &lt;p&gt;Demographics is but one foundational service that are needed to build a modern open platform for health and care. I discuss the wider issues on the next steps in building an &lt;a href=&quot;/strategy/2019/09/22/health-technology.html&quot;&gt;open platform in different blog post&lt;/a&gt;, including the importance of demographics and appointments/scheduling as good examples of programmes of work, focused on implementing &lt;em&gt;products&lt;/em&gt; not projects, that will give us valuable learning for our next steps.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Mark Wardle&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">This blog post is a slightly expanded version of a recent Twitter thread that I live tweeted during the creation of a Wardley map looking at health and care architecture in relation to identity services and specifically, how we manage patient demographic information. You can read more about Wardley mapping from Simon Wardley’s own blog.</summary></entry><entry><title type="html">An open letter to the new chief digital officer for health and care in Wales</title><link href="https://www.wardle.org/strategy/2019/10/06/an-open-letter-to-the-cdo.html" rel="alternate" type="text/html" title="An open letter to the new chief digital officer for health and care in Wales" /><published>2019-10-06T10:09:09+01:00</published><updated>2019-10-06T10:09:09+01:00</updated><id>https://www.wardle.org/strategy/2019/10/06/an-open-letter-to-the-cdo</id><content type="html" xml:base="https://www.wardle.org/strategy/2019/10/06/an-open-letter-to-the-cdo.html">&lt;p&gt;This post is an open letter to whoever will become the new chief digital officer for health and care in Wales, prompted by this exciting announcement by the Health and Social Services Minister on 30th September 2019.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;£50 million and new body to transform digital health and care services in Wales
-The plans include creating the role of Chief Digital Officer for Health and Care and a new NHS Wales organisation to deliver national digital services, supported by £50 million new funding.&lt;/p&gt;
-
-  &lt;p&gt;The Chief Digital Officer for Health and Care will define national standards for digital software and services, as part of moving to an open digital architecture, across all digital systems. The CDO will also advise Welsh Government on digital strategy, lead the digital profession, and be a champion for digital health and care in Wales.&lt;/p&gt;
-
-  &lt;p&gt;Vaughan Gething, Health and Social Services Minister, 
-&lt;a href=&quot;https://gov.wales/ps50-million-and-new-body-transform-digital-health-and-care-services-wales&quot;&gt;https://gov.wales/ps50-million-and-new-body-transform-digital-health-and-care-services-wales&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Dear Sir / Madam,&lt;/p&gt;
-
-&lt;p&gt;Congratulations on being successfully appointed as the new Chief Digital Officer for Health and Care in Wales. This is an exciting time and I thought I’d take the opportunity to help you get started with your work; I want to highlight some opportunities, some challenges and suggest some priorities:&lt;/p&gt;
-
-&lt;h2 id=&quot;1-people&quot;&gt;1. People&lt;/h2&gt;
-
-&lt;p&gt;We have some amazing people, projects and products in Wales. You will need to understand that somehow, at the moment, the total is currently less than the sum of the parts. However, there aren’t too many changes you’ll need to make to fix this paradox: I would say the two most important issues are &lt;em&gt;trust&lt;/em&gt; and &lt;em&gt;collaboration&lt;/em&gt;. Ask: what can we do to help people achieve what they want to achieve, and what should be provided at a national scale to most support those efforts?&lt;/p&gt;
-
-&lt;h2 id=&quot;2-data&quot;&gt;2. Data&lt;/h2&gt;
-
-&lt;p&gt;We have historically not prioritised &lt;em&gt;meaningful, interpretable data&lt;/em&gt; as the core foundation of our services - you need to understand that &lt;em&gt;data&lt;/em&gt; underpins what we want to achieve - whether for direct care, service management, quality improvement or clinical research. Please understand how &lt;em&gt;arbitrary&lt;/em&gt; boundaries between these different uses are a risk to building a truly learning health and care system. You must change this while taking into account the legal and regulatory constraints defined by the purpose for which those data are used. Carefully question proponents of an application-centred strategy.&lt;/p&gt;
-
-&lt;h2 id=&quot;3-transparency&quot;&gt;3. Transparency&lt;/h2&gt;
-
-&lt;p&gt;As a digital leader, you will already know that there is often no clear right choice or single solution, but instead decisions need a fine balance between the advantages and disadvantages of any specific solution, sprinkled with a healthy dose of pragmatism, and a need to consider the future roadmap. An easy way to address this challenge is to be open and transparent.&lt;/p&gt;
-
-&lt;h2 id=&quot;4-collaboration&quot;&gt;4. Collaboration&lt;/h2&gt;
-
-&lt;p&gt;Set broad principles and empower, don’t control.&lt;/p&gt;
-
-&lt;p&gt;You need to be dogmatic in setting the broad principles and defining the ‘guard-rails’ that will define how we will use digital technology to support solving the problems in health and care that we need to solve. In keeping with our need for transparency, it should be straightforward to understand what approach should be used and what kind of work should be funded, because the rules we work by are explicit. But that doesn’t mean centralised command-and-control or mandating a specific application. What we do need is an approach predicated upon adoption of pragmatic open standards and the creation of a toolbox of software code and data services that can be used to solve our day-to-day problems in a &lt;em&gt;collaborative&lt;/em&gt; manner.&lt;/p&gt;
-
-&lt;h2 id=&quot;5-agility&quot;&gt;5. Agility&lt;/h2&gt;
-
-&lt;p&gt;Agility means recognising the benefits of adaptability, flexibility and fast feedback. We must learn from other industries who are adopting these practices with pace, and improving the &lt;a href=&quot;https://www.thoughtworks.com/insights/articles/path-devops&quot;&gt;safety and reliability of their software delivery pipeline&lt;/a&gt;. We must build systems that can adapt and evolve to change.&lt;/p&gt;
-
-&lt;p&gt;You will already know about the benefits of modularisation of software and data services and particularly how the unbundling of services means that they can be developed independently, in parallel, with agreed technical standards defining their interactions.&lt;/p&gt;
-
-&lt;p&gt;But just because we have multiple modules all being built, deployed and continuously improved independently, it doesn’t mean that each doesn’t form a cog in the wider &lt;em&gt;single system&lt;/em&gt;. By single system, we should mean a credible, coherent, overall high-level strategic approach means that there are clear principles that guide all of our work, with definite and explicit direction-of-travel, but empowered teams delivering the incremental steps on that, truly collaborative, journey. That means a shared vision, but small steps, and that doesn’t mean only for our technology products but in our overall approach to management and leadership. Our work will never be complete.&lt;/p&gt;
-
-&lt;h2 id=&quot;6-technical-expertise&quot;&gt;6. Technical expertise&lt;/h2&gt;
-
-&lt;p&gt;Our work in health and care in Wales needs to be built on a solid foundation of technical skills. You will need to consider whether you need the support of a Chief Technical Officer, and emulate the highest performing technology companies of the world by fostering developer productivity and adopting a ‘products not projects’ approach. Our efforts to make the right information available at the right time, for both patients and professionals, will succeed or fail based on our ability to make use of the very best technology.&lt;/p&gt;
-
-&lt;h2 id=&quot;7-standards-ecosystems-and-driving-the-commercial-market&quot;&gt;7. Standards, ecosystems and driving the commercial market&lt;/h2&gt;
-
-&lt;p&gt;You will need to understand how we need to reboot our relationship with commercial and academic partners, and see how this can be fostered by building a truly open platform in which software and data services are made available for both internal and external users. You need to understand the meaning of “dogfooding”. You will need to see how programmes like the Digital Health Ecosystem cannot remain as a separate or external programme but in fact are &lt;em&gt;central&lt;/em&gt; in achieving what we want to deliver.&lt;/p&gt;
-
-&lt;h2 id=&quot;8-think-outside-of-health&quot;&gt;8. Think outside of health&lt;/h2&gt;
-
-&lt;p&gt;You should seek to work across Welsh Government to share the same design patterns and user-centred approaches, understand how health and care can fit into the wider strategic government-as-a-platform approach, and shape the way we design services using data. You will need to look for common ground and shared learning across health and care as well as other departments, particularly in relation to user-centred design and the adoption of standards.&lt;/p&gt;
-
-&lt;h2 id=&quot;9-be-humble&quot;&gt;9. Be humble&lt;/h2&gt;
-
-&lt;p&gt;Recognising that we don’t have &lt;a href=&quot;/clinical-informatics/2017/03/15/once-for-wales.html&quot;&gt;all of the answers&lt;/a&gt; is absolutely essential, but that doesn’t stop us taking responsibility for the broad over-arching principles and guard-rails that define our overall mission. I’m pretty sure that you will have to adapt and modify our plans as we go along, and be open and transparent about how we discover hitherto unconsidered challenges and how we will learn to overcome them.&lt;/p&gt;
-
-&lt;h2 id=&quot;10-have-fun&quot;&gt;10. Have fun&lt;/h2&gt;
-
-&lt;p&gt;Wales could be the very best place in the world to deliver digital health and care; we are small, we pretty much all know one another and we have a health system that in theory lacks many of the arbitrary boundaries between organisations and services. There has been some very good work already that has delivered benefit for both patients and professionals. Your job will be to see the common thread that runs through our systems, our services and our nation and help us to use digital technology to create a truly learning, data-driven and person-centric health and care system.&lt;/p&gt;
-
-&lt;p&gt;You’ll quickly see that there are some  basics to get right - user login, single sign-on - but you will also need to have the clarity of vision to see how getting those fundamentals solved in the right way forms the foundation to deliver, iteratively and with pace, ever more sophisticated technology to support our health and care services.&lt;/p&gt;
-
-&lt;p&gt;We need to do this together to succeed.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Mark Wardle&lt;/em&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;further-reading&quot;&gt;Further reading&lt;/h1&gt;
-
-&lt;h4 id=&quot;on-health-technology-and-digital-transformation&quot;&gt;On health technology and digital transformation&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/strategy/2019/09/22/health-technology.html&quot;&gt;Digital transformation&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/strategy/2018/11/12/manifesto-wales.html&quot;&gt;A manifesto for digital health in Wales&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;on-once-for-wales&quot;&gt;On “Once for Wales”&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/03/15/once-for-wales.html&quot;&gt;Once for Wales : a debate&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;on-trust-and-innovation&quot;&gt;On trust and innovation&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/12/06/paradox-of-ambition.html&quot;&gt;The paradox of ambition&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/12/05/enabling-innovation.html&quot;&gt;The paradox of control&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/12/06/5os-health.html&quot;&gt;The 5 Os of healthcare IT - objectives, ownership, openness, optimise, organic&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;on-platforms&quot;&gt;On platforms:&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;/strategy/2018/10/02/open-platform-wales.html&quot;&gt;An open platform for Wales&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;/clinical-informatics/2017/10/19/data-driven.html&quot;&gt;Data-driven healthcare&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/digital-platform/2018/03/03/platform-wales-1.html&quot;&gt;Platforms 1/3. Standards and interoperability&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/digital-platform/2018/03/03/platform-wales-2.html&quot;&gt;Platforms 2/3. An API-first approach&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/digital-platform/2018/03/03/platform-wales-3.html&quot;&gt;Platforms 3/3. What we need to do next&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;on-focus&quot;&gt;On focus:&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/01/19/focus-focus-focus.html&quot;&gt;Focus 1/3. The importance of strategy : focus&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/01/19/focus-challenges.html&quot;&gt;Focus 2/3. The challenges we face in delivering the vision&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/01/19/focus-solutions.html&quot;&gt;Focus 3/3. Pragmatic solutions to those challenges&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;on-data&quot;&gt;On data:&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/08/22/health-data.html&quot;&gt;Health data - start with a problem&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2017/10/19/data-driven.html&quot;&gt;Data-driven healthcare&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;on-development-standards-and-ecosystems&quot;&gt;On development standards and ecosystems&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/05/06/cloud-ehr.html&quot;&gt;Creative 1/3: creative destruction in health IT&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/05/06/clinical-software-quality.html&quot;&gt;Creative 2/3: the value of software for healthcare: quality improvement and service transformation underpinned by software, and software underpinning by quality improvement&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/clinical-informatics/2018/05/08/ecosystems.html&quot;&gt;Creative 3/3: ecosystems and the platform&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">This post is an open letter to whoever will become the new chief digital officer for health and care in Wales, prompted by this exciting announcement by the Health and Social Services Minister on 30th September 2019.</summary></entry></feed>
+&lt;p&gt;&lt;em&gt;Mark Wardle&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">This blog post is a slightly expanded version of a recent Twitter thread that I live tweeted during the creation of a Wardley map looking at health and care architecture in relation to identity services and specifically, how we manage patient demographic information. You can read more about Wardley mapping from Simon Wardley’s own blog.</summary></entry></feed>
