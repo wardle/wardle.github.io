@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Semantic value sets</title>
+  <meta name="description" content="This is my real-time write up of coding some simple logic to handle mapping between different value sets. I wrote it in the space of an afternoon, so it’s on...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://www.wardle.org/standards/2020/07/09/value-sets.html">
+  <link rel="alternate" type="application/rss+xml" title="Health informatics and information technology" href="/feed.xml">
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-97389603-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="/">Health informatics and information technology</a>
+  
+  
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+           <a class="page-link" href="/">All posts</a>
+          
+            
+            
+            <a class="page-link" href="/projects/">Projects</a>
+            
+          
+            
+            
+            <a class="page-link" href="/about/">About</a>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Semantic value sets</h1>
+    <p class="post-meta">
+      <time datetime="2020-07-09T09:09:10+01:00" itemprop="datePublished">
+        
+        9 July 2020
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>This is my real-time write up of coding some simple logic to handle mapping between different value sets. I wrote it in the space of an afternoon, so it’s only a demonstration.</p>
+
+<p>It’s written in Clojure, a lisp than runs on the Java virtual machine (JVM). It makes it very easy to do coding in an exploratory way. This is my first live-coding blog in Clojure. It’s an experiment.</p>
+
+<div class="language-clojure highlighter-rouge"><pre class="highlight"><code><span class="p">(</span><span class="nf">ns</span><span class="w"> </span><span class="n">com.eldrix.janus.standards</span><span class="p">)</span><span class="w">
+</span></code></pre>
+</div>
+
+<h1 id="semantic-interoperability">Semantic interoperability</h1>
+
+<p>One of the difficulties with building semantic interoperability between clinical systems are
+value sets.</p>
+
+<p>In essence, a value set is a set of values that can be used for a data field.</p>
+
+<p>Many health interoperability technologies leave value sets as something to be <em>profiled</em>. This means that one actually can’t exchange meaningful information unless you agree on what you are using for a particular field.</p>
+
+<p>Often these value sets model real-world operations very closely. Sometimes, they don’t because
+they reflect central reporting requirements and act as a classification system rather than a terminology.</p>
+
+<p>The best way to think of this, in a non-technical manner, is that for central reporting we might want to categorise a clinical encounter by main specialty (e.g. neurology), but in fact the patient was really seen by a number of different specialties or clinicians in subspecialty practice (e.g. epilepsy surgery pre-assessment clinic). The reporting is important, but it is a prism through which we view the record in order to simplify our analytics. It isn’t the “truth”.</p>
+
+<p>It should be obvious that a flat classification system is great for reporting, because you categorise patients into groups, but an ontology that not only provides value lists but provides information about how each value relates to one another (e.g. paediatric neurology -is-a- paediatric speciality, paediatric neurology -is-a- neurology specialty)
+is much better for operational clinical systems.</p>
+
+<p>The logical consequence is that we need systems that can transparently flip between different classification and terminology systems. When we can do that with losing information, it is called ‘round-tripping’, but in many cases it’s not possible to map without losing information because a classification simply doesn’t have the necessary level of granularity. The logical consequence of that is that we should do most of our work in a finely-grained terminology system and map to less granular, lossy classification schemes for reporting purposes.</p>
+
+<p>This example here using real code, in Clojure, to demonstrate how we can build stable, reliable clinical systems that can seamlessly switch between ontological value sets and classification value sets, and sometimes back again. This example uses a value set that is useful both for reporting and operationally: triage category.</p>
+
+<p>I’ve deliberately chosen this as we can round-trip without losing information.</p>
+
+<h1 id="a-worked-example-triage-category">A worked example: triage category</h1>
+
+<p>Here’s our NHS Wales information standards data from the emergency department dataset. It should be a goal for us to publish datasets like this in a format that can be read by machines but that’s not available, so I’ve created a machine-readable version here.</p>
+
+<p>It defines a value set for triage categories, representing the patient’s priority in an emergency system at time of triage.</p>
+
+<p>Note that I’ve added a namespace. This means that the combination of namespace and value is globally unique.</p>
+
+<p>One job for data standards is to define publicly accessible namespaces and their values.
+This means that <code class="highlighter-rouge">https://data.standards.cymru/Id/datasets/edss/triage|02</code> will be “very urgent”</p>
+
+<div class="language-clojure highlighter-rouge"><pre class="highlight"><code><span class="p">(</span><span class="k">def</span><span class="w"> </span><span class="n">datasets</span><span class="w">
+  </span><span class="s">"These are the NHS Wales data dictionary datasets. See http://www.datadictionary.wales.nhs.uk
+  Ideally these should be imported from a machine-readable source, but that doesn't yet exist"</span><span class="w">
+  </span><span class="p">{</span><span class="no">:emergency-department-dataset</span><span class="w">
+   </span><span class="p">{</span><span class="no">:name</span><span class="w">      </span><span class="s">"Emergency department dataset"</span><span class="w">
+    </span><span class="no">:url</span><span class="w">       </span><span class="s">"http://www.wales.nhs.uk/sitesplus/documents/299/20090401_DSCN_022009%28W%29.pdf"</span><span class="w">
+    </span><span class="no">:dscn</span><span class="w">      </span><span class="s">"DSCN (2009) 02 (W)"</span><span class="w">
+    </span><span class="no">:namespace</span><span class="w"> </span><span class="s">"https://data.standards.cymru/Id/datasets/edss"</span><span class="w">
+    </span><span class="no">:items</span><span class="w">
+               </span><span class="p">{</span><span class="no">:triage-categories</span><span class="w">
+                </span><span class="p">{</span><span class="no">:name</span><span class="w">      </span><span class="s">"Triage categories"</span><span class="w">
+                 </span><span class="no">:namespace</span><span class="w"> </span><span class="s">"https://data.standards.cymru/Id/datasets/edss/triage"</span><span class="w">
+                 </span><span class="no">:values</span><span class="w">
+                            </span><span class="p">[{</span><span class="no">:id</span><span class="w">              </span><span class="s">"01"</span><span class="w">
+                              </span><span class="no">:active</span><span class="w">          </span><span class="n">true</span><span class="w">
+                              </span><span class="no">:description</span><span class="w">     </span><span class="s">"Priority One - Immediate"</span><span class="w">
+                              </span><span class="no">:info.snomed/sct</span><span class="w"> </span><span class="mi">1064891000000107</span><span class="p">}</span><span class="w">
+                             </span><span class="p">{</span><span class="no">:id</span><span class="w">              </span><span class="s">"02"</span><span class="w">
+                              </span><span class="no">:active</span><span class="w">          </span><span class="n">true</span><span class="w">
+                              </span><span class="no">:description</span><span class="w">     </span><span class="s">"Priority Two - Very urgent"</span><span class="w">
+                              </span><span class="no">:info.snomed/sct</span><span class="w"> </span><span class="mi">1064911000000105</span><span class="p">}</span><span class="w">
+                             </span><span class="p">{</span><span class="no">:id</span><span class="w">              </span><span class="s">"03"</span><span class="w">
+                              </span><span class="no">:active</span><span class="w">          </span><span class="n">true</span><span class="w">
+                              </span><span class="no">:description</span><span class="w">     </span><span class="s">"Priority Three - Urgent"</span><span class="w">
+                              </span><span class="no">:info.snomed/sct</span><span class="w"> </span><span class="mi">1064901000000108</span><span class="p">}</span><span class="w">
+                             </span><span class="p">{</span><span class="no">:id</span><span class="w">              </span><span class="s">"04"</span><span class="w">
+                              </span><span class="no">:active</span><span class="w">          </span><span class="n">true</span><span class="w">
+                              </span><span class="no">:description</span><span class="w">     </span><span class="s">"Priority Four - Standard"</span><span class="w">
+                              </span><span class="no">:info.snomed/sct</span><span class="w"> </span><span class="mi">1077241000000103</span><span class="p">}</span><span class="w">
+                             </span><span class="p">{</span><span class="no">:id</span><span class="w">              </span><span class="s">"05"</span><span class="w">
+                              </span><span class="no">:active</span><span class="w">          </span><span class="n">true</span><span class="w">
+                              </span><span class="no">:description</span><span class="w">     </span><span class="s">"Priority Five - Non urgent"</span><span class="w">
+                              </span><span class="no">:info.snomed/sct</span><span class="w"> </span><span class="mi">1077251000000100</span><span class="p">}</span><span class="w">
+                             </span><span class="p">{</span><span class="no">:id</span><span class="w">          </span><span class="s">"06"</span><span class="w">
+                              </span><span class="no">:active</span><span class="w">      </span><span class="n">false</span><span class="w">
+                              </span><span class="no">:description</span><span class="w"> </span><span class="s">"See and Treat"</span><span class="p">}]}}}})</span><span class="w">
+</span></code></pre>
+</div>
+
+<p>This is a fragment of the larger dataset, and only includes the triage categories. The code below works for other defined categories in other datasets within the NHS Wales information standards catalogue.</p>
+
+<p>You can see that I’ve included a map to SNOMED CT for each category. There isn’t an equivalent for “See and treat” so we need to raise this with SNOMED International!</p>
+
+<p>We need some helper functions to process these information. You don’t need to understand how these work. Skip if you can’t read lisp! This is a toy implementation just to show the logic.</p>
+
+<p>Clojure allows arbitrary structures to be used as keys and values in associative arrays (also called dictionaries or hash-maps). This means I use tuples here as a key to permit toy lookup functionality. This doesn’t provide real ontological inference - only providing equivalence.</p>
+
+<div class="language-clojure highlighter-rouge"><pre class="highlight"><code><span class="p">(</span><span class="k">defn</span><span class="w"> </span><span class="n">categories-&gt;ns</span><span class="w">
+  </span><span class="s">"Convert a list of categories into namespaced identifiers"</span><span class="w">
+  </span><span class="p">[</span><span class="n">cats</span><span class="p">]</span><span class="w">
+  </span><span class="p">(</span><span class="k">let</span><span class="w"> </span><span class="p">[</span><span class="n">prefix</span><span class="w"> </span><span class="p">(</span><span class="no">:namespace</span><span class="w"> </span><span class="n">cats</span><span class="p">)]</span><span class="w">
+    </span><span class="p">(</span><span class="nf">-&gt;&gt;</span><span class="w"> </span><span class="p">(</span><span class="no">:values</span><span class="w"> </span><span class="n">cats</span><span class="p">)</span><span class="w">
+         </span><span class="p">(</span><span class="nb">map</span><span class="w"> </span><span class="o">#</span><span class="p">(</span><span class="nb">merge</span><span class="w"> </span><span class="n">%</span><span class="w"> </span><span class="p">(</span><span class="nb">hash-map</span><span class="w"> </span><span class="no">:system</span><span class="w"> </span><span class="n">prefix</span><span class="w"> </span><span class="no">:value</span><span class="w"> </span><span class="p">(</span><span class="no">:id</span><span class="w"> </span><span class="n">%</span><span class="p">)))))))</span><span class="w">
+
+</span><span class="p">(</span><span class="k">defn</span><span class="w"> </span><span class="n">all-identifiers</span><span class="w">
+  </span><span class="s">"Return a simple list of all identifiers from the datasets"</span><span class="w">
+  </span><span class="p">[</span><span class="n">ds</span><span class="p">]</span><span class="w">
+  </span><span class="p">(</span><span class="nf">-&gt;&gt;</span><span class="w"> </span><span class="p">(</span><span class="nb">vals</span><span class="w"> </span><span class="n">ds</span><span class="p">)</span><span class="w">
+       </span><span class="p">(</span><span class="nb">map</span><span class="w"> </span><span class="no">:items</span><span class="p">)</span><span class="w">
+       </span><span class="p">(</span><span class="nb">mapcat</span><span class="w"> </span><span class="nb">vals</span><span class="p">)</span><span class="w">
+       </span><span class="p">(</span><span class="nb">mapcat</span><span class="w"> </span><span class="n">categories-&gt;ns</span><span class="p">)))</span><span class="w">
+
+</span><span class="p">(</span><span class="nf">defonce</span><span class="w"> </span><span class="n">registry</span><span class="w"> </span><span class="p">(</span><span class="nf">atom</span><span class="w"> </span><span class="p">{}))</span><span class="w">
+
+</span><span class="p">(</span><span class="k">defn</span><span class="w"> </span><span class="n">reg-equiv-asymm</span><span class="w">
+  </span><span class="s">"Registers equivalence from one identifier to another"</span><span class="w">
+  </span><span class="p">[</span><span class="n">from</span><span class="w"> </span><span class="n">to</span><span class="p">]</span><span class="w">
+  </span><span class="p">(</span><span class="nf">swap!</span><span class="w"> </span><span class="n">registry</span><span class="w"> </span><span class="o">#</span><span class="p">(</span><span class="nf">update</span><span class="w"> </span><span class="n">%</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="p">(</span><span class="k">fn</span><span class="w"> </span><span class="p">[</span><span class="n">old</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="nb">assoc</span><span class="w"> </span><span class="n">old</span><span class="w"> </span><span class="p">(</span><span class="no">:system</span><span class="w"> </span><span class="n">to</span><span class="p">)</span><span class="w"> </span><span class="n">to</span><span class="p">)))))</span><span class="w">
+
+</span><span class="p">(</span><span class="k">defn</span><span class="w"> </span><span class="n">reg-equiv</span><span class="w">
+  </span><span class="s">"Register that the specified identifiers, expressed as {:system :value} are equivalent, symmetrically"</span><span class="w">
+  </span><span class="p">[</span><span class="n">id1</span><span class="w"> </span><span class="n">id2</span><span class="p">]</span><span class="w">
+  </span><span class="p">(</span><span class="nf">reg-equiv-asymm</span><span class="w"> </span><span class="n">id1</span><span class="w"> </span><span class="n">id2</span><span class="p">)</span><span class="w">
+  </span><span class="p">(</span><span class="nf">reg-equiv-asymm</span><span class="w"> </span><span class="n">id2</span><span class="w"> </span><span class="n">id1</span><span class="p">))</span><span class="w">
+</span></code></pre>
+</div>
+
+<p>So now we can process our machine-readable dataset, and simply register that one identifier from one classification or terminology is equivalent to another. Let’s do that now for our triage category. In a real production system, we’d use a service that provided an abstract ontological service and could provide an inference engine off-the-shelf.</p>
+
+<div class="language-clojure highlighter-rouge"><pre class="highlight"><code><span class="p">(</span><span class="k">defn</span><span class="w"> </span><span class="n">reg-datasets-snomed</span><span class="w">
+  </span><span class="s">"Register SNOMED maps for the value sets (categories) in the items of the datasets"</span><span class="w">
+  </span><span class="p">[</span><span class="n">datasets</span><span class="p">]</span><span class="w">
+  </span><span class="p">(</span><span class="nb">doall</span><span class="w"> </span><span class="p">(</span><span class="nf">-&gt;&gt;</span><span class="w"> </span><span class="p">(</span><span class="nf">all-identifiers</span><span class="w"> </span><span class="n">datasets</span><span class="p">)</span><span class="w">
+              </span><span class="p">(</span><span class="nb">map</span><span class="w"> </span><span class="o">#</span><span class="p">(</span><span class="nf">reg-equiv</span><span class="w"> </span><span class="p">{</span><span class="no">:system</span><span class="w"> </span><span class="p">(</span><span class="no">:system</span><span class="w"> </span><span class="n">%</span><span class="p">)</span><span class="w"> </span><span class="no">:value</span><span class="w"> </span><span class="p">(</span><span class="no">:value</span><span class="w"> </span><span class="n">%</span><span class="p">)}</span><span class="w"> </span><span class="p">{</span><span class="no">:system</span><span class="w"> </span><span class="s">"https://snomed.info/sct"</span><span class="w"> </span><span class="no">:value</span><span class="w"> </span><span class="p">(</span><span class="no">:info.snomed/sct</span><span class="w"> </span><span class="n">%</span><span class="p">)})))))</span><span class="w">
+
+</span></code></pre>
+</div>
+
+<p>We’ve registered a symmetric map between SNOMED CT and the dataset definitions from the NHS Wales information standards. Real ontologies provide many more options to define relationships between identifiers.</p>
+
+<p>Let’s double check that this works by round-tripping between our triage identifier and SNOMED CT and back</p>
+
+<div class="language-clojure highlighter-rouge"><pre class="highlight"><code><span class="w">  </span><span class="p">(</span><span class="nf">reg-datasets-snomed</span><span class="w"> </span><span class="n">datasets</span><span class="p">)</span><span class="w">
+  </span><span class="p">(</span><span class="nf">get-in</span><span class="w"> </span><span class="err">@</span><span class="n">registry</span><span class="w"> </span><span class="p">[{</span><span class="no">:system</span><span class="w"> </span><span class="s">"https://data.standards.cymru/Id/datasets/edss/triage"</span><span class="w"> </span><span class="no">:value</span><span class="w"> </span><span class="s">"05"</span><span class="p">}</span><span class="w"> </span><span class="s">"https://snomed.info/sct"</span><span class="p">])</span><span class="w">
+  </span><span class="c1">;;-&gt; returns =&gt; {:system "https://snomed.info/sct", :value 1077251000000100}
+</span><span class="w">  </span><span class="p">(</span><span class="nf">get-in</span><span class="w"> </span><span class="err">@</span><span class="n">registry</span><span class="w"> </span><span class="p">[{</span><span class="no">:system</span><span class="w"> </span><span class="s">"https://snomed.info/sct"</span><span class="w"> </span><span class="no">:value</span><span class="w"> </span><span class="mi">1077251000000100</span><span class="p">}</span><span class="w"> </span><span class="s">"https://data.standards.cymru/Id/datasets/edss/triage"</span><span class="p">])</span><span class="w">
+  </span><span class="c1">;; -&gt; returns =&gt; {:system "https://data.standards.cymru/Id/datasets/edss/triage", :value "05"}
+</span></code></pre>
+</div>
+
+<p>That means we can build an ‘alias’ system, taking arbitrary collections of identifiers and expanding/denormalising into all of the registered codesystems we know:</p>
+
+<div class="language-clojure highlighter-rouge"><pre class="highlight"><code><span class="p">(</span><span class="k">defn</span><span class="w"> </span><span class="n">expand-identifier</span><span class="w">
+  </span><span class="s">"Determine the equivalent identifiers for the specified identifier tuple"</span><span class="w">
+  </span><span class="p">[[</span><span class="n">sys</span><span class="w"> </span><span class="n">v</span><span class="p">]]</span><span class="w">
+  </span><span class="p">(</span><span class="nb">apply</span><span class="w"> </span><span class="nb">hash-map</span><span class="w"> </span><span class="p">(</span><span class="nf">flatten</span><span class="w"> </span><span class="p">(</span><span class="nb">conj</span><span class="w"> </span><span class="p">(</span><span class="nf">-&gt;&gt;</span><span class="w"> </span><span class="p">(</span><span class="nb">vals</span><span class="w"> </span><span class="p">(</span><span class="nb">get</span><span class="w"> </span><span class="err">@</span><span class="n">registry</span><span class="w"> </span><span class="p">{</span><span class="no">:system</span><span class="w"> </span><span class="n">sys</span><span class="w"> </span><span class="no">:value</span><span class="w"> </span><span class="n">v</span><span class="p">}))</span><span class="w">
+                                      </span><span class="p">(</span><span class="nb">map</span><span class="w"> </span><span class="o">#</span><span class="p">(</span><span class="nb">vector</span><span class="w"> </span><span class="p">(</span><span class="no">:system</span><span class="w"> </span><span class="n">%</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="no">:value</span><span class="w"> </span><span class="n">%</span><span class="p">))))</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="n">sys</span><span class="p">))))</span><span class="w">
+</span></code></pre>
+</div>
+
+<p>So let’s check it works. Here we expand a single identifier tuple:</p>
+
+<div class="language-clojure highlighter-rouge"><pre class="highlight"><code><span class="w">  </span><span class="p">(</span><span class="nf">expand-identifier</span><span class="w"> </span><span class="p">[</span><span class="s">"https://data.standards.cymru/Id/datasets/edss/triage"</span><span class="w"> </span><span class="s">"05"</span><span class="p">])</span><span class="w">
+</span><span class="c1">;;  =&gt; {"https://snomed.info/sct" 1077251000000100, "https://data.standards.cymru/Id/datasets/edss/triage" "05"}
+</span></code></pre>
+</div>
+
+<p>And we can send in arbitrary identifiers which will be ignored if there are no expansions</p>
+
+<div class="language-clojure highlighter-rouge"><pre class="highlight"><code><span class="w">  </span><span class="p">(</span><span class="nb">apply</span><span class="w"> </span><span class="nb">merge</span><span class="w"> </span><span class="p">(</span><span class="nf">-&gt;&gt;</span><span class="w"> </span><span class="p">{</span><span class="no">:name</span><span class="w">                                                  </span><span class="s">"This won't be mapped"</span><span class="w">
+                     </span><span class="s">"https://data.standards.cymru/Id/datasets/edss/triage"</span><span class="w"> </span><span class="s">"05"</span><span class="w">
+                     </span><span class="s">"https://data.standards.cymru/Id/datasets/edss/other"</span><span class="w">  </span><span class="s">"N/A"</span><span class="p">}</span><span class="w">
+                    </span><span class="p">(</span><span class="nb">map</span><span class="w"> </span><span class="n">expand-identifier</span><span class="p">)))</span><span class="w">
+</span><span class="c1">;; =&gt;
+;{"https://snomed.info/sct" 1077251000000100,
+; :name "This won't be mapped",
+; "https://data.standards.cymru/Id/datasets/edss/triage" "05",
+; "https://data.standards.cymru/Id/datasets/edss/other" "N/A"}
+</span></code></pre>
+</div>
+
+<p>So we can use these functions to build maps between arbitrary value sets in both classification and terminology systems - we could add an arbitrary map to another terminology or classification</p>
+
+<h1 id="what-about-hl7-fhir-and-openehr">What about HL7 FHIR and openEHR?</h1>
+
+<p>But look! We have triage models defined by both HL7 FHIR and openEHR.</p>
+
+<p>One approach is to try to centralise the definitions in one place. That’s a seductive approach, but brittle and difficult to change. It makes it harder in the future because you need a central authority to manage and curate. It’s much better to built a dynamic registry to which multiple code systems can register independently. It’s important to decouple at a technical level. That registry could be a small microservice that provides identifier mapping, semantics and inference.</p>
+
+<p>An openEHR triage archetype is available at <a href="https://ckm.openehr.org/ckm/archetypes/1013.1.304">https://ckm.openehr.org/ckm/archetypes/1013.1.304</a> but the data item is free-text! So much for semantic interoperability! This archetype is no good for our purposes.</p>
+
+<p>Fortunately, openEHR could support defining a value set either internally, or using a codeable concept. But this illustrates an important problem of openEHR; you still need to agree on a set of archetypes that will be used across your organisations and software systems if you are going to have semantic interoperability. It isn’t a magic bullet.</p>
+
+<p>The HL7 FHIR categories are <a href="https://hl7.org/fhir/STU3/v3/ActPriority/vs.html">https://hl7.org/fhir/STU3/v3/ActPriority/vs.html</a></p>
+
+<p>The nice thing about both openEHR and HL7 FHIR is that we can get definitions in machine-readable formats. We can therefore write tools that import and register those value-sets.</p>
+
+<p>The HL7 FHIR value set is defined under the namespace <code class="highlighter-rouge">http://hl7.org/fhir/ValueSet/v3-ActPriority</code></p>
+
+<p>In this simple proof-of-concept, let’s register the equivalence of the semantics manually. In a real-life application, we’d download the HL7 FHIR definitions in machine-readable formats and process accordingly in our inference engine.</p>
+
+<div class="language-clojure highlighter-rouge"><pre class="highlight"><code><span class="w">  </span><span class="p">(</span><span class="nf">reg-equiv</span><span class="w"> </span><span class="p">{</span><span class="no">:system</span><span class="w"> </span><span class="s">"http://hl7.org/fhir/v3/ActPriority"</span><span class="w"> </span><span class="no">:value</span><span class="w"> </span><span class="s">"UR"</span><span class="p">}</span><span class="w"> </span><span class="p">{</span><span class="no">:system</span><span class="w"> </span><span class="s">"https://data.standards.cymru/Id/datasets/edss/triage"</span><span class="w"> </span><span class="no">:value</span><span class="w"> </span><span class="s">"03"</span><span class="p">})</span><span class="w">
+</span></code></pre>
+</div>
+
+<p>Now that means we can take FHIR identifiers and turn them into what we need</p>
+
+<div class="language-clojure highlighter-rouge"><pre class="highlight"><code><span class="w">
+  </span><span class="p">(</span><span class="nf">expand-identifier</span><span class="w"> </span><span class="p">[</span><span class="s">"http://hl7.org/fhir/v3/ActPriority"</span><span class="w"> </span><span class="s">"UR"</span><span class="p">])</span><span class="w">
+
+</span><span class="c1">;; =&gt; {"https://data.standards.cymru/Id/datasets/edss/triage" "03",
+;;     "http://hl7.org/fhir/v3/ActPriority" "UR"}
+</span><span class="w">
+  </span><span class="p">(</span><span class="nb">apply</span><span class="w"> </span><span class="nb">merge</span><span class="w"> </span><span class="p">(</span><span class="nf">-&gt;&gt;</span><span class="w"> </span><span class="p">{</span><span class="no">:name</span><span class="w">                                                  </span><span class="s">"This won't be mapped"</span><span class="w">
+                     </span><span class="s">"https://data.standards.cymru/Id/datasets/edss/triage"</span><span class="w"> </span><span class="s">"03"</span><span class="w">
+                     </span><span class="s">"https://data.standards.cymru/Id/datasets/edss/other"</span><span class="w">  </span><span class="s">"N/A"</span><span class="p">}</span><span class="w">
+                    </span><span class="p">(</span><span class="nb">map</span><span class="w"> </span><span class="n">expand-identifier</span><span class="p">)))</span><span class="w">
+
+</span><span class="c1">;; =&gt;
+;{"https://snomed.info/sct" 1064901000000108,
+; :name "This won't be mapped",
+; "https://data.standards.cymru/Id/datasets/edss/triage" "03",
+; "http://hl7.org/fhir/v3/ActPriority" "UR",
+; "https://data.standards.cymru/Id/datasets/edss/other" "N/A"}
+</span></code></pre>
+</div>
+
+<p>And that means we can now do logic such as asking, was this an urgent category and it doesn’t matter whether the information is encoded in SNOMED CT, the NHS Wales information standard or HL7 FHIR.</p>
+
+<p>I’ve built mapping between SNOMED CT, ICD-10, Read codes and other codesystems in my own <a href="https://github.com/wardle/go-terminology">terminology server, written in golang</a>. My real version of the Janus tool uses that to drive inferential logic using SNOMED as the lingua franca. Next job is to explore the use of off-the-shelf ontology tools to see whether they have the right performance and scaling characteristics to handle such a large ontology.</p>
+
+<p><em>Mark</em></p>
+
+
+  </div>
+
+  
+</article>
+        
+      </div>
+    </main>
+    
+    
+    
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Health informatics and information technology</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Health informatics and information technology
+            
+            </li>
+            
+            <li><a href="mailto:mark@wardle.org">mark@wardle.org</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/wardle"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">wardle</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/mwardle"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">mwardle</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
