@@ -290,15 +290,19 @@ This means that <code class="highlighter-rouge">https://data.standards.cymru/Id/
 </span></code></pre>
 </div>
 
-<p>Now that means we can take FHIR identifiers and turn them into what we need</p>
+<p>Now that means we can take FHIR identifiers and turn them into what we need. Notice we turn a FHIR ‘UR’ code into an NHS Wales emergency triage “03” code.</p>
 
 <div class="language-clojure highlighter-rouge"><pre class="highlight"><code><span class="w">
   </span><span class="p">(</span><span class="nf">expand-identifier</span><span class="w"> </span><span class="p">[</span><span class="s">"http://hl7.org/fhir/v3/ActPriority"</span><span class="w"> </span><span class="s">"UR"</span><span class="p">])</span><span class="w">
 
 </span><span class="c1">;; =&gt; {"https://data.standards.cymru/Id/datasets/edss/triage" "03",
 ;;     "http://hl7.org/fhir/v3/ActPriority" "UR"}
-</span><span class="w">
-  </span><span class="p">(</span><span class="nb">apply</span><span class="w"> </span><span class="nb">merge</span><span class="w"> </span><span class="p">(</span><span class="nf">-&gt;&gt;</span><span class="w"> </span><span class="p">{</span><span class="no">:name</span><span class="w">                                                  </span><span class="s">"This won't be mapped"</span><span class="w">
+</span></code></pre>
+</div>
+
+<p>We can do it in reverse as part of a collection of different identifiers:</p>
+
+<div class="language-clojure highlighter-rouge"><pre class="highlight"><code><span class="w">  </span><span class="p">(</span><span class="nb">apply</span><span class="w"> </span><span class="nb">merge</span><span class="w"> </span><span class="p">(</span><span class="nf">-&gt;&gt;</span><span class="w"> </span><span class="p">{</span><span class="no">:name</span><span class="w">                                                  </span><span class="s">"This won't be mapped"</span><span class="w">
                      </span><span class="s">"https://data.standards.cymru/Id/datasets/edss/triage"</span><span class="w"> </span><span class="s">"03"</span><span class="w">
                      </span><span class="s">"https://data.standards.cymru/Id/datasets/edss/other"</span><span class="w">  </span><span class="s">"N/A"</span><span class="p">}</span><span class="w">
                     </span><span class="p">(</span><span class="nb">map</span><span class="w"> </span><span class="n">expand-identifier</span><span class="p">)))</span><span class="w">
