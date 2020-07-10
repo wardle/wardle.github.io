@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Semantic value sets</title>
-  <meta name="description" content="One of the difficulties with building semantic interoperability between clinical systems are value sets.">
+  <meta name="description" content="One of the difficulties with building semantic interoperability between clinical systems are our definitions of value sets.">
 
   <link rel="stylesheet" href="/assets/main.css">
   <link rel="canonical" href="https://www.wardle.org/standards/2020/07/09/value-sets.html">
@@ -94,7 +94,7 @@
 
   <div class="post-content" itemprop="articleBody">
     <p>One of the difficulties with building semantic interoperability between clinical systems are
-value sets.</p>
+our definitions of value sets.</p>
 
 <p>In essence, a value set is a set of values that can be used for a data field.</p>
 
@@ -108,7 +108,11 @@ they reflect central reporting requirements and act as a classification system r
 <p>It should be obvious that a flat classification system is great for reporting, because you categorise patients into groups, but an ontology that not only provides value lists but provides information about how each value relates to one another (e.g. paediatric neurology -is-a- paediatric speciality, paediatric neurology -is-a- neurology specialty)
 is much better for operational clinical systems.</p>
 
+<p>It’s seductive to use an information standard for operational systems (“we’ve used a standard”), and sometimes that’s the right approach. More often, it’s much better to define the value set in terms of a terminology.</p>
+
 <p>The logical consequence is that we need systems that can transparently flip between different classification and terminology systems. When we can do that with losing information, it is called ‘round-tripping’, but in many cases it’s not possible to map without losing information because a classification simply doesn’t have the necessary level of granularity. The logical consequence of that is that we should do most of our work in a finely-grained terminology system and map to less granular, lossy classification schemes for reporting purposes.</p>
+
+<p>Any national data project in health and care needs to give careful consideration to how to process data. In general, real-life health and care data is granular, hierarchical, graph-like and complex, while many central reporting requirements prefer a simpler tabular, categorised view.</p>
 
 <p>This example here using real code, in Clojure, to demonstrate how we can build stable, reliable clinical systems that can seamlessly switch between ontological value sets and classification value sets, and sometimes back again. This example uses a value set that is useful both for reporting and operationally: triage category.</p>
 
@@ -131,11 +135,13 @@ is much better for operational clinical systems.</p>
 <p>Note that I’ve added a namespace. This means that the combination of namespace and value is globally unique.</p>
 
 <p>One job for data standards is to define publicly accessible namespaces and their values.
-This means that <code class="highlighter-rouge">https://data.standards.cymru/Id/datasets/edss/triage|02</code> will be “very urgent”. It’s impossible to process the code “02” by itself - you have to have insider knowledge of a table structure and what it means. Namespacing codes means that they can standalone and be interpreted appropriately.</p>
+This means that <code class="highlighter-rouge">https://data.standards.cymru/Id/datasets/edss/triage|02</code> will be “very urgent”. It’s impossible to process the code “02” by itself - you have to have insider knowledge of a table structure and what it means. Namespacing codes means that they can standalone and be interpreted appropriately. I’ve made up that namespace - but these need to be published well-known namespaces.</p>
 
 <div class="language-clojure highlighter-rouge"><pre class="highlight"><code><span class="p">(</span><span class="k">def</span><span class="w"> </span><span class="n">datasets</span><span class="w">
-  </span><span class="s">"These are the NHS Wales data dictionary datasets. See http://www.datadictionary.wales.nhs.uk
-  Ideally these should be imported from a machine-readable source, but that doesn't yet exist"</span><span class="w">
+  </span><span class="s">"These are the NHS Wales data dictionary datasets. 
+  See http://www.datadictionary.wales.nhs.uk
+  Ideally these should be imported from a machine-readable source, 
+  but that doesn't yet exist"</span><span class="w">
   </span><span class="p">{</span><span class="no">:emergency-department-dataset</span><span class="w">
    </span><span class="p">{</span><span class="no">:name</span><span class="w">      </span><span class="s">"Emergency department dataset"</span><span class="w">
     </span><span class="no">:url</span><span class="w">       </span><span class="s">"http://www.wales.nhs.uk/sitesplus/documents/299/20090401_DSCN_022009%28W%29.pdf"</span><span class="w">
@@ -203,7 +209,8 @@ This means that <code class="highlighter-rouge">https://data.standards.cymru/Id/
   </span><span class="p">(</span><span class="nf">swap!</span><span class="w"> </span><span class="n">registry</span><span class="w"> </span><span class="o">#</span><span class="p">(</span><span class="nf">update</span><span class="w"> </span><span class="n">%</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="p">(</span><span class="k">fn</span><span class="w"> </span><span class="p">[</span><span class="n">old</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="nb">assoc</span><span class="w"> </span><span class="n">old</span><span class="w"> </span><span class="p">(</span><span class="no">:system</span><span class="w"> </span><span class="n">to</span><span class="p">)</span><span class="w"> </span><span class="n">to</span><span class="p">)))))</span><span class="w">
 
 </span><span class="p">(</span><span class="k">defn</span><span class="w"> </span><span class="n">reg-equiv</span><span class="w">
-  </span><span class="s">"Register that the specified identifiers, expressed as {:system :value} are equivalent, symmetrically"</span><span class="w">
+  </span><span class="s">"Register that the specified identifiers, expressed as {:system :value}
+  are equivalent, symmetrically"</span><span class="w">
   </span><span class="p">[</span><span class="n">id1</span><span class="w"> </span><span class="n">id2</span><span class="p">]</span><span class="w">
   </span><span class="p">(</span><span class="nf">reg-equiv-asymm</span><span class="w"> </span><span class="n">id1</span><span class="w"> </span><span class="n">id2</span><span class="p">)</span><span class="w">
   </span><span class="p">(</span><span class="nf">reg-equiv-asymm</span><span class="w"> </span><span class="n">id2</span><span class="w"> </span><span class="n">id1</span><span class="p">))</span><span class="w">
@@ -213,7 +220,8 @@ This means that <code class="highlighter-rouge">https://data.standards.cymru/Id/
 <p>So now we can process our machine-readable dataset, and simply register that one identifier from one classification or terminology is equivalent to another. Let’s do that now for our triage category. In a real production system, we’d use a service that provided an abstract ontological service and could provide an inference engine off-the-shelf.</p>
 
 <div class="language-clojure highlighter-rouge"><pre class="highlight"><code><span class="p">(</span><span class="k">defn</span><span class="w"> </span><span class="n">reg-datasets-snomed</span><span class="w">
-  </span><span class="s">"Register SNOMED maps for the value sets (categories) in the items of the datasets"</span><span class="w">
+  </span><span class="s">"Register SNOMED maps for the value sets (categories) from the items 
+  in the datasets"</span><span class="w">
   </span><span class="p">[</span><span class="n">datasets</span><span class="p">]</span><span class="w">
   </span><span class="p">(</span><span class="nb">doall</span><span class="w"> </span><span class="p">(</span><span class="nf">-&gt;&gt;</span><span class="w"> </span><span class="p">(</span><span class="nf">all-identifiers</span><span class="w"> </span><span class="n">datasets</span><span class="p">)</span><span class="w">
               </span><span class="p">(</span><span class="nb">map</span><span class="w"> </span><span class="o">#</span><span class="p">(</span><span class="nf">reg-equiv</span><span class="w"> </span><span class="p">{</span><span class="no">:system</span><span class="w"> </span><span class="p">(</span><span class="no">:system</span><span class="w"> </span><span class="n">%</span><span class="p">)</span><span class="w"> </span><span class="no">:value</span><span class="w"> </span><span class="p">(</span><span class="no">:value</span><span class="w"> </span><span class="n">%</span><span class="p">)}</span><span class="w"> </span><span class="p">{</span><span class="no">:system</span><span class="w"> </span><span class="s">"https://snomed.info/sct"</span><span class="w"> </span><span class="no">:value</span><span class="w"> </span><span class="p">(</span><span class="no">:info.snomed/sct</span><span class="w"> </span><span class="n">%</span><span class="p">)})))))</span><span class="w">
@@ -238,8 +246,10 @@ This means that <code class="highlighter-rouge">https://data.standards.cymru/Id/
 <div class="language-clojure highlighter-rouge"><pre class="highlight"><code><span class="p">(</span><span class="k">defn</span><span class="w"> </span><span class="n">expand-identifier</span><span class="w">
   </span><span class="s">"Determine the equivalent identifiers for the specified identifier tuple"</span><span class="w">
   </span><span class="p">[[</span><span class="n">sys</span><span class="w"> </span><span class="n">v</span><span class="p">]]</span><span class="w">
-  </span><span class="p">(</span><span class="nb">apply</span><span class="w"> </span><span class="nb">hash-map</span><span class="w"> </span><span class="p">(</span><span class="nf">flatten</span><span class="w"> </span><span class="p">(</span><span class="nb">conj</span><span class="w"> </span><span class="p">(</span><span class="nf">-&gt;&gt;</span><span class="w"> </span><span class="p">(</span><span class="nb">vals</span><span class="w"> </span><span class="p">(</span><span class="nb">get</span><span class="w"> </span><span class="err">@</span><span class="n">registry</span><span class="w"> </span><span class="p">{</span><span class="no">:system</span><span class="w"> </span><span class="n">sys</span><span class="w"> </span><span class="no">:value</span><span class="w"> </span><span class="n">v</span><span class="p">}))</span><span class="w">
-                                      </span><span class="p">(</span><span class="nb">map</span><span class="w"> </span><span class="o">#</span><span class="p">(</span><span class="nb">vector</span><span class="w"> </span><span class="p">(</span><span class="no">:system</span><span class="w"> </span><span class="n">%</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="no">:value</span><span class="w"> </span><span class="n">%</span><span class="p">))))</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="n">sys</span><span class="p">))))</span><span class="w">
+  </span><span class="p">(</span><span class="nb">apply</span><span class="w"> </span><span class="nb">hash-map</span><span class="w"> 
+    </span><span class="p">(</span><span class="nf">flatten</span><span class="w"> 
+      </span><span class="p">(</span><span class="nb">conj</span><span class="w"> </span><span class="p">(</span><span class="nf">-&gt;&gt;</span><span class="w"> </span><span class="p">(</span><span class="nb">vals</span><span class="w"> </span><span class="p">(</span><span class="nb">get</span><span class="w"> </span><span class="err">@</span><span class="n">registry</span><span class="w"> </span><span class="p">{</span><span class="no">:system</span><span class="w"> </span><span class="n">sys</span><span class="w"> </span><span class="no">:value</span><span class="w"> </span><span class="n">v</span><span class="p">}))</span><span class="w">
+                 </span><span class="p">(</span><span class="nb">map</span><span class="w"> </span><span class="o">#</span><span class="p">(</span><span class="nb">vector</span><span class="w"> </span><span class="p">(</span><span class="no">:system</span><span class="w"> </span><span class="n">%</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="no">:value</span><span class="w"> </span><span class="n">%</span><span class="p">))))</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="n">sys</span><span class="p">))))</span><span class="w">
 </span></code></pre>
 </div>
 
@@ -252,7 +262,7 @@ This means that <code class="highlighter-rouge">https://data.standards.cymru/Id/
 
 <p>And we can send in arbitrary identifiers which will be ignored if there are no expansions</p>
 
-<div class="language-clojure highlighter-rouge"><pre class="highlight"><code><span class="w">  </span><span class="p">(</span><span class="nb">apply</span><span class="w"> </span><span class="nb">merge</span><span class="w"> </span><span class="p">(</span><span class="nf">-&gt;&gt;</span><span class="w"> </span><span class="p">{</span><span class="no">:name</span><span class="w">                                                  </span><span class="s">"This won't be mapped"</span><span class="w">
+<div class="language-clojure highlighter-rouge"><pre class="highlight"><code><span class="w">  </span><span class="p">(</span><span class="nb">apply</span><span class="w"> </span><span class="nb">merge</span><span class="w"> </span><span class="p">(</span><span class="nf">-&gt;&gt;</span><span class="w"> </span><span class="p">{</span><span class="no">:name</span><span class="w"> </span><span class="s">"This won't be mapped"</span><span class="w">
                      </span><span class="s">"https://data.standards.cymru/Id/datasets/edss/triage"</span><span class="w"> </span><span class="s">"05"</span><span class="w">
                      </span><span class="s">"https://data.standards.cymru/Id/datasets/edss/other"</span><span class="w">  </span><span class="s">"N/A"</span><span class="p">}</span><span class="w">
                     </span><span class="p">(</span><span class="nb">map</span><span class="w"> </span><span class="n">expand-identifier</span><span class="p">)))</span><span class="w">
@@ -270,7 +280,7 @@ This means that <code class="highlighter-rouge">https://data.standards.cymru/Id/
 
 <p>But look! We have triage models defined by both HL7 FHIR and openEHR.</p>
 
-<p>One approach is to try to centralise the definitions in one place. That’s a seductive approach, but brittle and difficult to change. It makes it harder in the future because you need a central authority to manage and curate. It’s much better to built a dynamic registry to which multiple code systems can register independently. It’s important to decouple at a technical level. That registry could be a small microservice that provides identifier mapping, semantics and inference.</p>
+<p>One approach is to try to centralise all of the definitions in one place. That’s a seductive approach, but brittle and difficult to change. It makes it harder in the future because you need a central authority to manage and curate. It’s much better to built a dynamic registry to which multiple code systems can register independently. It’s important to decouple at a technical level. That registry could be a small microservice that provides identifier mapping, semantics and inference, but that registrations at that registry can be made by multiple teams who don’t necessarily need to coordinate.</p>
 
 <p>An openEHR triage archetype is available at <a href="https://ckm.openehr.org/ckm/archetypes/1013.1.304">https://ckm.openehr.org/ckm/archetypes/1013.1.304</a> but the data item is free-text! So much for semantic interoperability! This archetype is no good for our purposes.</p>
 
@@ -284,7 +294,9 @@ This means that <code class="highlighter-rouge">https://data.standards.cymru/Id/
 
 <p>In this simple proof-of-concept, let’s register the equivalence of the semantics manually. In a real-life application, we’d download the HL7 FHIR definitions in machine-readable formats and process accordingly in our inference engine.</p>
 
-<div class="language-clojure highlighter-rouge"><pre class="highlight"><code><span class="w">  </span><span class="p">(</span><span class="nf">reg-equiv</span><span class="w"> </span><span class="p">{</span><span class="no">:system</span><span class="w"> </span><span class="s">"http://hl7.org/fhir/v3/ActPriority"</span><span class="w"> </span><span class="no">:value</span><span class="w"> </span><span class="s">"UR"</span><span class="p">}</span><span class="w"> </span><span class="p">{</span><span class="no">:system</span><span class="w"> </span><span class="s">"https://data.standards.cymru/Id/datasets/edss/triage"</span><span class="w"> </span><span class="no">:value</span><span class="w"> </span><span class="s">"03"</span><span class="p">})</span><span class="w">
+<div class="language-clojure highlighter-rouge"><pre class="highlight"><code><span class="w">  </span><span class="p">(</span><span class="nf">reg-equiv</span><span class="w"> 
+    </span><span class="p">{</span><span class="no">:system</span><span class="w"> </span><span class="s">"http://hl7.org/fhir/v3/ActPriority"</span><span class="w"> </span><span class="no">:value</span><span class="w"> </span><span class="s">"UR"</span><span class="p">}</span><span class="w"> 
+    </span><span class="p">{</span><span class="no">:system</span><span class="w"> </span><span class="s">"https://data.standards.cymru/Id/datasets/edss/triage"</span><span class="w"> </span><span class="no">:value</span><span class="w"> </span><span class="s">"03"</span><span class="p">})</span><span class="w">
 </span></code></pre>
 </div>
 
