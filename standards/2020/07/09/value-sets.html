@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Semantic value sets</title>
-  <meta name="description" content="This is my real-time write up of coding some simple logic to handle mapping between different value sets. I wrote it in the space of an afternoon, so it’s on...">
+  <meta name="description" content="One of the difficulties with building semantic interoperability between clinical systems are value sets.">
 
   <link rel="stylesheet" href="/assets/main.css">
   <link rel="canonical" href="https://www.wardle.org/standards/2020/07/09/value-sets.html">
@@ -93,17 +93,7 @@
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <p>This is my real-time write up of coding some simple logic to handle mapping between different value sets. I wrote it in the space of an afternoon, so it’s only a demonstration.</p>
-
-<p>It’s written in Clojure, a lisp than runs on the Java virtual machine (JVM). It makes it very easy to do coding in an exploratory way. This is my first live-coding blog in Clojure. It’s an experiment.</p>
-
-<div class="language-clojure highlighter-rouge"><pre class="highlight"><code><span class="p">(</span><span class="nf">ns</span><span class="w"> </span><span class="n">com.eldrix.janus.standards</span><span class="p">)</span><span class="w">
-</span></code></pre>
-</div>
-
-<h1 id="semantic-interoperability">Semantic interoperability</h1>
-
-<p>One of the difficulties with building semantic interoperability between clinical systems are
+    <p>One of the difficulties with building semantic interoperability between clinical systems are
 value sets.</p>
 
 <p>In essence, a value set is a set of values that can be used for a data field.</p>
@@ -124,6 +114,14 @@ is much better for operational clinical systems.</p>
 
 <p>I’ve deliberately chosen this as we can round-trip without losing information.</p>
 
+<p>This is my real-time write up of coding some simple logic to handle mapping between different value sets. I wrote it in the space of an afternoon, so it’s only a demonstration. The code is trivial - 32 lines of actual code. The declarative data definitions and maps are the important thing here.</p>
+
+<p>It’s written in Clojure, a lisp than runs on the Java virtual machine (JVM). It makes it very easy to do coding in an exploratory way. This is my first live-coding blog in Clojure. It’s an experiment to show how easy it is to map between identifiers if we have our classifications published in a machine readable format with appropriate namespacing.</p>
+
+<div class="language-clojure highlighter-rouge"><pre class="highlight"><code><span class="p">(</span><span class="nf">ns</span><span class="w"> </span><span class="n">com.eldrix.janus.standards</span><span class="p">)</span><span class="w">
+</span></code></pre>
+</div>
+
 <h1 id="a-worked-example-triage-category">A worked example: triage category</h1>
 
 <p>Here’s our NHS Wales information standards data from the emergency department dataset. It should be a goal for us to publish datasets like this in a format that can be read by machines but that’s not available, so I’ve created a machine-readable version here.</p>
@@ -133,7 +131,7 @@ is much better for operational clinical systems.</p>
 <p>Note that I’ve added a namespace. This means that the combination of namespace and value is globally unique.</p>
 
 <p>One job for data standards is to define publicly accessible namespaces and their values.
-This means that <code class="highlighter-rouge">https://data.standards.cymru/Id/datasets/edss/triage|02</code> will be “very urgent”</p>
+This means that <code class="highlighter-rouge">https://data.standards.cymru/Id/datasets/edss/triage|02</code> will be “very urgent”. It’s impossible to process the code “02” by itself - you have to have insider knowledge of a table structure and what it means. Namespacing codes means that they can standalone and be interpreted appropriately.</p>
 
 <div class="language-clojure highlighter-rouge"><pre class="highlight"><code><span class="p">(</span><span class="k">def</span><span class="w"> </span><span class="n">datasets</span><span class="w">
   </span><span class="s">"These are the NHS Wales data dictionary datasets. See http://www.datadictionary.wales.nhs.uk
@@ -176,7 +174,7 @@ This means that <code class="highlighter-rouge">https://data.standards.cymru/Id/
 
 <p>This is a fragment of the larger dataset, and only includes the triage categories. The code below works for other defined categories in other datasets within the NHS Wales information standards catalogue.</p>
 
-<p>You can see that I’ve included a map to SNOMED CT for each category. There isn’t an equivalent for “See and treat” so we need to raise this with SNOMED International!</p>
+<p>You can see that I’ve included a map to SNOMED CT for each category. There isn’t an equivalent for “See and treat” so we need to raise this with SNOMED International. (It is also where NHS Wales diverges in its standard from NHS England).</p>
 
 <p>We need some helper functions to process these information. You don’t need to understand how these work. Skip if you can’t read lisp! This is a toy implementation just to show the logic.</p>
 
@@ -318,7 +316,13 @@ This means that <code class="highlighter-rouge">https://data.standards.cymru/Id/
 
 <p>And that means we can now do logic such as asking, was this an urgent category and it doesn’t matter whether the information is encoded in SNOMED CT, the NHS Wales information standard or HL7 FHIR.</p>
 
-<p>I’ve built mapping between SNOMED CT, ICD-10, Read codes and other codesystems in my own <a href="https://github.com/wardle/go-terminology">terminology server, written in golang</a>. My real version of the Janus tool uses that to drive inferential logic using SNOMED as the lingua franca. Next job is to explore the use of off-the-shelf ontology tools to see whether they have the right performance and scaling characteristics to handle such a large ontology.</p>
+<p>It should be no surprise that we can do the same for cross-border interoperability. The <a href="https://www.datadictionary.nhs.uk/data_dictionary/attributes/a/a_and_e_initial_assessment_triage_category_de.asp?shownav=1">NHS England data dictionary</a> has the same triage categories. We can either work to share definitions and therefore share the same namespace, or instead provide a declarative map from which the logic of mapping can be encoded and used by machines.</p>
+
+<p>I’ve built mapping between SNOMED CT, ICD-10, Read codes and other codesystems in my own <a href="https://github.com/wardle/go-terminology">terminology server, written in golang</a>. My real version of the Janus tool uses that to drive inferential logic using SNOMED as the lingua franca.</p>
+
+<p>My next step is to explore the use of off-the-shelf ontology tools to see whether they have the right performance and scaling characteristics to handle such a large ontology.</p>
+
+<p>For NHS Wales, we need to publish our information standards in machine-readable formats, adopt namespaces for our value sets and publish maps to those classifications from operational terminology systems.</p>
 
 <p><em>Mark</em></p>
 
