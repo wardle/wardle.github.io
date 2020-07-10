@@ -316,13 +316,22 @@ This means that <code class="highlighter-rouge">https://data.standards.cymru/Id/
 
 <p>And that means we can now do logic such as asking, was this an urgent category and it doesn’t matter whether the information is encoded in SNOMED CT, the NHS Wales information standard or HL7 FHIR.</p>
 
-<p>It should be no surprise that we can do the same for cross-border interoperability. The <a href="https://www.datadictionary.nhs.uk/data_dictionary/attributes/a/a_and_e_initial_assessment_triage_category_de.asp?shownav=1">NHS England data dictionary</a> has the same triage categories. We can either work to share definitions and therefore share the same namespace, or instead provide a declarative map from which the logic of mapping can be encoded and used by machines.</p>
+<p>It should be no surprise that we can do the same for cross-border interoperability. The <a href="https://www.datadictionary.nhs.uk/data_dictionary/attributes/a/a_and_e_initial_assessment_triage_category_de.asp?shownav=1">NHS England data dictionary</a> has the same triage categories, except code “06” (See and Treat). We can either work to share definitions and therefore share the same namespace, or instead provide a declarative map from which the logic of mapping can be encoded and used by machines. If the namespace is shared, then coordination will be necessary so that “06” isn’t accidentally re-used for a semantically different triage category. If different namespaces are used, no coordination would be necessary except in tracking a declarative map from one to another.</p>
 
 <p>I’ve built mapping between SNOMED CT, ICD-10, Read codes and other codesystems in my own <a href="https://github.com/wardle/go-terminology">terminology server, written in golang</a>. My real version of the Janus tool uses that to drive inferential logic using SNOMED as the lingua franca.</p>
 
 <p>My next step is to explore the use of off-the-shelf ontology tools to see whether they have the right performance and scaling characteristics to handle such a large ontology.</p>
 
 <p>For NHS Wales, we need to publish our information standards in machine-readable formats, adopt namespaces for our value sets and publish maps to those classifications from operational terminology systems.</p>
+
+<h1 id="learning-points">Learning points:</h1>
+
+<ul>
+  <li>We need to namespace identifiers used for central reporting to give them <em>meaning</em></li>
+  <li>We need to publish datasets and category definitions in machine-readable formats so that they can be processed</li>
+  <li>We need to publish a declarative mapping from one identifier namespace to another if we wish to foster semantic interoperability</li>
+  <li>Clojure (and other lisps) are really nice for doing exploratory programming using data.</li>
+</ul>
 
 <p><em>Mark</em></p>
 
