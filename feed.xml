@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2020-07-10T09:39:30+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2020-07-10T09:48:47+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
 </subtitle><entry><title type="html">Semantic value sets</title><link href="https://www.wardle.org/standards/2020/07/09/value-sets.html" rel="alternate" type="text/html" title="Semantic value sets" /><published>2020-07-09T09:09:10+01:00</published><updated>2020-07-09T09:09:10+01:00</updated><id>https://www.wardle.org/standards/2020/07/09/value-sets</id><content type="html" xml:base="https://www.wardle.org/standards/2020/07/09/value-sets.html">&lt;p&gt;One of the difficulties with building semantic interoperability between clinical systems are
 value sets.&lt;/p&gt;
 
@@ -139,7 +139,7 @@ This means that &lt;code class=&quot;highlighter-rouge&quot;&gt;https://data.sta
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;That means we can build an ‘alias’ system, taking arbitrary collections of identifiers and expanding/denormalising into all of the registered codesystems we know:&lt;/p&gt;
+&lt;p&gt;That means we can build an ‘alias’ system, taking arbitrary collections of identifiers and expanding/denormalising into all of the registered codesystems we know. In a real implementation, we’d recursively expand identifiers so we could alias all equivalent identifiers.&lt;/p&gt;
 
 &lt;div class=&quot;language-clojure highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;defn&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;expand-identifier&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Determine the equivalent identifiers for the specified identifier tuple&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -222,13 +222,22 @@ This means that &lt;code class=&quot;highlighter-rouge&quot;&gt;https://data.sta
 
 &lt;p&gt;And that means we can now do logic such as asking, was this an urgent category and it doesn’t matter whether the information is encoded in SNOMED CT, the NHS Wales information standard or HL7 FHIR.&lt;/p&gt;
 
-&lt;p&gt;It should be no surprise that we can do the same for cross-border interoperability. The &lt;a href=&quot;https://www.datadictionary.nhs.uk/data_dictionary/attributes/a/a_and_e_initial_assessment_triage_category_de.asp?shownav=1&quot;&gt;NHS England data dictionary&lt;/a&gt; has the same triage categories. We can either work to share definitions and therefore share the same namespace, or instead provide a declarative map from which the logic of mapping can be encoded and used by machines.&lt;/p&gt;
+&lt;p&gt;It should be no surprise that we can do the same for cross-border interoperability. The &lt;a href=&quot;https://www.datadictionary.nhs.uk/data_dictionary/attributes/a/a_and_e_initial_assessment_triage_category_de.asp?shownav=1&quot;&gt;NHS England data dictionary&lt;/a&gt; has the same triage categories, except code “06” (See and Treat). We can either work to share definitions and therefore share the same namespace, or instead provide a declarative map from which the logic of mapping can be encoded and used by machines. If the namespace is shared, then coordination will be necessary so that “06” isn’t accidentally re-used for a semantically different triage category. If different namespaces are used, no coordination would be necessary except in tracking a declarative map from one to another.&lt;/p&gt;
 
 &lt;p&gt;I’ve built mapping between SNOMED CT, ICD-10, Read codes and other codesystems in my own &lt;a href=&quot;https://github.com/wardle/go-terminology&quot;&gt;terminology server, written in golang&lt;/a&gt;. My real version of the Janus tool uses that to drive inferential logic using SNOMED as the lingua franca.&lt;/p&gt;
 
 &lt;p&gt;My next step is to explore the use of off-the-shelf ontology tools to see whether they have the right performance and scaling characteristics to handle such a large ontology.&lt;/p&gt;
 
 &lt;p&gt;For NHS Wales, we need to publish our information standards in machine-readable formats, adopt namespaces for our value sets and publish maps to those classifications from operational terminology systems.&lt;/p&gt;
+
+&lt;h1 id=&quot;learning-points&quot;&gt;Learning points:&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;We need to namespace identifiers used for central reporting to give them &lt;em&gt;meaning&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;We need to publish datasets and category definitions in machine-readable formats so that they can be processed&lt;/li&gt;
+  &lt;li&gt;We need to publish a declarative mapping from one identifier namespace to another if we wish to foster semantic interoperability&lt;/li&gt;
+  &lt;li&gt;Clojure (and other lisps) are really nice for doing exploratory programming using data.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">One of the difficulties with building semantic interoperability between clinical systems are value sets.</summary></entry><entry><title type="html">PatientCare EPR</title><link href="https://www.wardle.org/patientcare/2020/06/26/patientcare-epr.html" rel="alternate" type="text/html" title="PatientCare EPR" /><published>2020-06-26T09:09:10+01:00</published><updated>2020-06-26T09:09:10+01:00</updated><id>https://www.wardle.org/patientcare/2020/06/26/patientcare-epr</id><content type="html" xml:base="https://www.wardle.org/patientcare/2020/06/26/patientcare-epr.html">&lt;p&gt;So I wrote an electronic health record, running live since 2009, and while it’s still not perfect, it’s had a lot of use and I’ve made a lot of changes.&lt;/p&gt;
 

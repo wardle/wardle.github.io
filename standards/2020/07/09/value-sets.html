@@ -233,7 +233,7 @@ This means that <code class="highlighter-rouge">https://data.standards.cymru/Id/
 </span></code></pre>
 </div>
 
-<p>That means we can build an ‘alias’ system, taking arbitrary collections of identifiers and expanding/denormalising into all of the registered codesystems we know:</p>
+<p>That means we can build an ‘alias’ system, taking arbitrary collections of identifiers and expanding/denormalising into all of the registered codesystems we know. In a real implementation, we’d recursively expand identifiers so we could alias all equivalent identifiers.</p>
 
 <div class="language-clojure highlighter-rouge"><pre class="highlight"><code><span class="p">(</span><span class="k">defn</span><span class="w"> </span><span class="n">expand-identifier</span><span class="w">
   </span><span class="s">"Determine the equivalent identifiers for the specified identifier tuple"</span><span class="w">
