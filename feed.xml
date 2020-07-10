@@ -1,21 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2020-07-10T10:02:18+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2020-07-10T10:33:19+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
 </subtitle><entry><title type="html">Semantic value sets</title><link href="https://www.wardle.org/standards/2020/07/09/value-sets.html" rel="alternate" type="text/html" title="Semantic value sets" /><published>2020-07-09T09:09:10+01:00</published><updated>2020-07-09T09:09:10+01:00</updated><id>https://www.wardle.org/standards/2020/07/09/value-sets</id><content type="html" xml:base="https://www.wardle.org/standards/2020/07/09/value-sets.html">&lt;p&gt;One of the difficulties with building semantic interoperability between clinical systems is how we define value sets.&lt;/p&gt;
 
-&lt;p&gt;In essence, a value set is a set of values that can be used for a data field.&lt;/p&gt;
+&lt;p&gt;In essence, a value set is a set of values that can be used for a data field. It is a vocabulary.&lt;/p&gt;
 
-&lt;p&gt;Many health interoperability technologies leave value sets as something to be &lt;em&gt;profiled&lt;/em&gt;. This means that one actually can’t exchange meaningful information unless you agree on what you are using for a particular field.&lt;/p&gt;
+&lt;p&gt;Many health interoperability technologies leave value sets as something to be &lt;em&gt;profiled&lt;/em&gt;. This means that one actually can’t exchange meaningful information unless you agree on what you are using for a particular field. In many cases that means you can talk, but you’re both talking different languages.&lt;/p&gt;
 
-&lt;p&gt;Often these value sets model real-world operations very closely. Sometimes, they don’t because
-they reflect central reporting requirements and act as a classification system rather than a terminology.&lt;/p&gt;
+&lt;p&gt;Often value sets model real-world operations very closely. Sometimes, they don’t because
+they reflect central reporting requirements and act as a classification system rather than a terminology. You can learn a lot by asking yourself who is the primary user of that value set.&lt;/p&gt;
 
 &lt;p&gt;The best way to think of this, in a non-technical manner, is that for central reporting we might want to categorise a clinical encounter by main specialty (e.g. neurology), but in fact the patient was really seen by a number of different specialties or clinicians in subspecialty practice (e.g. epilepsy surgery pre-assessment clinic). The reporting is important, but it is a prism through which we view the record in order to simplify our analytics. It isn’t the “truth”.&lt;/p&gt;
 
-&lt;p&gt;It should be obvious that a flat classification system is great for reporting, because you categorise patients into groups, but an ontology that not only provides value lists but provides information about how each value relates to one another (e.g. paediatric neurology -is-a- paediatric speciality, paediatric neurology -is-a- neurology specialty)
-is much better for operational clinical systems.&lt;/p&gt;
+&lt;p&gt;It should be obvious that a flat classification system is great for reporting, because you categorise patients into groups, but an ontology does much more. Ontologies not only provides value lists but provides information about how each value relates to one another. For example,  paediatric neurology &lt;code class=&quot;highlighter-rouge&quot;&gt;is-a&lt;/code&gt; paediatric speciality, paediatric neurology &lt;code class=&quot;highlighter-rouge&quot;&gt;is-a&lt;/code&gt; neurology specialty). That makes ontologies much better for operational clinical systems.&lt;/p&gt;
 
-&lt;p&gt;It’s seductive to use an information standard for operational systems (“we’ve used a standard”), and sometimes that’s the right approach. More often, it’s much better to define the value set in terms of a terminology.&lt;/p&gt;
+&lt;p&gt;It’s seductive to use an information standard for operational systems (“we’ve used a standard”), and sometimes that’s the right approach. More often, it’s much better to define the value set in terms of an ontology.&lt;/p&gt;
 
-&lt;p&gt;The logical consequence is that we need systems that can transparently flip between different classification and terminology systems. When we can do that with losing information, it is called ‘round-tripping’, but in many cases it’s not possible to map without losing information because a classification simply doesn’t have the necessary level of granularity. The logical consequence of that is that we should do most of our work in a finely-grained terminology system and map to less granular, lossy classification schemes for reporting purposes.&lt;/p&gt;
+&lt;p&gt;The logical consequence is that we need systems that can transparently flip between different classification and ontology systems. When we can do that with losing information, it is called ‘round-tripping’, but in many cases it’s not possible to map without losing information because a classification simply doesn’t have the necessary level of granularity. The logical consequence of that is that we should do most of our work in a finely-grained terminology that has an ontological basis and map to less granular, lossy classification schemes for reporting purposes.&lt;/p&gt;
 
 &lt;p&gt;Any national data project in health and care needs to give careful consideration to how to process data. In general, real-life health and care data is granular, hierarchical, graph-like and complex, while many central reporting requirements prefer a simpler tabular, categorised view.&lt;/p&gt;
 
@@ -246,7 +245,7 @@ This means that &lt;code class=&quot;highlighter-rouge&quot;&gt;https://data.sta
 &lt;ul&gt;
   &lt;li&gt;We need to namespace identifiers used for central reporting to give them &lt;em&gt;meaning&lt;/em&gt;&lt;/li&gt;
   &lt;li&gt;We need to publish datasets and category definitions in machine-readable formats so that they can be processed&lt;/li&gt;
-  &lt;li&gt;We need to publish a declarative mapping from one identifier namespace to another if we wish to foster semantic interoperability&lt;/li&gt;
+  &lt;li&gt;We need to publish a declarative mapping from one identifier namespace to another if we wish to foster semantic interoperability; an ontology of ontologies.&lt;/li&gt;
   &lt;li&gt;Clojure (and other lisps) are really nice for doing exploratory programming using data.&lt;/li&gt;
 &lt;/ul&gt;
 

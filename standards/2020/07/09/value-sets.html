@@ -95,21 +95,20 @@
   <div class="post-content" itemprop="articleBody">
     <p>One of the difficulties with building semantic interoperability between clinical systems is how we define value sets.</p>
 
-<p>In essence, a value set is a set of values that can be used for a data field.</p>
+<p>In essence, a value set is a set of values that can be used for a data field. It is a vocabulary.</p>
 
-<p>Many health interoperability technologies leave value sets as something to be <em>profiled</em>. This means that one actually can’t exchange meaningful information unless you agree on what you are using for a particular field.</p>
+<p>Many health interoperability technologies leave value sets as something to be <em>profiled</em>. This means that one actually can’t exchange meaningful information unless you agree on what you are using for a particular field. In many cases that means you can talk, but you’re both talking different languages.</p>
 
-<p>Often these value sets model real-world operations very closely. Sometimes, they don’t because
-they reflect central reporting requirements and act as a classification system rather than a terminology.</p>
+<p>Often value sets model real-world operations very closely. Sometimes, they don’t because
+they reflect central reporting requirements and act as a classification system rather than a terminology. You can learn a lot by asking yourself who is the primary user of that value set.</p>
 
 <p>The best way to think of this, in a non-technical manner, is that for central reporting we might want to categorise a clinical encounter by main specialty (e.g. neurology), but in fact the patient was really seen by a number of different specialties or clinicians in subspecialty practice (e.g. epilepsy surgery pre-assessment clinic). The reporting is important, but it is a prism through which we view the record in order to simplify our analytics. It isn’t the “truth”.</p>
 
-<p>It should be obvious that a flat classification system is great for reporting, because you categorise patients into groups, but an ontology that not only provides value lists but provides information about how each value relates to one another (e.g. paediatric neurology -is-a- paediatric speciality, paediatric neurology -is-a- neurology specialty)
-is much better for operational clinical systems.</p>
+<p>It should be obvious that a flat classification system is great for reporting, because you categorise patients into groups, but an ontology does much more. Ontologies not only provides value lists but provides information about how each value relates to one another. For example,  paediatric neurology <code class="highlighter-rouge">is-a</code> paediatric speciality, paediatric neurology <code class="highlighter-rouge">is-a</code> neurology specialty). That makes ontologies much better for operational clinical systems.</p>
 
-<p>It’s seductive to use an information standard for operational systems (“we’ve used a standard”), and sometimes that’s the right approach. More often, it’s much better to define the value set in terms of a terminology.</p>
+<p>It’s seductive to use an information standard for operational systems (“we’ve used a standard”), and sometimes that’s the right approach. More often, it’s much better to define the value set in terms of an ontology.</p>
 
-<p>The logical consequence is that we need systems that can transparently flip between different classification and terminology systems. When we can do that with losing information, it is called ‘round-tripping’, but in many cases it’s not possible to map without losing information because a classification simply doesn’t have the necessary level of granularity. The logical consequence of that is that we should do most of our work in a finely-grained terminology system and map to less granular, lossy classification schemes for reporting purposes.</p>
+<p>The logical consequence is that we need systems that can transparently flip between different classification and ontology systems. When we can do that with losing information, it is called ‘round-tripping’, but in many cases it’s not possible to map without losing information because a classification simply doesn’t have the necessary level of granularity. The logical consequence of that is that we should do most of our work in a finely-grained terminology that has an ontological basis and map to less granular, lossy classification schemes for reporting purposes.</p>
 
 <p>Any national data project in health and care needs to give careful consideration to how to process data. In general, real-life health and care data is granular, hierarchical, graph-like and complex, while many central reporting requirements prefer a simpler tabular, categorised view.</p>
 
@@ -340,7 +339,7 @@ This means that <code class="highlighter-rouge">https://data.standards.cymru/Id/
 <ul>
   <li>We need to namespace identifiers used for central reporting to give them <em>meaning</em></li>
   <li>We need to publish datasets and category definitions in machine-readable formats so that they can be processed</li>
-  <li>We need to publish a declarative mapping from one identifier namespace to another if we wish to foster semantic interoperability</li>
+  <li>We need to publish a declarative mapping from one identifier namespace to another if we wish to foster semantic interoperability; an ontology of ontologies.</li>
   <li>Clojure (and other lisps) are really nice for doing exploratory programming using data.</li>
 </ul>
 
