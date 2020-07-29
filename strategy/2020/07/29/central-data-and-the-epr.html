@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Getting health and care data back to front</title>
+  <meta name="description" content="In most health and care economies, it’s really important to be able to feed back data in order to inform and assess policy as part of central reporting.">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://www.wardle.org/strategy/2020/07/29/central-data-and-the-epr.html">
+  <link rel="alternate" type="application/rss+xml" title="Health informatics and information technology" href="/feed.xml">
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-97389603-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="/">Health informatics and information technology</a>
+  
+  
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+           <a class="page-link" href="/">All posts</a>
+          
+            
+            
+            <a class="page-link" href="/projects/">Projects</a>
+            
+          
+            
+            
+            <a class="page-link" href="/about/">About</a>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Getting health and care data back to front</h1>
+    <p class="post-meta">
+      <time datetime="2020-07-29T16:15:15+01:00" itemprop="datePublished">
+        
+        29 July 2020
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>In most health and care economies, it’s really important to be able to feed back data in order to inform and assess policy as part of central reporting.</p>
+
+<p>I’ve written previously about health and care central reporting requirements, and that such data returns are helpful and important but must be regarded as simply one ‘prism’ through which to ‘see’ a patient record.</p>
+
+<p>It’s good to see a specific example, so have a look at the <a href="https://www.wales.nhs.uk/sites3/documents/742/Site%20Specific%20Cancer%20Reporting%20July%202.pdf">NHS Wales breast cancer reporting requirements</a>.</p>
+
+<p><img src="/images/cancer-reporting.png" alt="Cancer Reporting" /></p>
+
+<p>This dataset is a summary of the important aspects of breast cancer care and is vital for planning and improving services. It should also be used to <em>inform</em> operational data collection.</p>
+
+<p>However, it’s important that those requirements don’t dictate <em>how</em> that collection should be made.</p>
+
+<p>That link reflects version 4.1 of the reporting requirements; requirements change and any digital systems supporting those reporting requirements needs to be able to adapt and flex accordingly.</p>
+
+<h1 id="rectangles-and-projections">Rectangles and projections</h1>
+
+<p>But can we use central reporting requirements to design our clinical information systems?</p>
+
+<p>Many central data reporting requirements want data to be representing in <em>rectangles</em>. That’s a bit like looking at patient data through the prism of a spreadsheet, such as Microsoft Excel.</p>
+
+<p>This is not dissimilar to cartography where a map projection takes the richness, splendour and complexity of a globe’s surface and projects it onto a two-dimensional surface for your atlas. In cartography, multiple projections are available that suit different purposes, each compromising the original information in some way. Each of those representations also create their own value -  a two-dimensional map can be printed or shown on your flat screen - they are useful representations, but they’re not the <em>truth</em>.</p>
+
+<p>Knowing how our health and care data will be used by policy-makers is critical in designing compelling clinical information systems, but we need operational, day-to-day clinical data to solve <em>multiple purposes</em> - direct care, management / policy and research.</p>
+
+<h1 id="data-entry-weve-got-things-backwards">Data-entry; we’ve got things backwards!</h1>
+
+<p>Unfortunately, to meet the demands of central data reporting, it is commonly the case, even in 2020, that data-entry, whether for cancer or for conditions such as stroke, is done after-the-event by someone whose job it is to collect the data and complete the returns. It’s retrospective, labour-intensive and error prone. It’s often the same for research; a separate methodology rather than a difference of acuity.</p>
+
+<p>Sadly, the data is not entered as a function of the process of care.</p>
+
+<p>But it should be clear from the reporting requirements that most of the required information can and should actually be sourced from operational systems, if only one could build adaptable systems that prioritise meaningful data and can be stitched together and used as a source of meaningful information from which the right information can be plucked in order to make decisions.</p>
+
+<p>So how can we make data a function of the process of care?</p>
+
+<h1 id="funnels-the-opportunity-of-decision-points">Funnels: the opportunity of decision-points</h1>
+
+<p>For example, the multi-disciplinary team (MDT) meeting is an opportunity for the aggregation, validation and input of decision-critical information. It’s easy to see the MDT as a funnel, and this doesn’t only apply to cancer, but any complex decision making such as epilepsy surgery or neurovascular disease in which multiple facets of information need to be understood by a multi-disciplinary team.</p>
+
+<p><img src="/images/info-in-action-out.png" alt="Info In Action Out" /></p>
+
+<p>Indeed, the MDT is a microcosm of all clinical encounters, even when there’s only one professional involved. The funnel model is applicable to all clinical encounters.</p>
+
+<p>Each clinical encounter is an opportunity to bring together disparate information, synthesise, formulate and plan. We need to not only capture that process but build technology that can make it as effective as possible. That means supporting both ends of the funnel - making the right information at the right time and supporting clinical synthesis and the ongoing orchestration and coordination of clinical care.</p>
+
+<h1 id="on-data-and-decisions">On data and decisions</h1>
+
+<p>The problem with data in health and care is that there is no single source of truth.</p>
+
+<p>This manifests even for what might be perceived as simple such as a patient’s address. Is that address the address for correspondence, the address of the parent, the term-time address or the address from which the patient moved from last year?</p>
+
+<p>It’s even more difficult for clinical data. Terms such as ‘diagnosis’ might not sound difficult but are fundamentally defined by <em>context</em>. A diagnosis of angina made by me is very different to that made by a cardiologist! Even our diagnostic tests are imperfect measures of the ‘truth’ with false positives and false negatives and repeated tests that give different results.</p>
+
+<p>Even the diagnostic process isn’t what might be imagined. We don’t record what we find and then work out the most likely diagnosis. We do it in reverse! The diagnosis informs what information we collect and how we examine! It’s iterative and internally correlated.</p>
+
+<p>Even prescribing information is imperfect. Did the patient actually take that drug at all? Sometimes not at all.</p>
+
+<p>And look at how much information we might have. Is that step-count data, or home blood pressure monitoring data useful for informing our decisions? What tools do we have to make sense of burgeoning information from multiple sources? We can be overwhelmed with too much information.</p>
+
+<p>It’s much better to see clinical data for what it is and use it appropriately - we’re looking at the truth through the corner of our eyes, our data an imperfect imprint of the truth. We’re creating <em>models</em>.</p>
+
+<p>Ultimately, there’s uncertainty surrounding all of our decisions, and our data can help to reduce that uncertainty. Usually that’s by bringing different sources of information together.</p>
+
+<h1 id="information-at-the-right-time">Information at the right time</h1>
+
+<p>So we need software and systems driven by <em>data</em>.</p>
+
+<p>That means a digital health and care patient record is much more that a flat list of documents with little or no accurate metadata.</p>
+
+<p>But we shouldn’t ignore documents either. They have some important positive characteristics:</p>
+
+<ul>
+  <li>They can and should carry their own context; they can (usually) be read standalone</li>
+  <li>They reflect a snapshot of ‘state’ and thinking at a time-point</li>
+  <li>They are immutable, so don’t change after the event - if a change is needed a new document should be issued.</li>
+  <li>They support processes of care - because while they also a type of record, they <em>move around</em> and so can be used to activate different workflows.</li>
+</ul>
+
+<p>The fact that documents <em>move around</em> is really important. They are a driver of much <em>tacit</em> process and workflow. We have many unstated assumptions in health and care and one of our jobs is to understand their existence and their importance.</p>
+
+<p>It’s better to see documents are the artefacts of care. Just like data for central reporting, we have things back to front and should be generating our documents and cascading workflow from our processes of care, and not the other way around.</p>
+
+<p>The medical record isn’t a simple record of what happened but a tool that helps us formulate, plan, communicate and deliver care. It’s a tool. “You’re a victim of it or a triumph because of it. The human mind simply cannot carry all the information without error so the record becomes part of your practice” (Larry Weed, 1971 - see https://wardle.org/cis-design/2017/05/01/medical-record.html)</p>
+
+<h1 id="effective-software-development">Effective software development</h1>
+
+<p>The breast cancer data collection requirements potentially teaches us a lot; the essence of those requirements has broad applicable to other diseases, whether cancer or not.</p>
+
+<p>It’s so important to have a strong vision for how we want the future to look, and how we want to enable data to drive patient care, service improvement and research, but there’s a paradox in technology, in that the best way to deliver technology is to break apart the big problems that you’re trying to solve and then <em>compose</em> the solutions together again. We have to think big but work small and iterate.</p>
+
+<p>Composability is fundamental to the next generation of electronic health and record systems</p>
+
+<p>And we also need to be sufficiently confident in our understanding of technology that we call out the hubris when someone provides an 18-month plan for how to deliver intangible benefits. We have to be able to stand up and say that this bit is a hard problem and we’ll need to explore different ways of solving that, and understand that we will fail.</p>
+
+<p>Paradoxically, working incrementally in the small is less risky than following an 18-month plan. Planing is good, but our plans will change and adapt as we learn.</p>
+
+<p>It’s seductive to think otherwise, and pretty difficult to sell “we don’t know” as a tagline. Perhaps you don’t get appointed to a job if you say we “don’t have all of the answers”.</p>
+
+<p>Of course, there’s a lot we do know, and one size doesn’t fit all in technology, whether we’re talking about approach, standards, ‘buy vs build’ (should we buy the solution to this problem off the shelf or build it ourselves?) or any other facet of ‘digital’, and so we need to see the fracture lines and break-apart our problem domain and get on with delivering appropriate solutions or starting the graft of learning how to solve problems in that domain.</p>
+
+<p>We need to be <em>agile</em>.</p>
+
+<h1 id="deliver-better-and-faster-by-doing-things-right">Deliver better and faster by doing things right</h1>
+
+<p>We can speed up delivery of valuable digital tools and technology by adopting the right approach. We should stack the odds of being successful in our favour. There are many examples where will fail to do this.</p>
+
+<p>So let’s return to breast cancer. What can we learn from this?</p>
+
+<ol>
+  <li>Central reporting helps us understand what is important from policy-makers.</li>
+  <li>Data should be sourced from results of the processes of care.</li>
+  <li>Operational systems should focus on <em>meaningful data</em></li>
+  <li>We need to adopt a modular, de-coupled and agile approach to health and care software and data.</li>
+</ol>
+
+<p>It’s not difficult to see the sources of information that we need for breast cancer reporting - demographic data links a patient with different identifiers across organisations, appointments and scheduling provides a virtual scaffold for the when and how things have happened via different pathways, laboratory and radiology data brought together help understand the pathology and its extent (staging), and finally, at MDT, we need tools to validate and refine those ‘inputs’, record the decision-making and plan the next steps in care.</p>
+
+<p>In fact, those requirements for breast cancer are not much different for any other illness either.</p>
+
+<p>And that tells us what we need to be building for the next generation of electronic health and care record systems.</p>
+
+<p>And how can we deliver a compelling and credible plan to build that technology that will underpin our ambitions for health and care in Wales?</p>
+
+<p>National governance arrangements and technical architecture need to ensure that we reduce the need for constant coordination between different groups.</p>
+
+<p>We’ve failed if we need everyone ‘in the room’!</p>
+
+<p>We need to instead:</p>
+
+<ul>
+  <li>decouple and modularise, to permit parallel independent working at pace</li>
+  <li>use open technical standards to define the interfaces between modules</li>
+  <li>avoid single repositories and instead use shared vocabularies</li>
+  <li>develop an unremitting focus on <em>data</em>.</li>
+  <li>foster greater use of off-the-shelf cloud providers and move to <em>abstract</em> our infrastructure</li>
+  <li>define clear lines of responsibility for different services, and include performance  and reliability metrics.</li>
+</ul>
+
+<p><em>Mark</em></p>
+
+
+  </div>
+
+  
+</article>
+        
+      </div>
+    </main>
+    
+    
+    
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Health informatics and information technology</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Health informatics and information technology
+            
+            </li>
+            
+            <li><a href="mailto:mark@wardle.org">mark@wardle.org</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/wardle"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">wardle</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/mwardle"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">mwardle</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
