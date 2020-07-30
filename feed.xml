@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2020-07-29T16:17:39+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2020-07-30T11:34:55+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
 </subtitle><entry><title type="html">Getting health and care data back to front</title><link href="https://www.wardle.org/strategy/2020/07/29/central-data-and-the-epr.html" rel="alternate" type="text/html" title="Getting health and care data back to front" /><published>2020-07-29T16:15:15+01:00</published><updated>2020-07-29T16:15:15+01:00</updated><id>https://www.wardle.org/strategy/2020/07/29/central-data-and-the-epr</id><content type="html" xml:base="https://www.wardle.org/strategy/2020/07/29/central-data-and-the-epr.html">&lt;p&gt;In most health and care economies, it’s really important to be able to feed back data in order to inform and assess policy as part of central reporting.&lt;/p&gt;
 
 &lt;p&gt;I’ve written previously about health and care central reporting requirements, and that such data returns are helpful and important but must be regarded as simply one ‘prism’ through which to ‘see’ a patient record.&lt;/p&gt;
@@ -45,7 +45,7 @@
 
 &lt;h1 id=&quot;on-data-and-decisions&quot;&gt;On data and decisions&lt;/h1&gt;
 
-&lt;p&gt;The problem with data in health and care is that there is no single source of truth.&lt;/p&gt;
+&lt;p&gt;The problem with data in health and care is that there is no such thing as a single source of truth.&lt;/p&gt;
 
 &lt;p&gt;This manifests even for what might be perceived as simple such as a patient’s address. Is that address the address for correspondence, the address of the parent, the term-time address or the address from which the patient moved from last year?&lt;/p&gt;
 
@@ -80,19 +80,19 @@
 
 &lt;p&gt;It’s better to see documents are the artefacts of care. Just like data for central reporting, we have things back to front and should be generating our documents and cascading workflow from our processes of care, and not the other way around.&lt;/p&gt;
 
-&lt;p&gt;The medical record isn’t a simple record of what happened but a tool that helps us formulate, plan, communicate and deliver care. It’s a tool. “You’re a victim of it or a triumph because of it. The human mind simply cannot carry all the information without error so the record becomes part of your practice” (Larry Weed, 1971 - see https://wardle.org/cis-design/2017/05/01/medical-record.html)&lt;/p&gt;
+&lt;p&gt;The medical record isn’t a simple record of what happened but a tool that helps us formulate, plan, communicate and deliver care. It’s a tool. “You’re a victim of it or a triumph because of it. The human mind simply cannot carry all the information without error so the record becomes part of your practice” (Larry Weed, 1971 - see &lt;a href=&quot;https://wardle.org/cis-design/2017/05/01/medical-record.html&quot;&gt;https://wardle.org/cis-design/2017/05/01/medical-record.html&lt;/a&gt;)&lt;/p&gt;
 
 &lt;h1 id=&quot;effective-software-development&quot;&gt;Effective software development&lt;/h1&gt;
 
-&lt;p&gt;The breast cancer data collection requirements potentially teaches us a lot; the essence of those requirements has broad applicable to other diseases, whether cancer or not.&lt;/p&gt;
+&lt;p&gt;The breast cancer data collection requirements potentially teach us a lot; the essence of those requirements has broad applicability to other diseases, whether cancer or not.&lt;/p&gt;
 
 &lt;p&gt;It’s so important to have a strong vision for how we want the future to look, and how we want to enable data to drive patient care, service improvement and research, but there’s a paradox in technology, in that the best way to deliver technology is to break apart the big problems that you’re trying to solve and then &lt;em&gt;compose&lt;/em&gt; the solutions together again. We have to think big but work small and iterate.&lt;/p&gt;
 
-&lt;p&gt;Composability is fundamental to the next generation of electronic health and record systems&lt;/p&gt;
+&lt;p&gt;Composability is fundamental to the next generation of electronic health and record systems.&lt;/p&gt;
 
 &lt;p&gt;And we also need to be sufficiently confident in our understanding of technology that we call out the hubris when someone provides an 18-month plan for how to deliver intangible benefits. We have to be able to stand up and say that this bit is a hard problem and we’ll need to explore different ways of solving that, and understand that we will fail.&lt;/p&gt;
 
-&lt;p&gt;Paradoxically, working incrementally in the small is less risky than following an 18-month plan. Planing is good, but our plans will change and adapt as we learn.&lt;/p&gt;
+&lt;p&gt;Paradoxically, working incrementally in the small is less risky than following an 18-month plan. Planning is good, but our plans will change and adapt as we learn.&lt;/p&gt;
 
 &lt;p&gt;It’s seductive to think otherwise, and pretty difficult to sell “we don’t know” as a tagline. Perhaps you don’t get appointed to a job if you say we “don’t have all of the answers”.&lt;/p&gt;
 
@@ -113,7 +113,7 @@
   &lt;li&gt;We need to adopt a modular, de-coupled and agile approach to health and care software and data.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;It’s not difficult to see the sources of information that we need for breast cancer reporting - demographic data links a patient with different identifiers across organisations, appointments and scheduling provides a virtual scaffold for the when and how things have happened via different pathways, laboratory and radiology data brought together help understand the pathology and its extent (staging), and finally, at MDT, we need tools to validate and refine those ‘inputs’, record the decision-making and plan the next steps in care.&lt;/p&gt;
+&lt;p&gt;It’s not difficult to see the sources of information that we need for breast cancer reporting - demographic data links a patient with different identifiers across organisations, appointments and scheduling provides a virtual scaffold for the ‘when’ and ‘how’ things have happened via different pathways, laboratory and radiology data brought together help understand the pathology and its extent (staging), and finally, at MDT, we need tools to validate and refine those ‘inputs’, record the decision-making and plan the next steps in care.&lt;/p&gt;
 
 &lt;p&gt;In fact, those requirements for breast cancer are not much different for any other illness either.&lt;/p&gt;
 
