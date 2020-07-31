@@ -1,5 +1,102 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2020-07-30T11:34:55+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
-</subtitle><entry><title type="html">Getting health and care data back to front</title><link href="https://www.wardle.org/strategy/2020/07/29/central-data-and-the-epr.html" rel="alternate" type="text/html" title="Getting health and care data back to front" /><published>2020-07-29T16:15:15+01:00</published><updated>2020-07-29T16:15:15+01:00</updated><id>https://www.wardle.org/strategy/2020/07/29/central-data-and-the-epr</id><content type="html" xml:base="https://www.wardle.org/strategy/2020/07/29/central-data-and-the-epr.html">&lt;p&gt;In most health and care economies, it’s really important to be able to feed back data in order to inform and assess policy as part of central reporting.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2020-07-31T17:09:14+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</subtitle><entry><title type="html">Building a ‘neuro-rehabilitation database’</title><link href="https://www.wardle.org/strategy/2020/07/31/solving-problems-by-composition.html" rel="alternate" type="text/html" title="Building a 'neuro-rehabilitation database'" /><published>2020-07-31T16:15:15+01:00</published><updated>2020-07-31T16:15:15+01:00</updated><id>https://www.wardle.org/strategy/2020/07/31/solving-problems-by-composition</id><content type="html" xml:base="https://www.wardle.org/strategy/2020/07/31/solving-problems-by-composition.html">&lt;p&gt;I built an electronic patient record and it’s been quite successful. It’s taught me a great deal about how to recognise how to modularise and decouple different data and software components. It’s been running since 2009 and is in live use.&lt;/p&gt;
+
+&lt;p&gt;It’s a large project, and I can’t conceive of everything in one go, so even though I’m the only developer, adopting an architecture that enables modularity, adaptability and flexibility is important.&lt;/p&gt;
+
+&lt;p&gt;One important aspect of my work is being able to compose individual building blocks together to solve problems, and to do that in a declarative, rules-based way. This means I can build solutions have them deployed and working in live clinical environments in less than a day.&lt;/p&gt;
+
+&lt;p&gt;Most users think that the software is designed for them, and in a way it is. People refer to it as the “MS database” or the “referrals database” or the “Parkinson’s database” or the “MND database” but each is simply a prism through which to view a single digital patient record.&lt;/p&gt;
+
+&lt;p&gt;To illustrate the point, it’s quite easy to see the common foundational services:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Patient identity - lookup arbitrary identifiers such as any Welsh hospital identifier or NHS number or search (Google-like) by name&lt;/li&gt;
+  &lt;li&gt;Staff identity and authentication - including lookup and email via the NHS Wales active directory service&lt;/li&gt;
+  &lt;li&gt;Finely-grained access control by the runtime registration of both patients and users to clinical services, teams and research projects&lt;/li&gt;
+  &lt;li&gt;Tracking episodes of care and configurable encounters and data-collection forms.&lt;/li&gt;
+  &lt;li&gt;Clinical terminology, value set management and organisational data services&lt;/li&gt;
+  &lt;li&gt;Document creation and publication services, to create documents from data and publish those in local and national document management services such as Cardiff clinical portal and Welsh Clinical Portal.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;With these building blocks, let’s build a neuro-rehabilitation database. I’m going to live blog this work.&lt;/p&gt;
+
+&lt;h1 id=&quot;neuro-rehabilitation&quot;&gt;Neuro-rehabilitation&lt;/h1&gt;
+
+&lt;p&gt;When I designed the system, I recognised I’d need to make it easy to change the things that would change. Registering a new logical service or research project had to be easy and involve no software code. In fact, I wanted to ensure that I could configure lots of things at runtime, and I made SNOMED CT the lingua franca. If I need to write code, I wanted to make it as modular as possible and ensure that first changes didn’t affect what was already working and second, that I didn’t have to make changes anywhere else.&lt;/p&gt;
+
+&lt;p&gt;The neuro-rehabilitation team wanted to track a cohort of patients and make assessments about their rehabilitation need.&lt;/p&gt;
+
+&lt;p&gt;So I can create a new service using my administration portal:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/neurorehab/create-project.png&quot; alt=&quot;Create Project&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I can configure a project either as a clinical service or a research project. These have different semantics but all are organised in a hierarchical fashion so that properties are inherited from parent projects, and that users and patients are linked to services and projects via registration or episodes of care, and that means when you as a user search for John Smith, you’ll only get patients known to one of your registered services.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/neurorehab/no-permission.png&quot; alt=&quot;No Permission&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;For a service or project, I can configure common SNOMED concepts so that drop-downs and picklists and autocompletion boxes get configured based on who you are and who you are seeing. This means users feel as if the system is designed for them, even if really it’s just simple configuration. I configure the specialty using SNOMED-CT.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/neurorehab/choose-common-concepts.png&quot; alt=&quot;Choose Common Concepts&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I wanted users to be able to manage their own services, so all projects have per-project security permissions. This means I don’t need to be involved in registering users, and all “power users” need to do is type in a username and the software fetches their details from the national directory.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/neurorehab/choose-users.png&quot; alt=&quot;Choose Users&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Each service can have different types of encounter. This is usually dependent on the service or project at hand, so is very customisable. Here I’ve simply created three for now, ‘correspondence’, ‘inpatient review’, and ‘telephone call’.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/neurorehab/configure-encounters.png&quot; alt=&quot;Configure Encounters&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And for each, I configure some common forms. Users can manually record others, but this streamlines the process for them. Each encounter can be associated with fetching lists from external systems such as PAS making it useful for clinics.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/neurorehab/configure-an-encounter.png&quot; alt=&quot;Configure An Encounter&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here I add a medication review (this used dm+d to record medications and changes to medications), a procedure form (useful for recording stuff done), a botulinum toxin form (a specialised procedure form), a MOCA (a cognitive test), and a rehabilitation assessment form.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/neurorehab/configure-forms.png&quot; alt=&quot;Configure Forms&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Data collection forms are linked to encounters, which are linked to episodes, which are linked to patients. Each episode is linked to a project or service, and each project or service has a list of registered users. It’s quite straightforward to see how I implement finely-grained information governance using this model. Each user thinks the system is designed for them.&lt;/p&gt;
+
+&lt;p&gt;Here’s the rehabilitation assessment form. Its contents are automatically populated from information already in the electronic record, but users can make changes and then save. Diagnoses are recorded using SNOMED CT so later we can stratify our patient group by category of injury for example.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/neurorehab/configure-rehab-form.png&quot; alt=&quot;Configure Rehab Form&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We can add arbitrary validation so that we help users enter the right information:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/neurorehab/rehab-assessment-outcome.png&quot; alt=&quot;Rehab Assessment Outcome&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We already have a “botulinum toxin database”, so I can simply re-use that form for this service. Some rehabilitation patients need injections of botulinum for spasticity or jaw problems.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/neurorehab/botulinum-toxin-form.png&quot; alt=&quot;Botulinum Toxin Form&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;All these data are coded using SNOMED CT, even when you’re simply clicking on a diagram.&lt;/p&gt;
+
+&lt;p&gt;I have lots of pre-built forms and it can take between 5 minutes and an hour or so to build a new one, depending on complexity. So other modules don’t have to understand the data within each form, forms generate SNOMED CT artefacts that can be used to dynamically configure the user interface depending on need.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/neurorehab/list-forms.png&quot; alt=&quot;List Forms&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Each project or service can send clinical documents to other document repositories. I configure a “report” using a PDF template that will watermark the generated document. The document is generated from data. It’s a shame but none of the receiving document repositories can yet understand the structured information encoded with these documents, but accept only a PDF and a small amount of non-standard metadata.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/neurorehab/configure-reports.png&quot; alt=&quot;Configure Reports&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once configured, users can create reports from their encounters.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/neurorehab/publish-report.png&quot; alt=&quot;Publish Report&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;understanding-the-neuro-rehab-service&quot;&gt;Understanding the neuro-rehab service&lt;/h1&gt;
+
+&lt;p&gt;But now we have those data, we can slice and dice in order to help users understand their service.&lt;/p&gt;
+
+&lt;p&gt;In neurorehabilitation, the team want to understand who is in their active cohort, and understand those patients who need further review, as well as identify those ready for transfer. I can configure a “home page” for each service to provide a flexible modular system to show the right information at the right time.&lt;/p&gt;
+
+&lt;p&gt;This is what it looks like for neuro-rehabilitation:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/neurorehab/understand-and-improve-data.png&quot; alt=&quot;Understand And Improve Data&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Not only do the team get to see who is in the cohort without a current assessment, but also stratify based on location and status, the screen updating as different criteria are chosen.&lt;/p&gt;
+
+&lt;p&gt;This took just about six hours to go from inception to deployment, mainly because I’m able to simply stitch together foundational components to solve specific problems.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">I built an electronic patient record and it’s been quite successful. It’s taught me a great deal about how to recognise how to modularise and decouple different data and software components. It’s been running since 2009 and is in live use.</summary></entry><entry><title type="html">Getting health and care data back to front</title><link href="https://www.wardle.org/strategy/2020/07/29/central-data-and-the-epr.html" rel="alternate" type="text/html" title="Getting health and care data back to front" /><published>2020-07-29T16:15:15+01:00</published><updated>2020-07-29T16:15:15+01:00</updated><id>https://www.wardle.org/strategy/2020/07/29/central-data-and-the-epr</id><content type="html" xml:base="https://www.wardle.org/strategy/2020/07/29/central-data-and-the-epr.html">&lt;p&gt;In most health and care economies, it’s really important to be able to feed back data in order to inform and assess policy as part of central reporting.&lt;/p&gt;
 
 &lt;p&gt;I’ve written previously about health and care central reporting requirements, and that such data returns are helpful and important but must be regarded as simply one ‘prism’ through which to ‘see’ a patient record.&lt;/p&gt;
 
@@ -1035,65 +1132,4 @@ This means that &lt;code class=&quot;highlighter-rouge&quot;&gt;https://data.sta
 &lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h1&gt;
-&lt;p&gt;&lt;a name=&quot;results-requests&quot;&gt;1&lt;/a&gt;: We currently have an example in Wales in which a re-procurement of a laboratory management system is in one programme of work, and re-procurement of a radiology information system is in another. Both are considering including “test requesting” functionality and yet, for end-users, we want a seamless system that, in clinic or on the ward, allows us to request multiple &lt;em&gt;things&lt;/em&gt; including referrals, laboratory, radiology and other tests. We don’t want separate “systems” but instead what appears to be a streamlined “single system”. Therefore, programmes of work need to be framed with user need; one logical approach might be to consider “results and requests” as a business programme to manage a suite of products, that would include concierge services that take user requests and farm them to our different backend systems via APIs, as well as managing the re-procurement of laboratory and radiology services.&lt;/p&gt;</content><author><name></name></author><summary type="html">Our ability to adopt, deploy and improve technology is fundamental in our mission to build a health and care system that works seamlessly, for patients, families and staff.</summary></entry><entry><title type="html">Next generation health and care technology</title><link href="https://www.wardle.org/ehr/2019/11/08/learning-from-ehr-next-steps.html" rel="alternate" type="text/html" title="Next generation health and care technology" /><published>2019-11-08T08:08:08+00:00</published><updated>2019-11-08T08:08:08+00:00</updated><id>https://www.wardle.org/ehr/2019/11/08/learning-from-ehr--next-steps</id><content type="html" xml:base="https://www.wardle.org/ehr/2019/11/08/learning-from-ehr-next-steps.html">&lt;p&gt;I &lt;a href=&quot;/ehr/2019/11/08/learning-from-creating-an-ehr.html&quot;&gt;built an electronic health record and along the way learnt a lot&lt;/a&gt; about how to think about the importance of medical records and &lt;em&gt;data&lt;/em&gt; in my day-to-day work as a practising clinician, manager and researcher.&lt;/p&gt;
-
-&lt;p&gt;At the end of that talk (and post), I touched on the importance of building &lt;em&gt;capability&lt;/em&gt; : in data and the software that use those data - to deliver the outcomes we want in health and care. But what does that mean? What are the capabilities that we need to build, specifically?&lt;/p&gt;
-
-&lt;p&gt;I would argue:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;our capabilities to record, view, manipulate and infer from &lt;em&gt;meaningful data&lt;/em&gt; - for direct care, for managing our services and for research.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;depend upon&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;our capabilities to continually deliver safe, sustainable and secure software at pace.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;and we can look to the characteristics of the highest-performing technology teams to understand that these depend upon:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;small, empowered, cross-functional (multi-disciplinary) teams&lt;/li&gt;
-  &lt;li&gt;appropriate modularisation, with well-defined contractual (standards-based) interfaces between those modules&lt;/li&gt;
-  &lt;li&gt;more sophisticated modules composing functionality provided by lower-level modules so managing complexity&lt;/li&gt;
-  &lt;li&gt;cohesive data and software services forming a &lt;em&gt;platform&lt;/em&gt; (long-lived) used by lightweight applications (ephemeral)&lt;/li&gt;
-  &lt;li&gt;fast feedback via automated testing and telemetry, monitoring and logging&lt;/li&gt;
-  &lt;li&gt;fast feedback from users with iterative, agile working&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;and understand, therefore, there is:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;mutual dependency between architecture, governance and standards&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;because our capabilities are determined by our teams and how they can work effectively, and that means building an architecture that breaks down our problems into solvable chunks, making sure that governance is streamlined and effective so that there are clear lines of responsibility and defining the interactions between teams and the products for which they are responsible via open published standards as one part of the contractual obligations between those teams and products.&lt;/p&gt;
-
-&lt;h1 id=&quot;building-products-delivering-outcomes--choose-team-first-boundaries&quot;&gt;Building products delivering outcomes : “Choose team-first boundaries”&lt;/h1&gt;
-
-&lt;p&gt;Truly, our architecture and governance are mutually-dependent with &lt;em&gt;technical standards&lt;/em&gt; as an integral part of the wider contracts between our modules and consequently, between our teams.&lt;/p&gt;
-
-&lt;p&gt;It makes little sense to govern programmes of work without respecting architectural boundaries; indeed, I would argue that many of the issues facing health and care services in Wales are as a result of ignoring this issue - such as thinking that it is appropriate to govern projects relating to patients and their interactions with services separately to projects relating to professionals, when in fact both &lt;em&gt;programmes&lt;/em&gt; of work share many core building blocks, such as citizen identity.&lt;/p&gt;
-
-&lt;p&gt;So instead need to recognise the importance of constructing &lt;em&gt;empowered teams&lt;/em&gt; to help us solve the problems we face and organise those teams into specific programmes of work.&lt;/p&gt;
-
-&lt;p&gt;The mantra must surely be:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;long-lived products within dynamic flexible programmes,&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“Flow is difficult to achieve when each team depends on a complicated web of interactions with many other teams. For a fast flow of change to software systems, we need to remove hand-offs and align most teams to the main streams of change within the organization. However, many organizations experience huge problems with the responsibility boundaries assigned to teams. Typically, little thought is given to the viability of the boundaries for teams, resulting in a lack of ownership, disengagement, and a glacially slow rate of delivery.”&lt;/p&gt;
-
-  &lt;p&gt;Skelton, Matthew. Team Topologies (Kindle Locations 2147-2151). IT Revolution Press. Kindle Edition.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;So how do we find the &lt;em&gt;fracture planes&lt;/em&gt; within our truly complex and heterogeneous systems?&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“A fracture plane is a natural seam in the software system that allows the system to be split easily into two or more parts. This splitting of software is particularly useful with monolithic software. The word monolith itself comes from Greek, meaning “single stone.” Traditional stonemasons hit stones at particular angles to split the rocks in clean segments, taking advantage of their natural fracture planes. We can look for similar fracture planes in software to find the natural split points that lead to software boundaries.”&lt;/p&gt;
-
-  &lt;p&gt;Skelton, Matthew. Team Topologies (Kindle Locations 2226-2227). IT Revolution Press. Kindle Edition.&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><summary type="html">I built an electronic health record and along the way learnt a lot about how to think about the importance of medical records and data in my day-to-day work as a practising clinician, manager and researcher.</summary></entry></feed>
+&lt;p&gt;&lt;a name=&quot;results-requests&quot;&gt;1&lt;/a&gt;: We currently have an example in Wales in which a re-procurement of a laboratory management system is in one programme of work, and re-procurement of a radiology information system is in another. Both are considering including “test requesting” functionality and yet, for end-users, we want a seamless system that, in clinic or on the ward, allows us to request multiple &lt;em&gt;things&lt;/em&gt; including referrals, laboratory, radiology and other tests. We don’t want separate “systems” but instead what appears to be a streamlined “single system”. Therefore, programmes of work need to be framed with user need; one logical approach might be to consider “results and requests” as a business programme to manage a suite of products, that would include concierge services that take user requests and farm them to our different backend systems via APIs, as well as managing the re-procurement of laboratory and radiology services.&lt;/p&gt;</content><author><name></name></author><summary type="html">Our ability to adopt, deploy and improve technology is fundamental in our mission to build a health and care system that works seamlessly, for patients, families and staff.</summary></entry></feed>
