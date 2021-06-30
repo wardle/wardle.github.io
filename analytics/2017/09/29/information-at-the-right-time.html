@@ -142,7 +142,7 @@
 
 <p>I built an analytics pipeline in which clinical and genetic data were extracted, cleaned up and transformed and analysed. This combined a database and used R to do the rest, generating analyses and charts based on those data. With Sweave, I combined those results into reports, clinical papers and eventually my thesis by linking R and LaTeX:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>We identified \Sexpr{nrow(subset(cl, excluded==F))} patients with a reported history of 
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>We identified \Sexpr{nrow(subset(cl, excluded==F))} patients with a reported history of 
 cerebellar ataxia between 1999 and 2007 in South East Wales.
 Applying inclusion and exclusion criteria as described above resulted in a subset of 
 \Sexpr{cf.loca$total} with chronic progressive \ac{loca} with no identified aetiology 
@@ -154,18 +154,16 @@ and \Sexpr{cf.loca$num.sporadic}
 (\Sexpr{nrow(subset(loca, fh==F &amp; sex=='Male'))} male, 
 \Sexpr{nrow(subset(loca, fh==F &amp; sex=='Female'))} female)
 sporadic patients.
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>When run, this would output the following text:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>We identified 401 patients with a reported history of cerebellar ataxia between 1999 
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>We identified 401 patients with a reported history of cerebellar ataxia between 1999 
 and 2007 in South East Wales. Applying inclusion and exclusion criteria as described 
 above resulted in a subset of 178 with chronic progressive LOCA with no identified 
 aetiology as a denominator population for study. There were 55 (26 male, 29 female) 
 familial cases segregating in 38 kindreds and 123 (79 male, 44 female) sporadic patients.
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>But of course, much more sophisticated analyses were possible, including the dynamic generation of charts, maps and statistics. For example, this chart is dynamically generated from our data source</p>
 
@@ -173,7 +171,7 @@ familial cases segregating in 38 kindreds and 123 (79 male, 44 female) sporadic 
 
 <p>generated using the following code:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>\begin{figure}[!tb]
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\begin{figure}[!tb]
 % This is the same as the ACNR graph, but using the (NEW) new SCA prevalence functions
 &lt;&lt;sca-prev-adca, echo=FALSE, quiet=T, fig=T,width=6,height=4&gt;&gt;=
 sp = sp.sca.prev(subset=patient.type=='ADCA' &amp; total&gt;10 &amp; (region=='Asia' | region=='Europe' ), by=region, FUN=sp.percentage)
@@ -188,8 +186,7 @@ barplot(as.matrix(sp[,c(2:7,12)]), beside=T,
 % \cite{\Sexpr{print.citations(sp$cite)}}
 \label{fig:sca.prev}
 \end{figure}
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>The sp.sca.prev() function source code is <a href="/images/data-driven/sp-sca-prev.R">here</a>.</p>
 

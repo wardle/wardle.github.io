@@ -136,11 +136,10 @@
 
 <p>A SNOMED CT <em>expression</em> combines concepts without needing every possible combination of concepts to be created within the terminology. For example,</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>80146002|appendectomy|
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>80146002|appendectomy|
    :260870009|priority|=25876001|emergency|,
    425391005|using access device|=86174004|laparoscope|
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>represents performing an appendicectomy as an emergency using an laparoscope. We could add this as a distinct single concept into SNOMED CT but that would result in a combinatorial explosion; that means we’d have to have single concepts representing all possible permutations which is simply not practical. However, mainly for historical reasons or to ease implementation, SNOMED CT does already contains many single concepts that combines multiple concepts into one.</p>
 
@@ -184,11 +183,10 @@
 
 <p>Firstly, we can determine a way to <em>refine</em> this concept using post-coordination to specifically give the location. The ontology provides, as part of its model, attribute relationships for this concept, at a computational level:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code> Is a (attribute)                   -&gt; Abscess of brain (disorder)	
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Is a (attribute)                   -&gt; Abscess of brain (disorder)	
  Associated morphology (attribute)  -&gt; Abscess (morphologic abnormality)
  Finding site (attribute)           -&gt; Cerebral structure (body structure)
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>For example, we can see that we can refine the concept <code class="highlighter-rouge">cerebral abscess</code> with a finding site that is a child of the concept <code class="highlighter-rouge">Cerebral structure (body structure)</code> (<a href="https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=83678007">83678007</a>).</p>
 
@@ -210,22 +208,21 @@
 
 <p>For example, a HL7 FHIR representation of a condition looks like this:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"resourceType"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Condition"</span><span class="p">,</span><span class="w">
-  </span><span class="err">//</span><span class="w"> </span><span class="err">from</span><span class="w"> </span><span class="err">Resource</span><span class="p">:</span><span class="w"> </span><span class="err">id</span><span class="p">,</span><span class="w"> </span><span class="err">meta,</span><span class="w"> </span><span class="err">implicitRules,</span><span class="w"> </span><span class="err">and</span><span class="w"> </span><span class="err">language</span><span class="w">
-  </span><span class="err">//</span><span class="w"> </span><span class="err">from</span><span class="w"> </span><span class="err">DomainResource</span><span class="p">:</span><span class="w"> </span><span class="err">text</span><span class="p">,</span><span class="w"> </span><span class="err">contained,</span><span class="w"> </span><span class="err">extension,</span><span class="w"> </span><span class="err">and</span><span class="w"> </span><span class="err">modifierExtension</span><span class="w">
-  </span><span class="nt">"identifier"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="err">Identifier</span><span class="w"> </span><span class="p">}],</span><span class="w"> </span><span class="err">//</span><span class="w"> </span><span class="err">External</span><span class="w"> </span><span class="err">Ids</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">this</span><span class="w"> </span><span class="err">condition</span><span class="w">
-  </span><span class="nt">"clinicalStatus"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;code&gt;"</span><span class="p">,</span><span class="w"> </span><span class="err">//</span><span class="w"> </span><span class="err">C?</span><span class="w"> </span><span class="err">active</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">recurrence</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">inactive</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">remission</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">resolved</span><span class="w">
-  </span><span class="nt">"verificationStatus"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;code&gt;"</span><span class="p">,</span><span class="w"> </span><span class="err">//</span><span class="w"> </span><span class="err">C?</span><span class="w"> </span><span class="err">provisional</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">differential</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">confirmed</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">refuted</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">entered-in-error</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">unknown</span><span class="w">
-  </span><span class="nt">"category"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="err">CodeableConcept</span><span class="w"> </span><span class="p">}],</span><span class="w"> </span><span class="err">//</span><span class="w"> </span><span class="err">problem-list-item</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">encounter-diagnosis</span><span class="w">
-  </span><span class="nt">"severity"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">CodeableConcept</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="err">//</span><span class="w"> </span><span class="err">Subjective</span><span class="w"> </span><span class="err">severity</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">condition</span><span class="w">
-  </span><span class="nt">"code"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">CodeableConcept</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="err">//</span><span class="w"> </span><span class="err">Identification</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">condition,</span><span class="w"> </span><span class="err">problem</span><span class="w"> </span><span class="err">or</span><span class="w"> </span><span class="err">diagnosis</span><span class="w">
-  </span><span class="nt">"bodySite"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="err">CodeableConcept</span><span class="w"> </span><span class="p">}],</span><span class="w"> </span><span class="err">//</span><span class="w"> </span><span class="err">Anatomical</span><span class="w"> </span><span class="err">location,</span><span class="w"> </span><span class="err">if</span><span class="w"> </span><span class="err">relevant</span><span class="w">
-  </span><span class="nt">"subject"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">Reference(Patient|Group)</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="err">//</span><span class="w"> </span><span class="err">R!</span><span class="w">  </span><span class="err">Who</span><span class="w"> </span><span class="err">has</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">condition?</span><span class="w">
-  </span><span class="nt">"context"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">Reference(Encounter|EpisodeOfCare)</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="err">//</span><span class="w"> </span><span class="err">Encounter</span><span class="w"> </span><span class="err">or</span><span class="w"> </span><span class="err">episode</span><span class="w"> </span><span class="err">when</span><span class="w"> </span><span class="err">condition</span><span class="w"> </span><span class="err">first</span><span class="w"> </span><span class="err">...</span><span class="w">
-</span><span class="err">}</span><span class="w">
-</span></code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "resourceType" : "Condition",
+  // from Resource: id, meta, implicitRules, and language
+  // from DomainResource: text, contained, extension, and modifierExtension
+  "identifier" : [{ Identifier }], // External Ids for this condition
+  "clinicalStatus" : "&lt;code&gt;", // C? active | recurrence | inactive | remission | resolved
+  "verificationStatus" : "&lt;code&gt;", // C? provisional | differential | confirmed | refuted | entered-in-error | unknown
+  "category" : [{ CodeableConcept }], // problem-list-item | encounter-diagnosis
+  "severity" : { CodeableConcept }, // Subjective severity of condition
+  "code" : { CodeableConcept }, // Identification of the condition, problem or diagnosis
+  "bodySite" : [{ CodeableConcept }], // Anatomical location, if relevant
+  "subject" : { Reference(Patient|Group) }, // R!  Who has the condition?
+  "context" : { Reference(Encounter|EpisodeOfCare) }, // Encounter or episode when condition first ...
+}
+</code></pre></div></div>
 
 <p>A <a href="https://www.hl7.org/fhir/datatypes.html#codeableconcept">CodeableConcept</a> is a complex HL7 FHIR type that provides a reference to an arbitrary terminology.</p>
 

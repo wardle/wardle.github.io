@@ -1,5 +1,35 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2020-07-31T17:09:14+01:00</updated><id>https://www.wardle.org/</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
-</subtitle><entry><title type="html">Building a ‘neuro-rehabilitation database’</title><link href="https://www.wardle.org/strategy/2020/07/31/solving-problems-by-composition.html" rel="alternate" type="text/html" title="Building a 'neuro-rehabilitation database'" /><published>2020-07-31T16:15:15+01:00</published><updated>2020-07-31T16:15:15+01:00</updated><id>https://www.wardle.org/strategy/2020/07/31/solving-problems-by-composition</id><content type="html" xml:base="https://www.wardle.org/strategy/2020/07/31/solving-problems-by-composition.html">&lt;p&gt;I built an electronic patient record and it’s been quite successful. It’s taught me a great deal about how to recognise how to modularise and decouple different data and software components. It’s been running since 2009 and is in live use.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2021-06-30T14:13:58+01:00</updated><id>https://www.wardle.org/feed.xml</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</subtitle><entry><title type="html">Decomposing the electronic health and care record</title><link href="https://www.wardle.org/patientcare/2021/03/28/next-steps-epr.html" rel="alternate" type="text/html" title="Decomposing the electronic health and care record" /><published>2021-03-28T10:09:09+01:00</published><updated>2021-03-28T10:09:09+01:00</updated><id>https://www.wardle.org/patientcare/2021/03/28/next-steps-epr</id><content type="html" xml:base="https://www.wardle.org/patientcare/2021/03/28/next-steps-epr.html">&lt;p&gt;So I built an electronic patient record system that’s been running since 2007. It was, as far as I am aware, the first implementation of SNOMED CT in a live clinical system. Most users have never known that SNOMED is its &lt;em&gt;lingua franca&lt;/em&gt;, and most think it is a bespoke ‘database’ for their use, because
+I built multiple subject and specialty-specific “prisms” through which to see, what is essentially,
+a single record.&lt;/p&gt;
+
+&lt;p&gt;There is no better iterative fast feedback loop than being a user as well as a developer. It is difficult to know what works and what doesn’t work without an exploratory phase of design and implementation.&lt;/p&gt;
+
+&lt;p&gt;That software now supports the care of thousands of patients across Wales, over 126000 lines of code and on today’s estimates would cost $6 million to develop.&lt;/p&gt;
+
+&lt;p&gt;But as with any large software application, it’s starting to become more difficult to make changes. Early design decisions accelerated progress but are unduly limiting now. Early assumptions about how and where the application might be used are now proven wrong.&lt;/p&gt;
+
+&lt;p&gt;Such issues are common in all software projects.&lt;/p&gt;
+
+&lt;p&gt;In NHS Wales, we have made amazing progress on some core national services solving difficult problems; we now have services for shared clinical documents, investigation results such as laboratory and radiology as well as a national staff directory and an enterprise master patient index providing a single cross-organisation view of patient identity.&lt;/p&gt;
+
+&lt;p&gt;But the clinical application that staff use to access data in those services - Welsh Clinical Portal - will never be an electronic patient record. Early design decisions have bound it tightly to the local patient administrative system in each organisation and tight-coupling means that changes are difficult to make, and some health boards have requests for change that have waited years to be implemented.&lt;/p&gt;
+
+&lt;p&gt;It is time we modernised the way we think about and develop health and care technology.&lt;/p&gt;
+
+&lt;p&gt;One of the most effective ways of doing that is to recognise the benefits of modularisation, in which we break apart the problems we face to make them easier to solve and recompose those modules in interesting ways in order to solve problems for professionals and patients.&lt;/p&gt;
+
+&lt;p&gt;Understanding how and when to modularise requires significant technical and domain knowledge taking into account existing legacy services and the commercial market. We can use open technical standards to decouple those components. This is one way that we can pay down some of the technical debt built up over years.&lt;/p&gt;
+
+&lt;p&gt;The NHS Wales Informatics Service is being transformed into a new statutory body on 1st April 2021.&lt;/p&gt;
+
+&lt;p&gt;Now is the ideal opportunity for it to become the digital platform on which we build a seamless, effective and safe health and care service for Wales.&lt;/p&gt;
+
+&lt;p&gt;It can and should be a provider of national shared services - much like Amazon has “Amazon Web Services” - with small, long-lived teams of experts providing a range of data and software services as well as support for provider organisations to make use of those services to improve their services.&lt;/p&gt;
+
+&lt;p&gt;Its mission cannot simply be “driving change” in the health service - there’s plenty of evidence that health boards are desperate to improve services using digital technology - it must be focusing on the work that can and should be shared across health and care in Wales - and working to &lt;em&gt;enable&lt;/em&gt; change by the provision of a suite of &lt;em&gt;open&lt;/em&gt; data and computing services.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">So I built an electronic patient record system that’s been running since 2007. It was, as far as I am aware, the first implementation of SNOMED CT in a live clinical system. Most users have never known that SNOMED is its lingua franca, and most think it is a bespoke ‘database’ for their use, because I built multiple subject and specialty-specific “prisms” through which to see, what is essentially, a single record.</summary></entry><entry><title type="html">Building a ‘neuro-rehabilitation database’</title><link href="https://www.wardle.org/strategy/2020/07/31/solving-problems-by-composition.html" rel="alternate" type="text/html" title="Building a 'neuro-rehabilitation database'" /><published>2020-07-31T16:15:15+01:00</published><updated>2020-07-31T16:15:15+01:00</updated><id>https://www.wardle.org/strategy/2020/07/31/solving-problems-by-composition</id><content type="html" xml:base="https://www.wardle.org/strategy/2020/07/31/solving-problems-by-composition.html">&lt;p&gt;I built an electronic patient record and it’s been quite successful. It’s taught me a great deal about how to recognise how to modularise and decouple different data and software components. It’s been running since 2009 and is in live use.&lt;/p&gt;
 
 &lt;p&gt;It’s a large project, and I can’t conceive of everything in one go, so even though I’m the only developer, adopting an architecture that enables modularity, adaptability and flexibility is important.&lt;/p&gt;
 
@@ -92,7 +122,7 @@
 
 &lt;p&gt;&lt;img src=&quot;/images/neurorehab/understand-and-improve-data.png&quot; alt=&quot;Understand And Improve Data&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Not only do the team get to see who is in the cohort without a current assessment, but also stratify based on location and status, the screen updating as different criteria are chosen.&lt;/p&gt;
+&lt;p&gt;Not only do the team get to see who is in the cohort without a current assessment, but also stratify based on location and status, the screen updating as different criteria are chosen.  If the team want even greater flexibility, they can download a spreadsheet of data, by default with patient identifiable information removed.&lt;/p&gt;
 
 &lt;p&gt;This took just about six hours to go from inception to deployment, mainly because I’m able to simply stitch together foundational components to solve specific problems.&lt;/p&gt;
 
@@ -284,9 +314,8 @@ they reflect central reporting requirements and act as a classification system r
 
 &lt;p&gt;It’s written in Clojure, a lisp than runs on the Java virtual machine (JVM). It makes it very easy to do coding in an exploratory way. This is my first live-coding blog in Clojure. It’s an experiment to show how easy it is to map between identifiers if we have our classifications published in a machine readable format with appropriate namespacing.&lt;/p&gt;
 
-&lt;div class=&quot;language-clojure highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;ns&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;com.eldrix.janus.standards&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-clojure highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;ns&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;com.eldrix.janus.standards&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h1 id=&quot;a-worked-example-triage-category&quot;&gt;A worked example: triage category&lt;/h1&gt;
 
@@ -299,7 +328,7 @@ they reflect central reporting requirements and act as a classification system r
 &lt;p&gt;One job for data standards is to define publicly accessible namespaces and their values.
 This means that &lt;code class=&quot;highlighter-rouge&quot;&gt;https://data.standards.cymru/Id/datasets/edss/triage|02&lt;/code&gt; will be “very urgent”. It’s impossible to process the code “02” by itself - you have to have insider knowledge of a table structure and what it means. Namespacing codes means that they can standalone and be interpreted appropriately. I’ve made up that namespace - but these need to be published well-known namespaces.&lt;/p&gt;
 
-&lt;div class=&quot;language-clojure highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;datasets&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;div class=&quot;language-clojure highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;datasets&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;These are the NHS Wales data dictionary datasets. 
   See http://www.datadictionary.wales.nhs.uk
   Ideally these should be imported from a machine-readable source, 
@@ -337,8 +366,7 @@ This means that &lt;code class=&quot;highlighter-rouge&quot;&gt;https://data.sta
                              &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:id&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;          &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;06&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
                               &lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:active&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;      &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
                               &lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:description&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;See and Treat&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}]}}}})&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;This is a fragment of the larger dataset, and only includes the triage categories. The code below works for other defined categories in other datasets within the NHS Wales information standards catalogue.&lt;/p&gt;
 
@@ -348,7 +376,7 @@ This means that &lt;code class=&quot;highlighter-rouge&quot;&gt;https://data.sta
 
 &lt;p&gt;Clojure allows arbitrary structures to be used as keys and values in associative arrays (also called dictionaries or hash-maps). This means I use tuples here as a key to permit toy lookup functionality. This doesn’t provide real ontological inference - only providing equivalence.&lt;/p&gt;
 
-&lt;div class=&quot;language-clojure highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;defn&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;categories-&amp;gt;ns&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;div class=&quot;language-clojure highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;defn&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;categories-&amp;gt;ns&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Convert a list of categories into namespaced identifiers&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cats&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prefix&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:namespace&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cats&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -376,65 +404,59 @@ This means that &lt;code class=&quot;highlighter-rouge&quot;&gt;https://data.sta
   &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id1&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;reg-equiv-asymm&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id1&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;reg-equiv-asymm&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id2&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;So now we can process our machine-readable dataset, and simply register that one identifier from one classification or terminology is equivalent to another. Let’s do that now for our triage category. In a real production system, we’d use a service that provided an abstract ontological service and could provide an inference engine off-the-shelf.&lt;/p&gt;
 
-&lt;div class=&quot;language-clojure highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;defn&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reg-datasets-snomed&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;div class=&quot;language-clojure highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;defn&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reg-datasets-snomed&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Register SNOMED maps for the value sets (categories) from the items 
   in the datasets&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;datasets&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;doall&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;-&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;all-identifiers&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;datasets&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
               &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;reg-equiv&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:system&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:system&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:value&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:value&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:system&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://snomed.info/sct&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:value&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:info.snomed/sct&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)})))))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;We’ve registered a symmetric map between SNOMED CT and the dataset definitions from the NHS Wales information standards. Real ontologies provide many more options to define relationships between identifiers.&lt;/p&gt;
 
 &lt;p&gt;Let’s double check that this works by round-tripping between our triage identifier and SNOMED CT and back&lt;/p&gt;
 
-&lt;div class=&quot;language-clojure highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;reg-datasets-snomed&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;datasets&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;get-in&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;registry&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:system&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://data.standards.cymru/Id/datasets/edss/triage&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:value&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;05&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://snomed.info/sct&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;;;-&amp;gt; returns =&amp;gt; {:system &quot;https://snomed.info/sct&quot;, :value 1077251000000100}
-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;get-in&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;registry&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:system&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://snomed.info/sct&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:value&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1077251000000100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://data.standards.cymru/Id/datasets/edss/triage&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;;; -&amp;gt; returns =&amp;gt; {:system &quot;https://data.standards.cymru/Id/datasets/edss/triage&quot;, :value &quot;05&quot;}
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-clojure highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;reg-datasets-snomed&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;datasets&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;get-in&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;registry&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:system&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://data.standards.cymru/Id/datasets/edss/triage&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:value&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;05&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://snomed.info/sct&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;;;-&amp;gt; returns =&amp;gt; {:system &quot;https://snomed.info/sct&quot;, :value 1077251000000100}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;get-in&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;registry&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:system&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://snomed.info/sct&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:value&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1077251000000100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://data.standards.cymru/Id/datasets/edss/triage&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;;; -&amp;gt; returns =&amp;gt; {:system &quot;https://data.standards.cymru/Id/datasets/edss/triage&quot;, :value &quot;05&quot;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;That means we can build an ‘alias’ system, taking arbitrary collections of identifiers and expanding/denormalising into all of the registered codesystems we know. In a real implementation, we’d recursively expand identifiers so we could alias all equivalent identifiers.&lt;/p&gt;
 
-&lt;div class=&quot;language-clojure highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;defn&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;expand-identifier&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;div class=&quot;language-clojure highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;defn&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;expand-identifier&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Determine the equivalent identifiers for the specified identifier tuple&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;hash-map&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
     &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;flatten&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
-      &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;conj&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;-&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;vals&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;registry&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:system&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:value&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;conj&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;-&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;vals&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;registry&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:system&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:value&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
                  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;vector&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:system&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:value&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;So let’s check it works. Here we expand a single identifier tuple:&lt;/p&gt;
 
-&lt;div class=&quot;language-clojure highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;expand-identifier&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://data.standards.cymru/Id/datasets/edss/triage&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;05&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;;;  =&amp;gt; {&quot;https://snomed.info/sct&quot; 1077251000000100, &quot;https://data.standards.cymru/Id/datasets/edss/triage&quot; &quot;05&quot;}
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-clojure highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;expand-identifier&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://data.standards.cymru/Id/datasets/edss/triage&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;05&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;;;  =&amp;gt; {&quot;https://snomed.info/sct&quot; 1077251000000100, &quot;https://data.standards.cymru/Id/datasets/edss/triage&quot; &quot;05&quot;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;And we can send in arbitrary identifiers which will be ignored if there are no expansions&lt;/p&gt;
 
-&lt;div class=&quot;language-clojure highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;merge&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;-&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:name&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;This won't be mapped&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;div class=&quot;language-clojure highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;merge&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;-&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:name&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;This won't be mapped&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
                      &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://data.standards.cymru/Id/datasets/edss/triage&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;05&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
                      &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://data.standards.cymru/Id/datasets/edss/other&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;N/A&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
                     &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;expand-identifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;;; =&amp;gt;
-;{&quot;https://snomed.info/sct&quot; 1077251000000100,
-; :name &quot;This won't be mapped&quot;,
-; &quot;https://data.standards.cymru/Id/datasets/edss/triage&quot; &quot;05&quot;,
-; &quot;https://data.standards.cymru/Id/datasets/edss/other&quot; &quot;N/A&quot;}
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;;; =&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;;{&quot;https://snomed.info/sct&quot; 1077251000000100,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;; :name &quot;This won't be mapped&quot;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;; &quot;https://data.standards.cymru/Id/datasets/edss/triage&quot; &quot;05&quot;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;; &quot;https://data.standards.cymru/Id/datasets/edss/other&quot; &quot;N/A&quot;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;So we can use these functions to build maps between arbitrary value sets in both classification and terminology systems - we could add an arbitrary map to another terminology or classification&lt;/p&gt;
 
@@ -456,37 +478,34 @@ This means that &lt;code class=&quot;highlighter-rouge&quot;&gt;https://data.sta
 
 &lt;p&gt;In this simple proof-of-concept, let’s register the equivalence of the semantics manually. In a real-life application, we’d download the HL7 FHIR definitions in machine-readable formats and process accordingly in our inference engine.&lt;/p&gt;
 
-&lt;div class=&quot;language-clojure highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;reg-equiv&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
+&lt;div class=&quot;language-clojure highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;reg-equiv&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
     &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:system&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://hl7.org/fhir/v3/ActPriority&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:value&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;UR&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
     &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:system&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://data.standards.cymru/Id/datasets/edss/triage&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:value&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;03&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Now that means we can take FHIR identifiers and turn them into what we need. Notice we turn a FHIR ‘UR’ code into an NHS Wales emergency triage “03” code.&lt;/p&gt;
 
-&lt;div class=&quot;language-clojure highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;div class=&quot;language-clojure highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;expand-identifier&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://hl7.org/fhir/v3/ActPriority&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;UR&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;;; =&amp;gt; {&quot;https://data.standards.cymru/Id/datasets/edss/triage&quot; &quot;03&quot;,
-;;     &quot;http://hl7.org/fhir/v3/ActPriority&quot; &quot;UR&quot;}
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;;; =&amp;gt; {&quot;https://data.standards.cymru/Id/datasets/edss/triage&quot; &quot;03&quot;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;;;     &quot;http://hl7.org/fhir/v3/ActPriority&quot; &quot;UR&quot;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;We can do it in reverse as part of a collection of different identifiers:&lt;/p&gt;
 
-&lt;div class=&quot;language-clojure highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;merge&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;-&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:name&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;                                                  &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;This won't be mapped&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;div class=&quot;language-clojure highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;merge&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;-&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:name&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;                                                  &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;This won't be mapped&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
                      &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://data.standards.cymru/Id/datasets/edss/triage&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;03&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
                      &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://data.standards.cymru/Id/datasets/edss/other&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;N/A&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
                     &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;expand-identifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;;; =&amp;gt;
-;{&quot;https://snomed.info/sct&quot; 1064901000000108,
-; :name &quot;This won't be mapped&quot;,
-; &quot;https://data.standards.cymru/Id/datasets/edss/triage&quot; &quot;03&quot;,
-; &quot;http://hl7.org/fhir/v3/ActPriority&quot; &quot;UR&quot;,
-; &quot;https://data.standards.cymru/Id/datasets/edss/other&quot; &quot;N/A&quot;}
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;;; =&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;;{&quot;https://snomed.info/sct&quot; 1064901000000108,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;; :name &quot;This won't be mapped&quot;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;; &quot;https://data.standards.cymru/Id/datasets/edss/triage&quot; &quot;03&quot;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;; &quot;http://hl7.org/fhir/v3/ActPriority&quot; &quot;UR&quot;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;; &quot;https://data.standards.cymru/Id/datasets/edss/other&quot; &quot;N/A&quot;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;And that means we can now do logic such as asking, was this an urgent category and it doesn’t matter whether the information is encoded in SNOMED CT, the NHS Wales information standard or HL7 FHIR.&lt;/p&gt;
 
@@ -1034,102 +1053,4 @@ This means that &lt;code class=&quot;highlighter-rouge&quot;&gt;https://data.sta
 
 &lt;p&gt;We need to reboot the work on linked data and ontologies and use that in health and care. All of this work should be open-source, because semantically-meaningful data and ontologies are the way we should be building health and care software fit for the 21st Century.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">I’ve been off work, off blogging and off Twitter due to COVID-19 but fortunately now back to full health and thought I’d write up some notes about what I’ve been doing in my spare time outside of my day job doing telephone clinics and COVID ward duties.</summary></entry><entry><title type="html">Coherence in governance</title><link href="https://www.wardle.org/strategy/2019/12/21/coherent-governance.html" rel="alternate" type="text/html" title="Coherence in governance" /><published>2019-12-21T09:00:00+00:00</published><updated>2019-12-21T09:00:00+00:00</updated><id>https://www.wardle.org/strategy/2019/12/21/coherent-governance</id><content type="html" xml:base="https://www.wardle.org/strategy/2019/12/21/coherent-governance.html">&lt;p&gt;Our ability to adopt, deploy and improve technology is fundamental in our mission to build a health and care system that works seamlessly, for patients, families and staff.&lt;/p&gt;
-
-&lt;p&gt;That means building services that span organisational, disciplinary, geographical and care boundaries so that, for example, as a patient, you don’t receive an appointment for clinic at the same time as your appointment for an x-ray.&lt;/p&gt;
-
-&lt;p&gt;We &lt;em&gt;must&lt;/em&gt; step back and re-imagine how health and care services can work with the technology now at our disposal, and that means focusing on the &lt;em&gt;outcomes&lt;/em&gt; we wish to deliver. One unifying outcome must surely be to create a truly &lt;em&gt;seamless service&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;So what must be our priorities in order to create such a &lt;em&gt;seamless services&lt;/em&gt;?&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;We need an unerring focus on &lt;em&gt;user need&lt;/em&gt;, so that we design services that fundamentally put the patient at the centre and design through that perspective rather than one focused through the prism of an a single organisation or department.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;We must improve our ability to adopt and deploy technology, by adopting best practices such as modularisation. Modularisation is the process in which a large problem is broken-up into smaller sized chunks, making it possible for a small team to fully understand the problem and fully own the solution to that problem, and permit rapid delivery by enabling parallel working and minimising the need for constant interaction and checking between those teams that would otherwise slow down our ability to continuously iterate and improve.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;We must recognise the benefit of bringing diverse skills, experience and perspectives together to form cross-functional, multi-disciplinary teams who are trusted and empowered to understand and to solve these bite-sized problems. We need to avoid creating silos based on organisation, discipline or historic boundaries and instead understand ‘team-first’ boundaries aligned to business domains.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;We must prioritise &lt;em&gt;meaningful data&lt;/em&gt;, and regard data and the computing services that operate on those data as first-class products that, when combined together, form a &lt;em&gt;cohesive&lt;/em&gt; open platform. Such work must be enabled by the adoption of open technical standards to define application programming interfaces (APIs) that act as technical contracts between those services.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&quot;coherence-logical-and-consistent&quot;&gt;Coherence: “Logical and consistent”&lt;/h1&gt;
-
-&lt;p&gt;If we want our work in technology to be logical and consistent, we must have an overall strategic vision which sets out, openly and transparently, a set of high-level broad principles and the rules, &lt;em&gt;guard-rails&lt;/em&gt; and design patterns that we will all use.&lt;/p&gt;
-
-&lt;p&gt;It’s very easy to think that consistency can only be achieved by managing complex technology programmes with a centralised &lt;em&gt;command-and-control&lt;/em&gt; approach. Such an approach is naive.&lt;/p&gt;
-
-&lt;p&gt;Instead we must look to devolve power from the centre while maintaining overall coherence by setting the broad direction.&lt;/p&gt;
-
-&lt;p&gt;We should be:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“Crossing the river by feeling the stones”&lt;/p&gt;
-
-  &lt;p&gt;Deng Xiaoping&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;And that means &lt;em&gt;empowering&lt;/em&gt; teams, to deliver, at pace and incrementally, by a range of measures including&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;being clear on overall strategic direction&lt;/li&gt;
-  &lt;li&gt;understanding that the most difficult part of technology is not the technology itself, but the management of change -  in people, behaviour and the work itself that our best technology can empower&lt;/li&gt;
-  &lt;li&gt;deciding on &lt;em&gt;appropriate&lt;/em&gt; modularisation and creating teams to deliver those products&lt;/li&gt;
-  &lt;li&gt;aligning our governance, architecture and standards into a cohesive whole.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Governance structures, technical architecture and technical standards are mutually dependent; for example it is not possible to define coherent governance without understanding the technical architecture to which we aspire.&lt;/p&gt;
-
-&lt;h1 id=&quot;a-matrix-of-coherence&quot;&gt;A matrix of coherence&lt;/h1&gt;
-
-&lt;p&gt;We need consistency across multiple domains. One way of thinking about structuring a coherent strategy is to consider two broad types of domain:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Business domains, aligning to business problems and their solutions.&lt;/li&gt;
-  &lt;li&gt;Functional domains, aligning to technology problems and their solutions&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;A business domain is a specific, tangible business problem, such as citizen identity. That problem might be solved through the provisioning of a range of coherent products, some bought off-the-shelf such as an enterprise master patient index, and some developed in-house, such as a microservice that acts to cache identity updates and provide a canonical authoritative source of demographics information via a FHIR Patient resource. It makes no sense to procure or develop products or services that aren’t &lt;em&gt;coherent&lt;/em&gt; with other products in this domain. &lt;sup&gt;&lt;a href=&quot;#results-requests&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; Domain-driven design is about designing data and computing services based on models of the business domain itself, with &lt;em&gt;bounded contexts&lt;/em&gt; a unit for breaking up a larger domain into smaller parts.&lt;/p&gt;
-
-&lt;p&gt;A functional domain is a specific, tangible technology domain, such as security engineering, system reliability engineering, infrastructure management, operations and user-centred design. Similarly, it will usually make little sense to not have a consistent approach to these core functional domains across a wider enterprise, although good judgement is needed to understand when to deviate in order to solve a specific problem.&lt;/p&gt;
-
-&lt;p&gt;This schematic shows business domains orientated vertically, and functional domains orientated horizontally as representing a set of coherent services providing an &lt;em&gt;open platform&lt;/em&gt; on which applications can run, with the use of an API gateway and a coherent scheme for authentication and authorisation on a per-application, per-user basis:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/domains-functional-and-business.png&quot; alt=&quot;Domains Functional And Business&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;This approach should make it obvious that building security and logging at an application-level, as is currently the case in Wales, is a mistake, and data and computing services should be first-class products exposing their data and functionality through open service interfaces, via APIs.&lt;/p&gt;
-
-&lt;h1 id=&quot;towards-technical-excellence---and-coherence-within-and-across-functional-domains&quot;&gt;Towards technical excellence - and coherence within and across functional domains&lt;/h1&gt;
-
-&lt;p&gt;Similarly, we need to aspire to technical excellence, with lead roles for experts in engineering and design, including security, software development, operations, infrastructure, standards and architecture, able to take a coherent “all-Wales” view and provide, openly and transparently, a set of guidelines and principles and design patterns that will shape our currently prioritised programmes of work.&lt;/p&gt;
-
-&lt;p&gt;That means we need a separate programme of work to build and reward technical capability within health and care in Wales; for too long, the only way experienced engineers could progress was in management, and we have too many engineering teams led by managers with no technical skills or experience. Part of the blame must lie with the pay-scales within Agenda for Change.&lt;/p&gt;
-
-&lt;p&gt;It is convenient to think of technical experts grouped into guilds or tribes, sharing good practice and helping to contribute, openly and transparently, to a range of principles, standards and design patterns for their specific domain; such work providing core principles, design blueprints and support for programmes and the teams working on solving domain problems.&lt;/p&gt;
-
-&lt;p&gt;Such an approach doesn’t mean top-down control or even homogeneity. We must recognise that experts will need to deviate and innovate in order to solve real-life problems, and use that experience to feedback, inform and improve the guiding principles which we can all use. Through this, we build a continuously learning approach to technology. It is unlikely that a single technology stack or programming language would be appropriate across a complex system such as health and care, but we must endeavour to share good practice and harmonise our general approach.&lt;/p&gt;
-
-&lt;p&gt;This matrix approach to governance is shown in the following schematic:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/coherent-governance.png&quot; alt=&quot;Coherent Governance&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The important features are:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Long-lived but small cross-functional product teams&lt;/li&gt;
-  &lt;li&gt;Multiple products grouped into dynamic and flexible programmes, created to meet our current and pending priorities.&lt;/li&gt;
-  &lt;li&gt;Data and computing services as first-class products, creating an &lt;em&gt;open platform&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;Functional domain experts providing all-Wales high-level principles, standards and design patterns on their domain, such as security, infrastructure, architecture and design as well as contributing to product teams when appropriate.&lt;/li&gt;
-  &lt;li&gt;High-level overview board providing core high-level principles and oversight as well as responsibility for redefining the dynamic programme structure based on present needs, with membership drawn from clinical, managerial and technical experts.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;We’ve already started some of this work via the Welsh Technical Standards Board; we have &lt;a href=&quot;https://standards.cymru/posts/2018-06-19-wtsb/&quot;&gt;adopted the GDS design principles&lt;/a&gt;, published our own &lt;a href=&quot;https://standards.cymru/posts/2018-12-01-wtsb/&quot;&gt;working principles&lt;/a&gt; and have submitted our &lt;a href=&quot;https://standards.cymru/posts/2019-10-29-architectural-principles/&quot;&gt;architectural principles&lt;/a&gt; for review. Through this, we want to inculcate debate, feedback and so transform our approach to health and care in Wales.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h1&gt;
-&lt;p&gt;&lt;a name=&quot;results-requests&quot;&gt;1&lt;/a&gt;: We currently have an example in Wales in which a re-procurement of a laboratory management system is in one programme of work, and re-procurement of a radiology information system is in another. Both are considering including “test requesting” functionality and yet, for end-users, we want a seamless system that, in clinic or on the ward, allows us to request multiple &lt;em&gt;things&lt;/em&gt; including referrals, laboratory, radiology and other tests. We don’t want separate “systems” but instead what appears to be a streamlined “single system”. Therefore, programmes of work need to be framed with user need; one logical approach might be to consider “results and requests” as a business programme to manage a suite of products, that would include concierge services that take user requests and farm them to our different backend systems via APIs, as well as managing the re-procurement of laboratory and radiology services.&lt;/p&gt;</content><author><name></name></author><summary type="html">Our ability to adopt, deploy and improve technology is fundamental in our mission to build a health and care system that works seamlessly, for patients, families and staff.</summary></entry></feed>
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">I’ve been off work, off blogging and off Twitter due to COVID-19 but fortunately now back to full health and thought I’d write up some notes about what I’ve been doing in my spare time outside of my day job doing telephone clinics and COVID ward duties.</summary></entry></feed>
