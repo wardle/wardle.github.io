@@ -167,6 +167,19 @@ or “actions” than the data models I subsequently use in order to make sense 
 
 <p><em>Mark</em></p>
 
+<hr />
+
+<p>PS You can see an example of what I’m doing on this twitter thread:</p>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Graph queries across distributed heterogeneous patient data make run-time analytics and inference magically easily. Here I issue a query - a bit like SQL - for some patient data for patient 17490 - I’m asking for attributes but something special is happening. What is this doing? <a href="https://t.co/HWapS8xpRi">pic.twitter.com/HWapS8xpRi</a></p>&mdash; Mark Wardle (@mwardle) <a href="https://twitter.com/mwardle/status/1394734211194621962?ref_src=twsrc%5Etfw">May 18, 2021</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>I can query for data across multiple disparate (and potentially distributed) backend services - using a variety of first-class property abstractions - in this example, the HL7 FHIR model, the organization ontology model, the UK NHS postal code / geography model, the SNOMED CT model and the UK dm+d model.</p>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">We can even trace what is happening here. The backend - orchestrated by <a href="https://twitter.com/wilkerlucio?ref_src=twsrc%5Etfw">@wilkerlucio</a> ’s graph API library, and my own individual microservices is firstly getting the AMPs, and then in parallel fetching the data on each of them. 72 ms. <a href="https://t.co/jAGn52DLSW">pic.twitter.com/jAGn52DLSW</a></p>&mdash; Mark Wardle (@mwardle) <a href="https://twitter.com/mwardle/status/1394748443839672326?ref_src=twsrc%5Etfw">May 18, 2021</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>In this example, SNOMED CT lacks the concrete data about the amount of each ingredient, so my query walks across both SNOMED CT and the UK dictionary of medicines and devices (dm+d) and gets the amount of each ingredient and then helps to understand each ingredient by using the ontological relationships in SNOMED CT on dm+d data. Here my query across reference data is quite different to the data models used to write those data from the canonical, authoritative sources.</p>
 
   </div>
 
