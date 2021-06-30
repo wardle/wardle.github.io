@@ -1,5 +1,74 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2021-06-30T16:04:40+01:00</updated><id>https://www.wardle.org/feed.xml</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
-</subtitle><entry><title type="html">The dependencies between architecture, governance and standards.</title><link href="https://www.wardle.org/ehr/2021/06/30/dependency-conway.html" rel="alternate" type="text/html" title="The dependencies between architecture, governance and standards." /><published>2021-06-30T07:07:08+01:00</published><updated>2021-06-30T07:07:08+01:00</updated><id>https://www.wardle.org/ehr/2021/06/30/dependency-conway</id><content type="html" xml:base="https://www.wardle.org/ehr/2021/06/30/dependency-conway.html">&lt;p&gt;I &lt;a href=&quot;/ehr/2019/11/08/learning-from-creating-an-ehr.html&quot;&gt;built an electronic health record and along the way learnt a lot&lt;/a&gt; about how to think about the importance of medical records and &lt;em&gt;data&lt;/em&gt; in my day-to-day work as a practising clinician, manager and researcher.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2021-06-30T17:12:07+01:00</updated><id>https://www.wardle.org/feed.xml</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</subtitle><entry><title type="html">A mistake at REST</title><link href="https://www.wardle.org/ehr/2021/06/30/mistakes-at-rest.html" rel="alternate" type="text/html" title="A mistake at REST" /><published>2021-06-30T16:07:08+01:00</published><updated>2021-06-30T16:07:08+01:00</updated><id>https://www.wardle.org/ehr/2021/06/30/mistakes-at-rest</id><content type="html" xml:base="https://www.wardle.org/ehr/2021/06/30/mistakes-at-rest.html">&lt;p&gt;The HL7 FHIR standard provides a useful model of health and care information, but it is a specification from which a local standard can be built via &lt;em&gt;profiling&lt;/em&gt;. It defines models of data and a specification for how to exchange those data via an architectural pattern called representational state transfer (REST). While there are other ways that data in HL7 FHIR can be exchanged, using REST as an architectural pattern means that software using HL7 FHIR for data exchange will read and write to &lt;em&gt;resources&lt;/em&gt; that represent something in the health and care domain.&lt;/p&gt;
+
+&lt;p&gt;You can read about the RESTful aspects of HL7 FHIR in more detail on the &lt;a href=&quot;https://www.hl7.org/fhir/http.html&quot;&gt;official HL7 FHIR website&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The semantics of that architectural pattern are of reading, or writing, deleting or searching, or doing something else to a resource.&lt;/p&gt;
+
+&lt;p&gt;The problem is that health care doesn’t use that semantic pattern.&lt;/p&gt;
+
+&lt;h1 id=&quot;read-and-write-semantics&quot;&gt;Read and write semantics&lt;/h1&gt;
+
+&lt;p&gt;Medical records are immutable. As I &lt;a href=&quot;/images/cis_design/cis_design.pdf&quot;&gt;wrote in 2017&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+
+  &lt;p&gt;Immutability refers to an approach to software engineering in which data are unchangeable. 
+Such an approach is particularly suitable when considering medical
+records and processes. Indeed, from a medico-legal perspective, all data should
+be regarded as immutable as it is usually necessary to be able to view the state of
+the record at any point in time.&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;/images/cis_design/cis_design.pdf&quot;&gt;Section 5.11, Clinical information system design : Mark Wardle, 2017&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Our paper records accumulate. They accrete.&lt;/p&gt;
+
+&lt;p&gt;We don’t rip out old information.&lt;/p&gt;
+
+&lt;p&gt;New records update and take the place of older records in our &lt;em&gt;decision-making&lt;/em&gt;, but those
+older records still exist.&lt;/p&gt;
+
+&lt;p&gt;Of course, most implementations will not actually delete data when when we issue a DELETE against a resource. 
+For example, if we issue a DELETE against a resource representing an organisation in our health and care environment, 
+the underlying software is likely to effect that change by simply marking that organisation as deleted.&lt;/p&gt;
+
+&lt;p&gt;So what’s the issue?&lt;/p&gt;
+
+&lt;p&gt;It’s that thinking that the &lt;em&gt;model&lt;/em&gt; of data that we use to examine, process and make sense of a health and care record 
+is the same as the one that might populate that medical record in the first place.&lt;/p&gt;
+
+&lt;h1 id=&quot;different-models-for-reading-and-writing&quot;&gt;Different models for reading and writing&lt;/h1&gt;
+
+&lt;p&gt;The problem is that the modelling of information used for reading is widely different to that information we record
+as a consequence of the processes of care.&lt;/p&gt;
+
+&lt;p&gt;The medical record is not simply a record, but a working &lt;em&gt;tool&lt;/em&gt; that helps professionals and patients make sense and
+reduce the uncertainty about a decision, whether that decision is about an individual patient (shall I have that procedure?),
+a clinical service (how do we configure our service to best improve outcomes?) or for research (what new knowledge can we gain?).&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“You’re a victim of it or a triumph because of it. The human mind
+simply cannot carry all the information without error so the record
+becomes part of your practice.”
+&lt;a href=&quot;https://www.youtube.com/watch?v=qMsPXSMTpFI&quot;&gt;Dr Larry Weed, Internal Medicine Grand Rounds, 1971&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In other complex domains, a pattern of command query responsibility separation (CQRS) has been used in which
+the information models of querying (reading) data are separate from those of creating data.&lt;/p&gt;
+
+&lt;p&gt;I would argue that for many situations in health and care, we should build quite different data models for issuing “commands” 
+or “actions” than the data models I subsequently use in order to make sense of the record.&lt;/p&gt;
+
+&lt;p&gt;We should move away from REST semantics towards separating how we think about commands from how we think about queries.&lt;/p&gt;
+
+&lt;p&gt;For example, I &lt;em&gt;prescribe&lt;/em&gt; a drug (an action) and that data model, that domain event, is used to populate a view (a query) of all recently prescribed drugs and provide a flattened ‘view’ of a medication list based on those actions. I am not reading and writing a medication list, but the list is built as a consequence of the actions.&lt;/p&gt;
+
+&lt;p&gt;This approach scales well to the medical record, because the medical record should be dominated by &lt;em&gt;reads&lt;/em&gt;. That means it is very easy to optimise reading and processing of data differently to the systems that handle writing.&lt;/p&gt;
+
+&lt;p&gt;It also simplifies our data modelling work - because we can build clinical data models that focus on workflow and process (our actions), and then separately conceive of the best ways to make sense and view the logical record - quite rightly through different ‘prisms’ depending on need.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">The HL7 FHIR standard provides a useful model of health and care information, but it is a specification from which a local standard can be built via profiling. It defines models of data and a specification for how to exchange those data via an architectural pattern called representational state transfer (REST). While there are other ways that data in HL7 FHIR can be exchanged, using REST as an architectural pattern means that software using HL7 FHIR for data exchange will read and write to resources that represent something in the health and care domain.</summary></entry><entry><title type="html">The dependencies between architecture, governance and standards.</title><link href="https://www.wardle.org/ehr/2021/06/30/dependency-conway.html" rel="alternate" type="text/html" title="The dependencies between architecture, governance and standards." /><published>2021-06-30T07:07:08+01:00</published><updated>2021-06-30T07:07:08+01:00</updated><id>https://www.wardle.org/ehr/2021/06/30/dependency-conway</id><content type="html" xml:base="https://www.wardle.org/ehr/2021/06/30/dependency-conway.html">&lt;p&gt;I &lt;a href=&quot;/ehr/2019/11/08/learning-from-creating-an-ehr.html&quot;&gt;built an electronic health record and along the way learnt a lot&lt;/a&gt; about how to think about the importance of medical records and &lt;em&gt;data&lt;/em&gt; in my day-to-day work as a practising clinician, manager and researcher.&lt;/p&gt;
 
 &lt;p&gt;At the end of that talk (and post), I touched on the importance of building &lt;em&gt;capability&lt;/em&gt; : in data and the software that use those data - to deliver the outcomes we want in health and care. But what does that mean? What are the capabilities that we need to build, specifically?&lt;/p&gt;
 
@@ -683,116 +752,4 @@ This means that &lt;code class=&quot;highlighter-rouge&quot;&gt;https://data.sta
 
 &lt;p&gt;And that’s why platform-thinking is fundamental to building the next generation of health and care software. We need to “do the hard work to make it simple.”&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Complexity in health and care software derives from:</summary></entry><entry><title type="html">There’s more than one side to every story</title><link href="https://www.wardle.org/strategy/2020/06/21/more-than-one-side.html" rel="alternate" type="text/html" title="There’s more than one side to every story" /><published>2020-06-21T20:00:00+01:00</published><updated>2020-06-21T20:00:00+01:00</updated><id>https://www.wardle.org/strategy/2020/06/21/more-than-one-side</id><content type="html" xml:base="https://www.wardle.org/strategy/2020/06/21/more-than-one-side.html">&lt;p&gt;Historically, data capture in health and care has been driven by the requirements of central data returns, permitting management and government to examine and monitor a specific health policy area. Information standards are very important in ensuring organisations feed the right information back in the right format so that the data are interpretable.&lt;/p&gt;
-
-&lt;p&gt;An example of a data set is the emergency unit data set ( &lt;a href=&quot;https://digital.nhs.uk/data-and-information/data-collections-and-data-sets/data-sets/emergency-care-data-set-ecds&quot;&gt;NHS England&lt;/a&gt; and  &lt;a href=&quot;http://www.datadictionary.wales.nhs.uk/#!WordDocuments/emergencydepartmentdatasetedds.htm&quot;&gt;NHS Wales&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;All organisations are expected to return data on attendances at the emergency department including diagnostic category, level of triage (urgency) and onward destination.&lt;/p&gt;
-
-&lt;p&gt;There’s a similar requirement for &lt;a href=&quot;http://www.datadictionary.wales.nhs.uk/index.html#!WordDocuments/outpatientdatasetopds.htm&quot;&gt;outpatient clinics.&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Knowing the format of the data to be returned, how it is to be coded and how and when to return data are all important but there are also rules and definitions which must be followed. That’s the job of information standards and therefore, historically, the principal customer of information standards has been central data reporting. Those users have requested standards, they’re discussed and then set, usually by publishing a &lt;a href=&quot;http://www.nwisinformationstandards.wales.nhs.uk/data-set-change-notices.&quot;&gt;‘data standards change notice’&lt;/a&gt;. A new government policy or a problem affecting policy teams results in a new requirement for data reporting with either a new information standard or an update to an existing standard.&lt;/p&gt;
-
-&lt;p&gt;It’s easy to see the consequences in clinical practice. There are byzantine rules relating to my outpatient clinics to which I am only dimly aware and forms to fill in that have little to do with the patient in front of me and everything to do with the requirements of the wider system. They’re important, but they’re but one facet of the clinical encounter. In many situations there is considerable overlap with the needs of direct care and that of management, at least semantically, but sometimes the categories are simply too coarse or the rules don’t keep up with change.&lt;/p&gt;
-
-&lt;p&gt;For example, this is from the outpatient dataset definition:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“
-	An appointment cannot be counted unless the patient actually attends
-“
-&lt;a href=&quot;http://www.datadictionary.wales.nhs.uk/index.html#!WordDocuments/outpatientattendances.htm&quot;&gt;http://www.datadictionary.wales.nhs.uk/index.html#!WordDocuments/outpatientattendances.htm&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;So what has happened to the telephone appointments I’ve done for years?&lt;/p&gt;
-
-&lt;p&gt;Well, fortunately, an update has been made &lt;a href=&quot;http://www.nwisinformationstandards.wales.nhs.uk/sitesplus/documents/299/20200206%2DDSCN%202020%2001%2DOutpatient%20Virtual%20Activity%2DPhase%20One%2Dv1%2D1.pdf&quot;&gt;this year&lt;/a&gt; so that virtual reviews are now part of the submission, with three categories - ‘face-to-face’, ‘virtual with patient contact’, and ‘virtual with no patient contact’. Information technology teams will be adding these data fields to administrative systems so that these returns can be made in this altered form.&lt;/p&gt;
-
-&lt;p&gt;Central data requirements are important and valuable in running the wider health system but it is commonly the case that those requirements define the operational requirements and design of clinical systems instead of being recognised as simply another prism through which to view the patient record. It’s important when designing clinical systems to understand the uses of data, for all needs.&lt;/p&gt;
-
-&lt;p&gt;The the main issues with central data requirements as the basis to build clinical software are:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;they tend to result in the use of classification systems; using taxonomies makes it easier to perform analysis but they are a poor fit for the ambiguity and complexity of the real world&lt;/li&gt;
-  &lt;li&gt;they use bespoke, proprietary value-sets limiting semantic interoperability if they are used&lt;/li&gt;
-  &lt;li&gt;they can end up defining operational system data requirements&lt;/li&gt;
-  &lt;li&gt;they usually expect tabular data to make it easier to analyse but health and care data is rarely tabular. Patients have more than one diagnosis.&lt;/li&gt;
-  &lt;li&gt;the rules for central data propagate into clinical systems creating brittleness; it makes changing those rules difficult and skews our ability to use historic data acquired using different rules. How we analyse outpatient attendances over time will be difficult if telephone appointments were not returned before 2020?&lt;/li&gt;
-  &lt;li&gt;the brittleness and lack of adaptability infects other systems that need to interoperate, because without ontological defined value lists, its very difficult indeed to consume data from other systems without constant discussion between the teams that run different systems, creating coupling and reducing our ability to develop software-at-pace in parallel.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The answers to these issues are simple:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;we need clinical data that is granular and specific and that models the real-world and adapts to how it changes.&lt;/li&gt;
-  &lt;li&gt;we should use ontologies and not taxonomies for data capture&lt;/li&gt;
-  &lt;li&gt;we need tools to turn granular, specific data into categorical, easy-to-process data for central returns, policy-makers and other analytics&lt;/li&gt;
-  &lt;li&gt;we should apply rules and delay losing granularity as late as possible in our analytics, and apply them dynamically and declaratively while categorising data flexibly in response to changing requirements.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;specialty-codes&quot;&gt;Specialty codes&lt;/h1&gt;
-
-&lt;p&gt;It has been suggested that a clinical system use a list of specialties using the “standard” as defined for reporting purposes, the &lt;a href=&quot;http://www.datadictionary.wales.nhs.uk/index.html#!WordDocuments/mainspecialtyconsultant.htm&quot;&gt;“main specialty” (it used to be called the ‘treatment function code’)&lt;/a&gt;. That’s attractive, because that part of our data won’t need any transformation in order to submit those data.&lt;/p&gt;
-
-&lt;p&gt;But what about our clinical users? We’d like to help them find the information that they want, at the right time, and that means providing them tools to search perhaps thousands of clinical documents. While coding specialty to the &lt;em&gt;reporting&lt;/em&gt; standard is better than free text, we’re losing granularity.&lt;/p&gt;
-
-&lt;p&gt;Instead, the use of an ontology, such as SNOMED CT, can solve our many needs.&lt;/p&gt;
-
-&lt;p&gt;For clinical users, using an ontology means we can filter for ‘neurology’ and show ‘neurology’ letters and also ‘paediatric neurology’, while the latter will also show up in our ‘paediatric’ filter, because the ontology is more than a list of codes, as it represents the &lt;em&gt;relationships&lt;/em&gt; between those codes. Our software can use those declared relationships to extract meaning from codes, even for codes that didn’t exist when that software was written.&lt;/p&gt;
-
-&lt;p&gt;Likewise, we can exchange information with other systems that do not keep up with the DSCN and we don’t need to keep orchestrating updates to the ‘fixed’ specialty list across all components, whether developed in-house or provided by third-parties, because using an ontology provides dynamism and adaptability. I can write software now that can process specialty codes not defined at the time I wrote the code.  We create the right conditions to decouple our systems and create inherent flexibility and adaptability.&lt;/p&gt;
-
-&lt;p&gt;Decoupling is important. It may be that a new departmental system already supports the DSCN; after all the list is defined legally by the General and Specialist Medical Practice (Education, Training and Qualifications) Order 2003 and European Primary and Specialist Dental Qualifications Regulations 1998, but if not, that commercial partner will need to implement those codes. It can make procurement more difficult and more costly and fossilises the interactions between systems.&lt;/p&gt;
-
-&lt;h1 id=&quot;the-single-patient-record&quot;&gt;The single patient record.&lt;/h1&gt;
-
-&lt;p&gt;Our aspiration should be the single patient record, a multifaceted longitudinal structured record.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/prisms-record.png&quot; alt=&quot;Prisms Record&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;We must be clear that such a record can be used for a variety of purposes such as direct care, service management and improvement as well as research with the appropriate consent. The best way to design such a record is using highly granular, clinically-meaningful approach to data modelling based on open standards.&lt;/p&gt;
-
-&lt;p&gt;But I think it’s a very good idea to imagine multiple prisms through which we can see and understand that record.&lt;/p&gt;
-
-&lt;p&gt;Those prisms are dependent on your processes, workflow and needs. A patient viewing their own record needs a different prism than a civil servant modelling future emergency unit attendances. We should be annotating the results of investigation or groups of investigations with our clinical interpretation in the context of the problem at hand, just like we do via a letter at the moment. That data will need to be prioritised within the patient prism.&lt;/p&gt;
-
-&lt;p&gt;Similarly, a radiographer about to perform an MRI scan needs a different prism than a neurologist in a video consultation with a patient and family members.&lt;/p&gt;
-
-&lt;p&gt;Same data, different prisms. Different focus.&lt;/p&gt;
-
-&lt;p&gt;In the future, I hope that adaptable focus will help me identify what’s important and what’s not, but for now, ask any professional and they’ll tell you what’s the critical information they need in a given context.&lt;/p&gt;
-
-&lt;p&gt;So there’s always more than one side to every story.&lt;/p&gt;
-
-&lt;h1 id=&quot;so-what&quot;&gt;So what?&lt;/h1&gt;
-
-&lt;p&gt;So that’s why we need data and tools that make it easy to:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Model the real world, capturing granular, specific, meaningful information&lt;/li&gt;
-  &lt;li&gt;Turn such granular information into categorical information for ease of analytics&lt;/li&gt;
-  &lt;li&gt;Resolve, infer meaning from and map identifiers between different systems, classifications and ontologies&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;And that’s why I’ve been building open-source software to solve these problems:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/wardle/go-terminology&quot;&gt;go-terminology&lt;/a&gt; : If I make a diagnosis of acute disseminated encephalomyelitis (ADEM), I need my clinical system to record that specific granular diagnosis but I also need tools need to be able to categorise that diagnosis without manual intervention for service level analytics. go-terminology provides both of those capabilities using SNOMED-CT, an ontology.&lt;/li&gt;
-  &lt;li&gt;janus : a data-driven dynamic identifier resolution and mapping application programming interface / knowledge graph navigator.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/wardle/concierge&quot;&gt;concierge&lt;/a&gt; : a backend to identifier resolution and mapping services providing integration and abstractions with multiple NHS Wales services including multiple patient administrative systems, the national enterprise master patient index, the staff directory, staff authentication services and document repositories&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/wardle/clods&quot;&gt;clods&lt;/a&gt; : a backend identifier resolution/mapping service for UK NHS organisational data services and other reference data including the NHS postcode database and general practitioners across the UK&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Together, these services can dynamically resolve and map between different identifier systems helping software (and humans) ‘make sense’ of health and care data.&lt;/p&gt;
-
-&lt;p&gt;It’s why I’ve been advocating this approach within health and care in Wales for a long time.&lt;/p&gt;
-
-&lt;p&gt;Mark&lt;/p&gt;
-
-&lt;p&gt;
-  &lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Janus1.JPG/320px-Janus1.JPG&quot; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;PS. Janus is the Roman god of beginnings, gates, transitions, time, duality, doorways, passages, and endings.&lt;/p&gt;
-
-&lt;p&gt;PPS. When will clinical systems build a source of open data relating to how users interact with their software in a given context in a given patient with the problems, past and scheduled events, medication known in order to learn the &lt;em&gt;information value&lt;/em&gt; of our health and care data for decision-making? That kind of learning is just another prism, of course.&lt;/p&gt;</content><author><name></name></author><summary type="html">Historically, data capture in health and care has been driven by the requirements of central data returns, permitting management and government to examine and monitor a specific health policy area. Information standards are very important in ensuring organisations feed the right information back in the right format so that the data are interpretable.</summary></entry></feed>
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Complexity in health and care software derives from:</summary></entry></feed>
