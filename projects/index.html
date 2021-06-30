@@ -90,92 +90,50 @@
   </header>
 
   <div class="post-content">
-    <p>I currently have a range of projects, including commercial (Eldrix Ltd), academic (Cardiff University and BRAIN unit) and NHS (Cardiff and Vale, NHS Wales Informatics Service).</p>
+    <p>My current work is focused on building <em>PatientCare v4</em>.</p>
 
-<h1 id="commercial--personal-projects-via-eldrix-ltd">Commercial / personal projects (via Eldrix Ltd)</h1>
+<p>This is a distributed, scalable, cross-organisational, patient-centric electronic health and care record system that makes use of core foundational modular building blocks and a focus on <em>meaningful structured standards-based data</em>.</p>
 
-<h4 id="patientcare-epr">PatientCare EPR</h4>
+<p>The front-end software is lightweight, standards-based and focused on delivering the best user experience.</p>
 
-<p>An electronic patient record system, used across Wales, mainly in neurology. 61,045 lines of Java code supporting the care of over 20,000 patients in Wales recording over 3,000 clinical encounters every month. A web-based portal used across Wales since 2009 recording information about a range of patients with different diseases linked to clinical services and research together with diagnostic and outcome information. It uses SNOMED CT as its lingua franca. It supports many services, including:</p>
+<p>Back-end software focuses on creating a seamless single patient record by making resolution and mapping of identifiers and properties first-class, with different data models for reading and writing data. As an example, that means a client can ask for a FHIR Practitioner ‘view’ of data sourced from a X.500 / LDAP record.</p>
+
 <ul>
-  <li>Multiple sclerosis; it is the largest multiple sclerosis registry in the United Kingdom</li>
-  <li>Motor neurone disease; all patients in South Wales with motor neurone disease are registered together with longitudinal outcomes</li>
-  <li>Neuromuscular disease; all patients in Wales under the neuromuscular network</li>
-  <li>Parkinson’s disease; all patients in Cardiff and Bridgend with Parkinson’s disease and related disorders</li>
-  <li>Ataxia and movement disorders registry</li>
-  <li>All-Wales epilepsy registry as well as supporting epilepsy surgery programme</li>
-  <li>Metabolic medicine</li>
-  <li>Botulinum toxin clinics</li>
-  <li>Rare disease registries and genetics</li>
-  <li>Welsh Neurosciences Research Tissue Bank (WNRTB)</li>
+  <li><a href="https://github.com/wardle/pc4">pc4</a>: Front-end and server-side components creating an event-driven electronic health and care record. Leverages the following components:</li>
+  <li><a href="https://github.com/wardle/hermes">hermes</a>: SNOMED CT terminology server and embeddable library with support for inference, fast free-text search, crossmaps to and from other code systems, compositional grammar and the expression constraint language.</li>
+  <li><a href="https://github.com/wardle/hades">hades</a>: A HL7 FHIR SNOMED terminology server; a thin wrapper around <a href="https://github.com/wardle/hermes">hermes</a>.</li>
+  <li><a href="https://github.com/wardle/clods">clods</a>: Geographical data support including NHS organisational data services and UK postcode data. Library, REST server and HL7 FHIR server.</li>
+  <li><a href="https://github.com/wardle/concierge">concierge</a>: Integration engine for common NHS backend services providing a set of APIs for access to live NHS systems with identifier resolution and mapping as a first-class abstraction.</li>
+  <li><a href="https://github.com/wardle/nhspd">nhspd</a>: Library and microservice for the NHS postcode directory linking all UK postal codes to geographical health, care and administrative data.</li>
+  <li><a href="https://github.com/wardle/dmd">dmd</a>: A library and microservice for the UK dictionary of medicines and devices.</li>
+  <li><a href="https://github.com/wardle/trud">trud</a>: Software library to automate downloads of UK reference data.</li>
 </ul>
 
-<p><strong>Status</strong>: Completed and deployed within the NHS, but looking for help to:</p>
+<h4 id="archived-projects">Archived projects</h4>
 
-<ol>
-  <li>Migrate to either N3 hosting or generic Internet hosting and making available across UK. Plan is to target highly-specialist “vertical” applications eg. MS, epilepsy, MND and rare disease registries but then use same platform to scale to other specialties.</li>
-  <li>Academic collaborations in making use of these data.</li>
-</ol>
-
-<h4 id="healthcontact">HealthContact</h4>
-
-<p>HealthContact web portal and iPad and iPhone applications for research recruitment and recording patient outcomes in clinic. Open source. Integrates automatically with PatientCare EPR. The first Apple ResearchKit applications deployed in the United Kingdom (2015) and trialled in the Parkinson’s clinic.</p>
-
-<p>Currently two projects - one in multiple sclerosis and one in Parkinson’s disease. Supervising PhD student looking at latter.</p>
-
-<p><strong>Status</strong>: Completed and deployed, but need collaborators to</p>
-<ol>
-  <li>Extend its functionality, including versions for patient’s own devices.</li>
-  <li>Finish work on generic real-time customisable research-enrolment application with application logic determined at runtime from data held in PatientCare EPR. Need <em>commercial</em> collaborators to complete project.</li>
-</ol>
-
-<h4 id="msdataorguk">msdata.org.uk</h4>
-
-<p>A version of the PatientCare EPR with a modern bespoke front-end designed only for multiple sclerosis. Uses pseudonymisation and tracks patient outcome to whole cohort in real-time (just like the full version, but hosted on Internet). Permits clinicians and patients to have web-based and iOS-based remote access and data entry into the NHS-hosted PatientCare system. Accessed by multiple NHS services across UK.</p>
-
-<p><strong>Status</strong>: Completed and deployed at <a href="https://msdata.org.uk">https://msdata.org.uk</a></p>
-
-<h4 id="rsterminology">rsterminology</h4>
-<p>An open-source SNOMED-CT terminology server with fast free-text autocompletion functionality built as a microservice, currently live within PatientCare and deployed independently within NHS Wales providing comprehensive search and browse functionality as well as understanding of semantic meaning and subsumption.</p>
-
-<p><strong>Status</strong>: Completed and deployed, but looking for <em>research or commercial</em> collaborators to:</p>
-
-<ol>
-  <li>Integrate with a national language processing toolkit (e.g. Stanford or Google NLP) for SNOMED-CT coding of longer bodies of free text context.</li>
-  <li>Modify the existing REST API it provides to also provide a FHIR-compatible terminology server resource endpoint.</li>
-  <li>Fully dockerise and deploy and commercialise the software</li>
-</ol>
-
-<h1 id="nhs-projects-via-cardiff-and-vale-or-nhs-wales">NHS projects (via Cardiff and Vale or NHS Wales)</h1>
-
-<h4 id="eras---enhanced-recovery-after-surgery">ERAS - enhanced recovery after surgery</h4>
-<p>Working on clinical informatics and open platform design for Cardiff and Vale University Health Board.</p>
-
-<p><strong>Status</strong>: Ongoing, looking for *NHS Wales - Cardiff and Vale * collaborators to:</p>
-
-<ol>
-  <li>Continue clinical design work</li>
-  <li>Work on open platform architectures within Wales.</li>
-</ol>
-
-<h4 id="nhs-wales---clinical-informatics">NHS Wales - clinical informatics</h4>
-
-<p>Working with the NHS Wales Informatics Service to adopt open standards and platforms, including SNOMED-CT in current and new health systems.</p>
-
-<h1 id="academic-projects-via-cardiff-university--brain-unit">Academic projects (via Cardiff University / BRAIN unit)</h1>
-
-<h4 id="e-seize--employing-remote-seizure-alerts-in-routine-epilepsy-care">E-Seize : Employing Remote Seizure Alerts in Routine Epilepsy Care</h4>
-
-<p>Collaboration with academic and NHS colleagues to use remote monitoring to identify seizures in patients in the community and link data into our NHS medical records (PatientCare epilepsy module).</p>
-
-<p><strong>Status</strong>: Grant application in progress.</p>
-
-<hr />
-<h4 id="brain-unit-clinical-databases">BRAIN unit: Clinical databases</h4>
-
-<p>Ongoing work on disease registries and outcome measurement for a range of neurological diseases. See <a href="https://brain.wales">https://brain.wales</a>.</p>
-
-<p><strong>Status</strong>: Open to collaborations</p>
+<ul>
+  <li><em>PatientCare EPR v3</em>: An electronic health record used across Wales with integrations across multiple NHS systems, used for specialist services such as multiple sclerosis, Parkinson’s disease, motor neurone disease, neuro-rehabilitation and others. It’s used across Wales within the NHS network at https://patientcare.wales.nhs.uk It combines clinical and research cohorts using finely-grained access controls and had used my own terminology server to provide SNOMED CT functionality since 2009. Over 500 users, over 30,000 patients and over 400,000 clinical encounters recorded with structured data and SNOMED CT. It underpins much of my published research papers. It supports many services, including:
+    <ul>
+      <li>Multiple sclerosis; it is the largest multiple sclerosis registry in the United Kingdom</li>
+      <li>Motor neurone disease; all patients in South Wales with motor neurone disease are registered together with longitudinal outcomes</li>
+      <li>Neuromuscular disease; all patients in Wales under the neuromuscular network</li>
+      <li>Parkinson’s disease; all patients in Cardiff and Bridgend with Parkinson’s disease and related disorders</li>
+      <li>Ataxia and movement disorders registry</li>
+      <li>All-Wales epilepsy registry as well as supporting epilepsy surgery programme</li>
+      <li>Metabolic medicine</li>
+      <li>Botulinum toxin clinics</li>
+      <li>Rare disease registries and genetics</li>
+      <li>Welsh Neurosciences Research Tissue Bank (WNRTB)</li>
+    </ul>
+  </li>
+  <li><a href="https://github.com/wardle/go-terminology">go-terminology</a>:  A comprehensive terminology server. Running live and in production in NHS Wales.</li>
+  <li>HealthContact: iPad and iPhone application suite providing patient access to the PatientCare EPR for recording patient reported outcome measures. Replaced by <a href="https://github.com/wardle/hermes">hermes</a>.</li>
+  <li><a href="https://github.com/wardle/concierge-old">concierge</a>: A set of APIs implemented in golang providing access to live NHS Wales systems with identifier resolution and mapping.</li>
+  <li><a href="https://github.com/wardle/patientcare-ward">patientcare-ward</a>: Proof-of-concept electronic observations and dynamically created National Early Warning Score (NEWS) chart, written in Clojurescript.</li>
+  <li><a href="https://bitbucket.org/wardle/healthcontact">HealthContact</a> web portal and iPad and iPhone applications for research recruitment and recording patient outcomes in clinic. Open source. Integrates automatically with PatientCare EPR. The first Apple ResearchKit applications deployed in the United Kingdom (2015) and trialled in the Parkinson’s clinic.</li>
+  <li><a href="https://msdata.org.uk">msdata.org.uk</a> A version of the PatientCare EPR with a modern bespoke front-end designed only for multiple sclerosis. Uses pseudonymisation and tracks patient outcome to whole cohort in real-time (just like the full version, but hosted on Internet). Permits clinicians and patients to have web-based and iOS-based remote access and data entry into the NHS-hosted PatientCare system. Accessed by multiple NHS services across UK.</li>
+  <li><a href="https://github.com/wardle/rsterminology2">rsterminology2</a> An open-source SNOMED-CT terminology server with fast free-text autocompletion functionality built as a microservice, currently live within PatientCare and deployed independently within NHS Wales providing comprehensive search and browse functionality as well as understanding of semantic meaning and subsumption. Replaced by <a href="https://github.com/wardle/hermes">hermes</a>.</li>
+</ul>
 
   </div>
 
