@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Data analytics using SNOMED CT</title>
+  <meta name="description" content="There’s a problem with using SNOMED CT for data analytics; in this post, I’ll explain the issue and how to mitigate! If you’re using SNOMED CT for data analy...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://www.wardle.org/snomed/2021/07/26/making-valuesets.html">
+  <link rel="alternate" type="application/rss+xml" title="Health informatics and information technology" href="/feed.xml">
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-97389603-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="/">Health informatics and information technology</a>
+  
+  
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+           <a class="page-link" href="/">All posts</a>
+          
+            
+            
+            <a class="page-link" href="/projects/">Projects</a>
+            
+          
+            
+            
+            <a class="page-link" href="/about/">About</a>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Data analytics using SNOMED CT</h1>
+    <p class="post-meta">
+      <time datetime="2021-07-26T15:14:14+01:00" itemprop="datePublished">
+        
+        26 July 2021
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>There’s a problem with using SNOMED CT for data analytics; in this post, I’ll explain the issue and how to mitigate! If you’re using SNOMED CT for data analytics, you <em>will</em> encounter this issue, and need to handle it!</p>
+
+<h1 id="data-analytics-using-snomed-ct">Data analytics using SNOMED CT</h1>
+
+<p>Imagine I’m building a real-time analytics pipeline for patients with multiple sclerosis.</p>
+
+<p>I need to understand patient outcomes - and that means we need to define patient data into <em>cohorts</em>.</p>
+
+<p>A cohort is a group of patients with shared characteristics.</p>
+
+<p>That cohort might be defined by diagnosis, by treatment type, by age, by gender, by geography, by levels of socio-economic deprivation, or by something else.</p>
+
+<p>SNOMED CT is a sophisticated and comprehensive clinical terminology that provides codes representing many of these characteristics. SNOMED is special because
+it isn’t simply a flat list of codes, but instead it is an ontology. As a result SNOMED defines concepts and the relationships between them.</p>
+
+<p>For example, it defines <em>multiple sclerosis</em> as a type of <em>demyelinating disorder</em>. This means, used properly, I can not only search health and care
+data for patients with multiple sclerosis, but I can also search for demyelinating diseases and patients recorded as having multiple sclerosis will be
+included in that cohort simply as a result of the SNOMED ontological hierarchies. I don’t need end-users to record a diagnosis of <em>demyelinating disorder</em>, 
+but I can search for that and include all disorders that are a sub-type of that disorder.</p>
+
+<p>I can do the same for drugs in SNOMED CT - so I might want to search for drugs that contain, say, Glatiramer acetate  - an immunological drug used in multiple sclerosis. Because the UK drug extension for SNOMED CT includes relationships such as “Has specific active ingredient”, it is straightforward to use SNOMED 
+CT to slice and dice our health and care data in order to make valuable inferences.</p>
+
+<h1 id="hermes">Hermes</h1>
+
+<p>Hermes is an open-source terminology server that I wrote.</p>
+
+<p>I have a tiny ($3/mo) demonstration server running - for example, you can look at detailed information about multiple sclerosis (SNOMED code 24700007) by going to <a href="http://3.9.221.177:8080/v1/snomed/concepts/24700007/extended">http://3.9.221.177:8080/v1/snomed/concepts/24700007/extended</a>.</p>
+
+<p>You can have your own server running in minutes by <a href="https://github.com/wardle/hermes">following the instructions</a>, or use my demonstration links below. It can even download and install SNOMED automatically if you live in the UK.</p>
+
+<p>Here’s an example of one of the endpoints:</p>
+
+<p><a href="http://3.9.221.177:8080/v1/snomed/concepts/24700007/extended">http://3.9.221.177:8080/v1/snomed/concepts/24700007/extended</a>:</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"concept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">24700007</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"effectiveTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2002-01-31"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"moduleId"</span><span class="p">:</span><span class="w"> </span><span class="mi">900000000000207008</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"definitionStatusId"</span><span class="p">:</span><span class="w"> </span><span class="mi">900000000000074008</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"descriptions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">41398015</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"effectiveTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-07-31"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"moduleId"</span><span class="p">:</span><span class="w"> </span><span class="mi">900000000000207008</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"conceptId"</span><span class="p">:</span><span class="w"> </span><span class="mi">24700007</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"languageCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"typeId"</span><span class="p">:</span><span class="w"> </span><span class="mi">900000000000013009</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"term"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Multiple sclerosis"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"caseSignificanceId"</span><span class="p">:</span><span class="w"> </span><span class="mi">900000000000448009</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"refsets"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="mi">900000000000509007</span><span class="p">,</span><span class="w">
+        </span><span class="mi">900000000000508004</span><span class="p">,</span><span class="w">
+        </span><span class="mi">999001261000000100</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nl">"preferredIn"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="mi">900000000000509007</span><span class="p">,</span><span class="w">
+        </span><span class="mi">900000000000508004</span><span class="p">,</span><span class="w">
+        </span><span class="mi">999001261000000100</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nl">"acceptableIn"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"parentRelationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"116680003"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="mi">6118003</span><span class="p">,</span><span class="w">      </span><span class="mi">138875005</span><span class="p">,</span><span class="w">      </span><span class="mi">404684003</span><span class="p">,</span><span class="w">
+      </span><span class="mi">123946008</span><span class="p">,</span><span class="w">      </span><span class="mi">118234003</span><span class="p">,</span><span class="w">
+      </span><span class="mi">128139000</span><span class="p">,</span><span class="w">      </span><span class="mi">23853001</span><span class="p">,</span><span class="w">
+      </span><span class="mi">246556002</span><span class="p">,</span><span class="w">      </span><span class="mi">363170005</span><span class="p">,</span><span class="w">
+      </span><span class="mi">64572001</span><span class="p">,</span><span class="w">      </span><span class="mi">118940003</span><span class="p">,</span><span class="w">
+      </span><span class="mi">414029004</span><span class="p">,</span><span class="w">      </span><span class="mi">362975008</span><span class="p">,</span><span class="w">
+      </span><span class="mi">363171009</span><span class="p">,</span><span class="w">      </span><span class="mi">39367000</span><span class="p">,</span><span class="w">
+      </span><span class="mi">80690008</span><span class="p">,</span><span class="w">      </span><span class="mi">362965005</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"refsets"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="mi">991381000000107</span><span class="p">,</span><span class="w">
+    </span><span class="mi">999002271000000101</span><span class="p">,</span><span class="w">
+    </span><span class="mi">991411000000109</span><span class="p">,</span><span class="w">
+    </span><span class="mi">1127581000000103</span><span class="p">,</span><span class="w">
+    </span><span class="mi">1127601000000107</span><span class="p">,</span><span class="w">
+    </span><span class="mi">900000000000497000</span><span class="p">,</span><span class="w">
+    </span><span class="mi">447562003</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"preferredDescription"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">41398015</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"effectiveTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-07-31"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"moduleId"</span><span class="p">:</span><span class="w"> </span><span class="mi">900000000000207008</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"conceptId"</span><span class="p">:</span><span class="w"> </span><span class="mi">24700007</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"languageCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"typeId"</span><span class="p">:</span><span class="w"> </span><span class="mi">900000000000013009</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"term"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Multiple sclerosis"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"caseSignificanceId"</span><span class="p">:</span><span class="w"> </span><span class="mi">900000000000448009</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>It can also provide a FHIR terminology server API via <a href="https://github.com/wardle/hades">hadex</a>.</p>
+
+<p>Hermes operates as a library, or a microservice. It is designed to be immutable once running - so that we might have services running providing different versions of SNOMED CT, each load-balancing. Other terminology servers do not use this approach, but instead update-in-place, with management of versions within the same terminology. I prefer multiple small services and switch at the API gateway level, or reverse proxy to different versions, all of which run independently.</p>
+
+<hr />
+
+<h1 id="the-snomed-ct-expression-constraint-language">The SNOMED CT expression constraint language</h1>
+
+<p>The specification for the SNOMED CT expression constraint language (ECL) is <a href="http://snomed.org/ecl">available here</a>. 
+It’s a way of defining a set of SNOMED CT concepts.</p>
+
+<p>Here’s a simple example:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;&lt;  73211009 |Diabetes mellitus|     
+</code></pre></div></div>
+
+<p>This means, give me a set of codes that represent diabetes mellitus, including its sub-types. You can see the codes this expands to <a href="http://3.9.221.177:8080/v1/snomed/expand?ecl=&lt;&lt;73211009">here</a>.</p>
+
+<p>When I am building a user interface component to allow a pop-up and autocompletion box, for say, country of birth, I might search based on 
+the text the user has entered and limit the search to the set of concepts defined by:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;370159000|Country of birth|
+</code></pre></div></div>
+
+<p>This will mean a search for <a href="http://3.9.221.177:8080/v1/snomed/search?s=cro&amp;constraint=&lt;370159000">“Cro”</a> will give me “Born in Croatia” but exclude “Crohn’s disease”.</p>
+
+<p><a href="http://3.9.221.177:8080/v1/snomed/search?s=cro&amp;constraint=&lt;370159000">http://3.9.221.177:8080/v1/snomed/search?s=cro&amp;constraint=&lt;370159000</a>:</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">459924011</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"conceptId"</span><span class="p">:</span><span class="w"> </span><span class="mi">315409004</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"term"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Born in Croatia"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"preferredTerm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Born in Croatia"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+<p>I wouldn’t want to record a diagnostic term in a field that should only record concepts that are a sub-type of country of birth. I can both configure and validate user input.</p>
+
+<p>You can think of ECL as providing a quick and easy way to define a set of codes that you’re interested in. In essence, it builds codelists - a subset of codes which can be used or searched.</p>
+
+<p>As you might expect, you can use boolean logic in an expression to 
+combine different terms. For example, if you’re searching for patients who have reduced splenic function you might use</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;&lt;234319005|Splenectomy| OR &lt;&lt;23761004|Hyposplenism|
+</code></pre></div></div>
+
+<p>You can see the results of this expression <a href="http://3.9.221.177:8080/v1/snomed/search?constraint=&lt;&lt;234319005%20OR%20&lt;&lt;23761004">here</a></p>
+
+<p>I use the combination of a user-entered search string (e.g. “MND”) and a constraint to help users enter information in a context-appropriate way - e.g. by type, or by membership of a reference set etc.</p>
+
+<h1 id="building-code-lists">Building code lists</h1>
+
+<p>In summary, we can use the expressions to <em>realise</em> a codeset. For example,
+we might want to build a list of diagnoses that are a type of neurological disease, suitable for use when interrogating data sources for an audit or for research.</p>
+
+<p>In HL7 FHIR, the operation to turn an expression like this into a value set is called <em>expansion</em>.</p>
+
+<h1 id="so-whats-the-problem">So what’s the problem?</h1>
+
+<p>SNOMED CT is an evolving clinical terminology. That means it is updated, refined and changed over time. Fortunately, concepts are never deleted, and 
+identifiers are never re-used, but concepts can be inactivated.</p>
+
+<p>When this happens, all of its relationships are removed.</p>
+
+<p>What this means in practice is that a now-outdated or redundant concept will not be found when we use the SNOMED CT relationships to define an interesting
+set of codes!</p>
+
+<p>Let’s look at an example related to multiple sclerosis.</p>
+
+<p>So we want all patients who have multiple sclerosis?</p>
+
+<p>Won’t the codes we need will be included in the result of:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;&lt; 24700007
+</code></pre></div></div>
+
+<p>That means give me the concept 24700007 and all of its descendants (sub-types). Have a look at the results <a href="http://3.9.221.177:8080/v1/snomed/expand?ecl=&lt;&lt;24700007">here</a>.</p>
+
+<p>No it won’t!</p>
+
+<p>Have a look at <a href="https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=24700007">24700007 in the SNOMED online browser</a>  - and start clicking on the children and
+the children of those children. The expression ‘«24700007’ will, in essence, return all of them for you in an instant.</p>
+
+<h2 id="legacy-data">Legacy data!</h2>
+
+<p>But let’s look at our legacy data. In our electronic health and care record, we have some old data that includes the concept <a href="https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=155023009">155023009</a> - this is an outdated, inactive concept representing multiple sclerosis, and it won’t be found using <code class="highlighter-rouge">&lt;&lt;24700007</code>! It won’t be found because inactivated concepts don’t have any active relationships.</p>
+
+<p>This a problem!</p>
+
+<p>That patient, just because they’ve been recorded as having multiple sclerosis using a term now inactive, potentially won’t show up in our dataset! This isn’t an uncommon scenario; and it is a problem that will increase as more health and care software uses SNOMED CT.</p>
+
+<h1 id="what-are-the-potential-solutions">What are the potential solutions?</h1>
+
+<p>There are four options:</p>
+
+<ol>
+  <li>Highlight now inactive concepts in our dataset and manually update to the modern equivalents ie. fix our source data manually by flagging to end clinical users. Fix the problem by fixing our source data.</li>
+  <li>When processing our dataset, highlight inactive concepts and append the modern replacements or equivalents.</li>
+  <li>When generating searches, include outdated concepts in the code lists.</li>
+  <li>Provide easy access to multiple versions of SNOMED CT, selectable at runtime, so that inferences can be made based on the date the data were entered at each point.</li>
+</ol>
+
+<p>There are a variety of trade-offs for each option but each can make use of the historical
+association reference sets that are provided as part of SNOMED CT.</p>
+
+<p>An historical reference set provides a linkage between a now-outdated concept and what it might be better represented as nowadays.</p>
+
+<p>Unfortunately, this isn’t as simple as it might sound. Some concepts are genuinely now regarded as wrong - or may be better represented using one of many more specific terms. Imagine a disease we used to think of as a single entity, but now realise that diagnostic entity is better represented
+as one of three different more specific entities, that might or might not
+be exactly equivalent?</p>
+
+<p>Here are some example reference sets that will help us:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SAME-AS
+REPLACED-BY
+POSSIBLY-EQUIVALENT-TO
+</code></pre></div></div>
+
+<p>The simplest is SAME-AS. There’ll be a 1:1 mapping between an old concept and a new concept if there is one that is conceptually the SAME-AS the old! But some concepts are truly outdated, and there will be some ambiguity in how to use that now outdated term.</p>
+
+<p>When operating interactively, we can ask our user to resolve ambiguities and map to a more modern term.
+But what about for analytics? We might be processing millions of health records in which it will not be practical to update legacy terms by hand.</p>
+
+<p>We are left with two options:</p>
+
+<ol>
+  <li>
+    <p>Pre-process each health and care record mapping legacy terms to modern equivalents.</p>
+  </li>
+  <li>
+    <p>Pre-process our searches, valuesets and code lists so that they include legacy inactive concepts as well as the modern equivalents.</p>
+  </li>
+</ol>
+
+<h3 id="pre-process-the-health-and-care-record">Pre-process the health and care record</h3>
+
+<p>For our inactive term, in our data pipeline, we could look for
+this concept’s historical association reference sets and include some or all of the modern replacements in-place.</p>
+
+<p>We then perform analysis on a modified patient record that has been updated to use only active terms.</p>
+
+<p>We can do this easily by identifying now inactivated concepts, and following the historical associations for that concept.</p>
+
+<p>Let’s try a worked example:</p>
+
+<p>You can see that <a href="https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=155023009">155023009</a> is inactive - and you can see the same via <a href="http://3.9.221.177:8080/v1/snomed/concepts/155023009">hermes</a>:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">155023009</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"effectiveTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2002-01-31"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"moduleId"</span><span class="p">:</span><span class="w"> </span><span class="mi">900000000000207008</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"definitionStatusId"</span><span class="p">:</span><span class="w"> </span><span class="mi">900000000000074008</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>We can use this concept’s reference set membership to see how SNOMED thinks we might be able to map into the current version of the terminology:</p>
+
+<p><a href="http://3.9.221.177:8080/v1/snomed/concepts/155023009/historical">http://3.9.221.177:8080/v1/snomed/concepts/155023009/historical</a>:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"900000000000527005"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cc542ff9-d695-52ff-a20b-8091e5b0145b"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"effectiveTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2002-01-31"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"moduleId"</span><span class="p">:</span><span class="w"> </span><span class="mi">900000000000207008</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"refsetId"</span><span class="p">:</span><span class="w"> </span><span class="mi">900000000000527005</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"referencedComponentId"</span><span class="p">:</span><span class="w"> </span><span class="mi">155023009</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"targetComponentId"</span><span class="p">:</span><span class="w"> </span><span class="mi">24700007</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>This end-point picks out only the historical association reference set types and lists them conveniently keyed by the association reference type. This makes it straightforward to follow SAME-AS, REPLACED-BY or POSSIBLY-EQUIVALENT-TO links.</p>
+
+<p>So here we see that <code class="highlighter-rouge">155023009</code> is linked to <code class="highlighter-rouge">24700007</code> by virtue of a <code class="highlighter-rouge">SAME-AS</code> definition - <a href="http://3.9.221.177:8080/v1/snomed/concepts/900000000000527005/extended">900000000000527005</a>.</p>
+
+<h3 id="pre-process-our-searches-valuesets-and-codelists">Pre-process our searches, valuesets and codelists</h3>
+
+<p>Alternatively, when we’re generating a list of codes for our code list, we could reverse this process and look at the modern concept(s) in which we are interested and get back the legacy inactive identifiers that we want to include.</p>
+
+<p>We can ask hermes to expand any arbitrary SNOMED expression constraint language (ECL) expression:</p>
+
+<p>e.g.</p>
+
+<p><a href="http://3.9.221.177:8080/v1/snomed/expand?ecl=%3C%3C24700007">http://3.9.221.177:8080/v1/snomed/expand?ecl=%3C%3C24700007</a>:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1223980016</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"conceptId"</span><span class="p">:</span><span class="w"> </span><span class="mi">24700007</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"term"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MS - Multiple sclerosis"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"preferredTerm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Multiple sclerosis"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="err">...</span><span class="w">
+</span></code></pre></div></div>
+
+<p>But we can also ask for the expansion to include historical associations:</p>
+
+<p><a href="http://3.9.221.177:8080/v1/snomed/expand?ecl=%3C%3C24700007&amp;include-historic=true">http://3.9.221.177:8080/v1/snomed/expand?ecl=%3C%3C24700007&amp;include-historic=true</a></p>
+
+<p>You’ll see that our expanded codelist now also includes outdated, inactivated concepts from past versions of SNOMED. We can now use this expanded list for our data analytics.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">27239011</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"conceptId"</span><span class="p">:</span><span class="w"> </span><span class="mi">16092000</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"term"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cord multiple sclerosis"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"preferredTerm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cord multiple sclerosis"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">30986014</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"conceptId"</span><span class="p">:</span><span class="w"> </span><span class="mi">18353007</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"term"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brain stem multiple sclerosis"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"preferredTerm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brain stem multiple sclerosis"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1223980016</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"conceptId"</span><span class="p">:</span><span class="w"> </span><span class="mi">24700007</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"term"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MS - Multiple sclerosis"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"preferredTerm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Multiple sclerosis"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="err">...</span><span class="w">
+</span></code></pre></div></div>
+
+<h1 id="conclusions">Conclusions</h1>
+
+<p>Managing real-life health and care data is complex; health informatics needs to build software, ideally open-source, that manages some of these complexities.</p>
+
+<p><a href="https://github.com/wardle/hermes">Hermes</a> is a library and microservice that provides some of that capability in relation to SNOMED CT and other terminologies.</p>
+
+<p>You cannot ignore the issue of managing codes now thought of as inactive, or outdated from your health and care data, but instead you need to think carefully about how to manage change over time.</p>
+
+<p><em>Mark</em></p>
+
+  </div>
+
+  
+</article>
+        
+      </div>
+    </main>
+    
+    
+    
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Health informatics and information technology</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Health informatics and information technology
+            
+            </li>
+            
+            <li><a href="mailto:mark@wardle.org">mark@wardle.org</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/wardle"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">wardle</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/mwardle"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">mwardle</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

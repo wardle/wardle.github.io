@@ -1,5 +1,344 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2021-07-01T08:41:42+01:00</updated><id>https://www.wardle.org/feed.xml</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
-</subtitle><entry><title type="html">A mistake at REST</title><link href="https://www.wardle.org/ehr/2021/06/30/mistakes-at-rest.html" rel="alternate" type="text/html" title="A mistake at REST" /><published>2021-06-30T16:07:08+01:00</published><updated>2021-06-30T16:07:08+01:00</updated><id>https://www.wardle.org/ehr/2021/06/30/mistakes-at-rest</id><content type="html" xml:base="https://www.wardle.org/ehr/2021/06/30/mistakes-at-rest.html">&lt;p&gt;The HL7 FHIR standard provides a useful model of health and care information, but it is a specification from which a local standard can be built via &lt;em&gt;profiling&lt;/em&gt;. It defines models of data and a specification for how to exchange those data via an architectural pattern called representational state transfer (REST). While there are other ways that data in HL7 FHIR can be exchanged, using REST as an architectural pattern means that software using HL7 FHIR for data exchange will read and write to &lt;em&gt;resources&lt;/em&gt; that represent something in the health and care domain.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2021-07-27T12:48:33+01:00</updated><id>https://www.wardle.org/feed.xml</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</subtitle><entry><title type="html">Data analytics using SNOMED CT</title><link href="https://www.wardle.org/snomed/2021/07/26/making-valuesets.html" rel="alternate" type="text/html" title="Data analytics using SNOMED CT" /><published>2021-07-26T15:14:14+01:00</published><updated>2021-07-26T15:14:14+01:00</updated><id>https://www.wardle.org/snomed/2021/07/26/making-valuesets</id><content type="html" xml:base="https://www.wardle.org/snomed/2021/07/26/making-valuesets.html">&lt;p&gt;There’s a problem with using SNOMED CT for data analytics; in this post, I’ll explain the issue and how to mitigate! If you’re using SNOMED CT for data analytics, you &lt;em&gt;will&lt;/em&gt; encounter this issue, and need to handle it!&lt;/p&gt;
+
+&lt;h1 id=&quot;data-analytics-using-snomed-ct&quot;&gt;Data analytics using SNOMED CT&lt;/h1&gt;
+
+&lt;p&gt;Imagine I’m building a real-time analytics pipeline for patients with multiple sclerosis.&lt;/p&gt;
+
+&lt;p&gt;I need to understand patient outcomes - and that means we need to define patient data into &lt;em&gt;cohorts&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;A cohort is a group of patients with shared characteristics.&lt;/p&gt;
+
+&lt;p&gt;That cohort might be defined by diagnosis, by treatment type, by age, by gender, by geography, by levels of socio-economic deprivation, or by something else.&lt;/p&gt;
+
+&lt;p&gt;SNOMED CT is a sophisticated and comprehensive clinical terminology that provides codes representing many of these characteristics. SNOMED is special because
+it isn’t simply a flat list of codes, but instead it is an ontology. As a result SNOMED defines concepts and the relationships between them.&lt;/p&gt;
+
+&lt;p&gt;For example, it defines &lt;em&gt;multiple sclerosis&lt;/em&gt; as a type of &lt;em&gt;demyelinating disorder&lt;/em&gt;. This means, used properly, I can not only search health and care
+data for patients with multiple sclerosis, but I can also search for demyelinating diseases and patients recorded as having multiple sclerosis will be
+included in that cohort simply as a result of the SNOMED ontological hierarchies. I don’t need end-users to record a diagnosis of &lt;em&gt;demyelinating disorder&lt;/em&gt;, 
+but I can search for that and include all disorders that are a sub-type of that disorder.&lt;/p&gt;
+
+&lt;p&gt;I can do the same for drugs in SNOMED CT - so I might want to search for drugs that contain, say, Glatiramer acetate  - an immunological drug used in multiple sclerosis. Because the UK drug extension for SNOMED CT includes relationships such as “Has specific active ingredient”, it is straightforward to use SNOMED 
+CT to slice and dice our health and care data in order to make valuable inferences.&lt;/p&gt;
+
+&lt;h1 id=&quot;hermes&quot;&gt;Hermes&lt;/h1&gt;
+
+&lt;p&gt;Hermes is an open-source terminology server that I wrote.&lt;/p&gt;
+
+&lt;p&gt;I have a tiny ($3/mo) demonstration server running - for example, you can look at detailed information about multiple sclerosis (SNOMED code 24700007) by going to &lt;a href=&quot;http://3.9.221.177:8080/v1/snomed/concepts/24700007/extended&quot;&gt;http://3.9.221.177:8080/v1/snomed/concepts/24700007/extended&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;You can have your own server running in minutes by &lt;a href=&quot;https://github.com/wardle/hermes&quot;&gt;following the instructions&lt;/a&gt;, or use my demonstration links below. It can even download and install SNOMED automatically if you live in the UK.&lt;/p&gt;
+
+&lt;p&gt;Here’s an example of one of the endpoints:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://3.9.221.177:8080/v1/snomed/concepts/24700007/extended&quot;&gt;http://3.9.221.177:8080/v1/snomed/concepts/24700007/extended&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;concept&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;24700007&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;effectiveTime&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;2002-01-31&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;active&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;moduleId&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;900000000000207008&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;definitionStatusId&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;900000000000074008&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;descriptions&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;41398015&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;effectiveTime&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;2017-07-31&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;active&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;moduleId&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;900000000000207008&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;conceptId&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;24700007&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;languageCode&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;en&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;typeId&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;900000000000013009&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;term&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Multiple sclerosis&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;caseSignificanceId&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;900000000000448009&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;refsets&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;900000000000509007&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;900000000000508004&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;999001261000000100&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;preferredIn&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;900000000000509007&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;900000000000508004&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;999001261000000100&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;acceptableIn&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        
+      &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;parentRelationships&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;116680003&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6118003&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;      &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;138875005&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;      &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;404684003&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;123946008&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;      &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;118234003&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;128139000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;      &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;23853001&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;246556002&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;      &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;363170005&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;64572001&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;      &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;118940003&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;414029004&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;      &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;362975008&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;363171009&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;      &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;39367000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;80690008&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;      &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;362965005&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;refsets&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;991381000000107&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;999002271000000101&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;991411000000109&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1127581000000103&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1127601000000107&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;900000000000497000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;447562003&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;preferredDescription&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;41398015&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;effectiveTime&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;2017-07-31&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;active&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;moduleId&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;900000000000207008&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;conceptId&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;24700007&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;languageCode&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;en&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;typeId&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;900000000000013009&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;term&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Multiple sclerosis&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;caseSignificanceId&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;900000000000448009&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;It can also provide a FHIR terminology server API via &lt;a href=&quot;https://github.com/wardle/hades&quot;&gt;hadex&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Hermes operates as a library, or a microservice. It is designed to be immutable once running - so that we might have services running providing different versions of SNOMED CT, each load-balancing. Other terminology servers do not use this approach, but instead update-in-place, with management of versions within the same terminology. I prefer multiple small services and switch at the API gateway level, or reverse proxy to different versions, all of which run independently.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;the-snomed-ct-expression-constraint-language&quot;&gt;The SNOMED CT expression constraint language&lt;/h1&gt;
+
+&lt;p&gt;The specification for the SNOMED CT expression constraint language (ECL) is &lt;a href=&quot;http://snomed.org/ecl&quot;&gt;available here&lt;/a&gt;. 
+It’s a way of defining a set of SNOMED CT concepts.&lt;/p&gt;
+
+&lt;p&gt;Here’s a simple example:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;&amp;lt;  73211009 |Diabetes mellitus|     
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This means, give me a set of codes that represent diabetes mellitus, including its sub-types. You can see the codes this expands to &lt;a href=&quot;http://3.9.221.177:8080/v1/snomed/expand?ecl=&amp;lt;&amp;lt;73211009&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;When I am building a user interface component to allow a pop-up and autocompletion box, for say, country of birth, I might search based on 
+the text the user has entered and limit the search to the set of concepts defined by:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;370159000|Country of birth|
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This will mean a search for &lt;a href=&quot;http://3.9.221.177:8080/v1/snomed/search?s=cro&amp;amp;constraint=&amp;lt;370159000&quot;&gt;“Cro”&lt;/a&gt; will give me “Born in Croatia” but exclude “Crohn’s disease”.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://3.9.221.177:8080/v1/snomed/search?s=cro&amp;amp;constraint=&amp;lt;370159000&quot;&gt;http://3.9.221.177:8080/v1/snomed/search?s=cro&amp;amp;constraint=&amp;lt;370159000&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;459924011&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;conceptId&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;315409004&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;term&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Born in Croatia&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;preferredTerm&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Born in Croatia&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I wouldn’t want to record a diagnostic term in a field that should only record concepts that are a sub-type of country of birth. I can both configure and validate user input.&lt;/p&gt;
+
+&lt;p&gt;You can think of ECL as providing a quick and easy way to define a set of codes that you’re interested in. In essence, it builds codelists - a subset of codes which can be used or searched.&lt;/p&gt;
+
+&lt;p&gt;As you might expect, you can use boolean logic in an expression to 
+combine different terms. For example, if you’re searching for patients who have reduced splenic function you might use&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;&amp;lt;234319005|Splenectomy| OR &amp;lt;&amp;lt;23761004|Hyposplenism|
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You can see the results of this expression &lt;a href=&quot;http://3.9.221.177:8080/v1/snomed/search?constraint=&amp;lt;&amp;lt;234319005%20OR%20&amp;lt;&amp;lt;23761004&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I use the combination of a user-entered search string (e.g. “MND”) and a constraint to help users enter information in a context-appropriate way - e.g. by type, or by membership of a reference set etc.&lt;/p&gt;
+
+&lt;h1 id=&quot;building-code-lists&quot;&gt;Building code lists&lt;/h1&gt;
+
+&lt;p&gt;In summary, we can use the expressions to &lt;em&gt;realise&lt;/em&gt; a codeset. For example,
+we might want to build a list of diagnoses that are a type of neurological disease, suitable for use when interrogating data sources for an audit or for research.&lt;/p&gt;
+
+&lt;p&gt;In HL7 FHIR, the operation to turn an expression like this into a value set is called &lt;em&gt;expansion&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;so-whats-the-problem&quot;&gt;So what’s the problem?&lt;/h1&gt;
+
+&lt;p&gt;SNOMED CT is an evolving clinical terminology. That means it is updated, refined and changed over time. Fortunately, concepts are never deleted, and 
+identifiers are never re-used, but concepts can be inactivated.&lt;/p&gt;
+
+&lt;p&gt;When this happens, all of its relationships are removed.&lt;/p&gt;
+
+&lt;p&gt;What this means in practice is that a now-outdated or redundant concept will not be found when we use the SNOMED CT relationships to define an interesting
+set of codes!&lt;/p&gt;
+
+&lt;p&gt;Let’s look at an example related to multiple sclerosis.&lt;/p&gt;
+
+&lt;p&gt;So we want all patients who have multiple sclerosis?&lt;/p&gt;
+
+&lt;p&gt;Won’t the codes we need will be included in the result of:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;&amp;lt; 24700007
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;That means give me the concept 24700007 and all of its descendants (sub-types). Have a look at the results &lt;a href=&quot;http://3.9.221.177:8080/v1/snomed/expand?ecl=&amp;lt;&amp;lt;24700007&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;No it won’t!&lt;/p&gt;
+
+&lt;p&gt;Have a look at &lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;amp;conceptId1=24700007&quot;&gt;24700007 in the SNOMED online browser&lt;/a&gt;  - and start clicking on the children and
+the children of those children. The expression ‘«24700007’ will, in essence, return all of them for you in an instant.&lt;/p&gt;
+
+&lt;h2 id=&quot;legacy-data&quot;&gt;Legacy data!&lt;/h2&gt;
+
+&lt;p&gt;But let’s look at our legacy data. In our electronic health and care record, we have some old data that includes the concept &lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;amp;conceptId1=155023009&quot;&gt;155023009&lt;/a&gt; - this is an outdated, inactive concept representing multiple sclerosis, and it won’t be found using &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;&amp;lt;24700007&lt;/code&gt;! It won’t be found because inactivated concepts don’t have any active relationships.&lt;/p&gt;
+
+&lt;p&gt;This a problem!&lt;/p&gt;
+
+&lt;p&gt;That patient, just because they’ve been recorded as having multiple sclerosis using a term now inactive, potentially won’t show up in our dataset! This isn’t an uncommon scenario; and it is a problem that will increase as more health and care software uses SNOMED CT.&lt;/p&gt;
+
+&lt;h1 id=&quot;what-are-the-potential-solutions&quot;&gt;What are the potential solutions?&lt;/h1&gt;
+
+&lt;p&gt;There are four options:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Highlight now inactive concepts in our dataset and manually update to the modern equivalents ie. fix our source data manually by flagging to end clinical users. Fix the problem by fixing our source data.&lt;/li&gt;
+  &lt;li&gt;When processing our dataset, highlight inactive concepts and append the modern replacements or equivalents.&lt;/li&gt;
+  &lt;li&gt;When generating searches, include outdated concepts in the code lists.&lt;/li&gt;
+  &lt;li&gt;Provide easy access to multiple versions of SNOMED CT, selectable at runtime, so that inferences can be made based on the date the data were entered at each point.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;There are a variety of trade-offs for each option but each can make use of the historical
+association reference sets that are provided as part of SNOMED CT.&lt;/p&gt;
+
+&lt;p&gt;An historical reference set provides a linkage between a now-outdated concept and what it might be better represented as nowadays.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, this isn’t as simple as it might sound. Some concepts are genuinely now regarded as wrong - or may be better represented using one of many more specific terms. Imagine a disease we used to think of as a single entity, but now realise that diagnostic entity is better represented
+as one of three different more specific entities, that might or might not
+be exactly equivalent?&lt;/p&gt;
+
+&lt;p&gt;Here are some example reference sets that will help us:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;SAME-AS
+REPLACED-BY
+POSSIBLY-EQUIVALENT-TO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The simplest is SAME-AS. There’ll be a 1:1 mapping between an old concept and a new concept if there is one that is conceptually the SAME-AS the old! But some concepts are truly outdated, and there will be some ambiguity in how to use that now outdated term.&lt;/p&gt;
+
+&lt;p&gt;When operating interactively, we can ask our user to resolve ambiguities and map to a more modern term.
+But what about for analytics? We might be processing millions of health records in which it will not be practical to update legacy terms by hand.&lt;/p&gt;
+
+&lt;p&gt;We are left with two options:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Pre-process each health and care record mapping legacy terms to modern equivalents.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Pre-process our searches, valuesets and code lists so that they include legacy inactive concepts as well as the modern equivalents.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;pre-process-the-health-and-care-record&quot;&gt;Pre-process the health and care record&lt;/h3&gt;
+
+&lt;p&gt;For our inactive term, in our data pipeline, we could look for
+this concept’s historical association reference sets and include some or all of the modern replacements in-place.&lt;/p&gt;
+
+&lt;p&gt;We then perform analysis on a modified patient record that has been updated to use only active terms.&lt;/p&gt;
+
+&lt;p&gt;We can do this easily by identifying now inactivated concepts, and following the historical associations for that concept.&lt;/p&gt;
+
+&lt;p&gt;Let’s try a worked example:&lt;/p&gt;
+
+&lt;p&gt;You can see that &lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;amp;conceptId1=155023009&quot;&gt;155023009&lt;/a&gt; is inactive - and you can see the same via &lt;a href=&quot;http://3.9.221.177:8080/v1/snomed/concepts/155023009&quot;&gt;hermes&lt;/a&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;155023009&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;effectiveTime&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;2002-01-31&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;active&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;moduleId&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;900000000000207008&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;definitionStatusId&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;900000000000074008&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;We can use this concept’s reference set membership to see how SNOMED thinks we might be able to map into the current version of the terminology:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://3.9.221.177:8080/v1/snomed/concepts/155023009/historical&quot;&gt;http://3.9.221.177:8080/v1/snomed/concepts/155023009/historical&lt;/a&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;900000000000527005&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;cc542ff9-d695-52ff-a20b-8091e5b0145b&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;effectiveTime&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;2002-01-31&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;active&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;moduleId&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;900000000000207008&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;refsetId&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;900000000000527005&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;referencedComponentId&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;155023009&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;targetComponentId&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;24700007&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This end-point picks out only the historical association reference set types and lists them conveniently keyed by the association reference type. This makes it straightforward to follow SAME-AS, REPLACED-BY or POSSIBLY-EQUIVALENT-TO links.&lt;/p&gt;
+
+&lt;p&gt;So here we see that &lt;code class=&quot;highlighter-rouge&quot;&gt;155023009&lt;/code&gt; is linked to &lt;code class=&quot;highlighter-rouge&quot;&gt;24700007&lt;/code&gt; by virtue of a &lt;code class=&quot;highlighter-rouge&quot;&gt;SAME-AS&lt;/code&gt; definition - &lt;a href=&quot;http://3.9.221.177:8080/v1/snomed/concepts/900000000000527005/extended&quot;&gt;900000000000527005&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;pre-process-our-searches-valuesets-and-codelists&quot;&gt;Pre-process our searches, valuesets and codelists&lt;/h3&gt;
+
+&lt;p&gt;Alternatively, when we’re generating a list of codes for our code list, we could reverse this process and look at the modern concept(s) in which we are interested and get back the legacy inactive identifiers that we want to include.&lt;/p&gt;
+
+&lt;p&gt;We can ask hermes to expand any arbitrary SNOMED expression constraint language (ECL) expression:&lt;/p&gt;
+
+&lt;p&gt;e.g.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://3.9.221.177:8080/v1/snomed/expand?ecl=%3C%3C24700007&quot;&gt;http://3.9.221.177:8080/v1/snomed/expand?ecl=%3C%3C24700007&lt;/a&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1223980016&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;conceptId&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;24700007&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;term&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;MS - Multiple sclerosis&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;preferredTerm&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Multiple sclerosis&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;But we can also ask for the expansion to include historical associations:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://3.9.221.177:8080/v1/snomed/expand?ecl=%3C%3C24700007&amp;amp;include-historic=true&quot;&gt;http://3.9.221.177:8080/v1/snomed/expand?ecl=%3C%3C24700007&amp;amp;include-historic=true&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;You’ll see that our expanded codelist now also includes outdated, inactivated concepts from past versions of SNOMED. We can now use this expanded list for our data analytics.&lt;/p&gt;
+
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;27239011&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;conceptId&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;16092000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;term&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Cord multiple sclerosis&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;preferredTerm&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Cord multiple sclerosis&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30986014&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;conceptId&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;18353007&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;term&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Brain stem multiple sclerosis&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;preferredTerm&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Brain stem multiple sclerosis&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1223980016&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;conceptId&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;24700007&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;term&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;MS - Multiple sclerosis&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;preferredTerm&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Multiple sclerosis&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;conclusions&quot;&gt;Conclusions&lt;/h1&gt;
+
+&lt;p&gt;Managing real-life health and care data is complex; health informatics needs to build software, ideally open-source, that manages some of these complexities.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/wardle/hermes&quot;&gt;Hermes&lt;/a&gt; is a library and microservice that provides some of that capability in relation to SNOMED CT and other terminologies.&lt;/p&gt;
+
+&lt;p&gt;You cannot ignore the issue of managing codes now thought of as inactive, or outdated from your health and care data, but instead you need to think carefully about how to manage change over time.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">There’s a problem with using SNOMED CT for data analytics; in this post, I’ll explain the issue and how to mitigate! If you’re using SNOMED CT for data analytics, you will encounter this issue, and need to handle it!</summary></entry><entry><title type="html">A mistake at REST</title><link href="https://www.wardle.org/ehr/2021/06/30/mistakes-at-rest.html" rel="alternate" type="text/html" title="A mistake at REST" /><published>2021-06-30T16:07:08+01:00</published><updated>2021-06-30T16:07:08+01:00</updated><id>https://www.wardle.org/ehr/2021/06/30/mistakes-at-rest</id><content type="html" xml:base="https://www.wardle.org/ehr/2021/06/30/mistakes-at-rest.html">&lt;p&gt;The HL7 FHIR standard provides a useful model of health and care information, but it is a specification from which a local standard can be built via &lt;em&gt;profiling&lt;/em&gt;. It defines models of data and a specification for how to exchange those data via an architectural pattern called representational state transfer (REST). While there are other ways that data in HL7 FHIR can be exchanged, using REST as an architectural pattern means that software using HL7 FHIR for data exchange will read and write to &lt;em&gt;resources&lt;/em&gt; that represent something in the health and care domain.&lt;/p&gt;
 
 &lt;p&gt;You can read about the RESTful aspects of HL7 FHIR in more detail on the &lt;a href=&quot;https://www.hl7.org/fhir/http.html&quot;&gt;official HL7 FHIR website&lt;/a&gt;.&lt;/p&gt;
 
@@ -737,21 +1076,4 @@ This means that &lt;code class=&quot;highlighter-rouge&quot;&gt;https://data.sta
 
 &lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;(*) I no longer work for the NHS Wales Informatics Service. The “funding ran out”.&lt;/p&gt;</content><author><name></name></author><summary type="html">There has been some really good work in digital health and care in response to the COVID-19 crisis in Wales.</summary></entry><entry><title type="html">Complexity and abstraction</title><link href="https://www.wardle.org/strategy/2020/06/23/complexity.html" rel="alternate" type="text/html" title="Complexity and abstraction" /><published>2020-06-23T10:09:09+01:00</published><updated>2020-06-23T10:09:09+01:00</updated><id>https://www.wardle.org/strategy/2020/06/23/complexity</id><content type="html" xml:base="https://www.wardle.org/strategy/2020/06/23/complexity.html">&lt;p&gt;Complexity in health and care software derives from:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;the inherent complexity of the domain&lt;/li&gt;
-  &lt;li&gt;legacy software and legacy architecture&lt;/li&gt;
-  &lt;li&gt;organisation-centricity&lt;/li&gt;
-  &lt;li&gt;who is paying and procurement rules around those payments&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;When we’re trying to solve problems in health and care, a large part of the work is actually in dealing with complexity that we’ve inherited; it is complexity largely of our own making.&lt;/p&gt;
-
-&lt;p&gt;A common way to managing complexity is the process of &lt;em&gt;abstraction&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;It’s about time that we had a compelling developer platform that abstracted some of the complexity of health and care data and services so that we can focus on managing the complexity of our domain: health and care.&lt;/p&gt;
-
-&lt;p&gt;And that’s why platform-thinking is fundamental to building the next generation of health and care software. We need to “do the hard work to make it simple.”&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Complexity in health and care software derives from:</summary></entry></feed>
+&lt;p&gt;(*) I no longer work for the NHS Wales Informatics Service. The “funding ran out”.&lt;/p&gt;</content><author><name></name></author><summary type="html">There has been some really good work in digital health and care in response to the COVID-19 crisis in Wales.</summary></entry></feed>
