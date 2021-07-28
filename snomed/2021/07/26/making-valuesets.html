@@ -313,12 +313,45 @@ be exactly equivalent?</p>
 
 <p>Here are some example reference sets that will help us:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SAME-AS
-REPLACED-BY
-POSSIBLY-EQUIVALENT-TO
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Name                     Concept identifier
+
+REPLACED-BY              900000000000526001
+SAME-AS                  900000000000527005
+POSSIBLY-EQUIVALENT-TO   900000000000523009
 </code></pre></div></div>
 
-<p>The simplest is SAME-AS. There’ll be a 1:1 mapping between an old concept and a new concept if there is one that is conceptually the SAME-AS the old! But some concepts are truly outdated, and there will be some ambiguity in how to use that now outdated term.</p>
+<p>The simplest is REPLACED-BY. There’ll be a 1:1 mapping between an old concept and a new concept if there is one that is conceptually REPLACED-BY the new one! But some concepts are truly outdated, and there will be some ambiguity in how to use that now outdated term.</p>
+
+<p>We can even ask SNOMED to give us all of the historical association reference set types: <a href="http://3.9.221.177:8080/v1/snomed/expand?ecl=%3C900000000000522004">http://3.9.221.177:8080/v1/snomed/expand?ecl=&lt;900000000000522004</a></p>
+
+<p>Result:</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">900000000001151017</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"conceptId"</span><span class="p">:</span><span class="w"> </span><span class="mi">900000000000523009</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"term"</span><span class="p">:</span><span class="w"> </span><span class="s2">"POSSIBLY EQUIVALENT TO association reference set"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"preferredTerm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"POSSIBLY EQUIVALENT TO association reference set"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">900000000001152012</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"conceptId"</span><span class="p">:</span><span class="w"> </span><span class="mi">900000000000524003</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"term"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MOVED TO association reference set"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"preferredTerm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MOVED TO association reference set"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">900000000001154013</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"conceptId"</span><span class="p">:</span><span class="w"> </span><span class="mi">900000000000525002</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"term"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MOVED FROM association reference set"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"preferredTerm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MOVED FROM association reference set"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">900000000001157018</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"conceptId"</span><span class="p">:</span><span class="w"> </span><span class="mi">900000000000526001</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"term"</span><span class="p">:</span><span class="w"> </span><span class="s2">"REPLACED BY association reference set"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"preferredTerm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"REPLACED BY association reference set"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="err">...</span><span class="w">
+</span></code></pre></div></div>
 
 <p>When operating interactively, we can ask our user to resolve ambiguities and map to a more modern term.
 But what about for analytics? We might be processing millions of health records in which it will not be practical to update legacy terms by hand.</p>
