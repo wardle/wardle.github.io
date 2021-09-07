@@ -123,8 +123,9 @@ they reflect central reporting requirements and act as a classification system r
 
 <p>It’s written in Clojure, a lisp than runs on the Java virtual machine (JVM). It makes it very easy to do coding in an exploratory way. This is my first live-coding blog in Clojure. It’s an experiment to show how easy it is to map between identifiers if we have our classifications published in a machine readable format with appropriate namespacing.</p>
 
-<div class="language-clojure highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nf">ns</span><span class="w"> </span><span class="n">com.eldrix.janus.standards</span><span class="p">)</span><span class="w">
-</span></code></pre></div></div>
+<div class="language-clojure highlighter-rouge"><pre class="highlight"><code><span class="p">(</span><span class="nf">ns</span><span class="w"> </span><span class="n">com.eldrix.janus.standards</span><span class="p">)</span><span class="w">
+</span></code></pre>
+</div>
 
 <h1 id="a-worked-example-triage-category">A worked example: triage category</h1>
 
@@ -137,7 +138,7 @@ they reflect central reporting requirements and act as a classification system r
 <p>One job for data standards is to define publicly accessible namespaces and their values.
 This means that <code class="highlighter-rouge">https://data.standards.cymru/Id/datasets/edss/triage|02</code> will be “very urgent”. It’s impossible to process the code “02” by itself - you have to have insider knowledge of a table structure and what it means. Namespacing codes means that they can standalone and be interpreted appropriately. I’ve made up that namespace - but these need to be published well-known namespaces.</p>
 
-<div class="language-clojure highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="k">def</span><span class="w"> </span><span class="n">datasets</span><span class="w">
+<div class="language-clojure highlighter-rouge"><pre class="highlight"><code><span class="p">(</span><span class="k">def</span><span class="w"> </span><span class="n">datasets</span><span class="w">
   </span><span class="s">"These are the NHS Wales data dictionary datasets. 
   See http://www.datadictionary.wales.nhs.uk
   Ideally these should be imported from a machine-readable source, 
@@ -175,7 +176,8 @@ This means that <code class="highlighter-rouge">https://data.standards.cymru/Id/
                              </span><span class="p">{</span><span class="no">:id</span><span class="w">          </span><span class="s">"06"</span><span class="w">
                               </span><span class="no">:active</span><span class="w">      </span><span class="n">false</span><span class="w">
                               </span><span class="no">:description</span><span class="w"> </span><span class="s">"See and Treat"</span><span class="p">}]}}}})</span><span class="w">
-</span></code></pre></div></div>
+</span></code></pre>
+</div>
 
 <p>This is a fragment of the larger dataset, and only includes the triage categories. The code below works for other defined categories in other datasets within the NHS Wales information standards catalogue.</p>
 
@@ -185,7 +187,7 @@ This means that <code class="highlighter-rouge">https://data.standards.cymru/Id/
 
 <p>Clojure allows arbitrary structures to be used as keys and values in associative arrays (also called dictionaries or hash-maps). This means I use tuples here as a key to permit toy lookup functionality. This doesn’t provide real ontological inference - only providing equivalence.</p>
 
-<div class="language-clojure highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="k">defn</span><span class="w"> </span><span class="n">categories-&gt;ns</span><span class="w">
+<div class="language-clojure highlighter-rouge"><pre class="highlight"><code><span class="p">(</span><span class="k">defn</span><span class="w"> </span><span class="n">categories-&gt;ns</span><span class="w">
   </span><span class="s">"Convert a list of categories into namespaced identifiers"</span><span class="w">
   </span><span class="p">[</span><span class="n">cats</span><span class="p">]</span><span class="w">
   </span><span class="p">(</span><span class="k">let</span><span class="w"> </span><span class="p">[</span><span class="n">prefix</span><span class="w"> </span><span class="p">(</span><span class="no">:namespace</span><span class="w"> </span><span class="n">cats</span><span class="p">)]</span><span class="w">
@@ -213,59 +215,65 @@ This means that <code class="highlighter-rouge">https://data.standards.cymru/Id/
   </span><span class="p">[</span><span class="n">id1</span><span class="w"> </span><span class="n">id2</span><span class="p">]</span><span class="w">
   </span><span class="p">(</span><span class="nf">reg-equiv-asymm</span><span class="w"> </span><span class="n">id1</span><span class="w"> </span><span class="n">id2</span><span class="p">)</span><span class="w">
   </span><span class="p">(</span><span class="nf">reg-equiv-asymm</span><span class="w"> </span><span class="n">id2</span><span class="w"> </span><span class="n">id1</span><span class="p">))</span><span class="w">
-</span></code></pre></div></div>
+</span></code></pre>
+</div>
 
 <p>So now we can process our machine-readable dataset, and simply register that one identifier from one classification or terminology is equivalent to another. Let’s do that now for our triage category. In a real production system, we’d use a service that provided an abstract ontological service and could provide an inference engine off-the-shelf.</p>
 
-<div class="language-clojure highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="k">defn</span><span class="w"> </span><span class="n">reg-datasets-snomed</span><span class="w">
+<div class="language-clojure highlighter-rouge"><pre class="highlight"><code><span class="p">(</span><span class="k">defn</span><span class="w"> </span><span class="n">reg-datasets-snomed</span><span class="w">
   </span><span class="s">"Register SNOMED maps for the value sets (categories) from the items 
   in the datasets"</span><span class="w">
   </span><span class="p">[</span><span class="n">datasets</span><span class="p">]</span><span class="w">
   </span><span class="p">(</span><span class="nb">doall</span><span class="w"> </span><span class="p">(</span><span class="nf">-&gt;&gt;</span><span class="w"> </span><span class="p">(</span><span class="nf">all-identifiers</span><span class="w"> </span><span class="n">datasets</span><span class="p">)</span><span class="w">
               </span><span class="p">(</span><span class="nb">map</span><span class="w"> </span><span class="o">#</span><span class="p">(</span><span class="nf">reg-equiv</span><span class="w"> </span><span class="p">{</span><span class="no">:system</span><span class="w"> </span><span class="p">(</span><span class="no">:system</span><span class="w"> </span><span class="n">%</span><span class="p">)</span><span class="w"> </span><span class="no">:value</span><span class="w"> </span><span class="p">(</span><span class="no">:value</span><span class="w"> </span><span class="n">%</span><span class="p">)}</span><span class="w"> </span><span class="p">{</span><span class="no">:system</span><span class="w"> </span><span class="s">"https://snomed.info/sct"</span><span class="w"> </span><span class="no">:value</span><span class="w"> </span><span class="p">(</span><span class="no">:info.snomed/sct</span><span class="w"> </span><span class="n">%</span><span class="p">)})))))</span><span class="w">
 
-</span></code></pre></div></div>
+</span></code></pre>
+</div>
 
 <p>We’ve registered a symmetric map between SNOMED CT and the dataset definitions from the NHS Wales information standards. Real ontologies provide many more options to define relationships between identifiers.</p>
 
 <p>Let’s double check that this works by round-tripping between our triage identifier and SNOMED CT and back</p>
 
-<div class="language-clojure highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">  </span><span class="p">(</span><span class="nf">reg-datasets-snomed</span><span class="w"> </span><span class="n">datasets</span><span class="p">)</span><span class="w">
-  </span><span class="p">(</span><span class="nf">get-in</span><span class="w"> </span><span class="o">@</span><span class="n">registry</span><span class="w"> </span><span class="p">[{</span><span class="no">:system</span><span class="w"> </span><span class="s">"https://data.standards.cymru/Id/datasets/edss/triage"</span><span class="w"> </span><span class="no">:value</span><span class="w"> </span><span class="s">"05"</span><span class="p">}</span><span class="w"> </span><span class="s">"https://snomed.info/sct"</span><span class="p">])</span><span class="w">
-  </span><span class="c1">;;-&gt; returns =&gt; {:system "https://snomed.info/sct", :value 1077251000000100}</span><span class="w">
-  </span><span class="p">(</span><span class="nf">get-in</span><span class="w"> </span><span class="o">@</span><span class="n">registry</span><span class="w"> </span><span class="p">[{</span><span class="no">:system</span><span class="w"> </span><span class="s">"https://snomed.info/sct"</span><span class="w"> </span><span class="no">:value</span><span class="w"> </span><span class="mi">1077251000000100</span><span class="p">}</span><span class="w"> </span><span class="s">"https://data.standards.cymru/Id/datasets/edss/triage"</span><span class="p">])</span><span class="w">
-  </span><span class="c1">;; -&gt; returns =&gt; {:system "https://data.standards.cymru/Id/datasets/edss/triage", :value "05"}</span><span class="w">
-</span></code></pre></div></div>
+<div class="language-clojure highlighter-rouge"><pre class="highlight"><code><span class="w">  </span><span class="p">(</span><span class="nf">reg-datasets-snomed</span><span class="w"> </span><span class="n">datasets</span><span class="p">)</span><span class="w">
+  </span><span class="p">(</span><span class="nf">get-in</span><span class="w"> </span><span class="err">@</span><span class="n">registry</span><span class="w"> </span><span class="p">[{</span><span class="no">:system</span><span class="w"> </span><span class="s">"https://data.standards.cymru/Id/datasets/edss/triage"</span><span class="w"> </span><span class="no">:value</span><span class="w"> </span><span class="s">"05"</span><span class="p">}</span><span class="w"> </span><span class="s">"https://snomed.info/sct"</span><span class="p">])</span><span class="w">
+  </span><span class="c1">;;-&gt; returns =&gt; {:system "https://snomed.info/sct", :value 1077251000000100}
+</span><span class="w">  </span><span class="p">(</span><span class="nf">get-in</span><span class="w"> </span><span class="err">@</span><span class="n">registry</span><span class="w"> </span><span class="p">[{</span><span class="no">:system</span><span class="w"> </span><span class="s">"https://snomed.info/sct"</span><span class="w"> </span><span class="no">:value</span><span class="w"> </span><span class="mi">1077251000000100</span><span class="p">}</span><span class="w"> </span><span class="s">"https://data.standards.cymru/Id/datasets/edss/triage"</span><span class="p">])</span><span class="w">
+  </span><span class="c1">;; -&gt; returns =&gt; {:system "https://data.standards.cymru/Id/datasets/edss/triage", :value "05"}
+</span></code></pre>
+</div>
 
 <p>That means we can build an ‘alias’ system, taking arbitrary collections of identifiers and expanding/denormalising into all of the registered codesystems we know. In a real implementation, we’d recursively expand identifiers so we could alias all equivalent identifiers.</p>
 
-<div class="language-clojure highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="k">defn</span><span class="w"> </span><span class="n">expand-identifier</span><span class="w">
+<div class="language-clojure highlighter-rouge"><pre class="highlight"><code><span class="p">(</span><span class="k">defn</span><span class="w"> </span><span class="n">expand-identifier</span><span class="w">
   </span><span class="s">"Determine the equivalent identifiers for the specified identifier tuple"</span><span class="w">
   </span><span class="p">[[</span><span class="n">sys</span><span class="w"> </span><span class="n">v</span><span class="p">]]</span><span class="w">
   </span><span class="p">(</span><span class="nb">apply</span><span class="w"> </span><span class="nb">hash-map</span><span class="w"> 
     </span><span class="p">(</span><span class="nf">flatten</span><span class="w"> 
-      </span><span class="p">(</span><span class="nb">conj</span><span class="w"> </span><span class="p">(</span><span class="nf">-&gt;&gt;</span><span class="w"> </span><span class="p">(</span><span class="nb">vals</span><span class="w"> </span><span class="p">(</span><span class="nb">get</span><span class="w"> </span><span class="o">@</span><span class="n">registry</span><span class="w"> </span><span class="p">{</span><span class="no">:system</span><span class="w"> </span><span class="n">sys</span><span class="w"> </span><span class="no">:value</span><span class="w"> </span><span class="n">v</span><span class="p">}))</span><span class="w">
+      </span><span class="p">(</span><span class="nb">conj</span><span class="w"> </span><span class="p">(</span><span class="nf">-&gt;&gt;</span><span class="w"> </span><span class="p">(</span><span class="nb">vals</span><span class="w"> </span><span class="p">(</span><span class="nb">get</span><span class="w"> </span><span class="err">@</span><span class="n">registry</span><span class="w"> </span><span class="p">{</span><span class="no">:system</span><span class="w"> </span><span class="n">sys</span><span class="w"> </span><span class="no">:value</span><span class="w"> </span><span class="n">v</span><span class="p">}))</span><span class="w">
                  </span><span class="p">(</span><span class="nb">map</span><span class="w"> </span><span class="o">#</span><span class="p">(</span><span class="nb">vector</span><span class="w"> </span><span class="p">(</span><span class="no">:system</span><span class="w"> </span><span class="n">%</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="no">:value</span><span class="w"> </span><span class="n">%</span><span class="p">))))</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="n">sys</span><span class="p">))))</span><span class="w">
-</span></code></pre></div></div>
+</span></code></pre>
+</div>
 
 <p>So let’s check it works. Here we expand a single identifier tuple:</p>
 
-<div class="language-clojure highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">  </span><span class="p">(</span><span class="nf">expand-identifier</span><span class="w"> </span><span class="p">[</span><span class="s">"https://data.standards.cymru/Id/datasets/edss/triage"</span><span class="w"> </span><span class="s">"05"</span><span class="p">])</span><span class="w">
-</span><span class="c1">;;  =&gt; {"https://snomed.info/sct" 1077251000000100, "https://data.standards.cymru/Id/datasets/edss/triage" "05"}</span><span class="w">
-</span></code></pre></div></div>
+<div class="language-clojure highlighter-rouge"><pre class="highlight"><code><span class="w">  </span><span class="p">(</span><span class="nf">expand-identifier</span><span class="w"> </span><span class="p">[</span><span class="s">"https://data.standards.cymru/Id/datasets/edss/triage"</span><span class="w"> </span><span class="s">"05"</span><span class="p">])</span><span class="w">
+</span><span class="c1">;;  =&gt; {"https://snomed.info/sct" 1077251000000100, "https://data.standards.cymru/Id/datasets/edss/triage" "05"}
+</span></code></pre>
+</div>
 
 <p>And we can send in arbitrary identifiers which will be ignored if there are no expansions</p>
 
-<div class="language-clojure highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">  </span><span class="p">(</span><span class="nb">apply</span><span class="w"> </span><span class="nb">merge</span><span class="w"> </span><span class="p">(</span><span class="nf">-&gt;&gt;</span><span class="w"> </span><span class="p">{</span><span class="no">:name</span><span class="w"> </span><span class="s">"This won't be mapped"</span><span class="w">
+<div class="language-clojure highlighter-rouge"><pre class="highlight"><code><span class="w">  </span><span class="p">(</span><span class="nb">apply</span><span class="w"> </span><span class="nb">merge</span><span class="w"> </span><span class="p">(</span><span class="nf">-&gt;&gt;</span><span class="w"> </span><span class="p">{</span><span class="no">:name</span><span class="w"> </span><span class="s">"This won't be mapped"</span><span class="w">
                      </span><span class="s">"https://data.standards.cymru/Id/datasets/edss/triage"</span><span class="w"> </span><span class="s">"05"</span><span class="w">
                      </span><span class="s">"https://data.standards.cymru/Id/datasets/edss/other"</span><span class="w">  </span><span class="s">"N/A"</span><span class="p">}</span><span class="w">
                     </span><span class="p">(</span><span class="nb">map</span><span class="w"> </span><span class="n">expand-identifier</span><span class="p">)))</span><span class="w">
-</span><span class="c1">;; =&gt;</span><span class="w">
-</span><span class="c1">;{"https://snomed.info/sct" 1077251000000100,</span><span class="w">
-</span><span class="c1">; :name "This won't be mapped",</span><span class="w">
-</span><span class="c1">; "https://data.standards.cymru/Id/datasets/edss/triage" "05",</span><span class="w">
-</span><span class="c1">; "https://data.standards.cymru/Id/datasets/edss/other" "N/A"}</span><span class="w">
-</span></code></pre></div></div>
+</span><span class="c1">;; =&gt;
+;{"https://snomed.info/sct" 1077251000000100,
+; :name "This won't be mapped",
+; "https://data.standards.cymru/Id/datasets/edss/triage" "05",
+; "https://data.standards.cymru/Id/datasets/edss/other" "N/A"}
+</span></code></pre>
+</div>
 
 <p>So we can use these functions to build maps between arbitrary value sets in both classification and terminology systems - we could add an arbitrary map to another terminology or classification</p>
 
@@ -287,34 +295,37 @@ This means that <code class="highlighter-rouge">https://data.standards.cymru/Id/
 
 <p>In this simple proof-of-concept, let’s register the equivalence of the semantics manually. In a real-life application, we’d download the HL7 FHIR definitions in machine-readable formats and process accordingly in our inference engine.</p>
 
-<div class="language-clojure highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">  </span><span class="p">(</span><span class="nf">reg-equiv</span><span class="w"> 
+<div class="language-clojure highlighter-rouge"><pre class="highlight"><code><span class="w">  </span><span class="p">(</span><span class="nf">reg-equiv</span><span class="w"> 
     </span><span class="p">{</span><span class="no">:system</span><span class="w"> </span><span class="s">"http://hl7.org/fhir/v3/ActPriority"</span><span class="w"> </span><span class="no">:value</span><span class="w"> </span><span class="s">"UR"</span><span class="p">}</span><span class="w"> 
     </span><span class="p">{</span><span class="no">:system</span><span class="w"> </span><span class="s">"https://data.standards.cymru/Id/datasets/edss/triage"</span><span class="w"> </span><span class="no">:value</span><span class="w"> </span><span class="s">"03"</span><span class="p">})</span><span class="w">
-</span></code></pre></div></div>
+</span></code></pre>
+</div>
 
 <p>Now that means we can take FHIR identifiers and turn them into what we need. Notice we turn a FHIR ‘UR’ code into an NHS Wales emergency triage “03” code.</p>
 
-<div class="language-clojure highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">
+<div class="language-clojure highlighter-rouge"><pre class="highlight"><code><span class="w">
   </span><span class="p">(</span><span class="nf">expand-identifier</span><span class="w"> </span><span class="p">[</span><span class="s">"http://hl7.org/fhir/v3/ActPriority"</span><span class="w"> </span><span class="s">"UR"</span><span class="p">])</span><span class="w">
 
-</span><span class="c1">;; =&gt; {"https://data.standards.cymru/Id/datasets/edss/triage" "03",</span><span class="w">
-</span><span class="c1">;;     "http://hl7.org/fhir/v3/ActPriority" "UR"}</span><span class="w">
-</span></code></pre></div></div>
+</span><span class="c1">;; =&gt; {"https://data.standards.cymru/Id/datasets/edss/triage" "03",
+;;     "http://hl7.org/fhir/v3/ActPriority" "UR"}
+</span></code></pre>
+</div>
 
 <p>We can do it in reverse as part of a collection of different identifiers:</p>
 
-<div class="language-clojure highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">  </span><span class="p">(</span><span class="nb">apply</span><span class="w"> </span><span class="nb">merge</span><span class="w"> </span><span class="p">(</span><span class="nf">-&gt;&gt;</span><span class="w"> </span><span class="p">{</span><span class="no">:name</span><span class="w">                                                  </span><span class="s">"This won't be mapped"</span><span class="w">
+<div class="language-clojure highlighter-rouge"><pre class="highlight"><code><span class="w">  </span><span class="p">(</span><span class="nb">apply</span><span class="w"> </span><span class="nb">merge</span><span class="w"> </span><span class="p">(</span><span class="nf">-&gt;&gt;</span><span class="w"> </span><span class="p">{</span><span class="no">:name</span><span class="w">                                                  </span><span class="s">"This won't be mapped"</span><span class="w">
                      </span><span class="s">"https://data.standards.cymru/Id/datasets/edss/triage"</span><span class="w"> </span><span class="s">"03"</span><span class="w">
                      </span><span class="s">"https://data.standards.cymru/Id/datasets/edss/other"</span><span class="w">  </span><span class="s">"N/A"</span><span class="p">}</span><span class="w">
                     </span><span class="p">(</span><span class="nb">map</span><span class="w"> </span><span class="n">expand-identifier</span><span class="p">)))</span><span class="w">
 
-</span><span class="c1">;; =&gt;</span><span class="w">
-</span><span class="c1">;{"https://snomed.info/sct" 1064901000000108,</span><span class="w">
-</span><span class="c1">; :name "This won't be mapped",</span><span class="w">
-</span><span class="c1">; "https://data.standards.cymru/Id/datasets/edss/triage" "03",</span><span class="w">
-</span><span class="c1">; "http://hl7.org/fhir/v3/ActPriority" "UR",</span><span class="w">
-</span><span class="c1">; "https://data.standards.cymru/Id/datasets/edss/other" "N/A"}</span><span class="w">
-</span></code></pre></div></div>
+</span><span class="c1">;; =&gt;
+;{"https://snomed.info/sct" 1064901000000108,
+; :name "This won't be mapped",
+; "https://data.standards.cymru/Id/datasets/edss/triage" "03",
+; "http://hl7.org/fhir/v3/ActPriority" "UR",
+; "https://data.standards.cymru/Id/datasets/edss/other" "N/A"}
+</span></code></pre>
+</div>
 
 <p>And that means we can now do logic such as asking, was this an urgent category and it doesn’t matter whether the information is encoded in SNOMED CT, the NHS Wales information standard or HL7 FHIR.</p>
 
