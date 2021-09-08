@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Data all the way down</title>
-  <meta name="description" content="Are you a clinician about to see a patient, reviewing the patient record in order to prepare for the consultation?">
+  <meta name="description" content="“Turtles all the way down” https://en.wikipedia.org/wiki/Turtles_all_the_way_down">
 
   <link rel="stylesheet" href="/assets/main.css">
   <link rel="canonical" href="https://www.wardle.org/snomed/2021/07/26/data-all-the-way.html">
@@ -96,7 +96,13 @@
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <p>Are you a clinician about to see a patient, reviewing the patient record in order to prepare for the consultation?</p>
+    <blockquote>
+  <p>“Turtles all the way down”</p>
+
+  <p><a href="https://en.wikipedia.org/wiki/Turtles_all_the_way_down">https://en.wikipedia.org/wiki/Turtles_all_the_way_down</a></p>
+</blockquote>
+
+<p>Are you a clinician about to see a patient, reviewing the patient record in order to prepare for the consultation?</p>
 
 <p>Or are you a manager assessing the demands on your services, and running quality improvement projects in order to improve your outcomes?</p>
 
@@ -244,11 +250,17 @@ Skelton, Matthew. Team Topologies (Kindle Locations 2147-2151). IT Revolution Pr
 
 <p>After the data, we need easily usable computing services that wrap that data product and make it accessible to applications, irrespective of context. That means building software that provides an API, whether in-process or as distributed microservices.</p>
 
-<p>It is usually necessary to provide different abstractions across these services to make it easier for clients to consume health and care computing services. That means providing a ‘view’ of those data in an open standard. For example, while clods](https://github.com/wardle/clods) adopts the DCB0090 standard for organisation data, that is a UK standard. Most applications will simply want to make use of organisational data at a simpler, high-level, so I make a FHIR R4 server available with a <a href="https://github.com/wardle/clods/blob/main/fhir_r4/com/eldrix/clods/fhir/r4/convert.clj">few lines of code</a> mapping DCB0090 into FHIR to make it simpler to consume.</p>
+<p>It is usually necessary to provide different abstractions across these services to make it easier for clients to consume health and care computing services. That usually means providing a ‘view’ of those data in an open standard.</p>
 
-<p>Data are first-class and we should treat data products as first-class as well.</p>
+<p>For example, while clods](https://github.com/wardle/clods) adopts the DCB0090 standard for organisation data, that is a UK standard. Most applications will simply want to make use of organisational data at a simpler, high-level, so I make a FHIR R4 server available with a <a href="https://github.com/wardle/clods/blob/main/fhir_r4/com/eldrix/clods/fhir/r4/convert.clj">few lines of code</a> mapping DCB0090 into FHIR to make it simpler to consume.</p>
+
+<p>So I don’t expect client software to understand the different categories of health and care organisation in DCB0090, but we can provide a ‘facade’ across those data to map into data and formats that clients can understand, such as X.500, FHIR or openEHR and provide those data on-demand.</p>
+
+<p>Data are first-class and we should treat data products as first-class as well, together with composable software tools that make using those data products in our applications, whether user-facing for direct care, analytics or research.</p>
 
 <p><em>Mark</em></p>
+
+<p>PS. The title of this post alludes to the phrase “Turtles all the way down”, an expression of the problem of infinite regress.</p>
 
   </div>
 
