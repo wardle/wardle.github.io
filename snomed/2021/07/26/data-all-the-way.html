@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Data all the way down</title>
+  <meta name="description" content="Are you a clinician about to see a patient, reviewing the patient record in order to prepare for the consultation?">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://www.wardle.org/snomed/2021/07/26/data-all-the-way.html">
+  <link rel="alternate" type="application/rss+xml" title="Health informatics and information technology" href="/feed.xml">
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-97389603-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="/">Health informatics and information technology</a>
+  
+  
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+           <a class="page-link" href="/">All posts</a>
+          
+            
+            
+            <a class="page-link" href="/projects/">Projects</a>
+            
+          
+            
+            
+            <a class="page-link" href="/about/">About</a>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Data all the way down</h1>
+    <p class="post-meta">
+      <time datetime="2021-07-26T15:14:14+01:00" itemprop="datePublished">
+        
+        26 July 2021
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Are you a clinician about to see a patient, reviewing the patient record in order to prepare for the consultation?</p>
+
+<p>Or are you a manager assessing the demands on your services, and running quality improvement projects in order to improve your outcomes?</p>
+
+<p>Or perhaps you’re a researcher looking to extend knowledge and inform the best clinical practices of tomorrow?</p>
+
+<p>Most of us working in health and care operate in all three of these domains, but historically, each is considered separate.</p>
+
+<p>Patient records might still be on paper, or perhaps you use an electronic patient record system.</p>
+
+<p>Your administrative data including time from referral to different assessments and treatments are held in a patient administrative system, or more likely, across multiple administrative systems, one or more for each organisation.</p>
+
+<p>Your research might use a bespoke registry or research system for each of your research projects.</p>
+
+<h1 id="software-in-health-and-care">Software in health and care</h1>
+
+<p>Software is <a href="https://wardle.org/digital/2018/10/23/on-digital.html">like magic</a> offering us the potential to automate and systematise safe and effective clinical processes and most importantly, build learning systems that can continuously monitor and improve from where we are currently.</p>
+
+<blockquote>
+  <p>As a result, digital, and being data-driven, means our planning cycles should become shorter and shorter, because we’re using small focused interventions and data to constantly evaluate our hypotheses and build a continuously learning healthcare system.</p>
+
+  <p><a href="https://wardle.org/digital/2018/10/23/on-digital.html">Digital transformation in healthcare, 23 October 2018</a></p>
+</blockquote>
+
+<p>But we have major problem:</p>
+
+<p><em>We separate the things that should be the same.and we join the things that should be separate.</em></p>
+
+<p>Here’s an example from the past. The Bristol Heart scandal occurred in Bristol, UK in the 1990s, in which babies died at high rates after cardiac surgery. The report into the scandal including this in its conclusion:</p>
+
+<blockquote>
+  <p>The various clinical systems, many of them paper based, differed from one another and had no relationship with the administrative hospital-wide systems. The funding made available in the late 1980s and early 1990s for medical and later clinical audit helped to reinforce this separation by making available to groups of clinicians money for small local computer systems. The lack of any connection between these different systems, one administrative, the others clinical, for collecting data cannot be explained solely on the basis of some technical or technological reason. It was just as strongly a reflection of a mindset that clinical matters were the sole domain of clinicians and non-clinical matters, to do with the management of resources and with the movement of patients into and through the hospital, were the preserve of managers and administrators.</p>
+
+  <p>Bristol Heart Enquiry, 2001.
+(quoted in <a href="https://wardle.org/clinical-informatics/2017/06/06/using-data-patient-safety.html">“Using data for patient safety”</a>)</p>
+</blockquote>
+
+<p>But why do we separate clinical from administrative systems, and both of those from research systems?</p>
+
+<p>There are a variety of reasons, including understanding who has responsibility for procuring, funding and designing such systems as well as issues of information governance.</p>
+
+<p>The false separation of the needs of these three - administration, clinical practice and research, is so embedded in our culture that we even often use different tools, languages and frameworks to build the software - you might run R and python for your research, your analytics by an off-the-shelf package such as Qlik, and your electronic health record software in java or C++.</p>
+
+<p>But are they so different really?</p>
+
+<p>It’s straightforward to think of examples in which it is helpful to combine data relating to what is traditionally considered to be administrative with clinical data. One good example is the flow of patients through a hospital - lengths of stay are best understood in the context of medical problems and co-morbidities. Another might be making sense of clinical or diagnostic information, such as how many patients are referred with problem ‘x’. It’s all data, and it makes little sense that we use widely different software for the different purposes to which we put our data.</p>
+
+<p>So what’s the solution?</p>
+
+<h1 id="a-single-system">A single system?</h1>
+
+<p>So why not have a <em>single system</em>? What a seductive yet naive idea!</p>
+
+<p>Its naive because what do we know about building effective, adaptable, flexible computer software?</p>
+
+<blockquote>
+  <p>“Flow is difficult to achieve when each team depends on a complicated web of interactions with many other teams. For a fast flow of change to software systems, we need to remove hand-offs and align most teams to the main streams of change within the organization. However, many organizations experience huge problems with the responsibility boundaries assigned to teams. Typically, little thought is given to the viability of the boundaries for teams, resulting in a lack of ownership, disengagement, and a glacially slow rate of delivery.”
+Skelton, Matthew. Team Topologies (Kindle Locations 2147-2151). IT Revolution Press. Kindle Edition.</p>
+</blockquote>
+
+<p>We <em>have</em> to break up our complex health and care domain into smaller subunits. It’s just too complicated and its safer and more effective to break up our problems into smaller tractable problems.</p>
+
+<p>Health professionals can be seduced by the idea of buying a ‘single system’ in order to solve their problems because, quite rightly, they’ve been scarred by their experiences having to use multiple ‘systems’ in order to get the information that they need - paper records, that system, another system, another login, a different login.</p>
+
+<p>But, but but!</p>
+
+<blockquote>
+  <p>But there is a paradox. We know that the worst ways to create a seamless “one system” approach are thinking we can build a single monolithic application or expect the procurement of a “system” to solve, for example, closer working and communication between health and social care.</p>
+
+  <p>The best way to slow down delivery is to have an approach to technical architecture and wider governance structures that slows down the software value chain. The key to software delivery is delivery, and yet some organisations treat software as if they were managing capital projects such as building a new road or a bridge. In most cases, the technology is the easy bit; its the implementation on the ground across multiple complex adaptive systems that is most difficult. But we also need a design that makes it easy and safe to change.</p>
+
+  <p>People who think building technology is difficult and complex tend to want to centralise and control its development, because that feels less risky, but that approach is wrong.</p>
+
+  <p><a href="https://wardle.org/strategy/2019/09/22/health-technology.html">“Healthcare and Technology, September 2019”</a></p>
+</blockquote>
+
+<p>If we believe that software can make our work in health and care more effective, are we using the right methods in order to safely deliver that software, at pace?</p>
+
+<p>We know existing software systems, whether for direct patient care, for analytics / governance or for research, we seem to make the same mistakes again and again:</p>
+
+<blockquote>
+  <p>Too often, software architecture and system design occurs as a consequence of organisational or management structures, rather than stepping back and truly understanding the problem domain and how to carve it up into manageable chunks. You need to understand Conway’s Law, and the reverse Conway’s manoeuvre - and place the patient foremost in the design and architecture of your systems.
+<a href="https://wardle.org/ehr/2021/06/30/dependency-conway.html">The dependencies between architecture, governance and standards, June 2021</a></p>
+</blockquote>
+
+<p>The conclusion must be, therefore, that we need to <em>step back and re-appraise how we architect, fund and standardise digital health and care</em>.</p>
+
+<p>We can get a ‘single system’ by focusing on data, standards, architecture and modularity, and enable innovation and continuous improvement - and not unduly limit our ability to adapt and change to the ever changing requirements the complex adaptive domains of health and care throw at us!</p>
+
+<h1 id="towards-data-data-driven-health-and-composable-modularity-in-software-infrastructure">Towards data, data-driven health and composable modularity in software infrastructure.</h1>
+
+<p>Firstly, we’ve got to recognise that fundamentally, it’s all just data.</p>
+
+<p>We need to collect, make sense of and use data in order to do what we want to do, whether that’s running our health services, seeing an individual patient, improving our services or furthering our medical knowledge.</p>
+
+<p>Secondly, we need structured meaningful <em>data</em> and that means data standards.</p>
+
+<p>If we think you have had a myocardial infarction, then we need computer systems that can make the same sense of the data, and we need to think of our different sources as reference data as <em>products</em> - and use ‘product-thinking’ in how we publish, document, and make those data available - it needs to consider user experience of that data product in just as much of a way as a user-facing application.</p>
+
+<p>Thirdly, we need to make using data, and using data standards as easy as possible.</p>
+
+<p>No-one starts building software nowadays from nothing, but instead make use of a range of standard building blocks in order to achieve the functionality they want - whether its a cryptography library, or machine learning, or networking, these elements are commodities - usually open-source, widely available and widely-tested.</p>
+
+<p>So if you’re starting to build clinical applications now, where are the building blocks, the commodity libraries, frameworks and services with which you can innovate?  Where is the platform on which you can build?</p>
+
+<p>We need readily-available software modules that can make consuming and making sense of data as easy as possible. That means many software services that simply wrap reference data in order to make it usable in whatever context you need and that those services are composable with others much like an orchestra is made up of many different sections, instruments and musicians. And who can argue with Aristotle? “the whole is greater than the sum of its parts”.</p>
+
+<h1 id="what-are-the-building-blocks">What are the building blocks?</h1>
+
+<p>When I first built an electronic health record system, I needed the basics - understanding who the patient is, who the professional was, when someone was seen, where they were seen, what were the characteristics that help define the cohort - such as problem, diagnosis, treatment whether by surgery or drug, and geographical indicators, or derived indicators such as socio-economic deprivation.</p>
+
+<p>I’ve realised that building such functionality into a single system is wrong.</p>
+
+<p>As such, I’ve developed replacements as individual software components. Each is usable in isolation but I can combine them, whether as libraries in a single application or as a suite of individually running microservices, in order to solve problems. Each is designed for use in operational administrative, clinical and research systems - so are usable for direct care, service management or in my analytics. Each is open source.</p>
+
+<ul>
+  <li><a href="https://github.com/wardle/hermes">hermes</a> - a SNOMED CT terminology server and library.</li>
+  <li><a href="https://github.com/wardle/dmd">dmd</a> - UK dictionary of medicines and devices server and library</li>
+  <li><a href="https://github.com/wardle/clods">clods</a> - UK organisational and geographical reference data, including a FHIR r4 server</li>
+  <li><a href="https://github.com/wardle/deprivare">deprivare</a> - UK deprivation indices made available in-process or via a microservice</li>
+  <li><a href="https://github.com/wardle/concierge">concierge</a> - integration / interoperability with other NHS software services including patient identity / demographics / staff indexes / PAS / document repositories etc Each underlying system can be viewed through the lens of an open standard - e.g. a HL7 FHIR view.</li>
+  <li><a href="https://github.com/wardle/trud">trud</a> - easy access to NHS Digital’s UK reference data services</li>
+  <li><a href="https://github.com/wardle/hades">hades</a> - a FHIR R4 SNOMED terminology server</li>
+  <li><a href="https://github.com/wardle/nhspd">nhspd</a> - UK postal code database with links to geographical, administrative and organisational units</li>
+</ul>
+
+<p>Let’s look at two examples in more detail:</p>
+
+<p><a href="https:/github.com/wardle/hermes">hermes</a> makes SNOMED CT available to you easily, so you can embed as a library and run in-process or run as a terminology server. I use this to make it easy to use and make sense of SNOMED CT - both in clinical applications <em>and</em> in my analytics pipelines.</p>
+
+<p><a href="https://github.com/wardle/clods">clods</a> allows you to download and make sense of organisational reference data. I use that with the NHS postcode directory (make available via <a href="https://github.com/wardle/nhspd">nhspd</a> to find out where a patient lives and make sense of those data - including linking to indices of deprivation. My software applications record the date, time and place of clinical encounters, and can leverage those codes - and so other systems not under my control can understand that a particular encounter occurred at, say, the University Hospital of Wales. Using these data is essential for interoperability.</p>
+
+<p><a href="https://github.com/wardle/dmd">dmd</a> allows you to download and make sense of drug data in the UK. What kind of drugs is that patient given? How have the doses changed over time? How many milligrams of <em>that</em> ingredient is the patient taking? Is this patient on a type of immunosuppressant drug? This library and microservice takes the NHSBSA dm+d distribution and makes it usable in your applications - whether that’s for clinical care or for running your analytics.</p>
+
+<p>For example, I switch on different functionality in my homegrown EPR based on the diagnoses of a specific patient - e.g. does this patient have a type of motor neurone disease - while doing the same in analytics - e.g. give me all of the patients who have received a type of botulinum toxin - while doing the same in clinical research - e.g. how do the outcomes of multiple sclerosis vary by socioeconomic deprivation?</p>
+
+<h1 id="whats-needed-next">What’s needed next?</h1>
+
+<p>We need to think carefully about how we conceive and build the clinical applications of the future. They should be data-focused, data-driven and made up of a blend of open, modular services.</p>
+
+<p>So what are the shared services that are needed for clinical, administrative and research applications?</p>
+
+<p>There is usually a pattern - usually interesting but often parochial data sources - we need to identify those and make them more usable - by treating them as first-class data products. That means at a minimum, good documentation, persistent non-reused identifiers and simple ways of tracking publication such as a good metadata.</p>
+
+<p>It’s too often the case that governmental data are published on a portal for download, but do not meet these minimum requirements, making it difficult to write software that can recognise  publication of a new version and download that latest issue.</p>
+
+<p>After the data, we need easily usable computing services that wrap that data product and make it accessible to applications, irrespective of context. That means building software that provides an API, whether in-process or as distributed microservices.</p>
+
+<p>It is usually necessary to provide different abstractions across these services to make it easier for clients to consume health and care computing services. That means providing a ‘view’ of those data in an open standard. For example, while clods](https://github.com/wardle/clods) adopts the DCB0090 standard for organisation data, that is a UK standard. Most applications will simply want to make use of organisational data at a simpler, high-level, so I make a FHIR R4 server available with a <a href="https://github.com/wardle/clods/blob/main/fhir_r4/com/eldrix/clods/fhir/r4/convert.clj">few lines of code</a> mapping DCB0090 into FHIR to make it simpler to consume.</p>
+
+<p>Data are first-class and we should treat data products as first-class as well.</p>
+
+<p><em>Mark</em></p>
+
+  </div>
+
+  
+</article>
+        
+      </div>
+    </main>
+    
+    
+    
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Health informatics and information technology</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Health informatics and information technology
+            
+            </li>
+            
+            <li><a href="mailto:mark@wardle.org">mark@wardle.org</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/wardle"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">wardle</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/mwardle"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">mwardle</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
