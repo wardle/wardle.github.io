@@ -1,5 +1,171 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2021-09-08T17:24:27+01:00</updated><id>https://www.wardle.org/feed.xml</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
-</subtitle><entry><title type="html">Data all the way down</title><link href="https://www.wardle.org/clinical-informatics/2021/09/08/data-all-the-way.html" rel="alternate" type="text/html" title="Data all the way down" /><published>2021-09-08T15:14:14+01:00</published><updated>2021-09-08T15:14:14+01:00</updated><id>https://www.wardle.org/clinical-informatics/2021/09/08/data-all-the-way</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2021/09/08/data-all-the-way.html">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.1">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2021-10-21T08:52:50+01:00</updated><id>https://www.wardle.org/feed.xml</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</subtitle><entry><title type="html">Mapping the electronic health record 1/3</title><link href="https://www.wardle.org/strategy/2021/10/21/mapping-the-epr-1.html" rel="alternate" type="text/html" title="Mapping the electronic health record 1/3" /><published>2021-10-21T08:00:00+01:00</published><updated>2021-10-21T08:00:00+01:00</updated><id>https://www.wardle.org/strategy/2021/10/21/mapping-the-epr-1</id><content type="html" xml:base="https://www.wardle.org/strategy/2021/10/21/mapping-the-epr-1.html">&lt;p&gt;This blog post is based on my presentation at &lt;a href=&quot;https://www.map-camp.com&quot;&gt;MapCamp 2021&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/mapcamp21/map-ehr.001.png&quot; alt=&quot;Title page&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can &lt;a href=&quot;https://www.youtube.com/watch?v=9Vk6bg0uk4o&quot;&gt;watch a video recording&lt;/a&gt; of that presentation if you like, but this post is a 
+deeper dive into some of the detail.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/9Vk6bg0uk4o&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;The source code for the Wardley maps are &lt;a href=&quot;https://github.com/wardle/mapcamp-2021&quot;&gt;available on github&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;key-messages&quot;&gt;Key messages&lt;/h1&gt;
+
+&lt;p&gt;The main messages are:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;There are many parallels between clinical decision making and strategy.&lt;/li&gt;
+  &lt;li&gt;We need information at the right time for our decision making, with feedback loops, whether for direct care, management of services or reproducible research.&lt;/li&gt;
+  &lt;li&gt;Health and care should be data-driven.&lt;/li&gt;
+  &lt;li&gt;Health and care should be based upon openness, transparency, collaboration and continuity, with meaningful data.&lt;/li&gt;
+  &lt;li&gt;Trying to fix health information technology through the prism of an organisation-centric electronic health record is difficult and we need to step back and re-appraise.&lt;/li&gt;
+  &lt;li&gt;Understanding the needs of the EHR (electronic health record) is useful in understanding how to deconstruct the EHR.&lt;/li&gt;
+  &lt;li&gt;Modern technology companies have generally failed in health and care so far. They now focus on generic data and computing services but cloud technology should be more than simply moving a data centre to someone else’s kit.&lt;/li&gt;
+  &lt;li&gt;We should be building the tools to build EHRs, not another EHR.&lt;/li&gt;
+  &lt;li&gt;The foundational software and services and tools to build EHRs should be commodities, open-source and widely available leaving the market concentrate on higher-value differentiation to support decision-making. Such services can and should be provided as shared, highly resilient, managed services.&lt;/li&gt;
+  &lt;li&gt;A learning health and care system must be flexible and adaptable, so the priority should be in providing configurable composable tools to manage workflow and orchestration of processes across organisational boundaries.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;what-is-wardley-mapping&quot;&gt;What is Wardley mapping?&lt;/h3&gt;
+
+&lt;p&gt;An excellent way to understand our current state is to start with &lt;em&gt;user needs&lt;/em&gt;. We need &lt;em&gt;situational awareness&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Wardley mapping draws a chain of user needs from top to bottom, demonstrating the required capabilities on a chart that moves from left-to-right in which things on the left are poorly understood and in evolution and things on the right are evolved and commodities.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/mapcamp21/stages-of-evolution.png&quot; alt=&quot;Stages of evolution&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;From &lt;a href=&quot;https://blog.gardeviance.org/2016/04/whats-in-wardley-map-and-need-for-cheat.html&quot;&gt;“What’s in a Wardley map / cheatsheet”&lt;/a&gt;
+By Simon Wardley, 2016.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;As a result, you will find potentially high-value but perhaps poorly understood, poorly systematised elements on the left of the chart.&lt;/p&gt;
+
+&lt;p&gt;Over time, these elements are likely to move rightwards and become more accepted. As such, the map helps you realise, or at least prompt debate, on where to invest your time and effort.&lt;/p&gt;
+
+&lt;p&gt;In addition, you might find elements of your organisation, or your ecosystem, seem to be in the wrong place. For example, you might be building your own data centre and your organisation is treating it as leading edge; as you draw your map you realise that is wrong.&lt;/p&gt;
+
+&lt;p&gt;Maps facilitate shared discussion.&lt;/p&gt;
+
+&lt;p&gt;All my maps are wrong but I hope they might be useful!&lt;/p&gt;
+
+&lt;p&gt;Let’s start!&lt;/p&gt;
+
+&lt;h1 id=&quot;1-clinical-decision-making&quot;&gt;1. Clinical decision making&lt;/h1&gt;
+
+&lt;p&gt;I would like to discuss diagnosis, management and decision making and the use of &lt;em&gt;data&lt;/em&gt; in supporting the health of a nation.&lt;/p&gt;
+
+&lt;p&gt;There are parallels between clinical decision making and strategy.&lt;/p&gt;
+
+&lt;p&gt;Our default must be that we’re always orientated towards action - so that means &lt;em&gt;making decisions&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/mapcamp21/map-ehr.002.png&quot; alt=&quot;Be orientated towards action&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If I’m seeing you in my clinic, we need to make a diagnosis and a management plan together - we need to ask ourselves what are we going to do; it requires *information at the right time. We might take action and measure the response and change our course.&lt;/p&gt;
+
+&lt;p&gt;Most of what we have in health information technology is unintentionally designed and it’s evolved organically and it’s not fit for purpose.&lt;/p&gt;
+
+&lt;p&gt;If you’ve not used Wardley mapping before, this map may look complex. But it isn’t. We simply need to read it from top to bottom. I’ll explain this in more detail below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/mapcamp21/map-ehr.004.png&quot; alt=&quot;Mapping clinical decision making&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We start with a situation of uncertainty. We  benefit if we reduce the uncertainty around a specific decision so that we can make better decisions.&lt;/p&gt;
+
+&lt;p&gt;At the top of the map, we have a professional and a patient and we’re making a decision.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Are you going to have that knee replacement?&lt;/li&gt;
+  &lt;li&gt;What are the trade-offs here?&lt;/li&gt;
+  &lt;li&gt;What are the pros, what are the cons?&lt;/li&gt;
+  &lt;li&gt;Are we going to use this new treatment with this patient with COVID-19?&lt;/li&gt;
+  &lt;li&gt;How do we identify the patient with COVID-19 who’s going to need higher level care?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Whatever the decision, it is dependent on our diagnosis of the problem. I’ve annotated ‘diagnosis’ on the map as ‘possible’, ‘probable’ or ‘definite’ so already we’re starting to think  we are creating something that is &lt;em&gt;iterative&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;We’re going to need feedback loops because we may need to make a speculative diagnosis and confirm and adapt as we go. We do not have a linear process but instead we use results to not only confirm but refute our thinking. Feedback loops support the ‘clinical method’ in which we combine information about diseases with information about the patient and our context.&lt;/p&gt;
+
+&lt;p&gt;We need to understand that &lt;em&gt;a priori&lt;/em&gt; probabilities - we use Bayesian inference based on the prior probability of that diagnosis.&lt;/p&gt;
+
+&lt;p&gt;That means that if a patient has a fever and we are  in Africa it’s likely to be a different diagnosis than if one has a fever in the United Kingdom. Context matters.&lt;/p&gt;
+
+&lt;p&gt;We also work on pattern matching:
+&lt;img src=&quot;/images/mapcamp21/map-ehr.004-pattern.png&quot; alt=&quot;Mapping clinical decision making&quot; /&gt;
+That’s what we teach at medical school and it’s well developed and well evolved. We teach it we expect it to be done propertly and consistently. We look at symptoms, what the patient describes; signs, the things that we can find on examination and we use investigations and all are dependent on training that occurs over many years. It should be no surprise that the patterm-matching pathway is over on the right of our map.&lt;/p&gt;
+
+&lt;h3 id=&quot;learning-through-doing---feedback&quot;&gt;Learning through doing - feedback&lt;/h3&gt;
+
+&lt;p&gt;We learn through a process of ‘doing’ which makes feedback essential. As a result, in the map you can see an iterative loop where we’re continuously learning.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/mapcamp21/map-ehr.004-feedback-loops.png&quot; alt=&quot;Feedback loops and iteration&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can imagine that type of feedback loop in three broad categories of iteration:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;You’re caring for a single patient and arrange 
+tests or treatments and use the results and outcomes to modify the plan.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;You’re looking at cohorts of people - e.g. those attending a service or facility, or somebody as defined by their characteristics such as ethnicity,  age, problems, diagnoses, or the treatments that they’ve had.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;You’re trying to advance science so it’s actually clinical research in which a group of patients is compared to another after, perhaps, randomisation, or simple observation.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Frequently, these three use-cases are treated very separately, which we’ll discuss later. Ask yourself why when they are fundamentally the same, but perhaps at different levels of acuity and consent. All need to be reproducible and replicable across different cohorts.&lt;/p&gt;
+
+&lt;h3 id=&quot;supporting-continuous-learning&quot;&gt;Supporting continuous learning&lt;/h3&gt;
+
+&lt;p&gt;For continuous learning we need &lt;em&gt;continuity&lt;/em&gt; and a &lt;em&gt;focus on outcomes&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Paradoxically, many digital tools reduce continuity because they are used as part of reducing health and care to a system focused on transactions like a call-centre.&lt;/p&gt;
+
+&lt;p&gt;How do we assess what we’re doing unless we’re measuring outcomes in a systematic fashion?&lt;/p&gt;
+
+&lt;p&gt;If we need continuity and we want to focus on outcomes we need to routinely and systematically &lt;em&gt;share data&lt;/em&gt;. Currently, it is not, except for specific examples such as registries.&lt;/p&gt;
+
+&lt;p&gt;Similarly, we’ve got to make sense of that data in context. If we’re going to measure outcomes, it’s no good just assuming that we can interpret those results - we need, as is plotted on the map, &lt;em&gt;meaningful data&lt;/em&gt; and supporting &lt;em&gt;data standards&lt;/em&gt; in order to aggregate, make sense and deduce.&lt;/p&gt;
+
+&lt;p&gt;For example, I’ve got work that shows how a patient with multiple sclerosis progresses over time but that only makes sense if you compare that patient to the rest of the cohort.&lt;/p&gt;
+
+&lt;p&gt;We need tools and data in order to support our decision making. That’s because we need to collect the same kind of structured data and inculcate semantic interoperability with widespread implementation of open standards.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/mapcamp21/map-ehr.004-interop.png&quot; alt=&quot;The need for interoperability&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Current implementation of standards is patchy. Many implementations are proprietary, and it is usually more difficult to use a standards-based approach than something custom-built that tightly couples components with end-to-end bespoke integration.&lt;/p&gt;
+
+&lt;p&gt;In many circumstances, health and care providers need to buy a product in order to implement a standard. That’s akin to you needing to buy encryption for your web browser.&lt;/p&gt;
+
+&lt;p&gt;It therefore follows that there is an opportunity to disrupt the status quo with readily available open-source implementations of data standards and making data standards and data interoperability commodity ubiquitous across our ecosystem. This is a cultural change that is gaining momentum.&lt;/p&gt;
+
+&lt;p&gt;So the maps help us identify the areas we might wish to focus our attention.&lt;/p&gt;
+
+&lt;p&gt;I’ve spent my own time building a suite of &lt;a href=&quot;https://github.com/wardle&quot;&gt;open-source libraries and services&lt;/a&gt; because that work is important and foundational.&lt;/p&gt;
+
+&lt;h3 id=&quot;building-a-learning-health-system&quot;&gt;Building a learning health system&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/mapcamp21/map-ehr.005.png&quot; alt=&quot;Where to focus&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If we are to build a learning health system, we 
+must therefore:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;focus on meaningful outcomes&lt;/li&gt;
+  &lt;li&gt;consider &lt;em&gt;value&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;share data - safely distributed at scale with consent and control&lt;/li&gt;
+  &lt;li&gt;consider how to make sense of data - making it &lt;em&gt;useful&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;open source commodity tools and resourcec that make collecting and making sense of data straightforward - a &lt;em&gt;‘commons’&lt;/em&gt; for health and care.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We want the right information at the right time; accessible and useful.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/mapcamp21/map-ehr.006.png&quot; alt=&quot;Plan for learning&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The next post in this series will explore what we already have in health and care and will be published soon.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">This blog post is based on my presentation at MapCamp 2021.</summary></entry><entry><title type="html">Data all the way down</title><link href="https://www.wardle.org/clinical-informatics/2021/09/08/data-all-the-way.html" rel="alternate" type="text/html" title="Data all the way down" /><published>2021-09-08T15:14:14+01:00</published><updated>2021-09-08T15:14:14+01:00</updated><id>https://www.wardle.org/clinical-informatics/2021/09/08/data-all-the-way</id><content type="html" xml:base="https://www.wardle.org/clinical-informatics/2021/09/08/data-all-the-way.html">&lt;blockquote&gt;
   &lt;p&gt;“Turtles all the way down”&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Turtles_all_the_way_down&quot;&gt;https://en.wikipedia.org/wiki/Turtles_all_the_way_down&lt;/a&gt;&lt;/p&gt;
@@ -1227,34 +1393,4 @@ This means that &lt;code class=&quot;highlighter-rouge&quot;&gt;https://data.sta
   &lt;li&gt;Clojure (and other lisps) are really nice for doing exploratory programming using data.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">One of the difficulties with building semantic interoperability between clinical systems is how we define value sets.</summary></entry><entry><title type="html">PatientCare EPR</title><link href="https://www.wardle.org/patientcare/2020/06/26/patientcare-epr.html" rel="alternate" type="text/html" title="PatientCare EPR" /><published>2020-06-26T09:09:10+01:00</published><updated>2020-06-26T09:09:10+01:00</updated><id>https://www.wardle.org/patientcare/2020/06/26/patientcare-epr</id><content type="html" xml:base="https://www.wardle.org/patientcare/2020/06/26/patientcare-epr.html">&lt;p&gt;So I wrote an electronic health record, running live since 2009, and while it’s still not perfect, it’s had a lot of use and I’ve made a lot of changes.&lt;/p&gt;
-
-&lt;p&gt;I wrote it in my spare time.&lt;/p&gt;
-
-&lt;p&gt;Here are the statistics as of 24th June 2020:&lt;/p&gt;
-
-&lt;p&gt;There are 34,587 registered patients from across Wales, with 36% living Cardiff and Vale University Health Board, 15.9% Aneurin Bevan University Health Board, 11.3% Swansea Bay Health Board, 7.5% Cwm Taf University Health Board and the remaining distributed across Hywel Dda, Betsi Cadwaladr, Powys University Health Boards and NHS England sites.&lt;/p&gt;
-
-&lt;p&gt;There are 111 defined patient cohorts, with 78 NHS cohorts and 32 research cohorts and 577 health professionals registered to use the system including 81 specialist nurses, 78 administrators, 75 consultants, 63 physiotherapists, 52 doctors-in-training, 34 speech and language therapists, 30 occupational therapists, 25 dieticians and 10 psychologists, with the remaining comprising research associates, administrators and students.&lt;/p&gt;
-
-&lt;p&gt;There have been 436,145 clinical encounters recorded using the software with usage increasing during the COVID-19 crisis to record patient clinical and research contacts. Of these, there have been 175,144 telephone calls, 116,977 outpatient clinic assessments, 91,854 virtual encounters, 17,504 home visits,  11,234 inpatient encounters, 7639 multi-disciplinary team assessments and 5891 therapy group encounters. There are 4843 electronic consent forms recorded.&lt;/p&gt;
-
-&lt;p&gt;It integrates with the NHS Wales enterprise master patient index, the NHS Wales Care Record Service, the Cardiff and Vale document repository, the staff directory, multiple patient administrative systems and uses NHS systems for staff authentication.&lt;/p&gt;
-
-&lt;p&gt;It is founded on structured meaningful data. All patients have a list of addresses and each address is mapped to health organisation and LSOA and so from there, indices of deprivation. Each patient has a list of diagnoses and problems and treatments. Each patient is linked to multiple health boards but users don’t think in terms of organisations, only services, which can span multiple health and care organisations. At any time, we can view disease progression, by whatever outcome measure, against a cohort of patients with the same disease or defined by other shared characteristics such as age, gender, age at onset etc. It was easy to identify all of our patients with, for example, motor neurone disease, who might need to ‘shield’ from COVID-19; a three-click operation.&lt;/p&gt;
-
-&lt;p&gt;Over 6000 clinical or research encounters are recorded each month.&lt;/p&gt;
-
-&lt;p&gt;Now I’m re-building it, there’s a lot I’m doing differently but the fundamentals stay the same.&lt;/p&gt;
-
-&lt;p&gt;The important things?&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Data data data&lt;/li&gt;
-  &lt;li&gt;Declarative programming with rule-engine&lt;/li&gt;
-  &lt;li&gt;Clean architecture&lt;/li&gt;
-  &lt;li&gt;Separation of concerns&lt;/li&gt;
-  &lt;li&gt;Decoupling&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">So I wrote an electronic health record, running live since 2009, and while it’s still not perfect, it’s had a lot of use and I’ve made a lot of changes.</summary></entry></feed>
+&lt;p&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">One of the difficulties with building semantic interoperability between clinical systems is how we define value sets.</summary></entry></feed>
