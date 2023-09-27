@@ -71,9 +71,6 @@
             
             
           
-            
-            
-          
         </div>
       </nav>
     
@@ -146,544 +143,540 @@
 
 <p>You should end up with JSON with your results:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="s2">"Heart attack"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Cardiac infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Infarction of heart"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Myocardial infarct"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"MI - Myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"MI - Mitral incompetence"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Mitral regurgitation"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Mitral valve insufficiency"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Mitral valve incompetence"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Mitral valve regurgitation"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Mitral insufficiency"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"MR - Mitral regurgitation"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"AMI - Acute myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Coronary thrombosis not resulting in myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"MI - Myocardial infarction aborted"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Aborted myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"MI - Silent myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Silent myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"NSTEMI - Non-ST segment elevation MI"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute non-ST segment elevation myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute ST segment elevation myocardial infarction due to left coronary artery occlusion"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute ST segment elevation MI (myocardial infarction) due to left coronary artery occlusion"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute ST segment elevation myocardial infarction due to right coronary artery occlusion"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute ST segment elevation MI (myocardial infarction) due to right coronary artery occlusion"</span><span class="w">
-  </span><span class="p">],</span><span class="w">
-  </span><span class="nt">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">26</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-</div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "data": [
+    "Heart attack",
+    "Cardiac infarction",
+    "Infarction of heart",
+    "Myocardial infarction",
+    "Myocardial infarct",
+    "MI - Myocardial infarction",
+    "MI - Mitral incompetence",
+    "Mitral regurgitation",
+    "Mitral valve insufficiency",
+    "Mitral valve incompetence",
+    "Mitral valve regurgitation",
+    "Mitral insufficiency",
+    "MR - Mitral regurgitation",
+    "Acute myocardial infarction",
+    "AMI - Acute myocardial infarction",
+    "Coronary thrombosis not resulting in myocardial infarction",
+    "MI - Myocardial infarction aborted",
+    "Aborted myocardial infarction",
+    "MI - Silent myocardial infarction",
+    "Silent myocardial infarction",
+    "NSTEMI - Non-ST segment elevation MI",
+    "Acute non-ST segment elevation myocardial infarction",
+    "Acute ST segment elevation myocardial infarction due to left coronary artery occlusion",
+    "Acute ST segment elevation MI (myocardial infarction) due to left coronary artery occlusion",
+    "Acute ST segment elevation myocardial infarction due to right coronary artery occlusion",
+    "Acute ST segment elevation MI (myocardial infarction) due to right coronary artery occlusion"
+  ],
+  "total": 26
+}
+</code></pre></div></div>
 
 <p>If I turn on support for returning synonyms of child concepts as well, then we end up with a very comprehensive list of search terms:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="s2">"Acute myocardial infarction of basal-lateral wall"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Rheumatic mitral stenosis with regurgitation"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Rheumatic mitral stenosis with incompetence"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Rheumatic mitral stenosis with insufficiency"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Healed coronary"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Old myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Healed myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute papillary muscle infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute infarction of papillary muscle"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute myocardial infarction of posterolateral wall"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"MI - Myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Myocardial infarct"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Infarction of heart"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Cardiac infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Heart attack"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute myocardial infarction with rupture of ventricle"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Mitral incompetence - rheumatic"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Rheumatic mitral regurgitation"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Rheumatic mitral incompetence"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Rheumatic mitral insufficiency"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Past myocardial infarction diagnosed on electrocardiogram AND/OR other special investigation, but currently presenting no symptoms"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Past myocardial infarction diagnosed on ECG AND/OR other special investigation, but currently presenting no symptoms"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Microinfarction of heart"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Microinfarct of heart"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"MR - Mitral regurgitation"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Mitral insufficiency"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Mitral valve regurgitation"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Mitral valve incompetence"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Mitral valve insufficiency"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Mitral regurgitation"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"MI - Mitral incompetence"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute anteroapical myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute anteroapical infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute anterior myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute myocardial infarction of anterior wall"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"AMI - Acute myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute lateral myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute myocardial infarction of lateral wall"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute myocardial infarction of apical-lateral wall"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Rheumatic mitral AND aortic valve regurgitation"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Rheumatic mitral AND aortic valve incompetence"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Rheumatic mitral AND aortic valve insufficiency"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute anteroseptal myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute myocardial infarction of high lateral wall"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute myocardial infarction of inferolateral wall"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute inferolateral myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute myocardial infarction of anterolateral wall"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute anterolateral myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute subendocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute nontransmural infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute myocardial infarction of posterobasal wall"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute myocardial infarction of diaphragmatic wall"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute inferior myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute myocardial infarction of inferior wall"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute inferoposterior infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute myocardial infarction of inferoposterior wall"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute myocardial infarction of septum alone"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute septal infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute myocardial infarction of septum"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Rheumatic mitral valve insufficiency AND aortic valve stenosis"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Postoperative myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Mitral stenosis with insufficiency"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Mitral stenosis with regurgitation"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Mitral stenosis with incompetence"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Mitral incompetence and aortic stenosis"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Mitral regurgitation and aortic stenosis"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Mitral insufficiency and aortic stenosis"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Mitral and aortic incompetence"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Mitral and aortic insufficiency"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Mitral and aortic regurgitation"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"True posterior wall infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"True posterior myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute myocardial infarction of atrium"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute atrial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Aborted myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"MI - Myocardial infarction aborted"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Coronary thrombosis not resulting in myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Subsequent myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Reinfarction of myocardium"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Subsequent myocardial infarction of anterior wall"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Subsequent myocardial infarction of inferior wall"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Non-rheumatic mitral regurgitation"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Mitral incompetence, non-rheumatic"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute Q wave infarction - anteroseptal"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute non-Q wave infarction - anteroseptal"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute Q wave infarction - anterolateral"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute non-Q wave infarction - anterolateral"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute Q wave infarction - inferior"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute non-Q wave infarction - inferior"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute Q wave infarction - inferolateral"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute non-Q wave infarction - inferolateral"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute Q wave infarction - lateral"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute non-Q wave infarction - lateral"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute widespread myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute Q wave infarction - widespread"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute non-Q wave infarction - widespread"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute posterior myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Old anterior myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Old inferior myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Old lateral myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Old posterior myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Silent myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"MI - Silent myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Mitral regurgitation due to dysfunct subvalvular apparatus"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Functional mitral regurgitation"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Prosthetic mitral valve regurgitation"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute Q wave myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute Q-wave infarct"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute non-Q wave infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Postoperative transmural myocardial infarction of anterior wall"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Postoperative transmural myocardial infarction of inferior wall"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Postoperative subendocardial myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Non-Q wave myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Myocardial infarction with complication"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute mitral regurgitation from chordal rupture"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute mitral regurgitation from chordal dysfunction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute mitral regurgitation from papillary muscle dysfunction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute mitral regurgitation from papillary muscle rupture"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute mitral regurgitation"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"First myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute ST segment elevation myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"STEMI - ST elevation myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute non-ST segment elevation myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"NSTEMI - Non-ST segment elevation MI"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Myocardial infarction in recovery phase"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Mixed myocardial ischaemia and infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Mixed myocardial ischemia and infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Regurgitation of fetal mitral valve"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Regurgitation of foetal mitral valve"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute ST segment elevation myocardial infarction of anterior wall"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute STEMI (ST elevation myocardial infarction) of anterior wall"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute anterior ST segment elevation myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute anterior ST segment elevation myocardial infarction with right ventricular involvement"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute STEMI (ST elevation myocardial infarction) of anterior wall with right ventricular involvement"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute ST segment elevation myocardial infarction of anterior wall involving right ventricle"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Prosthetic mitral valve stenosis and regurgitation"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Mitral prosthetic valve stenosis and regurgitation"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute prosthetic mitral valve regurgitation"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute mitral prosthetic valve regurgitation"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Subsequent inferior ST segment elevation myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Subsequent ST segment elevation myocardial infarction of inferior wall"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Subsequent STEMI (ST elevation myocardial infarction) of inferior wall"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Subsequent STEMI (ST elevation myocardial infarction) of anterior wall"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Subsequent ST segment elevation myocardial infarction of anterior wall"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Subsequent anterior ST segment elevation myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Subsequent ST segment elevation myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Subsequent STEMI (ST elevation myocardial infarction)"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute myocardial infarction during procedure"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute periprocedural myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute STEMI (ST elevation myocardial infarction) of inferior wall"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute inferior ST segment elevation myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute ST segment elevation myocardial infarction of inferior wall"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Postprocedural mitral regurgitation"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Postprocedural mitral valve regurgitation"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute myocardial infarction of inferior wall involving right ventricle"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute myocardial infarction of inferior wall with right ventricular involvement"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute myocardial infarction of anterior wall involving right ventricle"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute myocardial infarction of anterior wall with right ventricular involvement"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute ST segment elevation myocardial infarction of inferior wall involving right ventricle"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute inferior ST segment elevation myocardial infarction with right ventricular involvement"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute STEMI (ST elevation myocardial infarction) of inferior wall with right ventricular involvement"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Mitral valve regurgitation due to cardiomyopathy"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Non-rheumatic mitral valve stenosis with insufficiency"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Non-rheumatic mitral valve stenosis with regurgitation"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Mitral regurgitation due to acute myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Mitral valve regurgitation due to acute myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Mitral regurgitation due to infiltrative disease"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Mitral valve regurgitation due to infiltrative disease"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Mitral valve regurgitation due to acute myocardial infarction without papillary muscle and chordal rupture"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Mitral valve regurgitation due to acute myocardial infarction with papillary muscle and chordal rupture"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Postprocedural mitral regurgitation due to papillary muscle and chordal damage"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Postprocedural mitral valve regurgitation due to papillary muscle and chordal rupture"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Subsequent non-ST segment elevation myocardial infarction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Subsequent NSTEMI (non-ST segment elevation myocardial infarction)"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute myocardial infarction due to left coronary artery occlusion"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute myocardial infarction due to right coronary artery occlusion"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute ST segment elevation myocardial infarction involving left anterior descending coronary artery"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute ST segment elevation myocardial infarction involving left main coronary artery"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute ST segment elevation myocardial infarction of posterolateral wall"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute ST segment elevation myocardial infarction of anterolateral wall"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute ST segment elevation myocardial infarction of lateral wall"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute ST segment elevation myocardial infarction of anteroseptal wall"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute ST segment elevation myocardial infarction of posterior wall"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute ST segment elevation MI (myocardial infarction) due to left coronary artery occlusion"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute ST segment elevation myocardial infarction due to left coronary artery occlusion"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute ST segment elevation MI (myocardial infarction) due to right coronary artery occlusion"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute ST segment elevation myocardial infarction due to right coronary artery occlusion"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute ST segment elevation myocardial infarction of septum"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute ST segment elevation myocardial infarction of posterobasal wall"</span><span class="w">
-  </span><span class="p">],</span><span class="w">
-  </span><span class="nt">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">191</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-</div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "data": [
+    "Acute myocardial infarction of basal-lateral wall",
+    "Rheumatic mitral stenosis with regurgitation",
+    "Rheumatic mitral stenosis with incompetence",
+    "Rheumatic mitral stenosis with insufficiency",
+    "Healed coronary",
+    "Old myocardial infarction",
+    "Healed myocardial infarction",
+    "Acute papillary muscle infarction",
+    "Acute infarction of papillary muscle",
+    "Acute myocardial infarction of posterolateral wall",
+    "MI - Myocardial infarction",
+    "Myocardial infarct",
+    "Myocardial infarction",
+    "Infarction of heart",
+    "Cardiac infarction",
+    "Heart attack",
+    "Acute myocardial infarction with rupture of ventricle",
+    "Mitral incompetence - rheumatic",
+    "Rheumatic mitral regurgitation",
+    "Rheumatic mitral incompetence",
+    "Rheumatic mitral insufficiency",
+    "Past myocardial infarction diagnosed on electrocardiogram AND/OR other special investigation, but currently presenting no symptoms",
+    "Past myocardial infarction diagnosed on ECG AND/OR other special investigation, but currently presenting no symptoms",
+    "Microinfarction of heart",
+    "Microinfarct of heart",
+    "MR - Mitral regurgitation",
+    "Mitral insufficiency",
+    "Mitral valve regurgitation",
+    "Mitral valve incompetence",
+    "Mitral valve insufficiency",
+    "Mitral regurgitation",
+    "MI - Mitral incompetence",
+    "Acute anteroapical myocardial infarction",
+    "Acute anteroapical infarction",
+    "Acute anterior myocardial infarction",
+    "Acute myocardial infarction of anterior wall",
+    "AMI - Acute myocardial infarction",
+    "Acute myocardial infarction",
+    "Acute lateral myocardial infarction",
+    "Acute myocardial infarction of lateral wall",
+    "Acute myocardial infarction of apical-lateral wall",
+    "Rheumatic mitral AND aortic valve regurgitation",
+    "Rheumatic mitral AND aortic valve incompetence",
+    "Rheumatic mitral AND aortic valve insufficiency",
+    "Acute anteroseptal myocardial infarction",
+    "Acute myocardial infarction of high lateral wall",
+    "Acute myocardial infarction of inferolateral wall",
+    "Acute inferolateral myocardial infarction",
+    "Acute myocardial infarction of anterolateral wall",
+    "Acute anterolateral myocardial infarction",
+    "Acute subendocardial infarction",
+    "Acute nontransmural infarction",
+    "Acute myocardial infarction of posterobasal wall",
+    "Acute myocardial infarction of diaphragmatic wall",
+    "Acute inferior myocardial infarction",
+    "Acute myocardial infarction of inferior wall",
+    "Acute inferoposterior infarction",
+    "Acute myocardial infarction of inferoposterior wall",
+    "Acute myocardial infarction of septum alone",
+    "Acute septal infarction",
+    "Acute myocardial infarction of septum",
+    "Rheumatic mitral valve insufficiency AND aortic valve stenosis",
+    "Postoperative myocardial infarction",
+    "Mitral stenosis with insufficiency",
+    "Mitral stenosis with regurgitation",
+    "Mitral stenosis with incompetence",
+    "Mitral incompetence and aortic stenosis",
+    "Mitral regurgitation and aortic stenosis",
+    "Mitral insufficiency and aortic stenosis",
+    "Mitral and aortic incompetence",
+    "Mitral and aortic insufficiency",
+    "Mitral and aortic regurgitation",
+    "True posterior wall infarction",
+    "True posterior myocardial infarction",
+    "Acute myocardial infarction of atrium",
+    "Acute atrial infarction",
+    "Aborted myocardial infarction",
+    "MI - Myocardial infarction aborted",
+    "Coronary thrombosis not resulting in myocardial infarction",
+    "Subsequent myocardial infarction",
+    "Reinfarction of myocardium",
+    "Subsequent myocardial infarction of anterior wall",
+    "Subsequent myocardial infarction of inferior wall",
+    "Non-rheumatic mitral regurgitation",
+    "Mitral incompetence, non-rheumatic",
+    "Acute Q wave infarction - anteroseptal",
+    "Acute non-Q wave infarction - anteroseptal",
+    "Acute Q wave infarction - anterolateral",
+    "Acute non-Q wave infarction - anterolateral",
+    "Acute Q wave infarction - inferior",
+    "Acute non-Q wave infarction - inferior",
+    "Acute Q wave infarction - inferolateral",
+    "Acute non-Q wave infarction - inferolateral",
+    "Acute Q wave infarction - lateral",
+    "Acute non-Q wave infarction - lateral",
+    "Acute widespread myocardial infarction",
+    "Acute Q wave infarction - widespread",
+    "Acute non-Q wave infarction - widespread",
+    "Acute posterior myocardial infarction",
+    "Old anterior myocardial infarction",
+    "Old inferior myocardial infarction",
+    "Old lateral myocardial infarction",
+    "Old posterior myocardial infarction",
+    "Silent myocardial infarction",
+    "MI - Silent myocardial infarction",
+    "Mitral regurgitation due to dysfunct subvalvular apparatus",
+    "Functional mitral regurgitation",
+    "Prosthetic mitral valve regurgitation",
+    "Acute Q wave myocardial infarction",
+    "Acute Q-wave infarct",
+    "Acute non-Q wave infarction",
+    "Postoperative transmural myocardial infarction of anterior wall",
+    "Postoperative transmural myocardial infarction of inferior wall",
+    "Postoperative subendocardial myocardial infarction",
+    "Non-Q wave myocardial infarction",
+    "Myocardial infarction with complication",
+    "Acute mitral regurgitation from chordal rupture",
+    "Acute mitral regurgitation from chordal dysfunction",
+    "Acute mitral regurgitation from papillary muscle dysfunction",
+    "Acute mitral regurgitation from papillary muscle rupture",
+    "Acute mitral regurgitation",
+    "First myocardial infarction",
+    "Acute ST segment elevation myocardial infarction",
+    "STEMI - ST elevation myocardial infarction",
+    "Acute non-ST segment elevation myocardial infarction",
+    "NSTEMI - Non-ST segment elevation MI",
+    "Myocardial infarction in recovery phase",
+    "Mixed myocardial ischaemia and infarction",
+    "Mixed myocardial ischemia and infarction",
+    "Regurgitation of fetal mitral valve",
+    "Regurgitation of foetal mitral valve",
+    "Acute ST segment elevation myocardial infarction of anterior wall",
+    "Acute STEMI (ST elevation myocardial infarction) of anterior wall",
+    "Acute anterior ST segment elevation myocardial infarction",
+    "Acute anterior ST segment elevation myocardial infarction with right ventricular involvement",
+    "Acute STEMI (ST elevation myocardial infarction) of anterior wall with right ventricular involvement",
+    "Acute ST segment elevation myocardial infarction of anterior wall involving right ventricle",
+    "Prosthetic mitral valve stenosis and regurgitation",
+    "Mitral prosthetic valve stenosis and regurgitation",
+    "Acute prosthetic mitral valve regurgitation",
+    "Acute mitral prosthetic valve regurgitation",
+    "Subsequent inferior ST segment elevation myocardial infarction",
+    "Subsequent ST segment elevation myocardial infarction of inferior wall",
+    "Subsequent STEMI (ST elevation myocardial infarction) of inferior wall",
+    "Subsequent STEMI (ST elevation myocardial infarction) of anterior wall",
+    "Subsequent ST segment elevation myocardial infarction of anterior wall",
+    "Subsequent anterior ST segment elevation myocardial infarction",
+    "Subsequent ST segment elevation myocardial infarction",
+    "Subsequent STEMI (ST elevation myocardial infarction)",
+    "Acute myocardial infarction during procedure",
+    "Acute periprocedural myocardial infarction",
+    "Acute STEMI (ST elevation myocardial infarction) of inferior wall",
+    "Acute inferior ST segment elevation myocardial infarction",
+    "Acute ST segment elevation myocardial infarction of inferior wall",
+    "Postprocedural mitral regurgitation",
+    "Postprocedural mitral valve regurgitation",
+    "Acute myocardial infarction of inferior wall involving right ventricle",
+    "Acute myocardial infarction of inferior wall with right ventricular involvement",
+    "Acute myocardial infarction of anterior wall involving right ventricle",
+    "Acute myocardial infarction of anterior wall with right ventricular involvement",
+    "Acute ST segment elevation myocardial infarction of inferior wall involving right ventricle",
+    "Acute inferior ST segment elevation myocardial infarction with right ventricular involvement",
+    "Acute STEMI (ST elevation myocardial infarction) of inferior wall with right ventricular involvement",
+    "Mitral valve regurgitation due to cardiomyopathy",
+    "Non-rheumatic mitral valve stenosis with insufficiency",
+    "Non-rheumatic mitral valve stenosis with regurgitation",
+    "Mitral regurgitation due to acute myocardial infarction",
+    "Mitral valve regurgitation due to acute myocardial infarction",
+    "Mitral regurgitation due to infiltrative disease",
+    "Mitral valve regurgitation due to infiltrative disease",
+    "Mitral valve regurgitation due to acute myocardial infarction without papillary muscle and chordal rupture",
+    "Mitral valve regurgitation due to acute myocardial infarction with papillary muscle and chordal rupture",
+    "Postprocedural mitral regurgitation due to papillary muscle and chordal damage",
+    "Postprocedural mitral valve regurgitation due to papillary muscle and chordal rupture",
+    "Subsequent non-ST segment elevation myocardial infarction",
+    "Subsequent NSTEMI (non-ST segment elevation myocardial infarction)",
+    "Acute myocardial infarction due to left coronary artery occlusion",
+    "Acute myocardial infarction due to right coronary artery occlusion",
+    "Acute ST segment elevation myocardial infarction involving left anterior descending coronary artery",
+    "Acute ST segment elevation myocardial infarction involving left main coronary artery",
+    "Acute ST segment elevation myocardial infarction of posterolateral wall",
+    "Acute ST segment elevation myocardial infarction of anterolateral wall",
+    "Acute ST segment elevation myocardial infarction of lateral wall",
+    "Acute ST segment elevation myocardial infarction of anteroseptal wall",
+    "Acute ST segment elevation myocardial infarction of posterior wall",
+    "Acute ST segment elevation MI (myocardial infarction) due to left coronary artery occlusion",
+    "Acute ST segment elevation myocardial infarction due to left coronary artery occlusion",
+    "Acute ST segment elevation MI (myocardial infarction) due to right coronary artery occlusion",
+    "Acute ST segment elevation myocardial infarction due to right coronary artery occlusion",
+    "Acute ST segment elevation myocardial infarction of septum",
+    "Acute ST segment elevation myocardial infarction of posterobasal wall"
+  ],
+  "total": 191
+}
+</code></pre></div></div>
 
 <p>We could then use these results to maximise finding our search term in our unstructured corpus of documents.</p>
 
 <p>Look what we get if we now search for “demyelinating disease”:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="s2">"Charcot-Marie-Tooth disease, type IC"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Demyelinating disease of central nervous system"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Demyelinating disorders of the central nervous system"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Demyelinating CNS disease"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Demyelinating disease central nervous system (CNS)"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Central pontine myelinolysis"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Progressive multifocal leukoencephalopathy"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Multifocal leukoencephalopathy"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"PML - Progressive multifocal leukoencephalopathy"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Progressive multifocal leucoencephalopathy"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Multifocal leucoencephalopathy"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"PML - Progressive multifocal leucoencephalopathy"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"PMLE - Progressive multifocal leukoencephalopathy"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"PMLE - Progressive multifocal leucoencephalopathy"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Disseminated sclerosis"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"MS - Multiple sclerosis"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"DS - Disseminated sclerosis"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Multiple sclerosis"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Optic neuromyelitis"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Neuromyelitis optica"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Subacute myelo-optic neuropathy"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"SMON - subacute myelo-optico-neuropathy"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Devic syndrome"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Devic's disease"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Charcot-Marie-Tooth disease, type IA"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Charcot-Marie-Tooth disease, type IB"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Diffuse sclerosis"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Schilder's disease"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Encephalitis periaxialis diffusa"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Schilder disease"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute hemorrhagic leukoencephalitis"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Hurst's disease"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute hemorrhagic leukoencephalitis of Weston Hurst"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute haemorrhagic leucoencephalitis"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute haemorrhagic leucoencephalitis of Weston Hurst"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"ADEM - Acute disseminated encephalomyelitis"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute disseminated encephalomyelitis"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Binswanger's encephalopathy"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Subcortical arteriosclerotic encephalopathy"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Subcortical atherosclerotic dementia"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Chronic progressive subcortical encephalopathy"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Subcortical leukoencephalopathy"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Binswanger's dementia"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Encephalitis subcorticalis chronica"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Binswanger's disease"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Subcortical leucoencephalopathy"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Brain stem multiple sclerosis"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Multiple sclerosis of the brainstem"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Multiple sclerosis of the spinal cord"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Generalized multiple sclerosis"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Generalised multiple sclerosis"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Exacerbation of multiple sclerosis"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Multiple sclerosis (MS) exacerbation"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute relapsing multiple sclerosis"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Chronic progressive multiple sclerosis"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Multiple sclerosis (MS) chronic/progressive"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Remittent-progressive multiple sclerosis"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Multiple sclerosis (MS) remitting progressive"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Extrapontine myelinolysis"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute demyelinating transverse myelitis"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute non-infective transverse myelitis"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Subacute necrotising myelitis"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Subacute necrotizing myelitis"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Balo's concentric sclerosis"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Balo concentric sclerosis"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Concentric sclerosis"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Balos concentric sclerosis"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Chronic inflammatory demyelinating polyradiculoneuropathy with central nervous system demyelination"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Demyelination of spinal cord"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Spinal demyelination"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Marchiafava-Bignami disease"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Central demyelination of corpus callosum"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Marchiafava disease"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Hereditary sensory-motor neuropathy, type I"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Peroneal muscular atrophy of demyelinating type"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Inherited dominant hypertrophic neuropathy"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Hereditary motor and sensory neuropathy type I"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Charcot-Marie-Tooth disease of demyelinating type"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"HSMN, type I"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Charcot-Marie-Tooth disease, type I"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Charcot Marie Tooth disease, type 1"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Progressive multifocal leukoencephalopathy associated with AIDS"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Progressive multifocal leucoencephalopathy associated with AIDS"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Progressive multifocal leukoencephalopathy associated with acquired immunodeficiency syndrome"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Progressive multifocal leucoencephalopathy associated with acquired immunodeficiency syndrome"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Central nervous system demyelinating disease associated with AIDS"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Central nervous system demyelinating disease associated with acquired immunodeficiency syndrome"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Secondary progressive multiple sclerosis"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Multiple sclerosis (MS) secondary progressive"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Relapsing remitting multiple sclerosis"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Multiple sclerosis (MS) relapsing remitting"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Primary progressive multiple sclerosis"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Multiple sclerosis (MS) primary progressive"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Benign multiple sclerosis"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Malignant multiple sclerosis"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Clinically isolated syndrome"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Vanishing white matter disease"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Leukoencephalopathy with brainstem and spinal cord involvement and lactate elevation"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"LBSL - Leukoencephalopathy with brainstem and spinal cord involvement with lactate elevation"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Multifocal clinically isolated syndrome"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Polysymptomatic clinically isolated syndrome"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Monofocal clinically isolated syndrome"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Progressive multifocal leukoencephalopathy co-occurrent with human immunodeficiency virus infection"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Progressive multifocal leucoencephalopathy co-occurrent with human immunodeficiency virus infection"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Demyelinating disease of central nervous system co-occurrent with human immunodeficiency virus infection"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Charcot-Marie-Tooth disease and deafness"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Charcot-Marie-Tooth disease type 1E"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Charcot-Marie-Tooth disease type IE"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Acute disseminated encephalomyelitis following infectious disease"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"[X]Other specified acute disseminated demyelination"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"[X]Acute disseminated demyelination, unspecified"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Uhthoff's syndrome"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Uhthoff phenomenon"</span><span class="w">
-  </span><span class="p">],</span><span class="w">
-  </span><span class="nt">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">113</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-</div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "data": [
+    "Charcot-Marie-Tooth disease, type IC",
+    "Demyelinating disease of central nervous system",
+    "Demyelinating disorders of the central nervous system",
+    "Demyelinating CNS disease",
+    "Demyelinating disease central nervous system (CNS)",
+    "Central pontine myelinolysis",
+    "Progressive multifocal leukoencephalopathy",
+    "Multifocal leukoencephalopathy",
+    "PML - Progressive multifocal leukoencephalopathy",
+    "Progressive multifocal leucoencephalopathy",
+    "Multifocal leucoencephalopathy",
+    "PML - Progressive multifocal leucoencephalopathy",
+    "PMLE - Progressive multifocal leukoencephalopathy",
+    "PMLE - Progressive multifocal leucoencephalopathy",
+    "Disseminated sclerosis",
+    "MS - Multiple sclerosis",
+    "DS - Disseminated sclerosis",
+    "Multiple sclerosis",
+    "Optic neuromyelitis",
+    "Neuromyelitis optica",
+    "Subacute myelo-optic neuropathy",
+    "SMON - subacute myelo-optico-neuropathy",
+    "Devic syndrome",
+    "Devic's disease",
+    "Charcot-Marie-Tooth disease, type IA",
+    "Charcot-Marie-Tooth disease, type IB",
+    "Diffuse sclerosis",
+    "Schilder's disease",
+    "Encephalitis periaxialis diffusa",
+    "Schilder disease",
+    "Acute hemorrhagic leukoencephalitis",
+    "Hurst's disease",
+    "Acute hemorrhagic leukoencephalitis of Weston Hurst",
+    "Acute haemorrhagic leucoencephalitis",
+    "Acute haemorrhagic leucoencephalitis of Weston Hurst",
+    "ADEM - Acute disseminated encephalomyelitis",
+    "Acute disseminated encephalomyelitis",
+    "Binswanger's encephalopathy",
+    "Subcortical arteriosclerotic encephalopathy",
+    "Subcortical atherosclerotic dementia",
+    "Chronic progressive subcortical encephalopathy",
+    "Subcortical leukoencephalopathy",
+    "Binswanger's dementia",
+    "Encephalitis subcorticalis chronica",
+    "Binswanger's disease",
+    "Subcortical leucoencephalopathy",
+    "Brain stem multiple sclerosis",
+    "Multiple sclerosis of the brainstem",
+    "Multiple sclerosis of the spinal cord",
+    "Generalized multiple sclerosis",
+    "Generalised multiple sclerosis",
+    "Exacerbation of multiple sclerosis",
+    "Multiple sclerosis (MS) exacerbation",
+    "Acute relapsing multiple sclerosis",
+    "Chronic progressive multiple sclerosis",
+    "Multiple sclerosis (MS) chronic/progressive",
+    "Remittent-progressive multiple sclerosis",
+    "Multiple sclerosis (MS) remitting progressive",
+    "Extrapontine myelinolysis",
+    "Acute demyelinating transverse myelitis",
+    "Acute non-infective transverse myelitis",
+    "Subacute necrotising myelitis",
+    "Subacute necrotizing myelitis",
+    "Balo's concentric sclerosis",
+    "Balo concentric sclerosis",
+    "Concentric sclerosis",
+    "Balos concentric sclerosis",
+    "Chronic inflammatory demyelinating polyradiculoneuropathy with central nervous system demyelination",
+    "Demyelination of spinal cord",
+    "Spinal demyelination",
+    "Marchiafava-Bignami disease",
+    "Central demyelination of corpus callosum",
+    "Marchiafava disease",
+    "Hereditary sensory-motor neuropathy, type I",
+    "Peroneal muscular atrophy of demyelinating type",
+    "Inherited dominant hypertrophic neuropathy",
+    "Hereditary motor and sensory neuropathy type I",
+    "Charcot-Marie-Tooth disease of demyelinating type",
+    "HSMN, type I",
+    "Charcot-Marie-Tooth disease, type I",
+    "Charcot Marie Tooth disease, type 1",
+    "Progressive multifocal leukoencephalopathy associated with AIDS",
+    "Progressive multifocal leucoencephalopathy associated with AIDS",
+    "Progressive multifocal leukoencephalopathy associated with acquired immunodeficiency syndrome",
+    "Progressive multifocal leucoencephalopathy associated with acquired immunodeficiency syndrome",
+    "Central nervous system demyelinating disease associated with AIDS",
+    "Central nervous system demyelinating disease associated with acquired immunodeficiency syndrome",
+    "Secondary progressive multiple sclerosis",
+    "Multiple sclerosis (MS) secondary progressive",
+    "Relapsing remitting multiple sclerosis",
+    "Multiple sclerosis (MS) relapsing remitting",
+    "Primary progressive multiple sclerosis",
+    "Multiple sclerosis (MS) primary progressive",
+    "Benign multiple sclerosis",
+    "Malignant multiple sclerosis",
+    "Clinically isolated syndrome",
+    "Vanishing white matter disease",
+    "Leukoencephalopathy with brainstem and spinal cord involvement and lactate elevation",
+    "LBSL - Leukoencephalopathy with brainstem and spinal cord involvement with lactate elevation",
+    "Multifocal clinically isolated syndrome",
+    "Polysymptomatic clinically isolated syndrome",
+    "Monofocal clinically isolated syndrome",
+    "Progressive multifocal leukoencephalopathy co-occurrent with human immunodeficiency virus infection",
+    "Progressive multifocal leucoencephalopathy co-occurrent with human immunodeficiency virus infection",
+    "Demyelinating disease of central nervous system co-occurrent with human immunodeficiency virus infection",
+    "Charcot-Marie-Tooth disease and deafness",
+    "Charcot-Marie-Tooth disease type 1E",
+    "Charcot-Marie-Tooth disease type IE",
+    "Acute disseminated encephalomyelitis following infectious disease",
+    "[X]Other specified acute disseminated demyelination",
+    "[X]Acute disseminated demyelination, unspecified",
+    "Uhthoff's syndrome",
+    "Uhthoff phenomenon"
+  ],
+  "total": 113
+}
+</code></pre></div></div>
 
 <p>And can we find patients with something related to Parkinsonism? Let’s ask SNOMED CT for the terms to search for….</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="s2">"Ethopropazine poisoning"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Poisoning by ethopropazine"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Poisoning by profenamine"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Poisoning caused by ethopropazine"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Poisoning caused by profenamine"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Parkinsonism due to drug"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Parkinsonism caused by drug"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Antiparkinsonian drug poisoning"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Poisoning by anti-parkinsonism drug"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Poisoning caused by anti-parkinsonism drug"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Methylphenyltetrahydropyridine-induced parkinsonism"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"1-Methyl-4-phenyl-1,2,3,6-tetrahydropyridine (MPTP)-induced parkinsonism"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"MPTP-induced parkinsonism"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"1-Methyl-4-phenyl-1,2,3,6-tetrahydropyridine-induced parkinsonism"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"MPTP - Methylphenyltetrahydropyridine-induced parkinsonism"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Postencephalitic parkinsonism"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"SND - Striatonigral degeneration"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Striatonigral degeneration"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Striatonigral atrophy"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Amantadine poisoning"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Poisoning by amantadine"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Poisoning caused by amantadine"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Parkinsonism"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Disorders presenting primarily with parkinsonism"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Syphilitic parkinsonism"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Idiopathic Parkinson's disease"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"PD - Parkinson's disease"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Parkinson's disease"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Paralysis agitans"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Shaking palsy"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Primary Parkinsonism"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Idiopathic Parkinsonism"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Parkinson disease"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Parkinsons disease"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Parkinson-dementia complex of Guam"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Parkinson's disease - dementia complex on Guam"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Parkinsonian syndrome associated with idiopathic orthostatic hypotension"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Parkinsonian syndrome associated with symptomatic orthostatic hypotension"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Neuroleptic-induced Parkinsonism"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Neuroleptic-induced parkinsonism"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Diphenhydramine poisoning"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Poisoning by diphenhydramine"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Poisoning caused by diphenhydramine"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Levodopa poisoning"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Poisoning by levodopa"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Poisoning by L-dopa"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Poisoning caused by L-dopa"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Poisoning caused by levodopa"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Poisoning by anticonvulsant AND/OR anti-Parkinsonism drug"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Poisoning caused by anticonvulsant AND/OR anti-Parkinsonism drug"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Parkinsonism with orthostatic hypotension"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Accidental amantadine poisoning"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Accidental poisoning by amantadine"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Accidental poisoning caused by amantadine"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Juvenile Parkinson disease"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Juvenile Parkinson's disease"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Secondary Parkinson's disease"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Secondary Parkinson disease"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Secondary parkinsonism"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Carbon monoxide-induced parkinsonism"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Manganese-induced parkinsonism"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Parkinsonism with calcification of basal ganglia"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Vascular parkinsonism"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Symptomatic parkinsonism"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Anticonvulsant and antiParkinsonian drug poisoning"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Accidental levodopa poisoning"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Intentional levodopa poisoning"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Levodopa poisoning of undetermined intent"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Intentional amantadine poisoning"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Amantadine poisoning of undetermined intent"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Lisuride poisoning"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Lysuride poisoning"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Accidental lisuride poisoning"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Accidental lysuride poisoning"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Intentional lisuride poisoning"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Intentional lysuride poisoning"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Lisuride poisoning of undetermined intent"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Lysuride poisoning of undetermined intent"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Bromocriptine poisoning"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Accidental bromocriptine poisoning"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Intentional bromocriptine poisoning"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Bromocriptine poisoning of undetermined intent"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Accidental ethopropazine poisoning"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Intentional ethopropazine poisoning"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Ethopropazine poisoning of undetermined intent"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Decarboxylase inhibitor poisoning"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Selegiline poisoning"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Accidental selegiline poisoning"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Intentional selegiline poisoning"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Selegiline poisoning of undetermined intent"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Accidental diphenhydramine poisoning"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Intentional diphenhydramine poisoning"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Diphenhydramine poisoning of undetermined intent"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Dopaminergic drug used in parkinsonism adverse reaction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Adverse reaction to levodopa, L-dopa"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Levodopa adverse reaction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Co-beneldopa adverse reaction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Benserazide + levodopa adverse reaction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Co-careldopa adverse reaction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Carbidopa + levodopa adverse reaction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Amantadine adverse reaction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Apomorphine adverse reaction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Lisuride adverse reaction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Lysuride adverse reaction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Pergolide adverse reaction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Bromocriptine adverse reaction"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Dopaminergic drug used in parkinsonism allergy"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Levodopa allergy"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Co-beneldopa allergy"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Benserazide + levodopa allergy"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Co-careldopa allergy"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Carbidopa + levodopa allergy"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Amantadine allergy"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Apomorphine allergy"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Lisuride allergy"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Lysuride allergy"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Pergolide allergy"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Bromocriptine allergy"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Overdose of dopaminergic drug used in parkinsonism"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Levodopa overdose"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Accidental levodopa overdose"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Intentional levodopa overdose"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Levodopa overdose of undetermined intent"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Amantadine overdose"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Accidental amantadine overdose"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Intentional amantadine overdose"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Amantadine overdose of undetermined intent"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Lisuride overdose"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Lysuride overdose"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Accidental lysuride overdose"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Accidental lisuride overdose"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Intentional lisuride overdose"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Intentional lysuride overdose"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Lisuride overdose of undetermined intent"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Lysuride overdose of undetermined intent"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Bromocriptine overdose"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Accidental bromocriptine overdose"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Intentional bromocriptine overdose"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Bromocriptine overdose of undetermined intent"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"On - off phenomenon"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Dystonia musculorum deformans"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Lubag"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"XDP - X-linked dystonia parkinsonism"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"X-linked torsion dystonia parkinsonism syndrome"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"X-linked dystonia parkinsonism"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Torsion dystonia parkinsonism Filipino type"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Perry syndrome"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Parkinsonism with alveolar hypoventilation and mental depression"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Rapid onset dystonia parkinsonism"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"DYT12 - dystonia 12"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Dystonia 12"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Familial Pick's disease"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Frontotemporal dementia with parkinsonism-17"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Wilhelmsen-Lynch disease"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Disinhibition-dementia-parkinsonism-amytrophy complex"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"FTDP-17 - Frontotemporal dementia with parkinsonism 17"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Young onset Parkinson's disease"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Early onset Parkinson's disease"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Early onset Parkinson disease"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Young onset Parkinson disease"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Parkinsonism co-occurrent with dementia of Guadeloupe"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Parkinsonism with dementia of Guadeloupe"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Waisman syndrome"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Laxova Opitz syndrome"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Early onset parkinsonism and intellectual disability syndrome"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Hereditary late onset Parkinson disease"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Autosomal dominant late onset Parkinson disease"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Infantile bilateral striatal necrosis"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Infantile striatonigral degeneration"</span><span class="w">
-  </span><span class="p">],</span><span class="w">
-  </span><span class="nt">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">169</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-</div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "data": [
+    "Ethopropazine poisoning",
+    "Poisoning by ethopropazine",
+    "Poisoning by profenamine",
+    "Poisoning caused by ethopropazine",
+    "Poisoning caused by profenamine",
+    "Parkinsonism due to drug",
+    "Parkinsonism caused by drug",
+    "Antiparkinsonian drug poisoning",
+    "Poisoning by anti-parkinsonism drug",
+    "Poisoning caused by anti-parkinsonism drug",
+    "Methylphenyltetrahydropyridine-induced parkinsonism",
+    "1-Methyl-4-phenyl-1,2,3,6-tetrahydropyridine (MPTP)-induced parkinsonism",
+    "MPTP-induced parkinsonism",
+    "1-Methyl-4-phenyl-1,2,3,6-tetrahydropyridine-induced parkinsonism",
+    "MPTP - Methylphenyltetrahydropyridine-induced parkinsonism",
+    "Postencephalitic parkinsonism",
+    "SND - Striatonigral degeneration",
+    "Striatonigral degeneration",
+    "Striatonigral atrophy",
+    "Amantadine poisoning",
+    "Poisoning by amantadine",
+    "Poisoning caused by amantadine",
+    "Parkinsonism",
+    "Disorders presenting primarily with parkinsonism",
+    "Syphilitic parkinsonism",
+    "Idiopathic Parkinson's disease",
+    "PD - Parkinson's disease",
+    "Parkinson's disease",
+    "Paralysis agitans",
+    "Shaking palsy",
+    "Primary Parkinsonism",
+    "Idiopathic Parkinsonism",
+    "Parkinson disease",
+    "Parkinsons disease",
+    "Parkinson-dementia complex of Guam",
+    "Parkinson's disease - dementia complex on Guam",
+    "Parkinsonian syndrome associated with idiopathic orthostatic hypotension",
+    "Parkinsonian syndrome associated with symptomatic orthostatic hypotension",
+    "Neuroleptic-induced Parkinsonism",
+    "Neuroleptic-induced parkinsonism",
+    "Diphenhydramine poisoning",
+    "Poisoning by diphenhydramine",
+    "Poisoning caused by diphenhydramine",
+    "Levodopa poisoning",
+    "Poisoning by levodopa",
+    "Poisoning by L-dopa",
+    "Poisoning caused by L-dopa",
+    "Poisoning caused by levodopa",
+    "Poisoning by anticonvulsant AND/OR anti-Parkinsonism drug",
+    "Poisoning caused by anticonvulsant AND/OR anti-Parkinsonism drug",
+    "Parkinsonism with orthostatic hypotension",
+    "Accidental amantadine poisoning",
+    "Accidental poisoning by amantadine",
+    "Accidental poisoning caused by amantadine",
+    "Juvenile Parkinson disease",
+    "Juvenile Parkinson's disease",
+    "Secondary Parkinson's disease",
+    "Secondary Parkinson disease",
+    "Secondary parkinsonism",
+    "Carbon monoxide-induced parkinsonism",
+    "Manganese-induced parkinsonism",
+    "Parkinsonism with calcification of basal ganglia",
+    "Vascular parkinsonism",
+    "Symptomatic parkinsonism",
+    "Anticonvulsant and antiParkinsonian drug poisoning",
+    "Accidental levodopa poisoning",
+    "Intentional levodopa poisoning",
+    "Levodopa poisoning of undetermined intent",
+    "Intentional amantadine poisoning",
+    "Amantadine poisoning of undetermined intent",
+    "Lisuride poisoning",
+    "Lysuride poisoning",
+    "Accidental lisuride poisoning",
+    "Accidental lysuride poisoning",
+    "Intentional lisuride poisoning",
+    "Intentional lysuride poisoning",
+    "Lisuride poisoning of undetermined intent",
+    "Lysuride poisoning of undetermined intent",
+    "Bromocriptine poisoning",
+    "Accidental bromocriptine poisoning",
+    "Intentional bromocriptine poisoning",
+    "Bromocriptine poisoning of undetermined intent",
+    "Accidental ethopropazine poisoning",
+    "Intentional ethopropazine poisoning",
+    "Ethopropazine poisoning of undetermined intent",
+    "Decarboxylase inhibitor poisoning",
+    "Selegiline poisoning",
+    "Accidental selegiline poisoning",
+    "Intentional selegiline poisoning",
+    "Selegiline poisoning of undetermined intent",
+    "Accidental diphenhydramine poisoning",
+    "Intentional diphenhydramine poisoning",
+    "Diphenhydramine poisoning of undetermined intent",
+    "Dopaminergic drug used in parkinsonism adverse reaction",
+    "Adverse reaction to levodopa, L-dopa",
+    "Levodopa adverse reaction",
+    "Co-beneldopa adverse reaction",
+    "Benserazide + levodopa adverse reaction",
+    "Co-careldopa adverse reaction",
+    "Carbidopa + levodopa adverse reaction",
+    "Amantadine adverse reaction",
+    "Apomorphine adverse reaction",
+    "Lisuride adverse reaction",
+    "Lysuride adverse reaction",
+    "Pergolide adverse reaction",
+    "Bromocriptine adverse reaction",
+    "Dopaminergic drug used in parkinsonism allergy",
+    "Levodopa allergy",
+    "Co-beneldopa allergy",
+    "Benserazide + levodopa allergy",
+    "Co-careldopa allergy",
+    "Carbidopa + levodopa allergy",
+    "Amantadine allergy",
+    "Apomorphine allergy",
+    "Lisuride allergy",
+    "Lysuride allergy",
+    "Pergolide allergy",
+    "Bromocriptine allergy",
+    "Overdose of dopaminergic drug used in parkinsonism",
+    "Levodopa overdose",
+    "Accidental levodopa overdose",
+    "Intentional levodopa overdose",
+    "Levodopa overdose of undetermined intent",
+    "Amantadine overdose",
+    "Accidental amantadine overdose",
+    "Intentional amantadine overdose",
+    "Amantadine overdose of undetermined intent",
+    "Lisuride overdose",
+    "Lysuride overdose",
+    "Accidental lysuride overdose",
+    "Accidental lisuride overdose",
+    "Intentional lisuride overdose",
+    "Intentional lysuride overdose",
+    "Lisuride overdose of undetermined intent",
+    "Lysuride overdose of undetermined intent",
+    "Bromocriptine overdose",
+    "Accidental bromocriptine overdose",
+    "Intentional bromocriptine overdose",
+    "Bromocriptine overdose of undetermined intent",
+    "On - off phenomenon",
+    "Dystonia musculorum deformans",
+    "Lubag",
+    "XDP - X-linked dystonia parkinsonism",
+    "X-linked torsion dystonia parkinsonism syndrome",
+    "X-linked dystonia parkinsonism",
+    "Torsion dystonia parkinsonism Filipino type",
+    "Perry syndrome",
+    "Parkinsonism with alveolar hypoventilation and mental depression",
+    "Rapid onset dystonia parkinsonism",
+    "DYT12 - dystonia 12",
+    "Dystonia 12",
+    "Familial Pick's disease",
+    "Frontotemporal dementia with parkinsonism-17",
+    "Wilhelmsen-Lynch disease",
+    "Disinhibition-dementia-parkinsonism-amytrophy complex",
+    "FTDP-17 - Frontotemporal dementia with parkinsonism 17",
+    "Young onset Parkinson's disease",
+    "Early onset Parkinson's disease",
+    "Early onset Parkinson disease",
+    "Young onset Parkinson disease",
+    "Parkinsonism co-occurrent with dementia of Guadeloupe",
+    "Parkinsonism with dementia of Guadeloupe",
+    "Waisman syndrome",
+    "Laxova Opitz syndrome",
+    "Early onset parkinsonism and intellectual disability syndrome",
+    "Hereditary late onset Parkinson disease",
+    "Autosomal dominant late onset Parkinson disease",
+    "Infantile bilateral striatal necrosis",
+    "Infantile striatonigral degeneration"
+  ],
+  "total": 169
+}
+</code></pre></div></div>
 
 
   </div>
@@ -696,7 +689,8 @@
     
     
     
-    <footer class="site-footer">
+    <footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
 
   <div class="wrapper">
 
@@ -705,36 +699,11 @@
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          <li>
-            
-              Health informatics and information technology
-            
-            </li>
-            
-            <li><a href="mailto:mark@wardle.org">mark@wardle.org</a></li>
-            
-        </ul>
+          <li class="p-name">Health informatics and information technology</li><li><a class="u-email" href="mailto:mark@wardle.org">mark@wardle.org</a></li></ul>
       </div>
 
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          
-          <li>
-            <a href="https://github.com/wardle"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
-</span><span class="username">wardle</span></a>
-
-          </li>
-          
-
-          
-          <li>
-            <a href="https://twitter.com/mwardle"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
-</span><span class="username">mwardle</span></a>
-
-          </li>
-          
-        </ul>
-      </div>
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/wardle"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">wardle</span></a></li><li><a href="https://www.twitter.com/mwardle"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">mwardle</span></a></li></ul>
+</div>
 
       <div class="footer-col footer-col-3">
         <p>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.

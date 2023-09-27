@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Mapping the electronic health record 2/3</title>
+  <meta name="description" content="This is part 2/3 of my presentation at MapCamp 2021.">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://www.wardle.org/strategy/2021/12/14/mapping-the-epr-2.html">
+  <link rel="alternate" type="application/rss+xml" title="Health informatics and information technology" href="/feed.xml">
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-97389603-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="/">Health informatics and information technology</a>
+  
+  
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+           <a class="page-link" href="/">All posts</a>
+          
+            
+            
+            <a class="page-link" href="/projects/">Projects</a>
+            
+          
+            
+            
+            <a class="page-link" href="/about/">About</a>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Mapping the electronic health record 2/3</h1>
+    <p class="post-meta">
+      <time datetime="2021-12-14T14:14:14+00:00" itemprop="datePublished">
+        
+        14 December 2021
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>This is part 2/3 of my presentation at <a href="https://www.map-camp.com">MapCamp 2021</a>.</p>
+
+<p><img src="/images/mapcamp21/map-ehr.001.png" alt="Title page" /></p>
+
+<p>You can <a href="https://www.youtube.com/watch?v=9Vk6bg0uk4o">watch a video recording</a> of that presentation if you like, but this post is a 
+deeper dive into some of the detail.</p>
+
+<h1 id="2-algorithms">2. Algorithms</h1>
+
+<p>So what about algorithms, and machine learning in health and care? Are you sure machines need anything different to what we as humans need?</p>
+
+<p><img src="/images/mapcamp21/map-ehr.007.png" alt="The need for interoperability" /></p>
+
+<p>I’ve previously <a href="https://wardle.org/strategy/2018/08/30/algorithm-strategy.html">drawn Wardley maps for the use of algorithms and machine learning in healthcare</a>:</p>
+
+<p><img src="/images/mapcamp21/map-ehr.008.png" alt="The need for interoperability" /></p>
+
+<p>There’s a complete <a href="https://wardle.org/strategy/2018/08/30/algorithm-strategy.html">blog post</a> about it, if you want more detail.</p>
+
+<p>But, you’ll see that whether you are looking to support a new clinical score that calculates stroke risk, or a new machine learning algorithm that can interpret chest x-rays, computers need the same types of information and support and feedback loops and monitoring as do professionals and services and facilities.</p>
+
+<p>Our Wardley map shows dependencies on:</p>
+
+<ul>
+  <li>meaningful data</li>
+  <li>feedback looks</li>
+  <li>monitoring and evaluation pipelines</li>
+  <li>consent and control</li>
+  <li>readily available tools and libraries</li>
+</ul>
+
+<p><img src="/images/mapcamp21/map-ehr.011.png" alt="Machines vs humans" /></p>
+
+<hr />
+
+<h1 id="what-do-we-currently-have">What do we currently have?</h1>
+
+<p>This map looks at the electronic health record from the viewpoint of an organisation, because that’s the usual model of how software used in health and care, whether for acute hospitals or community services.</p>
+
+<p><img src="/images/mapcamp21/map-ehr.013.png" alt="The need for interoperability" /></p>
+
+<p>In this map, I show a dependency from the organisation to an electronic patient record.</p>
+
+<p><em>NB: I think that can and should be challenged. A patient shouldn’t have to know that one specialist service is managed by that organisation and another from another; aren’t they interacting with a health service that should feel seamless? They should not need to know organisational or department structures.</em></p>
+
+<p>Many organisations have bought off-the-shelf electronic health record products. As part of that, they might also buy, usually but not always from the same supplier, the following products:</p>
+
+<ul>
+  <li>a patient portal - to allow patients to interact with, or at least view their record, at that organisation</li>
+  <li>population analytics - to allow analytics across groups of patients</li>
+  <li>health information exchange - to share data between organisations in, for example, a region</li>
+  <li>an API product - to allow developers to build products using the data and services within the EPR.</li>
+</ul>
+
+<p>You’ll see from the map that the API product is usually dependent on the EHR in this model. We’re going to need to challenge that, because health and care records should surely be built using open APIs, not the other way around?</p>
+
+<p>Likewise, we see that the EHR needs customisation and integration, and we’re buying a product and making it 
+and so they go to their vendor and they buy that and it’s from the same vendor and that gives them access to all their data um so they have to have to buy that separately um and then</p>
+
+<p>the organization wants to share data in a regional aspect so they buy the products health information exchange product so that’s fine so now they can exchange data with other hospitals other organizations within that region uh but the problem the problem is this ehr um well it’s not just a green field thing they’ve got a ton of in-house developers um and so um they need to solve things that are local the electronic health record actually doesn’t really solve their problems um which is an interesting observation so they buy an api product because you’ve got to buy that so the api is dependent on the hr and that’s interesting because actually probably it should be the other way around um but this is this is how the market is at the moment generally um so um so that that’s fine we’ve got our in-house developers using the api to develop extra things on the ehr that was not quite right for them and and then we’ve also got to solve research but that’s completely separate so these are all new they’re all different there’s normally a research registry for a joint or orthopedic surgery or cardio cardiac surgery um and good luck trying to reproduce that that research because it’s all novel it’s all new it’s not systematized at all and it’s all completely separate to the ehr so that’s not great um</p>
+
+<p>and uh so let’s see if i can do this</p>
+
+<p>and of course actually when we first installed the ahr we we we we did have a load of other legacy systems as well which you’ve got to integrate and that integration um so the ehr is dependent on that integration actually so crumbs we’ve got to like build and links to all of our existing systems and integrate those plus also it’s not right for us at all at the moment so we’ve got to customize it to our own local workflow flow and processes so actually most places that buy an electronic health record kind of end up hiring more developers to to do that kind of integration and customization work</p>
+
+<p>so some of our capabilities that we need are predicated upon data standards so for example if we’re going to be doing api work if we’re going to be customizing we need to be collaborating we need data standards and data standards bodies to tell us how to interpret with these data</p>
+
+<p>so through our health information exchange for example and similarly um all of these need some compute and</p>
+
+<p>data kind of back ends and in general modern eprs they’ll build on cloud services uh but all our legacy is still all the way over here so you know what are we going to do when we look at this well it tells us a few different things really one is this api product cannot still be a product this needs to be a commodity and we need to look at that we need to make data standards and evolve data standards to be something that’s kind of ubiquitous we need to get our legacy data out we need to stop building our own data centers and move over to the cloud but there’s also some other issues here with this separation of research clinical work and analytics which i think are really interesting</p>
+
+<p>so so that’s where we’ve left it so what about the big tech vendors so i give them a d minus right they have principally failed in health actually</p>
+
+<p>or haven’t really started to get gaining in health they’ve pretty much focused on compute and data infrastructure interestingly apple doesn’t do that but they have built a mobile phone app apple health which gives them access to gives gives us what is essentially a patient portal the others don’t really do that very much they’re mainly focused on cloud and that is disappointing actually because there’s a lot that they could bring to the table</p>
+
+<p>and our big um big question for an ehr when you look at it carefully is do you buy all of that from a single vendor or do you try and build a best of breed through buying bits and pieces and then trying to link them all together either way it becomes fossilized and difficult to change because you’ve kind of pleased it all together um and the danger if you buy lots of different things is you’ve just got a combinatorial combinatorial explosion so you’ve got to kind of make them all into operate unless you build some kind of platform which is where i’m going with all of this and then the final observation on this is that why on earth are these things so separate so we completely think of data analysis and analytics uh separate to direct care when in fact actually direct care would benefit from embedding the analysis in there show us the data for your individual patient in the context of everybody is a very powerful approach of why on earth have we got research systems over there surely these things are simply different facets of the same thing you’ve even got separate languages we use r for analytics and we use different computer languages and data stores for our electronic health records you have to step back and challenge one’s assumptions and mapping has helped you do that</p>
+
+<p>so if you just think about an electronic health record what do we actually need well there are two broad options you can kind of buy a monolith so you kind of buy it from say epic which is a monolith or you buy it from cerner and actually that’s not a monolith really but they’ve done the work to glue it all together so it feels like a monolith or you buy all these bits and pieces but whatever you’re doing what do you need to do to deliver on that well any ehr is generally fixed on billing and billing needs clinical data billing needs identity services for staff who did what and patience who you’re doing stuff too and billing also needs to track orders so that they can charge you properly um the ehr does need workflow but it that doesn’t feel like it’s very well advanced it’s not a mature thing workflow is often um neglected actually and and that’s to our detriment any clinical service needs things like clinical calculators which are often proprietary and built into the epr data sharing is novel and new it’s kind of a paid for thing you have to link it yourself or extract the data or do it it’s all in the novel side of things to integrate which is wrong we’re already seeing challenges here things like reference data audit logging geographic data knowledge basis terminology that should all be commodity a lot of the implementation of open standards that underpin things like results documents laboratory data and radiology should be all a commodity there should be open source we should not be differentiating this should be the basics these are the foundational building blocks and you know actually we don’t have that we’re still buying these things here as individual products this is a typical monolithic epr they own all of this bit in the middle they might delegate for staff identity to you know windows domain controller or something like that um and then you might use the epr vendor’s own laboratory and radiology system you might buy those and stick them in because of the standards that play that it does kind of work the other option is you do a best of breed approach so you you know have a clinical system and then you glue it to staff identity document services different laboratory services and radiology there’s not really one best way of doing it but again integration is novel and difficult and custom</p>
+
+<p>so i don’t think actually thinking about the needs of the epr is good for the health of the nation or good for my health i think we need to start with user needs the problem is that the organizations in which we work are not the user but in general they hold the purse strings and that is a problem so let’s go to um what we need from a dpr</p>
+
+<p>so that’s that and then true needs so finally this is the final map actually so i think of users as researchers or managers or policy makers or clinicians or patients and i’m going to try and draw out some of the parallels here and some of the questions you might be asking we need to make a decision about you know how do we address inequality in our population how do we judge that that treatment is safe how do we improve our service and improve our outcomes should we use this high-risk treatment in this individual patient with this group of patients when should we see that patient can that patient be sent home what is the treatment for this patient and i i guess you could divide the needs of a decision in to three evidence you need to have communication around that decision-making and you need to take action on that community on that decision as well so um so let’s focus on decisions</p>
+
+<p>so the first thing is about the evidence and we need to support our decision making with evidence i i think we do not have sophisticated tools for decision support at the moment that is an area ripe for innovation this is all predicated upon meaningful data and a focus on outcomes which still at the moment is not ubiquitous in our clinical systems with very much transaction we record stuff about counting numbers of encounters but i have no idea how those patients are doing</p>
+
+<p>our outcomes and meaningful data are surely based on distributed data we can’t be organization-centric here we need to be sharing data and that requires trust that requires openness transparency it requires open standards requires clinical data that’s meaningful</p>
+
+<p>if we’re going to take action we need systems that manage our workflow that means building systems for feeding back into our decision support and evidence so we take action we have process management we have no tools for orchestrating complex pathways of care if they span more than one organization it’s manual re-entry we’re reinventing the wheel and every every time when in fact actually we should be giving tools to the users to manage complex pathway building using low code or no code declarative environments setting up rules predicated built upon clinical data and generating processes and workflow that work for patients measure what measure how it works and continually improve our systems we do not have this</p>
+
+<p>we see a problem here if we’re going to be sharing data and moving it around how on earth do we</p>
+
+<p>distribute that data in a safe way so we need a ton of novel work here we we need to inculcate trust uh based on a finely grained authentication system so we need clinical data that’s kind of comes with a wrap of authentication what that data can be used for if you’re going to distribute data we need systems to locate that data across our enterprises we need mechanisms to distribute communication between entities that may be researchers clinicians patients organizations and we need to give tools and have tools that support distributed control so what that means is placing the tools in the hands of professionals and patients to control their own data and that requires us to be innovative here we need to be looking really carefully at these modern new just on the cusp technologies secure enclaves differential privacy mechanisms and homomorphic encryption so how can we spread data make use of data but do it in a really safe way with an envelope of consent and control from the patient</p>
+
+<p>and then all of that should be should be based on um</p>
+
+<p>should be based on our our core foundational services which should be a commodity built on open standards simple and complex clinical data that’s meaningful combined with reference data to give context and built on commodity compute providers</p>
+
+<p>so i i think this map is really helpful um up on top left we’ve got lightweight user centered declarative applications that are composing complex tools they’re predicated upon workflow and process they allow users in the health system to build processes build workflows to systematize health care if you’re coming in for an operation it needs to be like a flow of work or carefully orchestrated i think if we’re going to really place outcomes and trust and distributed data at the heart of the health of the nation then we need these novel ambitious and enabling technologies which are going to disrupt the current market for electronic health records because if this work is distributed we’ve broken the lock of organizations um and we’re focusing back on our clinicians and patients together doing making decisions that’s right that are right for them in the middle you’ve got some of the culture and principles that i think we need to work on transparency trust standards collaboration outcomes and openness and then we need to be building on these core boring infrastructure bits these are the dependable commodities knowledge bases reference data arguably clinical data should be in here with um built upon open and commodity data stores data pipelines funneling this data and open compute</p>
+
+<p>so i think that tells us what we need to do we need clinically meaningful data we need data sharing you can look update the privacy enhancing technologies we need to build out trust and we need to move implementation of open standards to open source open source is a strategic bet we need to get modern technology companies to treat cloud as more than simply moving a data center to somebody else’s kit cloud potentially opens up health and health and care data if we can do it correctly this is huge disruption from the existing market we’ve got to push suppliers we can’t be differentiating at these low levels in the weeds of whether it’s a cloud or running on cloud or not that’s ridiculous we need to be focusing on value and outcomes for patients so thank you</p>
+
+
+  </div>
+
+  
+</article>
+        
+      </div>
+    </main>
+    
+    
+    
+    <footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Health informatics and information technology</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Health informatics and information technology</li><li><a class="u-email" href="mailto:mark@wardle.org">mark@wardle.org</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/wardle"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">wardle</span></a></li><li><a href="https://www.twitter.com/mwardle"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">mwardle</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
