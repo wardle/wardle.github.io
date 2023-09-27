@@ -1,5 +1,276 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2023-09-27T11:47:03+01:00</updated><id>https://www.wardle.org/feed.xml</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
-</subtitle><entry><title type="html">Mapping the electronic health record 2/2</title><link href="https://www.wardle.org/strategy/2021/12/14/mapping-the-epr-2.html" rel="alternate" type="text/html" title="Mapping the electronic health record 2/2" /><published>2021-12-14T14:14:14+00:00</published><updated>2021-12-14T14:14:14+00:00</updated><id>https://www.wardle.org/strategy/2021/12/14/mapping-the-epr-2</id><content type="html" xml:base="https://www.wardle.org/strategy/2021/12/14/mapping-the-epr-2.html"><![CDATA[<p>This is part 2/2 of my presentation at <a href="https://www.map-camp.com">MapCamp 2021</a>.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2023-09-27T20:26:08+01:00</updated><id>https://www.wardle.org/feed.xml</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+</subtitle><entry><title type="html">Unbundling the electronic health record</title><link href="https://www.wardle.org/strategy/2022/12/02/functional-health-records.html" rel="alternate" type="text/html" title="Unbundling the electronic health record" /><published>2022-12-02T14:14:14+00:00</published><updated>2022-12-02T14:14:14+00:00</updated><id>https://www.wardle.org/strategy/2022/12/02/functional-health-records</id><content type="html" xml:base="https://www.wardle.org/strategy/2022/12/02/functional-health-records.html"><![CDATA[<p>This is a <a href="https://youtu.be/2HQSAtmVbAU?si=97TfdaCc1Wwbq6Dk">talk I gave at the re-Clojure 22 technology conference in December 2022</a>:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2HQSAtmVbAU?si=NWX55fL27rvi5HdD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+
+<p>Clojure is a programming language that is a dialect of Lisp, but none of the concepts here require the use of Clojure as
+a programming language. Rather, this talk is more about learning from some of
+the principles behind Clojure, and functional programming languages generally,
+and internet-era software architectural design, to re-imagine the software we use in health and care.</p>
+
+<h2 id="introduction">Introduction</h2>
+
+<p><img src="/images/unbundling/unbundling.001.png" alt="title" /></p>
+
+<p>In this blog post, I argue that we must transform the way we perceive and use electronic health records (EHRs).
+By employing the principles of Clojure and reimagining the EHR, we have the potential to turn this essential tool inside
+out, unlocking its full potential, and support a health and care system designed around the needs of patients and
+professionals.</p>
+
+<h2 id="traditional-ehr-vs-inside-out-thinking">Traditional EHR vs inside-out thinking</h2>
+
+<p><img src="/images/unbundling/unbundling.001.png" alt="title" /></p>
+
+<p>To begin, let’s understand the traditional or conventional Electronic Health Record (EHR). Typically, an EHR is
+considered an application or system that healthcare providers purchase, deploy, and often integrate with other systems.
+These EHRs are organization-centric, designed to meet the needs of the purchasing entity, and are heavily focused on
+process and billing. They tend to be monolithic, with proprietary internals and limited interoperability within the
+product. Interoperability is considered ‘external’.</p>
+
+<p>In essence, EHRs are like isolated islands in the digital healthcare landscape, making integration complex and resulting
+in data concretions within an enterprise. Patient data is contained within these applications, making it challenging to
+use the same data for different purposes like population health analytics, service management, and research.
+Furthermore, the tooling used for EHRs differs significantly from what is required for analytics and research.
+For example, we may use Python or R for research, proprietary tools for analytics in managing services,
+and very different tools for applications supporting direct care.</p>
+
+<h2 id="unbundling-the-ehr">Unbundling the EHR</h2>
+
+<p>The concept of unbundling the EHR involves shifting the focus from the organization to the patient and adopting the FAIR
+principles: findability, accessibility, interoperability, and reusability. In this model, data becomes the central
+element, with the potential for easy composition of data from multiple organizations, regardless of their origin. This
+shift allows us to move beyond process measures to more meaningful outcomes in healthcare.</p>
+
+<p>By concentrating on data, the architecture inherently becomes distributed, similar to how we build external systems.
+This approach is inspired by Rich Hickey’s concept of using plain data, RPC, and queues in system architecture. The
+result is a suite of independent but composable computing and data services, both internally and externally
+interoperable. These services provide flexibility, adaptability, and scalability, aligning with the dynamic nature of
+healthcare.</p>
+
+<p>We must move to a domain-driven design in health care.</p>
+
+<h2 id="interoperability">Interoperability</h2>
+
+<p><img src="/images/unbundling/unbundling.003.png" alt="interoperability" /></p>
+
+<p>In healthcare, interoperability has been a long-standing challenge. Various approaches, such as convergence through
+shared applications or information exchanges, have been attempted. However, these approaches often fall short,
+especially in supporting granular analytics and research.</p>
+
+<p>A more effective solution is to approach interoperability through <em>composition and layering of domain-aligned data and
+software components</em>. Instead of forcing organizations to adopt a single shared application, the focus shifts to
+standardized data exchange. This enables the creation of shared care records that may not contain all the detail but are
+sufficient for many purposes.</p>
+
+<h2 id="domain-centric-approach">Domain-Centric Approach</h2>
+
+<p><img src="/images/unbundling/unbundling.004.png" alt="Domain-driven design" /></p>
+
+<p>Breaking down the EHR into its domain-specific components can provide clarity and facilitate meaningful, semantic
+interoperability. Components related to radiology, staff, patients, reference data, classifications, and terminology
+can be understood and managed individually across organisational boundaries. It is seductive to think that a single
+system can do all that we need, but health and care is too complex and needs to be broken up into smaller, manageable
+chunks which can be developed and improved independently.</p>
+
+<p><img src="/images/unbundling/unbundling.005.png" alt="Shared semantics" /></p>
+
+<p>An approach predicated upon organisations and not health and care domains creates fragmentation and loss of shared
+semantics. Traditional EHRs often adopt the shared single instance approach or attempt to converge various systems.
+However, this
+can lead to fragmentation and a lack of shared semantics. Unbundling the EHR, on the other hand, enables data to flow
+seamlessly and allows for dynamic composition of services, resulting in a more cohesive and flexible healthcare
+ecosystem.</p>
+
+<p>For example, an organisation-focus means that a staff member who works across multiple sites may need multiple logins
+and find it difficult to generate a report detailing all of the surgical procedures performed across those sites, as
+there may not be shared understanding of the identifiers that underpin that staff member. If they are a prescriber, each
+organisation must be careful to register their accounts so that they have access to e-prescribing.</p>
+
+<p>Instead, we should be recognising the importance of domain-boundaries, and that a staff index, and associated data
+such as scope of practice, and regulatory informaion, is a first-class, important domain within health and care; likely
+needing federation and aggregation of a number of disparate sources of information, but presented as a unified, and
+simpler service to other domain components.</p>
+
+<h2 id="turning-electronic-health-and-care-records-inside-out">Turning electronic health and care records inside-out</h2>
+
+<p>What can we learn from Clojure?</p>
+
+<p><img src="/images/unbundling/unbundling.006.png" alt="Learning from Clojure" /></p>
+
+<p>While Clojure is an excellent language to implement the software for the next
+generation of electronic health record systems, we can learn the most from the principles
+that underpin the design of Clojure:</p>
+
+<ul>
+  <li>Data-orientated</li>
+  <li>First class names</li>
+  <li>Working to abstractions</li>
+  <li>Functional / pure functions / reproducibility</li>
+  <li>Immutability</li>
+  <li>Loose coupling</li>
+  <li>Dynamic / flexible / adaptive to change</li>
+  <li>First class events / event modelling</li>
+  <li>Building the internals of our systems as in the large (Internet-era approach)</li>
+</ul>
+
+<p>Using these principles, we can look towards interoperability through <strong>composition and layering
+of domain-orientated data and software components</strong>.</p>
+
+<h3 id="example--thinking-about-analytics-for-electronic-prescribing">Example : thinking about analytics for electronic prescribing</h3>
+
+<p><img src="/images/unbundling/unbundling.007.png" alt="e-prescribing" /></p>
+
+<p>Imagine a scenario: You’re in a hospital, and you need to closely monitor all the antibiotics being prescribed to
+patients. It’s a critical task that can impact patient outcomes, but it’s also one that can be quite complex due to the
+diverse nature of healthcare systems.</p>
+
+<p><strong>Option 1: Leveraging In-Built Analytics</strong></p>
+
+<p>The first option is to rely on the built-in analytics tools provided by EPMA (electronic prescribing and medicines
+administration)
+or Electronic Patient Records (EPR) vendors. These tools are designed to work seamlessly within their respective
+systems, offering insights
+and analytics specific to that environment. While this option can be effective within the confines of a single system,
+it falls short when dealing with the intricate web of healthcare data spread across different platforms.</p>
+
+<p>In the real world, many hospitals use different prescribing systems, each tailored to a specific aspect of patient care.
+For instance, chemotherapy prescribing systems differ significantly from those used for general medical purposes.
+Moreover, various healthcare enterprises, including community services and general practitioner surgeries, operate on
+different systems altogether. This fragmentation poses a significant challenge when aiming for a comprehensive,
+population-level analysis of healthcare data.</p>
+
+<p><strong>Option 2: Embracing Health Information Exchanges</strong></p>
+
+<p>The second approach involves aggregating data from various sources into a Health Information
+Exchange (HIE). An HIE acts as a bridge between disparate healthcare systems, allowing data to flow between them. While
+this approach can provide a degree of standardization and interoperability, it doesn’t fully address the underlying
+issues of data granularity and accessibility. In essence, it’s a step in the right direction but may not be the ultimate
+solution for comprehensive healthcare data analysis.</p>
+
+<p><strong>Option 3: Unbundling Electronic Health Records (EHRs)</strong></p>
+
+<p>Now, here’s where unbundling the Electronic Patient Record (EPR) or Electronic Health Record (EHR) system comes in.
+In simple terms, this means taking the data generated by these systems, transforming it into a standardized,
+self-describing event stream, and making it accessible for a wide range of applications, including direct-care (e.g.
+alerts),
+analytics (a dashboard of all antimicrobials across an estate), and research.</p>
+
+<p>This unbundling process begins with extracting data from these systems. While many suppliers can provide data feeds in a
+standardized format, some may require transformation and extraction to create a consistent event stream. Once achieved,
+this event stream becomes a valuable resource for healthcare professionals.</p>
+
+<p><strong>The Power of Data Annotation</strong></p>
+
+<p>To maximize the utility of this event stream, we must recognise the importance of data annotation. This involves
+enriching the data with additional information using terminology and drug dictionaries. For instance, a healthcare
+provider can perform lookups against drug codes in the event stream, providing meaningful insights about the medications
+prescribed. We must recognise that mapping and annotations are first-class problems in our domain, and those tools
+should be available on demand, for a range of use-cases, and independent from individual vendors.</p>
+
+<p>These annotated event streams can then be divided into substreams, each tailored to specific aspects of patient care.
+For example, an antimicrobial event stream can be created and used to populate a real-time dashboard, enabling
+healthcare providers to monitor antibiotic usage and make informed decisions promptly.</p>
+
+<p><strong>Transforming Healthcare Data Management</strong></p>
+
+<p>In essence, the vision revolves around turning the traditional approach to EHRs inside out. Instead of
+relying solely on monolithic EHR systems, healthcare institutions should be able to embrace the power of first-class, composable data
+and software services. This shift would allow for dynamic data composition and interoperability spanning organizational
+boundaries, ultimately benefiting patient care, analytics, and research.</p>
+
+<p>As healthcare continues to evolve, the ability to harness and analyze data effectively becomes paramount. By breaking
+down data silos, enhancing interoperability, and making data truly first-class, the healthcare industry can take
+significant strides
+toward improved patient outcomes and a more efficient healthcare system. It’s a journey that requires effort and
+collaboration and a foundation of vendor-neutral, and open, data and computing services.</p>
+
+<h1 id="first-class-annotation-and-mapping">First-class annotation and mapping</h1>
+
+<p><img src="/images/unbundling/unbundling.008.png" alt="terminology" /></p>
+
+<p>In the world of healthcare and patient care, one of the most crucial aspects is the ability to <strong>make sense</strong> of the vast
+and ever-evolving landscape of health and care data. This requires the use of standardized terminologies, and one example 
+is SNOMED CT. Driven by the need for dynamic and adaptable software systems, we need ubiquitous tooling that harnesses 
+the potential of SNOMED CT in healthcare, providing access to its power in any application, for any purpose.</p>
+
+<p>For example, we can standardise on vocabularies, such as the list of specialty codes. However, such an approach leads
+to concretions in our software systems, because if the master list of codes is updated, any software that needs to make
+sense of those codes needs to be updated. In addition, these codes are usually not self-describing, or contain 
+information about the relationships between those codes.</p>
+
+<p>Instead, an ontology provides rich semantics supporting inference and sense-making.</p>
+
+<p>For example, imagine I wish to build a compelling user experience so that a user can rapidly search for correspondence
+relating to a speciality. If I have a flat list of codes, ‘neurology’ and ‘paediatric neurology’ are considered 
+independent specialties, and if I wish to allow users to search for ‘paediatrics’ and also include ‘paediatric neurology’
+then I must build those kinds of rules outside of my vocabulary / classification list.</p>
+
+<p>A more dynamic and flexible approach such as that enabled by SNOMED CT might allow a user to choose ‘neurology’ and find 
+letters for all types and subtypes of ‘neurology’ as a specialty, which would, of course, include ‘paediatric neurology’ 
+by virtue of the ontological basis underpinning SNOMED CT. While some might think that this a dry and academic subject,
+by getting our foundations right, we make it easier to build compelling, and delightful user experiences.</p>
+
+<p>I’ve open-sourced a number of libraries and services that can support this kind of work:</p>
+
+<ul>
+  <li><a href="https://github.com/wardle/hermes">https://github.com/wardle/hermes</a> - SNOMED CT library and web service</li>
+  <li><a href="https://github.com/wardle.codelists">https://github.com/wardle/codelists</a> - Generate code lists via declarative rules</li>
+  <li><a href="https://github.com/wardle/dmd">https://github.com/wardle/dmd</a> - UK drug dictionary</li>
+  <li><a href="https://github.com/wardle/hades">https://github.com/wardle/hades</a> - HL7 FHIR terminology wrapper around hermes</li>
+</ul>
+
+<p>This work should be open-source and available widely, and used for many different purposes, including direct care,
+analytics pipelines and research. Such libraries and tools need to be quick to set-up and use, and not require 
+significant investments in infrastructure or server capacity. It makes little sense to not share foundational software 
+services. It is otherwise akin to developers needing to start by building their own encryption libraries; no-one should do that 
+but instead use open, readily available and battle-tested ready-made libraries.</p>
+
+<h1 id="mapping-and-projections-are-first-class-problems-in-our-domain">Mapping and projections are first-class problems in our domain</h1>
+
+<p>We need to recognise, and therefore provide compelling, battle-tested solutions to first-class problems in our domain. 
+Recognising the issues forces use to focus our limited resources on things that have the greatest benefit. If we think
+that building user interfaces is the biggest issue, then we spend our time (erroneously) building solutions for e-forms.
+Instead, if we recognise the true (shared) challenges, then we should quickly see that semantic interoperability depends
+fundamentally on data and software that can make sense of, and map between different ways of encoding health and care 
+data.</p>
+
+<p><img src="/images/unbundling/unbundling.011.png" alt="data projections" /></p>
+
+<p>Here we see that, for a specific research project, I’ve taken complex, real-life hierarchical and nested health data and
+generated a simplifed <strong>rectangular projection</strong> to make it easier for subsequent analysis. Fundamentally, the projections
+will vary depending on context and use-case, so we must focus on capturing highly granular and specific data at the point
+of care, while building tools and chains and data pipelines that permit turning that specific data into a variety of
+formats convenient for the use-case at hand. Importantly, we delay the loss of granular information until as late a 
+stage as possible. Too many times, we look to ask professionals to record categorical data in order to simplify subsequent use of
+those data, rather than capturing data at the right level of granularity for clinical use, and making use of the right tools,
+and right expertise, to classify those data later on according to the need at hand. We should derive those projections.</p>
+
+<p>Here is an overview of some of the tools I have built so far, in my spare time.</p>
+
+<p><img src="/images/unbundling/unbundling.012.png" alt="tools" /></p>
+
+<p>My current focus has been on lower-level, fundamental software and data services. However the future should be that we
+build an ecosystem of composable higher-value components, well-tested and built by community efforts, relating to design 
+systems and decision support. Why are we building prescribing rules in proprietary software systems when the community
+could be building in the open to be used for whatever purpose necessary?</p>
+
+<p><img src="/images/unbundling/unbundling.013.png" alt="graph api" /></p>
+
+<p>Finally, I’ve recognised that one way of composing together data and software services within health and care is through
+the use of graph APIs. Such APIs allow one to seamlessly navigate across disparate data services permitting user-facing
+applications to be built independently of the the underlying software and data subsystems resolving the queries at hand.</p>
+
+<p>In the video, I give a demonstration of using Hermes from a Clojure REPL, permitting interactive programming. For example,
+I show how I can build a data pipeline that takes diagnostic and problem codes and map them into a specific emergency reference
+set (subset) to simplify analysis.</p>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>In conclusion, the concept of unbundling the EHR and adopting Clojure-derived principles has the potential to
+transform healthcare data management. By focusing on data, achieving interoperability, and leveraging standardized
+terminologies, we can create a more flexible, adaptable, and patient-centric healthcare ecosystem. This approach not
+only benefits direct patient care but also empowers analytics and research, ultimately leading to better outcomes in the
+healthcare industry.</p>]]></content><author><name></name></author><category term="strategy" /><summary type="html"><![CDATA[This is a talk I gave at the re-Clojure 22 technology conference in December 2022:]]></summary></entry><entry><title type="html">Mapping the electronic health record 2/2</title><link href="https://www.wardle.org/strategy/2021/12/14/mapping-the-epr-2.html" rel="alternate" type="text/html" title="Mapping the electronic health record 2/2" /><published>2021-12-14T14:14:14+00:00</published><updated>2021-12-14T14:14:14+00:00</updated><id>https://www.wardle.org/strategy/2021/12/14/mapping-the-epr-2</id><content type="html" xml:base="https://www.wardle.org/strategy/2021/12/14/mapping-the-epr-2.html"><![CDATA[<p>This is part 2/2 of my presentation at <a href="https://www.map-camp.com">MapCamp 2021</a>.</p>
 
 <p><img src="/images/mapcamp21/map-ehr.001.png" alt="Title page" /></p>
 
@@ -1282,28 +1553,4 @@ a single record.</p>
   <li>define clear lines of responsibility for different services, and include performance  and reliability metrics.</li>
 </ul>
 
-<p><em>Mark</em></p>]]></content><author><name></name></author><category term="strategy" /><summary type="html"><![CDATA[In most health and care economies, it’s really important to be able to feed back data in order to inform and assess policy as part of central reporting.]]></summary></entry><entry><title type="html">Advancing civilisation</title><link href="https://www.wardle.org/strategy/2020/07/17/advancing-civilisation.html" rel="alternate" type="text/html" title="Advancing civilisation" /><published>2020-07-17T09:09:10+01:00</published><updated>2020-07-17T09:09:10+01:00</updated><id>https://www.wardle.org/strategy/2020/07/17/advancing-civilisation</id><content type="html" xml:base="https://www.wardle.org/strategy/2020/07/17/advancing-civilisation.html"><![CDATA[<blockquote>
-  <p>“Civilization advances by extending the number of important operations which we can perform without thinking about them.”</p>
-
-  <p>Alfred North Whitehead.</p>
-
-  <p>An Introduction to Mathematics (1911)</p>
-</blockquote>
-
-<p>Our job in digital health and care is</p>
-
-<ul>
-  <li>to use data as the foundation to our health and care services,</li>
-  <li>to understand how to modularise our computing and data services</li>
-  <li>in order to <em>compose</em> those modules back together in interesting ways to solve problems</li>
-</ul>
-
-<p>We should be designing with data and composable, modular, de-coupled, re-usable, stateless computing services that can act on those data.</p>
-
-<p>Together, they are the building blocks, the foundation stones of a pyramid. Each level of that pyramid reflects a higher-level of abstraction, providing more sophisticated solutions to our health and care problems.</p>
-
-<p>At the lowest levels are the core foundational services such as patient identity.</p>
-
-<p>At the highest levels, we will be solving our most nefarious problems, and not thinking about the low-level abstractions we already have in place.</p>
-
-<p><em>Mark</em></p>]]></content><author><name></name></author><category term="strategy" /><summary type="html"><![CDATA[“Civilization advances by extending the number of important operations which we can perform without thinking about them.” Alfred North Whitehead. An Introduction to Mathematics (1911)]]></summary></entry></feed>
+<p><em>Mark</em></p>]]></content><author><name></name></author><category term="strategy" /><summary type="html"><![CDATA[In most health and care economies, it’s really important to be able to feed back data in order to inform and assess policy as part of central reporting.]]></summary></entry></feed>
