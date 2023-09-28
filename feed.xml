@@ -1,5 +1,345 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2023-09-28T07:52:51+01:00</updated><id>https://www.wardle.org/feed.xml</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist and Chief Clinical Information Officer (CCIO)
-</subtitle><entry><title type="html">Unbundling the electronic health record</title><link href="https://www.wardle.org/strategy/2022/12/02/functional-health-records.html" rel="alternate" type="text/html" title="Unbundling the electronic health record" /><published>2022-12-02T14:14:14+00:00</published><updated>2022-12-02T14:14:14+00:00</updated><id>https://www.wardle.org/strategy/2022/12/02/functional-health-records</id><content type="html" xml:base="https://www.wardle.org/strategy/2022/12/02/functional-health-records.html"><![CDATA[<p>This is a <a href="https://youtu.be/2HQSAtmVbAU?si=97TfdaCc1Wwbq6Dk">talk I gave at the re-Clojure 22 technology conference in December 2022</a>:</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2023-09-28T20:36:56+01:00</updated><id>https://www.wardle.org/feed.xml</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist and Chief Clinical Information Officer (CCIO)
+</subtitle><entry><title type="html">Codelists</title><link href="https://www.wardle.org/strategy/2023/09/28/codelists.html" rel="alternate" type="text/html" title="Codelists" /><published>2023-09-28T10:09:09+01:00</published><updated>2023-09-28T10:09:09+01:00</updated><id>https://www.wardle.org/strategy/2023/09/28/codelists</id><content type="html" xml:base="https://www.wardle.org/strategy/2023/09/28/codelists.html"><![CDATA[<blockquote>
+  <p>If a patient has a type of motor neurone disease, then…</p>
+</blockquote>
+
+<blockquote>
+  <p>If a patient takes an ACE inhibitor, then …</p>
+</blockquote>
+
+<blockquote>
+  <p>If a patient has a type of autoimmune disease, then …</p>
+</blockquote>
+
+<p>Whether we are writing software to build compelling user-facing applications, building rules or decision support,
+or choosing categories from which we will run analyses such as understanding patient outcomes, we need to be able
+to process health and care data and make inferences.</p>
+
+<p>My open source software <a href="https://github.com/wardle/codelists">codelists</a> generates versioned codelists 
+for reproducible data pipelines and research.</p>
+
+<p>In general, there are two ways to think about codelists and reproducibility.</p>
+
+<p>The first is a explicit human curation of a list of codes. This is the approach adopted by
+Ben Goldacre and the <a href="http://opencodelists.org">opencodelists</a> team. You create and share codelists.</p>
+
+<p>The second is to define a codelist using a declarative specification which can be
+used to dynamically - but reproducibly - generate the codelist.</p>
+
+<p>Let’s look at an example. <a href="http://opencodelists.org">opencodelists</a> has a codelist
+to specify terms that represent a referral to colorectal services under a 2-week wait
+(urgent) basis. See <a href="https://www.opencodelists.org/codelist/phc/2ww-referral-colorectal/7eac259d/#full-list">https://www.opencodelists.org/codelist/phc/2ww-referral-colorectal/7eac259d/#full-list</a></p>
+
+<p>At the time of writing, this manually curated list includes one active concept and
+two inactive concepts.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>276401000000108	Fast track referral for suspected colorectal cancer
+276411000000105	Urgent cancer referral - colorectal
+276421000000104	Urgent cancer referral - colorectal
+</code></pre></div></div>
+
+<p>While this is a useful set of curated terms, I would argue that it is better to simply 
+define this codelist using a SNOMED CT constraint using the syntax of the SNOMED CT 
+expression constraint language:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "ecl": "&lt;&lt;276401000000108"
+} 
+</code></pre></div></div>
+<p>Result:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>=&gt; #{276401000000108 276411000000105 276421000000104}
+</code></pre></div></div>
+
+<p>Based on a named versioned distribution of SNOMED, and defined versions of this
+tool, this specification can be used to generate a reproducible codelist. If SNOMED CT
+changes over time, this specification will continue to work, due to the semantic
+relationships within SNOMED CT. <code class="language-plaintext highlighter-rouge">codelists</code> can expand a set of codes to include
+now inactive concepts using historical associations.</p>
+
+<p>Certainly for drugs, a declarative rules approach works better than the manually
+curated set of opencodelists. If new drugs of a type are added to the UK dictionary
+of medicines and devices (dm+d), then <code class="language-plaintext highlighter-rouge">codelists</code> will include those new drugs
+without any manual intervention, while manual curation requires continued
+monitoring and maintenance of code lists.</p>
+
+<h1 id="how-to-use-codelists">How to use <code class="language-plaintext highlighter-rouge">codelists</code></h1>
+
+<p>You can define codelists using a variety of means, such as</p>
+
+<ul>
+  <li>ICD-10 codes for diagnoses</li>
+  <li>ATC codes for drugs</li>
+  <li>SNOMED CT expressions in the expression constraint language (ECL).</li>
+</ul>
+
+<p>You can combine these approaches for high sensitivity, or manually derive codelists using hand-crafted ECL for high
+specificity.</p>
+
+<p><code class="language-plaintext highlighter-rouge">codelists</code> is a simple wrapper around two other services - <a href="https://github.com/wardle/hermes">hermes</a>
+and <a href="https://github.com/wardle/dmd">dmd</a>. I think it is a nice example of composing discrete, but related services
+together to give more advanced functionality.</p>
+
+<p><code class="language-plaintext highlighter-rouge">codelists</code> operates:</p>
+
+<ul>
+  <li>as a library and so can be embedded within another software package running on the java virtual machine (JVM), written
+in, for example java or clojure.</li>
+  <li>as a microservice and so can be used as an API by other software written in any language</li>
+</ul>
+
+<p>The substrate for all codelists is SNOMED CT. That coding system is an ontology and terminology, and not simply a
+classification. That means we can use the relationships within SNOMED CT to derive more complete codelists.</p>
+
+<p>If you only use the SNOMED CT ECL to define your codelists, then simply use <code class="language-plaintext highlighter-rouge">hermes</code> directly.
+You only need the additional functionality provided by <code class="language-plaintext highlighter-rouge">codelists</code> if you are building codelists
+from a combination of SNOMED CT ECL, ATC codes and ICD-10.</p>
+
+<p>ATC maps are not provided as part of SNOMED CT, but are provided by the UK
+dm+d. ICD-10 maps are provided as part of SNOMED CT.</p>
+
+<h1 id="using-codelists">Using codelists</h1>
+
+<p>You can <em>realise</em> a codelist, expanding it to all of its codes. You can also test membership of a given code against a
+codelist.</p>
+
+<p>All codelists, by default, expand to include historic codes. This will become
+configurable, but is the default for greater sensitivity at the expense of specificity.
+Different trade-offs might apply to your specific project.</p>
+
+<p>Boolean logic is supported, with arbitrary nesting of your codes using a simple DSL.</p>
+
+<p>A codelist is defined as names and values in a map, with the names representing the codesystem
+and the values the specification.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"ecl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;&lt;24700007"</span><span class="w">
+</span><span class="p">}</span><span class="w"> 
+</span></code></pre></div></div>
+
+<p>This defines a codelist using the SNOMED expression constraint language (ECL). While ECL v2.0 supports the use of
+historic associations within constraints, I usually recommend ignoring that ‘feature’ and instead defining whether and
+how historic associations are included as part of the API.</p>
+
+<p>SNOMED CT, in the UK, includes the UK drug extension with a 1:1 map between SNOMED identifiers and drugs in the official
+UK drug index - dm+d
+(dictionary of medicines and devices). That means you <em>can</em> use a SNOMED expression to choose drugs:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"ecl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(&lt;&lt;24056811000001108|Dimethyl fumarate|) OR (&lt;&lt;12086301000001102|Tecfidera|) OR (&lt;10363601000001109|UK Product| :10362801000001104|Has specific active ingredient| =&lt;&lt;724035008|Dimethyl fumarate|)"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Note how SNOMED ECL includes simple boolean logic.</p>
+
+<p>But `codelists’ supports other namespaced codesystems. For example:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"atc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"L04AX07"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Will expand to a list of SNOMED identifiers that are mapped to the exact match ATC code L04AX07 and its descendents
+within the
+SNOMED hierarchy.</p>
+
+<p>A SNOMED CT expression in the expression constraint language must be a valid expression.
+ICD-10 and ATC codes can be specified as an exact match (e.g. “G35”) or as a prefix (e.g. “G3*”). The latter will
+match against all codes that begin with “G3”.</p>
+
+<p>Different codesystems can be combined using boolean operators and prefix notation:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"or"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"atc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"L04AX07"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"atc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"L04AX08"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"ecl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(&lt;10363601000001109|UK Product| :10362801000001104|Has specific active ingredient| =&lt;&lt;724035008|Dimethyl fumarate|)"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>This expands the ATC codes L04AX07 L04AX08 and supplements with any other product containing DMF as its active
+ingredient.</p>
+
+<p>If multiple expressions are used, the default is to perform a logical OR. That means this is equivalent to the above
+expression:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"atc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"L04AX07"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"atc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"L04AX08"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"ecl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(&lt;10363601000001109|UK Product| :10362801000001104|Has specific active ingredient| =&lt;&lt;724035008|Dimethyl fumarate|)"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Duplicate keys are <em>not</em> supported, but multiple expressions using different keys are.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"atc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"L04AX07"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"ecl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(&lt;10363601000001109|UK Product| :10362801000001104|Has specific active ingredient| =&lt;&lt;724035008|Dimethyl fumarate|)"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>When no operator is explicitly provided, a logical ‘OR’ will be performed.</p>
+
+<p>For concision, all keys can take an array (vector), which will be equivalent to using “or” using the same codesystem.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"atc"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"L04AX07"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"L04AX08"</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Boolean operators “and”, “or” and “not” can be nested arbitrarily for complex expressions.</p>
+
+<p><code class="language-plaintext highlighter-rouge">codelists</code> also supports ICD-10.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"icd10"</span><span class="p">:</span><span class="w"> </span><span class="s2">"G35*"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>will expand to include all terms that map to an ICD-10 code with the prefix “G35”, and its descendents.</p>
+
+<p>The operator “not” must be defined within another term, or set of nested terms. The result will be the realisation of
+the first term, or set of nested terms, MINUS the realisation of the second term, or set of nested terms.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"icd10"</span><span class="p">:</span><span class="w"> </span><span class="s2">"G35"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"not"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"ecl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;24700007"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Or, perhaps a more complex expression:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"or"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"icd10"</span><span class="p">:</span><span class="w"> </span><span class="s2">"G35"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"icd10"</span><span class="p">:</span><span class="w"> </span><span class="s2">"G36.*"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"not"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"ecl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;24700007"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Or, more concisely:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"icd10"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"G35"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"G36.*"</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"not"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"ecl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;24700007"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>These will generate a set of codes that includes codes “G35” and any with the prefix “G36.” but omit “24700007” (
+multiple sclerosis).</p>
+
+<p>You can use wildcards. Here I directly use a running <code class="language-plaintext highlighter-rouge">codelists</code> HTTP server
+to expand a codelist defined as</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"atc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"C08*"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>This should give a codelist containing all calcium channel blockers.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http <span class="s1">'127.0.0.1:8080/v1/codelists/expand?s={"atc":"C08*"}'</span>
+</code></pre></div></div>
+
+<p>Result:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
+  </span><span class="mi">374049007</span><span class="p">,</span><span class="w">
+  </span><span class="mi">13764411000001106</span><span class="p">,</span><span class="w">
+  </span><span class="mi">376841009</span><span class="p">,</span><span class="w">
+  </span><span class="mi">11160711000001108</span><span class="p">,</span><span class="w">
+  </span><span class="mi">893111000001107</span><span class="p">,</span><span class="w">
+  </span><span class="mi">29826211000001109</span><span class="p">,</span><span class="w">
+  </span><span class="mi">376754006</span><span class="p">,</span><span class="w">
+  </span><span class="err">...</span><span class="w">
+</span></code></pre></div></div>
+
+<p>You can customise how data are returned.</p>
+
+<p>By default, a list of codes is returned.</p>
+
+<p>To return identifier and name, use ‘as=names’</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http <span class="s1">'127.0.0.1:8080/v1/codelists/expand?s={"atc":"C08*"}&amp;as=names'</span>
+</code></pre></div></div>
+
+<p>Result:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">
+</span><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">374049007</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"term"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nisoldipine 20mg tablet"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">13764411000001106</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"term"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Amlodipine 5mg tablets (Apotex UK Ltd)"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">376841009</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"term"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Diltiazem malate 120 mg oral tablet"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">11160711000001108</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"term"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Exforge 10mg/160mg tablets (Novartis Pharmaceuticals UK Ltd)"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">893111000001107</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"term"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tildiem LA 300 capsules (Sanofi)"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="err">...</span><span class="w">
+</span></code></pre></div></div>
+
+<p>For reproducible research, <code class="language-plaintext highlighter-rouge">codelists</code> will include information about <em>how</em> the codelist was generated, including the
+releases of SNOMED CT, dm+d and the different software versions. It should then be possible to reproduce the content of
+any codelist. At the moment, only the data versions are returned:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http 127.0.0.1:8080/v1/codelists/status
+</code></pre></div></div>
+
+<p>The following metadata will be returned:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"dmd"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"releaseDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-05-05"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"hermes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"© 2002-2021 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. </span><span class="se">\"</span><span class="s2">SNOMED</span><span class="se">\"</span><span class="s2"> and </span><span class="se">\"</span><span class="s2">SNOMED CT</span><span class="se">\"</span><span class="s2"> are registered trademarks of the IHTSDO."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"32.12.0_20220413000001 UK drug extension"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"32.12.0_20220413000001 UK clinical extension"</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre></div></div>]]></content><author><name></name></author><category term="strategy" /><summary type="html"><![CDATA[If a patient has a type of motor neurone disease, then…]]></summary></entry><entry><title type="html">Unbundling the electronic health record</title><link href="https://www.wardle.org/strategy/2022/12/02/functional-health-records.html" rel="alternate" type="text/html" title="Unbundling the electronic health record" /><published>2022-12-02T14:14:14+00:00</published><updated>2022-12-02T14:14:14+00:00</updated><id>https://www.wardle.org/strategy/2022/12/02/functional-health-records</id><content type="html" xml:base="https://www.wardle.org/strategy/2022/12/02/functional-health-records.html"><![CDATA[<p>This is a <a href="https://youtu.be/2HQSAtmVbAU?si=97TfdaCc1Wwbq6Dk">talk I gave at the re-Clojure 22 technology conference in December 2022</a>:</p>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2HQSAtmVbAU?si=NWX55fL27rvi5HdD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
 
@@ -1416,141 +1756,4 @@ a single record.</p>
 
 <p>This took just about six hours to go from inception to deployment, mainly because I’m able to simply stitch together foundational components to solve specific problems.</p>
 
-<p><em>Mark</em></p>]]></content><author><name></name></author><category term="strategy" /><summary type="html"><![CDATA[I built an electronic patient record and it’s been quite successful. It’s taught me a great deal about how to recognise how to modularise and decouple different data and software components. It’s been running since 2009 and is in live use.]]></summary></entry><entry><title type="html">Getting health and care data back to front</title><link href="https://www.wardle.org/strategy/2020/07/29/central-data-and-the-epr.html" rel="alternate" type="text/html" title="Getting health and care data back to front" /><published>2020-07-29T16:15:15+01:00</published><updated>2020-07-29T16:15:15+01:00</updated><id>https://www.wardle.org/strategy/2020/07/29/central-data-and-the-epr</id><content type="html" xml:base="https://www.wardle.org/strategy/2020/07/29/central-data-and-the-epr.html"><![CDATA[<p>In most health and care economies, it’s really important to be able to feed back data in order to inform and assess policy as part of central reporting.</p>
-
-<p>I’ve written previously about health and care central reporting requirements, and that such data returns are helpful and important but must be regarded as simply one ‘prism’ through which to ‘see’ a patient record.</p>
-
-<p>It’s good to see a specific example, so have a look at the <a href="https://www.wales.nhs.uk/sites3/documents/742/Site%20Specific%20Cancer%20Reporting%20July%202.pdf">NHS Wales breast cancer reporting requirements</a>.</p>
-
-<p><img src="/images/cancer-reporting.png" alt="Cancer Reporting" /></p>
-
-<p>This dataset is a summary of the important aspects of breast cancer care and is vital for planning and improving services. It should also be used to <em>inform</em> operational data collection.</p>
-
-<p>However, it’s important that those requirements don’t dictate <em>how</em> that collection should be made.</p>
-
-<p>That link reflects version 4.1 of the reporting requirements; requirements change and any digital systems supporting those reporting requirements needs to be able to adapt and flex accordingly.</p>
-
-<h1 id="rectangles-and-projections">Rectangles and projections</h1>
-
-<p>But can we use central reporting requirements to design our clinical information systems?</p>
-
-<p>Many central data reporting requirements want data to be representing in <em>rectangles</em>. That’s a bit like looking at patient data through the prism of a spreadsheet, such as Microsoft Excel.</p>
-
-<p>This is not dissimilar to cartography where a map projection takes the richness, splendour and complexity of a globe’s surface and projects it onto a two-dimensional surface for your atlas. In cartography, multiple projections are available that suit different purposes, each compromising the original information in some way. Each of those representations also create their own value -  a two-dimensional map can be printed or shown on your flat screen - they are useful representations, but they’re not the <em>truth</em>.</p>
-
-<p>Knowing how our health and care data will be used by policy-makers is critical in designing compelling clinical information systems, but we need operational, day-to-day clinical data to solve <em>multiple purposes</em> - direct care, management / policy and research.</p>
-
-<h1 id="data-entry-weve-got-things-backwards">Data-entry; we’ve got things backwards!</h1>
-
-<p>Unfortunately, to meet the demands of central data reporting, it is commonly the case, even in 2020, that data-entry, whether for cancer or for conditions such as stroke, is done after-the-event by someone whose job it is to collect the data and complete the returns. It’s retrospective, labour-intensive and error prone. It’s often the same for research; a separate methodology rather than a difference of acuity.</p>
-
-<p>Sadly, the data is not entered as a function of the process of care.</p>
-
-<p>But it should be clear from the reporting requirements that most of the required information can and should actually be sourced from operational systems, if only one could build adaptable systems that prioritise meaningful data and can be stitched together and used as a source of meaningful information from which the right information can be plucked in order to make decisions.</p>
-
-<p>So how can we make data a function of the process of care?</p>
-
-<h1 id="funnels-the-opportunity-of-decision-points">Funnels: the opportunity of decision-points</h1>
-
-<p>For example, the multi-disciplinary team (MDT) meeting is an opportunity for the aggregation, validation and input of decision-critical information. It’s easy to see the MDT as a funnel, and this doesn’t only apply to cancer, but any complex decision making such as epilepsy surgery or neurovascular disease in which multiple facets of information need to be understood by a multi-disciplinary team.</p>
-
-<p><img src="/images/info-in-action-out.png" alt="Info In Action Out" /></p>
-
-<p>Indeed, the MDT is a microcosm of all clinical encounters, even when there’s only one professional involved. The funnel model is applicable to all clinical encounters.</p>
-
-<p>Each clinical encounter is an opportunity to bring together disparate information, synthesise, formulate and plan. We need to not only capture that process but build technology that can make it as effective as possible. That means supporting both ends of the funnel - making the right information at the right time and supporting clinical synthesis and the ongoing orchestration and coordination of clinical care.</p>
-
-<h1 id="on-data-and-decisions">On data and decisions</h1>
-
-<p>The problem with data in health and care is that there is no such thing as a single source of truth.</p>
-
-<p>This manifests even for what might be perceived as simple such as a patient’s address. Is that address the address for correspondence, the address of the parent, the term-time address or the address from which the patient moved from last year?</p>
-
-<p>It’s even more difficult for clinical data. Terms such as ‘diagnosis’ might not sound difficult but are fundamentally defined by <em>context</em>. A diagnosis of angina made by me is very different to that made by a cardiologist! Even our diagnostic tests are imperfect measures of the ‘truth’ with false positives and false negatives and repeated tests that give different results.</p>
-
-<p>Even the diagnostic process isn’t what might be imagined. We don’t record what we find and then work out the most likely diagnosis. We do it in reverse! The diagnosis informs what information we collect and how we examine! It’s iterative and internally correlated.</p>
-
-<p>Even prescribing information is imperfect. Did the patient actually take that drug at all? Sometimes not at all.</p>
-
-<p>And look at how much information we might have. Is that step-count data, or home blood pressure monitoring data useful for informing our decisions? What tools do we have to make sense of burgeoning information from multiple sources? We can be overwhelmed with too much information.</p>
-
-<p>It’s much better to see clinical data for what it is and use it appropriately - we’re looking at the truth through the corner of our eyes, our data an imperfect imprint of the truth. We’re creating <em>models</em>.</p>
-
-<p>Ultimately, there’s uncertainty surrounding all of our decisions, and our data can help to reduce that uncertainty. Usually that’s by bringing different sources of information together.</p>
-
-<h1 id="information-at-the-right-time">Information at the right time</h1>
-
-<p>So we need software and systems driven by <em>data</em>.</p>
-
-<p>That means a digital health and care patient record is much more that a flat list of documents with little or no accurate metadata.</p>
-
-<p>But we shouldn’t ignore documents either. They have some important positive characteristics:</p>
-
-<ul>
-  <li>They can and should carry their own context; they can (usually) be read standalone</li>
-  <li>They reflect a snapshot of ‘state’ and thinking at a time-point</li>
-  <li>They are immutable, so don’t change after the event - if a change is needed a new document should be issued.</li>
-  <li>They support processes of care - because while they also a type of record, they <em>move around</em> and so can be used to activate different workflows.</li>
-</ul>
-
-<p>The fact that documents <em>move around</em> is really important. They are a driver of much <em>tacit</em> process and workflow. We have many unstated assumptions in health and care and one of our jobs is to understand their existence and their importance.</p>
-
-<p>It’s better to see documents are the artefacts of care. Just like data for central reporting, we have things back to front and should be generating our documents and cascading workflow from our processes of care, and not the other way around.</p>
-
-<p>The medical record isn’t a simple record of what happened but a tool that helps us formulate, plan, communicate and deliver care. It’s a tool. “You’re a victim of it or a triumph because of it. The human mind simply cannot carry all the information without error so the record becomes part of your practice” (Larry Weed, 1971 - see <a href="https://wardle.org/cis-design/2017/05/01/medical-record.html">https://wardle.org/cis-design/2017/05/01/medical-record.html</a>)</p>
-
-<h1 id="effective-software-development">Effective software development</h1>
-
-<p>The breast cancer data collection requirements potentially teach us a lot; the essence of those requirements has broad applicability to other diseases, whether cancer or not.</p>
-
-<p>It’s so important to have a strong vision for how we want the future to look, and how we want to enable data to drive patient care, service improvement and research, but there’s a paradox in technology, in that the best way to deliver technology is to break apart the big problems that you’re trying to solve and then <em>compose</em> the solutions together again. We have to think big but work small and iterate.</p>
-
-<p>Composability is fundamental to the next generation of electronic health and record systems.</p>
-
-<p>And we also need to be sufficiently confident in our understanding of technology that we call out the hubris when someone provides an 18-month plan for how to deliver intangible benefits. We have to be able to stand up and say that this bit is a hard problem and we’ll need to explore different ways of solving that, and understand that we will fail.</p>
-
-<p>Paradoxically, working incrementally in the small is less risky than following an 18-month plan. Planning is good, but our plans will change and adapt as we learn.</p>
-
-<p>It’s seductive to think otherwise, and pretty difficult to sell “we don’t know” as a tagline. Perhaps you don’t get appointed to a job if you say we “don’t have all of the answers”.</p>
-
-<p>Of course, there’s a lot we do know, and one size doesn’t fit all in technology, whether we’re talking about approach, standards, ‘buy vs build’ (should we buy the solution to this problem off the shelf or build it ourselves?) or any other facet of ‘digital’, and so we need to see the fracture lines and break-apart our problem domain and get on with delivering appropriate solutions or starting the graft of learning how to solve problems in that domain.</p>
-
-<p>We need to be <em>agile</em>.</p>
-
-<h1 id="deliver-better-and-faster-by-doing-things-right">Deliver better and faster by doing things right</h1>
-
-<p>We can speed up delivery of valuable digital tools and technology by adopting the right approach. We should stack the odds of being successful in our favour. There are many examples where will fail to do this.</p>
-
-<p>So let’s return to breast cancer. What can we learn from this?</p>
-
-<ol>
-  <li>Central reporting helps us understand what is important from policy-makers.</li>
-  <li>Data should be sourced from results of the processes of care.</li>
-  <li>Operational systems should focus on <em>meaningful data</em></li>
-  <li>We need to adopt a modular, de-coupled and agile approach to health and care software and data.</li>
-</ol>
-
-<p>It’s not difficult to see the sources of information that we need for breast cancer reporting - demographic data links a patient with different identifiers across organisations, appointments and scheduling provides a virtual scaffold for the ‘when’ and ‘how’ things have happened via different pathways, laboratory and radiology data brought together help understand the pathology and its extent (staging), and finally, at MDT, we need tools to validate and refine those ‘inputs’, record the decision-making and plan the next steps in care.</p>
-
-<p>In fact, those requirements for breast cancer are not much different for any other illness either.</p>
-
-<p>And that tells us what we need to be building for the next generation of electronic health and care record systems.</p>
-
-<p>And how can we deliver a compelling and credible plan to build that technology that will underpin our ambitions for health and care in Wales?</p>
-
-<p>National governance arrangements and technical architecture need to ensure that we reduce the need for constant coordination between different groups.</p>
-
-<p>We’ve failed if we need everyone ‘in the room’!</p>
-
-<p>We need to instead:</p>
-
-<ul>
-  <li>decouple and modularise, to permit parallel independent working at pace</li>
-  <li>use open technical standards to define the interfaces between modules</li>
-  <li>avoid single repositories and instead use shared vocabularies</li>
-  <li>develop an unremitting focus on <em>data</em>.</li>
-  <li>foster greater use of off-the-shelf cloud providers and move to <em>abstract</em> our infrastructure</li>
-  <li>define clear lines of responsibility for different services, and include performance  and reliability metrics.</li>
-</ul>
-
-<p><em>Mark</em></p>]]></content><author><name></name></author><category term="strategy" /><summary type="html"><![CDATA[In most health and care economies, it’s really important to be able to feed back data in order to inform and assess policy as part of central reporting.]]></summary></entry></feed>
+<p><em>Mark</em></p>]]></content><author><name></name></author><category term="strategy" /><summary type="html"><![CDATA[I built an electronic patient record and it’s been quite successful. It’s taught me a great deal about how to recognise how to modularise and decouple different data and software components. It’s been running since 2009 and is in live use.]]></summary></entry></feed>
