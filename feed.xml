@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2023-09-27T20:26:08+01:00</updated><id>https://www.wardle.org/feed.xml</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2023-09-28T06:30:37+01:00</updated><id>https://www.wardle.org/feed.xml</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist, clinical informatics and software developer. Founder, Eldrix Ltd.
 </subtitle><entry><title type="html">Unbundling the electronic health record</title><link href="https://www.wardle.org/strategy/2022/12/02/functional-health-records.html" rel="alternate" type="text/html" title="Unbundling the electronic health record" /><published>2022-12-02T14:14:14+00:00</published><updated>2022-12-02T14:14:14+00:00</updated><id>https://www.wardle.org/strategy/2022/12/02/functional-health-records</id><content type="html" xml:base="https://www.wardle.org/strategy/2022/12/02/functional-health-records.html"><![CDATA[<p>This is a <a href="https://youtu.be/2HQSAtmVbAU?si=97TfdaCc1Wwbq6Dk">talk I gave at the re-Clojure 22 technology conference in December 2022</a>:</p>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2HQSAtmVbAU?si=NWX55fL27rvi5HdD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
@@ -19,7 +19,7 @@ professionals.</p>
 
 <h2 id="traditional-ehr-vs-inside-out-thinking">Traditional EHR vs inside-out thinking</h2>
 
-<p><img src="/images/unbundling/unbundling.001.png" alt="title" /></p>
+<p><img src="/images/unbundling/unbundling.002.png" alt="unbundling" /></p>
 
 <p>To begin, let’s understand the traditional or conventional Electronic Health Record (EHR). Typically, an EHR is
 considered an application or system that healthcare providers purchase, deploy, and often integrate with other systems.
