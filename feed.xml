@@ -1,5 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2023-09-28T20:36:56+01:00</updated><id>https://www.wardle.org/feed.xml</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist and Chief Clinical Information Officer (CCIO)
-</subtitle><entry><title type="html">Codelists</title><link href="https://www.wardle.org/strategy/2023/09/28/codelists.html" rel="alternate" type="text/html" title="Codelists" /><published>2023-09-28T10:09:09+01:00</published><updated>2023-09-28T10:09:09+01:00</updated><id>https://www.wardle.org/strategy/2023/09/28/codelists</id><content type="html" xml:base="https://www.wardle.org/strategy/2023/09/28/codelists.html"><![CDATA[<blockquote>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2023-09-29T17:50:25+01:00</updated><id>https://www.wardle.org/feed.xml</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist and Chief Clinical Information Officer (CCIO)
+</subtitle><entry><title type="html">NHS number validation and synthetic generation</title><link href="https://www.wardle.org/open-source/2023/09/29/nhs-number.html" rel="alternate" type="text/html" title="NHS number validation and synthetic generation" /><published>2023-09-29T17:16:16+01:00</published><updated>2023-09-29T17:16:16+01:00</updated><id>https://www.wardle.org/open-source/2023/09/29/nhs-number</id><content type="html" xml:base="https://www.wardle.org/open-source/2023/09/29/nhs-number.html"><![CDATA[<p>I’m pleased to announce the release of <a href="https://github.com/wardle/nhs-number">nhs-number</a>.</p>
+
+<p>This is a very small open source library available for both server-side and client-side
+use. It is written in Clojure/Script and so can be used, for example, on the JVM (servers) 
+from Java or Clojure, or transpiled to JavaScript to be used in web browsers (clients).</p>
+
+<p>In many domains, software developers make use of a range of foundational data and software 
+services. They don’t need to re-invent the wheel; they’re focusing on getting to where they
+need to go.</p>
+
+<p>Things are so very different in healthcare.</p>
+
+<p>Not only do you have to overcome fundamental problems with the commercial market failure for 
+health and care software, byzantine procurement rules, as well as considering your information 
+governance and regulatory compliance obligations, you have very few libraries and frameworks 
+on which you can build your point of differentiation.</p>
+
+<p>Of course, we have access to general purpose libraries, such as supporting secure networking
+or encryption, or data storage. When we write software, whether for the web, or for iOS, or
+Android, or Windows, we think about making use of a general purpose computing platform. It
+is rare for us to build software without foundational core tools and services. Sometimes
+those platforms are open-source, and sometimes those are proprietary, but they are available
+and re-usable and composable so you can focus on the problems you are trying to solve.</p>
+
+<p>But there is a dearth of high quality, well tested and functional libraries in health and care.</p>
+
+<p><code class="language-plaintext highlighter-rouge">nhs-number</code> is a small library that:</p>
+
+<ul>
+  <li>is published under a permissive <a href="https://github.com/wardle/nhs-number/blob/main/LICENSE">open-source library</a> you can view and modify the source code</li>
+  <li>has <a href="https://github.com/wardle/nhs-number/blob/main/test/com/eldrix/nhsnumber_test.cljc">extensive tests</a>, in including the use of synthetic (generative) tests</li>
+  <li>has an <em>automated</em> continuous test/integration/deployment pipeline so that any modifications result in updated
+tests and automated reports - e.g., see <a href="https://github.com/wardle/nhs-number/actions/runs/5916417398/job/16043690629">this report</a></li>
+  <li>reports on <a href="https://app.codecov.io/gh/wardle/nhs-number">test coverage</a> automatically</li>
+</ul>
+
+<p>I already use it server-side for validation of data consumed from other services, and client-side to check user input is valid.
+I also use it to generate synthetic data for automated tests in other systems.</p>
+
+<p><em>Mark</em></p>]]></content><author><name></name></author><category term="open-source" /><summary type="html"><![CDATA[I’m pleased to announce the release of nhs-number.]]></summary></entry><entry><title type="html">Codelists</title><link href="https://www.wardle.org/strategy/2023/09/28/codelists.html" rel="alternate" type="text/html" title="Codelists" /><published>2023-09-28T10:09:09+01:00</published><updated>2023-09-28T10:09:09+01:00</updated><id>https://www.wardle.org/strategy/2023/09/28/codelists</id><content type="html" xml:base="https://www.wardle.org/strategy/2023/09/28/codelists.html"><![CDATA[<blockquote>
   <p>If a patient has a type of motor neurone disease, then…</p>
 </blockquote>
 
@@ -1659,101 +1698,4 @@ a single record.</p>
 
 <p>Its mission cannot simply be “driving change” in the health service - there’s plenty of evidence that health boards are desperate to improve services using digital technology - it must be focusing on the work that can and should be shared across health and care in Wales - and working to <em>enable</em> change by the provision of a suite of <em>open</em> data and computing services.</p>
 
-<p><em>Mark</em></p>]]></content><author><name></name></author><category term="patientcare" /><summary type="html"><![CDATA[So I built an electronic patient record system that’s been running since 2007. It was, as far as I am aware, the first implementation of SNOMED CT in a live clinical system. Most users have never known that SNOMED is its lingua franca, and most think it is a bespoke ‘database’ for their use, because I built multiple subject and specialty-specific “prisms” through which to see, what is essentially, a single record.]]></summary></entry><entry><title type="html">Building a ‘neuro-rehabilitation database’</title><link href="https://www.wardle.org/strategy/2020/07/31/solving-problems-by-composition.html" rel="alternate" type="text/html" title="Building a ‘neuro-rehabilitation database’" /><published>2020-07-31T16:15:15+01:00</published><updated>2020-07-31T16:15:15+01:00</updated><id>https://www.wardle.org/strategy/2020/07/31/solving-problems-by-composition</id><content type="html" xml:base="https://www.wardle.org/strategy/2020/07/31/solving-problems-by-composition.html"><![CDATA[<p>I built an electronic patient record and it’s been quite successful. It’s taught me a great deal about how to recognise how to modularise and decouple different data and software components. It’s been running since 2009 and is in live use.</p>
-
-<p>It’s a large project, and I can’t conceive of everything in one go, so even though I’m the only developer, adopting an architecture that enables modularity, adaptability and flexibility is important.</p>
-
-<p>One important aspect of my work is being able to compose individual building blocks together to solve problems, and to do that in a declarative, rules-based way. This means I can build solutions have them deployed and working in live clinical environments in less than a day.</p>
-
-<p>Most users think that the software is designed for them, and in a way it is. People refer to it as the “MS database” or the “referrals database” or the “Parkinson’s database” or the “MND database” but each is simply a prism through which to view a single digital patient record.</p>
-
-<p>To illustrate the point, it’s quite easy to see the common foundational services:</p>
-
-<ul>
-  <li>Patient identity - lookup arbitrary identifiers such as any Welsh hospital identifier or NHS number or search (Google-like) by name</li>
-  <li>Staff identity and authentication - including lookup and email via the NHS Wales active directory service</li>
-  <li>Finely-grained access control by the runtime registration of both patients and users to clinical services, teams and research projects</li>
-  <li>Tracking episodes of care and configurable encounters and data-collection forms.</li>
-  <li>Clinical terminology, value set management and organisational data services</li>
-  <li>Document creation and publication services, to create documents from data and publish those in local and national document management services such as Cardiff clinical portal and Welsh Clinical Portal.</li>
-</ul>
-
-<p>With these building blocks, let’s build a neuro-rehabilitation database. I’m going to live blog this work.</p>
-
-<h1 id="neuro-rehabilitation">Neuro-rehabilitation</h1>
-
-<p>When I designed the system, I recognised I’d need to make it easy to change the things that would change. Registering a new logical service or research project had to be easy and involve no software code. In fact, I wanted to ensure that I could configure lots of things at runtime, and I made SNOMED CT the lingua franca. If I need to write code, I wanted to make it as modular as possible and ensure that first changes didn’t affect what was already working and second, that I didn’t have to make changes anywhere else.</p>
-
-<p>The neuro-rehabilitation team wanted to track a cohort of patients and make assessments about their rehabilitation need.</p>
-
-<p>So I can create a new service using my administration portal:</p>
-
-<p><img src="/images/neurorehab/create-project.png" alt="Create Project" /></p>
-
-<p>I can configure a project either as a clinical service or a research project. These have different semantics but all are organised in a hierarchical fashion so that properties are inherited from parent projects, and that users and patients are linked to services and projects via registration or episodes of care, and that means when you as a user search for John Smith, you’ll only get patients known to one of your registered services.</p>
-
-<p><img src="/images/neurorehab/no-permission.png" alt="No Permission" /></p>
-
-<p>For a service or project, I can configure common SNOMED concepts so that drop-downs and picklists and autocompletion boxes get configured based on who you are and who you are seeing. This means users feel as if the system is designed for them, even if really it’s just simple configuration. I configure the specialty using SNOMED-CT.</p>
-
-<p><img src="/images/neurorehab/choose-common-concepts.png" alt="Choose Common Concepts" /></p>
-
-<p>I wanted users to be able to manage their own services, so all projects have per-project security permissions. This means I don’t need to be involved in registering users, and all “power users” need to do is type in a username and the software fetches their details from the national directory.</p>
-
-<p><img src="/images/neurorehab/choose-users.png" alt="Choose Users" /></p>
-
-<p>Each service can have different types of encounter. This is usually dependent on the service or project at hand, so is very customisable. Here I’ve simply created three for now, ‘correspondence’, ‘inpatient review’, and ‘telephone call’.</p>
-
-<p><img src="/images/neurorehab/configure-encounters.png" alt="Configure Encounters" /></p>
-
-<p>And for each, I configure some common forms. Users can manually record others, but this streamlines the process for them. Each encounter can be associated with fetching lists from external systems such as PAS making it useful for clinics.</p>
-
-<p><img src="/images/neurorehab/configure-an-encounter.png" alt="Configure An Encounter" /></p>
-
-<p>Here I add a medication review (this used dm+d to record medications and changes to medications), a procedure form (useful for recording stuff done), a botulinum toxin form (a specialised procedure form), a MOCA (a cognitive test), and a rehabilitation assessment form.</p>
-
-<p><img src="/images/neurorehab/configure-forms.png" alt="Configure Forms" /></p>
-
-<p>Data collection forms are linked to encounters, which are linked to episodes, which are linked to patients. Each episode is linked to a project or service, and each project or service has a list of registered users. It’s quite straightforward to see how I implement finely-grained information governance using this model. Each user thinks the system is designed for them.</p>
-
-<p>Here’s the rehabilitation assessment form. Its contents are automatically populated from information already in the electronic record, but users can make changes and then save. Diagnoses are recorded using SNOMED CT so later we can stratify our patient group by category of injury for example.</p>
-
-<p><img src="/images/neurorehab/configure-rehab-form.png" alt="Configure Rehab Form" /></p>
-
-<p>We can add arbitrary validation so that we help users enter the right information:</p>
-
-<p><img src="/images/neurorehab/rehab-assessment-outcome.png" alt="Rehab Assessment Outcome" /></p>
-
-<p>We already have a “botulinum toxin database”, so I can simply re-use that form for this service. Some rehabilitation patients need injections of botulinum for spasticity or jaw problems.</p>
-
-<p><img src="/images/neurorehab/botulinum-toxin-form.png" alt="Botulinum Toxin Form" /></p>
-
-<p>All these data are coded using SNOMED CT, even when you’re simply clicking on a diagram.</p>
-
-<p>I have lots of pre-built forms and it can take between 5 minutes and an hour or so to build a new one, depending on complexity. So other modules don’t have to understand the data within each form, forms generate SNOMED CT artefacts that can be used to dynamically configure the user interface depending on need.</p>
-
-<p><img src="/images/neurorehab/list-forms.png" alt="List Forms" /></p>
-
-<p>Each project or service can send clinical documents to other document repositories. I configure a “report” using a PDF template that will watermark the generated document. The document is generated from data. It’s a shame but none of the receiving document repositories can yet understand the structured information encoded with these documents, but accept only a PDF and a small amount of non-standard metadata.</p>
-
-<p><img src="/images/neurorehab/configure-reports.png" alt="Configure Reports" /></p>
-
-<p>Once configured, users can create reports from their encounters.</p>
-
-<p><img src="/images/neurorehab/publish-report.png" alt="Publish Report" /></p>
-
-<h1 id="understanding-the-neuro-rehab-service">Understanding the neuro-rehab service</h1>
-
-<p>But now we have those data, we can slice and dice in order to help users understand their service.</p>
-
-<p>In neurorehabilitation, the team want to understand who is in their active cohort, and understand those patients who need further review, as well as identify those ready for transfer. I can configure a “home page” for each service to provide a flexible modular system to show the right information at the right time.</p>
-
-<p>This is what it looks like for neuro-rehabilitation:</p>
-
-<p><img src="/images/neurorehab/understand-and-improve-data.png" alt="Understand And Improve Data" /></p>
-
-<p>Not only do the team get to see who is in the cohort without a current assessment, but also stratify based on location and status, the screen updating as different criteria are chosen.  If the team want even greater flexibility, they can download a spreadsheet of data, by default with patient identifiable information removed.</p>
-
-<p>This took just about six hours to go from inception to deployment, mainly because I’m able to simply stitch together foundational components to solve specific problems.</p>
-
-<p><em>Mark</em></p>]]></content><author><name></name></author><category term="strategy" /><summary type="html"><![CDATA[I built an electronic patient record and it’s been quite successful. It’s taught me a great deal about how to recognise how to modularise and decouple different data and software components. It’s been running since 2009 and is in live use.]]></summary></entry></feed>
+<p><em>Mark</em></p>]]></content><author><name></name></author><category term="patientcare" /><summary type="html"><![CDATA[So I built an electronic patient record system that’s been running since 2007. It was, as far as I am aware, the first implementation of SNOMED CT in a live clinical system. Most users have never known that SNOMED is its lingua franca, and most think it is a bespoke ‘database’ for their use, because I built multiple subject and specialty-specific “prisms” through which to see, what is essentially, a single record.]]></summary></entry></feed>
