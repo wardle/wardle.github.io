@@ -1,5 +1,242 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2023-09-29T17:50:25+01:00</updated><id>https://www.wardle.org/feed.xml</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist and Chief Clinical Information Officer (CCIO)
-</subtitle><entry><title type="html">NHS number validation and synthetic generation</title><link href="https://www.wardle.org/open-source/2023/09/29/nhs-number.html" rel="alternate" type="text/html" title="NHS number validation and synthetic generation" /><published>2023-09-29T17:16:16+01:00</published><updated>2023-09-29T17:16:16+01:00</updated><id>https://www.wardle.org/open-source/2023/09/29/nhs-number</id><content type="html" xml:base="https://www.wardle.org/open-source/2023/09/29/nhs-number.html"><![CDATA[<p>I’m pleased to announce the release of <a href="https://github.com/wardle/nhs-number">nhs-number</a>.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2023-10-03T20:22:05+01:00</updated><id>https://www.wardle.org/feed.xml</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist and Chief Clinical Information Officer (CCIO)
+</subtitle><entry><title type="html">Pluripotent data: A data strategy in health and care</title><link href="https://www.wardle.org/strategy/2023/10/03/pluripotent-data.html" rel="alternate" type="text/html" title="Pluripotent data: A data strategy in health and care" /><published>2023-10-03T04:03:03+01:00</published><updated>2023-10-03T04:03:03+01:00</updated><id>https://www.wardle.org/strategy/2023/10/03/pluripotent-data</id><content type="html" xml:base="https://www.wardle.org/strategy/2023/10/03/pluripotent-data.html"><![CDATA[<p><img src="/images/pluripotent/pluripotent.001.png" alt="pluripotent.001.png" /></p>
+
+<h1 id="pluripotent-data">Pluripotent data</h1>
+
+<blockquote>
+  <p>Pluripotent: capable of giving rise to several different cell types.</p>
+</blockquote>
+
+<p>“Pluripotent” is a biological term applied to cells that are undifferentiated
+and are capable of differentiating into several different cell types, and 
+therefore satisfy a variety of demands</p>
+
+<p>Therefore, I propose the term ‘pluripotent data’ for use in healthcare.</p>
+
+<p>In essence, I use ‘pluripotent data’ as a way of describing the prioritisation 
+of data harmonisation and standardisation through common data models that may be
+used, directly or indirectly, for multiple purposes to meet a variety of demands.</p>
+
+<p><img src="/images/pluripotent/pluripotent-omop.png" alt="pluripotent-omop.png" /></p>
+
+<h1 id="principles-supporting-a-data-strategy">Principles supporting a data strategy</h1>
+
+<p>The key principles that should underpin a healthcare organisation’s data strategy are:</p>
+
+<ul>
+  <li>Vendor neutrality</li>
+  <li>Use of standards</li>
+  <li>Harmonisation, intermediary structures &amp; multi-purpose analytics; <em>pluripotent data</em></li>
+  <li>Specialty extensions, registries and research</li>
+  <li>Governance and transparency</li>
+  <li>Procurement, compliance and audit</li>
+  <li>Training and education</li>
+</ul>
+
+<h3 id="vendor-neutrality">Vendor-neutrality</h3>
+
+<p><img src="/images/pluripotent/pluripotent.003.png" alt="pluripotent.003.png" /></p>
+
+<p>The current situation is that healthcare data varies between organisations and across applications and depends on purpose. 
+Health and care data can be used for multiple purposes such as direct care, reporting, research, service management and quality improvement.</p>
+
+<p>In the main, the current fragmentation reflects organisational and governance structures - this is Conway’s Law in action.</p>
+
+<blockquote>
+  <p>“Any organisation that designs a system (defined broadly) will produce a design whose structure is a copy of the organization’s communication structure.”
+Mel Conway</p>
+</blockquote>
+
+<p>The consequence of this ‘Law’ if that if direct care, hospital administration, quality 
+improvement and research are separate in an organisation, or represented by different
+organisations, then the ‘systems’ developed will mirror the pattern.</p>
+
+<p>No wonder then that end-users feel such significant fragmentation. This is not a new issue.</p>
+
+<blockquote>
+  <p>The various clinical systems, many of them paper based, differed from one another and had no relationship with the administrative hospital-wide systems. The funding made available in the late 1980s and early 1990s for medical and later clinical audit helped to reinforce this separation by making available to groups of clinicians money for small local computer systems. The lack of any connection between these different systems, one administrative, the others clinical, for collecting data cannot be explained solely on the basis of some technical or technological reason. It was just as strongly a reflection of a mindset that clinical matters were the sole domain of clinicians and non-clinical matters, to do with the management of resources and with the movement of patients into and through the hospital, were the preserve of managers and administrators.</p>
+
+  <p>Bristol Heart Enquiry, 2001.
+See <a href="https://wardle.org/clinical-informatics/2017/06/06/using-data-patient-safety.html">Using data for patient safety</a></p>
+</blockquote>
+
+<blockquote>
+  <p>The key thing to remember about Conways Law is that the modular decomposition of a system and the decomposition of the development organization must be done together.</p>
+
+  <p>Martin Fowler <a href="https://martinfowler.com/bliki/ConwaysLaw.html">Conway’s Law</a></p>
+</blockquote>
+
+<p>The term ‘Inverse Conway Maneuvre’ (also known as ‘Reverse Conway Maneuvre’) was coined by Jonhy Leroy and Matt Simons (ThoughtWorks) in December 2010.</p>
+
+<blockquote>
+  <p>In what could be termed an “inverse Conway maneuver,” you may want to begin by breaking down silos that constrain the team’s ability to collaborate effectively.</p>
+
+  <p>Martin Fowler</p>
+</blockquote>
+
+<p>While there are valid criticisms of the ‘Inverse Conway Manoevre’ relating to organisational change, it can inform our
+approach to data and data flow.</p>
+
+<p>In essence, rather than framing data in terms of applications, we instead focus on data. Our data is therefore <em>vendor-neutral</em>.</p>
+
+<p>And an ‘Inverse Conway Manoevre’ looks to set up collaborative efforts than span organisational and domain boundaries
+so that we build a common data model that can, either directly or indirectly, be used for multiple purposes.</p>
+
+<p>In Wales, through the Welsh Technical Standards Board (which I chair) and Welsh Government, we have mandated HL7 FHIR as a foundational
+standard for operational clinical systems. This is an important step to build interoperability between different clinical
+systems and fosters the re-use and composition of data.</p>
+
+<p>However, HL7 FHIR does not solve <em>semantic interoperability</em> unless one builds in mechanisms to ensure that the information
+standards - the dictionaries encoding different types of information such as reference data like location, or staff member, 
+or patient, or value sets - are aligned.</p>
+
+<p>As such, we need to be explicit in mandating the <em>FAIR</em> principles, so that data are:</p>
+
+<ul>
+  <li>Findable (through metadata and linked data technologies)</li>
+  <li>Accessible</li>
+  <li>Interoperable (through standards and vocabularies and collaboration)</li>
+  <li>Re-usable (through provenance and standards)</li>
+</ul>
+
+<h2 id="data-harmonisation">Data harmonisation</h2>
+
+<p><img src="/images/pluripotent/pluripotent.004.png" alt="pluripotent.004.png" /></p>
+
+<p>There is sometimes a tension between what we think of as general purpose healthcare data and specific demands. 
+For example, we contribute to a national audit on stroke care, but because we have separate clinical and dministrative 
+systems and this national audit, we have to have dedicated members of staff keying in information from multiple sources
+manually in order to satisfy the specific demands of this (important and useful) national audit.</p>
+
+<p>Instead, we need a mechanism that provides a defined patient-centric common data model (CDM) that acts as a foundation
+that can be extended to suit multiple purposes. This means that, for example, two organisations can generate
+combined regional datasets simply by composing (merging) their data.</p>
+
+<p>This highlights two important requirements:</p>
+
+<ol>
+  <li>We need to think of our extract/transform/load (ETL) operations as first-class and important</li>
+  <li>We need to recognise the value of shared tools and knowledge in the process of data harmonisation across health and care.</li>
+</ol>
+
+<p>For example, Welsh Government are keen to modernise the dataset in relation to outpatients. Until COVID, an outpatient
+encounter was not counted unless the appointment was face-to-face, despite many clinical services offering telephone
+consultations for many years. In essence, they want greater detail on scheduled outpatient care and include information
+relating to procedures and problems/diagnoses.</p>
+
+<p><img src="/images/pluripotent/pluripotent.005.png" alt="pluripotent.005.png" /></p>
+
+<p>The problem is that, at the time of writing, they cannot cope with such information encoded using SNOMED CT and instead
+want categorical data - “just one of the top five categories”. This is fine for central reporting, but the team 
+suggested a clinical-facing application that would capture those categories at the point of care.</p>
+
+<p>This is quite wrong.</p>
+
+<p>Do we accept that demands for central data reporting define our clinical systems?</p>
+
+<p>Certainly not.</p>
+
+<p>So we must instead recognise the importance of our <em>data infrastructure</em> and ability to map, process and convert
+structured meaningful data for a variety of different purposes.</p>
+
+<p>It also emphasises how important it is that such decisions are made by people with required technical knowledge: we need
+to also consider the digital and data capabilities of our health and care workforce.</p>
+
+<h1 id="using-intermediary-pluripotent-data-representations">Using intermediary ‘pluripotent’ data representations</h1>
+
+<p><img src="/images/pluripotent/pluripotent.006.png" alt="pluripotent.006.png" /></p>
+
+<p>In this diagram we have multiple operational clinical systems and a variety
+of methods of extract and transform to our intermediary patient-centric 
+data representation. The OMOP CDM is a good example of such a representation,
+potentially being useful for solving multiple demands, and sufficient flexibility
+to be specialised easily.</p>
+
+<p>From such a CDM, we can subsequently build further data pipelines permitting
+more bespoke ‘rectangular’ projections of our granular and complex health data
+suitable for reporting requirements or demands of centralised registries.</p>
+
+<p>In this, we gain multiple perspectives, or prisms, on the same common data models.</p>
+
+<p>You can read more about OMOP and their common data model <a href="https://www.ohdsi.org/data-standardization/#:~:text=The%20Observational%20Medical%20Outcomes%20Partnership,that%20can%20produce%20reliable%20evidence">here</a>.</p>
+
+<h1 id="requirements">Requirements</h1>
+
+<p><img src="/images/pluripotent/pluripotent.007.png" alt="pluripotent.007.png" /></p>
+
+<p>A data strategy with common data models at its heart has important technical, organisational
+and cultural requirements:</p>
+
+<ul>
+  <li>Strong internal governance
+    <ul>
+      <li>Registration and monitoring of data flows (information governance, feral apps, o365)</li>
+      <li>Standardisation of data across uses</li>
+      <li>Harmonisation</li>
+      <li>Understand common foundations</li>
+      <li>Maintenance and publication of common data model</li>
+      <li>Dependent on appropriate governance e.g., local clinical and technical design authorities (and their links with others)</li>
+    </ul>
+  </li>
+  <li>Standardised vocabularies
+    <ul>
+      <li>Essential for semantic interoperability</li>
+      <li>Match to regional, national and international standards</li>
+      <li>First-class mapping and transformation</li>
+      <li>To satisfy myriad potential requirements - operational clinical systems, analytics, reporting and research</li>
+    </ul>
+  </li>
+  <li>Openness and transparency
+    <ul>
+      <li>Radical transparency and visibility; working in the open</li>
+      <li>Publication of standards used, for all purposes. Openly available and managed and updated</li>
+      <li>Versioning and registration of use</li>
+      <li>Avoid breaking changes; additive change: <em>you don’t care if your delivery truck bringing your parcel also has other parcels on it</em>.</li>
+    </ul>
+  </li>
+  <li>Coordination with partners (e.g. WG/HBs/DHCW)
+    <ul>
+      <li>We must work across region, across Wales and across UK</li>
+      <li>Our collaborative efforts must be prioritised and supported</li>
+      <li>Some of what we need can and should be delivered by our partners</li>
+    </ul>
+  </li>
+  <li>Investment in our data fabric
+    <ul>
+      <li>Raise the visibility of our data infrastructure</li>
+      <li>Balance short-term delivery goals with longer-term standardisation, harmonisation and documentation</li>
+      <li>Avoiding technical debt and ‘big ball of mud’ architectures; Infrastructure on demand and as infrastructure as code. Declarative.</li>
+      <li>Focus on interoperability, principled approach based on re-use, understand commonalities/foundational data structures</li>
+    </ul>
+  </li>
+  <li>Re-usable tools
+    <ul>
+      <li>Investment in tooling, and pipelines, that are ‘invisible’ and yet vital. “Our plumbing”</li>
+      <li>Investment in our ability to extract, transform and load data; “internal interoperability”</li>
+      <li>Could and should be shared across Wales</li>
+      <li>Open standards, and open-source at foundations</li>
+    </ul>
+  </li>
+  <li>Education and training
+    <ul>
+      <li>Health <em>and</em> social care</li>
+      <li>Regional partnerships</li>
+      <li>Inculcate art-of-the-possible, data skills, across organisations</li>
+      <li>Workshops, investment in training, workforce and digital skills, peer support</li>
+    </ul>
+  </li>
+</ul>
+
+<p>There are common themes across these requirements mainly in relation to prioritising, investing in, collaborating and governing 
+in relation to data.</p>
+
+<p>I’d be interested in your feedback. What else have I missed? What should be in the data strategy for
+Cardiff and Vale University Health Board, or for any healthcare organisation for that matter?</p>
+
+<p>Working in the open is important. Let me hear your views. Email, or raise an
+issue on <a href="https://github.com/cavdigital/digitalstrategy2023/issues">https://github.com/cavdigital/digitalstrategy2023/issues</a>.</p>
+
+<p>Mark</p>]]></content><author><name></name></author><category term="strategy" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">NHS number validation and synthetic generation</title><link href="https://www.wardle.org/open-source/2023/09/29/nhs-number.html" rel="alternate" type="text/html" title="NHS number validation and synthetic generation" /><published>2023-09-29T17:16:16+01:00</published><updated>2023-09-29T17:16:16+01:00</updated><id>https://www.wardle.org/open-source/2023/09/29/nhs-number</id><content type="html" xml:base="https://www.wardle.org/open-source/2023/09/29/nhs-number.html"><![CDATA[<p>I’m pleased to announce the release of <a href="https://github.com/wardle/nhs-number">nhs-number</a>.</p>
 
 <p>This is a very small open source library available for both server-side and client-side
 use. It is written in Clojure/Script and so can be used, for example, on the JVM (servers) 
@@ -1668,34 +1905,4 @@ or “actions” than the data models I subsequently use in order to make sense 
 <blockquote>
 
   <p>This post was originally written in November 2019.</p>
-</blockquote>]]></content><author><name></name></author><category term="ehr" /><summary type="html"><![CDATA[I built an electronic health record and along the way learnt a lot about how to think about the importance of medical records and data in my day-to-day work as a practising clinician, manager and researcher.]]></summary></entry><entry><title type="html">Decomposing the electronic health and care record</title><link href="https://www.wardle.org/patientcare/2021/03/28/next-steps-epr.html" rel="alternate" type="text/html" title="Decomposing the electronic health and care record" /><published>2021-03-28T10:09:09+01:00</published><updated>2021-03-28T10:09:09+01:00</updated><id>https://www.wardle.org/patientcare/2021/03/28/next-steps-epr</id><content type="html" xml:base="https://www.wardle.org/patientcare/2021/03/28/next-steps-epr.html"><![CDATA[<p>So I built an electronic patient record system that’s been running since 2007. It was, as far as I am aware, the first implementation of SNOMED CT in a live clinical system. Most users have never known that SNOMED is its <em>lingua franca</em>, and most think it is a bespoke ‘database’ for their use, because
-I built multiple subject and specialty-specific “prisms” through which to see, what is essentially,
-a single record.</p>
-
-<p>There is no better iterative fast feedback loop than being a user as well as a developer. It is difficult to know what works and what doesn’t work without an exploratory phase of design and implementation.</p>
-
-<p>That software now supports the care of thousands of patients across Wales, over 126000 lines of code and on today’s estimates would cost $6 million to develop.</p>
-
-<p>But as with any large software application, it’s starting to become more difficult to make changes. Early design decisions accelerated progress but are unduly limiting now. Early assumptions about how and where the application might be used are now proven wrong.</p>
-
-<p>Such issues are common in all software projects.</p>
-
-<p>In NHS Wales, we have made amazing progress on some core national services solving difficult problems; we now have services for shared clinical documents, investigation results such as laboratory and radiology as well as a national staff directory and an enterprise master patient index providing a single cross-organisation view of patient identity.</p>
-
-<p>But the clinical application that staff use to access data in those services - Welsh Clinical Portal - will never be an electronic patient record. Early design decisions have bound it tightly to the local patient administrative system in each organisation and tight-coupling means that changes are difficult to make, and some health boards have requests for change that have waited years to be implemented.</p>
-
-<p>It is time we modernised the way we think about and develop health and care technology.</p>
-
-<p>One of the most effective ways of doing that is to recognise the benefits of modularisation, in which we break apart the problems we face to make them easier to solve and recompose those modules in interesting ways in order to solve problems for professionals and patients.</p>
-
-<p>Understanding how and when to modularise requires significant technical and domain knowledge taking into account existing legacy services and the commercial market. We can use open technical standards to decouple those components. This is one way that we can pay down some of the technical debt built up over years.</p>
-
-<p>The NHS Wales Informatics Service is being transformed into a new statutory body on 1st April 2021.</p>
-
-<p>Now is the ideal opportunity for it to become the digital platform on which we build a seamless, effective and safe health and care service for Wales.</p>
-
-<p>It can and should be a provider of national shared services - much like Amazon has “Amazon Web Services” - with small, long-lived teams of experts providing a range of data and software services as well as support for provider organisations to make use of those services to improve their services.</p>
-
-<p>Its mission cannot simply be “driving change” in the health service - there’s plenty of evidence that health boards are desperate to improve services using digital technology - it must be focusing on the work that can and should be shared across health and care in Wales - and working to <em>enable</em> change by the provision of a suite of <em>open</em> data and computing services.</p>
-
-<p><em>Mark</em></p>]]></content><author><name></name></author><category term="patientcare" /><summary type="html"><![CDATA[So I built an electronic patient record system that’s been running since 2007. It was, as far as I am aware, the first implementation of SNOMED CT in a live clinical system. Most users have never known that SNOMED is its lingua franca, and most think it is a bespoke ‘database’ for their use, because I built multiple subject and specialty-specific “prisms” through which to see, what is essentially, a single record.]]></summary></entry></feed>
+</blockquote>]]></content><author><name></name></author><category term="ehr" /><summary type="html"><![CDATA[I built an electronic health record and along the way learnt a lot about how to think about the importance of medical records and data in my day-to-day work as a practising clinician, manager and researcher.]]></summary></entry></feed>
