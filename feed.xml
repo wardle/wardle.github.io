@@ -1,5 +1,66 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2023-10-03T20:29:36+01:00</updated><id>https://www.wardle.org/feed.xml</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist and Chief Clinical Information Officer (CCIO)
-</subtitle><entry><title type="html">Pluripotent data: A data strategy in health and care</title><link href="https://www.wardle.org/strategy/2023/10/03/pluripotent-data.html" rel="alternate" type="text/html" title="Pluripotent data: A data strategy in health and care" /><published>2023-10-03T04:03:03+01:00</published><updated>2023-10-03T04:03:03+01:00</updated><id>https://www.wardle.org/strategy/2023/10/03/pluripotent-data</id><content type="html" xml:base="https://www.wardle.org/strategy/2023/10/03/pluripotent-data.html"><![CDATA[<p><img src="/images/pluripotent/pluripotent.001.png" alt="pluripotent.001.png" /></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2023-10-19T22:09:30+01:00</updated><id>https://www.wardle.org/feed.xml</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist and Chief Clinical Information Officer (CCIO)
+</subtitle><entry><title type="html">NHS data: we have a problem</title><link href="https://www.wardle.org/strategy/2023/10/19/nhs-data.html" rel="alternate" type="text/html" title="NHS data: we have a problem" /><published>2023-10-19T20:19:19+01:00</published><updated>2023-10-19T20:19:19+01:00</updated><id>https://www.wardle.org/strategy/2023/10/19/nhs-data</id><content type="html" xml:base="https://www.wardle.org/strategy/2023/10/19/nhs-data.html"><![CDATA[<p>If you’re in clinical informatics, you can learn a lot from the COVID-19 pandemic.</p>
+
+<p>When we needed to send out shielding letters to our patients with motor neurone disease,
+I ran a report against our neurology electronic patient record, obtaining the
+names and addresses of all of our patients with motor neurone disease in South Wales. 
+In generating  that report, each patient’s vital status was automatically checked with multiple 
+authoritative sources of information, to ensure correct address information and
+to ensure we would not send a letter to a patient who was deceased.</p>
+
+<p>This was straightforward because a) we had coded diagnostic information and b)
+we had a sensible and flexible information architecture that minimised manual
+effort. It took me about 10 minutes.</p>
+
+<p>When we needed to send out shielding letters to patients with multiple sclerosis
+but only those on certain categories of disease modifying drugs, then I ran a
+report against our neurology electronic patient record as above, but simply 
+added a cross-reference to the active medications we had recorded.</p>
+
+<p>This was also straightforward because a) we had already coded both diagnostic
+and treatment information for our entire cohort, and b) we had a sensible and 
+flexible information architecture.</p>
+
+<p>For both, the use of standards such as SNOMED CT and dm+d was critical in 
+creating meaningful data that could be used for a variety of purposes, such as
+direct care, service management, and research.</p>
+
+<p>When patients receive botulinum toxin in our clinics, we record using our
+electronic patient record. A document is sent into multiple portals and the 
+structured information behind that document is stored, so that we know exactly
+what brand, dose and even where has been injected, all using SNOMED CT.</p>
+
+<p>The document is useful, but the document is simply a side-effect of the data.</p>
+
+<h1 id="so-what-about-nhs-wales">So what about NHS Wales?</h1>
+
+<p>But in the wider NHS Wales, there were significant data problems, not least
+errors in getting the correct address for patients.</p>
+
+<p><img src="/images/pulse-wrong-shielding-letters.png" alt="pulse-wrong-shielding-letters.png" /></p>
+
+<p>And our national ‘portal’, the ‘Welsh Clinical Portal’ is little more than a
+document and results archive. Many aspects are good, such as being able to see
+letters and laboratory and radiology results from across Wales, but we should
+have much greater ambitions. This is software that has been in development for many
+years and yet is a long way from being an electronic patient record.</p>
+
+<p>It’s time for a reset.</p>
+
+<p>NHS Wales needs to become data-driven.</p>
+
+<p>We need to be able to focus our limited resources and manage the backlog of 
+patients waiting by the sensible and considered use of clinical data in order to 
+prioritise, minimise harm and improve outcomes. We need greater user-centred
+design, and clinical leadership, not ‘engagement’ as the last part of a development 
+process in which the first time we see a new design it is about to be launched.</p>
+
+<p>The Welsh Audit Office (WAO) highlighted a “lack of independent scrutiny” and
+“unbalanced reporting of progress”. We as an informatics community should be 
+much more open and transparent on the challenges we face, and turn our expertise
+to meeting those challenges.</p>
+
+<p>Mark</p>]]></content><author><name></name></author><category term="strategy" /><summary type="html"><![CDATA[If you’re in clinical informatics, you can learn a lot from the COVID-19 pandemic.]]></summary></entry><entry><title type="html">Pluripotent data: A data strategy in health and care</title><link href="https://www.wardle.org/strategy/2023/10/03/pluripotent-data.html" rel="alternate" type="text/html" title="Pluripotent data: A data strategy in health and care" /><published>2023-10-03T04:03:03+01:00</published><updated>2023-10-03T04:03:03+01:00</updated><id>https://www.wardle.org/strategy/2023/10/03/pluripotent-data</id><content type="html" xml:base="https://www.wardle.org/strategy/2023/10/03/pluripotent-data.html"><![CDATA[<p><img src="/images/pluripotent/pluripotent.001.png" alt="pluripotent.001.png" /></p>
 
 <h1 id="pluripotent-data">Pluripotent data</h1>
 
@@ -1836,73 +1897,4 @@ or “actions” than the data models I subsequently use in order to make sense 
 
 <p><em>Mark</em></p>
 
-<hr />]]></content><author><name></name></author><category term="ehr" /><summary type="html"><![CDATA[The HL7 FHIR standard provides a useful model of health and care information, but it is a specification from which a local standard can be built via profiling. It defines models of data and a specification for how to exchange those data via an architectural pattern called representational state transfer (REST). While there are other ways that data in HL7 FHIR can be exchanged, using REST as an architectural pattern means that software using HL7 FHIR for data exchange will read and write to resources that represent something in the health and care domain.]]></summary></entry><entry><title type="html">The dependencies between architecture, governance and standards.</title><link href="https://www.wardle.org/ehr/2021/06/30/dependency-conway.html" rel="alternate" type="text/html" title="The dependencies between architecture, governance and standards." /><published>2021-06-30T07:07:08+01:00</published><updated>2021-06-30T07:07:08+01:00</updated><id>https://www.wardle.org/ehr/2021/06/30/dependency-conway</id><content type="html" xml:base="https://www.wardle.org/ehr/2021/06/30/dependency-conway.html"><![CDATA[<p>I <a href="/ehr/2019/11/08/learning-from-creating-an-ehr.html">built an electronic health record and along the way learnt a lot</a> about how to think about the importance of medical records and <em>data</em> in my day-to-day work as a practising clinician, manager and researcher.</p>
-
-<p>At the end of that talk (and post), I touched on the importance of building <em>capability</em> : in data and the software that use those data - to deliver the outcomes we want in health and care. But what does that mean? What are the capabilities that we need to build, specifically?</p>
-
-<p>I would argue:</p>
-
-<ul>
-  <li>our capabilities to record, view, manipulate and infer from <em>meaningful data</em> - for direct care, for managing our services and for research.</li>
-</ul>
-
-<p>depend upon</p>
-
-<ul>
-  <li>our capabilities to continually deliver safe, sustainable and secure software at pace.</li>
-</ul>
-
-<p>and we can look to the characteristics of the highest-performing technology teams to understand that these depend upon:</p>
-
-<ul>
-  <li>small, empowered, cross-functional (multi-disciplinary) teams</li>
-  <li>appropriate modularisation, with well-defined contractual (standards-based) interfaces between those modules</li>
-  <li>fast feedback via automated testing and telemetry, monitoring and logging</li>
-  <li>fast feedback from users with iterative, agile working</li>
-</ul>
-
-<p>and understand, therefore, there is:</p>
-
-<ul>
-  <li>mutual dependency between architecture, governance and standards</li>
-</ul>
-
-<p>because our capabilities are determined by our teams and how they can work effectively, and that means building an architecture that breaks down our problems into solvable chunks, making sure that governance is streamlined and effective so that there are clear lines of responsibility and defining the interactions between teams and the products for which they are responsible via open published standards as one part of the contractual obligations between those teams and products.</p>
-
-<h1 id="building-products-delivering-outcomes--choose-team-first-boundaries">Building products delivering outcomes : “Choose team-first boundaries”</h1>
-
-<p>Truly, our architecture and governance are mutually-dependent with <em>technical standards</em> as an integral part of the wider contracts between our modules and consequently, between our teams.</p>
-
-<p>It makes little sense to govern programmes of work without respecting architectural boundaries; indeed, I would argue that many of the issues facing health and care services in Wales are as a result of ignoring this issue - such as thinking that it is appropriate to govern projects relating to patients and their interactions with services separately to projects relating to professionals, when in fact both <em>programmes</em> of work share many core building blocks, such as citizen identity.</p>
-
-<p>So instead need to recognise the importance of constructing <em>empowered teams</em> to help us solve the problems we face and organise those teams into specific programmes of work.</p>
-
-<p>The mantra must surely be:</p>
-
-<blockquote>
-  <p>long-lived products within dynamic flexible programmes,</p>
-</blockquote>
-
-<blockquote>
-  <p>“Flow is difficult to achieve when each team depends on a complicated web of interactions with many other teams. For a fast flow of change to software systems, we need to remove hand-offs and align most teams to the main streams of change within the organization. However, many organizations experience huge problems with the responsibility boundaries assigned to teams. Typically, little thought is given to the viability of the boundaries for teams, resulting in a lack of ownership, disengagement, and a glacially slow rate of delivery.”</p>
-
-  <p>Skelton, Matthew. Team Topologies (Kindle Locations 2147-2151). IT Revolution Press. Kindle Edition.</p>
-</blockquote>
-
-<p>So how do we find the <em>fracture planes</em> within our truly complex and heterogeneous systems?</p>
-
-<blockquote>
-  <p>“A fracture plane is a natural seam in the software system that allows the system to be split easily into two or more parts. This splitting of software is particularly useful with monolithic software. The word monolith itself comes from Greek, meaning “single stone.” Traditional stonemasons hit stones at particular angles to split the rocks in clean segments, taking advantage of their natural fracture planes. We can look for similar fracture planes in software to find the natural split points that lead to software boundaries.”</p>
-
-  <p>Skelton, Matthew. Team Topologies (Kindle Locations 2226-2227). IT Revolution Press. Kindle Edition.</p>
-</blockquote>
-
-<p>Too often, software architecture and system design occurs as a consequence of organisational or management structures, rather than stepping back and truly understanding the problem domain and how to carve it up into manageable chunks. You need to understand Conway’s Law, and the reverse Conway’s manoevre - and place the patient foremost in the design and architecture of your systems.</p>
-
-<p>Mark</p>
-
-<hr />
-<blockquote>
-
-  <p>This post was originally written in November 2019.</p>
-</blockquote>]]></content><author><name></name></author><category term="ehr" /><summary type="html"><![CDATA[I built an electronic health record and along the way learnt a lot about how to think about the importance of medical records and data in my day-to-day work as a practising clinician, manager and researcher.]]></summary></entry></feed>
+<hr />]]></content><author><name></name></author><category term="ehr" /><summary type="html"><![CDATA[The HL7 FHIR standard provides a useful model of health and care information, but it is a specification from which a local standard can be built via profiling. It defines models of data and a specification for how to exchange those data via an architectural pattern called representational state transfer (REST). While there are other ways that data in HL7 FHIR can be exchanged, using REST as an architectural pattern means that software using HL7 FHIR for data exchange will read and write to resources that represent something in the health and care domain.]]></summary></entry></feed>

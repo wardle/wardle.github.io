@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>NHS data: we have a problem</title>
+  <meta name="description" content="If you’re in clinical informatics, you can learn a lot from the COVID-19 pandemic.">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://www.wardle.org/strategy/2023/10/19/nhs-data.html">
+  <link rel="alternate" type="application/rss+xml" title="Health informatics and information technology" href="/feed.xml">
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-97389603-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="/">Health informatics and information technology</a>
+  
+  
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+           <a class="page-link" href="/">All posts</a>
+          
+            
+            
+            <a class="page-link" href="/projects/">Projects</a>
+            
+          
+            
+            
+            <a class="page-link" href="/about/">About</a>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">NHS data: we have a problem</h1>
+    <p class="post-meta">
+      <time datetime="2023-10-19T20:19:19+01:00" itemprop="datePublished">
+        
+        19 October 2023
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>If you’re in clinical informatics, you can learn a lot from the COVID-19 pandemic.</p>
+
+<p>When we needed to send out shielding letters to our patients with motor neurone disease,
+I ran a report against our neurology electronic patient record, obtaining the
+names and addresses of all of our patients with motor neurone disease in South Wales. 
+In generating  that report, each patient’s vital status was automatically checked with multiple 
+authoritative sources of information, to ensure correct address information and
+to ensure we would not send a letter to a patient who was deceased.</p>
+
+<p>This was straightforward because a) we had coded diagnostic information and b)
+we had a sensible and flexible information architecture that minimised manual
+effort. It took me about 10 minutes.</p>
+
+<p>When we needed to send out shielding letters to patients with multiple sclerosis
+but only those on certain categories of disease modifying drugs, then I ran a
+report against our neurology electronic patient record as above, but simply 
+added a cross-reference to the active medications we had recorded.</p>
+
+<p>This was also straightforward because a) we had already coded both diagnostic
+and treatment information for our entire cohort, and b) we had a sensible and 
+flexible information architecture.</p>
+
+<p>For both, the use of standards such as SNOMED CT and dm+d was critical in 
+creating meaningful data that could be used for a variety of purposes, such as
+direct care, service management, and research.</p>
+
+<p>When patients receive botulinum toxin in our clinics, we record using our
+electronic patient record. A document is sent into multiple portals and the 
+structured information behind that document is stored, so that we know exactly
+what brand, dose and even where has been injected, all using SNOMED CT.</p>
+
+<p>The document is useful, but the document is simply a side-effect of the data.</p>
+
+<h1 id="so-what-about-nhs-wales">So what about NHS Wales?</h1>
+
+<p>But in the wider NHS Wales, there were significant data problems, not least
+errors in getting the correct address for patients.</p>
+
+<p><img src="/images/pulse-wrong-shielding-letters.png" alt="pulse-wrong-shielding-letters.png" /></p>
+
+<p>And our national ‘portal’, the ‘Welsh Clinical Portal’ is little more than a
+document and results archive. Many aspects are good, such as being able to see
+letters and laboratory and radiology results from across Wales, but we should
+have much greater ambitions. This is software that has been in development for many
+years and yet is a long way from being an electronic patient record.</p>
+
+<p>It’s time for a reset.</p>
+
+<p>NHS Wales needs to become data-driven.</p>
+
+<p>We need to be able to focus our limited resources and manage the backlog of 
+patients waiting by the sensible and considered use of clinical data in order to 
+prioritise, minimise harm and improve outcomes. We need greater user-centred
+design, and clinical leadership, not ‘engagement’ as the last part of a development 
+process in which the first time we see a new design it is about to be launched.</p>
+
+<p>The Welsh Audit Office (WAO) highlighted a “lack of independent scrutiny” and
+“unbalanced reporting of progress”. We as an informatics community should be 
+much more open and transparent on the challenges we face, and turn our expertise
+to meeting those challenges.</p>
+
+<p>Mark</p>
+
+
+  </div>
+
+  
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Health informatics and information technology</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Health informatics and information technology</li><li><a class="u-email" href="mailto:mark@wardle.org">mark@wardle.org</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/wardle"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">wardle</span></a></li><li><a href="https://www.twitter.com/mwardle"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">mwardle</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>by Dr Mark Wardle, Consultant Neurologist and Chief Clinical Information Officer (CCIO)
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
