@@ -112,13 +112,13 @@ CT to slice and dice our health and care data in order to make valuable inferenc
 
 <p>Hermes is an open-source terminology server that I wrote.</p>
 
-<p>I have a tiny ($3/mo) demonstration server running - for example, you can look at detailed information about multiple sclerosis (SNOMED code 24700007) by going to <a href="http://3.9.221.177:8080/v1/snomed/concepts/24700007/extended">http://3.9.221.177:8080/v1/snomed/concepts/24700007/extended</a>.</p>
+<p>I have a tiny ($3/mo) demonstration server running - for example, you can look at detailed information about multiple sclerosis (SNOMED code 24700007) by going to <a href="http://128.140.5.148:8080/v1/snomed/concepts/24700007/extended">http://128.140.5.148:8080/v1/snomed/concepts/24700007/extended</a>.</p>
 
 <p>You can have your own server running in minutes by <a href="https://github.com/wardle/hermes">following the instructions</a>, or use my demonstration links below. It can even download and install SNOMED automatically if you live in the UK.</p>
 
 <p>Here’s an example of one of the endpoints:</p>
 
-<p><a href="http://3.9.221.177:8080/v1/snomed/concepts/24700007/extended">http://3.9.221.177:8080/v1/snomed/concepts/24700007/extended</a>:</p>
+<p><a href="http://128.140.5.148:8080/v1/snomed/concepts/24700007/extended">http://128.140.5.148:8080/v1/snomed/concepts/24700007/extended</a>:</p>
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"concept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">24700007</span><span class="p">,</span><span class="w">
@@ -204,7 +204,7 @@ It’s a way of defining a set of SNOMED CT concepts.</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;&lt;  73211009 |Diabetes mellitus|     
 </code></pre></div></div>
 
-<p>This means, give me a set of codes that represent diabetes mellitus, including its sub-types. You can see the codes this expands to <a href="http://3.9.221.177:8080/v1/snomed/expand?ecl=&lt;&lt;73211009">here</a>.</p>
+<p>This means, give me a set of codes that represent diabetes mellitus, including its sub-types. You can see the codes this expands to <a href="http://128.140.5.148:8080/v1/snomed/expand?ecl=&lt;&lt;73211009">here</a>.</p>
 
 <p>When I am building a user interface component to allow a pop-up and autocompletion box, for say, country of birth, I might search based on 
 the text the user has entered and limit the search to the set of concepts defined by:</p>
@@ -212,9 +212,9 @@ the text the user has entered and limit the search to the set of concepts define
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;370159000|Country of birth|
 </code></pre></div></div>
 
-<p>This will mean a search for <a href="http://3.9.221.177:8080/v1/snomed/search?s=cro&amp;constraint=&lt;370159000">“Cro”</a> will give me “Born in Croatia” but exclude “Crohn’s disease”.</p>
+<p>This will mean a search for <a href="http://128.140.5.148:8080/v1/snomed/search?s=cro&amp;constraint=&lt;370159000">“Cro”</a> will give me “Born in Croatia” but exclude “Crohn’s disease”.</p>
 
-<p><a href="http://3.9.221.177:8080/v1/snomed/search?s=cro&amp;constraint=&lt;370159000">http://3.9.221.177:8080/v1/snomed/search?s=cro&amp;constraint=&lt;370159000</a>:</p>
+<p><a href="http://128.140.5.148:8080/v1/snomed/search?s=cro&amp;constraint=&lt;370159000">http://128.140.5.148:8080/v1/snomed/search?s=cro&amp;constraint=&lt;370159000</a>:</p>
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
     </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">459924011</span><span class="p">,</span><span class="w">
@@ -235,7 +235,7 @@ combine different terms. For example, if you’re searching for patients who hav
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;&lt;234319005|Splenectomy| OR &lt;&lt;23761004|Hyposplenism|
 </code></pre></div></div>
 
-<p>You can see the results of this expression <a href="http://3.9.221.177:8080/v1/snomed/search?constraint=&lt;&lt;234319005%20OR%20&lt;&lt;23761004">here</a></p>
+<p>You can see the results of this expression <a href="http://128.140.5.148:8080/v1/snomed/search?constraint=&lt;&lt;234319005%20OR%20&lt;&lt;23761004">here</a></p>
 
 <p>I use the combination of a user-entered search string (e.g. “MND”) and a constraint to help users enter information in a context-appropriate way - e.g. by type, or by membership of a reference set etc.</p>
 
@@ -265,7 +265,7 @@ set of codes!</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;&lt; 24700007
 </code></pre></div></div>
 
-<p>That means give me the concept 24700007 and all of its descendants (sub-types). Have a look at the results <a href="http://3.9.221.177:8080/v1/snomed/expand?ecl=&lt;&lt;24700007">here</a>.</p>
+<p>That means give me the concept 24700007 and all of its descendants (sub-types). Have a look at the results <a href="http://128.140.5.148:8080/v1/snomed/expand?ecl=&lt;&lt;24700007">here</a>.</p>
 
 <p>No it won’t!</p>
 
@@ -311,7 +311,7 @@ POSSIBLY-EQUIVALENT-TO   900000000000523009
 
 <p>The simplest is REPLACED-BY. There’ll be a 1:1 mapping between an old concept and a new concept if there is one that is conceptually REPLACED-BY the new one! But some concepts are truly outdated, and there will be some ambiguity in how to use that now outdated term.</p>
 
-<p>We can even ask SNOMED to give us all of the historical association reference set types: <a href="http://3.9.221.177:8080/v1/snomed/expand?ecl=%3C900000000000522004">http://3.9.221.177:8080/v1/snomed/expand?ecl=&lt;900000000000522004</a></p>
+<p>We can even ask SNOMED to give us all of the historical association reference set types: <a href="http://128.140.5.148:8080/v1/snomed/expand?ecl=%3C900000000000522004">http://128.140.5.148:8080/v1/snomed/expand?ecl=&lt;900000000000522004</a></p>
 
 <p>Result:</p>
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
@@ -367,7 +367,7 @@ this concept’s historical association reference sets and include some or all o
 
 <p>Let’s try a worked example:</p>
 
-<p>You can see that <a href="https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=155023009">155023009</a> is inactive - and you can see the same via <a href="http://3.9.221.177:8080/v1/snomed/concepts/155023009">hermes</a>:</p>
+<p>You can see that <a href="https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=155023009">155023009</a> is inactive - and you can see the same via <a href="http://128.140.5.148:8080/v1/snomed/concepts/155023009">hermes</a>:</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">155023009</span><span class="p">,</span><span class="w">
@@ -380,7 +380,7 @@ this concept’s historical association reference sets and include some or all o
 
 <p>We can use this concept’s reference set membership to see how SNOMED thinks we might be able to map into the current version of the terminology:</p>
 
-<p><a href="http://3.9.221.177:8080/v1/snomed/concepts/155023009/historical">http://3.9.221.177:8080/v1/snomed/concepts/155023009/historical</a>:</p>
+<p><a href="http://128.140.5.148:8080/v1/snomed/concepts/155023009/historical">http://128.140.5.148:8080/v1/snomed/concepts/155023009/historical</a>:</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"900000000000527005"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -399,7 +399,7 @@ this concept’s historical association reference sets and include some or all o
 
 <p>This end-point picks out only the historical association reference set types and lists them conveniently keyed by the association reference type. This makes it straightforward to follow SAME-AS, REPLACED-BY or POSSIBLY-EQUIVALENT-TO links.</p>
 
-<p>So here we see that <code class="language-plaintext highlighter-rouge">155023009</code> is linked to <code class="language-plaintext highlighter-rouge">24700007</code> by virtue of a <code class="language-plaintext highlighter-rouge">SAME-AS</code> definition - <a href="http://3.9.221.177:8080/v1/snomed/concepts/900000000000527005/extended">900000000000527005</a>.</p>
+<p>So here we see that <code class="language-plaintext highlighter-rouge">155023009</code> is linked to <code class="language-plaintext highlighter-rouge">24700007</code> by virtue of a <code class="language-plaintext highlighter-rouge">SAME-AS</code> definition - <a href="http://128.140.5.148:8080/v1/snomed/concepts/900000000000527005/extended">900000000000527005</a>.</p>
 
 <h3 id="pre-process-our-searches-valuesets-and-codelists">Pre-process our searches, valuesets and codelists</h3>
 
@@ -409,7 +409,7 @@ this concept’s historical association reference sets and include some or all o
 
 <p>e.g.</p>
 
-<p><a href="http://3.9.221.177:8080/v1/snomed/expand?ecl=%3C%3C24700007">http://3.9.221.177:8080/v1/snomed/expand?ecl=%3C%3C24700007</a>:</p>
+<p><a href="http://128.140.5.148:8080/v1/snomed/expand?ecl=%3C%3C24700007">http://128.140.5.148:8080/v1/snomed/expand?ecl=%3C%3C24700007</a>:</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
@@ -423,7 +423,7 @@ this concept’s historical association reference sets and include some or all o
 
 <p>But we can also ask for the expansion to include historical associations:</p>
 
-<p><a href="http://3.9.221.177:8080/v1/snomed/expand?ecl=%3C%3C24700007&amp;include-historic=true">http://3.9.221.177:8080/v1/snomed/expand?ecl=%3C%3C24700007&amp;include-historic=true</a></p>
+<p><a href="http://128.140.5.148:8080/v1/snomed/expand?ecl=%3C%3C24700007&amp;include-historic=true">http://128.140.5.148:8080/v1/snomed/expand?ecl=%3C%3C24700007&amp;include-historic=true</a></p>
 
 <p>You’ll see that our expanded codelist now also includes outdated, inactivated concepts from past versions of SNOMED. We can now use this expanded list for our data analytics.</p>
 
