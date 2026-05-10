@@ -1,5 +1,209 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2023-10-19T22:09:30+01:00</updated><id>https://www.wardle.org/feed.xml</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist and Chief Clinical Information Officer (CCIO)
-</subtitle><entry><title type="html">NHS data: we have a problem</title><link href="https://www.wardle.org/strategy/2023/10/19/nhs-data.html" rel="alternate" type="text/html" title="NHS data: we have a problem" /><published>2023-10-19T20:19:19+01:00</published><updated>2023-10-19T20:19:19+01:00</updated><id>https://www.wardle.org/strategy/2023/10/19/nhs-data</id><content type="html" xml:base="https://www.wardle.org/strategy/2023/10/19/nhs-data.html"><![CDATA[<p>If you’re in clinical informatics, you can learn a lot from the COVID-19 pandemic.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.wardle.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.wardle.org/" rel="alternate" type="text/html" /><updated>2026-05-10T08:49:49+01:00</updated><id>https://www.wardle.org/feed.xml</id><title type="html">Health informatics and information technology</title><subtitle>by Dr Mark Wardle, Consultant Neurologist and Chief Clinical Information Officer (CCIO)
+</subtitle><entry><title type="html">FTRM: an open container format for FHIR terminology</title><link href="https://www.wardle.org/terminology/2026/05/09/ftrm.html" rel="alternate" type="text/html" title="FTRM: an open container format for FHIR terminology" /><published>2026-05-09T10:09:09+01:00</published><updated>2026-05-09T10:09:09+01:00</updated><id>https://www.wardle.org/terminology/2026/05/09/ftrm</id><content type="html" xml:base="https://www.wardle.org/terminology/2026/05/09/ftrm.html"><![CDATA[<h1 id="ftrm">FTRM</h1>
+
+<p>I’m pleased to announce the release of an open specification for terminology: <em>FTRM</em></p>
+
+<ul>
+  <li>SQLite is a fantastic application file format - SQLite database files are portable between 32-bit and 64-bit machines and between big-endian and little-endian architectures and between any of the various flavors of Windows and Unix-like operating systems.</li>
+  <li>SQLite is accessible, portable and reliable</li>
+</ul>
+
+<p>If we as a community agree an open specification, we can make it easier to meaningful share terminology data such as code systems, value sets and maps across systems.</p>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>If you build clinical software, whether operational or as part of data analytics, 
+sooner or later you have to ship
+terminology — e.g. SNOMED CT, a value set for a
+research cohort, a concept map between two coding systems. The
+FHIR terminology resources (<code class="language-plaintext highlighter-rouge">CodeSystem</code>, <code class="language-plaintext highlighter-rouge">ValueSet</code>, <code class="language-plaintext highlighter-rouge">ConceptMap</code>,
+<code class="language-plaintext highlighter-rouge">NamingSystem</code>) are the right abstraction. But the <em>distribution
+unit</em> — the file you actually copy around, install on a server, drop
+into a CI pipeline, or hand to a colleague — has been a recurring
+source of friction.</p>
+
+<p>You can ship raw FHIR JSON. That works for a few hundred kilobytes
+of conformance resources, and falls apart at the scale of even a
+modest national subset. You can stand up a Postgres instance and
+load it from a vendor’s bespoke pipeline. That works for a single
+deployment, and breaks the moment you need a second one or want to
+hand a snapshot to someone outside your organisation. Or you can
+serve everything from a remote terminology service over HTTP — fine
+when you have the network, untenable when you do not. Making billions
+of server round-trips to a national terminology ‘server’ isn’t going 
+to work - most throttle requests.</p>
+
+<p>I’ve long felt being able have the flexibility to run software like this 
+on your own machine is important, and it is ideal if that code is <em>open-source</em>.</p>
+
+<h2 id="why-a-file-format">Why a file format?</h2>
+
+<p>What’s been missing is a single file you can email, scp, drop in S3,
+or commit to a release artefact, that contains the canonical
+terminology resources, is fast enough to serve directly, and is
+portable between implementations.</p>
+
+<p>I’d like to introduce: <a href="https://github.com/wardle/hades/blob/main/doc/ftrm.md">FTRM</a>
+— a <em>FHIR Terminology Container</em>. It is an open specification for a
+single SQLite database that holds FHIR <code class="language-plaintext highlighter-rouge">CodeSystem</code>, <code class="language-plaintext highlighter-rouge">ValueSet</code>,
+<code class="language-plaintext highlighter-rouge">ConceptMap</code> and <code class="language-plaintext highlighter-rouge">NamingSystem</code> resources, with enough structure to
+serve the canonical terminology operations directly off the file —
+<code class="language-plaintext highlighter-rouge">$lookup</code>, <code class="language-plaintext highlighter-rouge">$validate-code</code>, <code class="language-plaintext highlighter-rouge">$expand</code>, <code class="language-plaintext highlighter-rouge">$translate</code>, <code class="language-plaintext highlighter-rouge">$subsumes</code>.</p>
+
+<p>A note on scope: FTRM v1 is FHIR-shaped. It does not define SNOMED
+CT’s expression constraint language (ECL) or reference-set
+semantics, and it is not where I currently put SNOMED. The
+reference implementation, <a href="https://github.com/wardle/hades">hades</a>,
+serves SNOMED CT through a separate dedicated store —
+<a href="https://github.com/wardle/hermes">hermes</a>, built on LMDB and
+Lucene, with native ECL evaluation — and uses FTRM for LOINC and
+HL7 FHIR NPM packages. The composite catalogue dispatches by
+canonical URL, so from a client’s perspective it is one
+terminology server. The separation is intentional:
+SNOMED-specific operations benefit from SNOMED-specific data
+structures, and FTRM’s job is to be the boring, portable container
+for everything that fits the plain FHIR terminology shape.</p>
+
+<h1 id="why-sqlite">Why SQLite</h1>
+
+<p>The choice of SQLite is deliberate. SQLite is the most-deployed
+database in the world; it is in every browser, phone and operating
+system. The file format is
+<a href="https://www.sqlite.org/lts.html">stable for the long term</a> and
+has a published, public-domain reference implementation. There is
+no daemon, no orchestrator, no clustering layer to install. A FTRM
+file is just bytes — you can <code class="language-plaintext highlighter-rouge">sha256sum</code> it, version it, mirror it,
+and verify it as you would any other release artefact.</p>
+
+<p>And critically: a FTRM file is <em>queryable</em> with stock tooling. If
+you want to know how many concepts a code system has, how its
+hierarchy is shaped, or which value sets reference which systems,
+you open the file with the <code class="language-plaintext highlighter-rouge">sqlite3</code> CLI and write SQL. There are
+no opaque binary blobs, no implementation-defined indexes you have
+to reverse-engineer, no proprietary on-disk structures. Everything
+is documented, including the foreign keys and the FTS5 indexes.</p>
+
+<h1 id="whats-in-the-file">What’s in the file</h1>
+
+<p>The schema separates two kinds of fields: the ones a server needs
+to reason about, and the ones it has to round-trip without
+understanding.</p>
+
+<p>The first set — <code class="language-plaintext highlighter-rouge">case_sensitive</code>, <code class="language-plaintext highlighter-rouge">hierarchy_meaning</code>,
+<code class="language-plaintext highlighter-rouge">status</code>, <code class="language-plaintext highlighter-rouge">experimental</code>, <code class="language-plaintext highlighter-rouge">publisher</code> and so on — are real columns
+that you can index and filter. The second set — copyright, contact
+points, language extensions, useContext, the long tail of FHIR
+metadata that varies between resources but that a terminology
+server doesn’t dispatch on — round-trips through a single JSON
+column called <code class="language-plaintext highlighter-rouge">metadata</code>. That keeps the schema honest about what
+matters operationally, while preserving fidelity for everything else.</p>
+
+<p>Concept properties follow the same idea. The four well-known
+concept properties (<code class="language-plaintext highlighter-rouge">inactive</code>, <code class="language-plaintext highlighter-rouge">abstract</code>, <code class="language-plaintext highlighter-rouge">notSelectable</code>,
+<code class="language-plaintext highlighter-rouge">status</code>) are projected onto columns of the <code class="language-plaintext highlighter-rouge">concept</code> table, so the
+common filters are cheap. Everything else lives in
+<code class="language-plaintext highlighter-rouge">concept_property</code> with FHIR’s <code class="language-plaintext highlighter-rouge">value[x]</code> polymorphism mirrored as
+typed columns (<code class="language-plaintext highlighter-rouge">value_str</code>, <code class="language-plaintext highlighter-rouge">value_int</code>, <code class="language-plaintext highlighter-rouge">value_bool</code>, …).</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">concept_ancestor</code> table is the transitive closure of the
+parent edges, with the shortest-path depth as a column. Subsumption
+queries (<code class="language-plaintext highlighter-rouge">is-a</code>, <code class="language-plaintext highlighter-rouge">descendent-of</code>) become a single indexed lookup
+rather than a recursive CTE. Writers rebuild the closure when they
+write the file; readers trust it.</p>
+
+<p>Free-text search uses SQLite’s FTS5, with <code class="language-plaintext highlighter-rouge">unicode61
+remove_diacritics 2</code> baked into the contract so <code class="language-plaintext highlighter-rouge">cafe</code> matches
+<code class="language-plaintext highlighter-rouge">café</code> regardless of where the file was built. That detail matters
+— if FTS tokenisation drifts between writers, the same query
+returns different results on different files, and the format stops
+being portable in any meaningful sense.</p>
+
+<h1 id="versioning">Versioning</h1>
+
+<p>FTRM stores an arbitrary number of versions of any resource. The
+identity tuple is <code class="language-plaintext highlighter-rouge">(resource_type, url, version)</code>. Selection between
+versions is the caller’s responsibility, driven by the FHIR
+<code class="language-plaintext highlighter-rouge">system-version</code> and <code class="language-plaintext highlighter-rouge">force-system-version</code> parameters at request
+time. There is no ambient “current version” baked into the file —
+which means a single FTRM file can hold this year’s LOINC release
+alongside a frozen snapshot from two years ago, or successive
+versions of <code class="language-plaintext highlighter-rouge">hl7.terminology.r4</code>, and a research pipeline can
+reproduce its inputs by referring to versions explicitly.</p>
+
+<p>Writes are replace-by-tuple: a writer that re-imports a
+<code class="language-plaintext highlighter-rouge">(CodeSystem, url, version)</code> triple deletes the dependent rows
+keyed by that tuple and re-inserts. There is no patch-in-place
+journal. The file is a snapshot.</p>
+
+<h1 id="file-identification-and-conformance">File identification and conformance</h1>
+
+<p>Every FTRM v1 file stamps two values into the SQLite header:
+<code class="language-plaintext highlighter-rouge">application_id = 0x4654524D</code> (ASCII <code class="language-plaintext highlighter-rouge">FTRM</code>) and <code class="language-plaintext highlighter-rouge">user_version = 1</code>.
+A reader that opens a file without the FTRM stamp must refuse it.
+That’s a sanity gate: it stops a generic SQLite file being
+mistakenly treated as a terminology container, and it gives <code class="language-plaintext highlighter-rouge">file(1)</code>
+something to recognise.</p>
+
+<p>The specification defines what it means to be a <em>conforming
+reader</em> and a <em>conforming writer</em>. A reader that enumerates
+<code class="language-plaintext highlighter-rouge">tx_resource</code>, registers each row as an addressable resource, and
+honours the well-known property columns at lookup time — and the
+FTS indexes for text search, and <code class="language-plaintext highlighter-rouge">concept_ancestor</code> for filter
+pushdown — is conformant. A writer that produces files passing
+<code class="language-plaintext highlighter-rouge">PRAGMA foreign_key_check</code> and rebuilds the ancestor closure and
+FTS indexes is conformant. The list is short and operational, not
+aspirational.</p>
+
+<h1 id="why-this-matters">Why this matters</h1>
+
+<p>The point of an open specification is that no single vendor owns
+the format. The schema, identifiers and prose of FTRM v1 are
+released under
+<a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> — the
+public-domain dedication. Anyone can write a reader or a writer,
+in any language, without asking permission and without licensing
+friction. The
+<a href="https://github.com/wardle/hades">reference implementation</a> is
+<a href="https://github.com/wardle/hades">hades</a>, my open-source FHIR
+terminology server, and it passes 81.8% of the
+<a href="https://github.com/HL7/fhir-tx-ecosystem-ig">HL7 FHIR Terminology Ecosystem IG</a>
+conformance suite at the time of writing. But the format does not
+depend on hades, and a writer in Python, Java, Rust or Go that
+follows the spec produces files that any other conforming reader
+can serve.</p>
+
+<p>For the NHS, where I sit, this matters in a very specific way. We
+have years of accumulated experience with terminology distribution
+that has been awkward at best. SNOMED CT, dm+d, the NHS Data
+Dictionary, the Welsh national subsets — each comes with its own
+pipeline, its own format, its own assumptions about what a server
+will do with it. Layering a FHIR-shaped, SQLite-backed,
+vendor-neutral container on top of that does not solve the
+underlying provenance and governance questions, but it does mean
+that <em>once those questions are answered</em>, the artefact you ship is
+boring, ubiquitous and inspectable.</p>
+
+<p>The same applies to research. A reproducible cohort study should
+be able to declare its terminology inputs by file hash. Today, that
+typically means archiving a tarball of source releases and a
+loader script. With FTRM, it means archiving a single <code class="language-plaintext highlighter-rouge">.db</code> file
+and a sha256 — and any reader can serve it.</p>
+
+<h1 id="whats-next">What’s next</h1>
+
+<p>FTRM is at v1. It is stable; breaking changes will bump the schema
+version and ship migration tooling. The spec lives in the hades
+repository at
+<a href="https://github.com/wardle/hades/blob/main/doc/ftrm.md"><code class="language-plaintext highlighter-rouge">doc/ftrm.md</code></a>,
+and the reference DDL is the SQL file the implementation actually
+runs against. There is no separate paper.</p>
+
+<p>If you build, ship, or consume FHIR terminology, please read it,
+try it, and tell me where it is wrong. The schema is the contract;
+sharpening that contract is how the format becomes useful beyond
+my own work.</p>
+
+<p><em>Mark</em></p>]]></content><author><name></name></author><category term="terminology" /><summary type="html"><![CDATA[FTRM]]></summary></entry><entry><title type="html">NHS data: we have a problem</title><link href="https://www.wardle.org/strategy/2023/10/19/nhs-data.html" rel="alternate" type="text/html" title="NHS data: we have a problem" /><published>2023-10-19T20:19:19+01:00</published><updated>2023-10-19T20:19:19+01:00</updated><id>https://www.wardle.org/strategy/2023/10/19/nhs-data</id><content type="html" xml:base="https://www.wardle.org/strategy/2023/10/19/nhs-data.html"><![CDATA[<p>If you’re in clinical informatics, you can learn a lot from the COVID-19 pandemic.</p>
 
 <p>When we needed to send out shielding letters to our patients with motor neurone disease,
 I ran a report against our neurology electronic patient record, obtaining the
@@ -1479,13 +1683,13 @@ CT to slice and dice our health and care data in order to make valuable inferenc
 
 <p>Hermes is an open-source terminology server that I wrote.</p>
 
-<p>I have a tiny ($3/mo) demonstration server running - for example, you can look at detailed information about multiple sclerosis (SNOMED code 24700007) by going to <a href="http://3.9.221.177:8080/v1/snomed/concepts/24700007/extended">http://3.9.221.177:8080/v1/snomed/concepts/24700007/extended</a>.</p>
+<p>I have a tiny ($3/mo) demonstration server running - for example, you can look at detailed information about multiple sclerosis (SNOMED code 24700007) by going to <a href="http://128.140.5.148:8080/v1/snomed/concepts/24700007/extended">http://128.140.5.148:8080/v1/snomed/concepts/24700007/extended</a>.</p>
 
 <p>You can have your own server running in minutes by <a href="https://github.com/wardle/hermes">following the instructions</a>, or use my demonstration links below. It can even download and install SNOMED automatically if you live in the UK.</p>
 
 <p>Here’s an example of one of the endpoints:</p>
 
-<p><a href="http://3.9.221.177:8080/v1/snomed/concepts/24700007/extended">http://3.9.221.177:8080/v1/snomed/concepts/24700007/extended</a>:</p>
+<p><a href="http://128.140.5.148:8080/v1/snomed/concepts/24700007/extended">http://128.140.5.148:8080/v1/snomed/concepts/24700007/extended</a>:</p>
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"concept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">24700007</span><span class="p">,</span><span class="w">
@@ -1571,7 +1775,7 @@ It’s a way of defining a set of SNOMED CT concepts.</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;&lt;  73211009 |Diabetes mellitus|     
 </code></pre></div></div>
 
-<p>This means, give me a set of codes that represent diabetes mellitus, including its sub-types. You can see the codes this expands to <a href="http://3.9.221.177:8080/v1/snomed/expand?ecl=&lt;&lt;73211009">here</a>.</p>
+<p>This means, give me a set of codes that represent diabetes mellitus, including its sub-types. You can see the codes this expands to <a href="http://128.140.5.148:8080/v1/snomed/expand?ecl=&lt;&lt;73211009">here</a>.</p>
 
 <p>When I am building a user interface component to allow a pop-up and autocompletion box, for say, country of birth, I might search based on 
 the text the user has entered and limit the search to the set of concepts defined by:</p>
@@ -1579,9 +1783,9 @@ the text the user has entered and limit the search to the set of concepts define
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;370159000|Country of birth|
 </code></pre></div></div>
 
-<p>This will mean a search for <a href="http://3.9.221.177:8080/v1/snomed/search?s=cro&amp;constraint=&lt;370159000">“Cro”</a> will give me “Born in Croatia” but exclude “Crohn’s disease”.</p>
+<p>This will mean a search for <a href="http://128.140.5.148:8080/v1/snomed/search?s=cro&amp;constraint=&lt;370159000">“Cro”</a> will give me “Born in Croatia” but exclude “Crohn’s disease”.</p>
 
-<p><a href="http://3.9.221.177:8080/v1/snomed/search?s=cro&amp;constraint=&lt;370159000">http://3.9.221.177:8080/v1/snomed/search?s=cro&amp;constraint=&lt;370159000</a>:</p>
+<p><a href="http://128.140.5.148:8080/v1/snomed/search?s=cro&amp;constraint=&lt;370159000">http://128.140.5.148:8080/v1/snomed/search?s=cro&amp;constraint=&lt;370159000</a>:</p>
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
     </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">459924011</span><span class="p">,</span><span class="w">
@@ -1602,7 +1806,7 @@ combine different terms. For example, if you’re searching for patients who hav
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;&lt;234319005|Splenectomy| OR &lt;&lt;23761004|Hyposplenism|
 </code></pre></div></div>
 
-<p>You can see the results of this expression <a href="http://3.9.221.177:8080/v1/snomed/search?constraint=&lt;&lt;234319005%20OR%20&lt;&lt;23761004">here</a></p>
+<p>You can see the results of this expression <a href="http://128.140.5.148:8080/v1/snomed/search?constraint=&lt;&lt;234319005%20OR%20&lt;&lt;23761004">here</a></p>
 
 <p>I use the combination of a user-entered search string (e.g. “MND”) and a constraint to help users enter information in a context-appropriate way - e.g. by type, or by membership of a reference set etc.</p>
 
@@ -1632,7 +1836,7 @@ set of codes!</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;&lt; 24700007
 </code></pre></div></div>
 
-<p>That means give me the concept 24700007 and all of its descendants (sub-types). Have a look at the results <a href="http://3.9.221.177:8080/v1/snomed/expand?ecl=&lt;&lt;24700007">here</a>.</p>
+<p>That means give me the concept 24700007 and all of its descendants (sub-types). Have a look at the results <a href="http://128.140.5.148:8080/v1/snomed/expand?ecl=&lt;&lt;24700007">here</a>.</p>
 
 <p>No it won’t!</p>
 
@@ -1678,7 +1882,7 @@ POSSIBLY-EQUIVALENT-TO   900000000000523009
 
 <p>The simplest is REPLACED-BY. There’ll be a 1:1 mapping between an old concept and a new concept if there is one that is conceptually REPLACED-BY the new one! But some concepts are truly outdated, and there will be some ambiguity in how to use that now outdated term.</p>
 
-<p>We can even ask SNOMED to give us all of the historical association reference set types: <a href="http://3.9.221.177:8080/v1/snomed/expand?ecl=%3C900000000000522004">http://3.9.221.177:8080/v1/snomed/expand?ecl=&lt;900000000000522004</a></p>
+<p>We can even ask SNOMED to give us all of the historical association reference set types: <a href="http://128.140.5.148:8080/v1/snomed/expand?ecl=%3C900000000000522004">http://128.140.5.148:8080/v1/snomed/expand?ecl=&lt;900000000000522004</a></p>
 
 <p>Result:</p>
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
@@ -1734,7 +1938,7 @@ this concept’s historical association reference sets and include some or all o
 
 <p>Let’s try a worked example:</p>
 
-<p>You can see that <a href="https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=155023009">155023009</a> is inactive - and you can see the same via <a href="http://3.9.221.177:8080/v1/snomed/concepts/155023009">hermes</a>:</p>
+<p>You can see that <a href="https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=155023009">155023009</a> is inactive - and you can see the same via <a href="http://128.140.5.148:8080/v1/snomed/concepts/155023009">hermes</a>:</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">155023009</span><span class="p">,</span><span class="w">
@@ -1747,7 +1951,7 @@ this concept’s historical association reference sets and include some or all o
 
 <p>We can use this concept’s reference set membership to see how SNOMED thinks we might be able to map into the current version of the terminology:</p>
 
-<p><a href="http://3.9.221.177:8080/v1/snomed/concepts/155023009/historical">http://3.9.221.177:8080/v1/snomed/concepts/155023009/historical</a>:</p>
+<p><a href="http://128.140.5.148:8080/v1/snomed/concepts/155023009/historical">http://128.140.5.148:8080/v1/snomed/concepts/155023009/historical</a>:</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"900000000000527005"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -1766,7 +1970,7 @@ this concept’s historical association reference sets and include some or all o
 
 <p>This end-point picks out only the historical association reference set types and lists them conveniently keyed by the association reference type. This makes it straightforward to follow SAME-AS, REPLACED-BY or POSSIBLY-EQUIVALENT-TO links.</p>
 
-<p>So here we see that <code class="language-plaintext highlighter-rouge">155023009</code> is linked to <code class="language-plaintext highlighter-rouge">24700007</code> by virtue of a <code class="language-plaintext highlighter-rouge">SAME-AS</code> definition - <a href="http://3.9.221.177:8080/v1/snomed/concepts/900000000000527005/extended">900000000000527005</a>.</p>
+<p>So here we see that <code class="language-plaintext highlighter-rouge">155023009</code> is linked to <code class="language-plaintext highlighter-rouge">24700007</code> by virtue of a <code class="language-plaintext highlighter-rouge">SAME-AS</code> definition - <a href="http://128.140.5.148:8080/v1/snomed/concepts/900000000000527005/extended">900000000000527005</a>.</p>
 
 <h3 id="pre-process-our-searches-valuesets-and-codelists">Pre-process our searches, valuesets and codelists</h3>
 
@@ -1776,7 +1980,7 @@ this concept’s historical association reference sets and include some or all o
 
 <p>e.g.</p>
 
-<p><a href="http://3.9.221.177:8080/v1/snomed/expand?ecl=%3C%3C24700007">http://3.9.221.177:8080/v1/snomed/expand?ecl=%3C%3C24700007</a>:</p>
+<p><a href="http://128.140.5.148:8080/v1/snomed/expand?ecl=%3C%3C24700007">http://128.140.5.148:8080/v1/snomed/expand?ecl=%3C%3C24700007</a>:</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
@@ -1790,7 +1994,7 @@ this concept’s historical association reference sets and include some or all o
 
 <p>But we can also ask for the expansion to include historical associations:</p>
 
-<p><a href="http://3.9.221.177:8080/v1/snomed/expand?ecl=%3C%3C24700007&amp;include-historic=true">http://3.9.221.177:8080/v1/snomed/expand?ecl=%3C%3C24700007&amp;include-historic=true</a></p>
+<p><a href="http://128.140.5.148:8080/v1/snomed/expand?ecl=%3C%3C24700007&amp;include-historic=true">http://128.140.5.148:8080/v1/snomed/expand?ecl=%3C%3C24700007&amp;include-historic=true</a></p>
 
 <p>You’ll see that our expanded codelist now also includes outdated, inactivated concepts from past versions of SNOMED. We can now use this expanded list for our data analytics.</p>
 
@@ -1826,75 +2030,4 @@ this concept’s historical association reference sets and include some or all o
 
 <p>Hermes provides a number of ways of managing those changes including versioned distributions, methods to identify and understand how to map outdated concepts to modern equivalents, to methods to create codelists based on expressions that optionally include historical equivalents of their members.</p>
 
-<p><em>Mark</em></p>]]></content><author><name></name></author><category term="snomed" /><summary type="html"><![CDATA[There’s a problem with using SNOMED CT for data analytics; in this post, I’ll explain the issue and how to mitigate! If you’re using SNOMED CT for data analytics, you will encounter this issue, and need to handle it!]]></summary></entry><entry><title type="html">A mistake at REST</title><link href="https://www.wardle.org/ehr/2021/06/30/mistakes-at-rest.html" rel="alternate" type="text/html" title="A mistake at REST" /><published>2021-06-30T16:07:08+01:00</published><updated>2021-06-30T16:07:08+01:00</updated><id>https://www.wardle.org/ehr/2021/06/30/mistakes-at-rest</id><content type="html" xml:base="https://www.wardle.org/ehr/2021/06/30/mistakes-at-rest.html"><![CDATA[<p>The HL7 FHIR standard provides a useful model of health and care information, but it is a specification from which a local standard can be built via <em>profiling</em>. It defines models of data and a specification for how to exchange those data via an architectural pattern called representational state transfer (REST). While there are other ways that data in HL7 FHIR can be exchanged, using REST as an architectural pattern means that software using HL7 FHIR for data exchange will read and write to <em>resources</em> that represent something in the health and care domain.</p>
-
-<p>You can read about the RESTful aspects of HL7 FHIR in more detail on the <a href="https://www.hl7.org/fhir/http.html">official HL7 FHIR website</a>.</p>
-
-<p>The semantics of that architectural pattern are of reading, or writing, deleting or searching, or doing something else to a resource.</p>
-
-<p>The problem is that health care doesn’t use that semantic pattern.</p>
-
-<h1 id="read-and-write-semantics">Read and write semantics</h1>
-
-<p>Medical records are immutable. As I <a href="/images/cis_design/cis_design.pdf">wrote in 2017</a>:</p>
-
-<blockquote>
-
-  <p>Immutability refers to an approach to software engineering in which data are unchangeable. 
-Such an approach is particularly suitable when considering medical
-records and processes. Indeed, from a medico-legal perspective, all data should
-be regarded as immutable as it is usually necessary to be able to view the state of
-the record at any point in time.</p>
-
-  <p><a href="/images/cis_design/cis_design.pdf">Section 5.11, Clinical information system design : Mark Wardle, 2017</a></p>
-</blockquote>
-
-<p>Our paper records accumulate. They accrete.</p>
-
-<p>We don’t rip out old information.</p>
-
-<p>New records update and take the place of older records in our <em>decision-making</em>, but those
-older records still exist.</p>
-
-<p>Of course, most implementations will not actually delete data when when we issue a DELETE against a resource. 
-For example, if we issue a DELETE against a resource representing an organisation in our health and care environment, 
-the underlying software is likely to effect that change by simply marking that organisation as deleted.</p>
-
-<p>So what’s the issue?</p>
-
-<p>It’s that thinking that the <em>model</em> of data that we use to examine, process and make sense of a health and care record 
-is the same as the one that might populate that medical record in the first place.</p>
-
-<h1 id="different-models-for-reading-and-writing">Different models for reading and writing</h1>
-
-<p>The problem is that the modelling of information used for reading is widely different to that information we record
-as a consequence of the processes of care.</p>
-
-<p>The medical record is not simply a record, but a working <em>tool</em> that helps professionals and patients make sense and
-reduce the uncertainty about a decision, whether that decision is about an individual patient (shall I have that procedure?),
-a clinical service (how do we configure our service to best improve outcomes?) or for research (what new knowledge can we gain?).</p>
-
-<blockquote>
-  <p>“You’re a victim of it or a triumph because of it. The human mind
-simply cannot carry all the information without error so the record
-becomes part of your practice.”
-<a href="https://www.youtube.com/watch?v=qMsPXSMTpFI">Dr Larry Weed, Internal Medicine Grand Rounds, 1971</a></p>
-</blockquote>
-
-<p>In other complex domains, a pattern of command query responsibility separation (CQRS) has been used in which
-the information models of querying (reading) data are separate from those of creating data.</p>
-
-<p>I would argue that for many situations in health and care, we should build quite different data models for issuing “commands” 
-or “actions” than the data models I subsequently use in order to make sense of the record.</p>
-
-<p>We should move away from REST semantics towards separating how we think about commands from how we think about queries.</p>
-
-<p>For example, I <em>prescribe</em> a drug (an action) and that data model, that domain event, is used to populate a view (a query) of all recently prescribed drugs and provide a flattened ‘view’ of a medication list based on those actions. I am not reading and writing a medication list, but the list is built as a consequence of the actions.</p>
-
-<p>This approach scales well to the medical record, because the medical record should be dominated by <em>reads</em>. That means it is very easy to optimise reading and processing of data differently to the systems that handle writing.</p>
-
-<p>It also simplifies our data modelling work - because we can build clinical data models that focus on workflow and process (our actions), and then separately conceive of the best ways to make sense and view the logical record - quite rightly through different ‘prisms’ depending on need.</p>
-
-<p><em>Mark</em></p>
-
-<hr />]]></content><author><name></name></author><category term="ehr" /><summary type="html"><![CDATA[The HL7 FHIR standard provides a useful model of health and care information, but it is a specification from which a local standard can be built via profiling. It defines models of data and a specification for how to exchange those data via an architectural pattern called representational state transfer (REST). While there are other ways that data in HL7 FHIR can be exchanged, using REST as an architectural pattern means that software using HL7 FHIR for data exchange will read and write to resources that represent something in the health and care domain.]]></summary></entry></feed>
+<p><em>Mark</em></p>]]></content><author><name></name></author><category term="snomed" /><summary type="html"><![CDATA[There’s a problem with using SNOMED CT for data analytics; in this post, I’ll explain the issue and how to mitigate! If you’re using SNOMED CT for data analytics, you will encounter this issue, and need to handle it!]]></summary></entry></feed>
