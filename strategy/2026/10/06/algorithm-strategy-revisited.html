@@ -88,7 +88,9 @@
 
 <h1 id="becoming-data-driven">Becoming data-driven</h1>
 
-<p>I wrote that much of the information in electronic health records is not easily usable, by human or machine, because it is unstructured or, at best, semi-structured.</p>
+<p>Underpinning all of this is a data architecture. In 2018, I argued that we should separate data and its structure from the software that operates on it, and I have since written about <a href="/strategy/2020/06/03/ontological-medical-record.html">an ontological medical record</a> and <a href="/strategy/2023/10/03/pluripotent-data.html">pluripotent data</a>. That is now more important, not less. If code becomes cheap and applications become disposable, the data, and the way they are structured, become the part that endures. Agents, generated applications, evaluation and the envelope around our data all depend on a coherent, domain-driven data architecture, built on open standards, that outlives any individual product.</p>
+
+<p>I also wrote that much of the information in electronic health records is not easily usable, by human or machine, because it is unstructured or, at best, semi-structured.</p>
 
 <p>LLMs can now read clinic letters and extract structured, coded information from them. Ambient voice technology can draft the record from a consultation. That doesn’t mean structure no longer matters; we still need structured data for reliable computation, for provenance and for audit. But the cost of obtaining structured data has fallen, and the question becomes whether the output of a model is grounded in standards such as SNOMED CT and FHIR, or simply drifts.</p>
 
@@ -109,6 +111,7 @@
 <p>As such:</p>
 
 <ul>
+  <li>a coherent, domain-driven data architecture, built on open standards, is foundational, and outlives any individual application</li>
   <li>unstructured data is now usable, but structured, coded data remain essential</li>
   <li>model output should be grounded in open standards such as SNOMED CT and FHIR</li>
   <li>control and consent must extend to model training and to where data are processed</li>
@@ -228,7 +231,7 @@
 
 <h1 id="and-so-what">And so what?</h1>
 
-<p>I would still use the same Wardley map, but some of the components have moved. Machine learning expertise has moved towards commodity, and so, increasingly, has writing software. Clinically meaningful data, open standards, platform services, evaluation and trust have not moved nearly as far, and they remain the dependencies on which everything else rests. That is where I think healthcare needs to invest, together with the in-house capability to build on top of them.</p>
+<p>I would still use the same Wardley map, but some of the components have moved. Machine learning expertise has moved towards commodity, and so, increasingly, has writing software. A coherent data architecture, clinically meaningful data, open standards, platform services, evaluation and trust have not moved nearly as far, and they remain the dependencies on which everything else rests. That is where I think healthcare needs to invest, together with the in-house capability to build on top of them.</p>
 
 <p><em>Mark</em></p>
 
