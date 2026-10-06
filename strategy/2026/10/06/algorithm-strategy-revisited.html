@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Using algorithms in healthcare: revisited</title>
+  <meta name="description" content="AI in healthcare">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://www.wardle.org/strategy/2026/10/06/algorithm-strategy-revisited.html">
+  <link rel="alternate" type="application/rss+xml" title="Health informatics and information technology" href="/feed.xml">
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-97389603-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="/">Health informatics and information technology</a>
+  
+  
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+           <a class="page-link" href="/">All posts</a><a class="page-link" href="/projects/">Projects</a><a class="page-link" href="/about/">About</a></div>
+      </nav>
+    
+  </div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Using algorithms in healthcare: revisited</h1>
+    <p class="post-meta">
+      <time datetime="2026-10-06T09:00:00+01:00" itemprop="datePublished">
+        
+        6 October 2026
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <h1 id="ai-in-healthcare">AI in healthcare</h1>
+
+<p>In August 2018, I wrote <a href="/strategy/2018/08/30/algorithm-strategy.html">Using algorithms in healthcare</a>, in which I argued that our use of machine learning in healthcare depends on developing expertise in data analytics and machine learning, on structuring, generating and aggregating clinically meaningful data, and on building robust evaluation processes.</p>
+
+<p>That post predates large language models (LLMs). I think the core argument still stands, and that LLMs make the case for an open platform of shared services even stronger, but if I were rewriting it today, there are a number of changes I would make. Here they are:</p>
+
+<h1 id="machine-learning">Machine learning</h1>
+
+<p>In 2018, I described machine learning as a computer generating an algorithm from data, and I noted that progress in healthcare had been associated with decisions of tightly defined scope, made in specific clinical contexts, using labelled data. My examples, such as the CHADS-VASc score and the Moorfields OCT triage work, were about prediction and classification.</p>
+
+<p>Foundation models have changed this. They are trained on vast amounts of text, are general-purpose rather than narrow, and many tasks need no task-specific labelled data at all. They can be rented via an API. They also generate rather than simply predict; they can draft a clinic letter, summarise a record, suggest codes or answer a question. They fail in different ways too; when an LLM is wrong, the output still reads as fluent and confident, so the error is harder to spot than a misclassification or an implausible risk score.</p>
+
+<p>Some of my examples have also dated. IBM sold Watson Health in 2022, and DeepMind Health was folded into Google Health. AlphaFold, recognised in the 2024 Nobel Prize in Chemistry, is now a better example of what DeepMind has achieved, while Google’s Med-PaLM and AMIE are examples of LLMs applied to medicine. The Moorfields work remains a good example, and its slow path into routine practice illustrates my original point about adoption.</p>
+
+<p>As such:</p>
+
+<ul>
+  <li>machine learning expertise is now available as a commodity, rather than something that healthcare must obtain from a technology partner</li>
+  <li>healthcare organisations can build with LLMs directly, but risk lock-in to a single model provider</li>
+  <li>algorithms now generate as well as predict, and their failures are harder to detect</li>
+</ul>
+
+<h1 id="becoming-data-driven">Becoming data-driven</h1>
+
+<p>I wrote that much of the information in electronic health records is not easily usable, by human or machine, because it is unstructured or, at best, semi-structured.</p>
+
+<p>LLMs can now read clinic letters and extract structured, coded information from them. Ambient voice technology can draft the record from a consultation. That doesn’t mean structure no longer matters; we still need structured data for reliable computation, for provenance and for audit. But the cost of obtaining structured data has fallen, and the question becomes whether the output of a model is grounded in standards such as SNOMED CT and FHIR, or simply drifts.</p>
+
+<p>I also argued that aggregation of data depends on a scheme of control and consent. That still holds, but consent now has to cover more; can a record be used to train or fine-tune a model, and where can data be sent when a model is used?</p>
+
+<p>Secure data environments are likely part of the answer but we probably need to go further than such a blunt tool. Instead we should think about the <em>envelope</em> around our data. Every item of information in a health record should carry metadata about what it is, where it came from, and what we are permitted to do with it. Who recorded it, when, and in what context? Was it entered by a clinician, reported by a patient, or extracted from a letter by a model, and if so, which model and version? Under what consent was it collected, and for which purposes may it be used: direct care, service improvement, research, or training a model? Where may it be processed, and for how long may it be kept?</p>
+
+<p>At the moment, most of that is implicit, held in policy documents, data sharing agreements and the heads of information governance staff, rather than travelling with the data itself. That was manageable when data moved slowly, between systems that we procured and controlled. It isn’t manageable when an agent can pull information from multiple sources into a model’s context in seconds. If the rules about what we can do with data are not machine-readable, and do not travel with the data, then they cannot be enforced by software. There are building blocks:</p>
+
+<ul>
+  <li>HL7 FHIR defines <a href="https://hl7.org/fhir/consent.html">Consent</a> and <a href="https://hl7.org/fhir/provenance.html">Provenance</a> resources, and supports <a href="https://hl7.org/fhir/security-labels.html">security labels</a> on any resource to indicate sensitivity and permitted purposes of use.</li>
+  <li>the Global Alliance for Genomics and Health (GA4GH) has developed the <a href="https://www.ga4gh.org/product/data-use-ontology-duo/">Data Use Ontology</a>, to describe the conditions under which data may be used for research.</li>
+  <li>the W3C has published <a href="https://www.w3.org/TR/prov-overview/">PROV</a>, a general model for provenance, and <a href="https://www.w3.org/TR/odrl-model/">ODRL</a>, a language for expressing policies about permitted and prohibited uses of content.</li>
+</ul>
+
+<p>However, these are rarely brought together, and rarely treated as a first-class part of the health record. Modelling the envelope is still nascent, and I don’t think it gets nearly enough attention.</p>
+
+<p>As such:</p>
+
+<ul>
+  <li>unstructured data is now usable, but structured, coded data remain essential</li>
+  <li>model output should be grounded in open standards such as SNOMED CT and FHIR</li>
+  <li>control and consent must extend to model training and to where data are processed</li>
+  <li>data need an envelope: machine-readable metadata about provenance, consent and permitted use, that travels with the data</li>
+  <li>information derived by a model should be marked as such, so that we can judge how much to rely on it</li>
+</ul>
+
+<h1 id="platforms">Platforms</h1>
+
+<p>In 2018, I argued for <a href="/digital-platform/2018/03/03/platform-wales-1.html">an open platform</a>, made up of open-source implementations of open standards, with <a href="/digital-platform/2018/03/03/platform-wales-2.html">an API-first approach</a>, and for lightweight, ephemeral user-facing applications that provide different perspectives on the same logical, structured health record. I later wrote about <a href="/strategy/2022/12/02/functional-health-records.html">unbundling the electronic health record</a> into a set of independent services.</p>
+
+<p>I think this is now the most important part of the whole argument. LLM-based agents can query records, call tools and take actions, but an agent can only be as good as the services to which it is connected. If an LLM is asked to code a diagnosis in SNOMED CT from memory, it may well invent a plausible-looking code that doesn’t exist. If, instead, it can call a terminology server, it can search, validate, and reason about subsumption using the real terminology, and its output is grounded in the right answer. The same is true for identity, for the record itself, and for consent; the model provides the language, but the platform provides the facts and the rules.</p>
+
+<p>The <a href="https://modelcontextprotocol.io">Model Context Protocol</a> (MCP) is an open standard for connecting AI assistants and agents to such tools and data. I have built MCP servers into <a href="https://github.com/wardle/hermes">hermes</a>, my open-source SNOMED CT terminology server, and into <a href="https://github.com/wardle/hades">hades</a>, which provides a FHIR terminology server on top of hermes. hermes exposes search, Expression Constraint Language, subsumption and cross-mapping as tools that an LLM can call, while hades exposes the standard FHIR terminology operations across SNOMED CT, LOINC and other terminologies. Because both were already designed as services with well-defined APIs, adding MCP meant adding another interface to the same service, alongside the existing library, HTTP and FHIR interfaces. That is what a platform looks like in practice: a set of services, built on open standards, that any application, or any agent, can use.</p>
+
+<p>A platform is also where the envelope around our data can be enforced. If agents access information through platform services, rather than directly from the databases of individual products, then those services can check consent and permitted use before any data reach a model.</p>
+
+<p>In addition, code and user interfaces can increasingly be generated on demand, which makes lightweight, ephemeral applications far more realistic than when I first wrote about them.</p>
+
+<p>As such:</p>
+
+<ul>
+  <li>the case for an open platform built from open standards is stronger, not weaker</li>
+  <li>the model provides the language, but platform services provide the facts and the rules</li>
+  <li>LLMs should be grounded in platform services, such as terminology servers, rather than relying on what they have learnt</li>
+  <li>platform services should support MCP alongside conventional APIs, so that they can be used directly by AI assistants and agents</li>
+  <li>platform services are the natural place to enforce consent and permitted use</li>
+</ul>
+
+<h1 id="buy-or-build">Buy or build?</h1>
+
+<p>In 2018, I argued that we should move away from procuring ‘full-stack’ applications that combine user interface code, business logic and data storage. At the time, the alternative, building our own software, was expensive and needed scarce engineering expertise, and so in most cases, healthcare organisations bought from commercial vendors.</p>
+
+<p>LLM-based coding tools change that balance. A small team, with clinicians closely involved, can now build and iterate on software far more quickly and cheaply than before. If we have solid, open platform services, such as a health record, terminology, identity and consent, then the applications that sit on top of those services become much cheaper to build, and much easier to replace. Why, then, would we buy a monolithic product from a commercial vendor, and accept its data model, its release cycle and its lock-in?</p>
+
+<p>That doesn’t mean that software becomes free. Writing code is now cheaper, but owning it is not; someone still has to run it, support it, secure it, maintain it, and take responsibility for its clinical safety. Healthcare organisations that build will need in-house engineering capability, including the skills to review and own code that they did not write by hand. Perhaps the role of commercial vendors will shift towards platform services and commodity components, operations and support, rather than end-to-end applications?</p>
+
+<p>As such:</p>
+
+<ul>
+  <li>LLM coding tools tip the balance from buying towards building, particularly for user-facing applications</li>
+  <li>this depends on solid, open platform services; without them, we simply build new silos more quickly</li>
+  <li>the cost of software is increasingly in owning, operating and assuring it, rather than writing it</li>
+  <li>healthcare needs in-house engineering capability to take advantage of this</li>
+  <li>commercial vendors remain valuable, but for platforms, components and operations rather than monolithic applications</li>
+</ul>
+
+<h1 id="heuristics-and-human-factors">Heuristics and human factors</h1>
+
+<p>I wrote about the heuristics we use in clinical practice, and how they can fail through cognitive biases. I used the example of my own early belief that most patients with neuropathy had CIDP, because those were the only patients with neuropathy I saw on the ward.</p>
+
+<p>LLMs learn from published text, and published text over-represents the interesting and the rare, so the same type of selection bias can be learnt at scale. I would also add automation bias. It is easy to say that the clinician remains responsible, but that is not much of a safeguard if clinicians come to accept a model’s output without question. There are now reports of clinicians’ own skills declining after routine use of AI assistance.</p>
+
+<p>I also listed data from patients’ own devices. Patients now paste their records into general-purpose chatbots and bring the answers to clinic, and that changes the nature of shared decision-making.</p>
+
+<p>We also need to think about digital inclusion, and here LLMs cut both ways. Speech recognition, on which ambient voice technology depends, can perform less well with some accents, with Welsh, and with impaired speech; in neurology, we see many patients with dysarthria from conditions such as motor neurone disease or multiple sclerosis. Models may perform less well for groups that are under-represented in the data on which they were trained. And if some patients use chatbots to navigate their care while others cannot, or choose not to, we risk creating a two-tier service. On the other hand, LLMs can translate, explain information in plain language at an appropriate reading level, and provide voice interfaces for people who struggle with forms and portals. They could make healthcare more accessible, not less, but only if we evaluate how they perform for different groups of patients, rather than on average.</p>
+
+<p>As such:</p>
+
+<ul>
+  <li>LLMs can learn biases from the data on which they are trained, just as we do</li>
+  <li>we need to design for automation bias and for the risk of deskilling</li>
+  <li>patients are already using LLMs for their own health, and we need to take that into account</li>
+  <li>LLMs can widen or narrow inequalities in access to care, and we need to evaluate their performance for different groups, not just on average</li>
+</ul>
+
+<h1 id="evaluation-and-closed-feedback-loops">Evaluation and closed feedback loops</h1>
+
+<p>I proposed an evaluation pipeline, modelled on drug development, using synthetic data, randomised controlled trials and real-life implementation. That approach assumes a defined output and some ground truth against which to measure it. LLM outputs are open-ended. Medical exam benchmarks are now largely saturated and say little about clinical performance. In addition, a vendor may change a model without notice, so a model that was evaluated last month may not be the one in use today.</p>
+
+<p>On a more positive note, I argued that we should recruit patients into trials at points of clinical equipoise as a matter of routine. LLMs can screen free text for trial eligibility and extract outcomes from letters, which should make that cheaper and easier.</p>
+
+<p>As such:</p>
+
+<ul>
+  <li>we need task-specific evaluation, human review and red-teaming, rather than reliance on benchmarks</li>
+  <li>we need version control of models, re-validation when they change, and ongoing monitoring after deployment</li>
+  <li>LLMs may help close the feedback loop by lowering the cost of trial recruitment and outcome measurement</li>
+</ul>
+
+<h1 id="regulation-safety-and-transparency">Regulation, safety and transparency</h1>
+
+<p>I didn’t stress regulation enough in 2018; referencing it only via monitoring and evaluation. Today I would describe the MHRA’s work on software and AI as a medical device, including the AI Airlock, as well as the EU AI Act, which classes medical AI as high-risk, and the FDA’s predetermined change control plans, which directly address adaptive algorithms. A difficult question remains about intended purpose; is a general-purpose chatbot used to make a clinical decision a medical device?</p>
+
+<p>Clinical safety matters more than ever, but our current approaches were designed for software that behaves predictably. LLMs can give different answers to the same question, can be changed by a vendor without notice, and fail in ways that are difficult to anticipate. Assessing the safety of such systems needs real skill, combining clinical, technical and evaluation expertise, and that skill is in short supply.</p>
+
+<p>Transparency matters too, but it means something different now. A score such as CHADS-VASc is transparent; you can see each point and why it was given. An LLM cannot explain its output in the same way, so transparency has to come instead from openness about the process. What is the tool, what is it for, how was it evaluated, how does it perform, what are its known limitations, and what incidents have occurred? Patients should also know when AI has been used in their care, such as when a letter has been drafted by a model, or when a consultation has been recorded and transcribed. The envelope around our data can record this, but transparency means making it visible to patients and the public, not just to our systems. In the UK, the <a href="https://www.gov.uk/government/collections/algorithmic-transparency-recording-standard-hub">Algorithmic Transparency Recording Standard</a> is now mandatory for central government departments; I think healthcare should adopt a similar approach. Open-source software and open-weight models are also forms of transparency, because they can be inspected by anyone.</p>
+
+<p>As such:</p>
+
+<ul>
+  <li>regulation is now an essential part of any strategy for algorithms in healthcare</li>
+  <li>clinical safety is important, and assessing it for modern AI needs skill that we must develop</li>
+  <li>we need clarity about responsibility when organisations build on top of general-purpose models</li>
+  <li>LLMs are not explainable in the way that a risk score is, so transparency must come from openness about purpose, evaluation, performance and incidents</li>
+  <li>patients should know when AI has been used in their care</li>
+</ul>
+
+<h1 id="sustainability">Sustainability</h1>
+
+<p>I didn’t consider sustainability in 2018, but I think there are three aspects that we now need to consider.</p>
+
+<p>The first is environmental. Training and running large models uses a great deal of energy and water, and healthcare organisations have made commitments to reach net zero. We should use the smallest model that can do a task well, rather than the largest available, and we should measure the environmental cost of what we deploy.</p>
+
+<p>The second is financial. LLMs are usually paid for by usage, so costs grow as adoption grows, and they are difficult to predict. Healthcare has a long history of funding pilots without funding their recurrent costs, and LLMs make it easy to start a pilot. We need to understand the long-term running costs before we start, not after.</p>
+
+<p>The third is the sustainability of the software itself. If LLM coding tools make it cheap to build applications, we risk ending up with many small applications that nobody maintains. Platform services also need sustained investment; healthcare increasingly depends on open-source components maintained by very few people, often in their own time. I know that from my own experience with hermes and hades. If we want a platform of shared services, we need to fund and staff it as essential infrastructure.</p>
+
+<p>As such:</p>
+
+<ul>
+  <li>we should use the smallest model that does the job, and measure the environmental cost</li>
+  <li>we need to understand and fund the recurrent costs of AI, not just pilots</li>
+  <li>cheap code creates a maintenance burden, so we need to be deliberate about what we build and who will maintain it</li>
+  <li>open-source platform services are essential infrastructure, and need sustained funding and people</li>
+</ul>
+
+<h1 id="and-so-what">And so what?</h1>
+
+<p>I would still use the same Wardley map, but some of the components have moved. Machine learning expertise has moved towards commodity, and so, increasingly, has writing software. Clinically meaningful data, open standards, platform services, evaluation and trust have not moved nearly as far, and they remain the dependencies on which everything else rests. That is where I think healthcare needs to invest, together with the in-house capability to build on top of them.</p>
+
+<p><em>Mark</em></p>
+
+  </div>
+
+  
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Health informatics and information technology</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Health informatics and information technology</li><li><a class="u-email" href="mailto:mark@wardle.org">mark@wardle.org</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/wardle"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">wardle</span></a></li><li><a href="https://www.twitter.com/mwardle"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">mwardle</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>by Dr Mark Wardle, Consultant Neurologist and Chief Clinical Information Officer (CCIO)
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
